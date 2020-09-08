@@ -31,3 +31,9 @@ jobs:
         run: TEMP_DEB="$(mktemp)" && wget -O "$TEMP_DEB" 'https://master.dl.sourceforge.net/project/ivritex/culmus-latex/culmus-latex-0.7/culmus-latex_0.7-1_all_fixed.deb' && sudo dpkg -i "$TEMP_DEB" && rm -f "$TEMP_DEB"
       - name: Run compile.py
         run: python3 compile.py
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automated PDF updates
+          commit_user_name: LyX to PDF Bot
+          commit_user_email: lyxtopdf@farberbrodsky.com
+          commit_author: LyX To PDF <actions@github.com>
