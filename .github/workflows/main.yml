@@ -26,7 +26,7 @@ jobs:
           sudo add-apt-repository -y ppa:lyx-devel/release
           sudo apt-get install lyx
       - name: Install Texlive
-        run: sudo apt-get install texlive-full
+        run: sudo apt-get install texlive-lang-other
       - name: Install Culmus
         run: TEMP_DEB="$(mktemp)" && wget -O "$TEMP_DEB" 'https://master.dl.sourceforge.net/project/ivritex/culmus-latex/culmus-latex-0.7/culmus-latex_0.7-1_all_fixed.deb' && sudo dpkg -i "$TEMP_DEB" && rm -f "$TEMP_DEB"
       - name: Run compile.py
