@@ -1,0 +1,5858 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[use-david]{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\headheight 1.5cm
+\headsep 1.5cm
+\footskip 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+סיכומי הרצאות 
+\series default
+- מתמטיקה בדידה
+\end_layout
+
+\begin_layout Author
+מיכאל פרבר ברודסקי
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rfrac}[2]{\!{}^{#1}\!/_{\!#2}}
+{\nicefrac{#1}{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sn}{\mathbb{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sq}{\mathbb{\mathbb{Q}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\pos}[1]{#1^{+}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sz}{\mathbb{Z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sr}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\tag}{^{\prime}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+שונות
+\end_layout
+
+\begin_layout Subsection
+יוטא
+\end_layout
+
+\begin_layout Standard
+תהא 
+\begin_inset Formula $P\left(x\right)$
+\end_inset
+
+ יחס חד מקומי.
+\end_layout
+
+\begin_layout Standard
+האיבר היחידי 
+\begin_inset Formula $A\to a$
+\end_inset
+
+ המקיים את הטענה 
+\begin_inset Formula $\varphi\left(a\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\iota x\in A.\varphi\left(x\right)=$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+למשל 
+\begin_inset Formula $=2$
+\end_inset
+
+ראשוני
+\begin_inset Formula $\iota x\in\mathbb{N}.x\in\mathbb{N}_{even}\land\text{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה:
+\series default
+ כאשר מגדירים 
+\begin_inset Formula $\iota$
+\end_inset
+
+ צריך לוודא 
+\series bold
+שקיים ויחיד
+\series default
+ 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ המקיים את הטענה 
+\begin_inset Formula $\varphi\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+למשל 
+\begin_inset Formula $min=\lambda x\in P\left(\mathbb{N}\right)\setminus\left\{ \emptyset\right\} .\iota n\in x.\forall m\in x.n\leq m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+תלות בבחירת הנציגים
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+דוגמא:
+\series default
+ נגדיר 
+\begin_inset Formula $S_{n}=\left\{ \left\langle x,y\right\rangle \in\sz^{2}\mid n\mid x-y\right\} $
+\end_inset
+
+.
+ אם כך 
+\begin_inset Formula $\nicefrac{\sz}{S_{n}}=\left\{ \left[0\right]_{S_{n}},\dots,\left[n-1\right]_{S_{n}}\right\} $
+\end_inset
+
+.
+ נמצא 
+\begin_inset Formula $f:\nicefrac{\sz}{S_{n}}\to\sz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הבעיה נמצאת ב-
+\begin_inset Formula $f=\lambda\left[k\right]_{S_{n}}\in\nicefrac{\sz}{S_{n}}.k+1$
+\end_inset
+
+.
+ יש תלות בבחירת הנציגים, כי אין רק 
+\begin_inset Formula $k$
+\end_inset
+
+ יחיד שמייצג מחלקת שקילות וזה משנה איזה 
+\begin_inset Formula $k$
+\end_inset
+
+ נבחר.
+\end_layout
+
+\begin_layout Standard
+כדי להוכיח שאין תלות בבחירת הנציגים, נוכיח חד ערכיות.
+\end_layout
+
+\begin_layout Subsection
+משפט האינדוקציה
+\end_layout
+
+\begin_layout Standard
+נניח כי 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ו-
+\begin_inset Formula $<_{A}$
+\end_inset
+
+ יחס סדר טוב על 
+\begin_inset Formula $A$
+\end_inset
+
+ ו-
+\begin_inset Formula $P\left(x\right)$
+\end_inset
+
+ טענה עם משתנה חופשי 
+\begin_inset Formula $x$
+\end_inset
+
+ )
+\begin_inset Formula $x$
+\end_inset
+
+ נקרא חופשי אם אין כמת שמזכיר את 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ למשל אם 
+\begin_inset Formula $\exists y.x+1=y$
+\end_inset
+
+ אז 
+\begin_inset Formula $x$
+\end_inset
+
+ חופשי, ו-
+\begin_inset Formula $y$
+\end_inset
+
+ אינו חופשי(.
+ נניח כי מתקיים כי 
+\begin_inset Formula $\forall a\in A.\left(\forall b\in A.b<_{A}a\implies P\left(b\right)\right)\implies P\left(a\right)$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $\forall a\in A.P\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+קבוצות
+\end_layout
+
+\begin_layout Section
+איחוד וחיתוך בין כל כמות של קבוצות
+\end_layout
+
+\begin_layout Subsection*
+כתיב כללי
+\end_layout
+
+\begin_layout Standard
+תהא 
+\begin_inset Formula $F$
+\end_inset
+
+ קבוצה של קבוצות.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\bigcup F=\left\{ x\mid\exists y\in F.x\in y\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+כלומר, כדי שאיבר 
+\begin_inset Formula $x$
+\end_inset
+
+ כלשהו יהיה איבר באיחוד כל האיברים ב-
+\begin_inset Formula $F$
+\end_inset
+
+, צריך שתהיה קבוצה 
+\begin_inset Formula $y$
+\end_inset
+
+ ב-
+\begin_inset Formula $F$
+\end_inset
+
+ כך ש
+\numeric on
+-
+\numeric off
+
+\begin_inset Formula $x\in y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\bigcap F=\left\{ x\mid\forall y\in F.x\in y\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+כלומר, כדי שאיבר 
+\begin_inset Formula $x$
+\end_inset
+
+ כלשהו יהיה איבר בחיתוך כל האיברים ב-
+\begin_inset Formula $F$
+\end_inset
+
+, צריך שהוא יהיה שייך לכל האיברים ב-
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+כתיב
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ אלטרנטיבי
+\end_layout
+
+\begin_layout Definition
+תהא 
+\begin_inset Formula $F=\left\{ A_{i}\mid i\in I\right\} $
+\end_inset
+
+ קבוצה של קבוצות.
+ 
+\begin_inset Formula 
+\begin{align*}
+\underset{i\in I}{\bigcup}A_{i} & =\left\{ x\mid\exists i\in I.x\in A_{i}\right\} \\
+\underset{i\in I}{\bigcap}A_{i} & =\left\{ x\mid\forall i\in I.x\in A_{i}\right\} 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+כתיב בסיסי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{align*}
+\bigcup_{i=1}^{100}A_{i} & =A_{1}\cup A_{2}\cup A_{3}\dots\cup A_{100}\\
+\bigcap_{i=1}^{100}A_{i} & =A_{1}\cap A_{2}\cap A_{3}\dots\cap A_{100}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+זוגות סדורים
+\end_layout
+
+\begin_layout Standard
+יש דרכים רבות להגדיר זוגות סדורים.
+ הדרך שאנחנו נשתמש בה היא הדרך הזו:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\left\langle a,b\right\rangle =\left\{ \left\{ a\right\} ,\left\{ a,b\right\} \right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כדי שדרך לכתיבת זוג סדור תהיה נכונה, צריך שתמיד תתקיים התכונה הבאה של זוגות
+ סדורים: 
+\begin_inset Formula 
+\[
+\left\langle a,b\right\rangle =\left\langle c,d\right\rangle \iff a=c\land b=d
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $n$
+\end_inset
+
+יה סדורה
+\end_layout
+
+\begin_layout Standard
+נגדיר 
+\begin_inset Formula $n$
+\end_inset
+
+יה סדורה כך:
+\begin_inset Formula 
+\begin{align*}
+\left\langle a,b,c\right\rangle  & =\left\langle a,\left\langle b,c\right\rangle \right\rangle \\
+\left\langle a,b,c,d\right\rangle  & =\left\langle a,\left\langle b,c,d\right\rangle \right\rangle 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+הוכחה באינדוקציה
+\end_layout
+
+\begin_layout Enumerate
+נוכיח עבור ה-
+\begin_inset Formula $n$
+\end_inset
+
+ הרלוונטי הראשון )בסיס האינדוקציה(
+\end_layout
+
+\begin_layout Enumerate
+לוקחים 
+\begin_inset Formula $n$
+\end_inset
+
+ כללי, מניחים שהטענה נכונה לגביו )הנחת האינדוקציה(
+\end_layout
+
+\begin_layout Enumerate
+מוכיחים עבור 
+\begin_inset Formula $n+1$
+\end_inset
+
+ ומסתמכים על בסיס האינדוקציה )צעד האינדוקציה(
+\end_layout
+
+\begin_layout Standard
+נוכיח את 
+\series bold
+התכונה המרכזית
+\series default
+ לגבי 
+\begin_inset Formula $n$
+\end_inset
+
+יה סדורה, שהיא
+\begin_inset Formula 
+\[
+\left\langle a_{1},\dots,a_{n}\right\rangle =\left\langle b_{1},\dots b_{n}\right\rangle \iff a_{1}=b_{1}\land\dots\land a_{n}=b_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בסיס האינדוקציה - 
+\begin_inset Formula $\left\langle a_{1},a_{2}\right\rangle =\left\langle b_{1},b_{2}\right\rangle \iff a_{1}=b_{1}\land a_{2}=b_{2}$
+\end_inset
+
+.
+ נניח כי זה מתקיים עבור 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ נוכיח כי זה מתקיים עבור 
+\begin_inset Formula $n+1$
+\end_inset
+
+.
+ נגדיר: 
+\begin_inset Formula $\left\langle a_{1},\dots a_{n+1}\right\rangle =\left\langle a_{1},\left\langle a_{2},\dots a_{n+1}\right\rangle \right\rangle $
+\end_inset
+
+.
+ הטענה המרכזית מתקיימת כי כל האיברים שווים בזוגות הסדורים.
+\end_layout
+
+\begin_layout Subsection
+מכפלה קרטזית
+\end_layout
+
+\begin_layout Definition
+יהיו 
+\begin_inset Formula $A$
+\end_inset
+
+ ו-
+\begin_inset Formula $B$
+\end_inset
+
+ קבוצות.
+ 
+\begin_inset Formula $A\times B=\left\{ \left\langle a,b\right\rangle \mid a\in A,b\in B\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+דוגמא: 
+\begin_inset Formula $\left\{ 1,2\right\} \times\left\{ 1,3\right\} =\left\{ \left\langle 1,1\right\rangle ,\left\langle 1,3\right\rangle ,\left\langle 2,1\right\rangle ,\left\langle 2,3\right\rangle \right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{align*}
+A^{1} & =A\\
+A^{n+1} & =A\times A^{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+המישור הממשי הוא 
+\begin_inset Formula $\mathbb{R}^{2}=\mathbb{R}\times\mathbb{R}$
+\end_inset
+
+ )כל זוג של שני מספרים ממשיים זה כל נקודה בדו מימד(.
+\end_layout
+
+\begin_layout Definition
+נשים לב לקשר עם 
+\begin_inset Formula $n$
+\end_inset
+
+יה סדורה כאשר נגדיר 
+\begin_inset Formula $\text{\ensuremath{\mathbb{R}^{3}=}}\mathbb{R}\times\left(\mathbb{R}\times\mathbb{R}\right)=\left\{ \left\langle a,b,c\right\rangle \mid a,b,c\in\mathbb{R}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+יחסים
+\end_layout
+
+\begin_layout Definition
+יהיו 
+\begin_inset Formula $A$
+\end_inset
+
+ ו-
+\begin_inset Formula $B$
+\end_inset
+
+ קבוצות.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ נקרא יחס מעל 
+\begin_inset Formula $R\subseteq A\times B\iff A,B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+דוגמות:
+\series default
+ 
+\begin_inset Formula $R=\left\{ \left\langle 1,7\right\rangle ,\left\langle 2,7\right\rangle \right\} $
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $\mathbb{N},\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{align*}
+<_{\mathbb{N}} & =\left\{ \left\langle n,m\right\rangle \in\mathbb{N}^{2}\mid\exists k\in\mathbb{N}_{+},n+k=m\right\} \\
+\leq_{\mathbb{N}} & =\left\{ \left\langle n,m\right\rangle \in\mathbb{N}^{2}\mid\exists k\in\mathbb{N},n+k=m\right\} \\
+\left(=_{\mathbb{N}}\right)=Id_{\mathbb{N}} & =\left\{ \left\langle n,n\right\rangle \mid n\in\mathbb{N}\right\} \\
+f\left(x\right)=2x & =\left\{ \left\langle x,2x\right\rangle \mid x\in\mathbb{R}\right\} 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+.
+ 
+\begin_inset Formula $aRb\iff\left\langle a,b\right\rangle \in R$
+\end_inset
+
+, ונאמר 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+ מתייחס ביחס 
+\begin_inset Formula $R$
+\end_inset
+
+ ל-
+\begin_inset Formula $b$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $A=B$
+\end_inset
+
+ נאמר כי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+התחום של 
+\begin_inset Formula $R$
+\end_inset
+
+ הוא 
+\begin_inset Formula $Dom\left(R\right)=\left\{ a\in A\mid\exists b\in B.aRb\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+לדוגמא,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+Dom & \left(\left\{ \left\langle 1,7\right\rangle ,\left\langle 2,7\right\rangle \right\} \right)=\left\{ 1,2\right\} \\
+Dom & \left(<_{\mathbb{N}}\right)=\mathbb{N}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+התמונה של 
+\begin_inset Formula $R$
+\end_inset
+
+ היא 
+\begin_inset Formula $Im\left(R\right)=\left\{ b\in B\mid\exists a\in A.aRb\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+לדוגמא,
+\begin_inset Formula 
+\begin{align*}
+Im & \left(\left\{ \left\langle 1,7\right\rangle ,\left\langle 2,7\right\rangle \right\} \right)=\left\{ 7\right\} \\
+Im & \left(<_{\mathbb{N}}\right)=\mathbb{N}_{+}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $Id_{A}=\left\{ \left\langle a,a\right\rangle \mid a\in A\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+היחס ההופכי של 
+\begin_inset Formula $R$
+\end_inset
+
+ הוא 
+\begin_inset Formula $R^{-1}=\left\{ \left\langle b,a\right\rangle \mid\left\langle a,b\right\rangle \in R\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+לדוגמא,
+\begin_inset Formula 
+\[
+\left\{ \left\langle 1,7\right\rangle ,\left\langle 2,7\right\rangle \right\} ^{-1}=\left\{ \left\langle 7,1\right\rangle ,\left\langle 7,2\right\rangle \right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+הרכבת יחסים - יהי 
+\begin_inset Formula $R\subseteq A\times B$
+\end_inset
+
+ ו-
+\begin_inset Formula $S\subseteq B\times C$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula $S\circ R=\left\{ \left\langle a,c\right\rangle \in A\times C\mid\exists b\in B.\left\langle a,b\right\rangle \in R\land\left\langle b,c\right\rangle \in S\right\} $
+\end_inset
+
+ )
+\begin_inset Formula $S$
+\end_inset
+
+ מורכב על 
+\begin_inset Formula $R$
+\end_inset
+
+(.
+ זה כל זוגות האיברים שניתן 
+\begin_inset Quotes eld
+\end_inset
+
+לחבר
+\begin_inset Quotes erd
+\end_inset
+
+, כלומר ה-
+\begin_inset Formula $b=b$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $b$
+\end_inset
+
+ ימני ב-
+\begin_inset Formula $R$
+\end_inset
+
+ ושמאלי ב-
+\begin_inset Formula $S$
+\end_inset
+
+ )
+\begin_inset Formula $b$
+\end_inset
+
+ אינו ביחס ההרכבה(.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+אסוציאטיביות ההרכבה - 
+\begin_inset Formula $\left(S\circ R\right)\circ T=S\circ\left(R\circ T\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $T\subseteq A\times B$
+\end_inset
+
+, 
+\begin_inset Formula $R\subseteq B\times C$
+\end_inset
+
+, 
+\begin_inset Formula $S\subseteq C\times D$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(S\circ R\right)^{-1}=R^{-1}\circ S^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(R^{-1}\right)^{-1}=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Id_{B}\circ R=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R\circ Id_{A}=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(g\circ f\right)\left(x\right)=g\left(f\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+פונקציות
+\end_layout
+
+\begin_layout Subsubsection
+הגדרות לגבי יחסים
+\end_layout
+
+\begin_layout Standard
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ נקרא:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+חד ערכי: 
+\series default
+
+\begin_inset Formula $\forall a\in A.\forall b_{1},b_{2}\in B.\left\langle a,b_{1}\right\rangle \in R\land\left\langle a,b_{2}\right\rangle \in R\to b_{1}=b_{2}$
+\end_inset
+
+ )לכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ יש 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ יחיד כך ש-
+\begin_inset Formula $\left\langle a,b\right\rangle \in R$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+מלא ב-
+\begin_inset Formula $A$
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $\forall a\in A.\exists b\in B.\left\langle a,b\right\rangle \in R$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)לכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ יש 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ מתאים(
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+פונקציה: 
+\series default
+אם 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס חד ערכי ומלא.
+ באופן שקול, 
+\begin_inset Formula $\forall a\in A.\exists!b\in B.\left\langle a,b\right\rangle \in R$
+\end_inset
+
+.
+ )
+\begin_inset Formula $\exists!$
+\end_inset
+
+ זה קיים ויחיד(.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+פונקציה חלקית
+\begin_inset Quotes erd
+\end_inset
+
+:
+\series default
+ יחס חד ערכי שאינו מלא.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+הגדרות לגבי פונקציות
+\end_layout
+
+\begin_layout Standard
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ פונקציה.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+חד-חד-ערכי:
+\series default
+ 
+\begin_inset Formula $\forall a_{1},a_{2}\in A.f\left(a_{1}\right)=f\left(a_{2}\right)\to a_{1}=a_{2}$
+\end_inset
+
+.
+ זה שקול לכך ש-
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ חד ערכית.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+על:
+\series default
+ 
+\begin_inset Formula $\forall b\in B.\exists a\in A.f\left(a\right)=b$
+\end_inset
+
+.
+ זה שקול לכך ש-
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ יחס מלא.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+זיווג:
+\series default
+ אם 
+\begin_inset Formula $f$
+\end_inset
+
+ יחס חד-חד-ערכי ועל.
+ נקרא גם 
+\series bold
+חחע
+\begin_inset Quotes erd
+\end_inset
+
+ל
+\series default
+ או 
+\series bold
+פונקציה הפיכה
+\series default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+פונקציה הפיכה
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+ אומר שקיימת פונקצייה 
+\begin_inset Formula $g:B\to A$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+f\circ g=id_{B}\land g\circ f=id_{A}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+קבוצת הפונקציות מ-
+\begin_inset Formula $A$
+\end_inset
+
+ ל-
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסומנת: 
+\series default
+
+\begin_inset Formula $A\to B$
+\end_inset
+
+ או 
+\begin_inset Formula $B^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+A\to B=\left\{ f\in P\left(A\times B\right)\mid\text{f is a function}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אם פונקציה 
+\begin_inset Formula $f$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+, נסמן את זה ככה: 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+טענות לגבי פונקציות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $dom\left(f\right)=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $range(f)=B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $im\left(f\right)=\left\{ f\left(x\right)\mid x\in A\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט שוויון של פונקציות:
+\series default
+ יהיו 
+\begin_inset Formula $f,g$
+\end_inset
+
+ פונקציות.
+ אזי 
+\begin_inset Formula $f=g\iff dom\left(f\right)=dom\left(g\right)\land\forall x\in dom\left(f\right).f\left(x\right)=g\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הפונקציה 
+\series bold
+אינה
+\series default
+ מוגדרת ע
+\begin_inset Quotes erd
+\end_inset
+
+פ הנוסחה.
+\end_layout
+
+\begin_layout Subsubsection
+תמונה איבר-איבר
+\end_layout
+
+\begin_layout Standard
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ פונקציה.
+ נגדיר:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+תמונה איבר-איבר של 
+\begin_inset Formula $x$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $f$
+\end_inset
+
+:
+\series default
+
+\begin_inset Formula 
+\[
+f\left[x\right]=\left\{ f\left(a\right)\mid a\in x\right\} \subseteq B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+קבוצת המקורות של 
+\begin_inset Formula $y$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $f$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+f^{-1}\left[y\right]=\left\{ a\in A\mid f\left(a\right)\in y\right\} \subseteq A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+פונקציה מותלית
+\end_layout
+
+\begin_layout Standard
+נכתוב פונקציה מותלית כך:
+\begin_inset Formula 
+\[
+\lambda x\in\mathbb{R}.\begin{cases}
+2 & x=1\\
+4 & x=2\\
+x & else
+\end{cases}
+\]
+
+\end_inset
+
+מימין זה התנאי, ו-
+\begin_inset Formula $else$
+\end_inset
+
+ אומר כך שאר המקרים.
+ משמאל זה מה שהפונקציה 
+\begin_inset Quotes eld
+\end_inset
+
+מחזירה
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+צמצום
+\end_layout
+
+\begin_layout Standard
+מסומן: 
+\begin_inset Formula $f_{|}$
+\end_inset
+
+, או 
+\begin_inset Formula $f_{\iota}$
+\end_inset
+
+ אבל היוטא הפוכה.
+ עבור 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+, 
+\begin_inset Formula $f_{|C}=C\times B\cap f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+יחסי שקילות
+\end_layout
+
+\begin_layout Standard
+יחסי שקילות הם 
+\series bold
+תמיד יחסים מעל 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+הגדרות לגבי יחסים
+\end_layout
+
+\begin_layout Standard
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ נקרא:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+רפלקסיבי - 
+\series default
+
+\begin_inset Formula $\forall x\in A.\left\langle x,x\right\rangle \in R$
+\end_inset
+
+.
+ זה שקול ל-
+\begin_inset Formula $id_{A}\subseteq R$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+אנטי-רלפקסיבי - 
+\series default
+
+\begin_inset Formula $\forall x\in A.\left\langle x,x\right\rangle \notin R$
+\end_inset
+
+.
+ למשל היחס 
+\begin_inset Formula $<$
+\end_inset
+
+ הוא אנטי-רפלקסיבי.
+ בנוסף רק אם 
+\begin_inset Formula $A\neq\emptyset$
+\end_inset
+
+ אז יחס 
+\begin_inset Formula $A$
+\end_inset
+
+ רפלקסיבי 
+\begin_inset Formula $\iff$
+\end_inset
+
+ יחס 
+\begin_inset Formula $A$
+\end_inset
+
+ לא אנטי-רפלקסיבי.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+סימטרי - 
+\begin_inset Formula $\forall a,b\in A.\left\langle a,b\right\rangle \in R\implies\left\langle b,a\right\rangle \in R$
+\end_inset
+
+
+\series default
+.
+ זה אומר שאם 
+\begin_inset Formula $a,b$
+\end_inset
+
+ ביחס אז 
+\begin_inset Formula $b,a$
+\end_inset
+
+ ביחס.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+אנטי-סימטרי חלש -
+\series default
+ 
+\begin_inset Formula $\forall x,y\in A.\left(\left\langle x,y\right\rangle \in R\land\left\langle y,x\right\rangle \in R\right)\implies x=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+אנטי-סימטרי חזק -
+\series default
+ 
+\begin_inset Formula $\forall x,y\in A.\left\langle x,y\right\rangle \in R\implies\left\langle y,x\right\rangle \notin R$
+\end_inset
+
+.
+ נובע ש: אנטי סימטרי חזק 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ אנטי-רפלקסיבי.
+ זו הסיבה שקיים אנטי-סימטרי חלש.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+טרנזיטיבי - 
+\series default
+
+\begin_inset Formula $\forall a,b,c\in A.\left\langle a,b\right\rangle \in R\land\left\langle b,c\right\rangle \in R\implies\left\langle a,c\right\rangle \in R$
+\end_inset
+
+.
+ זה כמו כלל המעבר.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+יחס שקילות - 
+\series default
+יחס רפלקסיבי, סימטרי וטרנזיטיבי.
+ למשל היחס 
+\begin_inset Formula $=$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+יחס סדר חלש -
+\series default
+ יחס רפלקסיבי 
+\begin_inset Formula $+$
+\end_inset
+
+ טרנזטיבי 
+\begin_inset Formula $+$
+\end_inset
+
+ אנטי-סימטרי חלש.
+ למשל היחס 
+\begin_inset Formula $\leq,\subseteq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+יחס סדר חזק -
+\series default
+ יחס טרנזטיבי 
+\begin_inset Formula $+$
+\end_inset
+
+ אנטי-סימטרי חזק.
+ למשל היחס 
+\begin_inset Formula $<,\subset$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+יחס קווי
+\lang english
+/
+\lang hebrew
+לינארי
+\lang english
+/
+\lang hebrew
+טוטאלי
+\lang english
+/
+\lang hebrew
+מלא -
+\series default
+ 
+\begin_inset Formula $\forall a,b\in A.aRb\lor bRa\lor a=b$
+\end_inset
+
+.
+ למשל היחס 
+\begin_inset Formula $<$
+\end_inset
+
+ הוא קווי אך היחס 
+\begin_inset Formula $\subseteq$
+\end_inset
+
+ אינו קווי, כי ל-
+\begin_inset Formula $\subseteq$
+\end_inset
+
+ יש 
+\begin_inset Quotes eld
+\end_inset
+
+התפצלויות
+\begin_inset Quotes erd
+\end_inset
+
+ בסינגלטונים שאינם מוכלים זה בזה ולא שווים זה לזה.
+\end_layout
+
+\begin_layout Subsubsection
+מחלקות שקילות
+\end_layout
+
+\begin_layout Definition
+מחלקת השקילות של 
+\begin_inset Formula $a$
+\end_inset
+
+ מוגדרת להיות 
+\begin_inset Formula $\left[a\right]_{R}=\left\{ b\in A\mid aRb\right\} $
+\end_inset
+
+.
+ אינטואיטיבית, מחלקת שקילות היא כל האיברים 
+\begin_inset Formula $b$
+\end_inset
+
+ ששקולים ל-
+\begin_inset Formula $a$
+\end_inset
+
+ ביחס השקילות 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות ב-
+\begin_inset Formula $A$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $a,b\in A$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left[a\right]_{R}=\left[b\right]_{R}\lor\left[a\right]_{R}\cap\left[b\right]_{R}=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left[a\right]_{R}=\left[b\right]_{R}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $aRb\iff$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\left[a\right]_{R}\cap\left[b\right]_{R}=\emptyset$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lnot\left(aRb\right)\iff$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+מערכת נציגים
+\end_layout
+
+\begin_layout Standard
+תת קבוצה 
+\begin_inset Formula $A^{\prime}\subseteq A$
+\end_inset
+
+ נקראת מערכת נציגים אם:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a,b\in A^{\prime}.a\neq b\implies\lnot\left(aRb\right)$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ )כל שני איברים שונים ב-
+\begin_inset Formula $A^{|}$
+\end_inset
+
+ לא נמצאים ביחס(
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a\in A.\exists b\in A^{\prime}.aRb$
+\end_inset
+
+ )במערכת הנציגים יש איבר שקול לכל איבר ב-
+\begin_inset Formula $A$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Subsubsection
+חלוקה
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\Pi\subseteq P\left(A\right)$
+\end_inset
+
+ נקראת חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+ אם:
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\emptyset\notin\Pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x,y\in\Pi.x\neq y\implies x\cap y=\emptyset$
+\end_inset
+
+ )כל האיברים בחלוקה זרים(
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\bigcup\Pi=A$
+\end_inset
+
+ )כל איברי 
+\begin_inset Formula $A$
+\end_inset
+
+ נמצאים בחלוקה(
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות ב-
+\begin_inset Formula $A$
+\end_inset
+
+.
+ מתקיים כי 
+\begin_inset Formula $\rfrac AR=\left\{ \left[a\right]_{R}\mid a\in A\right\} $
+\end_inset
+
+ )קבוצת המנה( היא חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+תהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ נגדיר את 
+\begin_inset Quotes eld
+\end_inset
+
+היחס המושרה מהחלוקה
+\begin_inset Quotes erd
+\end_inset
+
+ שנסמן ב-
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ כ-
+\begin_inset Formula $\underset{y\in\Pi}{\bigcup}y\times y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ יחס שקילות.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\rfrac A{R_{\Pi}}=\Pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{\left(\rfrac AR\right)}=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות ב-
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $T\subseteq P\left(A\right)$
+\end_inset
+
+.
+ אם מתקיים כי:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+, ו-
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a,b\in A.aRb\iff\exists t\in T.a,b\in t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $\rfrac AR=T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+יחסי סדר
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון: 
+\series default
+
+\begin_inset Formula $\prec$
+\end_inset
+
+ יחס סדר חזק על 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\preceq$
+\end_inset
+
+ יחס סדר חלש על 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בהינתן 
+\begin_inset Formula $\prec$
+\end_inset
+
+, ניתן להגדיר יחס סדר חלש על 
+\begin_inset Formula $A$
+\end_inset
+
+: 
+\begin_inset Formula $a\prec b\lor a=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בהינתן 
+\begin_inset Formula $\preceq$
+\end_inset
+
+, ניתן להגדיר יחס סדר חזק על 
+\begin_inset Formula $A$
+\end_inset
+
+: 
+\begin_inset Formula $a\preceq b\land a\ne b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נגדיר:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\in X$
+\end_inset
+
+ יקרא האיבר גדול ביותר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ב-
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.y\preceq x$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ יקרא איבר קטן ביותר )מינימלי( ב-
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.x\preceq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ייקרא איבר מירבי )מקסימום( ב-
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.\lnot\left(x\prec y\right)$
+\end_inset
+
+.
+ איבר מזערי )מינימום(: 
+\begin_inset Formula $\forall y\in X.\lnot\left(y\prec x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חסם עליון
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)מלעל
+\lang english
+/
+\lang hebrew
+מלמעלה(.
+ 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ ייקרא חסם עליון ל-
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.y\preceq x$
+\end_inset
+
+.
+ לדוגמה 
+\begin_inset Formula $X=\left[0,1\right],A=\sr$
+\end_inset
+
+, ואז 
+\begin_inset Formula $x=3$
+\end_inset
+
+ או כל מספר אחר שגדול או שווה ל-
+\numeric on
+1
+\numeric off
+.
+ יש גם חסם תחתון.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+ נקראת חסומה מלמעלה אם קיים חסם עליון.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+חסומה מלמטה אם קיים חסם תחתון
+\end_layout
+
+\begin_layout Standard
+חסומה אם 
+\begin_inset Formula $X$
+\end_inset
+
+ חסומה מלמטה ומלמעלה.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $x\in A$
+\end_inset
+
+ נקרא סופרמום של 
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $x$
+\end_inset
+
+ החסם העליון הקטן ביותר.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $x$
+\end_inset
+
+ חסם עליון ל-
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall y\in A.\text{y hasam elion le X}\to x\preceq y$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $x\in A$
+\end_inset
+
+ נקרא אינפימום )החסם התחתון הקטן ביותר( אם:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $x$
+\end_inset
+
+ חסם תחתון ל-
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall y\in A.\text{y hasam tahton le X}\to y\preceq x$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+טענה:
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $x$
+\end_inset
+
+ איבר גדול ביותר ב-
+\begin_inset Formula $X$
+\end_inset
+
+ אז 
+\begin_inset Formula $x$
+\end_inset
+
+ איבר מרבי ב-
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ חסם עליון קטן ביותר של 
+\begin_inset Formula $X$
+\end_inset
+
+ אז 
+\begin_inset Formula $x$
+\end_inset
+
+ יחיד ומסומן 
+\begin_inset Formula $x=sup\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ איבר גדול ביותר אז 
+\begin_inset Formula $x=sup\left(x\right)$
+\end_inset
+
+ ומסמנים 
+\begin_inset Formula $x=max\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ יחס סדר קווי ו-
+\begin_inset Formula $x$
+\end_inset
+
+ איבר מירבי ב-
+\begin_inset Formula $X$
+\end_inset
+
+ אז 
+\begin_inset Formula $x$
+\end_inset
+
+ איבר גדול ביותר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+יחס סדר טוב:
+\series default
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר חזק וקווי על 
+\begin_inset Formula $A$
+\end_inset
+
+ מקיים את התכונה הבאה:
+\begin_inset Formula 
+\[
+\forall X\subseteq A.x\ne\emptyset\implies\exists x\in X.\forall y\in X.x\le_{A}y
+\]
+
+\end_inset
+
+כלומר לכל תת קבוצה של 
+\begin_inset Formula $A$
+\end_inset
+
+ שאינה 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ יש איבר מינימלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+דוגמה:
+\series default
+ 
+\begin_inset Formula $<$
+\end_inset
+
+ על 
+\begin_inset Formula $\sn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עקרון הסדר הטוב: 
+\series default
+לכל קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ קיים סדר טוב.
+\end_layout
+
+\begin_layout Theorem
+אקסיומת הבחירה שקולה לעקרון הסדר הטוב.
+\end_layout
+
+\begin_layout Part
+עוצמות
+\end_layout
+
+\begin_layout Section
+הקדמה לעוצמות
+\end_layout
+
+\begin_layout Subsection
+הגדרות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\iff\left|A\right|=\left|B\right|$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ זיווג.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\iff\left|A\right|\leq\left|B\right|$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|\ne\left|B\right|\land\left|A\right|\leq\left|B\right|\iff\left|A\right|<\left|B\right|$
+\end_inset
+
+.
+ כדי להוכיח שעוצמות לא שוות צריך להוכיח שלא קיים זיווג.
+\end_layout
+
+\begin_layout Subsubsection
+טענות בסיסיות
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אז 
+\begin_inset Formula $\left|A\right|=\left|Im\left(f\right)\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+לגבי 
+\begin_inset Formula $\left|A\right|=\left|B\right|$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+רפלקסיביות: 
+\begin_inset Formula $\left|A\right|=\left|A\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+סימטריה: 
+\begin_inset Formula $\left|B\right|=\left|A\right|\iff\left|A\right|=\left|B\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+טרנזיטיביות: 
+\begin_inset Formula $\left|A\right|=\left|B\right|\land\left|B\right|=\left|C\right|\implies\left|A\right|=\left|C\right|$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+לגבי 
+\begin_inset Formula $\left|A\right|\leq\left|B\right|$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|=\left|B\right|\implies A\leq B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|\leq\left|B\right|\land\left|B\right|\leq\left|C\right|\implies\left|A\right|\leq\left|C\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\subseteq B\implies\left|A\right|\leq\left|B\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+קיימת 
+\begin_inset Formula $f$
+\end_inset
+
+ על מ-
+\begin_inset Formula $B$
+\end_inset
+
+ ל-
+\begin_inset Formula $A$
+\end_inset
+
+ אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $\left|A\right|\le\left|B\right|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+לגבי 
+\begin_inset Formula $\left|A\right|<\left|B\right|$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|<\left|C\right|\implies\left|A\right|<\left|B\right|=\left|C\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|=\left|B\right|<\left|C\right|\implies\left|A\right|<\left|C\right|$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+טענות לגבי קבוצות שוות עוצמות
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $A,B,A^{\prime},B^{\prime}$
+\end_inset
+
+ קבוצות כך ש-
+\begin_inset Formula $\left|A\right|=\left|A^{\prime}\right|\land\left|B\right|=\left|B^{\prime}\right|$
+\end_inset
+
+.
+ אזי:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\times B\right|=\left|A^{\prime}\times B^{\prime}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\to B\right|=\left|A^{\prime}\to B^{\prime}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|P\left(A\right)\right|=\left|P\left(A^{\prime}\right)\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ זרות וגם 
+\begin_inset Formula $A^{\prime},B^{\prime}$
+\end_inset
+
+ זרות: 
+\begin_inset Formula $\left|A^{\prime}\uplus B^{\prime}\right|=\left|A\uplus B\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+משפט קנטור-שרדר-ברנשטיין
+\end_layout
+
+\begin_layout Standard
+משפט זה אומר ש:
+\begin_inset Formula 
+\[
+\left|A\right|\leq\left|B\right|\land\left|B\right|\leq\left|A\right|\iff\left|A\right|=\left|B\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+עוצמות סופיות
+\end_layout
+
+\begin_layout Subsection
+הגדרות
+\end_layout
+
+\begin_layout Standard
+לחלק הזה, נסמן: 
+\begin_inset Formula $\left[0\right]=\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $\left[n\right]=\left\{ 0,\dots,n-1\right\} =\left\{ m\in\sn\mid m<n\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ נקראת סופית אם קיים )הוא גם יחיד( 
+\begin_inset Formula $n\in\sn$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left|A\right|=\left|\left[n\right]\right|$
+\end_inset
+
+.
+ קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ נקראת אינסופית אם 
+\begin_inset Formula $A$
+\end_inset
+
+ איננה סופית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=,<,\le$
+\end_inset
+
+ מוגדר עבור עוצמות, אבל גם מתואר עבור 
+\begin_inset Formula $\sn$
+\end_inset
+
+.
+ לשם ההגבלה, בחלק הזה נסמן 
+\begin_inset Formula $=_{\sn},<_{\sn},\le_{\sn}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+משפטים
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $n,m\in\sn$
+\end_inset
+
+.
+ נניח כי 
+\begin_inset Formula $n<_{\sn}m$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $\left|\left[n\right]\right|<\left|\left[m\right]\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ ו-
+\begin_inset Formula $X$
+\end_inset
+
+ סופית אז 
+\begin_inset Formula $Y$
+\end_inset
+
+ סופית.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $X\subsetneq Y$
+\end_inset
+
+ ו-
+\begin_inset Formula $X,Y$
+\end_inset
+
+ סופיות אז 
+\begin_inset Formula $\left|X\right|<\left|Y\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ סופיות, 
+\begin_inset Formula $\left|X\right|=\left|Y\right|$
+\end_inset
+
+, ו-
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ אז 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $f\iff$
+\end_inset
+
+ על.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ עבור 
+\begin_inset Formula $A$
+\end_inset
+
+ סופית, נסמן 
+\begin_inset Formula $\left|A\right|=n$
+\end_inset
+
+ עבור ה-
+\begin_inset Formula $n$
+\end_inset
+
+ היחידי כך ש-
+\begin_inset Formula $\left|A\right|=\left|\left[n\right]\right|$
+\end_inset
+
+.
+ )אותו הדבר לגבי 
+\begin_inset Formula $\left|A\right|<n,\left|A\right|\le n$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה:
+\series default
+ יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות כך ש-
+\begin_inset Formula $\left|A\right|=n,\left|B\right|=m$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|=\left|B\right|\iff n=_{\sn}m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|\le\left|B\right|\iff n\le_{\sn}m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|<\left|B\right|\iff n<_{\sn}m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+עוצמות אינסופיות
+\end_layout
+
+\begin_layout Subsection
+עוצמות בנות מניה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ העוצמה של קבוצות בנות מניה מסומנת ב-
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+.
+ הקבוצות הבאות בנות מניה:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sn$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall n\in\pos{\sn}.\left|\sn^{n}\right|=\left|\sn\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+שיטת הלכסון
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט האלכסון של קנטור:
+\series default
+ 
+\begin_inset Formula $\left|\sn\right|<\left|\sn\to\left\{ 0,1\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ 
+\begin_inset Formula $\left|\sn\to\left\{ 0,1\right\} \right|=2^{\aleph_{0}}=\aleph$
+\end_inset
+
+.
+ )באופן כללי יותר, 
+\begin_inset Formula $\left|A\to\left\{ 0,1\right\} \right|=2^{\left|A\right|}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הוכחה לדוגמה של משפט האלכסון של קנטור:
+\series default
+ 
+\begin_inset Formula $\left|\sn\right|\le\left|\sn\to\left\{ 0,1\right\} \right|$
+\end_inset
+
+: ראינו.
+ נוכיח כי 
+\begin_inset Formula $\left|\sn\right|\ne\left|\sn\to\left\{ 0,1\right\} \right|$
+\end_inset
+
+.
+ נניח בשלילה כי 
+\begin_inset Formula $\left|\sn\right|=\left|\sn\to\left\{ 0,1\right\} \right|$
+\end_inset
+
+, כלומר קיימת 
+\begin_inset Formula $F\in\sn\to\left(\sn\to\left\{ 0,1\right\} \right)$
+\end_inset
+
+ זיווג.
+\end_layout
+
+\begin_layout Standard
+נוכיח שקיים איבר בטווח 
+\begin_inset Formula $g\in\sn\to\left\{ 0,1\right\} $
+\end_inset
+
+ שאין לה מקור, כלומר לכל 
+\begin_inset Formula $n\in\sn$
+\end_inset
+
+, 
+\begin_inset Formula $F\left(n\right)\ne g$
+\end_inset
+
+.
+ אם כך 
+\begin_inset Formula $g\notin Im\left(F\right)$
+\end_inset
+
+, וזו תהיה סתירה לכך ש-
+\begin_inset Formula $F$
+\end_inset
+
+ על.
+\end_layout
+
+\begin_layout Standard
+נמצא את 
+\begin_inset Formula $g$
+\end_inset
+
+ )אנחנו מחפשים איזשהו 
+\begin_inset Formula $g$
+\end_inset
+
+ ששונה מכל דבר ב-
+\begin_inset Formula $Im\left(F\right)$
+\end_inset
+
+, וכדי לעשות זאת כל איבר יסתור את השוויון לאחד מהם(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+לכסון:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+F\left(0\right) & =\left\langle \overbrace{\left(F\left(0\right)\right)\left(0\right)}^{x},\left(F\left(0\right)\right)\left(1\right),\left(F\left(0\right)\right)\left(2\right),\dots\right\rangle \\
+F\left(1\right) & =\left\langle \left(F\left(1\right)\right)\left(0\right),\overbrace{\left(F\left(1\right)\right)\left(1\right)}^{y},\left(F\left(1\right)\right)\left(2\right),\dots\right\rangle \\
+\dots\\
+F\left(n\right) & =\left\langle \left(F\left(n\right)\right)\left(0\right),\left(F\left(n\right)\right)\left(1\right),\left(F\left(n\right)\right)\left(2\right),\dots\right\rangle \\
+g & =\left\langle 1-x,1-y,\dots\right\rangle \\
+g & =\lambda n\in\sn.1-\left(F\left(n\right)\right)\left(n\right)
+\end{align*}
+
+\end_inset
+
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $g\in\sn\to\left\{ 0,1\right\} $
+\end_inset
+
+ ולכל 
+\begin_inset Formula $n\in\sn$
+\end_inset
+
+, 
+\begin_inset Formula $g\ne F\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+עוצמות שאינן בנות מניה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השערת הרצף 
+\begin_inset Formula $\left(CH\right)$
+\end_inset
+
+: 
+\series default
+לא קיימת עוצמה בין 
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+ ל-
+\begin_inset Formula $\aleph$
+\end_inset
+
+.
+ הוכח שאי אפשר להוכיח את השערת הרצף ואי אפשר להפריך את השערת הרצף.
+ בקורס שלנו 
+\series bold
+לא 
+\series default
+נכון להגיד כי 
+\begin_inset Formula $\left(\aleph_{0}\le\left|A\right|<\aleph\right)\implies\left|A\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפטים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|<2^{\left|A\right|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\aleph_{0}<2^{\aleph_{0}}<2^{\left(2^{\aleph_{0}}\right)}<2^{\left(2^{\left(2^{\aleph_{0}}\right)}\right)}<\dots$
+\end_inset
+
+, ולכן אין עוצמה גדולה ביותר.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\sr\right|=\aleph=2^{\aleph_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall n\in\pos{\sn}.\left|\sr^{n}\right|=\left|\sr\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\alpha,\beta\in\sr$
+\end_inset
+
+ מתקיים: 
+\begin_inset Formula $\left|\left(\alpha,\beta\right)\right|=\left|[\alpha,\beta)\right|=\left|(\alpha,\beta]\right|=\left|\left[\alpha,\beta\right]\right|=\left|\left(-\infty,\alpha\right)\right|=\left|\left(\alpha,\infty\right)\right|=\left|\sr\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+חשבון עוצמות
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות.
+ נגדיר:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|+\left|B\right|=\left|A\times\left\{ 0\right\} \uplus B\times\left\{ 1\right\} \right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|\cdot\left|B\right|=\left|A\times B\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|A\right|^{\left|B\right|}=\left|B\to A\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה:
+\series default
+ מכיוון וניתן להוכיח אי-תלות בבחירת הנציגים, כשנרצה לדבר על 
+\begin_inset Formula $a+b$
+\end_inset
+
+ עבור 
+\begin_inset Formula $a+b$
+\end_inset
+
+ עוצמות, נוכל לבחור את הנציגים עבור עוצמות אלה כקבוצות זרות 
+\begin_inset Formula $A,B$
+\end_inset
+
+ ואז ההגדרה היא 
+\begin_inset Formula $a+b=\left|A\uplus B\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חוקים בסיסיים:
+\end_layout
+
+\begin_layout Standard
+לכל 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ עוצמות מתקיים:
+\end_layout
+
+\begin_layout Itemize
+קומוטטיביות: 
+\begin_inset Formula $a+b=b+a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+קומוטטיביות: 
+\begin_inset Formula $a\cdot b=b\cdot a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אסוציאטיביות: 
+\begin_inset Formula $a+\left(b+c\right)=\left(a+b\right)+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אסוציאטיביות: 
+\begin_inset Formula $a\cdot\left(b\cdot c\right)=\left(a\cdot b\right)\cdot c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+חוק הפילוג: 
+\begin_inset Formula $a\cdot\left(b+c\right)=a\cdot b+a\cdot c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a+0=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\cdot1=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\cdot0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a^{1}=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a^{0}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0^{a}=\begin{cases}
+0 & a\ne0\\
+1 & a=0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+מונוטוניות: אם 
+\begin_inset Formula $a\le b,c\le d$
+\end_inset
+
+ אז:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a+c\le b+d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\cdot c\le b\cdot d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a^{c}\le b^{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a^{c}\le a^{d}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+משפט:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\aleph_{0}+\aleph_{0}=\aleph_{0}\cdot\aleph_{0}=\aleph_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\aleph+\aleph=\aleph\cdot\aleph=\aleph$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\aleph_{0}\cdot\aleph=\aleph_{0}+\aleph=\aleph$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חוקי חזקות:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(a^{b}\right)^{c}=a^{b\cdot c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a^{b+c}=a^{b}\cdot a^{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(a\cdot b\right)^{c}=a^{c}\cdot b^{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $a$
+\end_inset
+
+ עוצמה אינסופית אז 
+\begin_inset Formula $a+\aleph_{0}=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $\aleph_{0}\le a$
+\end_inset
+
+ אז 
+\begin_inset Formula $\forall n\in\sn.a+n=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+איחוד לכל היותר בן מניה של קבוצות לכל היותר בנות מניה הוא לכל היותר בן מניה:
+\series default
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה של קבוצות כך ש-
+\begin_inset Formula $\left|A\right|\le\aleph_{0}$
+\end_inset
+
+ וגם 
+\begin_inset Formula $\forall x\in A.\left|x\right|\le\aleph_{0}$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $\left|\bigcup A\right|\le\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה של קבוצות כך ש-
+\begin_inset Formula $\left|A\right|=\aleph_{0}$
+\end_inset
+
+ וגם 
+\begin_inset Formula $\forall x,y\in A.x\ne y\implies x\cap y=\emptyset$
+\end_inset
+
+ וגם 
+\begin_inset Formula $\forall x\in A.\left|x\right|\le\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\bigcup A\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+קומבינטוריקה
+\end_layout
+
+\begin_layout Section
+קומבינטוריקה בסיסית
+\end_layout
+
+\begin_layout Subsection
+בינום, מולטינום, 
+\begin_inset Formula $\dots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בינום - מקדם בינומי:
+\series default
+ יהיו 
+\begin_inset Formula $n\ge k\ge0$
+\end_inset
+
+.
+ נגדיר: 
+\begin_inset Formula $\binom{n}{k}=\frac{n!}{k!\left(n-k\right)!}$
+\end_inset
+
+.
+ זה שווה למספר האפשרויות לבחור קבוצה של 
+\begin_inset Formula $k$
+\end_inset
+
+ ילדים מתוך 
+\begin_inset Formula $n$
+\end_inset
+
+ ילדים )ללא חשיבות לסדר(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חלוקה לתאים:
+\series default
+ 
+\begin_inset Formula $S\left(n,k\right)$
+\end_inset
+
+ זה מספר המולטי קבוצות )בלי חשיבות לסדר, עם החזרה( בגודל 
+\begin_inset Formula $k$
+\end_inset
+
+ בתור 
+\begin_inset Formula $\left\{ 1,2,\dots,n\right\} $
+\end_inset
+
+, שזה שקול לחלוקת 
+\begin_inset Formula $k$
+\end_inset
+
+ כדורים זהים ל-
+\begin_inset Formula $n$
+\end_inset
+
+ תאים.
+ מחשבים באמצעות:
+\begin_inset Formula 
+\[
+S\left(n,k\right)=\binom{n+k-1}{k}
+\]
+
+\end_inset
+
+
+\series bold
+זהויות חשובות:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{n}{k}=\binom{n}{n-k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+זהות פסקל:
+\series default
+ 
+\begin_inset Formula $\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}$
+\end_inset
+
+.
+ זה נכון כי לבחור 
+\begin_inset Formula $k$
+\end_inset
+
+ מתוך הקבוצה 
+\begin_inset Formula $\left\{ 1,\dots,n\right\} $
+\end_inset
+
+ זה כמות האפשרויות אם לא נבחר את 
+\begin_inset Formula $1$
+\end_inset
+
+ )שזה 
+\begin_inset Formula $\binom{n-1}{k}$
+\end_inset
+
+( ועוד כמות האפשרויות אם נבחר את 
+\begin_inset Formula $1$
+\end_inset
+
+ )שזה 
+\begin_inset Formula $\binom{n-1}{k-1}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Subsection
+סדרת הפרשים
+\end_layout
+
+\begin_layout Standard
+דרך נפוצה לפתור בעיות של ספירת סדרות.
+ עבור סדרה 
+\begin_inset Formula $a$
+\end_inset
+
+, סדרת ההפרשים 
+\begin_inset Formula $y$
+\end_inset
+
+ מוגדרת כך: 
+\begin_inset Formula $y_{1}=a_{1},y_{i+1}=a_{i+1}-a_{i}$
+\end_inset
+
+.
+ במילים אחרות סדרת ההפרשים היא 
+\begin_inset Formula $a_{1},a_{2}-a_{1},a_{3}-a_{2},\dots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+הוכחות קומבינטוריות
+\end_layout
+
+\begin_layout Standard
+דרך להוכיח כי שני ביטויים שווים.
+ נמצא בעיה ששני הצדדים בשוויון פותרים ואז נוכיח ששני הצדדים פותרים את אותה
+ הבעיה.
+\end_layout
+
+\begin_layout Subsection
+הבינום של ניוטון
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(x+y\right)^{n}=\sum_{k=0}^{n}\binom{n}{k}x^{k}y^{n-k}
+\]
+
+\end_inset
+
+לכל 
+\begin_inset Formula $x,y\in\sr$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $n\in\sn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+המקדם המולטינומי
+\end_layout
+
+\begin_layout Standard
+נגדיר את המקדם המולטינומי: עבור 
+\begin_inset Formula $k_{1},\dots,k_{m}\in\mathbb{N}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $k_{1}+\dots+k_{m}=n$
+\end_inset
+
+ נגדיר את המקדם המולטינומי:
+\begin_inset Formula 
+\[
+\binom{n}{k_{1},k_{2},\dots,k_{m}}=\frac{n!}{k_{1}!k_{2}!\cdot\dots\cdot k_{m}!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה קומבינטורית:
+\series default
+ המקדם המולטינומי 
+\begin_inset Formula $\binom{n}{k_{1},k_{2},\dots,k_{m}}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $k_{1}+\dots+k_{m}=n$
+\end_inset
+
+ הינו מספר האפשרויות להרכיב מילה באורך 
+\begin_inset Formula $n$
+\end_inset
+
+ מעל א
+\begin_inset Quotes erd
+\end_inset
+
+ב 
+\begin_inset Formula $\left\{ 1,\dots,m\right\} $
+\end_inset
+
+ עם בדיוק 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+ים, 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+ים, 
+\begin_inset Formula $\dots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+זה שווה ל-
+\begin_inset Formula $\binom{n}{k_{1}}\cdot\binom{n-k_{1}}{k_{2}}\cdot\binom{n-k_{1}-k_{2}}{k_{3}}\cdot\dots\cdot\binom{k_{m}}{k_{m}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נוסחת המולטינום:
+\series default
+ 
+\begin_inset Formula 
+\[
+\left(x_{1}+\dots+x_{m}\right)^{n}=\sum_{k_{1}+\dots+k_{m}=n}\binom{n}{k_{1},\dots,k_{m}}x^{k_{1}}\cdot x^{k_{2}}\cdot\dots\cdot x^{k_{m}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+המקדם הבינומי הכללי
+\end_layout
+
+\begin_layout Standard
+לכל 
+\begin_inset Formula $r\in\mathbb{R}$
+\end_inset
+
+, ולכל 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $r^{\overline{k}}=r\cdot\left(r-1\right)\cdot\dots\cdot\left(r-k+1\right)$
+\end_inset
+
+.
+ בנוסף 
+\begin_inset Formula $n^{\overline{k}}=\frac{n!}{\left(n-k\right)!}$
+\end_inset
+
+, 
+\begin_inset Formula $n^{\overline{n}}=n!$
+\end_inset
+
+, 
+\begin_inset Formula $n^{\overline{0}}=1,n^{\overline{1}}=n$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\frac{1}{2}^{\overline{3}}=\frac{1}{2}\left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)=\frac{3}{8}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+לכל 
+\begin_inset Formula $r\in\mathbb{R},k\in\mathbb{N}$
+\end_inset
+
+ נגדיר את הבינום השלילי להיות 
+\begin_inset Formula $\binom{r}{k}=\frac{r^{\overline{k}}}{k!}=\frac{r\left(r-1\right)\cdot\dots\cdot\left(r-k+1\right)}{k!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+נוסחת הבינום השלילי
+\end_layout
+
+\begin_layout Standard
+עבור 
+\begin_inset Formula $r,x,y\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\left(x+y\right)^{r}=\sum_{k=0}^{\infty}\binom{r}{k}x^{k}y^{r-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+הכלה והדחה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נוסחת ההכלה וההדחה:
+\series default
+ יהיו 
+\begin_inset Formula $A_{1},\dots,A_{n}$
+\end_inset
+
+ קבוצות סופוית.
+\begin_inset Formula 
+\begin{align*}
+\left|\bigcup_{i=1}^{n}A_{i}\right|= & \left|A_{1}\right|+\left|A_{2}\right|+\dots+\left|A_{n}\right|\\
+- & \left|A_{1}\cap A_{2}\right|-\left|A_{1}\cap A_{3}\right|-\dots-\left|A_{i}\cap A_{j}\right|-\dots\\
++ & \left|A_{1}\cap A_{2}\cap A_{3}\right|+\left|A_{1}\cap A_{2}\cap A_{4}\right|+\dots+\left|A_{i}\cap A_{j}\cap A_{k}\right|+\dots\\
+- & \dots\\
++ & \dots
+\end{align*}
+
+\end_inset
+
+בנוסחה זו יש 
+\begin_inset Formula $2^{n}-1$
+\end_inset
+
+ מחוברים )כל תתי הקבוצות חוץ מהקבוצה הריקה(.
+ הנוסחה הזו רלוונטית אם הרבה מהמחוברים הם 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+המקרה הסימטרי
+\series default
+ )בכל שורה בנוסחת ההכלה וההדחה, הגורמים יוצאים שווים(: הגודל של חיתוך המאורעות
+ אינו תלוי באילו מאורעות אנו חותכים, אלא רק בכמות המאורעות.
+ במקרה זה נפשט את הנוסחה להיות:
+\begin_inset Formula 
+\[
+\left|\bigcup_{i=1}^{n}A_{i}\right|=\sum_{k=1}^{n}\binom{n}{k}\left(-1\right)^{k+1}\cdot\left|A_{1}\cap\dots\cap A_{k}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+עקרון שובך היונים
+\end_layout
+
+\begin_layout Standard
+אם מחלקים 
+\begin_inset Formula $m$
+\end_inset
+
+ יונים ל-
+\begin_inset Formula $n$
+\end_inset
+
+ שובכים, אז קיים שובך עם לפחות 
+\begin_inset Formula $\lceil\frac{m}{n}\rceil$
+\end_inset
+
+ יונים.
+\end_layout
+
+\begin_layout Subsection
+מספרי קטלן 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ הפתרון לבעיות הבאות:
+\end_layout
+
+\begin_layout Itemize
+כמה הילוכים שמתחילים בנקודה 
+\begin_inset Formula $\left(0,0\right)$
+\end_inset
+
+ ומסתיימים ב-
+\begin_inset Formula $\left(n,n\right)$
+\end_inset
+
+ יש כך שבכל שלב קופצים צעד אחד ימינה או צעד אחד למעלה, ואסור לעבור את האלכסון
+ 
+\begin_inset Formula $y=x$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+כמה סדרות של 
+\begin_inset Formula $0$
+\end_inset
+
+ ו-
+\begin_inset Formula $1$
+\end_inset
+
+ באורך 
+\begin_inset Formula $2n$
+\end_inset
+
+ יש כך שלכל 
+\begin_inset Formula $1\le k\le2n$
+\end_inset
+
+, מספר האפסים לא עולה על מספר האחדים עד המקום ה-
+\begin_inset Formula $k$
+\end_inset
+
+ ויש בדיוק 
+\begin_inset Formula $n$
+\end_inset
+
+ אפסים ו-
+\begin_inset Formula $n$
+\end_inset
+
+ אחדים?
+\end_layout
+
+\begin_layout Itemize
+כמה דרכים חוקיות יש לשים 
+\begin_inset Formula $n$
+\end_inset
+
+ סוגריים ו-
+\begin_inset Formula $2n$
+\end_inset
+
+ תווים? )למשל עבור 
+\begin_inset Formula $n=3$
+\end_inset
+
+ משהו כמו 
+\begin_inset Formula $(())()$
+\end_inset
+
+ נחשב לחוקי(
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חישוב: 
+\begin_inset Formula $C_{n}=\binom{2n}{n}-\binom{2n}{n-1}=\frac{1}{n}\binom{2n}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נוסחת נסיגה:
+\series default
+ עבור 
+\begin_inset Formula $n\ge1$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+C_{n}=\sum_{i=1}^{n}C_{i-1}\cdot C_{n-i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+פונקציות יוצרות
+\end_layout
+
+\begin_layout Standard
+תהא 
+\begin_inset Formula $\overline{a}=\lambda n\in\mathbb{N}.a_{n}$
+\end_inset
+
+ סדרת מספרים.
+ 
+\bar under
+הפונקציה היוצרת את הסדרה 
+\begin_inset Formula $\overline{a}$
+\end_inset
+
+
+\bar default
+ היא הפונקציה 
+\begin_inset Formula $f\left(x\right)=\sum_{n=0}^{\infty}a_{n}x^{n}$
+\end_inset
+
+ )טור חזקות(.
+ בכיוון ההפוך, בהינתן פונקציה 
+\begin_inset Formula $f$
+\end_inset
+
+ שניתן לפתח לטור חזקות, כלומר, שניתן לבטא על ידי 
+\begin_inset Formula $f\left(x\right)=\sum_{n=0}^{\infty}a_{n}x^{n}$
+\end_inset
+
+, סדרת המקדמים 
+\begin_inset Formula $\lambda n\in\mathbb{N}.a_{n}$
+\end_inset
+
+ נקראת ה
+\bar under
+סדרה הנוצרת
+\bar default
+.
+\end_layout
+
+\begin_layout Subsection
+נוסחאות
+\end_layout
+
+\begin_layout Definition
+תהא 
+\begin_inset Formula $\left(a_{n}\right)_{n=0}^{\infty}$
+\end_inset
+
+ סדרת מספרים כלשהי.
+ נגדיר טור:
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}a_{n}=\lim_{N\to\infty}\sum_{n=0}^{N}a_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רשימת נוסחאות:
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{1-x} & =\sum_{n=0}^{\infty}x^{n}\\
+\frac{1-x^{n+1}}{1-x} & =\sum_{k=0}^{n}x^{k}\\
+\frac{1}{\left(1-x\right)^{m}} & =\sum_{n=0}^{\infty}S\left(m,n\right)x^{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הפונקציה 
+\begin_inset Formula $\alpha f\left(x\right)\pm\beta g\left(x\right)$
+\end_inset
+
+ יוצרת את הסדרה 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\alpha a_{n}\pm\beta b_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הפונקציה 
+\begin_inset Formula $f\left(cx\right)$
+\end_inset
+
+ יוצרת את הסדרה 
+\begin_inset Formula $\lambda n\in\mathbb{N}.c^{n}\cdot a_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הפונקציה 
+\begin_inset Formula $x^{m}\cdot f\left(x\right)$
+\end_inset
+
+ יוצרת את הסדרה 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\begin{cases}
+0 & n<m\\
+a_{n-m} & n\ge m
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f\left(x\right)\cdot g\left(x\right)$
+\end_inset
+
+ יוצרת את הקונבולוציה של הסדרות: 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\overbrace{\sum_{k=0}^{n}a_{k}\cdot b_{n-k}}^{a_{0}\cdot b_{n}+a_{1}\cdot b_{n-1}+\dots+a_{n}\cdot b_{0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מקרה פרטי של 
+\begin_inset Formula $4$
+\end_inset
+
+: 
+\begin_inset Formula $\frac{f\left(x\right)}{1-x}$
+\end_inset
+
+ יוצרת את סדרת הסכומים החלקיים 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\sum_{k=0}^{n}a_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+פירוק לשברים חלקיים
+\end_layout
+
+\begin_layout Standard
+הסיבה שאנחנו עושים פירוק לשברים חלקיים היא שהפונקציה 
+\begin_inset Formula $\alpha f\left(x\right)\pm\beta g\left(x\right)$
+\end_inset
+
+ נוצרת מהסדרה 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\alpha a_{n}\pm\beta b_{n}$
+\end_inset
+
+, לכן יותר קל לנו למצוא פונקציה יוצרת לסכום של כמה שברים מאשר שבר אחד גדול.
+\end_layout
+
+\begin_layout Standard
+הפירוק לשברים חלקיים הכי פשוט הוא כאשר כל הגורמים במכנה שונים.
+ למשל:
+\begin_inset Formula 
+\begin{align*}
+\frac{x+3}{x^{2}-3x-40} & =\frac{x+3}{\left(x-8\right)\left(x+5\right)}=\frac{A}{x-8}+\frac{B}{x+5}\\
+x+3 & =A\left(x+5\right)+B\left(x-8\right)
+\end{align*}
+
+\end_inset
+
+ואז מוצאים את 
+\begin_inset Formula $A,B$
+\end_inset
+
+ לפי המשוואה.
+ אם יש ביטוי שאינו פריק במכנה, למשל:
+\begin_inset Formula 
+\[
+\frac{10x^{2}+12x+20}{\left(x-2\right)\left(x^{2}+2x+4\right)}=\frac{A}{x-2}+\frac{Bx+C}{x^{2}+2x+4}
+\]
+
+\end_inset
+
+עבור כל גורם ממעלה שנייה נוסיף מונה מהצורה 
+\begin_inset Formula $ax+b$
+\end_inset
+
+.
+ לאחר מכן נקבל את המשוואה: 
+\begin_inset Formula $10x^{2}+12x+2=A\left(x^{2}+2x+4\right)+\left(Bx+C\right)\left(x-2\right)$
+\end_inset
+
+ שאותה צריך לפתור.
+\end_layout
+
+\begin_layout Standard
+אם יש גורמים שחוזרים על עצמם במכנה, למשל:
+\begin_inset Formula 
+\[
+\frac{P\left(x\right)}{\left(x+2\right)\left(x^{2}+1\right)^{5}}=\frac{A}{x+2}+\frac{Bx+C}{x^{2}+1}+\frac{Dx+E}{\left(x^{2}+1\right)^{2}}+\frac{Fx+G}{\left(x^{2}+1\right)^{3}}+\frac{Hx+I}{\left(x^{2}+1\right)^{4}}+\frac{Jx+K}{\left(x^{2}+1\right)^{5}}
+\]
+
+\end_inset
+
+אז נסכום את הגורם שחוזר על עצמו מ-
+\begin_inset Formula $1$
+\end_inset
+
+ עד המעריך של החזקה.
+\end_layout
+
+\begin_layout Section
+נוסחאות נסיגה
+\end_layout
+
+\begin_layout Definition
+נוסחת נסיגה היא ביטוי של איבר בסדרה באמצעות איברים קודמים בסדרה.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+דוגמא:
+\series default
+ פיבונאצ
+\lang english
+'
+\lang hebrew
+י.
+ 
+\begin_inset Formula $a_{0}=1,a_{1}=1,a_{n}=a_{n-1}+a_{n-2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+לנוסחת נסיגה יש משמעות רק החל מ-
+\begin_inset Formula $n$
+\end_inset
+
+ מסוים )כי היא דורשת מספרים קודמים שלא קיימים קודם לכן(.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+הגדרה:
+\series default
+ עומק הרקורסיה הוא כמות האינדקסים שצריך לנסוג )לחזור אחורה( על מנת לחשב
+ את האיבר בסדרה.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+תנאי התחלה:
+\series default
+ השמה נתונה במשוואת הרקורסיה מעומק 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ השמה של 
+\begin_inset Formula $a_{0},\dots,a_{k-1}$
+\end_inset
+
+ היא תנאי התחלה.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+בעיית התחלה:
+\series default
+ נוסחה רקורסיבית מעומק 
+\begin_inset Formula $k$
+\end_inset
+
+ ותנאי התחלה.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+פתרון של בעיית התחלה:
+\series default
+ סדרה 
+\begin_inset Formula $\lambda n\in\mathbb{N}.a_{n}$
+\end_inset
+
+ נקראת פתרון לבעיית התחלה אם הסדרה מקיימת את כל תנאי ההתחלה ואת המשוואה
+ הרקורסיבית לכל 
+\begin_inset Formula $n$
+\end_inset
+
+ שעבורו יש משמעות למשוואה.
+ לבעיית התחלה תמיד יש פתרון יחיד.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+פתרון לנוסחת נסיגה:
+\series default
+ כל סדרה 
+\begin_inset Formula $\lambda n\in\mathbb{N}$
+\end_inset
+
+ המקיימת את המשוואה לכל 
+\begin_inset Formula $n$
+\end_inset
+
+ עבורו יש משמעות למשוואה.
+\end_layout
+
+\begin_layout Subsection
+נוסחאות נסיגה לינאריות
+\end_layout
+
+\begin_layout Subsubsection
+נוסחאות נסיגה לינאריות הומוגניות
+\end_layout
+
+\begin_layout Standard
+נוסחאות נסיגה מהצורה 
+\begin_inset Formula $a_{n}=\alpha_{1}\cdot a_{n-1}+\dots+\alpha_{k}\cdot a_{n-k}$
+\end_inset
+
+.
+ כאשר 
+\begin_inset Formula $\alpha_{1},\dots,\alpha_{k}\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+נוסחאות נסיגה לינאריות לא הומוגניות
+\end_layout
+
+\begin_layout Standard
+נוסחאות נסיגה מהצורה 
+\begin_inset Formula $a_{n}=\alpha_{1}a_{n-1}+\dots+\alpha_{k}a_{n-k}+\beta$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\alpha_{1},\dots,\alpha_{k},\beta\in\mathbb{R}$
+\end_inset
+
+.
+ ניתן לעבור מנוסחת נסיגה לינארית לא הומוגנית )למשל 
+\begin_inset Formula $a_{n}=2a_{n-1}+3a_{n-2}+5$
+\end_inset
+
+( לנוסחת נסיגה לינארית הומוגנית באופן הבא: נוסיף את 
+\begin_inset Formula $a_{n-1}$
+\end_inset
+
+ משני אגפי המשוואה ונקבל:
+\begin_inset Formula 
+\begin{align*}
+a_{n}+2a_{n-2}+3a_{n-3}+5 & =3a_{n-1}+3a_{n-2}+5\\
+a_{n} & =3a_{n-1}+a_{n-2}-3a_{n-3}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+פתרון נוסחאות נסיגה לינאריות
+\end_layout
+
+\begin_layout Subsubsection
+פתרון נוסחאות נסיגה לינאריות באמצעות פונקציות יוצרות
+\end_layout
+
+\begin_layout Standard
+למשל: 
+\begin_inset Formula $a_{n+1}=\left(1.1\right)a_{n}+1000$
+\end_inset
+
+.
+ נסמן ב-
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ את הפונקציה היוצרת של איזשהו פתרון.
+ ננסה להבין מתנאי הנסיגה מהי 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+f\left(x\right) & =\sum_{n=0}^{\infty}a_{n}x^{n}=a_{0}+\sum_{n=1}^{\infty}a_{n}x^{n}=a_{0}+\sum_{n=1}^{\infty}\left(1.1\cdot a_{n-1}+1000\right)x^{n}=a_{0}+\left(1.1\right)\cdot\sum_{n=1}^{\infty}a_{n-1}x^{n}+1000\sum_{n=1}^{\infty}x^{n}\\
+ & =\left(\sum_{n=1}^{\infty}a_{n-1}x^{n}=x\cdot\sum_{n=0}^{\infty}a_{n}x^{n}=x\cdot f\left(x\right)\right)=a_{0}+1.1x\cdot f\left(x\right)+\frac{1000x}{1-x}\\
+f\left(x\right) & \cdot\left(1-1.1x\right)=\frac{a_{0}\left(1-x\right)+1000x}{1-x}\\
+f\left(x\right) & =\frac{a_{0}\left(1-x\right)+1000x}{\left(1-x\right)\left(1-1.1x\right)}
+\end{align*}
+
+\end_inset
+
+ומכאן מוצאים את הסדרה שהפונקציה יוצרת.
+\end_layout
+
+\begin_layout Subsubsection
+פתרון נוסחאות נסיגה לינאריות הומוגניות באמצעות פולינום אופייני
+\end_layout
+
+\begin_layout Standard
+עבור נוסחה 
+\begin_inset Formula $a_{n+1}=a_{n}+a_{n-1},a_{0}=0,a_{1}=1$
+\end_inset
+
+, נעבור לפולינום האופייני כך: 
+\begin_inset Formula $\overbrace{a_{n+1}}^{x^{2}}-\overbrace{a_{n}}^{x^{1}}-\overbrace{a_{n-1}}^{x_{0}}=0$
+\end_inset
+
+, 
+\begin_inset Formula $x^{2}-x-1=0$
+\end_inset
+
+.
+ נמצא את שורשי הפולינום )הם 
+\begin_inset Formula $\left(\frac{1-\sqrt{5}}{2}\right),\left(\frac{1+\sqrt{5}}{2}\right)$
+\end_inset
+
+(.
+ אם כך הפתרונות הבסיסיים )שמקיימים את נוסחת הנסיגה אך לא את תנאי ההתחלה(
+ הם 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\left(\frac{1-\sqrt{5}}{2}\right)^{n},\lambda n\in\mathbb{N}.\left(\frac{1+\sqrt{5}}{2}\right)^{n}$
+\end_inset
+
+.
+ נמצא את הפתרון של בעיית ההתחלה:
+\begin_inset Formula 
+\[
+a_{n}=A\cdot\left(\frac{1+\sqrt{5}}{2}\right)^{n}+B\cdot\left(\frac{1-\sqrt{5}}{2}\right)^{n}
+\]
+
+\end_inset
+
+נמצא את 
+\begin_inset Formula $A,B$
+\end_inset
+
+ באמצעות תנאי ההתחלה ונקבל כי 
+\begin_inset Formula $A=\frac{1}{\sqrt{5}},B=-\frac{1}{\sqrt{5}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פירוט על פתרונות בסיסיים:
+\end_layout
+
+\begin_layout Itemize
+אם אין שורשים ממשיים, כרגע אנחנו לא יודעים מה לעשות.
+\end_layout
+
+\begin_layout Itemize
+אם עומק הרקורסיה הוא 
+\begin_inset Formula $2$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ויש שני שורשים שונים 
+\begin_inset Formula $\lambda_{1},\lambda_{2}$
+\end_inset
+
+, אז הפתרונות הבסיסיים הם כפי שעשינו בתרגיל הזה שזה 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\left(\lambda_{1}\right)^{n},\lambda n\in\mathbb{N}.\left(\lambda_{2}\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+ויש שורש יחיד 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+, אז הפתרונות הבסיסיים הם 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\lambda_{1}^{n},\lambda n\in\mathbb{N}.n\cdot\lambda_{1}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+אם עומק הרקורסיה הוא 
+\begin_inset Formula $3$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ויש שלושה שורשים שונים 
+\begin_inset Formula $\lambda_{1},\lambda_{2},\lambda_{3}$
+\end_inset
+
+, אז הפתרונות הבסיסיים הם 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\lambda_{1}^{n},\lambda n\in\mathbb{N}.\lambda_{2}^{n},\lambda n\in\mathbb{N}.\lambda_{3}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+ויש שני שורשים 
+\begin_inset Formula $\lambda_{1}=\lambda_{2}\ne\lambda_{3}$
+\end_inset
+
+, אז הפתרונות הבסיסיים הם גם 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\lambda_{1}^{n},\lambda n\in\mathbb{N}.\lambda_{2}^{n},\lambda n\in\mathbb{N}.\lambda_{3}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+ויש שורש יחיד 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+, אז הפתרונות הבסיסיים הם 
+\begin_inset Formula $\lambda n\in\mathbb{N}.\lambda_{1}^{n},\lambda n\in\mathbb{N}.n\cdot\lambda_{1}^{n},\lambda n\in\mathbb{N}.n^{2}\cdot\lambda_{1}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+...וכך הלאה.
+\end_layout
+
+\begin_layout Subsubsection
+מעבר מפתרון יחיד של נוסחת נסיגה לא הומוגנית לקבוצת הפתרונות
+\end_layout
+
+\begin_layout Standard
+נשתמש במשפט הבא:
+\begin_inset Formula 
+\[
+\left\{ \lambda n\in\mathbb{N}.a_{n}+x_{n}\mid\text{solution for }a_{n}=\alpha_{1}a_{n-1}+\dots+\alpha_{k}a_{n-k}\right\} =\left\{ f\in\mathbb{N}\to\mathbb{R}\mid a_{n}=\alpha_{1}a_{n-1}+\dots+\alpha_{k}a_{n-k}+\beta\right\} 
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ פתרון נתון אחד למשוואה 
+\begin_inset Formula $a_{n}=\alpha_{1}a_{n-1}+\dots+\alpha_{k}a_{n-k}+\beta$
+\end_inset
+
+.
+ כלומר ברגע שיש לנו פתרון אחד לנוסחת נסיגה לא הומוגנית ניתן למצוא את כל
+ הפתרונות באמצעות פתרון נוסחת הנסיגה ההומוגנית.
+\end_layout
+
+\begin_layout Subsection
+סדרות עזר
+\end_layout
+
+\begin_layout Standard
+שיטה שימושית לפתרון נוסחאות נסיגה.
+ נגדיר סדרות עזר )סדרות שאנחנו לא צריכים לחשב( שיתבטלו בנוסחה הסופית, אך
+ עוזרות להגדיר את הקשרים בין הנוסחאות.
+ למשל, כמה מחרוזות באורך 
+\begin_inset Formula $n$
+\end_inset
+
+ ישנן מעל א
+\begin_inset Quotes erd
+\end_inset
+
+ב 
+\begin_inset Formula $\left\{ A,B,C\right\} $
+\end_inset
+
+ ללא הרצפים 
+\begin_inset Formula $BB,CC$
+\end_inset
+
+? הפתרון הוא 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+.
+ נסמן ב-
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ את המחרוזות שמסתיימות ב-
+\begin_inset Formula $A$
+\end_inset
+
+, וב-
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ את המחרוזות שנגמרות ב-
+\begin_inset Formula $B$
+\end_inset
+
+ וב-
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ את אלה שנגמרות ב-
+\begin_inset Formula $C$
+\end_inset
+
+.
+ נמצא קשרים בין הנוסחאות:
+\begin_inset Formula 
+\begin{align*}
+x_{n} & =a_{n}+b_{n}+c_{n}=x_{n-1}+b_{n}+c_{n}=x_{n-1}+2b_{n}\\
+a_{n} & =x_{n-1}\\
+b_{n} & =a_{n-1}+c_{n-1}=x_{n-2}+c_{n-1}\\
+c_{n} & =b_{n}
+\end{align*}
+
+\end_inset
+
+ונקבל כי 
+\begin_inset Formula $\frac{x_{n}-x_{n-1}}{2}=b_{n}=x_{n-2}+\frac{x_{n-1}-x_{n-2}}{2}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $x_{n}=2x_{n-1}+x_{n-2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+תורת הגרפים
+\end_layout
+
+\begin_layout Section
+הגדרות בסיסיות
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+, כאשר 
+\begin_inset Formula $V$
+\end_inset
+
+ זה הצמתים ו-
+\begin_inset Formula $E$
+\end_inset
+
+ זה הקשתות.
+ 
+\begin_inset Formula $E\subseteq P_{2}\left(V\right)=\left\{ X\subseteq V\mid\left|X\right|=2\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $N\left(v\in V\right)=\left\{ u\in V\mid\left\{ v,u\right\} \in E\right\} $
+\end_inset
+
+ זה קבוצת השכנים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $d_{G}\left(v\in V\right)=\left|\left\{ e\in E\mid v\in e\right\} \right|$
+\end_inset
+
+ זו הדרגה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+תת-גרף של 
+\begin_inset Formula $G$
+\end_inset
+
+ הינו גרף 
+\begin_inset Formula $G^{\prime}=\left\langle V^{\prime},E^{\prime}\right\rangle $
+\end_inset
+
+ כך ש-
+\begin_inset Formula $V^{\prime}\subseteq V$
+\end_inset
+
+ ו-
+\begin_inset Formula $E^{\prime}\subseteq E$
+\end_inset
+
+ )וגם 
+\begin_inset Formula $E^{\prime}\subseteq P_{2}\left(V^{\prime}\right)$
+\end_inset
+
+ כי אחרת זה לא גרף(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $K\subseteq V$
+\end_inset
+
+.
+ הגרף הנפרש על ידי 
+\begin_inset Formula $K$
+\end_inset
+
+ מסומן 
+\begin_inset Formula $G\left[K\right]=\left\langle K,P_{2}\left(K\right)\cap E\right\rangle $
+\end_inset
+
+ תת גרף של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+הגרף המשלים 
+\begin_inset Formula $\overline{G}$
+\end_inset
+
+ הינו הגרף 
+\begin_inset Formula $\overline{G}=\left\langle V,P_{2}\left(V\right)\setminus E\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+מסלול, טיול, וכל הדברים האלה
+\end_layout
+
+\begin_layout Itemize
+טיול הוא סדרת קודקודים 
+\begin_inset Formula $\left\langle a_{1},\dots,a_{n}\right\rangle \in V^{n}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $1\le i\le n-1$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ a_{i},a_{i+1}\right\} \in E$
+\end_inset
+
+.
+ לא קיים טיול ריק.
+\end_layout
+
+\begin_layout Itemize
+מסלול הוא טיול 
+\begin_inset Formula $\left\langle a_{1},\dots,a_{n}\right\rangle $
+\end_inset
+
+ כך שאין קשת שחוזרת פעמיים.
+\end_layout
+
+\begin_layout Itemize
+מעגל הוא מסלול שמתחיל ונגמר באותה הנקודה.
+\end_layout
+
+\begin_layout Itemize
+מסלול פשוט הוא מסלול חסר מעגלים, כלומר מסלול שלא חוזר על 
+\bar under
+קודקוד
+\bar default
+ פעמיים.
+\end_layout
+
+\begin_layout Itemize
+מעגל פשוט הוא מעגל 
+\begin_inset Formula $\left\langle a_{1},\dots,a_{n},a_{1}\right\rangle $
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left\langle a_{1},\dots,a_{n}\right\rangle $
+\end_inset
+
+ הוא מסלול פשוט.
+ כלומר הפעם היחידה שהמעגל הזה חוזר על נקודה זה בנקודת ההתחלה.
+\end_layout
+
+\begin_layout Itemize
+מסלול אוילר הוא מסלול שעובר בכל קשת בדיוק פעם אחת.
+\end_layout
+
+\begin_layout Itemize
+מעגל אוילר הוא מעגל שעובר בכל קשת בדיוק פעם אחת.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ב-
+\begin_inset Formula $G$
+\end_inset
+
+ יש מעגל אוילר 
+\begin_inset Formula $\iff$
+\end_inset
+
+ דרגת כל הקודקודים היא זוגית.
+\end_layout
+
+\begin_layout Itemize
+ב-
+\begin_inset Formula $G$
+\end_inset
+
+ יש מסלול אוילר 
+\begin_inset Formula $\iff$
+\end_inset
+
+ יש 
+\begin_inset Formula $0$
+\end_inset
+
+ או 
+\begin_inset Formula $2$
+\end_inset
+
+ קודקודים מדרגה אי זוגית.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+מסלול המילטון הוא מסלול שעובר בכל קודקוד בדיוק פעם אחת.
+\end_layout
+
+\begin_layout Itemize
+מעגל המילטון הוא מעגל פשוט שעובר על כל הקודקודים.
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+ גרף, 
+\begin_inset Formula $v\ne u\in V$
+\end_inset
+
+.
+ אזי יש טיול מ-
+\begin_inset Formula $v$
+\end_inset
+
+ ל-
+\begin_inset Formula $u$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ יש מסלול פשוט מ-
+\begin_inset Formula $v$
+\end_inset
+
+ ל-
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+קשירות
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, על 
+\begin_inset Formula $V$
+\end_inset
+
+ אפשר להגדיר יחס שקילות )
+\begin_inset Quotes erd
+\end_inset
+
+יחס הקשירות
+\begin_inset Quotes erd
+\end_inset
+
+(: עבור 
+\begin_inset Formula $v_{1},v_{2}\in V$
+\end_inset
+
+ נגדיר כי 
+\begin_inset Formula $\iff v_{1}\sim v_{2}$
+\end_inset
+
+ קיים טיול מ-
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל-
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ )
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים מסלול פשוט מ-
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל-
+\begin_inset Formula $v_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Definition
+כל מחלקת שקילות ביחס הקשירות נקראת 
+\begin_inset Quotes eld
+\end_inset
+
+רכיב קשירות
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+גרף 
+\begin_inset Formula $G$
+\end_inset
+
+ נקרא קשיר אם יש בדיוק רכיב קשירות אחד.
+ או באופן שקול אם בין כל שני קודקודים 
+\begin_inset Formula $v_{1}.v_{2}\in V$
+\end_inset
+
+ קיים טיול.
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ונניח כי 
+\begin_inset Formula $k_{1},\dots,k_{n}$
+\end_inset
+
+ הם רכיבי הקשירות של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $1\le i\le n$
+\end_inset
+
+, 
+\begin_inset Formula $G\left[k_{i}\right]$
+\end_inset
+
+ הינו תת-גרף קשיר של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אין קשתות בין קודקודים מרכיבי קשירות שונים.
+\end_layout
+
+\begin_layout Enumerate
+אם מוסיפים לגרף 
+\begin_inset Formula $G$
+\end_inset
+
+ קשת בין קודקוד 
+\begin_inset Formula $v\in k_{1}$
+\end_inset
+
+ ו-
+\begin_inset Formula $u\in k_{2}$
+\end_inset
+
+ אז בגרף החדש רכיבי הקשירות יהיו 
+\begin_inset Formula $k_{1}\cup k_{2},k_{3},k_{4},\dots,k_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם מוסיפים לגרף 
+\begin_inset Formula $G$
+\end_inset
+
+ קשת בין שני קודקודים באותו רכיב הקשירות, רכיבי הקשירות לא משתנים.
+\end_layout
+
+\begin_layout Corollary
+לכל גרף 
+\begin_inset Formula $G$
+\end_inset
+
+, מספר רכיבי הקשירות ב-
+\begin_inset Formula $\left|V\right|-\left|E\right|\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $\left|V\right|-1>\left|E\right|$
+\end_inset
+
+ אז 
+\begin_inset Formula $G$
+\end_inset
+
+ לא קשיר.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $G$
+\end_inset
+
+ קשיר אז 
+\begin_inset Formula $\left|E\right|\ge\left|V\right|-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+צביעות של גרפים:
+\series default
+ צביעה היא פונקציה.
+ יש שתי סוגים של צביעות:
+\end_layout
+
+\begin_layout Enumerate
+צביעת קודקודים.
+ 
+\begin_inset Formula $f:V\to C$
+\end_inset
+
+ נקראת צביעת קודקודים.
+\end_layout
+
+\begin_layout Enumerate
+צביעת קשתות.
+ 
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $f:E\to C$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $C$
+\end_inset
+
+ קבוצת הצבעים.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ נקראת צביעת קשתות ב-
+\begin_inset Formula $C$
+\end_inset
+
+ צבעים.
+\end_layout
+
+\begin_layout Enumerate
+צביעת קודקודים 
+\begin_inset Formula $f:A\to C$
+\end_inset
+
+ נקראת חוקית אם 
+\begin_inset Formula $\forall\left\{ v,u\right\} \in E.f\left(v\right)\ne f\left(u\right)$
+\end_inset
+
+ )הצבעים שונים בין קודקודים שכנים(.
+\end_layout
+
+\begin_layout Enumerate
+אין חוק דומה לצביעת קשתות.
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+ גרף.
+ מספר הצביעה של 
+\begin_inset Formula $G$
+\end_inset
+
+, מסומן 
+\begin_inset Formula $\chi\left(G\right)$
+\end_inset
+
+ הינו מספר הצבעים הקטן ביותר הדרוש על מנת לצבוע את 
+\begin_inset Formula $G$
+\end_inset
+
+ בצביעת קודקודים חוקית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה:
+\series default
+ 
+\begin_inset Formula $1\le\chi\left(G\right)\le\left|V\right|$
+\end_inset
+
+, יתר על כן:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\chi\left(g\right)=\left|V\right|\iff G=K_{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\chi\left(g\right)=1\iff E=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+נאמר כי גרף 
+\begin_inset Formula $G$
+\end_inset
+
+ הוא 
+\begin_inset Formula $n$
+\end_inset
+
+-צביע אם קיימת צביעת קודקודים חוקית ב-
+\begin_inset Formula $n$
+\end_inset
+
+ צבעים.
+ 
+\begin_inset Formula $\chi\left(G\right)$
+\end_inset
+
+ הוא ה-
+\begin_inset Formula $n$
+\end_inset
+
+ הקטן ביותר כש ש-
+\begin_inset Formula $G$
+\end_inset
+
+ הוא 
+\begin_inset Formula $n$
+\end_inset
+
+-צביע.
+\end_layout
+
+\begin_layout Section
+עצים
+\end_layout
+
+\begin_layout Definition
+עץ הינו גרף קשיר וחסר מעגלים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יער הינו גרף חסר מעגלים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+ביער מספר הקשתות קטן ממספר הקודקודים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+רכיבי הקשירות של יער הם עצים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+ עץ אז 
+\begin_inset Formula $\left|E\right|=\left|V\right|-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+משפט האפיון )משפט מרכזי בקורס(:
+\series default
+ יהי 
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+ גרף, הבאים שקולים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ עץ.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ קשיר וגם 
+\begin_inset Formula $\left|E\right|=\left|V\right|-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ חסר מעגלים ו-
+\begin_inset Formula $\left|E\right|=\left|V\right|-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ קשיר מינימלי )כלומר אם נחסיר קשת מ-
+\begin_inset Formula $G$
+\end_inset
+
+ נקבל גרף לא קשיר(.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ חסר מעגלים מקסימלי )כלומר כל קשת חדשה שנוסיף ל-
+\begin_inset Formula $G$
+\end_inset
+
+ תסגור מעגל כלשהו(.
+\end_layout
+
+\begin_layout Enumerate
+בין כל שני קודקודים 
+\begin_inset Formula $v_{1},v_{2}\in V$
+\end_inset
+
+, קיים מסלול פשוט יחיד.
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+ גרף.
+ עץ פורש של 
+\begin_inset Formula $G$
+\end_inset
+
+, הוא תת גרף 
+\begin_inset Formula $\left\langle V,E^{\prime}\right\rangle =T$
+\end_inset
+
+ של 
+\begin_inset Formula $G$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $T$
+\end_inset
+
+ עץ.
+\end_layout
+
+\begin_layout Theorem
+לכל גרף קשיר קיים עץ פורש.
+\end_layout
+
+\begin_layout Subsection
+קידוד פרופר
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+קידוד פרופר:
+\series default
+ ישנה התאמה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל בין קבוצת הקודקודים 
+\begin_inset Formula $\left\{ 1,\dots,n\right\} $
+\end_inset
+
+ לבין מחרוזות באורך 
+\begin_inset Formula $n-2$
+\end_inset
+
+ מעל א
+\begin_inset Quotes erd
+\end_inset
+
+ב 
+\begin_inset Formula $\left\{ 1,\dots,n\right\} $
+\end_inset
+
+.
+ ההתאמה לוקחת עץ, ומקודדת אותו כמחרוזת.
+ הקידוד מוגדר באופן הבא:
+\end_layout
+
+\begin_layout Claim
+עבור כל קודקוד, מספר המופעים במחרוזת שווה לדרגת הקודקוד פחות אחד.
+\end_layout
+
+\begin_layout Standard
+בכל שלב מבצעים את הפעולות הבאות כל עוד מספר הקודקודים גדול מ-
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+בודקים מהי קבוצת העלים.
+\end_layout
+
+\begin_layout Enumerate
+בוחרים את העלה בעל הערך המספרי המינימלי.
+ נסמנו ב-
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+מוסיפים את הקודקוד היחיד אליו 
+\begin_inset Formula $x$
+\end_inset
+
+ מחובר למחרוזת.
+ נסמנו ב-
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ נקרא האב של 
+\begin_inset Formula $x$
+\end_inset
+
+ ו-
+\begin_inset Formula $x$
+\end_inset
+
+ נקרא ילד של 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+נמחק את 
+\begin_inset Formula $x$
+\end_inset
+
+ ואת הקשת היחידה 
+\begin_inset Formula $\left\{ x,y\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+קידוד פרופר ההפוך: 
+\series default
+בהנתן מחרוזת הקידוד ההפוך משחזר את העץ.
+ הקידוד ההפוך מתבצע באופן הבא:
+\end_layout
+
+\begin_layout Enumerate
+אורך המחרוזת הינו 
+\begin_inset Formula $n-2$
+\end_inset
+
+.
+ ולכן מספר הקודקודים בגרף הינו אורך המחרוזת ועוד שתיים.
+\end_layout
+
+\begin_layout Enumerate
+אנו בונים את העץ מעלים לכיוון השורש, בכל שלב נבצע את הפעולות הבאות:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נמצא את קבוצת העלים ע
+\begin_inset Quotes erd
+\end_inset
+
+י איתור של כל התווים שלא מופיעים במחרוזת.
+\end_layout
+
+\begin_layout Enumerate
+את העלה בעל הערך הקטן ביותר, נחבר לתו השמאלי ביותר במחרוזת.
+\end_layout
+
+\begin_layout Enumerate
+נמחק את העלה שחובר מרשימת העלים, ונמחק את התו השמאלי ביותר מהמחרוזת.
+\end_layout
+
+\begin_layout Enumerate
+את העלה האחרון מחברים לקודקוד 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+איזומורפיזם
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $G_{1}=\left\langle V_{1},E_{1}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $G_{2}=\left\langle V_{2},E_{2}\right\rangle $
+\end_inset
+
+.
+ פונקציה 
+\begin_inset Formula $f:V_{1}\to V_{2}$
+\end_inset
+
+ נקראת איזומורפיזם של גרפים אם:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall v,u\in V_{1}.\left\{ v,u\right\} \in E_{1}\iff\left\{ f\left(v\right),f\left(u\right)\right\} \in E_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $G_{1}\simeq G_{2}$
+\end_inset
+
+ )ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $f:V_{1}\to V_{2}$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|V_{1}\right|=\left|V_{2}\right|\land\left|E_{1}\right|=\left|E_{2}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d_{G_{1}}\left(v\right)=d_{G_{2}}\left(f\left(v\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\left\langle v_{1},\dots,v_{n}\right\rangle $
+\end_inset
+
+ טיול
+\lang english
+/
+\lang hebrew
+מסלול
+\lang english
+/
+\lang hebrew
+...
+ ב-
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left\langle f\left(v_{1}\right),\dots,f\left(v_{n}\right)\right\rangle $
+\end_inset
+
+ אותו הדבר ב-
+\begin_inset Formula $G_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+מספר רכיבי הקשירות ב-
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ ו-
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ זהה.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ עץ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ עץ.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה: 
+\series default
+אם נקבע את הקודקודים להיות 
+\begin_inset Formula $\left\{ 1,\dots,n\right\} $
+\end_inset
+
+, אז על קבוצת הגרפים 
+\begin_inset Formula $Graph\left(\left\{ 1,\dots,n\right\} \right)=\left\{ \left\langle V,E\right\rangle \mid V=\left\{ 1,\dots,n\right\} \right\} $
+\end_inset
+
+, אז 
+\begin_inset Formula $\simeq$
+\end_inset
+
+ הוא יחס שקילות.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\left[G\right]_{\simeq}$
+\end_inset
+
+ זה גרף לא מסומן, כלומר גרף בלי שמות לקודקודים.
+\end_layout
+
+\begin_layout Section
+נוסחאות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נוסחת לחיצות הידיים:
+\series default
+ לכל גרף 
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+2\left|E\right|=\sum_{v\in V}d\left(v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $G=\left\langle V,E\right\rangle $
+\end_inset
+
+ גרף חסר מעגלים )אין אף מעגל ב-
+\begin_inset Formula $G$
+\end_inset
+
+( אזי 
+\begin_inset Formula $\left|E\right|<\left|V\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $\left|V\right|\le\left|E\right|$
+\end_inset
+
+ אז ב-
+\begin_inset Formula $G$
+\end_inset
+
+ יש מעגל.
+\end_layout
+
+\begin_layout Corollary
+מספר העצים על 
+\begin_inset Formula $\left\{ 1,\dots,n\right\} $
+\end_inset
+
+ הוא 
+\begin_inset Formula $n^{n-2}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
