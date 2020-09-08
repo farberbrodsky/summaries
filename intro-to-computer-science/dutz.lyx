@@ -1,0 +1,4116 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\def\HeblatexEncoding{HE8}
+\def\HeblatexEncodingFile{he8enc}
+\usepackage{color}
+\definecolor{keywordcolor}{rgb}{1,0.46,0}
+\definecolor{commentcolor}{rgb}{0.86,0,0}
+\definecolor{stringcolor}{rgb}{0,0.66,0}
+\definecolor{numbercolor}{rgb}{0,0,0}
+\definecolor{blue}{rgb}{0.2,0.4,1}
+\usepackage{titlesec}
+\titlespacing{\section} {0pt}{0pt}{0pt}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{0pt}{}
+
+\newcommand{\tmpsection}[1]{}
+\let\tmpsection=\section
+\renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
+
+\setlength{\parskip}{0.32cm}
+\setlength{\itemsep}{0pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "courier" "FiraCode Nerd Font"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1cm
+\rightmargin 0cm
+\bottommargin 1cm
+\headheight 1.5cm
+\headsep 1.5cm
+\footskip 1.5cm
+\columnsep 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+\lang english
+gcd
+\end_layout
+
+\begin_layout Standard
+ה-
+\lang english
+gcd
+\lang hebrew
+ של x, y הוא המספר השלם z הגדול ביותר כך ש-
+\begin_inset Formula $z\mid x$
+\end_inset
+
+ ו-
+\begin_inset Formula $z\mid y$
+\end_inset
+
+.
+ האלגוריתם:
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def gcd(x,y):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if x<y:
+\end_layout
+
+\begin_layout Plain Layout
+
+        x,y = y,x  # Now y <= x
+\end_layout
+
+\begin_layout Plain Layout
+
+    while y>0:
+\end_layout
+
+\begin_layout Plain Layout
+
+        x,y = y,x%y
+\end_layout
+
+\begin_layout Plain Layout
+
+    return x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+פעולת
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+merge
+\end_layout
+
+\begin_layout Standard
+עבור רשימות ממוינות באורך 
+\begin_inset Formula $n$
+\end_inset
+
+ ו-
+\begin_inset Formula $m$
+\end_inset
+
+, זה עולה 
+\begin_inset Formula $O\left(n+m\right)$
+\end_inset
+
+ כדי לחבר אותן באופן ממוין.
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def merge(left, right):
+\end_layout
+
+\begin_layout Plain Layout
+
+	result = []
+\end_layout
+
+\begin_layout Plain Layout
+
+	i = j = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+	while i < len(left) and j < len(right):
+\end_layout
+
+\begin_layout Plain Layout
+
+		if left[i] < right[j]:
+\end_layout
+
+\begin_layout Plain Layout
+
+			result.append(left[i])
+\end_layout
+
+\begin_layout Plain Layout
+
+			i += 1
+\end_layout
+
+\begin_layout Plain Layout
+
+		else:
+\end_layout
+
+\begin_layout Plain Layout
+
+            result.append(right[j])
+\end_layout
+
+\begin_layout Plain Layout
+
+			j += 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	result += left[i:]
+\end_layout
+
+\begin_layout Plain Layout
+
+	result += right[j:]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+merge sort
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def merge_sort(L):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if len(L) < 2:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return L[:]
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+        middle = int(len(L) / 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+        left = merge_sort(L[:middle])
+\end_layout
+
+\begin_layout Plain Layout
+
+        right = merge_sort(L[middle:], compare)
+\end_layout
+
+\begin_layout Plain Layout
+
+        return merge(left, right)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+quick sort
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def quicksort(lst):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if len(lst) <= 1:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return lst
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+        pivot = lst[0] #for a deterministic quicksort
+\end_layout
+
+\begin_layout Plain Layout
+
+                 smaller = [elem for elem in lst if elem < pivot]
+\end_layout
+
+\begin_layout Plain Layout
+
+        equal = [elem for elem in lst if elem == pivot]
+\end_layout
+
+\begin_layout Plain Layout
+
+        greater = [elem for elem in lst if elem > pivot]
+\end_layout
+
+\begin_layout Plain Layout
+
+        return quicksort(smaller) + equal + quicksort(greater)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+חיפוש בינארי רקורסיבי
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def rec_binary_search(lst, key, left, right):
+\end_layout
+
+\begin_layout Plain Layout
+
+    """passing lower and upper boundaries"""
+\end_layout
+
+\begin_layout Plain Layout
+
+    if left > right:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return None
+\end_layout
+
+\begin_layout Plain Layout
+
+    middle = (left+right)//2
+\end_layout
+
+\begin_layout Plain Layout
+
+    if key == lst[middle]:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return middle
+\end_layout
+
+\begin_layout Plain Layout
+
+    elif key < lst[middle]:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return rec_binary_search(lst, key, left, middle-1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return rec_binary_search(lst, key, middle+1, right)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+חיפוש בינארי רגיל
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def binary_search(lst, key):
+\end_layout
+
+\begin_layout Plain Layout
+
+    n = len(lst)
+\end_layout
+
+\begin_layout Plain Layout
+
+    L = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    R = n-1
+\end_layout
+
+\begin_layout Plain Layout
+
+    while L <= R:
+\end_layout
+
+\begin_layout Plain Layout
+
+        mid = floor((L+R)/2)
+\end_layout
+
+\begin_layout Plain Layout
+
+        if lst[mid] < key:
+\end_layout
+
+\begin_layout Plain Layout
+
+            L = mid + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        elif lst[mid] > key:
+\end_layout
+
+\begin_layout Plain Layout
+
+            R = mid - 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        else:
+\end_layout
+
+\begin_layout Plain Layout
+
+            return mid
+\end_layout
+
+\begin_layout Plain Layout
+
+    return -1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+minimax
+\end_layout
+
+\begin_layout Standard
+עבור משחק בלי תיקו, השלבים של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+minimax
+\lang hebrew
+ הם:
+\end_layout
+
+\begin_layout Enumerate
+מהם המהלכים החוקיים?
+\end_layout
+
+\begin_layout Enumerate
+עבור כל מהלך אפשרי, נבנה את הלוח כאילו בחרנו בו.
+ ע"י רקורסיה נבדוק האם הוא מנצח.
+\end_layout
+
+\begin_layout Enumerate
+אם קיימת בחירה שמובילה למצב מפסיד )עבור היריב(, אנחנו במצב מנצח.
+ אחרת, במצב מפסיד.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def win(n, m, hlst):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if sum(hlst)==0:
+\end_layout
+
+\begin_layout Plain Layout
+
+        return True
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i in range(m):
+\end_layout
+
+\begin_layout Plain Layout
+
+          for j in range(hlst[i]):
+\end_layout
+
+\begin_layout Plain Layout
+
+                move_hlst = [n]*i+[j]*(m-i)
+\end_layout
+
+\begin_layout Plain Layout
+
+                new_hlst = [min(hlst[i],move_hlst[i]) for i in range(m)]
+\end_layout
+
+\begin_layout Plain Layout
+
+                if not win(n, m, new_hlst):
+\end_layout
+
+\begin_layout Plain Layout
+
+                      return True
+\end_layout
+
+\begin_layout Plain Layout
+
+    return False
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Diffie Hellman
+\end_layout
+
+\begin_layout Standard
+דרך לתאם מפתח כך שגם אם מישהו מצוטט לשיחה, המפתח יהיה רק בידי שני האנשים
+ שמתקשרים אחד עם השני.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Alice and Bob boht make random numbers, 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ respectively.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Alice sends 
+\begin_inset Formula $g^{a}\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Bob sends 
+\begin_inset Formula $g^{b}\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Alice calculates 
+\begin_inset Formula $\left(g^{b}\right)^{a}\mod p$
+\end_inset
+
+, Bob calculates 
+\begin_inset Formula $\left(g^{a}\right)^{b}\mod p$
+\end_inset
+
+.
+ This is the key.
+\end_layout
+
+\begin_layout Section
+קארפ-רבין
+\end_layout
+
+\begin_layout Standard
+אלגוריתם למציאת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+pattern
+\lang hebrew
+, 
+\begin_inset Formula $P=\left[0,\dots,m-1\right]$
+\end_inset
+
+ בתוך טקסט 
+\begin_inset Formula $T=\left[0,\dots,n-1\right]$
+\end_inset
+
+.
+ האלגוריתם עובד בכך שהוא מחשב
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+fingerprint
+\lang hebrew
+ ל-m התווים הראשונים, ומשתמש ב-
+\lang english
+fingerprint
+\lang hebrew
+ הקודם כדי ליצור את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+fingerprint
+\lang hebrew
+ הבא.
+ ה-
+\lang english
+fingerprint
+\lang hebrew
+ משתמש בייצוג מספרי של תווים המייצג מחרוזת כסכום של התו האחרון, התו הלפני
+ אחרון כפול בסיס )לרוב 
+\begin_inset Formula $b=2^{16}$
+\end_inset
+
+(, התו הלפני לפני אחרון כפול בסיס בריבוע, וכך הלאה, ואז עושים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+modulo
+\lang hebrew
+ כדי לשמור את זה במקום של מספר יחיד.
+ כדי לעבור מ-
+\lang english
+fingerprint
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אחד לבא, מחסירים את הערך של התו שירד כפול 
+\begin_inset Formula $b^{m-1}$
+\end_inset
+
+, מכפילים את כל ה-
+\lang english
+fingerprint
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פי 
+\begin_inset Formula $b$
+\end_inset
+
+, ואז מוסיפים את הערך של התו שנוסף.
+\end_layout
+
+\begin_layout Standard
+לכן יכולים להיות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+false positives
+\lang hebrew
+ שבהם נמצא דברים שלא מתאימים ל-
+\lang english
+pattern
+\lang hebrew
+, אבל זה נדיר.
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def fingerprint(string, basis, r):
+\end_layout
+
+\begin_layout Plain Layout
+
+    s = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    for ch in string:
+\end_layout
+
+\begin_layout Plain Layout
+
+        s = (s*basis + ord(ch)) % r
+\end_layout
+
+\begin_layout Plain Layout
+
+    return s
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def text_fingerprint(string,length,basis=2**16,r=2**32-3):
+\end_layout
+
+\begin_layout Plain Layout
+
+    """ used to compute karp-rabin fingerprint of the text """
+\end_layout
+
+\begin_layout Plain Layout
+
+    f=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+    b_power=pow(basis,length-1,r)
+\end_layout
+
+\begin_layout Plain Layout
+
+    list.append(f, fingerprint(string[0:length],basis,r))
+\end_layout
+
+\begin_layout Plain Layout
+
+    # f[0] equals first text fingerprint
+\end_layout
+
+\begin_layout Plain Layout
+
+    for s in range(1,len(string)-length+1):
+\end_layout
+
+\begin_layout Plain Layout
+
+        new_fingerprint=((f[s-1]-ord(string[s-1])*b_power)*basis + ord(string[s+
+length-1])) % r
+\end_layout
+
+\begin_layout Plain Layout
+
+           # compute f[s], based on f[s-1]
+\end_layout
+
+\begin_layout Plain Layout
+
+           list.append(f,new_fingerprint)# append f[s] to existing f
+\end_layout
+
+\begin_layout Plain Layout
+
+           return f
+\end_layout
+
+\begin_layout Plain Layout
+
+def find_matches_KR(pattern,text,basis=2**16,r=2**32-3):
+\end_layout
+
+\begin_layout Plain Layout
+
+    if len(pattern) > len(text):
+\end_layout
+
+\begin_layout Plain Layout
+
+        return []
+\end_layout
+
+\begin_layout Plain Layout
+
+    p=fingerprint(pattern,basis,r)
+\end_layout
+
+\begin_layout Plain Layout
+
+    f=text_fingerprint(text,len(pattern),basis,r)
+\end_layout
+
+\begin_layout Plain Layout
+
+    matches = [s for s, f_s in enumerate(f) if f_s == p]
+\end_layout
+
+\begin_layout Plain Layout
+
+    return matches
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+קוד
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+huffman
+\end_layout
+
+\begin_layout Standard
+דרך להשיג את הקידוד הכי יעיל עבור טקסט מסוים, התווים שמשתמשים בהם יותר יקחו
+ פחות מקום בזיכרון לאחסן.
+ כל תו הוא שורש של עץ מסוים, שהערך שלו הוא כמות ההופעות של התו הזה.
+ בכל שלב, נחבר את שני העצים המינימליים לעץ שערכו הוא סכום הערכים, עד שיש
+ עץ אחד.
+ העץ הזה הוא הקידוד, כאשר ללכת ימינה זה 1 וללכת שמאלה זה 0.
+\end_layout
+
+\begin_layout Section
+למפל-זיו
+\end_layout
+
+\begin_layout Standard
+דרך נוספת לכווץ טקסט היא בשיטת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+LZW
+\lang hebrew
+, אין הנחות על ההתפלגויות של התווים, אלא מניחים שיש חזרות בטקסט.
+ אם יש חזרה באורך k במקום j, במקום לכתוב שוב את אותו הדבר, נכתוב כמה צריך
+ לחזור כדי למצוא את ההופעה הראשונה ואת אורך החזרה.
+ לרוב מסתכלים רק על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+4095
+\lang hebrew
+ התווים האחרונים, אם כך מספיקים לנו 12 ביטים כדי לייצג את ה-
+\lang english
+offset
+\lang hebrew
+.
+ לרוב k הוא 5 ביטים.
+ אם כך יעיל לייצג חזרות רק אם אורך החזרה גדול מ-2.
+ לפני כל תו חדש או חזרה מוסיפים ביט יחיד תווים ושל זוגות 
+\begin_inset Formula $m,k$
+\end_inset
+
+.
+ בנוסף, דחיסה כזו שנכנסת לשאומר האם זה תו חדש או חזרה.
+ בשלב הראשון של הדחיסה, נהפוך חזרות לזוגות.
+ זוגות שנכנסים לתוך עצמם לגיטימיים:
+\begin_inset Formula 
+\[
+abcabcabcabc\to\left[a,b,c,\left(3,6\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def maxmatch(T, p, W=2**12-1, max_length=2**5-1):
+\end_layout
+
+\begin_layout Plain Layout
+
+    n = len(T)
+\end_layout
+
+\begin_layout Plain Layout
+
+    maxmatch = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    offset = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    for m in range(1, 1+min(p, W)):
+\end_layout
+
+\begin_layout Plain Layout
+
+        k = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+        while k < min(n-p, max_length) and T[p-m+k] == T[p+k]:
+\end_layout
+
+\begin_layout Plain Layout
+
+            k += 1
+\end_layout
+
+\begin_layout Plain Layout
+
+         if k > maxmatch:
+\end_layout
+
+\begin_layout Plain Layout
+
+            maxmatch = k
+\end_layout
+
+\begin_layout Plain Layout
+
+            offset = m
+\end_layout
+
+\begin_layout Plain Layout
+
+    return offset, maxmatch
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def LZW_compress(text, W=2**12-1, max_length=2**5-1):
+\end_layout
+
+\begin_layout Plain Layout
+
+    result = []
+\end_layout
+
+\begin_layout Plain Layout
+
+    n = len(text)
+\end_layout
+
+\begin_layout Plain Layout
+
+    p = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    while p < n:
+\end_layout
+
+\begin_layout Plain Layout
+
+        m, k = maxmatch(text, p, W, max_length)
+\end_layout
+
+\begin_layout Plain Layout
+
+        if k < 3:
+\end_layout
+
+\begin_layout Plain Layout
+
+            result.append(text[p])
+\end_layout
+
+\begin_layout Plain Layout
+
+            p += 1
+\end_layout
+
+\begin_layout Plain Layout
+
+        else:
+\end_layout
+
+\begin_layout Plain Layout
+
+            result.append([m,k])
+\end_layout
+
+\begin_layout Plain Layout
+
+            p += k
+\end_layout
+
+\begin_layout Plain Layout
+
+    return result
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+מרחק
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hamming
+\end_layout
+
+\begin_layout Standard
+מרחק
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hamming
+\lang hebrew
+ מוגדר להיות המרחק המינימלי בין 2 קלטים חוקיים.
+ עבור מרחק מינימאלי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+d
+\lang hebrew
+,
+\end_layout
+
+\begin_layout Itemize
+אפשר לזהות עד 
+\begin_inset Formula $d-1$
+\end_inset
+
+ שגיאות.
+\end_layout
+
+\begin_layout Itemize
+אפשר לתקן עד 
+\begin_inset Formula $\lfloor\frac{d-1}{2}\rfloor$
+\end_inset
+
+ שגיאות.
+\end_layout
+
+\begin_layout Standard
+קוד שמפפה 
+\begin_inset Formula $k$
+\end_inset
+
+ תוים ל-
+\begin_inset Formula $n$
+\end_inset
+
+ תווים )
+\begin_inset Formula $n\ge k$
+\end_inset
+
+( עם מרחק מינימלי 
+\begin_inset Formula $d$
+\end_inset
+
+ נקרא קוד 
+\begin_inset Formula $\left(n,k,d\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מתקיים ה-
+\lang english
+volume bound
+\lang hebrew
+, שהוא 
+\begin_inset Formula $2^{k}\cdot\sum_{h=0}^{\lfloor\nicefrac{\left(d-1\right)}{2}\rfloor}\binom{n}{h}\le2^{n}$
+\end_inset
+
+.
+ קוד עבורו יש שוויון בחסם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+volume bound
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נקרא קוד מושלם, לדוגמה קוד
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hamming 7,4,3
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Hamming 7,4,3
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def hamming_encode(x3,x5,x6,x7):
+\end_layout
+
+\begin_layout Plain Layout
+
+    """ Hamming encoding of the 4 bits input """
+\end_layout
+
+\begin_layout Plain Layout
+
+    x1= (x3+x5+x7) % 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    x2= (x3+x6+x7) % 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    x4= (x5+x6+x7) % 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    return (x1,x2,x3,x4,x5,x6,x7)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def hamming_decode(y1,y2,y3,y4,y5,y6,y7):
+\end_layout
+
+\begin_layout Plain Layout
+
+    """ Hamming decoding of the 7 bits signal """
+\end_layout
+
+\begin_layout Plain Layout
+
+    b1 = (y1+y3+y5+y7) % 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    b2 = (y2+y3+y6+y7) % 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    b3 = (y4+y5+y6+y7) % 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    b=4*b3+2*b2+b1  # the integer value
+\end_layout
+
+\begin_layout Plain Layout
+
+    if b==0:  # no error
+\end_layout
+
+\begin_layout Plain Layout
+
+        return (y3,y5,y6,y7)
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+        y=[y1,y2,y3,y4,y5,y6,y7]
+\end_layout
+
+\begin_layout Plain Layout
+
+        y[b-1]=(y[b-1]+1) % 2  # correct bit b
+\end_layout
+
+\begin_layout Plain Layout
+
+        return (y[2],y[4],y[5],y[6])
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+רשימה מקושרת
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class Linked_list():
+\end_layout
+
+\begin_layout Plain Layout
+
+  def __init__(self):
+\end_layout
+
+\begin_layout Plain Layout
+
+    self.next = None
+\end_layout
+
+\begin_layout Plain Layout
+
+    self.len = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+  def insert(self, val, loc):
+\end_layout
+
+\begin_layout Plain Layout
+
+    assert 0 <= loc <= len(self)
+\end_layout
+
+\begin_layout Plain Layout
+
+    p = self
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i in range(0, loc):
+\end_layout
+
+\begin_layout Plain Layout
+
+      p = p.next
+\end_layout
+
+\begin_layout Plain Layout
+
+    tmp = p.next
+\end_layout
+
+\begin_layout Plain Layout
+
+    p.next = Node(val)
+\end_layout
+
+\begin_layout Plain Layout
+
+  def add_at_start(self, val):
+\end_layout
+
+\begin_layout Plain Layout
+
+    p = self
+\end_layout
+
+\begin_layout Plain Layout
+
+    tmp = p.next
+\end_layout
+
+\begin_layout Plain Layout
+
+    p.next = Node(val)
+\end_layout
+
+\begin_layout Plain Layout
+
+    p.next.next = tmp
+\end_layout
+
+\begin_layout Plain Layout
+
+    self.len += 1
+\end_layout
+
+\begin_layout Plain Layout
+
+  def delete(self, loc):
+\end_layout
+
+\begin_layout Plain Layout
+
+    assert 0 <= loc < len(self)
+\end_layout
+
+\begin_layout Plain Layout
+
+    p = self
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i in range(0, loc):
+\end_layout
+
+\begin_layout Plain Layout
+
+      p = p.next
+\end_layout
+
+\begin_layout Plain Layout
+
+    # p is the element BEFORE loc
+\end_layout
+
+\begin_layout Plain Layout
+
+    p.next = p.next.next
+\end_layout
+
+\begin_layout Plain Layout
+
+    self.len -= 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+מילון
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hash table
+\end_layout
+
+\begin_layout Standard
+כדי לשמור מידע, נמפה את העולם לעולם קטן יותר )רשימה(.
+ נשתמש ב-
+\lang english
+hash
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כדי להמיר מפתח לאינדקס, הבעיה העיקרית היא התנגשויות של ערכים, כי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hash
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אינה פונקציה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, וכדי לפתור זאת אנו משתמשים ב-
+\lang english
+chaining
+\lang hebrew
+, שזה לשמור רשימה בכל מקום.
+ פקטור העומס 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ הוא האורך הממוצע של רשימה )אם 
+\begin_inset Formula $n$
+\end_inset
+
+ כמות האיברים ב-
+\lang english
+hash table
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו-
+\begin_inset Formula $m$
+\end_inset
+
+ גודל ה-
+\lang english
+hash table
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אז 
+\begin_inset Formula $\alpha=\frac{n}{m}$
+\end_inset
+
+(.
+ אם 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ קטן אז החיפוש יעיל אך דורש הרבה זיכרון, ואם 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ גדול נצטרך גם לחפש בתוך רשימה בגודל 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ בממוצע.
+\end_layout
+
+\begin_layout Section
+גנרטורים
+\end_layout
+
+\begin_layout Standard
+גנרטור חוקי הוא גנרטור שתמיד לוקח זמן סופי למצוא את האיבר הבא.
+ לכן גנרטור שנותן רק דברים שהופיעו יותר מפעם אחת באיטרטור נתון לא אפשרי,
+ כי יכול להיות ששום איבר לא יופיע פעמיים.
+ דוגמה ל-
+\lang english
+merge
+\lang hebrew
+ של איטרטורים אינסופיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def merge(iter1, iter2):
+\end_layout
+
+\begin_layout Plain Layout
+
+  left = next(iter1)
+\end_layout
+
+\begin_layout Plain Layout
+
+  right = next(iter2)
+\end_layout
+
+\begin_layout Plain Layout
+
+  while True:
+\end_layout
+
+\begin_layout Plain Layout
+
+    if left < right:
+\end_layout
+
+\begin_layout Plain Layout
+
+      yield left
+\end_layout
+
+\begin_layout Plain Layout
+
+      left = next(iter1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    else:
+\end_layout
+
+\begin_layout Plain Layout
+
+      yield right 
+\end_layout
+
+\begin_layout Plain Layout
+
+      right = next(iter2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מילת הקוד
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+yield
+\lang hebrew
+ מחזירה איבר יחיד.
+ כשנגמרים האיברים בגנרטור, הוא נותן תקלה מסוג
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+StopIteration
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שאפשר לטפל בה באמצעות 
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+try:, except StopIteration
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+עצי חיפוש בינאריים
+\end_layout
+
+\begin_layout Standard
+מבנה נתונים לאוסף של איברים.
+ ניתן להוסיף, להוריד, לחפש איברים.
+ לכל איבר מפתח וערך, ומצביעים לתת-עצים הימניים והשמאליים.
+ בעץ חיפוש, כל המפתחות משמאל קטנים, ומימין גדולים, מהמפתח של הצומת הנוכחית.
+ פעולות הכנסה וחיפוש נעשים באופן רקורסיבי.
+\end_layout
+
+\begin_layout Section
+עיבוד תמונות
+\end_layout
+
+\begin_layout Standard
+תמונה בגודל 
+\begin_inset Formula $x,y$
+\end_inset
+
+ )הרזולוציה( היא מטריצה בגודל 
+\begin_inset Formula $x,y$
+\end_inset
+
+ כאשר כל תא הוא פיקסל וסרטון זה מטריצה בגודל 
+\begin_inset Formula $x,y,t$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $t$
+\end_inset
+
+ זה מימד הזמן.
+ אם התמונה היא בשחור-לבן את כל פיקסל מתאר את חוזק הפיקסל )ערך פיקסל יותר
+ נמוך זה יותר שחור ולהפך(.
+ וכאשר התמונה היא צבעונית נשמור שלישיית מספרים בגודל 8 ביט )בדרך כלל( כל
+ אחד המתארים את חוזק הצבעים אדום ירוק וכחול בהתאמה.
+ ולהלן פעולות של המחלקה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Matrix
+\lang hebrew
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="60col%">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+הסבר
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+פעולה
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+אתחול מטריצה בגודל 
+\begin_inset Formula $n,m$
+\end_inset
+
+ )שורות זה n( עם ערך התחלתי 
+\begin_inset Formula $c$
+\end_inset
+
+ )פרמטר 
+\begin_inset Formula $c$
+\end_inset
+
+ לא חובה(
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+m = Matrix(n, m, c)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+מחזיר את גודל המטריצה בפורמט 
+\begin_inset Formula $n,m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+m.dim()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+לבדוק אם שתי מטריצות שוות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+m1 == m2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+להעתיק מטריצה למקום אחר בזיכרון
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+m.copy()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+פעולות אריתמטיות על מטריצות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+not, +, -, *
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+האיבר במקום ה-
+\begin_inset Formula $i,j$
+\end_inset
+
+ במטריצה )ניתן גם לקבל וגם לשנות אותו(
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+m[i, j]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+רעשים בתמונות
+\end_layout
+
+\begin_layout Standard
+כאשר מצלמים תמונה לכל פיקסל מתווסף ערך שנקרא הרעש והוא קורה בגלל הגבלות
+ טכנולוגיית הצילום.
+ מטרה של אלגוריתם להפחתת רעש היא להיפטר מהרעש שנגרם בזמן הצילום.
+ יש 2 דרכים להוספת רעש בצורה דיגיטלית, 
+\series bold
+רעש גאוסי 
+\series default
+כאשר משתמשים בפונקציית הסתברות כדי להוסיף רעש ו
+\series bold
+שיטת המלח והפלפל
+\series default
+ שבה מוסיפים פיקסלים שחורים ולבנים בצורה אקראית.
+ כדי להיפטר מרעש אפשר להשתמש בממוצע או בחציון של הפיקסל עצמו ושמונת הפיקסלים
+ הסובבים אותו.
+ החציון כמעט ולא מושפע מ-
+\lang english
+salt and pepper
+\lang hebrew
+, ואילו הממוצע כן מושפע.
+ הממוצע גם מורח גבולות, והחציון לא.
+ הממוצע מנקה רעש גאוסיאני טוב באיזורים חלקים.
+ החציון מעלים את כל הפרטים הקטנים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def items(mat):
+\end_layout
+
+\begin_layout Plain Layout
+
+    ''' flatten mat elements into a list '''
+\end_layout
+
+\begin_layout Plain Layout
+
+    n,m = mat.dim()
+\end_layout
+
+\begin_layout Plain Layout
+
+    lst = [mat[i,j] for i in range(n) for j in range(m)]
+\end_layout
+
+\begin_layout Plain Layout
+
+    return lst
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def local_operator(mat, op, k=1):
+\end_layout
+
+\begin_layout Plain Layout
+
+    ''' Apply op to every pixel.
+\end_layout
+
+\begin_layout Plain Layout
+
+        op is a local operator on a square neighbourhood
+\end_layout
+
+\begin_layout Plain Layout
+
+        of size 2k+1 X 2k+1 around a pixel '''
+\end_layout
+
+\begin_layout Plain Layout
+
+    n,m = mat.dim()
+\end_layout
+
+\begin_layout Plain Layout
+
+    res = mat.copy() # brand new copy of A
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i in range(k,n-k):
+\end_layout
+
+\begin_layout Plain Layout
+
+        for j in range(k,m-k):
+\end_layout
+
+\begin_layout Plain Layout
+
+            res[i,j] = op(items(mat[i-k:i+k+1,j-k:j+k+1]))
+\end_layout
+
+\begin_layout Plain Layout
+
+    return res
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+חוקי
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+log
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log\left(x\cdot y\right)=\log\left(x\right)+\log\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log\left(\frac{x}{y}\right)=\log\left(x\right)-\log\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log\left(x^{y}\right)=y\cdot\log\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a^{\log_{a}\left(x\right)}=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log_{b}\left(b^{x}\right)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log_{b}\left(a\right)=\frac{\log_{c}\left(a\right)}{\log_{c}\left(b\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+חוקי
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+mod
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Formula $\left(a\mod n\right)\mod n=a\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Formula $\left(a+b\right)\mod n=\left(\left(a\mod n\right)+\left(b\mod n\right)\right)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Formula $\left(ab\right)\mod n=\left(\left(a\mod n\right)\left(b\mod n\right)\right)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Formula $a^{b}\mod c=\left(a\mod c\right)^{b}\mod c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+פעולות של רשימות
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="25line%">
+<column alignment="center" valignment="top" width="40line%">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+list.append(4)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[1,2,3\right]\to\left[1,2,3,4\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+ בממוצע
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+list.insert(1, 4)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[1,2,3\right]\to\left[1,4,2,3\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+del list[i]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[1,2,3\right]\to\left[1,3\right]$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+del list[1]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n-i\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+list.pop(i)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+כמו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+del
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אבל גם מחזיר את האיבר
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n-i\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+סיבוכיות
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="17col%">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="middle" width="20col%">
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+סיבוכיות מקום
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+average
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+worst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+פעולה
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n+m\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none" width="40line%">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n+m\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+merge
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של רשימות ממוינות
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n\log n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Quick sort
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n\log n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Merge sort
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+ אם ממיינים במקום
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+מיון בועות
+\lang english
+/
+\end_layout
+
+\begin_layout Plain Layout
+הכנסה
+\lang english
+/
+\lang hebrew
+בחירה
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Binary search
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n+m\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+משתנה
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+Karp-Rabin
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(i\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+גישה לאיבר ה-
+\begin_inset Formula $i$
+\end_inset
+
+ ברשימה מקושרת
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+ בהינתן 
+\lang english
+node
+\lang hebrew
+, אחרת 
+\begin_inset Formula $O\left(i\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+הוספת
+\lang english
+/
+\lang hebrew
+מחיקת איבר ברשימה מקושרת
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+הכנסת
+\lang english
+/
+\end_layout
+
+\begin_layout Plain Layout
+הוצאת
+\lang english
+/
+\lang hebrew
+חיפוש איבר בטבלת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hash
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+ אם די מאוזן
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+ לא מאוזן
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+חיפוש
+\lang english
+/
+\end_layout
+
+\begin_layout Plain Layout
+הוספת
+\lang english
+/
+\lang hebrew
+מחיקת איבר בעץ חיפוש בינארי
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Iterated Squaring
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,basicstyle={\footnotesize\ttfamily},breaklines=true,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def modpower(a,b,c):
+\end_layout
+
+\begin_layout Plain Layout
+
+	result = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+		while b>0:
+\end_layout
+
+\begin_layout Plain Layout
+
+			if b % 2 == 1:
+\end_layout
+
+\begin_layout Plain Layout
+
+				result = (result * a) % c
+\end_layout
+
+\begin_layout Plain Layout
+
+			a = (a*a) % c
+\end_layout
+
+\begin_layout Plain Layout
+
+			b = b//2
+\end_layout
+
+\begin_layout Plain Layout
+
+ 	return result
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+סיבוכיות פורמלית
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f\left(x\right)=O\left(g\left(x\right)\right)$
+\end_inset
+
+ אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $\exists c,N.\forall n>N.\left|f\left(x\right)\right|\le c\cdot\left|g\left(x\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הגדרה אסימפטוטית: 
+\begin_inset Formula $\lim_{x\to\infty}\frac{f\left(x\right)}{g\left(x\right)}<\infty$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $f,g$
+\end_inset
+
+ חיוביות.
+\end_layout
+
+\begin_layout Section
+ייצוג
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+float
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בזיכרון
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1$
+\end_inset
+
+ בשביל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+sign
+\lang hebrew
+, 
+\begin_inset Formula $11$
+\end_inset
+
+ בשביל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+exp
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו-
+\begin_inset Formula $52$
+\end_inset
+
+ בשביל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+info
+\lang hebrew
+.
+ סה
+\begin_inset Quotes erd
+\end_inset
+
+כ
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+64
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ביטים.
+\begin_inset Formula 
+\[
+2^{exp}\cdot info\cdot sign
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+טווחים ו-
+\lang english
+slicing
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{range}\left(a,b\right)$
+\end_inset
+
+ זה כל המספרים מ-
+\begin_inset Formula $a$
+\end_inset
+
+ עד 
+\begin_inset Formula $b-1$
+\end_inset
+
+ כולל, ו-
+\begin_inset Formula $\text{lst}\left[a:b\right]$
+\end_inset
+
+ זה כל האיברים של 
+\begin_inset Formula $\text{lst}$
+\end_inset
+
+ מ-
+\begin_inset Formula $a$
+\end_inset
+
+ עד 
+\begin_inset Formula $b-1$
+\end_inset
+
+ כולל.
+\end_layout
+
+\end_body
+\end_document
