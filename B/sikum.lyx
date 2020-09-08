@@ -161,6 +161,17 @@ B
 
 \end_layout
 
+\begin_layout Standard
+\align left
+\begin_inset Graphics
+	filename gvul.PNG
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 גבול של פונקציה
 \end_layout
@@ -500,6 +511,30 @@ B
 
 \begin_layout Standard
 חקירת פונקציה מורכבת מהבאים:
+\end_layout
+
+\begin_layout Enumerate
+דומיין
+\end_layout
+
+\begin_layout Enumerate
+חיתוכים עם הצירים
+\end_layout
+
+\begin_layout Enumerate
+נקודות קיצון 
+\end_layout
+
+\begin_layout Enumerate
+תחומי עליה וירידה
+\end_layout
+
+\begin_layout Enumerate
+תחומי קעירות וקמירות
+\end_layout
+
+\begin_layout Enumerate
+אסימפטוטות משופעות ומאונכות
 \end_layout
 
 \begin_layout Section
@@ -1182,6 +1217,17 @@ dx=\frac{du}{2x}
 
 \end_layout
 
+\begin_layout Standard
+\align left
+\begin_inset Graphics
+	filename darbu.PNG
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 פונקציה אינטגרבילית, אינטגרל רימן ואינטגרל מסוים
 \end_layout
@@ -1392,6 +1438,17 @@ F(x)=\inr xaf(t)dt
 
 \end_layout
 
+\begin_layout Standard
+\align left
+\begin_inset Graphics
+	filename int.PNG
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 חישוב אורך עקומה
 \end_layout
@@ -1418,6 +1475,17 @@ F(x)=\inr xaf(t)dt
 \[
 \inr ba\sqrt{dx^{2}+dy^{2}}=\inr ba\sqrt{1+\frac{dy^{2}}{dx^{2}}}dx=\inr ba\sqrt{1+\left(f'(x)\right)^{2}}dx
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Graphics
+	filename curve.PNG
+	scale 70
 
 \end_inset
 
@@ -2017,6 +2085,10 @@ n_{i-3}-m_{i-1}\x\left(n_{i-4}-m_{i-2}\x n_{i-3}\right)=c
 
 \begin_layout Section
 משפט על פריקות יחידה לראשוניים 
+\end_layout
+
+\begin_layout Standard
+לכל מספר שלם קיימת פריקות יחידה למספרים ראשוניים
 \end_layout
 
 \begin_layout Section
