@@ -142,7 +142,7 @@ B
 \end_layout
 
 \begin_layout Part
-חלק א
+חלק א'
 \end_layout
 
 \begin_layout Section
@@ -150,7 +150,7 @@ B
 \end_layout
 
 \begin_layout Standard
-נגדיר גבול של סדרה באינסוף, 
+נגדיר גבול של סדרה באינסוף
 \begin_inset Formula 
 \[
 \underset{n\to\infty}{\lim}a_{n}=L\iff\forall\epsilon>0.\exists N.\forall n>N.\left|a_{n}-L\right|<\epsilon
@@ -2549,6 +2549,17 @@ x_{0}\mod m_{i}=\left(\stackrel[k=1]{n}{\sum}a_{k}\x e_{k}\right)\mod m_{i}=\sta
 
 \begin_layout Section
 סודרים
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename f.PNG
+	scale 150
+
+\end_inset
+
+
 \end_layout
 
 \end_body
