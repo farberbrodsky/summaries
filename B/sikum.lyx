@@ -194,9 +194,12 @@ B
 
 \begin_layout Subsection
 גבול הפונקציה בנקודה כלשהי
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\left(0<\left|x-x_{0}\right|<\delta\right)\to\left|f\left(x\right)-L\right|<\epsilon
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x.\left(0<\left|x-x_{0}\right|<\delta\right)\to\left|f\left(x\right)-L\right|<\epsilon
 \]
 
 \end_inset
