@@ -150,7 +150,7 @@ B
 \end_layout
 
 \begin_layout Standard
-נגדיר גבול של סדרה באינסוף, 
+נגדיר גבול של סדרה באינסוף
 \begin_inset Formula 
 \[
 \underset{n\to\infty}{\lim}a_{n}=L\iff\forall\epsilon>0.\exists N.\forall n>N.\left|a_{n}-L\right|<\epsilon
