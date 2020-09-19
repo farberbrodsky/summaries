@@ -990,7 +990,11 @@ x_{1}=x_{0}+\frac{f(x_{0})}{f'(x_{0})}
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
 שימוש בשברים חלקיים
+\series default
+
 \begin_inset Formula 
 \[
 \int\frac{1}{1-x^{2}}dx=\int\frac{1}{1-x}\x\frac{1}{1+x}dx=\int\left(\frac{A}{1-x}+\frac{B}{1+x}\right)dx\left[A=B=\frac{1}{2}\right]=\frac{\int\frac{1}{1-x}dx+\int\frac{1}{1+x}dx}{2}
@@ -1002,7 +1006,11 @@ x_{1}=x_{0}+\frac{f(x_{0})}{f'(x_{0})}
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
 שימוש בהצבה
+\series default
+
 \begin_inset Formula 
 \[
 \int\frac{x}{1-x^{2}}dx\left[\begin{array}{c}
@@ -1017,12 +1025,90 @@ dx=\frac{du}{2x}
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
 אינטגרציה בחלקים
+\series default
+
 \begin_inset Formula 
 \[
 \int f\x g'=f\x g-\int f'\x g
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+דרך נוספת - 
+\series bold
+שימוש בחלוקת פולינומים
+\end_layout
+
+\begin_layout Standard
+ניקח לדוגמא את השאלה 
+\begin_inset Formula $x-3)\overline{x^{3}-x^{2}+0x-4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+תחילה נחלק את האיברים המובילים אחד בשני
+\begin_inset Formula 
+\[
+x-3)\overset{x^{2}\,\,\,\,\,}{\overline{x^{3}-x^{2}+0x-4}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נחסר את 
+\begin_inset Formula $(x-3)x^{2}$
+\end_inset
+
+ מ 
+\begin_inset Formula $x^{3}-x^{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{c}
+x-3)\overset{x^{2}}{\overline{x^{3}-x^{2}+0x-4}}\\
+x^{3}-3x^{2}\downarrow\\
+\overline{\,\,\,\,\,\,\,\,2x^{2}+0x}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+וכן הלאה....
+\begin_inset Formula 
+\[
+\begin{array}{c}
+x-3)\overset{\,\,\,\,\,\,\,\,x^{2}+2x+3}{\overline{x^{3}-x^{2}+0x-4}}\\
+x^{3}-3x^{2}\downarrow\\
+\overline{\,\,\,\,\,\,\,\,2x^{2}+0x}\\
+\,\,\,\,\,\,\,\,2x^{2}-3x\\
+\overline{\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,3x-4}\\
+\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,3x-9\\
+\overline{\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,5}
+\end{array}
+\]
+
+\end_inset
+
+לכן 
+\begin_inset Formula $\frac{x^{3}-x^{2}-4}{x-3}=x-3)\overline{x^{3}-x^{2}+0x-4}=x^{2}+2x+3+\frac{5}{x-3}$
 \end_inset
 
 
