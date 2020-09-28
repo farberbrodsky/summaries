@@ -2298,7 +2298,7 @@ e\x t\x a+e\x s\x b=e\x d\to\left(e\x t\right)\x a+\left(e\x s\right)\x b=\frac{
 קבוצת כל הפתרונות היא
 \begin_inset Formula 
 \[
-\left\{ \left\langle x_{0}+\frac{b}{d}\x n,y_{0}-\frac{a}{d}\x n\right\rangle |n\in\mathbb{N}\right\} 
+\left\{ \left\langle x_{0}+\frac{b}{d}\x z,y_{0}-\frac{a}{d}\x z\right\rangle |z\in\mathbb{Z}\right\} 
 \]
 
 \end_inset
