@@ -311,7 +311,7 @@ B
  קיים מקור
 \begin_inset Formula 
 \[
-\forall x\in\left[f(a),f(b)\right]\to\exists c\in I.f(c)=x
+\forall y\in\left[f(a),f(b)\right]\to\exists x\in I.f(x)=y
 \]
 
 \end_inset
@@ -538,6 +538,38 @@ B
 
 \begin_layout Enumerate
 אסימפטוטות משופעות ומאונכות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אסימפטוטה משופעת/אופקית
+\series default
+
+\begin_inset Formula 
+\[
+y=mx+b
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m=\lin{\sigma}{\infty}\frac{f(\sigma)}{\sigma}/\lin{\sigma}{\infty}f'(\sigma)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+b=\lin{\sigma}{\infty}f(\sigma)-mx
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1188,7 +1220,7 @@ x^{3}-3x^{2}\downarrow\\
 
 \begin_inset Formula 
 \[
-\int\csc^{2}xdx=\tan x+C
+\int\sec^{2}xdx=\tan x+C
 \]
 
 \end_inset
@@ -1196,7 +1228,7 @@ x^{3}-3x^{2}\downarrow\\
 
 \begin_inset Formula 
 \[
-\int\sec^{2}xdx=-\cot x+C
+\int\csc^{2}xdx=-\cot x+C
 \]
 
 \end_inset
@@ -1204,7 +1236,7 @@ x^{3}-3x^{2}\downarrow\\
 
 \begin_inset Formula 
 \[
-\int cschxdx=\tanh x+C
+\int sechxdx=\tanh x+C
 \]
 
 \end_inset
@@ -1212,7 +1244,7 @@ x^{3}-3x^{2}\downarrow\\
 
 \begin_inset Formula 
 \[
-\int sechxdx=-\coth x+C
+\int cschxdx=-\coth x+C
 \]
 
 \end_inset
