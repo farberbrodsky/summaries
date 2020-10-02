@@ -311,7 +311,7 @@ B
  קיים מקור
 \begin_inset Formula 
 \[
-\forall y\in\left[f(a),f(b)\right]\to\exists x\in I.f(x)=y
+\forall y\in\left[f(a),f(b)\right]\to\exists\sigma\in I.f(\sigma)=y
 \]
 
 \end_inset
