@@ -235,7 +235,7 @@ B
 גבול מימין
 \begin_inset Formula 
 \[
-\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0},x_{0}+\delta\right).\left|f\left(x\right)-L\right|<\epsilon
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0}-\delta,x_{0}\right).\left|f\left(x\right)-L\right|<\epsilon
 \]
 
 \end_inset
@@ -247,7 +247,7 @@ B
 גבול משמאל
 \begin_inset Formula 
 \[
-\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0}-\delta,x_{0}\right).\left|f\left(x\right)-L\right|<\epsilon
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0},x_{0}+\delta\right).\left|f\left(x\right)-L\right|<\epsilon
 \]
 
 \end_inset
