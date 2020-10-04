@@ -199,7 +199,55 @@ B
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x.\left(0<\left|x-x_{0}\right|<\delta\right)\to\left|f\left(x\right)-L\right|<\epsilon
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0}-\delta,x_{0}+\delta\right)\left|.f\left(x\right)-L\right|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+גבול הפונקציה שווה לאינסוף
+\begin_inset Formula 
+\[
+\lin x{\infty}f(x)=\infty\Longleftrightarrow\forall\Delta\exists N\forall x>N.f(x)>\Delta
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lin x{x_{0}}f(x)=\infty\Longleftrightarrow\forall\Delta\exists\delta\forall x\in\left(x_{0}-\delta,x_{0}+\delta\right).f(x)>\Delta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+גבולות חד צדדיים
+\end_layout
+
+\begin_layout Subsubsection
+גבול מימין
+\begin_inset Formula 
+\[
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0}-\delta,x_{0}\right).\left|f\left(x\right)-L\right|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+גבול משמאל
+\begin_inset Formula 
+\[
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0},x_{0}+\delta\right).\left|f\left(x\right)-L\right|<\epsilon
 \]
 
 \end_inset
@@ -311,7 +359,7 @@ B
  קיים מקור
 \begin_inset Formula 
 \[
-\forall x\in\left[f(a),f(b)\right]\to\exists c\in I.f(c)=x
+\forall y\in\left[f(a),f(b)\right]\to\exists\sigma\in I.f(\sigma)=y
 \]
 
 \end_inset
@@ -538,6 +586,38 @@ B
 
 \begin_layout Enumerate
 אסימפטוטות משופעות ומאונכות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אסימפטוטה משופעת/אופקית
+\series default
+
+\begin_inset Formula 
+\[
+y=mx+b
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m=\lin{\sigma}{\infty}\frac{f(\sigma)}{\sigma}/\lin{\sigma}{\infty}f'(\sigma)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+b=\lin{\sigma}{\infty}f(\sigma)-mx
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1188,7 +1268,7 @@ x^{3}-3x^{2}\downarrow\\
 
 \begin_inset Formula 
 \[
-\int\csc^{2}xdx=\tan x+C
+\int\sec^{2}xdx=\tan x+C
 \]
 
 \end_inset
@@ -1196,7 +1276,7 @@ x^{3}-3x^{2}\downarrow\\
 
 \begin_inset Formula 
 \[
-\int\sec^{2}xdx=-\cot x+C
+\int\csc^{2}xdx=-\cot x+C
 \]
 
 \end_inset
@@ -1204,7 +1284,7 @@ x^{3}-3x^{2}\downarrow\\
 
 \begin_inset Formula 
 \[
-\int cschxdx=\tanh x+C
+\int sechxdx=\tanh x+C
 \]
 
 \end_inset
@@ -1212,7 +1292,7 @@ x^{3}-3x^{2}\downarrow\\
 
 \begin_inset Formula 
 \[
-\int sechxdx=-\coth x+C
+\int cschxdx=-\coth x+C
 \]
 
 \end_inset
@@ -2298,7 +2378,7 @@ e\x t\x a+e\x s\x b=e\x d\to\left(e\x t\right)\x a+\left(e\x s\right)\x b=\frac{
 קבוצת כל הפתרונות היא
 \begin_inset Formula 
 \[
-\left\{ \left\langle x_{0}+\frac{b}{d}\x n,y_{0}-\frac{a}{d}\x n\right\rangle |n\in\mathbb{N}\right\} 
+\left\{ \left\langle x_{0}+\frac{b}{d}\x z,y_{0}-\frac{a}{d}\x z\right\rangle |z\in\mathbb{Z}\right\} 
 \]
 
 \end_inset
