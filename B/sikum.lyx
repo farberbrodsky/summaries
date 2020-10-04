@@ -2053,7 +2053,7 @@ n_{i-2}=m_{i}\x c+0
 
 \begin_layout Standard
 באופן פשוט יותר נוכל לעבוד באופן הבא 
-\begin_inset Formula $\gcd\left(a,b\right)=\gcd\left(a\mod b,b\right)=...=\gcd\left(c,0\right)=c$
+\begin_inset Formula $\gcd\left(a,b\right)=\gcd\left(b,a\mod b\right)=...=\gcd\left(c,0\right)=c$
 \end_inset
 
 
