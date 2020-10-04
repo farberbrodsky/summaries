@@ -199,7 +199,55 @@ B
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x.\left(0<\left|x-x_{0}\right|<\delta\right)\to\left|f\left(x\right)-L\right|<\epsilon
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0}-\delta,x_{0}+\delta\right)\left|.f\left(x\right)-L\right|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+גבול הפונקציה שווה לאינסוף
+\begin_inset Formula 
+\[
+\lin x{\infty}f(x)=\infty\Longleftrightarrow\forall\Delta\exists N\forall x>N.f(x)>\Delta
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lin x{x_{0}}f(x)=\infty\Longleftrightarrow\forall\Delta\exists\delta\forall x\in\left(x_{0}-\delta,x_{0}+\delta\right).f(x)>\Delta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+גבולות חד צדדיים
+\end_layout
+
+\begin_layout Subsubsection
+גבול מימין
+\begin_inset Formula 
+\[
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0},x_{0}+\delta\right).\left|f\left(x\right)-L\right|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+גבול משמאל
+\begin_inset Formula 
+\[
+\underset{x\to x_{0}}{\lim}f\left(x\right)=L\iff\forall\epsilon>0.\exists\delta>0.\forall x\in\left(x_{0}-\delta,x_{0}\right).\left|f\left(x\right)-L\right|<\epsilon
 \]
 
 \end_inset
