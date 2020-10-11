@@ -984,7 +984,7 @@ R_{n}(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-x_{0})^{n+1}
 
 \begin_inset Formula 
 \[
-x_{1}=x_{0}+\frac{f(x_{0})}{f'(x_{0})}
+x_{1}=x_{0}-\frac{f(x_{0})}{f'(x_{0})}
 \]
 
 \end_inset
@@ -994,7 +994,7 @@ x_{1}=x_{0}+\frac{f(x_{0})}{f'(x_{0})}
 
 \begin_layout Standard
 באופן כללי נסמן 
-\begin_inset Formula $x_{n+1}=x_{n}+\frac{f(x_{n})}{f'(x_{n})}$
+\begin_inset Formula $x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}$
 \end_inset
 
 , כאשר 
