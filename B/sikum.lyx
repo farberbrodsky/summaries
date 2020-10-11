@@ -936,7 +936,7 @@ R_{n}(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-x_{0})^{n+1}
 (באופן הבא
 \begin_inset Formula 
 \[
-\abs{R_{n}(x)}\leq\frac{\max\left\{ f^{(n+1)}(b)|b\in\left(x,x_{0}\right)\cup\left(x_{0},x\right)\right\} }{(n+1)!}\abs{x-x_{0}}^{n+1}
+\abs{R_{n}(x)}\leq\left|\frac{\max\left\{ f^{(n+1)}(b)|b\in\left(x,x_{0}\right)\cup\left(x_{0},x\right)\right\} }{(n+1)!}\left(x-x_{0}\right)^{n+1}\right|
 \]
 
 \end_inset
