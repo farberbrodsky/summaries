@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Summaries - {{ dirname }}</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&family=Open+Sans" rel="stylesheet">
+  <link href="/folderstyle.css" rel="stylesheet">
+</head>
+<body>
+  <h1>{{ dirname }}</h1>
+  <div class="files">
+    {% for entry in entries %}
+      {% if entry[0] == "file" %}
+      <div class="file">
+        <a class="file-link" href="{{ entry[1] }}.html">
+          <i class="file-or-folder-icon material-icons">text_snippet</i>
+          <div class="file-name">{{ entry[1] }}</div>
+        </a>
+        <a href="{{ entry[1] }}" download><i class="material-icons">cloud_download</i></a>
+      </div>
+      {% else %}
+        <div class="file">
+          <a href="{{ entry[1] }}" class="file-link">
+            <i class="file-or-folder-icon material-icons">folder</i>
+            <div class="file-name">{{ entry[1] }}</div>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  background: #fafafa;
+  color: #383a42;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  padding: 32px;
+  font-weight: regular;
+  font-size: 24px;
+}
+
+.file-or-folder-icon {
+  color: #4078f3;
+  padding-right: 8px;
+}
+
+.files {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.file-link {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.file {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  flex-basis: 250px;
+}
+
+.file-name {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #383a42;
+}
