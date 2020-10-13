@@ -79,7 +79,11 @@ def make_website_recursively(dirs, where):
     for k, v in subdirs:
         make_website_recursively(v, where + k + "/")
 
-rmtree("./docs")
+try:
+    rmtree("./docs")
+except:
+    pass
+
 os.popen("cp -r ./website/public ./docs").close()
 
 make_website_recursively(pdf_directories, "")
