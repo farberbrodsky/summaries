@@ -30,7 +30,7 @@ jobs:
           cd ..
           rm -r LyX-ubuntu-installer
       - name: Install required packages for compile.py
-        run: pip3 install jinja2 htmlmin
+        run: sudo apt-get install python3-setuptools && pip3 install jinja2 htmlmin
       - name: Run compile.py
         run: python3 compile.py
       - uses: stefanzweifel/git-auto-commit-action@v4
