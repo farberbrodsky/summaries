@@ -586,16 +586,16 @@ status open
 
 
 \series default
-)
-\begin_inset Formula $arg(z)$
+: נסמן 
+\begin_inset Formula $\arg\left(z\right)$
 \end_inset
 
-(: נסמן כווית שהמספר יוצר עם ציר הממשיים)בדכ נסמן כ
+ להיות הזווית שהמספר יוצר עם ציר הממשיים )לרוב נסמן כ-
 \begin_inset Formula $\theta$
 \end_inset
 
 (, ניתן לחשב אותו בעזרת 
-\begin_inset Formula $arg(z)=\arctan(\frac{b}{a})$
+\begin_inset Formula $\arg(z)=\arctan(\frac{b}{a})$
 \end_inset
 
 .
@@ -685,6 +685,47 @@ status open
 \end_inset
 
  שדה סגור אלגברית )כלומר כל שורש של כל פולינום מרוכב הוא מרוכב(.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+איבר הופכי:
+\series default
+ 
+\begin_inset Formula $w=\frac{a-ib}{a^{2}+b^{2}}$
+\end_inset
+
+ )אם מכפילים בהופכי מקבלים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+(.
 \end_layout
 
 \end_body
