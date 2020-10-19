@@ -580,13 +580,62 @@ status open
 \begin_layout Enumerate
 
 \series bold
+הארגומנט של 
+\begin_inset Formula $z$
+\end_inset
+
+
+\series default
+)
+\begin_inset Formula $arg(z)$
+\end_inset
+
+(: נסמן כווית שהמספר יוצר עם ציר הממשיים)בדכ נסמן כ
+\begin_inset Formula $\theta$
+\end_inset
+
+(, ניתן לחשב אותו בעזרת 
+\begin_inset Formula $arg(z)=\arctan(\frac{b}{a})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+הגודל של 
+\begin_inset Formula $z$
+\end_inset
+
+: 
+\series default
+
+\begin_inset Formula $\left|\left|z\right|\right|=\sqrt{Re\left(z\right)^{2}+Im\left(z\right)^{2}}$
+\end_inset
+
+.
+ כלומר המרחק של 
+\begin_inset Formula $z$
+\end_inset
+
+ מראשית הצירים.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
 זהות אוילר: 
 \series default
 
 \begin_inset Formula $e^{i\theta}=\cos\left(\theta\right)+i\sin\left(\theta\right)$
 \end_inset
 
-.
+, לכן 
+\begin_inset Formula $z=\left|\left|z\right|\right|e^{i\cdot arg(z)}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -616,23 +665,6 @@ status open
 
 \begin_layout Enumerate
 כל שורש של פולינום מרוכב הוא מרוכב.
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-הגודל של 
-\begin_inset Formula $z$
-\end_inset
-
-: 
-\series default
-
-\begin_inset Formula $\left|\left|z\right|\right|=\sqrt{Re\left(z\right)^{2}+Im\left(z\right)^{2}}$
-\end_inset
-
-.
- כלומר על מה הגודל של המספר על הגרף.
 \end_layout
 
 \begin_layout Enumerate
