@@ -580,30 +580,6 @@ status open
 \begin_layout Enumerate
 
 \series bold
-הארגומנט של 
-\begin_inset Formula $z$
-\end_inset
-
-
-\series default
-: נסמן 
-\begin_inset Formula $\arg\left(z\right)$
-\end_inset
-
- להיות הזווית שהמספר יוצר עם ציר הממשיים )לרוב נסמן כ-
-\begin_inset Formula $\theta$
-\end_inset
-
-(, ניתן לחשב אותו בעזרת 
-\begin_inset Formula $\arg(z)=\arctan(\frac{b}{a})$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
 הגודל של 
 \begin_inset Formula $z$
 \end_inset
@@ -632,10 +608,10 @@ status open
 \end_inset
 
 , לכן 
-\begin_inset Formula $z=\left|\left|z\right|\right|e^{i\cdot arg(z)}$
+\begin_inset Formula $z=\left|\left|z\right|\right|e^{i\cdot\arg(z)}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -680,6 +656,43 @@ status open
  כלומר להפוך את החלק הדמיוני.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\overline{\overline{z}}=z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $z\cdot\overline{z}=\left|\left|z\right|\right|^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{z_{1}+z_{2}}=\overline{z_{1}}+\overline{z_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{z_{1}\cdot z_{2}}=\overline{z_{1}}\cdot\overline{z_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Re\left(z\right)=\frac{z+\overline{z}}{2},Im\left(z\right)=\frac{z-\overline{z}}{2i},$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\left\langle \mathbb{C},+,\cdot\right\rangle $
 \end_inset
@@ -726,6 +739,128 @@ status open
 1
 \numeric off
 (.
+\end_layout
+
+\begin_layout Section
+הצגה פולארית
+\end_layout
+
+\begin_layout Standard
+נגדיר מרוכב בתור זוג 
+\begin_inset Formula $\left\langle r,\theta\right\rangle $
+\end_inset
+
+ כאשר 
+\begin_inset Formula $r$
+\end_inset
+
+ המרחק מראשית הצירים ו-
+\begin_inset Formula $\theta$
+\end_inset
+
+ הזווית שהוא יוצר, שנקראת הארגומנט.
+\begin_inset Formula 
+\[
+z=r\cos\theta+ir\sin\theta=r\cdot e^{i\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עובדות:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+הארגומנט של 
+\begin_inset Formula $z$
+\end_inset
+
+
+\series default
+: נסמן 
+\begin_inset Formula $\arg\left(z\right)$
+\end_inset
+
+ להיות הזווית שהמספר יוצר עם ציר הממשיים )לרוב נסמן כ-
+\begin_inset Formula $\theta$
+\end_inset
+
+(.
+ ניתן לחשב אותו בעזרת 
+\begin_inset Formula $\arg\left(z\right)=\arctan\left(\frac{b}{a}\right)$
+\end_inset
+
+ ברוב המקרים.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{z}=r\cdot e^{-i\theta},z^{-1}=\frac{1}{r}e^{-i\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\cos\theta=\frac{e^{i\theta}+e^{-i\theta}}{2},\sin\theta=\frac{e^{i\theta}-e^{-i\theta}}{2i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+להכפיל מספרים מרוכבים על הגרף נראה כמו להכפיל את האורכים זה בזה ולחבר את
+ הזוויות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פתרון משוואה 
+\series default
+
+\begin_inset Formula $z^{n}=a+ib$
+\end_inset
+
+.
+ נמצא הצגה פולארית 
+\begin_inset Formula $z^{n}=re^{i\theta}$
+\end_inset
+
+.
+ נשתמש בעובדה ש-
+\begin_inset Formula $e^{i\theta}=e^{i\left(\theta+2\pi k\right)}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+ אזי:
+\begin_inset Formula 
+\[
+z=\sqrt[n]{r}e^{i\left(\frac{\theta}{n}+2\pi\frac{k}{n}\right)}
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+ ולכל 
+\begin_inset Formula $k\in\left\{ 0,\dots,n-1\right\} $
+\end_inset
+
+ נקבל פתרונות שונים.
 \end_layout
 
 \end_body
