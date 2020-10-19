@@ -532,5 +532,128 @@ status open
  הם כן שדות.
 \end_layout
 
+\begin_layout Standard
+הרבה פעמים בהגדרת שדה מוסיפים את הדרישה 
+\begin_inset Formula $0_{F}\ne1_{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+מרוכבים
+\end_layout
+
+\begin_layout Standard
+נסמן 
+\begin_inset Formula $i=\sqrt{-1}$
+\end_inset
+
+.
+ ההגדרה הפורמלית של מרוכבים היא: 
+\begin_inset Formula $\mathbb{C}=\mathbb{R}^{2}$
+\end_inset
+
+, כאשר המספר הראשון הוא החלק הממשי )שמסומן 
+\begin_inset Formula $Re\left(c\right)$
+\end_inset
+
+( והמספר השני הוא החלק הדמיוני )שמסומן 
+\begin_inset Formula $Im\left(c\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עובדות:
+\series default
+ עבור 
+\begin_inset Formula $z\in\mathbb{C}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+זהות אוילר: 
+\series default
+
+\begin_inset Formula $e^{i\theta}=\cos\left(\theta\right)+i\sin\left(\theta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+חיבור:
+\series default
+ מחברים את החלק הממשי והדמיוני בנפרד.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+כפל:
+\series default
+ 
+\begin_inset Formula $\left(a+ib\right)\cdot\left(c+id\right)=\left(ac-bd\right)+i\left(bc+da\right)$
+\end_inset
+
+.
+ משתמשים בזה ש-
+\begin_inset Formula $i^{2}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+כל שורש של פולינום מרוכב הוא מרוכב.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+הגודל של 
+\begin_inset Formula $z$
+\end_inset
+
+: 
+\series default
+
+\begin_inset Formula $\left|\left|z\right|\right|=\sqrt{Re\left(z\right)^{2}+Im\left(z\right)^{2}}$
+\end_inset
+
+.
+ כלומר על מה הגודל של המספר על הגרף.
+\end_layout
+
+\begin_layout Enumerate
+נגדיר 
+\begin_inset Formula $\overline{z}$
+\end_inset
+
+ להיות 
+\begin_inset Formula $\overline{z}=a-ib$
+\end_inset
+
+.
+ כלומר להפוך את החלק הדמיוני.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \mathbb{C},+,\cdot\right\rangle $
+\end_inset
+
+ שדה סגור אלגברית )כלומר כל שורש של כל פולינום מרוכב הוא מרוכב(.
+\end_layout
+
 \end_body
 \end_document
