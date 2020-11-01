@@ -867,5 +867,448 @@ z=\sqrt[n]{r}e^{i\left(\frac{\theta}{n}+2\pi\frac{k}{n}\right)}
  נקבל פתרונות שונים.
 \end_layout
 
+\begin_layout Part
+מטריצות
+\end_layout
+
+\begin_layout Section
+הגדרות
+\end_layout
+
+\begin_layout Standard
+וקטור הוא 
+\begin_inset Formula $n$
+\end_inset
+
+יה של איברים ב-
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+.
+ מטריצה היא 
+\begin_inset Formula $m$
+\end_inset
+
+יה של וקטורים.
+ מטריצה מסדר 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ היא מטריצה עם 
+\begin_inset Formula $m$
+\end_inset
+
+ שורות ו-
+\begin_inset Formula $n$
+\end_inset
+
+ עמודות )קודם 
+\begin_inset Formula $y$
+\end_inset
+
+ ואז 
+\begin_inset Formula $x$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+נגדיר מערכת משוואות כמטריצה באופן הבא:
+\begin_inset Formula 
+\[
+\begin{cases}
+\alpha_{1,1}x_{1}+\dots+\alpha_{1,n}x_{n} & =b_{1}\\
+\vdots & =\vdots\\
+\alpha_{m,1}x_{1}+\dots+\alpha_{m,n}x_{n} & =b_{m}
+\end{cases}\equiv\left(\begin{array}{ccc|c}
+\alpha_{1,1} & \dots & \alpha_{1,n} & b_{1}\\
+\vdots & \ddots & \vdots & \vdots\\
+\alpha_{m,1} & \dots & \alpha_{m,n} & b_{m}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+פעולות בסיסיות
+\end_layout
+
+\begin_layout Standard
+חיבור וקטורים:
+\begin_inset Formula 
+\[
+\begin{pmatrix}\alpha_{0}\\
+\vdots\\
+\alpha_{n}
+\end{pmatrix}+\begin{pmatrix}\beta_{0}\\
+\vdots\\
+\beta_{n}
+\end{pmatrix}=\begin{pmatrix}\alpha_{0}+\beta_{0}\\
+\vdots\\
+\alpha_{n}+\beta_{n}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כפל מטריצה בוקטור: כמו להציב את הוקטור בעמודות המטריצה.
+\begin_inset Formula 
+\[
+\begin{pmatrix}a_{1,1} & \dots & a_{1,n}\\
+\vdots & \ddots & \vdots\\
+a_{m,1} & \dots & a_{m,n}
+\end{pmatrix}\cdot\begin{pmatrix}\beta_{1}\\
+\vdots\\
+\beta_{n}
+\end{pmatrix}=\begin{pmatrix}\beta_{1}a_{1,1}+\dots+\beta_{n}a_{1,n}\\
+\dots+\dots+\dots\\
+\beta_{1}a_{m,1}+\dots+\beta_{n}a_{m,n}
+\end{pmatrix}
+\]
+
+\end_inset
+
+את פתרונות המטריצה נסמן
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ב-
+\lang english
+Sols
+\lang hebrew
+.
+ מטריצות נקראות 
+\bar under
+שקולות
+\bar default
+ אם הפתרונות שלהן זהים.
+\end_layout
+
+\begin_layout Subsection
+פעולות אלמנטריות על מטריצה
+\end_layout
+
+\begin_layout Standard
+הפעולות האלה הן:
+\end_layout
+
+\begin_layout Enumerate
+להחליף סדר בין משוואות.
+ 
+\begin_inset Formula $R_{i}\leftrightarrow R_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+להכפיל משוואה בקבוע.
+ 
+\begin_inset Formula $R_{i}\to\alpha\cdot R_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לחבר משוואות.
+ 
+\begin_inset Formula $R_{i}\to R_{i}+R_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+כולן משמרות את הפתרונות של המטריצה.
+\end_layout
+
+\begin_layout Standard
+מטריצות ששקולות באמצעות סדרת פעולות אלמנטריות נקראות 
+\bar under
+שקולות שורה
+\bar default
+.
+\end_layout
+
+\begin_layout Subsection
+שונות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה ריבועית:
+\series default
+ מטריצה שכמות העמודות בה שווה לכמות השורות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצת היחידה: 
+\series default
+מסומנת 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+.
+ היא מטריצה ריבועית שבה 
+\begin_inset Formula $a_{i,j}=1$
+\end_inset
+
+ אם 
+\begin_inset Formula $i=j$
+\end_inset
+
+, ואם 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+ אז 
+\begin_inset Formula $a_{i,j}=0$
+\end_inset
+
+.
+ לדוגמה:
+\begin_inset Formula 
+\[
+I_{3}=\begin{pmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+דירוג ודירוג קנוני
+\end_layout
+
+\begin_layout Subsection
+הגדרות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בצורה מדורגת:
+\end_layout
+
+\begin_layout Enumerate
+משוואות 
+\begin_inset Formula $0$
+\end_inset
+
+ )מהצורה 
+\begin_inset Formula $0=b$
+\end_inset
+
+( נמצאות למטה.
+\end_layout
+
+\begin_layout Enumerate
+המשתנה הפותח בכל משוואה נמצא מימין ממש למשתנים הפותחים במשוואות מעליו.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+משתנה חופשי
+\bar default
+ הוא משתנה שלא מקדם פותח של אף שורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בנוסף, בצורה מדורגת קנונית:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[3.]
+\end_layout
+
+\end_inset
+
+המקדם של כל משתנה פותח הוא 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[4.]
+\end_layout
+
+\end_inset
+
+לכל משתנה פותח של משוואה, המקדם של המשתנה בשאר המשוואות הוא 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+לכל מטריצה קיימת צורה מדורגת קנונית יחידה ששקולה לה.
+\end_layout
+
+\begin_layout Subsection
+מציאת פתרונות
+\end_layout
+
+\begin_layout Subsubsection
+מציאת מספר הפתרונות לפי צורה מדורגת )לא בהכרח קנונית(
+\end_layout
+
+\begin_layout Standard
+עבור 
+\begin_inset Formula $\left(A\mid b\right)$
+\end_inset
+
+ מטריצה מדורגת:
+\end_layout
+
+\begin_layout Enumerate
+אם ב-
+\begin_inset Formula $\left(A\mid b\right)$
+\end_inset
+
+ יש שורת סתירה )
+\begin_inset Formula $0=b$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $b\ne0$
+\end_inset
+
+( - אין פתרון.
+\end_layout
+
+\begin_layout Enumerate
+אחרת, יש 
+\begin_inset Formula $\left|\mathbb{F}\right|^{k}$
+\end_inset
+
+ פתרונות כאשר 
+\begin_inset Formula $k$
+\end_inset
+
+ מספר המשתנים החופשיים.
+\end_layout
+
+\begin_layout Subsubsection
+מציאת הפתרונות עצמם לפי צורה מדורגת קנונית
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(A^{\prime}\mid b^{\prime}\right)$
+\end_inset
+
+ מטריצה מדורגת קנונית מסדר 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ ששקולה ל-
+\begin_inset Formula $\left(A\mid b\right)$
+\end_inset
+
+ אז:
+\end_layout
+
+\begin_layout Enumerate
+אם ב-
+\begin_inset Formula $\left(A^{\prime}\mid b^{\prime}\right)$
+\end_inset
+
+ יש שורת סתירה אז 
+\begin_inset Formula $\text{Sols}\left(\left(A^{\prime}\mid b^{\prime}\right)\right)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אחרת: נעשה החלפה על המשתנים החופשיים.
+ כל משתנה שאינו חופשי יוגדר לפי משוואה מסוימת.
+ דוגמה:
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccc|c}
+0 & 1 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 1 & 4 & 0 & 0 & 2\\
+0 & 0 & 0 & 0 & 1 & 3 & 3
+\end{array}\right)
+\]
+
+\end_inset
+
+המקדמים החופשיים הם 
+\begin_inset Formula $1,4,6$
+\end_inset
+
+.
+ הפתרון הוא:
+\begin_inset Formula 
+\[
+\left\{ \begin{pmatrix}x_{1}\\
+1\\
+2-4x_{4}\\
+x_{4}\\
+3-3x_{6}\\
+x_{6}
+\end{pmatrix}\mid x_{1},x_{4},x_{6}\in\mathbb{R}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
