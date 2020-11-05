@@ -938,7 +938,11 @@ z=\sqrt[n]{r}e^{i\left(\frac{\theta}{n}+2\pi\frac{k}{n}\right)}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 חיבור וקטורים:
+\series default
+
 \begin_inset Formula 
 \[
 \begin{pmatrix}\alpha_{0}\\
@@ -959,7 +963,11 @@ z=\sqrt[n]{r}e^{i\left(\frac{\theta}{n}+2\pi\frac{k}{n}\right)}
 \end_layout
 
 \begin_layout Standard
-כפל מטריצה בוקטור: כמו להציב את הוקטור בעמודות המטריצה.
+
+\series bold
+כפל מטריצה בוקטור:
+\series default
+ כמו להציב את הוקטור בעמודות המטריצה.
 \begin_inset Formula 
 \[
 \begin{pmatrix}a_{1,1} & \dots & a_{1,n}\\
@@ -976,6 +984,18 @@ a_{m,1} & \dots & a_{m,n}
 
 \end_inset
 
+בנוסף, הפתרונות של 
+\begin_inset Formula $\overline{x}\in\text{Sols}\left(A\mid b\right)$
+\end_inset
+
+ שקולים ל-
+\begin_inset Formula $A\overline{x}=\overline{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 את פתרונות המטריצה נסמן
 \family roman
 \series medium
@@ -1071,6 +1091,69 @@ Sols
 מטריצה ריבועית:
 \series default
  מטריצה שכמות העמודות בה שווה לכמות השורות.
+\end_layout
+
+\begin_layout Theorem
+הבאים שקולים עבור מטריצה 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ )מטריצה ריבועית(:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ שקולת שורות ל-
+\begin_inset Formula $I_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{n}$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\overline{x}=\overline{b}$
+\end_inset
+
+ יש פתרון יחיד.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $b\in\mathbb{F}^{n}$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\overline{x}=\overline{b}$
+\end_inset
+
+ קיים פתרון.
+\end_layout
+
+\begin_layout Enumerate
+למערכת 
+\begin_inset Formula $A\overline{x}=\overline{0}$
+\end_inset
+
+ יש פתרון יחיד.
+\end_layout
+
+\begin_layout Enumerate
+קיים 
+\begin_inset Formula $b$
+\end_inset
+
+ כך שלמערכת 
+\begin_inset Formula $A\overline{x}=\overline{b}$
+\end_inset
+
+ יש פתרון יחיד.
 \end_layout
 
 \begin_layout Standard
@@ -1380,6 +1463,213 @@ x_{4}\\
 3-3x_{6}\\
 x_{6}
 \end{pmatrix}\mid x_{1},x_{4},x_{6}\in\mathbb{R}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+תת מרחב
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה )בוחן תת מרחב(:
+\series default
+ 
+\begin_inset Formula $U\subseteq F^{n}$
+\end_inset
+
+ היא תת מרחב אמ
+\begin_inset Quotes erd
+\end_inset
+
+מ:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U$
+\end_inset
+
+ סגורה לחיבור.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U$
+\end_inset
+
+ סגירה לכפל בסקלר.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{0}\in U$
+\end_inset
+
+.
+ ניתן להחליף את התנאי ב-
+\begin_inset Formula $u\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נובע מכאן גם שחיתוך של תתי מרחבים הוא תת מרחב.
+\end_layout
+
+\begin_layout Section
+צירופים לינאריים
+\end_layout
+
+\begin_layout Subsection
+בת
+\begin_inset Quotes erd
+\end_inset
+
+ל
+\end_layout
+
+\begin_layout Definition
+סדרת 
+\begin_inset Formula $m$
+\end_inset
+
+יות 
+\begin_inset Formula $\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\in\left(\mathbb{F}^{m}\right)^{k}$
+\end_inset
+
+ תקרא 
+\bar under
+בלתי תלויה לינארית
+\bar default
+ )בת
+\begin_inset Quotes erd
+\end_inset
+
+ל( אם לכל 
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
+\end_inset
+
+ יש לכל היותר פתרון אחד למשוואה 
+\begin_inset Formula $\sum_{i=1}^{k}x_{i}\overline{v_{i}}=\overline{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יהיו 
+\begin_inset Formula $\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\in\left(\mathbb{F}^{n}\right)^{k}$
+\end_inset
+
+, סדרת מקדמים 
+\begin_inset Formula $\begin{pmatrix}\alpha_{1}\\
+\vdots\\
+\alpha_{k}
+\end{pmatrix}\in\mathbb{F}^{k}$
+\end_inset
+
+ נקראת 
+\bar under
+תלות לינארית של 
+\begin_inset Formula $\left(v_{1},\dots,v_{k}\right)$
+\end_inset
+
+
+\bar default
+ אם 
+\begin_inset Formula $\alpha_{1}\overline{v_{1}}+\dots+\alpha_{k}\overline{v_{k}}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נגדיר את מרחב התלויות של 
+\begin_inset Formula $\left(v_{1},\dots,v_{k}\right)$
+\end_inset
+
+ להיות:
+\begin_inset Formula 
+\[
+LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\\
+\vdots\\
+\alpha_{n}
+\end{pmatrix}\in\mathbb{F}^{n}\mid\alpha_{1}v_{1}+\dots+\alpha_{k}v_{k}=0\right\} 
+\]
+
+\end_inset
+
+ו-
+\begin_inset Formula $LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\text{Sols}\left(\left(v_{1},\dots,v_{k}\mid0\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $v_{1},\dots,v_{k}$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $LD\left(v_{1},\dots,v_{k}\right)=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+קבוצת הצירופים הלינאריים
+\end_layout
+
+\begin_layout Definition
+עבור סדרת 
+\begin_inset Formula $n$
+\end_inset
+
+יות, 
+\begin_inset Formula $\left(v_{1},\dots,v_{k}\right)\in\left(\mathbb{F}^{n}\right)^{k}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\text{sp}\left(v_{1},\dots,v_{k}\right)=\left\{ \sum_{i=1}^{k}\alpha_{i}v_{i}\mid\alpha_{1},\dots,\alpha_{k}\in\mathbb{F}\right\} 
+\]
+
+\end_inset
+
+זה המרחב הנפרש על ידי 
+\begin_inset Formula $v_{1},\dots,v_{k}$
+\end_inset
+
+.
+ ההגדרה לקבוצות 
+\begin_inset Formula $K\subseteq\mathbb{F}^{n}$
+\end_inset
+
+ היא:
+\begin_inset Formula 
+\[
+\text{sp}\left(k\right)=\left\{ b\in\mathbb{F}^{n}\mid\exists k\in\mathbb{N}.\exists\alpha_{1},\dots,\alpha_{k}\in\mathbb{F}.\exists t_{1},\dots,t_{k}\in K.b=\sum_{i=1}^{k}\alpha_{i}t_{i}\right\} 
 \]
 
 \end_inset
