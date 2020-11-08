@@ -1034,6 +1034,55 @@ Sols
  אם הפתרונות שלהן זהים.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+משפטים לגבי כפל מטריצה בוקטור:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\left(\overline{x}+\overline{y}\right)=A\overline{x}+A\overline{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\left(\alpha\cdot\overline{x}\right)=\alpha\cdot\left(A\cdot\overline{x}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+עבור 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ מרטיצת היחידה, 
+\begin_inset Formula $I_{n}\cdot\overline{b}=\overline{b}$
+\end_inset
+
+.
+ עבור 
+\begin_inset Formula $0$
+\end_inset
+
+ מטריצת ה-
+\numeric on
+
+\begin_inset Formula $0$
+\end_inset
+
+
+\numeric off
+, 
+\begin_inset Formula $0\cdot b=0$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 פעולות אלמנטריות על מטריצה
 \end_layout
