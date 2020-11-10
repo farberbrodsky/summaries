@@ -1778,38 +1778,21 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \begin_layout Definition
 
 \bar under
-קבוצה פורשת
+קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ פורשת
 \bar default
- היא קבוצה ששווה ל-
-\lang english
-span
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-של עצמה.
+ את 
+\begin_inset Formula $B$
+\end_inset
+
+ אם 
+\begin_inset Formula $\text{span}\left(A\right)=b$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
