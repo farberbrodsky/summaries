@@ -1582,41 +1582,6 @@ x_{6}
 \end_layout
 
 \begin_layout Definition
-סדרת 
-\begin_inset Formula $m$
-\end_inset
-
-יות 
-\begin_inset Formula $\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\in\left(\mathbb{F}^{m}\right)^{k}$
-\end_inset
-
- תקרא 
-\bar under
-בלתי תלויה לינארית
-\bar default
- )בת
-\begin_inset Quotes erd
-\end_inset
-
-ל( אם לכל 
-\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
-\end_inset
-
- יש לכל היותר פתרון אחד למשוואה 
-\begin_inset Formula $\sum_{i=1}^{k}x_{i}\overline{v_{i}}=\overline{b}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
 יהיו 
 \begin_inset Formula $\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\in\left(\mathbb{F}^{n}\right)^{k}$
 \end_inset
@@ -1685,6 +1650,90 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+סדרת 
+\begin_inset Formula $m$
+\end_inset
+
+יות 
+\begin_inset Formula $\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\in\left(\mathbb{F}^{m}\right)^{k}$
+\end_inset
+
+ תקרא 
+\bar under
+בלתי תלויה לינארית
+\bar default
+ )בת
+\begin_inset Quotes erd
+\end_inset
+
+ל( אם לכל 
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
+\end_inset
+
+ יש לכל היותר פתרון אחד למשוואה 
+\begin_inset Formula $\sum_{i=1}^{k}x_{i}\overline{v_{i}}=\overline{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+תהי 
+\begin_inset Formula $S\subseteq\mathbb{F}^{n}$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $0\in S$
+\end_inset
+
+ אז 
+\begin_inset Formula $S$
+\end_inset
+
+ תלויה לינארית.
+\end_layout
+
+\begin_layout Enumerate
+תהי 
+\begin_inset Formula $S\subseteq\mathbb{F}^{n}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $S=\left(x,y\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $S$
+\end_inset
+
+ תלויה לינארית 
+\begin_inset Formula $\iff$
+\end_inset
+
+ הוקטורים פרופורציונים.
+\end_layout
+
+\begin_layout Enumerate
+סדרת וקטורים 
+\begin_inset Formula $\left(v_{1},\dots,v_{m}\right)\subseteq\mathbb{F}^{n}$
+\end_inset
+
+ תלויה לינארית 
+\begin_inset Formula $\iff$
+\end_inset
+
+ כל איבר אינו צירוף לינארי של קודמיו.
+\end_layout
+
 \begin_layout Subsection
 קבוצת הצירופים הלינאריים
 \end_layout
@@ -1724,6 +1773,154 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Definition
+
+\bar under
+קבוצה פורשת
+\bar default
+ היא קבוצה ששווה ל-
+\lang english
+span
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של עצמה.
+\end_layout
+
+\begin_layout Subsection
+בסיס
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ שדה, 
+\begin_inset Formula $B$
+\end_inset
+
+ תת קבוצה של 
+\begin_inset Formula $\mathbb{F}^{n}$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $B$
+\end_inset
+
+ נקראת 
+\bar under
+בסיס
+\bar default
+ של 
+\begin_inset Formula $\mathbb{F}^{n}$
+\end_inset
+
+ אם שני התנאים הבאים מתקיימים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ פורשת את 
+\begin_inset Formula $\mathbb{F}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+התנאים הבאים שקולים לכך ש-
+\begin_inset Formula $B$
+\end_inset
+
+ בסיס:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל וכל קבוצה המכילה ממש את 
+\begin_inset Formula $B$
+\end_inset
+
+ הינה תלויה לינארית.
+ )
+\begin_inset Formula $B$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל מקסימלית(.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ פורשת וכל קבוצה שמוכלת ממש ב-
+\begin_inset Formula $B$
+\end_inset
+
+ אינה פורשת.
+ )פורשת מינימלית(.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $v\in\mathbb{F}^{n}$
+\end_inset
+
+ יש הצגה יחידה כצירוף של וקטורים מ-
+\begin_inset Formula $B$
+\end_inset
+
+.
 \end_layout
 
 \end_body
