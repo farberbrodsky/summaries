@@ -1825,7 +1825,7 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \begin_inset Formula $\mathbb{F}^{n}$
 \end_inset
 
- אם שני התנאים הבאים מתקיימים:
+ אם שניים מהתנאים הבאים מתקיימים:
 \end_layout
 
 \begin_layout Enumerate
@@ -1848,6 +1848,17 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $m=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+כל שניים מוכיחים גם את השלישי.
 \end_layout
 
 \begin_layout Standard
