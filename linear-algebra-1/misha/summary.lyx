@@ -1323,6 +1323,28 @@ I_{3}=\begin{pmatrix}1 & 0 & 0\\
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+מטריצת הסיבוב:
+\begin_inset Formula 
+\[
+R\left(\theta\right)=\begin{pmatrix}\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\series default
+אם מכפילים וקטור במטריצת הסיבוב, זה מסובב את הוקטור 
+\begin_inset Formula $\theta$
+\end_inset
+
+ מעלות.
+\end_layout
+
 \begin_layout Section
 דירוג ודירוג קנוני
 \end_layout
@@ -1983,29 +2005,30 @@ A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
 \series bold
 אסוציאטיביות הכפל:
 \series default
- אם 
-\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times t}(\mathbb{F}),C\in M_{t\times n}(\mathbb{F})$
-\end_inset
-
-, אז 
+ 
 \begin_inset Formula $(A\cdot B)\cdot C=A\cdot(B\cdot C)$
 \end_inset
 
+ עבור 
+\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times t}(\mathbb{F}),C\in M_{t\times n}(\mathbb{F})$
+\end_inset
+
 .
- 
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
-חוק הפילוג: 
-\series default
-אם 
-\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B_{1},B_{2}\in M_{k\times n}(\mathbb{F})$
+חוק הפילוג:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\cdot(B_{1}+B_{2})=A\cdot B_{1}+A\cdot B_{2}$
 \end_inset
 
-, אז 
-\begin_inset Formula $A\cdot(B_{1}+B_{2})=A\cdot B_{1}+A\cdot B_{2}$
+ עבור 
+\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B_{1},B_{2}\in M_{k\times n}(\mathbb{F})$
 \end_inset
 
 .
@@ -2013,43 +2036,55 @@ A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
 \begin_inset Newline newline
 \end_inset
 
-ובנוסף אם 
-\begin_inset Formula $A_{1},A_{2}\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(\mathbb{F})$
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A_{1}+A_{2})\cdot B=A_{1}\cdot B+A_{2}\cdot B$
 \end_inset
 
-, אז 
-\begin_inset Formula $(A_{1}+A_{2})\cdot B=A_{1}\cdot B+A_{2}\cdot B$
+ עבור 
+\begin_inset Formula $A_{1},A_{2}\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(\mathbb{F})$
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 
 \series bold
 הוצאת סקלר: 
-\series default
-אם 
-\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(\mathbb{F}),\alpha\in\mathbb{R}$
-\end_inset
-
-
-\series bold
- 
-\series default
-, אז 
-\series bold
-
 \begin_inset Formula $A\cdot(\alpha\cdot B)=\alpha\cdot(A\cdot B)$
 \end_inset
 
 
 \series default
+ עבור 
+\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(\mathbb{F}),\alpha\in\mathbb{F}$
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Enumerate
-לכל מטריצה 
+
+\series bold
+כפל ב-
+\begin_inset Formula $0$
+\end_inset
+
+
+\series default
+ 
+\series bold
+וב-
+\begin_inset Formula $1$
+\end_inset
+
+:
+\series default
+ לכל מטריצה 
 \begin_inset Formula $A\in M_{m\times n}(\mathbb{F})$
 \end_inset
 
@@ -2070,8 +2105,12 @@ A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
  
 \end_layout
 
-\begin_layout Remarks
-יש מחלקי אפס, לדוגמה 
+\begin_layout Standard
+
+\series bold
+הערה:
+\series default
+ יש מחלקי אפס, לדוגמה 
 \begin_inset Formula $\left(\begin{array}{cc}
 1 & 1\\
 1 & 1
@@ -2088,9 +2127,7 @@ A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
 \end_layout
 
 \begin_layout Subsection
-שחלוף
-\backslash
-
+שחלוף - 
 \lang english
 Transpose
 \lang hebrew
@@ -2118,11 +2155,10 @@ Transpose
 \end_layout
 
 \begin_layout Definition
-\begin_inset Formula $\left(A^{T}\right)_{i,j}=\left(A\right){}_{j,i}$
+\begin_inset Formula $\left(A^{T}\right)_{i,j}=\left(A\right)_{j,i}$
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Definition
@@ -2175,39 +2211,46 @@ Transpose
 \end_layout
 
 \begin_layout Itemize
-חיבור )נניח כי החיבור מוגדר, כלומר 
-\begin_inset Formula $A,B$
-\end_inset
 
- שייכים לאותו הסדר(: 
+\series bold
+חיבור
+\series default
+: 
 \begin_inset Formula $\left(A+B\right)^{T}=A^{T}+B^{T}$
 \end_inset
 
-.
+ )אם החיבור מוגדר, כלומר 
+\begin_inset Formula $A,B$
+\end_inset
+
+ מאותו הסדר(.
 \end_layout
 
 \begin_layout Itemize
-כפל בסקלר: עבור 
+
+\series bold
+כפל בסקלר:
+\series default
+ 
+\begin_inset Formula $\left(\alpha A\right)^{T}=\alpha\left(A^{T}\right)$
+\end_inset
+
+ עבור 
 \begin_inset Formula $\alpha\in\mathbb{F}$
 \end_inset
 
-, 
-\begin_inset Formula $\left(\alpha A\right)^{T}=\alpha A^{T}$
-\end_inset
-
 .
 \end_layout
 
 \begin_layout Itemize
-אם 
-\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(F)$
-\end_inset
-
-, 
 \begin_inset Formula $\left(A\cdot B\right)^{T}=B^{T}\cdot A^{T}$
 \end_inset
 
+ עבור 
+\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(F)$
+\end_inset
 
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2223,7 +2266,11 @@ Transpose
 \end_layout
 
 \begin_layout Enumerate
-הפיכה משמאל אם קיימת מטריצה 
+
+\series bold
+הפיכה משמאל:
+\series default
+ אם קיימת מטריצה 
 \begin_inset Formula $B\in M_{n\times m}(\mathbb{F})$
 \end_inset
 
@@ -2235,7 +2282,11 @@ Transpose
 \end_layout
 
 \begin_layout Enumerate
-הפיכה מימין אם קיימת מטריצה 
+
+\series bold
+הפיכה מימין:
+\series default
+ אם קיימת מטריצה 
 \begin_inset Formula $B\in M_{n\times m}(\mathbb{F})$
 \end_inset
 
@@ -2247,7 +2298,11 @@ Transpose
 \end_layout
 
 \begin_layout Enumerate
-הפיכה אם קיימת מטריצה 
+
+\series bold
+הפיכה:
+\series default
+ אם קיימת מטריצה 
 \begin_inset Formula $B\in M_{n\times m}(\mathbb{F})$
 \end_inset
 
@@ -2260,27 +2315,32 @@ Transpose
 \end_inset
 
 .
- 
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_deeper
+\begin_layout Standard
 בפרט המטריצה 
 \begin_inset Formula $B$
 \end_inset
 
- היא יחידה ותסומן בתור 
+ היא יחידה ומסומנת 
 \begin_inset Formula $A^{-1}$
 \end_inset
 
-, היא גם מקיימת 
+, ומקיימת 
 \begin_inset Formula $\left(A^{-1}\right)^{-1}=A$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Remarks
-המטריצה
+\end_deeper
+\begin_layout Standard
+
+\series bold
+הערה:
+\series default
+ המטריצה
 \family roman
 \series medium
 \shape up
@@ -2413,12 +2473,11 @@ Transpose
 \end_layout
 
 \begin_layout Enumerate
-אם 
 \begin_inset Formula $A$
 \end_inset
 
- הפיכה מימין אז למערכת 
-\begin_inset Formula $A\cdot x=b$
+ הפיכה מימין אם ורק אם למערכת 
+\begin_inset Formula $A\cdot\overline{x}=b$
 \end_inset
 
  יש פתרון לכל 
@@ -2429,20 +2488,19 @@ Transpose
 \begin_inset Formula $A$
 \end_inset
 
- פורשת ו-
-\begin_inset Formula $m\leq n$
+ פורשת, ו-
+\begin_inset Formula $m\le n$
 \end_inset
 
-(
+(.
 \end_layout
 
 \begin_layout Enumerate
-אם 
 \begin_inset Formula $A$
 \end_inset
 
- הפיכה משמאל אז למערכת 
-\begin_inset Formula $A\cdot x=0$
+ הפיכה משמאל אם ורק אם למערכת 
+\begin_inset Formula $A\cdot\overline{x}=0$
 \end_inset
 
  יש פתרון יחיד )כלומר סדרת העמודות של 
@@ -2454,26 +2512,21 @@ Transpose
 \end_inset
 
 ל, ולכן 
-\begin_inset Formula $m\geq n$
+\begin_inset Formula $m\ge n$
 \end_inset
 
-(
+(.
 \end_layout
 
-\begin_layout Corollary
-אם 
+\begin_layout Enumerate
 \begin_inset Formula $A$
 \end_inset
 
- הפיכה למערכת 
-\begin_inset Formula $A\cdot x=b$
+ הפיכה אם ורק אם למערכת 
+\begin_inset Formula $A\cdot\overline{x}=b$
 \end_inset
 
- יש פתרון 
-\series bold
-יחיד 
-\series default
-לכל 
+ יש פתרון יחיד לכל 
 \begin_inset Formula $b$
 \end_inset
 
@@ -2482,32 +2535,15 @@ Transpose
 \end_inset
 
  בסיס, ולכן 
-\begin_inset Formula $n=m$
+\begin_inset Formula $m=n$
 \end_inset
 
-( 
+(.
 \end_layout
 
 \begin_deeper
-\begin_layout Theorem
-אם לכל 
-\begin_inset Formula $b$
-\end_inset
-
- למערכת 
-\begin_inset Formula $A\cdot x=b$
-\end_inset
-
- יש פתרון )כלומר עמודות 
-\begin_inset Formula $A$
-\end_inset
-
- פורשות( , 
-\begin_inset Formula $A$
-\end_inset
-
- הפיכה מימין.
- 
+\begin_layout Standard
+בפרט מטריצה הפיכה היא ריבועית.
 \end_layout
 
 \end_deeper
