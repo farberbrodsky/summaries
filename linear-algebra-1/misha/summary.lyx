@@ -962,12 +962,12 @@ z=\sqrt[n]{r}e^{i\left(\frac{\theta}{n}+2\pi\frac{k}{n}\right)}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
+כפל מטריצה בוקטור
+\end_layout
 
-\series bold
-כפל מטריצה בוקטור:
-\series default
- כמו להציב את הוקטור בעמודות המטריצה.
+\begin_layout Standard
+כמו להציב את הוקטור בעמודות המטריצה.
 \begin_inset Formula 
 \[
 \begin{pmatrix}a_{1,1} & \dots & a_{1,n}\\
@@ -1078,6 +1078,212 @@ Sols
 \numeric off
 , 
 \begin_inset Formula $0\cdot b=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+כפל מטריצה במטריצה
+\end_layout
+
+\begin_layout Definition
+יהא 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג ויהיו 
+\begin_inset Formula $A\in M_{n\times m}\left(R\right),B\in M_{m\times p}\left(R\right)$
+\end_inset
+
+ מטריצות.
+ נגדיר כפל מטריצות 
+\begin_inset Formula $\left(A\cdot B\right)\in M_{p\times n}(R)$
+\end_inset
+
+ בצורה הבאה: 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\left(A\cdot B\right)_{i,j}=\stackrel[k=1]{n}{\sum}a_{i,k}\cdot b_{k,j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $A\cdot B=\left(\begin{array}{ccc}
+\bigl| & \bigl| & \bigl|\\
+A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
+\bigl| & \bigl| & \bigl|
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset Formula $A\cdot B=\left(\begin{array}{ccc}
+- & R_{1}(A)\cdot B & -\\
+ & \vdots\\
+- & R_{n}(A)\cdot B & -
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+כלומר כפל מטריצות הוא כפל וקטורים של העמודות של 
+\begin_inset Formula $B$
+\end_inset
+
+ ב-
+\begin_inset Formula $A$
+\end_inset
+
+, או כפל של השורות של 
+\begin_inset Formula $A$
+\end_inset
+
+ ב-
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+טענות לגבי כפל מטריצות:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אסוציאטיביות הכפל:
+\series default
+ 
+\begin_inset Formula $(A\cdot B)\cdot C=A\cdot(B\cdot C)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times t}(\mathbb{F}),C\in M_{t\times n}(\mathbb{F})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+חוק הפילוג:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\cdot(B_{1}+B_{2})=A\cdot B_{1}+A\cdot B_{2}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B_{1},B_{2}\in M_{k\times n}(\mathbb{F})$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A_{1}+A_{2})\cdot B=A_{1}\cdot B+A_{2}\cdot B$
+\end_inset
+
+ עבור 
+\begin_inset Formula $A_{1},A_{2}\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(\mathbb{F})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+הוצאת סקלר: 
+\begin_inset Formula $A\cdot(\alpha\cdot B)=\alpha\cdot(A\cdot B)$
+\end_inset
+
+
+\series default
+ עבור 
+\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(\mathbb{F}),\alpha\in\mathbb{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+כפל ב-
+\begin_inset Formula $0$
+\end_inset
+
+
+\series default
+ 
+\series bold
+וב-
+\begin_inset Formula $1$
+\end_inset
+
+:
+\series default
+ לכל מטריצה 
+\begin_inset Formula $A\in M_{m\times n}(\mathbb{F})$
+\end_inset
+
+, 
+\begin_inset Formula $A\cdot0=0\cdot A=0$
+\end_inset
+
+.
+ נוסף לכך 
+\begin_inset Formula $A\cdot I_{n}=A$
+\end_inset
+
+, 
+\begin_inset Formula $I_{m}\cdot A=A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה:
+\series default
+ יש מחלקי אפס, לדוגמה 
+\begin_inset Formula $\left(\begin{array}{cc}
+1 & 1\\
+1 & 1
+\end{array}\right)\cdot\left(\begin{array}{cc}
+1 & 1\\
+-1 & -1
+\end{array}\right)=\left(\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right)$
 \end_inset
 
 .
@@ -1940,190 +2146,7 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \end_layout
 
 \begin_layout Section
-כפל מטריצות, שחלוף והפיכות 
-\end_layout
-
-\begin_layout Definition
-יהא 
-\begin_inset Formula $R$
-\end_inset
-
- חוג ויהיו 
-\begin_inset Formula $A\in M_{n\times m}(R)$
-\end_inset
-
-,
-\begin_inset Formula $B\in M_{m\times p}(R)$
-\end_inset
-
- מטריצות.
- נגדיר מטריצה 
-\begin_inset Formula $(A\cdot B)\in M_{p\times n}(R)$
-\end_inset
-
- בצורה הבאה: 
-\end_layout
-
-\begin_layout Definition
-\begin_inset Formula $(A\cdot B)_{i,j}=\stackrel[k=1]{n}{\sum}a_{ik}\cdot b_{kj}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Formula $A\cdot B=\left(\begin{array}{ccc}
-\bigl| & \bigl| & \bigl|\\
-A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
-\bigl| & \bigl| & \bigl|
-\end{array}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Theorem
-\begin_inset Formula $A\cdot B=\left(\begin{array}{ccc}
-- & R_{1}(A)\cdot B & -\\
- & \vdots\\
-- & R_{n}(A)\cdot B & -
-\end{array}\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-טענות לגבי כפל מטריצות:
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\series bold
-אסוציאטיביות הכפל:
-\series default
- 
-\begin_inset Formula $(A\cdot B)\cdot C=A\cdot(B\cdot C)$
-\end_inset
-
- עבור 
-\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times t}(\mathbb{F}),C\in M_{t\times n}(\mathbb{F})$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-חוק הפילוג:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula $A\cdot(B_{1}+B_{2})=A\cdot B_{1}+A\cdot B_{2}$
-\end_inset
-
- עבור 
-\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B_{1},B_{2}\in M_{k\times n}(\mathbb{F})$
-\end_inset
-
-.
- 
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $(A_{1}+A_{2})\cdot B=A_{1}\cdot B+A_{2}\cdot B$
-\end_inset
-
- עבור 
-\begin_inset Formula $A_{1},A_{2}\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(\mathbb{F})$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\series bold
-הוצאת סקלר: 
-\begin_inset Formula $A\cdot(\alpha\cdot B)=\alpha\cdot(A\cdot B)$
-\end_inset
-
-
-\series default
- עבור 
-\begin_inset Formula $A\in M_{m\times k}(\mathbb{F}),B\in M_{k\times n}(\mathbb{F}),\alpha\in\mathbb{F}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-כפל ב-
-\begin_inset Formula $0$
-\end_inset
-
-
-\series default
- 
-\series bold
-וב-
-\begin_inset Formula $1$
-\end_inset
-
-:
-\series default
- לכל מטריצה 
-\begin_inset Formula $A\in M_{m\times n}(\mathbb{F})$
-\end_inset
-
-, 
-\begin_inset Formula $A\cdot0=0\cdot A=0$
-\end_inset
-
-.
- נוסף לכך 
-\begin_inset Formula $A\cdot I_{n}=A$
-\end_inset
-
-, 
-\begin_inset Formula $I_{m}\cdot A=A$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הערה:
-\series default
- יש מחלקי אפס, לדוגמה 
-\begin_inset Formula $\left(\begin{array}{cc}
-1 & 1\\
-1 & 1
-\end{array}\right)\cdot\left(\begin{array}{cc}
-1 & 1\\
--1 & -1
-\end{array}\right)=\left(\begin{array}{cc}
-0 & 0\\
-0 & 0
-\end{array}\right)$
-\end_inset
-
-.
+שחלוף והפיכות
 \end_layout
 
 \begin_layout Subsection
