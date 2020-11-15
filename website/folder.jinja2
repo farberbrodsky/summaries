@@ -5,7 +5,13 @@
   <link href="/folderstyle.css" rel="stylesheet">
 </head>
 <body>
-  <h1>{{ dirname }}</h1>
+  <div style="display:flex;">
+    <h1>{{ dirname }}</h1>
+    <div class="links">
+      <p><a href="https://nextcloud.farberbrodsky.com/index.php/s/98WHDXTCt8bS4Aa" target="_blank">קבצי ליך - שיעורי שלומי</a></p>
+      <p><a href="https://nextcloud.farberbrodsky.com/index.php/s/kJ9PAgCHTxEbaJi" target="_blank">קבצי ליך - שיעורי לינארית</a></p>
+    </div>
+  </div>
   <div class="files">
     {% for entry in entries %}
       {% if entry[0] == "file" %}
@@ -25,10 +31,6 @@
         </div>
       {% endif %}
     {% endfor %}
-  </div>
-  <div class="links">
-    <p><a href="https://nextcloud.farberbrodsky.com/index.php/s/98WHDXTCt8bS4Aa" target="_blank">קבצי ליך - שיעורי שלומי</a></p>
-    <p><a href="https://nextcloud.farberbrodsky.com/index.php/s/kJ9PAgCHTxEbaJi" target="_blank">קבצי ליך - שיעורי לינארית</a></p>
   </div>
 </body>
 </html>
