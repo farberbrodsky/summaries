@@ -1711,7 +1711,7 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-אחרת: נעשה החלפה על המשתנים החופשיים.
+אחרת: נעשה החלפה על המשתנים החופשיים )אלה שאינם מקדם פותח של אף שורה(.
  כל משתנה שאינו חופשי יוגדר לפי משוואה מסוימת.
  דוגמה:
 \begin_inset Formula 
@@ -1787,7 +1787,7 @@ x_{6}
 
 .
  ניתן להחליף את התנאי ב-
-\begin_inset Formula $u\ne\emptyset$
+\begin_inset Formula $U\ne\emptyset$
 \end_inset
 
 .
