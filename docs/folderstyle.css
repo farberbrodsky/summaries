@@ -6,6 +6,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 h1 {
   padding: 32px;
   font-weight: regular;
@@ -42,4 +46,10 @@ h1 {
 a {
   text-decoration: none;
   color: #383a42;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
