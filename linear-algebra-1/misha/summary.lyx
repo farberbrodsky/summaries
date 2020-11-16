@@ -2699,6 +2699,13 @@ Transpose
  פורשות.
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ הפיכה.
+\end_layout
+
 \begin_layout Standard
 ובנוסף 
 \begin_inset Formula $A,B$
