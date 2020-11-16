@@ -934,6 +934,158 @@ z=\sqrt[n]{r}e^{i\left(\frac{\theta}{n}+2\pi\frac{k}{n}\right)}
 \end_layout
 
 \begin_layout Subsection
+שונות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה ריבועית:
+\series default
+ מטריצה שכמות העמודות בה שווה לכמות השורות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצת היחידה: 
+\series default
+מסומנת 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+.
+ היא מטריצה ריבועית שבה 
+\begin_inset Formula $a_{i,j}=1$
+\end_inset
+
+ אם 
+\begin_inset Formula $i=j$
+\end_inset
+
+, ואם 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+ אז 
+\begin_inset Formula $a_{i,j}=0$
+\end_inset
+
+.
+ לדוגמה:
+\begin_inset Formula 
+\[
+I_{3}=\begin{pmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\series bold
+וקטור 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+:
+\series default
+
+\begin_inset Formula 
+\[
+\left(e_{i}\right)_{i}=\begin{cases}
+0 & x\ne i\\
+1 & x=i
+\end{cases}
+\]
+
+\end_inset
+
+זה בעצם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בכל מקום חוץ מהמקום ה-
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצת הסיבוב:
+\begin_inset Formula 
+\[
+R\left(\theta\right)=\begin{pmatrix}\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\series default
+אם מכפילים וקטור במטריצת הסיבוב, זה מסובב את הוקטור 
+\begin_inset Formula $\theta$
+\end_inset
+
+ מעלות.
+\end_layout
+
+\begin_layout Subsection
 פעולות בסיסיות
 \end_layout
 
@@ -1413,158 +1565,6 @@ A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
 .
 \end_layout
 
-\begin_layout Subsection
-שונות
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-מטריצה ריבועית:
-\series default
- מטריצה שכמות העמודות בה שווה לכמות השורות.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-מטריצת היחידה: 
-\series default
-מסומנת 
-\begin_inset Formula $I_{n}$
-\end_inset
-
-.
- היא מטריצה ריבועית שבה 
-\begin_inset Formula $a_{i,j}=1$
-\end_inset
-
- אם 
-\begin_inset Formula $i=j$
-\end_inset
-
-, ואם 
-\begin_inset Formula $i\ne j$
-\end_inset
-
- אז 
-\begin_inset Formula $a_{i,j}=0$
-\end_inset
-
-.
- לדוגמה:
-\begin_inset Formula 
-\[
-I_{3}=\begin{pmatrix}1 & 0 & 0\\
-0 & 1 & 0\\
-0 & 0 & 1
-\end{pmatrix}
-\]
-
-\end_inset
-
-
-\series bold
-וקטור 
-\begin_inset Formula $e_{i}$
-\end_inset
-
-:
-\series default
-
-\begin_inset Formula 
-\[
-\left(e_{i}\right)_{i}=\begin{cases}
-0 & x\ne i\\
-1 & x=i
-\end{cases}
-\]
-
-\end_inset
-
-זה בעצם
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-0
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-בכל מקום חוץ מהמקום ה-
-\begin_inset Formula $i$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-מטריצת הסיבוב:
-\begin_inset Formula 
-\[
-R\left(\theta\right)=\begin{pmatrix}\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta
-\end{pmatrix}
-\]
-
-\end_inset
-
-
-\series default
-אם מכפילים וקטור במטריצת הסיבוב, זה מסובב את הוקטור 
-\begin_inset Formula $\theta$
-\end_inset
-
- מעלות.
-\end_layout
-
 \begin_layout Section
 דירוג ודירוג קנוני
 \end_layout
@@ -1934,7 +1934,7 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 
 .
  אם 
-\begin_inset Formula $0\in S$
+\begin_inset Formula $\overline{0}\in S$
 \end_inset
 
  אז 
@@ -2112,6 +2112,11 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \end_layout
 
 \begin_layout Enumerate
+בת
+\begin_inset Quotes erd
+\end_inset
+
+ל מקסימלית - 
 \begin_inset Formula $B$
 \end_inset
 
@@ -2124,18 +2129,10 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \end_inset
 
  הינה תלויה לינארית.
- )
-\begin_inset Formula $B$
-\end_inset
-
- בת
-\begin_inset Quotes erd
-\end_inset
-
-ל מקסימלית(.
 \end_layout
 
 \begin_layout Enumerate
+פורשת מינימלית - 
 \begin_inset Formula $B$
 \end_inset
 
@@ -2144,7 +2141,6 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \end_inset
 
  אינה פורשת.
- )פורשת מינימלית(.
 \end_layout
 
 \begin_layout Enumerate
@@ -2290,6 +2286,13 @@ Transpose
 .
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $\left(A^{T}\right)^{T}=A$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 הפיכות מטריצה
 \end_layout
@@ -2369,6 +2372,102 @@ Transpose
 \end_inset
 
 .
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+תהא 
+\begin_inset Formula $A\in M_{m\times n}(\mathbb{F})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה משמאל 
+\begin_inset Formula $\iff$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\cdot\overline{x}=0$
+\end_inset
+
+ יש פתרון יחיד )כלומר סדרת העמודות של 
+\begin_inset Formula $A$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל, ולכן 
+\begin_inset Formula $m\ge n$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה מימין 
+\begin_inset Formula $\iff$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\cdot\overline{x}=\overline{b}$
+\end_inset
+
+ יש פתרון לכל 
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
+\end_inset
+
+ )כלומר סדרת העמודות של 
+\begin_inset Formula $A$
+\end_inset
+
+ פורשת, ו-
+\begin_inset Formula $m\le n$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\cdot\overline{x}=\overline{b}$
+\end_inset
+
+ יש פתרון יחיד לכל 
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
+\end_inset
+
+ )כלומר סדרת העמודות של 
+\begin_inset Formula $A$
+\end_inset
+
+ בסיס, ולכן 
+\begin_inset Formula $m=n$
+\end_inset
+
+(.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+בפרט מטריצה הפיכה היא ריבועית.
 \end_layout
 
 \end_deeper
@@ -2500,102 +2599,6 @@ Transpose
 .
 \end_layout
 
-\begin_layout Theorem
-תהא 
-\begin_inset Formula $A\in M_{m\times n}(\mathbb{F})$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $A$
-\end_inset
-
- הפיכה מימין 
-\begin_inset Formula $\iff$
-\end_inset
-
- למערכת 
-\begin_inset Formula $A\cdot\overline{x}=\overline{b}$
-\end_inset
-
- יש פתרון לכל 
-\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
-\end_inset
-
- )כלומר סדרת העמודות של 
-\begin_inset Formula $A$
-\end_inset
-
- פורשת, ו-
-\begin_inset Formula $m\le n$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $A$
-\end_inset
-
- הפיכה משמאל 
-\begin_inset Formula $\iff$
-\end_inset
-
- למערכת 
-\begin_inset Formula $A\cdot\overline{x}=0$
-\end_inset
-
- יש פתרון יחיד )כלומר סדרת העמודות של 
-\begin_inset Formula $A$
-\end_inset
-
- בת
-\begin_inset Quotes erd
-\end_inset
-
-ל, ולכן 
-\begin_inset Formula $m\ge n$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $A$
-\end_inset
-
- הפיכה 
-\begin_inset Formula $\iff$
-\end_inset
-
- למערכת 
-\begin_inset Formula $A\cdot\overline{x}=\overline{b}$
-\end_inset
-
- יש פתרון יחיד לכל 
-\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
-\end_inset
-
- )כלומר סדרת העמודות של 
-\begin_inset Formula $A$
-\end_inset
-
- בסיס, ולכן 
-\begin_inset Formula $m=n$
-\end_inset
-
-(.
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-בפרט מטריצה הפיכה היא ריבועית.
-\end_layout
-
-\end_deeper
 \begin_layout Theorem
 הבאים שקולים עבור מטריצה 
 \begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
