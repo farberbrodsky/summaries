@@ -1336,6 +1336,83 @@ A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
 .
 \end_layout
 
+\begin_layout Theorem
+יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ מטריצות כך ש-
+\begin_inset Formula $A\cdot B$
+\end_inset
+
+ מוגדר, ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ פעולה אלמנטרית.
+ אזי:
+\begin_inset Formula 
+\[
+\varphi\left(A\cdot B\right)=\varphi\left(A\right)\cdot B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+המטריצה האלמנטרית:
+\series default
+ לכל פעולה אלמנטרית 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ על מטריצות עם 
+\begin_inset Formula $m$
+\end_inset
+
+ שורות, נגדיר מטריצה אלמנטרית 
+\begin_inset Formula $E_{\varphi}$
+\end_inset
+
+ על ידי 
+\begin_inset Formula $E_{\varphi}\coloneqq\varphi\left(I_{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+לכל מטריצה 
+\begin_inset Formula $A\in M_{m\times n}\left(\mathbb{F}\right)$
+\end_inset
+
+, ופעולה אלמנטרית 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, מתקיים ש-
+\begin_inset Formula $\varphi\left(A\right)=E_{\varphi}\cdot A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בנוסף מטריצות אלמנטריות הפיכות, והמטריצה של הפעולה ההופכית של 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ היא 
+\begin_inset Formula $\left(E_{\varphi}\right)^{-1}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 שונות
 \end_layout
@@ -1346,69 +1423,6 @@ A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
 מטריצה ריבועית:
 \series default
  מטריצה שכמות העמודות בה שווה לכמות השורות.
-\end_layout
-
-\begin_layout Theorem
-הבאים שקולים עבור מטריצה 
-\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
-\end_inset
-
- )מטריצה ריבועית(:
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $A$
-\end_inset
-
- שקולת שורות ל-
-\begin_inset Formula $I_{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-לכל 
-\begin_inset Formula $\overline{b}\in\mathbb{F}^{n}$
-\end_inset
-
- למערכת 
-\begin_inset Formula $A\overline{x}=\overline{b}$
-\end_inset
-
- יש פתרון יחיד.
-\end_layout
-
-\begin_layout Enumerate
-לכל 
-\begin_inset Formula $b\in\mathbb{F}^{n}$
-\end_inset
-
- למערכת 
-\begin_inset Formula $A\overline{x}=\overline{b}$
-\end_inset
-
- קיים פתרון.
-\end_layout
-
-\begin_layout Enumerate
-למערכת 
-\begin_inset Formula $A\overline{x}=\overline{0}$
-\end_inset
-
- יש פתרון יחיד.
-\end_layout
-
-\begin_layout Enumerate
-קיים 
-\begin_inset Formula $b$
-\end_inset
-
- כך שלמערכת 
-\begin_inset Formula $A\overline{x}=\overline{b}$
-\end_inset
-
- יש פתרון יחיד.
 \end_layout
 
 \begin_layout Standard
@@ -2499,12 +2513,16 @@ Transpose
 \begin_inset Formula $A$
 \end_inset
 
- הפיכה מימין אם ורק אם למערכת 
-\begin_inset Formula $A\cdot\overline{x}=b$
+ הפיכה מימין 
+\begin_inset Formula $\iff$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\cdot\overline{x}=\overline{b}$
 \end_inset
 
  יש פתרון לכל 
-\begin_inset Formula $b$
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
 \end_inset
 
  )כלומר סדרת העמודות של 
@@ -2522,7 +2540,11 @@ Transpose
 \begin_inset Formula $A$
 \end_inset
 
- הפיכה משמאל אם ורק אם למערכת 
+ הפיכה משמאל 
+\begin_inset Formula $\iff$
+\end_inset
+
+ למערכת 
 \begin_inset Formula $A\cdot\overline{x}=0$
 \end_inset
 
@@ -2545,12 +2567,16 @@ Transpose
 \begin_inset Formula $A$
 \end_inset
 
- הפיכה אם ורק אם למערכת 
-\begin_inset Formula $A\cdot\overline{x}=b$
+ הפיכה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\cdot\overline{x}=\overline{b}$
 \end_inset
 
  יש פתרון יחיד לכל 
-\begin_inset Formula $b$
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{m}$
 \end_inset
 
  )כלומר סדרת העמודות של 
@@ -2570,5 +2596,121 @@ Transpose
 \end_layout
 
 \end_deeper
+\begin_layout Theorem
+הבאים שקולים עבור מטריצה 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ )מטריצה ריבועית(:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ שקולת שורות ל-
+\begin_inset Formula $I_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{n}$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\overline{x}=\overline{b}$
+\end_inset
+
+ יש פתרון יחיד.
+\end_layout
+
+\begin_layout Enumerate
+למערכת 
+\begin_inset Formula $A\overline{x}=\overline{0}$
+\end_inset
+
+ יש פתרון יחיד.
+\end_layout
+
+\begin_layout Enumerate
+קיים 
+\begin_inset Formula $b\in\mathbb{F}^{n}$
+\end_inset
+
+ כך שלמערכת 
+\begin_inset Formula $A\overline{x}=\overline{b}$
+\end_inset
+
+ יש פתרון יחיד.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה מימין.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה משמאל.
+\end_layout
+
+\begin_layout Enumerate
+שורות 
+\begin_inset Formula $A$
+\end_inset
+
+ בסיס.
+\end_layout
+
+\begin_layout Enumerate
+שורות 
+\begin_inset Formula $A$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Enumerate
+שורות 
+\begin_inset Formula $A$
+\end_inset
+
+ פורשות.
+\end_layout
+
+\begin_layout Standard
+ובנוסף 
+\begin_inset Formula $A,B$
+\end_inset
+
+ ריבועיות והפיכות 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $A\cdot B$
+\end_inset
+
+ הפיכה.
+\end_layout
+
 \end_body
 \end_document
