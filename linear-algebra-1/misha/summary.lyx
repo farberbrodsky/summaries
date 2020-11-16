@@ -1792,7 +1792,7 @@ x_{6}
 \begin_inset Formula $U$
 \end_inset
 
- סגירה לכפל בסקלר.
+ סגורה לכפל בסקלר.
 \end_layout
 
 \begin_layout Enumerate
@@ -1838,7 +1838,7 @@ x_{6}
  נקראת 
 \bar under
 תלות לינארית של 
-\begin_inset Formula $\left(v_{1},\dots,v_{k}\right)$
+\begin_inset Formula $\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)$
 \end_inset
 
 
@@ -1852,29 +1852,29 @@ x_{6}
 
 \begin_layout Standard
 נגדיר את מרחב התלויות של 
-\begin_inset Formula $\left(v_{1},\dots,v_{k}\right)$
+\begin_inset Formula $\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)$
 \end_inset
 
  להיות:
 \begin_inset Formula 
 \[
-LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\\
+LD\left(\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\\
 \vdots\\
 \alpha_{n}
-\end{pmatrix}\in\mathbb{F}^{n}\mid\alpha_{1}v_{1}+\dots+\alpha_{k}v_{k}=0\right\} 
+\end{pmatrix}\in\mathbb{F}^{n}\mid\alpha_{1}\overline{v_{1}}+\dots+\alpha_{k}\overline{v_{k}}=0\right\} 
 \]
 
 \end_inset
 
 ו-
-\begin_inset Formula $LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\text{Sols}\left(\left(v_{1},\dots,v_{k}\mid0\right)\right)$
+\begin_inset Formula $LD\left(\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\right)=\text{Sols}\left(\left(\overline{v_{1}},\dots,\overline{v_{k}}\mid0\right)\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Corollary
-\begin_inset Formula $v_{1},\dots,v_{k}$
+\begin_inset Formula $\overline{v_{1}},\dots,\overline{v_{k}}$
 \end_inset
 
  בת
@@ -1886,7 +1886,7 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \end_inset
 
  
-\begin_inset Formula $LD\left(v_{1},\dots,v_{k}\right)=\left\{ 0\right\} $
+\begin_inset Formula $LD\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)=\left\{ 0\right\} $
 \end_inset
 
 .
@@ -1986,13 +1986,13 @@ LD\left(\left(v_{1},\dots,v_{k}\right)\right)=\left\{ \begin{pmatrix}\alpha_{1}\
 \end_inset
 
 יות, 
-\begin_inset Formula $\left(v_{1},\dots,v_{k}\right)\in\left(\mathbb{F}^{n}\right)^{k}$
+\begin_inset Formula $\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\in\left(\mathbb{F}^{n}\right)^{k}$
 \end_inset
 
 ,
 \begin_inset Formula 
 \[
-\text{sp}\left(v_{1},\dots,v_{k}\right)=\left\{ \sum_{i=1}^{k}\alpha_{i}v_{i}\mid\alpha_{1},\dots,\alpha_{k}\in\mathbb{F}\right\} 
+\text{sp}\left(v_{1},\dots,v_{k}\right)=\left\{ \sum_{i=1}^{k}\alpha_{i}\overline{v_{i}}\mid\alpha_{1},\dots,\alpha_{k}\in\mathbb{F}\right\} 
 \]
 
 \end_inset
