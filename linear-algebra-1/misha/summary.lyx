@@ -2865,7 +2865,11 @@ N\left(\begin{pmatrix}-A_{1}-\\
 
 \end_inset
 
+דטרמיננטה מסומנת גם 
+\begin_inset Formula $\left|A\right|$
+\end_inset
 
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2967,6 +2971,114 @@ N\left(\begin{pmatrix}-A_{1}-\\
 
 \begin_layout Enumerate
 \begin_inset Formula $\det\left(A\right)=\det\left(A^{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+במטריצה משולשית עליונה או תחתונה )
+\begin_inset Formula $\forall j<i.\left(A\right)_{i,j}=0$
+\end_inset
+
+ או 
+\begin_inset Formula $\forall i<j.\left(A\right)_{i,j}=0$
+\end_inset
+
+(, הדטרמיננטה היא מכפלת האלכסון, 
+\begin_inset Formula $\prod_{i=1}^{n}\left(A\right)_{j\,i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל קרמר:
+\series default
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ הפיכה, אז לכל 
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{n}$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\overline{x}=\overline{b}$
+\end_inset
+
+ יש פתרון יחיד והפתרון הינו: )שתי דרכים לתאר אותו(
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c=A^{-1}\cdot\overline{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c_{j}=\frac{\left|B_{j}\right|}{\left|A\right|}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $B_{j}\left(C_{1}\left(A\right),\dots,C_{j-1}\left(A\right),\overline{b},\dots,C_{n}\left(A\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+מטריצה מוצמדת
+\end_layout
+
+\begin_layout Standard
+נגדיר: 
+\begin_inset Formula $\left(\text{adj}\left(A\right)\right)_{i,j}=\left(-1\right)^{j+i}\cdot\det\left(A_{\left(j\,i\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מתקיים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\text{adj}\left(A\right)\right)^{T}=\text{adj}\left(A^{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(A\cdot\text{adj}\left(A\right)\right)_{i,j}=\det\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $A$
+\end_inset
+
+ לא הפיכה אז: מטריצת האפס 
+\begin_inset Formula $A\cdot\text{adj}\left(A\right)=\text{adj}\left(A\right)\cdot A=$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה אז 
+\begin_inset Formula $A^{-1}=\frac{1}{\left|A\right|}\cdot\text{adj}\left(A\right)$
 \end_inset
 
 .
