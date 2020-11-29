@@ -3084,5 +3084,383 @@ N\left(\begin{pmatrix}-A_{1}-\\
 .
 \end_layout
 
+\begin_layout Section
+תמורות
+\end_layout
+
+\begin_layout Subsection
+הגדרות
+\end_layout
+
+\begin_layout Standard
+פרומלית, 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ זה קבוצת הפונקציות החח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל ב-
+\begin_inset Formula $J_{n}\to J_{n}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $J_{n}=\left\{ 1,\dots,n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימונים לתמורות:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sigma:J_{n}\to J_{n}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Enumerate
+רישום ישיר: 
+\begin_inset Formula $\begin{pmatrix}1 & 2 & 3 & 4\\
+\sigma\left(1\right) & \sigma\left(2\right) & \sigma\left(3\right) & \sigma\left(4\right)
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )מטריצה תמורה(: 
+\series default
+מטריצה 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ נקראת מטריצת תמורה אם קיימת תמורה 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $P\left(\sigma\right)=A=\begin{pmatrix}\mid &  & \mid\\
+e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
+\mid &  & \mid
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+למשל עבור 
+\begin_inset Formula $\sigma=\begin{pmatrix}1 & 2 & 3 & 4\\
+3 & 1 & 2 & 4
+\end{pmatrix}$
+\end_inset
+
+ מטריצת התמורה תהיה 
+\begin_inset Formula $P\left(\sigma\right)=\begin{pmatrix}0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה שקולה:
+\series default
+ בכל שורה יש 
+\begin_inset Formula $1$
+\end_inset
+
+ יחיד, בכל עמודה יש 
+\begin_inset Formula $1$
+\end_inset
+
+ יחיד, וכל האיברים במטריצה הם 
+\begin_inset Formula $0,1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענות:
+\end_layout
+
+\begin_layout Enumerate
+המינור ה-
+\begin_inset Formula $\left(i\,j\right)$
+\end_inset
+
+ של מטריצת תמורה הוא מטריצת תמורה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $A_{i,j}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(\sigma\tau\right)=P\left(\sigma\right)\cdot P\left(\tau\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\text{sign}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ עבור 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\text{sign}\left(\sigma\right)$
+\end_inset
+
+ )הסיגנטורה של 
+\begin_inset Formula $\sigma$
+\end_inset
+
+( מוגדרת כ-
+\begin_inset Formula $\text{sign}\left(\sigma\right)=\left|P\left(\sigma\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה שקולה:
+\series default
+ תהא 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ תמורה.
+ לכל 
+\begin_inset Formula $1\le i\le n$
+\end_inset
+
+ נגדיר את 
+\begin_inset Formula $N\left(\sigma\right)=\left|\left\{ \left(i,j\right)\mid j>i\land\sigma\left(j\right)<\sigma\left(i\right)\right\} \right|$
+\end_inset
+
+ ו-
+\begin_inset Formula $z_{\sigma}\left(i\right)=\left|\left\{ \left(i,j\right)\mid j>i,\sigma\left(i\right)<\sigma\left(j\right)\right\} \right|$
+\end_inset
+
+ )ו-
+\begin_inset Formula $N\left(\sigma\right)=\sum_{i=1}^{n}z_{\sigma}\left(i\right)$
+\end_inset
+
+(.
+ נגדיר את 
+\begin_inset Formula $\text{sign}$
+\end_inset
+
+ להיות: 
+\begin_inset Formula $\text{sign}\left(\sigma\right)=\left(-1\right)^{N\left(\sigma\right)}$
+\end_inset
+
+.
+ כלומר 
+\begin_inset Formula $\text{sign}$
+\end_inset
+
+ זה כמות ההחלפות ב-
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )תמורה זוגית(:
+\series default
+ 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ נקראת תמורה זוגית 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\text{sign}\left(\sigma\right)=1$
+\end_inset
+
+.
+ מסמנים ב-
+\begin_inset Formula $A_{n}=\left\{ \sigma\in S_{n}\mid\text{sign}\left(\sigma\right)=1\right\} $
+\end_inset
+
+.
+ זו תת חבורה ביחס להרכבת תמורות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה:
+\series default
+ התמורות האי זוגיות אינן חבורה, כי אין תמורה ניטרלית באי זוגיות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ 
+\begin_inset Formula $\text{sign}\left(\sigma\tau\right)=\text{sign}\left(\sigma\right)\cdot\text{sign}\left(\tau\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+, אז:
+\begin_inset Formula 
+\[
+\left|A\right|=\sum_{\sigma\in S_{n}}\text{sign}\left(\sigma\right)\cdot\prod_{i=1}^{n}\left(A\right)_{i,\sigma\left(i\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+מרחב וקטורי
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )מרחב וקטורי(:
+\series default
+ מרחב וקטורי מעל שדה 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ זו שלשה 
+\begin_inset Formula $\left(V,+,\cdot\right)$
+\end_inset
+
+ כך ש:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle V,+\right\rangle $
+\end_inset
+
+ חבורה חילופית.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\cdot:\mathbb{F}\times V\to\mathbb{F}$
+\end_inset
+
+ כפל בסקלר, פעולה שמקיימת:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+אסוצייטיביות.
+ 
+\begin_inset Formula $\forall\alpha,\beta\in\mathbb{F}.\forall\overline{v}\in V.\beta\cdot\left(\alpha\cdot\overline{v}\right)=\left(\beta\cdot\alpha\right)\cdot v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall\overline{v}\in V.1_{\mathbb{F}}\cdot\overline{v}=\overline{v}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+חוק הפילוג:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\forall\alpha,\beta\in\mathbb{F}.\forall\overline{v}\in V.\left(\alpha+\beta\right)\cdot\overline{v}=\alpha\cdot\overline{v}+\beta\cdot\overline{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall a\in\mathbb{F}.\forall\overline{v_{1}},\overline{v_{2}}\in V.\alpha\cdot\left(\overline{v_{1}}+\overline{v_{2}}\right)=\alpha\cdot\overline{v_{1}}+\alpha\cdot\overline{v_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+וקטור הוא איבר במרחב וקטורי.
+ כל 
+\begin_inset Formula $n$
+\end_inset
+
+יה היא וקטור, אבל 
+\series bold
+לא כל וקטור הוא 
+\begin_inset Formula $n$
+\end_inset
+
+יה
+\series default
+.
+\end_layout
+
 \end_body
 \end_document
