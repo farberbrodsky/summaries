@@ -3093,7 +3093,7 @@ N\left(\begin{pmatrix}-A_{1}-\\
 \end_layout
 
 \begin_layout Standard
-פרומלית, 
+פורמלית, 
 \begin_inset Formula $S_{n}$
 \end_inset
 
@@ -3293,15 +3293,6 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 
  להיות: 
 \begin_inset Formula $\text{sign}\left(\sigma\right)=\left(-1\right)^{N\left(\sigma\right)}$
-\end_inset
-
-.
- כלומר 
-\begin_inset Formula $\text{sign}$
-\end_inset
-
- זה כמות ההחלפות ב-
-\begin_inset Formula $\sigma$
 \end_inset
 
 .
