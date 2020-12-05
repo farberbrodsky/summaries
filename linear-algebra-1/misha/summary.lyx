@@ -3139,10 +3139,10 @@ N\left(\begin{pmatrix}-A_{1}-\\
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 
 \series bold
-הגדרה )מטריצה תמורה(: 
+)מטריצה תמורה(: 
 \series default
 מטריצה 
 \begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
@@ -3236,12 +3236,8 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-הגדרה:
-\series default
- עבור 
+\begin_layout Definition
+עבור 
 \begin_inset Formula $\sigma\in S_{n}$
 \end_inset
 
@@ -3298,10 +3294,10 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 
 \series bold
-הגדרה )תמורה זוגית(:
+)תמורה זוגית(:
 \series default
  
 \begin_inset Formula $\sigma\in S_{n}$
@@ -3332,24 +3328,15 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
  התמורות האי זוגיות אינן חבורה, כי אין תמורה ניטרלית באי זוגיות.
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-טענה:
-\series default
- 
+\begin_layout Corollary
 \begin_inset Formula $\text{sign}\left(\sigma\tau\right)=\text{sign}\left(\sigma\right)\cdot\text{sign}\left(\tau\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-משפט:
-\series default
- תהא 
+\begin_layout Theorem
+תהא 
 \begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
 \end_inset
 
@@ -3368,10 +3355,14 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 מרחב וקטורי
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+הגדרות
+\end_layout
+
+\begin_layout Definition
 
 \series bold
-הגדרה )מרחב וקטורי(:
+)מרחב וקטורי(:
 \series default
  מרחב וקטורי מעל שדה 
 \begin_inset Formula $\mathbb{F}$
@@ -3450,6 +3441,379 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 
 יה
 \series default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרות לבת
+\begin_inset Quotes erd
+\end_inset
+
+ל ופורשת:
+\end_layout
+
+\begin_layout Itemize
+תת קבוצה 
+\begin_inset Formula $X\subseteq V$
+\end_inset
+
+ נקראת בת
+\begin_inset Quotes erd
+\end_inset
+
+ל אם לכל 
+\begin_inset Formula $v_{1},\dots,v_{n}\in X$
+\end_inset
+
+, 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+ כלומר אין צירוף לינארי לא טריויאלי של איברים מ-
+\begin_inset Formula $X$
+\end_inset
+
+ שיוצא 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תת קבוצה 
+\begin_inset Formula $X\subseteq V$
+\end_inset
+
+ נקראת פורשת אם 
+\begin_inset Formula $\text{sp}\left(X\right)=V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קבוצה 
+\begin_inset Formula $X\subseteq V$
+\end_inset
+
+ נקראת בסיס האמל אם היא בת
+\begin_inset Quotes erd
+\end_inset
+
+ל ופורשת.
+\end_layout
+
+\begin_layout Subsection
+למת ההחלפה של ריס
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+)למת ההחלפה של ריס(:
+\series default
+ גיהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו, ותהא 
+\begin_inset Formula $\left(v_{1},\dots,v_{n}\right)$
+\end_inset
+
+ סדרה פורשת ב-
+\begin_inset Formula $V$
+\end_inset
+
+, ו-
+\begin_inset Formula $\left(u_{1},\dots,u_{m}\right)$
+\end_inset
+
+ סדרה בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+ אזי:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $m\le n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+קיימים 
+\begin_inset Formula $1\le i_{1}<i_{2}<\dots<i_{m}\le n$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left(u_{1},\dots,u_{m}\right)\frown\left(v_{j}\mid j\notin\left\{ i_{1},\dots,i_{m}\right\} \right)$
+\end_inset
+
+ פורשת.
+\end_layout
+
+\begin_layout Standard
+כלומר אפשר להחליף איברים כלשהם של סדרה פורשת באיבריה של כל סדרה בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו בעל בסיס, אז בכל בסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+ יש את אותו מספר איברים..
+\end_layout
+
+\begin_layout Subsection
+מימד
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+)מימד(:
+\series default
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ בעל בסיס, המימד של 
+\begin_inset Formula $V$
+\end_inset
+
+ הינו עוצמת בסיס כלשהו )והמימד יחיד(.
+ מסמנים כ-
+\begin_inset Formula $\dim_{\mathbb{F}}\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מרחב וקטורי 
+\begin_inset Formula $V$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ נקרא 
+\bar under
+נוצר סופית
+\bar default
+ אם קיימת סדרה סופית פורשת של 
+\begin_inset Formula $V$
+\end_inset
+
+, או באופן שקול אם 
+\begin_inset Formula $\text{dim}_{\mathbb{F}}\left(V\right)\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+הכללה של משפט
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתוך
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו ממימד 
+\begin_inset Formula $n$
+\end_inset
+
+, בפרט נוצר סופית, ותהא 
+\begin_inset Formula $\left(v_{1},\dots,v_{m}\right)\in V^{m}$
+\end_inset
+
+.
+ אז הבאים שקולים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ בסיס.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל + 
+\begin_inset Formula $m=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ פורשת + 
+\begin_inset Formula $m=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל מקסימלית.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ פורשת מינימלית.
+\end_layout
+
+\begin_layout Enumerate
+לכל וקטור 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ יש הצגה יחידה כצירוף לינארי של 
+\begin_inset Formula $B$
+\end_inset
+
 .
 \end_layout
 
