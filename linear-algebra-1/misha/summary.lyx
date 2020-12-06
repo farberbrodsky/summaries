@@ -3383,7 +3383,7 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\cdot:\mathbb{F}\times V\to\mathbb{F}$
+\begin_inset Formula $\cdot:\mathbb{F}\times V\to V$
 \end_inset
 
  כפל בסקלר, פעולה שמקיימת:
