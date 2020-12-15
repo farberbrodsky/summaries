@@ -4195,6 +4195,26 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 .
 \end_layout
 
+\begin_layout Standard
+בנוסף נסמן 
+\begin_inset Formula $\mathcal{N}\left(A\right)=\dim\left(\text{Sols}\left(A\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הדרגה והאפסות:
+\series default
+ 
+\begin_inset Formula $\text{rank}A+\mathcal{N}\left(A\right)=n$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 חוקי 
 \begin_inset Formula $\text{rank}$
@@ -4275,7 +4295,7 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \begin_layout Standard
 
 \series bold
-משפט )איך דירוג משפיע על מרחבי המטריצות?(:
+משפט )משפט הדרגה(:
 \series default
  תהא 
 \begin_inset Formula $A\in M_{m\times n}\left(\mathbb{F}\right)$
@@ -4302,6 +4322,72 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \end_inset
 
  לא נשמר.
+\end_layout
+
+\begin_layout Section
+אלגוריתמים
+\end_layout
+
+\begin_layout Subsection
+צמצום סדרה לבת
+\begin_inset Quotes erd
+\end_inset
+
+ל
+\end_layout
+
+\begin_layout Subsubsection
+לפי שורות
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $v_{1},\dots,v_{n}\in\mathbb{F}^{m}$
+\end_inset
+
+.
+ נשים את 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ כשורות, 
+\begin_inset Formula $B=\begin{pmatrix}v_{1}^{t}\\
+\vdots\\
+v_{n}^{t}
+\end{pmatrix}\in M_{n\times m}\left(\mathbb{F}\right)$
+\end_inset
+
+, ונדרג בלי להחליף שורות )כלומר, בעמודה של מקדם הפותח יש רק 
+\begin_inset Formula $1$
+\end_inset
+
+ במקום אחד והשאר אפסים, אבל המקדמים הפותחים לא ממוינים(.
+ השורות שהתאפסו מתאימות לוקטורים שהיו תלוים לינארית באחרים, וסדרת השורות
+ שלא התאפסו הן סדרה בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Subsubsection
+לפי עמודות
+\end_layout
+
+\begin_layout Standard
+נשים את 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ כעמודות, 
+\begin_inset Formula $A=\left(v_{1}\,\dots\,v_{n}\right)$
+\end_inset
+
+, נדרג ונבדוק שיש רק פתרון טריויאלי למערכת ההומוגנית 
+\begin_inset Formula $\left(A\mid0\right)$
+\end_inset
+
+, כלומר שאין אף משתנה חופשי.
 \end_layout
 
 \end_body
