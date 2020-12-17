@@ -3054,7 +3054,7 @@ N\left(\begin{pmatrix}-A_{1}-\\
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left(A\cdot\text{adj}\left(A\right)\right)_{i,j}=\det\left(A\right)$
+\begin_inset Formula $A\cdot\text{adj}\left(A\right)=I\cdot\det\left(A\right)$
 \end_inset
 
 .
@@ -4092,7 +4092,7 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 
 ,
 \series bold
- 
+ מו
 \end_layout
 
 \begin_layout Enumerate
