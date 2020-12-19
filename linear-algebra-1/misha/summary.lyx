@@ -2661,26 +2661,7 @@ Transpose
 \begin_inset Formula $A$
 \end_inset
 
- הפיכה מימין.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $A$
-\end_inset
-
- הפיכה משמאל.
-\end_layout
-
-\begin_layout Enumerate
-שורות 
-\begin_inset Formula $A$
-\end_inset
-
- בסיס.
-\end_layout
-
-\begin_layout Enumerate
-שורות 
+ הפיכה משמאל - כלומר עמודות 
 \begin_inset Formula $A$
 \end_inset
 
@@ -2689,6 +2670,27 @@ Transpose
 \end_inset
 
 ל.
+ אפשר גם שורות לפי 
+\begin_inset Formula $9$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה מימין - כלומר עמודות 
+\begin_inset Formula $A$
+\end_inset
+
+ פורשות.
+ אפשר גם שורות לפי 
+\begin_inset Formula $9$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
