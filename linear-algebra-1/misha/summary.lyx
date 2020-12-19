@@ -2694,14 +2694,6 @@ Transpose
 \end_layout
 
 \begin_layout Enumerate
-שורות 
-\begin_inset Formula $A$
-\end_inset
-
- פורשות.
-\end_layout
-
-\begin_layout Enumerate
 \begin_inset Formula $A^{T}$
 \end_inset
 
