@@ -2671,7 +2671,7 @@ Transpose
 
 ל.
  אפשר גם שורות לפי 
-\begin_inset Formula $9$
+\begin_inset Formula $8$
 \end_inset
 
 .
@@ -2687,7 +2687,7 @@ Transpose
 
  פורשות.
  אפשר גם שורות לפי 
-\begin_inset Formula $9$
+\begin_inset Formula $8$
 \end_inset
 
 .
@@ -2968,6 +2968,7 @@ N\left(\begin{pmatrix}-A_{1}-\\
 \end_inset
 
 .
+ לכן אפשר גם להפעיל פעולות עמודה, שהן פעולות שורה על השחלוף.
 \end_layout
 
 \begin_layout Enumerate
@@ -3010,7 +3011,7 @@ N\left(\begin{pmatrix}-A_{1}-\\
 \begin_inset Formula $c=A^{-1}\cdot\overline{b}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -3410,14 +3411,14 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \begin_inset Formula $\forall\alpha,\beta\in\mathbb{F}.\forall\overline{v}\in V.\left(\alpha+\beta\right)\cdot\overline{v}=\alpha\cdot\overline{v}+\beta\cdot\overline{v}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\forall a\in\mathbb{F}.\forall\overline{v_{1}},\overline{v_{2}}\in V.\alpha\cdot\left(\overline{v_{1}}+\overline{v_{2}}\right)=\alpha\cdot\overline{v_{1}}+\alpha\cdot\overline{v_{2}}$
 \end_inset
 
-
+.
 \end_layout
 
 \end_deeper
@@ -3582,7 +3583,7 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \begin_inset Formula $V$
 \end_inset
 
- יש את אותו מספר איברים..
+ יש את אותו מספר איברים.
 \end_layout
 
 \begin_layout Subsection
@@ -4085,15 +4086,13 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \end_inset
 
 ,
-\series bold
- מו
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\text{Rank}\left(A\right)\le\min\left(n,m\right)$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -4145,7 +4144,7 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \uwave default
 \noun default
 \color inherit
-)אם מוגדר(
+)אם מוגדר(.
 \end_layout
 
 \begin_layout Standard
