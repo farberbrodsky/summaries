@@ -4327,156 +4327,66 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 .
 \end_layout
 
-\begin_layout Subsection
-מטריציונית
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הגדרה:
-\series default
- לכל מטריצה 
-\begin_inset Formula $A\in M_{m\times n}\left(\mathbb{F}\right)$
-\end_inset
-
-, נגדיר את ההעתקה המטריציונית המתאימה ל-
-\begin_inset Formula $A$
-\end_inset
-
-, 
-\begin_inset Formula $T_{A}:\mathbb{F}^{n}\to\mathbb{F}^{m}$
-\end_inset
-
-:
-\begin_inset Formula 
-\[
-T_{A}\left(\overline{v}\right)=A\overline{x}
-\]
-
-\end_inset
-
-פונקציה 
-\begin_inset Formula $f$
-\end_inset
-
- נקראת מטריציונית אם קיימת מטריצה 
-\begin_inset Formula $A\in M_{m\times n}\left(\mathbb{F}\right)$
-\end_inset
-
- כך ש-
-\begin_inset Formula $f=T_{A}$
-\end_inset
-
-, ונסמן 
-\begin_inset Formula $A=\left[f\right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-השיטה למצוא את המטריצה 
-\begin_inset Formula $\left[T\right]$
-\end_inset
-
- היא:
-\begin_inset Formula 
-\[
-\left[T\right]=\begin{pmatrix}T\begin{pmatrix}1\\
-0\\
-\vdots\\
-0
-\end{pmatrix} & T\begin{pmatrix}0\\
-1\\
-\vdots\\
-0
-\end{pmatrix} & \dots & T\begin{pmatrix}0\\
-\vdots\\
-0\\
-1
-\end{pmatrix}\end{pmatrix}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-משפט:
-\series default
- תהא 
-\begin_inset Formula $T:\mathbb{F}^{n}\to\mathbb{F}^{m}$
-\end_inset
-
-, אזי 
+\begin_layout Enumerate
 \begin_inset Formula $T$
-\end_inset
-
- העתקה לינארית 
-\begin_inset Formula $\iff$
-\end_inset
-
- 
-\begin_inset Formula $T$
-\end_inset
-
- מטריציונית.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-טענות:
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\text{Sols}\left(A\right)=T_{A}^{-1}\left[\left\{ \overline{0}\right\} \right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $C\left(A\right)=Im\left(T_{A}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $T_{A}$
 \end_inset
 
  על 
 \begin_inset Formula $\iff$
 \end_inset
 
- עמודות 
-\begin_inset Formula $A$
+ 
+\begin_inset Formula $\text{Im}\left(T\right)=U$
 \end_inset
 
- פורשות.
- אם היא ריבועית אז גם הפיכה.
+ )טריויאלי(.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $T_{A}$
+אם 
+\begin_inset Formula $\left(u_{1},\dots,u_{n}\right)$
 \end_inset
 
- חח
+ סדרה פורשת של 
+\begin_inset Formula $V$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left(T\left(u_{1}\right),\dots,T\left(u_{k}\right)\right)$
+\end_inset
+
+ סדרה פורשת של 
+\begin_inset Formula $Im\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+עבור 
+\begin_inset Formula $\left(v_{1},\dots,v_{n}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $LD\left(v_{1},\dots,v_{n}\right)\subseteq LD\left(T\left(v_{1}\right),\dots,T\left(v_{n}\right)\right)$
+\end_inset
+
+.
+ לכן:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\left(T\left(v_{1}\right),\dots,T\left(v_{n}\right)\right)$
+\end_inset
+
+ בת
 \begin_inset Quotes erd
 \end_inset
 
-ע 
-\begin_inset Formula $\iff$
-\end_inset
-
- עמודות 
-\begin_inset Formula $A$
+ל אז 
+\begin_inset Formula $\left(v_{1},\dots,v_{n}\right)$
 \end_inset
 
  בת
@@ -4484,30 +4394,117 @@ T_{A}\left(\overline{v}\right)=A\overline{x}
 \end_inset
 
 ל.
- כי אין שתי דרכים להגיע לאותו הדבר.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $T_{A}$
+אם 
+\begin_inset Formula $v_{i}\in\text{sp}\left(v_{1},\dots,v_{i-1},v_{i+1},\dots,v_{n}\right)$
 \end_inset
 
- הפיכה 
-\begin_inset Formula $\iff$
+ אז גם 
+\begin_inset Formula $T\left(v_{i}\right)\in\text{sp}\left(T\left(v_{1}\right),\dots,T\left(v_{i-1}\right),T\left(v_{i+1}\right),\dots,T\left(v_{n}\right)\right)$
 \end_inset
 
- עמודות 
-\begin_inset Formula $A$
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $T$
 \end_inset
 
- בסיס 
-\begin_inset Formula $\iff$
+ חח
+\begin_inset Quotes erd
 \end_inset
 
+ע, אז 
+\begin_inset Formula $LD\left(T\left(v_{1}\right),\dots,T\left(v_{n}\right)\right)=LD\left(v_{1},\dots,v_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+אם 
+\begin_inset Formula $T$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, אז 
+\begin_inset Formula $T$
+\end_inset
+
+ מעבירה סדרה פורשת של 
+\begin_inset Formula $V$
+\end_inset
+
+ לסדרה פורשת של 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+יהיו 
+\begin_inset Formula $V,U$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו.
+ יהי 
+\begin_inset Formula $B=\left(b_{1},\dots,b_{n}\right)$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ יהיו 
+\begin_inset Formula $u_{1},\dots,u_{n}\in U$
+\end_inset
+
+ וקטורים כלשהם.
+ אז קיימת ויחידה העתקה לינארית 
+\begin_inset Formula $T:V\to U$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $1\le i\le n$
+\end_inset
+
+, 
+\begin_inset Formula $T\left(b_{i}\right)=u_{i}$
+\end_inset
+
+.
+ כלומר העתקה לינארית נקבעת ביחידות לפי 
+\begin_inset Formula $\dim\left(V\right)$
+\end_inset
+
+ איברים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט המימדים השני:
+\series default
  
-\begin_inset Formula $A$
+\begin_inset Formula $\text{dim}\left(V\right)=\dim\left(\ker\left(T\right)\right)+\dim\left(Im\left(T\right)\right)$
 \end_inset
 
- הפיכה.
+.
 \end_layout
 
 \begin_layout Subsection
@@ -4671,6 +4668,204 @@ P_{\left(U,W\right)}\left(\overline{v}\right) & =\iota x\in U.\exists y\in W.\ov
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ יהיו 
+\begin_inset Formula $V,U$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו נוצרים סופית, אז 
+\begin_inset Formula $V\simeq U\iff\dim\left(V\right)=\dim\left(U\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט 
+\numeric on
+2
+\numeric off
+ מתוך 
+\numeric on
+3
+\numeric off
+ להעתקות לינאריות:
+\series default
+ כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מתוך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הבאים שקולים לכך ש-
+\begin_inset Formula $T$
+\end_inset
+
+ איזומורפיזם.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\dim\left(V\right)=\dim\left(U\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ על.
+\end_layout
+
+\begin_layout Standard
+שני מרחבים וקטוריים מעל אותו שדה נקראים 
+\bar under
+איזומורפיים
+\bar default
+ ומסומנים 
+\begin_inset Formula $V\simeq U$
+\end_inset
+
+ אז קיים איזומורפיזם 
+\begin_inset Formula $T:V\to U$
+\end_inset
+
+.
+ זה 
+\begin_inset Quotes eld
+\end_inset
+
+יחס שקילות
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 קואורדינטות
 \end_layout
@@ -4751,6 +4946,717 @@ P_{\left(U,W\right)}\left(\overline{v}\right) & =\iota x\in U.\exists y\in W.\ov
 \begin_inset Formula $\left[\cdot\right]_{B}:V\to\mathbb{F}^{n}$
 \end_inset
 
+.
+\end_layout
+
+\begin_layout Subsection
+מרחב ההעתקות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ 
+\begin_inset Formula $\text{Hom}\left(V,U\right)=\left\{ T\in U^{V}\mid\text{T is linear}\right\} $
+\end_inset
+
+ מרחב ההעתקות.
+ זה תת מרחב של 
+\begin_inset Formula $\left\langle U^{V},+,\cdot\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ 
+\begin_inset Formula $\dim\left(\text{Hom}\left(V,U\right)\right)=\dim\left(V\right)\cdot\dim\left(U\right)$
+\end_inset
+
+ - זה נכון אפילו אם 
+\begin_inset Formula $V,U$
+\end_inset
+
+ לא נוצרים סופית.
+\end_layout
+
+\begin_layout Subsection
+מטריציונית
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ לכל מטריצה 
+\begin_inset Formula $A\in M_{m\times n}\left(\mathbb{F}\right)$
+\end_inset
+
+, נגדיר את ההעתקה המטריציונית המתאימה ל-
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $T_{A}:\mathbb{F}^{n}\to\mathbb{F}^{m}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+T_{A}\left(\overline{v}\right)=A\overline{x}
+\]
+
+\end_inset
+
+פונקציה 
+\begin_inset Formula $f$
+\end_inset
+
+ נקראת מטריציונית אם קיימת מטריצה 
+\begin_inset Formula $A\in M_{m\times n}\left(\mathbb{F}\right)$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $f=T_{A}$
+\end_inset
+
+, ונסמן 
+\begin_inset Formula $A=\left[f\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+השיטה למצוא את המטריצה 
+\begin_inset Formula $\left[T\right]$
+\end_inset
+
+ היא:
+\begin_inset Formula 
+\[
+\left[T\right]=\begin{pmatrix}T\begin{pmatrix}1\\
+0\\
+\vdots\\
+0
+\end{pmatrix} & T\begin{pmatrix}0\\
+1\\
+\vdots\\
+0
+\end{pmatrix} & \dots & T\begin{pmatrix}0\\
+\vdots\\
+0\\
+1
+\end{pmatrix}\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ תהא 
+\begin_inset Formula $T:\mathbb{F}^{n}\to\mathbb{F}^{m}$
+\end_inset
+
+, אזי 
+\begin_inset Formula $T$
+\end_inset
+
+ העתקה לינארית 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ מטריציונית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענות:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{Sols}\left(A\right)=T_{A}^{-1}\left[\left\{ \overline{0}\right\} \right]=\ker\left(T_{A}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C\left(A\right)=Im\left(T_{A}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{A}$
+\end_inset
+
+ על 
+\begin_inset Formula $\iff$
+\end_inset
+
+ עמודות 
+\begin_inset Formula $A$
+\end_inset
+
+ פורשות.
+ אם היא ריבועית אז גם הפיכה.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{A}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $\iff$
+\end_inset
+
+ עמודות 
+\begin_inset Formula $A$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+ כי אין שתי דרכים להגיע לאותו הדבר.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{A}$
+\end_inset
+
+ הפיכה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ עמודות 
+\begin_inset Formula $A$
+\end_inset
+
+ בסיס 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $T,S:\mathbb{F}^{n}\to\mathbb{F}^{m}$
+\end_inset
+
+ מטריציונית אז 
+\begin_inset Formula $T+S:\mathbb{F}^{n}\to\mathbb{F}^{m}$
+\end_inset
+
+ מטריציונית.
+ יתר על כן 
+\begin_inset Formula $\left[T+S\right]=\left[T\right]+\left[S\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $T\in\mathbb{F}^{n}\to\mathbb{F}^{m}$
+\end_inset
+
+ מטריציונית ו-
+\begin_inset Formula $\alpha\in\mathbb{F}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\alpha\cdot T:\mathbb{F}^{n}\to\mathbb{F^{m}}$
+\end_inset
+
+ מטריציונית.
+ יתר על כן 
+\begin_inset Formula $\left[\alpha\cdot T\right]=\alpha\cdot\left[T\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $S:\mathbb{F}^{m}\to\mathbb{F}^{k},T:\mathbb{F}^{n}\to\mathbb{F}^{m}$
+\end_inset
+
+ מטריציוניות אז 
+\begin_inset Formula $S\circ T:\mathbb{F}^{n}\to\mathbb{F}^{k}$
+\end_inset
+
+ מטריציונית, ו-
+\begin_inset Formula $\left[S\circ T\right]=\left[S\right]\cdot\left[T\right]$
+\end_inset
+
+ )כפל המטריצות הוא ההרכבה(.
+\end_layout
+
+\begin_layout Subsection
+מטריצה מייצגת
+\end_layout
+
+\begin_layout Subsubsection
+הגדרות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ תהא 
+\begin_inset Formula $T:V\to U$
+\end_inset
+
+ צ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $V,U$
+\end_inset
+
+ נוצר סופית.
+ יהי 
+\begin_inset Formula $B$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+, ו-
+\begin_inset Formula $C$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ נגדיר את ההעתקה המייצגת 
+\begin_inset Formula $T_{C}^{B}:\mathbb{F}^{\dim\left(V\right)}\to\mathbb{F}^{\dim\left(U\right)}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
+\left[T\right]_{C}^{B} & =\left[T_{C}^{B}\right]
+\end{align*}
+
+\end_inset
+
+בעצם מעבירים ל-
+\begin_inset Formula $n$
+\end_inset
+
+יות כדי לעבוד עם מטריציוניות.
+\end_layout
+
+\begin_layout Subsubsection
+טענות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C_{i}\left(\left[T_{C}^{B}\right]\right)=T_{C}^{B}\left(e_{i}\right)$
+\end_inset
+
+.
+ כלומר 
+\begin_inset Formula $\left[T\right]_{C}^{B}=\begin{pmatrix}\mid &  & \mid\\
+\left[T\left(b_{1}\right)\right]_{C} & \dots & \left[T\left(b_{n}\right)\right]_{C}\\
+\mid &  & \mid
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[T\right]_{C}^{B}\cdot\left[v\right]_{B}=\left[T\left(v\right)\right]_{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $\overline{v}\in V$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\overline{v}\right]_{B}\in\text{Sols}\left(\left[T\right]_{C}^{B}\right)\iff\overline{v}\in\text{ker}\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $\overline{u}\in U$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\overline{u}\right]_{C}\in\text{Cols}\left(\left[T\right]_{C}^{B}\right)\iff\overline{u}\in Im\left(T\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+לכן מסיקים ש-
+\begin_inset Formula $\mathcal{N}\left(\left[T\right]_{C}^{B}\right)=\dim\left(\text{ker}\left(T\right)\right),\text{Rank}\left(\left[T\right]_{C}^{B}\right)=\text{dim}\left(Im\left(T\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ הפיכה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $T_{C}^{B}$
+\end_inset
+
+ הפיכה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left[T\right]_{C}^{B}$
+\end_inset
+
+ הפיכה, בנוסף 
+\begin_inset Formula $\left(\left[T\right]_{C}^{B}\right)^{-1}=\left[T^{-1}\right]_{B}^{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם לחישוב המטריצה המייצגת:
+\series default
+ נתונה העתקה 
+\begin_inset Formula $T:V\to U$
+\end_inset
+
+, בסיסים 
+\begin_inset Formula $B=\left(b_{1},\dots,b_{n}\right)$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ ו-
+\begin_inset Formula $C=\left(c_{1},\dots,c_{n}\right)$
+\end_inset
+
+ של 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ נרצה לחשב 
+\begin_inset Formula $\left[T\right]_{C}^{B}$
+\end_inset
+
+ באופן יעיל.
+\end_layout
+
+\begin_layout Standard
+נבחר בסיס שנוח לחשב בו קואורדינטות ב-
+\begin_inset Formula $U$
+\end_inset
+
+ - בדרך כלל הבסיס הסטנדרטי.
+ 
+\begin_inset Formula $W=\left(w_{1},\dots,w_{n}\right)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccc|cc}
+\mid &  & \mid & \mid & \mid\\
+\left[u_{1}\right]_{W} & \dots & \left[u_{m}\right]_{W} & \left[T\left(b_{1}\right)\right]_{W} & \dots\left[T\left(b_{n}\right)\right]_{W}\\
+\mid &  & \mid & \mid & \mid
+\end{array}\right)\xrightarrow{R_{1}\to\dots}\dots\to\begin{pmatrix}1 &  &  & \mid\\
+ & \ddots &  & \mid & \left[T\right]_{C}^{B}\\
+ &  & 1 & \mid
+\end{pmatrix}
+\]
+
+\end_inset
+
+באופן דומה לאיך שמחשבים מטריצה הופכית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצות שינוי הקואורדינטות:
+\series default
+ יהיו 
+\begin_inset Formula $B,C$
+\end_inset
+
+ שני בסיסים של מ
+\begin_inset Quotes erd
+\end_inset
+
+ו 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ אז נגדיר את מטריצת שינוי הקואורדינטות מ-
+\begin_inset Formula $B$
+\end_inset
+
+ ל-
+\begin_inset Formula $C$
+\end_inset
+
+ על ידי: 
+\begin_inset Formula $\left[Id_{V}\right]_{C}^{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{v}\in V$
+\end_inset
+
+, 
+\begin_inset Formula $\left[Id_{V}\right]_{C}^{B}\cdot\left[\overline{v}\right]_{B}=\left[\overline{v}\right]_{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[T\right]_{C}^{B}=\left[Id\right]_{C}^{C^{\prime}}\cdot\left[T\right]_{C^{\prime}}^{B^{\prime}}\cdot\left[Id_{V}\right]_{B^{\prime}}^{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ יהיו 
+\begin_inset Formula $A,B\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+, נאמר כי 
+\begin_inset Formula $A$
+\end_inset
+
+ ו-
+\begin_inset Formula $B$
+\end_inset
+
+ דומות אם קיימת מטריצה הפיכה 
+\begin_inset Formula $P$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $A=P^{-1}\cdot B\cdot P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ נתון 
+\begin_inset Formula $A,B\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ ריבועיות, הבאים שקולים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות.
+\end_layout
+
+\begin_layout Enumerate
+קיימת העתקה לינארית 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ ובסיסים 
+\begin_inset Formula $C,C^{\prime}$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C}=A,\left[T\right]_{C^{\prime}}=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+כל העתקה לינארית 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+, אם קיים בסיס 
+\begin_inset Formula $C$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C}=A$
+\end_inset
+
+, אז קיים בסיס 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C^{\prime}}=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{Rank}\left(A\right)=\text{Rank}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{N}\left(A\right)=\mathcal{N}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{tr}\left(A\right)=\text{tr}\left(B\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\text{tr}\left(A\right)=\sum_{i=1}^{n}\left(A\right)_{i,i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det\left(A\right)=\det\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\dots$
+\end_inset
+
+ נראה עוד בלינארית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
 .
 \end_layout
 
