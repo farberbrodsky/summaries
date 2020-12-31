@@ -5373,6 +5373,13 @@ T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
 .
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $\left[S\circ T\right]_{D}^{B}=\left[S\right]_{D}^{C}\cdot\left[T\right]_{C}^{B}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 
 \series bold
