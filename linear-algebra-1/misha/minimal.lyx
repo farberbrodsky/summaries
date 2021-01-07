@@ -28,7 +28,7 @@
 \use_dash_ligatures true
 \graphics default
 \default_output_format default
-\output_sync 0
+\output_sync 1
 \bibtex_command default
 \index_command default
 \float_placement H
@@ -88,45 +88,6 @@
 \end_header
 
 \begin_body
-
-\begin_layout Title
-
-\series bold
-סיכום מינימלי למבחן 
-\series default
-- אלגברה לינארית
-\family roman
-\series medium
-\shape up
-\size largest
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-1
-\end_layout
-
-\begin_layout Author
-מיכאל פרבר ברודסקי
-\end_layout
 
 \begin_layout Section
 מטריצות בסיסיות
@@ -1245,65 +1206,6 @@ Transpose
 \end_layout
 
 \begin_layout Section
-פונקציית נפח
-\end_layout
-
-\begin_layout Enumerate
-לינאריות לפי שורה: עבור 
-\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
-\end_inset
-
-,
-\begin_inset Formula 
-\[
-N\left(\begin{pmatrix}-A_{1}-\\
-\vdots\\
--\alpha\cdot B+\beta\cdot C-\\
-\vdots\\
--A_{n}-
-\end{pmatrix}\right)=\alpha\cdot N\left(\begin{pmatrix}-A_{1}-\\
-\vdots\\
--B-\\
-\vdots\\
--A_{n}-
-\end{pmatrix}\right)+\beta\cdot N\left(\begin{pmatrix}-A_{1}-\\
-\vdots\\
--C-\\
-\vdots\\
--A_{n}-
-\end{pmatrix}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-אם יש 
-\begin_inset Formula $i\ne j$
-\end_inset
-
- כך ש-
-\begin_inset Formula $R_{i}\left(A\right)=R_{j}\left(A\right)$
-\end_inset
-
- )יש שתי שורות שוות(, אז 
-\begin_inset Formula $N\left(A\right)=0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-נרמול: 
-\begin_inset Formula $N\left(I\right)=1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
 דטרמיננטה
 \end_layout
 
@@ -1331,6 +1233,41 @@ N\left(\begin{pmatrix}-A_{1}-\\
 
 \series bold
 טענות:
+\end_layout
+
+\begin_layout Enumerate
+לינאריות לפי שורה:
+\begin_inset Formula 
+\[
+\det\begin{pmatrix}-A_{1}-\\
+\vdots\\
+-\alpha\cdot B+\beta\cdot C-\\
+\vdots\\
+-A_{n}-
+\end{pmatrix}=\alpha\cdot\det\begin{pmatrix}-A_{1}-\\
+\vdots\\
+-B-\\
+\vdots\\
+-A_{n}-
+\end{pmatrix}+\beta\cdot\det\begin{pmatrix}-A_{1}-\\
+\vdots\\
+-C-\\
+\vdots\\
+-A_{n}-
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נרמול: 
+\begin_inset Formula $N\left(I\right)=1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -1508,13 +1445,6 @@ N\left(\begin{pmatrix}-A_{1}-\\
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $A\cdot\text{adj}\left(A\right)=I\cdot\det\left(A\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
 אם 
 \begin_inset Formula $A$
 \end_inset
@@ -1527,11 +1457,11 @@ N\left(\begin{pmatrix}-A_{1}-\\
 \end_layout
 
 \begin_layout Enumerate
-אם 
-\begin_inset Formula $A$
+\begin_inset Formula $A\cdot\text{adj}\left(A\right)=I\cdot\det\left(A\right)$
 \end_inset
 
- הפיכה אז 
+.
+ אז 
 \begin_inset Formula $A^{-1}=\frac{1}{\left|A\right|}\cdot\text{adj}\left(A\right)$
 \end_inset
 
@@ -3266,7 +3196,11 @@ T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
 \end_inset
 
 .
- כלומר 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+כלומר 
 \begin_inset Formula $\left[T\right]_{C}^{B}=\begin{pmatrix}\mid &  & \mid\\
 \left[T\left(b_{1}\right)\right]_{C} & \dots & \left[T\left(b_{n}\right)\right]_{C}\\
 \mid &  & \mid
@@ -3276,6 +3210,7 @@ T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
 .
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\left[T\right]_{C}^{B}\cdot\left[v\right]_{B}=\left[T\left(v\right)\right]_{C}$
 \end_inset
@@ -3309,11 +3244,15 @@ T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
 
 \begin_deeper
 \begin_layout Standard
-לכן מסיקים ש-
-\begin_inset Formula $\mathcal{N}\left(\left[T\right]_{C}^{B}\right)=\dim\left(\text{ker}\left(T\right)\right),\text{Rank}\left(\left[T\right]_{C}^{B}\right)=\text{dim}\left(Im\left(T\right)\right)$
+לכן מסיקים ש:
+\begin_inset Formula 
+\[
+\mathcal{N}\left(\left[T\right]_{C}^{B}\right)=\dim\left(\text{ker}\left(T\right)\right),\text{Rank}\left(\left[T\right]_{C}^{B}\right)=\text{dim}\left(Im\left(T\right)\right)
+\]
+
 \end_inset
 
-.
+
 \end_layout
 
 \end_deeper
@@ -3368,16 +3307,17 @@ T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
 .
  נשתמש בדירוג:
 \begin_inset Formula 
-\[
+\begin{align*}
 \left(\begin{array}{ccc|cc}
 \mid &  & \mid & \mid & \mid\\
 \left[u_{1}\right]_{W} & \dots & \left[u_{m}\right]_{W} & \left[T\left(b_{1}\right)\right]_{W} & \dots\left[T\left(b_{n}\right)\right]_{W}\\
 \mid &  & \mid & \mid & \mid
-\end{array}\right)\xrightarrow{R_{1}\to\dots}\dots\to\begin{pmatrix}1 &  &  & \mid\\
+\end{array}\right)\xrightarrow{R_{1}\to\dots}\dots\\
+\to\begin{pmatrix}1 &  &  & \mid\\
  & \ddots &  & \mid & \left[T\right]_{C}^{B}\\
  &  & 1 & \mid
 \end{pmatrix}
-\]
+\end{align*}
 
 \end_inset
 
