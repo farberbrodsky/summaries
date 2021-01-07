@@ -7,6 +7,10 @@
 \textclass heb-article
 \begin_preamble
 \usepackage[use-david]{culmus}
+\usepackage{titlesec}
+\titlespacing{\section} {0pt}{0pt}{0pt}
+\setlength{\parskip}{0.32cm}
+\setlength{\itemsep}{0pt}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -3182,10 +3186,6 @@ T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 טענות:
