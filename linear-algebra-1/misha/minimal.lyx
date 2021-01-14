@@ -8,7 +8,11 @@
 \begin_preamble
 \usepackage[use-david]{culmus}
 \usepackage{titlesec}
+
+\iffalse
 \titlespacing{\section} {0pt}{0pt}{0pt}
+\fi
+
 \setlength{\parskip}{0.32cm}
 \setlength{\itemsep}{0pt}
 \end_preamble
@@ -65,10 +69,10 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 1cm
-\topmargin 2cm
-\rightmargin 0.5cm
-\bottommargin 2cm
+\leftmargin 1.5cm
+\topmargin 1cm
+\rightmargin 1.5cm
+\bottommargin 1cm
 \headheight 1.5cm
 \headsep 1.5cm
 \footskip 1.5cm
@@ -82,7 +86,7 @@
 \quotes_style english
 \dynamic_quotes 0
 \papercolumns 2
-\papersides 1
+\papersides 2
 \paperpagestyle empty
 \tracking_changes false
 \output_changes false
@@ -3362,8 +3366,8 @@ T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
 \mid &  & \mid & \mid & \mid\\
 \left[u_{1}\right]_{W} & \dots & \left[u_{m}\right]_{W} & \left[T\left(b_{1}\right)\right]_{W} & \dots\left[T\left(b_{n}\right)\right]_{W}\\
 \mid &  & \mid & \mid & \mid
-\end{array}\right)\xrightarrow{R_{1}\to\dots}\dots\\
-\to\begin{pmatrix}1 &  &  & \mid\\
+\end{array}\right)\\
+\xrightarrow{R_{1}\to\dots}\dots\to\begin{pmatrix}1 &  &  & \mid\\
  & \ddots &  & \mid & \left[T\right]_{C}^{B}\\
  &  & 1 & \mid
 \end{pmatrix}
@@ -3536,7 +3540,7 @@ T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
 \begin_inset Formula $\text{Rank}\left(A\right)=\text{Rank}\left(B\right),\mathcal{N}\left(A\right)=\mathcal{N}\left(B\right)$
 \end_inset
 
-..
+.
 \end_layout
 
 \begin_layout Enumerate
