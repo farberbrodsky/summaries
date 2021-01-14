@@ -824,6 +824,31 @@ LD\left(\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\right)=\left\{ \beg
 שחלוף והפיכות
 \end_layout
 
+\begin_layout Standard
+נגדיר את השחלוף של 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+, להיות המטריצה כך ש-
+\begin_inset Formula $\left(A^{T}\right)_{i,j}=A_{j,i}$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $A=A^{T}$
+\end_inset
+
+, נגיד ש-
+\begin_inset Formula $A$
+\end_inset
+
+ סימטרית.
+\end_layout
+
 \begin_layout Theorem
 חוקי
 \family roman
@@ -1420,6 +1445,31 @@ Transpose
 
  כאשר 
 \begin_inset Formula $B_{j}\left(C_{1}\left(A\right),\dots,C_{j-1}\left(A\right),\overline{b},\dots,C_{n}\left(A\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+מטריצת ונדרמונד
+\end_layout
+
+\begin_layout Standard
+עבור מטריצה מהצורה הבאה:
+\begin_inset Formula 
+\[
+V=\begin{pmatrix}1 & \alpha_{1} & \alpha_{1}^{2} & \dots & \alpha_{1}^{n-1}\\
+1 & \alpha_{2} & \alpha_{2}^{2} & \dots & \alpha_{2}^{n-1}\\
+1 & \alpha_{3} & \alpha_{3} & \dots & \alpha_{3}^{n-1}\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+1 & \alpha_{m} & \alpha_{m}^{2} & \dots & \alpha_{m}^{n-1}
+\end{pmatrix}
+\]
+
+\end_inset
+
+אז הדטרמיננטה היא 
+\begin_inset Formula $\det\left(V\right)=\prod_{1\le i<j\le n}\left(\alpha_{j}-\alpha_{i}\right)$
 \end_inset
 
 .
