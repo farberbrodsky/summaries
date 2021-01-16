@@ -7,13 +7,10 @@
 \textclass heb-article
 \begin_preamble
 \usepackage[use-david]{culmus}
-\usepackage{titlesec}
-
 \iffalse
 \titlespacing{\section} {0pt}{0pt}{0pt}
 \fi
-
-\setlength{\parskip}{0.32cm}
+\setlength{\parskip}{3pt}
 \setlength{\itemsep}{0pt}
 \end_preamble
 \use_default_options true
@@ -78,7 +75,7 @@
 \footskip 1.5cm
 \columnsep 0.5cm
 \secnumdepth 3
-\tocdepth 3
+\tocdepth 2
 \paragraph_separation skip
 \defskip smallskip
 \is_math_indent 0
@@ -87,7 +84,7 @@
 \dynamic_quotes 0
 \papercolumns 2
 \papersides 2
-\paperpagestyle empty
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -96,6 +93,15 @@
 \end_header
 
 \begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Section
 מטריצות בסיסיות
@@ -350,10 +356,6 @@ A\cdot C_{1}(B) & \cdots & A\cdot C_{n}(B)\\
 
 \begin_layout Section
 דירוג ודירוג קנוני
-\end_layout
-
-\begin_layout Subsection
-הגדרות
 \end_layout
 
 \begin_layout Standard
@@ -825,7 +827,11 @@ LD\left(\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\right)=\left\{ \beg
 \end_layout
 
 \begin_layout Section
-שחלוף והפיכות
+שחלוף והפיכות )
+\begin_inset Formula $A^{-1},A^{T}$
+\end_inset
+
+(
 \end_layout
 
 \begin_layout Standard
@@ -1242,30 +1248,86 @@ Transpose
 דטרמיננטה
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-פיתוח דטרמיננטה לפי עמודה 
-\begin_inset Formula $j$
-\end_inset
-
-:
-\series default
-
-\begin_inset Formula 
-\[
-\text{det}_{j}^{\left(n\right)}\left(A\right)=\sum_{k=1}^{n}\left(A\right)_{k,j}\cdot\left(-1\right)^{k+j}\cdot\text{det}^{\left(n-1\right)}\left(A_{\left(k\,j\right)}\right)
-\]
-
-\end_inset
-
-
+\begin_layout Subsection
+דרכי חישוב
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+פיתוח לפי עמודה: 
+\begin_inset Formula $\text{det}_{j}^{\left(n\right)}\left(A\right)=\sum_{k=1}^{n}\left(A\right)_{k,j}\cdot\left(-1\right)^{k+j}\cdot\text{det}^{\left(n-1\right)}\left(A_{\left(k\,j\right)}\right)$
+\end_inset
 
-\series bold
-טענות:
+.
+\end_layout
+
+\begin_layout Enumerate
+דטרמיננטה לפי תמורות: 
+\begin_inset Formula $\det\left(A\right)=\sum_{\sigma\in S_{n}}\text{sign}\left(\sigma\right)\cdot\prod_{i=1}^{n}\left(A\right)_{i,\sigma\left(i\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $A$
+\end_inset
+
+ לא הפיכה אז 
+\begin_inset Formula $\det\left(A\right)=0$
+\end_inset
+
+.
+ ואם 
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה אז 
+\begin_inset Formula $\det\left(A\right)\ne0$
+\end_inset
+
+ ו-
+\begin_inset Formula $\det\left(A\right)=x_{\varphi_{1}}\cdot\dots\cdot x_{\varphi_{n}}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\varphi_{1},\dots,\varphi_{n}$
+\end_inset
+
+ פעולות הדירוג.
+ אם 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ החלפת שורה 
+\begin_inset Formula $x_{\varphi}=-1$
+\end_inset
+
+, אם 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ כפל בסקלר 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ אז 
+\begin_inset Formula $x_{\varphi}=\lambda^{-1}$
+\end_inset
+
+, ואם 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ הוספת שורה אז 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+טענות
 \end_layout
 
 \begin_layout Enumerate
@@ -1304,79 +1366,10 @@ Transpose
 \end_layout
 
 \begin_layout Enumerate
-אם 
-\begin_inset Formula $\varphi$
-\end_inset
-
- פעולה אלמנטרית אז 
-\begin_inset Formula $\det\left(\varphi\left(A\right)\right)=x_{\varphi}\cdot\det\left(A\right)$
-\end_inset
-
- כאשר אם 
-\begin_inset Formula $\varphi$
-\end_inset
-
- החלפת שורה 
-\begin_inset Formula $x_{\varphi}=-1$
-\end_inset
-
-, אם 
-\begin_inset Formula $\varphi$
-\end_inset
-
- כפל בסקלר 
-\begin_inset Formula $\lambda$
-\end_inset
-
- אז 
-\begin_inset Formula $x_{\varphi}=\lambda^{-1}$
-\end_inset
-
-, ואם 
-\begin_inset Formula $\varphi$
-\end_inset
-
- הוספת שורה אז 
-\begin_inset Formula $1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
 \begin_inset Formula $\det\left(A\cdot B\right)=\det\left(A\right)\cdot\det\left(B\right)$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Enumerate
-אם 
-\begin_inset Formula $A$
-\end_inset
-
- לא הפיכה אז 
-\begin_inset Formula $\det\left(A\right)=0$
-\end_inset
-
-.
- ואם 
-\begin_inset Formula $A$
-\end_inset
-
- הפיכה אז 
-\begin_inset Formula $\det\left(A\right)\ne0$
-\end_inset
-
- ו-
-\begin_inset Formula $\det\left(A\right)=x_{\varphi_{1}}\cdot\dots\cdot x_{\varphi_{n}}$
-\end_inset
-
- כאשר 
-\begin_inset Formula $\varphi_{1},\dots,\varphi_{n}$
-\end_inset
-
- פעולות הדירוג.
 \end_layout
 
 \begin_layout Enumerate
@@ -1397,61 +1390,6 @@ Transpose
 \end_inset
 
 (, הדטרמיננטה היא מכפלת האלכסון.
-\end_layout
-
-\begin_layout Theorem
-
-\series bold
-)דטרמיננטה לפי תמורות(:
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Formula 
-\[
-\det\left(A\right)=\sum_{\sigma\in S_{n}}\text{sign}\left(\sigma\right)\cdot\prod_{i=1}^{n}\left(A\right)_{i,\sigma\left(i\right)}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-כלל קרמר:
-\series default
- תהא 
-\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
-\end_inset
-
- הפיכה, אז לכל 
-\begin_inset Formula $\overline{b}\in\mathbb{F}^{n}$
-\end_inset
-
- למערכת 
-\begin_inset Formula $A\overline{x}=\overline{b}$
-\end_inset
-
- יש פתרון יחיד והפתרון הינו: )שתי דרכים לתאר אותו(
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $c=A^{-1}\cdot\overline{b}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $c_{j}=\frac{\left|B_{j}\right|}{\left|A\right|}$
-\end_inset
-
- כאשר 
-\begin_inset Formula $B_{j}\left(C_{1}\left(A\right),\dots,C_{j-1}\left(A\right),\overline{b},\dots,C_{n}\left(A\right)\right)$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Subsection
@@ -1521,6 +1459,44 @@ V=\begin{pmatrix}1 & \alpha_{1} & \alpha_{1}^{2} & \dots & \alpha_{1}^{n-1}\\
 .
  אז 
 \begin_inset Formula $A^{-1}=\frac{1}{\left|A\right|}\cdot\text{adj}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+כלל קרמר
+\end_layout
+
+\begin_layout Standard
+תהא 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ הפיכה, אז לכל 
+\begin_inset Formula $\overline{b}\in\mathbb{F}^{n}$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $A\overline{x}=\overline{b}$
+\end_inset
+
+ יש פתרון יחיד והפתרון הינו: )שתי דרכים לתאר אותו(
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c=A^{-1}\cdot\overline{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c_{j}=\frac{\left|B_{j}\right|}{\left|A\right|}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $B_{j}\left(C_{1}\left(A\right),\dots,C_{j-1}\left(A\right),\overline{b},\dots,C_{n}\left(A\right)\right)$
 \end_inset
 
 .
@@ -1605,6 +1581,7 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \end_layout
 
 \begin_layout Subsection
+סיגנטורה 
 \begin_inset Formula $\text{sign}$
 \end_inset
 
@@ -1678,10 +1655,6 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 
 \begin_layout Section
 מרחב וקטורי
-\end_layout
-
-\begin_layout Subsection
-הגדרות
 \end_layout
 
 \begin_layout Definition
@@ -3671,6 +3644,36 @@ v_{n}^{t}
 \end_inset
 
 ים, ונקבל בסיס.
+\end_layout
+
+\begin_layout Subsection
+חיתוך של מרחבים וקטוריים
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $U,V$
+\end_inset
+
+ מרחבים וקטוריים שבסיסיהם 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ ו-
+\begin_inset Formula $u_{1},\dots,u_{m}$
+\end_inset
+
+.
+ נבנה מערכת משוואות:
+\begin_inset Formula 
+\[
+\alpha_{1}v_{1}+\dots+\alpha_{n}v_{n}=\beta_{1}u_{1}+\dots+\beta_{m}u_{m}
+\]
+
+\end_inset
+
+ונראה מה הפתרונות.
+ מרחב הפתרונות הוא בדיוק החיתוך.
 \end_layout
 
 \end_body
