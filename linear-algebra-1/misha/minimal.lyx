@@ -440,51 +440,6 @@ status open
 \end_layout
 
 \begin_layout Section
-בוחן תת מרחב
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $U\subseteq F^{n}$
-\end_inset
-
- היא תת מרחב אמ
-\begin_inset Quotes erd
-\end_inset
-
-מ:
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $U$
-\end_inset
-
- סגורה לחיבור.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $U$
-\end_inset
-
- סגורה לכפל בסקלר.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\overline{0}\in U$
-\end_inset
-
-.
- ניתן להחליף את התנאי ב-
-\begin_inset Formula $U\ne\emptyset$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-נובע מכאן גם שחיתוך של תתי מרחבים הוא תת מרחב.
-\end_layout
-
-\begin_layout Section
 צירופים לינאריים
 \end_layout
 
@@ -567,7 +522,7 @@ LD\left(\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\right)=\left\{ \beg
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 בסיס
 \end_layout
 
@@ -766,7 +721,96 @@ LD\left(\left(\overline{v_{1}},\dots,\overline{v_{k}}\right)\right)=\left\{ \beg
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
+מימד
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+)מימד(:
+\series default
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ בעל בסיס, המימד של 
+\begin_inset Formula $V$
+\end_inset
+
+ הינו עוצמת בסיס כלשהו )והמימד יחיד(.
+ מסמנים כ-
+\begin_inset Formula $\dim_{\mathbb{F}}\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+)משפט המימדים הראשון(:
+\series default
+
+\begin_inset Formula 
+\[
+\dim\left(U_{1}+U_{2}\right)=\dim\left(U_{1}\right)+\dim\left(U_{2}\right)-\dim\left(U_{1}\cap U_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה:
+\series default
+ אם 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+ ו-
+\begin_inset Formula $\dim U=\dim V$
+\end_inset
+
+, אז 
+\begin_inset Formula $U=V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+)משפט המימדים השני(:
+\series default
+ עבור 
+\begin_inset Formula $T:V\to U$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\text{dim}\left(V\right)=\dim\left(\ker\left(T\right)\right)+\dim\left(Im\left(T\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 למת ההחלפה של ריס
 \end_layout
 
@@ -1725,6 +1769,51 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+בוחן תת מרחב
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U\subseteq F^{n}$
+\end_inset
+
+ היא תת מרחב אמ
+\begin_inset Quotes erd
+\end_inset
+
+מ:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U$
+\end_inset
+
+ סגורה לחיבור.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U$
+\end_inset
+
+ סגורה לכפל בסקלר.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{0}\in U$
+\end_inset
+
+.
+ ניתן להחליף את התנאי ב-
+\begin_inset Formula $U\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נובע מכאן גם שחיתוך של תתי מרחבים הוא תת מרחב.
+\end_layout
+
 \begin_layout Section
 בסיס האמל
 \end_layout
@@ -1784,95 +1873,6 @@ e_{\sigma\left(1\right)} & \dots & e_{\sigma\left(n\right)}\\
 \end_inset
 
 ל ופורשת.
-\end_layout
-
-\begin_layout Section
-מימד
-\end_layout
-
-\begin_layout Definition
-
-\series bold
-)מימד(:
-\series default
- יהי 
-\begin_inset Formula $V$
-\end_inset
-
- מ
-\begin_inset Quotes erd
-\end_inset
-
-ו מעל 
-\begin_inset Formula $\mathbb{F}$
-\end_inset
-
- בעל בסיס, המימד של 
-\begin_inset Formula $V$
-\end_inset
-
- הינו עוצמת בסיס כלשהו )והמימד יחיד(.
- מסמנים כ-
-\begin_inset Formula $\dim_{\mathbb{F}}\left(V\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Theorem
-
-\series bold
-)משפט המימדים הראשון(:
-\series default
-
-\begin_inset Formula 
-\[
-\dim\left(U_{1}+U_{2}\right)=\dim\left(U_{1}\right)+\dim\left(U_{2}\right)-\dim\left(U_{1}\cap U_{2}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-מסקנה:
-\series default
- אם 
-\begin_inset Formula $U\subseteq V$
-\end_inset
-
- ו-
-\begin_inset Formula $\dim U=\dim V$
-\end_inset
-
-, אז 
-\begin_inset Formula $U=V$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Theorem
-
-\series bold
-)משפט המימדים השני(:
-\series default
- עבור 
-\begin_inset Formula $T:V\to U$
-\end_inset
-
-,
-\begin_inset Formula 
-\[
-\text{dim}\left(V\right)=\dim\left(\ker\left(T\right)\right)+\dim\left(Im\left(T\right)\right)
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
