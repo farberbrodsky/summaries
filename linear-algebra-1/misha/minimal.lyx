@@ -1277,7 +1277,7 @@ Transpose
 \begin_inset Formula $A,B$
 \end_inset
 
- ריבועיות והפיכות 
+ הפיכות 
 \begin_inset Formula $\iff$
 \end_inset
 
@@ -1285,7 +1285,11 @@ Transpose
 \begin_inset Formula $A\cdot B$
 \end_inset
 
- הפיכה.
+ הפיכה ו-
+\begin_inset Formula $A,B$
+\end_inset
+
+ ריבועיות.
 \end_layout
 
 \begin_layout Section
