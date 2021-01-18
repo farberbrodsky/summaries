@@ -1226,7 +1226,8 @@ Transpose
 \begin_inset Formula $A\overline{x}=\overline{b}$
 \end_inset
 
- יש פתרון יחיד.
+ יש פתרון.
+ הוא גם יחיד אבל מספיק להוכיח שיש פתרון.
 \end_layout
 
 \begin_layout Enumerate
@@ -1270,6 +1271,24 @@ Transpose
 \end_inset
 
  הפיכה.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|A\right|\ne0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{rank}A=n$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\mathcal{N}\left(A\right)=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
