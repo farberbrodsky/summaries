@@ -3226,7 +3226,7 @@ T_{A}\left(\overline{v}\right)=A\overline{x}
 :
 \begin_inset Formula 
 \begin{align*}
-T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}\\
+T_{C}^{B} & =Q_{C}\circ T\circ Q_{B}^{-1}\\
 \left[T\right]_{C}^{B} & =\left[T_{C}^{B}\right]
 \end{align*}
 
