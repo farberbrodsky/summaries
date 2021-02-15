@@ -1057,7 +1057,7 @@ Transpose
 \begin_inset Quotes erd
 \end_inset
 
-ל, ולכן 
+ל, באופן שקול סדרת השורות פורשת, ולכן 
 \begin_inset Formula $m\ge n$
 \end_inset
 
@@ -1084,7 +1084,11 @@ Transpose
 \begin_inset Formula $A$
 \end_inset
 
- פורשת, ו-
+ פורשת, באופן שקול סדרת השורות בת
+\begin_inset Quotes erd
+\end_inset
+
+ל, ו-
 \begin_inset Formula $m\le n$
 \end_inset
 
