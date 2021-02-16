@@ -1,0 +1,434 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[use-david]{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+סיכומי הרצאות 
+\series default
+- אלגברה לינארית
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+א
+\end_layout
+
+\begin_layout Author
+מיכאל פרבר ברודסקי
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+דברים חשובים מלינארית
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Subsection
+מטריצות דומות
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $A,B\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+, נאמר כי 
+\begin_inset Formula $A$
+\end_inset
+
+ ו-
+\begin_inset Formula $B$
+\end_inset
+
+ דומות אם קיימת מטריצה הפיכה 
+\begin_inset Formula $P$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $A=P^{-1}\cdot B\cdot P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ נתון 
+\begin_inset Formula $A,B\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ ריבועיות, הבאים שקולים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות.
+\end_layout
+
+\begin_layout Enumerate
+קיימת 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ ובסיסים 
+\begin_inset Formula $C,C^{\prime}$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C}=A,\left[T\right]_{C^{\prime}}=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+, אם קיים בסיס 
+\begin_inset Formula $C$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C}=A$
+\end_inset
+
+, אז קיים בסיס 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C^{\prime}}=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ואם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{Rank}\left(A\right)=\text{Rank}\left(B\right),\mathcal{N}\left(A\right)=\mathcal{N}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{tr}\left(A\right)=\text{tr}\left(B\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\text{tr}\left(A\right)=\sum_{i=1}^{n}\left(A\right)_{i,i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det\left(A\right)=\det\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+לכסון
+\end_layout
+
+\begin_layout Subsection
+הגדרות בסיסיות
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מטריצה אלכסונית:
+\series default
+ מטריצה ריבועית 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ שבה עבור 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+, 
+\begin_inset Formula $A_{i,j}=0$
+\end_inset
+
+.
+ נגדיר את 
+\begin_inset Formula $Diag\left(\lambda_{1},\dots,\lambda_{n}\right)$
+\end_inset
+
+ להיות המטריצה שיש לה 
+\begin_inset Formula $\lambda_{1},\dots,\lambda_{n}$
+\end_inset
+
+ על האלכסון.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מטריצה לכסינה:
+\series default
+ מטריצה ריבועית 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ נקראת לכסינה אם היא דומה למטריצה אלכסונית.
+ המטרה של מטריצות לכסינות היא שקל להעלות אותן בחזקה.
+ עבור 
+\begin_inset Formula $D$
+\end_inset
+
+ מטריצה אלכסונית, קיימת 
+\begin_inset Formula $P$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\begin{align*}
+A & =PDP^{-1}\\
+A^{n} & =\overbrace{PDP^{-1}\cdot\dots\cdot PDP^{-1}}^{n\text{ times}}=PD^{n}P^{-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+העתקה לכסינה:
+\series default
+ העתקה לינארית 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ נקראת לכסינה אם קיים בסיס 
+\begin_inset Formula $B$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{B}^{B}$
+\end_inset
+
+ אלכסונית.
+\end_layout
+
+\begin_layout Definition
+בנוסף, אם 
+\begin_inset Formula $T$
+\end_inset
+
+ העתקה לכסינה אז כל מטריצה מייצגת שלה לפי בסיס 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $\left[T\right]_{C}^{C}$
+\end_inset
+
+, היא לכסינה.
+\end_layout
+
+\end_body
+\end_document
