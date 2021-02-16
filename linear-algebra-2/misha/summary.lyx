@@ -361,7 +361,7 @@ LatexCommand tableofcontents
 \begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
 \end_inset
 
- נקראת לכסינה אם היא דומה למטריצה אלכסונית.
+ שדומה למטריצה אלכסונית.
  המטרה של מטריצות לכסינות היא שקל להעלות אותן בחזקה.
  עבור 
 \begin_inset Formula $D$
@@ -399,7 +399,7 @@ A^{n} & =\overbrace{PDP^{-1}\cdot\dots\cdot PDP^{-1}}^{n\text{ times}}=PD^{n}P^{
 \begin_inset Formula $T:V\to V$
 \end_inset
 
- נקראת לכסינה אם קיים בסיס 
+ כך שקיים בסיס 
 \begin_inset Formula $B$
 \end_inset
 
@@ -428,6 +428,148 @@ A^{n} & =\overbrace{PDP^{-1}\cdot\dots\cdot PDP^{-1}}^{n\text{ times}}=PD^{n}P^{
 \end_inset
 
 , היא לכסינה.
+\end_layout
+
+\begin_layout Subsubsection
+ערך עצמי
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+וקטור עצמי של 
+\begin_inset Formula $T$
+\end_inset
+
+ לערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $T\left(\overline{v}\right)=\lambda\overline{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ערך עצמי של 
+\begin_inset Formula $A$
+\end_inset
+
+ לערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $A\overline{v}=\lambda\overline{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ערך עצמי של 
+\begin_inset Formula $T$
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ כך שקיים וקטור עצמי 
+\bar under
+
+\begin_inset Formula $\overline{v}\ne0$
+\end_inset
+
+
+\bar default
+ של 
+\begin_inset Formula $T$
+\end_inset
+
+ לערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+משפטים
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים בסיס 
+\begin_inset Formula $B\subseteq\mathbb{F}^{n}$
+\end_inset
+
+ שמורכב מוקטורים עצמיים של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $T$
+\end_inset
+
+ לכסינה )או 
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה( אז על האלכסון של הצורה האלכסונית מופיעים הערכים העצמיים של 
+\begin_inset Formula $T$
+\end_inset
+
+ )או 
+\begin_inset Formula $A$
+\end_inset
+
+(.
+ זה יחיד עד כדי הסידור של האלכסון.
 \end_layout
 
 \end_body
