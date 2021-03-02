@@ -781,6 +781,25 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 
 \series bold
 מטריצה מייצגת:
@@ -832,6 +851,94 @@ LatexCommand tableofcontents
 \end_inset
 
 (.
+\end_layout
+
+\begin_layout Plain Layout
+ואם 
+\begin_inset Formula $V=U_{1}\oplus U_{2}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $U_{1},U_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+-אינווריאנטיים אז 
+\begin_inset Formula $\left[T\right]_{B_{1}\frown B_{2}}=\left(\begin{array}{c|c}
+\left[T\lceil_{U}\right]_{B_{1}} & 0\\
+\hline 0 & \left[T\lceil_{U}\right]_{B_{2}}
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+אזי 
+\bar under
+הפולינום 
+\begin_inset Formula $P_{T\lceil_{U}}$
+\end_inset
+
+ מחלק את 
+\begin_inset Formula $P_{T}$
+\end_inset
+
+
+\bar default
+, ואם 
+\begin_inset Formula $V=U_{1}\oplus U_{2}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $U_{1},U_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+-אינווריאנטיים אז 
+\begin_inset Formula $P_{T}=P_{T\lceil_{U_{1}}}\cdot P_{T\lceil_{U_{2}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+בנוסף באופן מוכלל אם 
+\begin_inset Formula $V=\stackrel[i=1]{n}{\bigoplus}V_{i}$
+\end_inset
+
+ כאשר כל 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ הוא 
+\begin_inset Formula $T$
+\end_inset
+
+-אינווריאנטי אז יהי הבסיס 
+\begin_inset Formula $B=\stackrel[i=1]{n}{\bigvee}B_{i}$
+\end_inset
+
+, מתקיים 
+\begin_inset Formula $\left[T\right]_{B}=\text{Diag}\left(\left[T\lceil_{V_{1}}\right]_{B_{1}},\dots,\left[T\lceil_{V_{n}}\right]_{B_{n}}\right)$
+\end_inset
+
+, ו-
+\begin_inset Formula $P_{T}=\prod_{i=1}^{n}P_{T\lceil_{U_{i}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
