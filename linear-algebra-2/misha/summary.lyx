@@ -941,5 +941,598 @@ status open
 
 \end_layout
 
+\begin_layout Section
+מרחב מנה
+\end_layout
+
+\begin_layout Standard
+נגדיר את יחס השקילות הבא: 
+\begin_inset Formula $v\sim u\iff v-u\in W$
+\end_inset
+
+ עבור 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ ו-
+\begin_inset Formula $W$
+\end_inset
+
+ כלשהו.
+\end_layout
+
+\begin_layout Standard
+את קבוצת המנה, 
+\begin_inset Formula $\nicefrac{V}{W}$
+\end_inset
+
+, שהיא הקבוצה של 
+\begin_inset Formula $\left[v\right]=\left\{ u\in V\mid u\sim v\right\} $
+\end_inset
+
+ לכל 
+\begin_inset Formula $v$
+\end_inset
+
+, ניתן בעצם להגדיר לפי פעולת חיבור 
+\begin_inset Formula $\left[v\right]+\left[u\right]=\left[v+u\right]$
+\end_inset
+
+ וכפל בסקלר 
+\begin_inset Formula $\lambda\cdot\left[v\right]=\left[\lambda\cdot v\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+זה יוצא מרחב וקטורי, שמקיים גם 
+\begin_inset Formula $\dim\left(\nicefrac{V}{W}\right)=\dim\left(V\right)-\dim\left(W\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+חוגים
+\end_layout
+
+\begin_layout Subsection
+הגדרות מלינארית
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Subsubsection
+חבורה
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle G,*\right\rangle $
+\end_inset
+
+ נקראת חבורה אם:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ סגורה לפעולה 
+\begin_inset Formula $*$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה אסוצייטיבית.
+\end_layout
+
+\begin_layout Enumerate
+קיים איבר יחידה )ניטרלי( לפעולה, כלומר 
+\begin_inset Formula $\exists e\in G.\forall g\in G.e*g=g*e=g$
+\end_inset
+
+.
+ האיבר הזה יחיד ומסומן 
+\begin_inset Formula $e_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+קיים איבר הופכי, כלומר 
+\begin_inset Formula $\forall g\in G.\exists h\in G.g*h=h*g=e$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $e$
+\end_inset
+
+ איבר יחידה.
+ האיבר ההופכי של 
+\begin_inset Formula $g$
+\end_inset
+
+ מסומן 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+חוג
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle R,*,+\right\rangle $
+\end_inset
+
+ נקראת חוג אם:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle R,+\right\rangle $
+\end_inset
+
+ חבורה חילופית.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה אסוצייטיבית על 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+מתקיים חוג הפילוג:
+\begin_inset Formula 
+\begin{align*}
+\forall a,b,c\in R. & a*\left(b+c\right)=a*b+a*c\\
+ & \left(b+c\right)*a=b*a+c*a
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בנוסף יש 
+\bar under
+חוג חילופי
+\bar default
+, )הכפל חילופי(, 
+\bar under
+חוג עם יחידה
+\bar default
+ )קיים איבר ניטרלי לכפל(, 
+\bar under
+ותחום שלמות
+\bar default
+ הוא חוג חילופי עם יחידה וללא מחלקי 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+שדה
+\end_layout
+
+\begin_layout Standard
+חוג חילופי עם יחידה כך ש-
+\begin_inset Formula $\left\langle R\setminus\left\{ 0\right\} ,*\right\rangle $
+\end_inset
+
+ חבורה חילופית.
+ 
+\bar under
+שדה הוא תחום שלמות
+\bar default
+, ותחום שלמות 
+\bar under
+סופי
+\bar default
+ הוא שדה.
+\end_layout
+
+\begin_layout Subsection
+הגדרות חדשות מלינארית
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Subsubsection
+חוגי הפולינומים והמטריצות
+\end_layout
+
+\begin_layout Standard
+נגדיר את 
+\bar under
+חוג הפולינומים מעל חוג 
+\begin_inset Formula $R$
+\end_inset
+
+
+\bar default
+ להיות 
+\begin_inset Formula $R\left[x\right]\subseteq\mathbb{N}\to\mathbb{R}$
+\end_inset
+
+.
+ נגדיר בנוסף 
+\begin_inset Formula $\deg\left(0\right)=\infty,\deg\left(p\right)=\max\left\{ n\in\mathbb{N}\mid p\left(n\right)\ne0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מתקיימת נוסחת המעלות: 
+\begin_inset Formula $\deg\left(p+q\right)\le\max\left(\deg\left(p\right),\deg\left(q\right)\right),\deg\left(p\cdot q\right)\le\deg\left(p\right)+\deg\left(q\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $R$
+\end_inset
+
+ תחום שלמות אז 
+\begin_inset Formula $R\left[x\right]$
+\end_inset
+
+ תחום שלמות.
+\end_layout
+
+\begin_layout Standard
+נגדיר את 
+\bar under
+חוג המטריצות הריבועיות
+\bar default
+ להיות 
+\begin_inset Formula $M_{n}\left(R\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג, לפי פעולות כפל וחיבור של מטריצות.
+ זה חוג לא חילופי.
+\end_layout
+
+\begin_layout Subsubsection
+הומומורפיזמים
+\end_layout
+
+\begin_layout Standard
+הומומורפיזם של חוגים זו פונקציה 
+\begin_inset Formula $\varphi:R_{1}\to R_{2}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\varphi\left(1_{R_{1}}\right)=1_{R_{2}}$
+\end_inset
+
+, ו-
+\begin_inset Formula $\varphi\left(a+b\right)=\varphi\left(a\right)+\varphi\left(b\right)$
+\end_inset
+
+ ו-
+\begin_inset Formula $\varphi\left(a\cdot b\right)=\varphi\left(a\right)\cdot\varphi\left(b\right)$
+\end_inset
+
+ )ולכן גם 
+\begin_inset Formula $\varphi\left(0_{R_{1}}\right)=0_{R_{2}}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+יש למשל הומומורפיזם בין 
+\begin_inset Formula $M_{n}\left(R\right)\left[x\right]$
+\end_inset
+
+ לבין 
+\begin_inset Formula $M_{n}\left(R\left[x\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+חילוק בחוגים
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג.
+ יהיו 
+\begin_inset Formula $a,b\in R$
+\end_inset
+
+, נאמר כי 
+\begin_inset Formula $a\mid b$
+\end_inset
+
+ אם 
+\begin_inset Formula $\exists c\in R.b=a\cdot c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בנוסף נקרא ל-
+\begin_inset Formula $a\in R$
+\end_inset
+
+ הפיך ב-
+\begin_inset Formula $R$
+\end_inset
+
+ אם קיים 
+\begin_inset Formula $b\in R$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $a\cdot b=1=b\cdot a$
+\end_inset
+
+.
+ בנוסף ההופכי יסומן 
+\begin_inset Formula $b=a^{-1}$
+\end_inset
+
+ והוא יחיד.
+\end_layout
+
+\begin_layout Standard
+ונסמן את קבוצת האיברים ההפיכים ב-
+\begin_inset Formula $R$
+\end_inset
+
+ בסימון 
+\begin_inset Formula $R^{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+חברים
+\end_layout
+
+\begin_layout Standard
+נאמר ש-
+\bar under
+
+\begin_inset Formula $a,b$
+\end_inset
+
+ חברים
+\bar default
+ אם קיים 
+\begin_inset Formula $u\in R^{x}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $a=ub$
+\end_inset
+
+.
+ זה יחס שקילות.
+\end_layout
+
+\begin_layout Subsection
+אידאלים
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג חילופי עם יחידה, 
+\begin_inset Formula $I\subseteq R$
+\end_inset
+
+ נקרא אידאל אם:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $I\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $I$
+\end_inset
+
+ סגור לחיבור.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $I$
+\end_inset
+
+ סגור לכפל ב
+\bar under
+איבר מ-
+\begin_inset Formula $R$
+\end_inset
+
+
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+או באופן שקול 
+\begin_inset Formula $I$
+\end_inset
+
+ תת מרחב וקטורי של מרחב ה-
+\begin_inset Formula $n$
+\end_inset
+
+יות 
+\begin_inset Formula $R^{1}$
+\end_inset
+
+.
+ דוגמה לאידאל היא 
+\begin_inset Formula $\mathbb{Z}_{even}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בנוסף, 
+\begin_inset Formula $I\subseteq R$
+\end_inset
+
+ הוא אידאל 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים הומומורפיזם 
+\begin_inset Formula $\varphi:R\to S$
+\end_inset
+
+ )
+\begin_inset Formula $S$
+\end_inset
+
+ חוג( כך ש-
+\begin_inset Formula $\ker\varphi=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+האידאל שנוצר ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $X\subseteq R$
+\end_inset
+
+ הוא 
+\begin_inset Formula $\text{sp}\left(X\right)$
+\end_inset
+
+ - והוא תמיד אידאל כי זה מרחב וקטורי ב-
+\begin_inset Formula $R^{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מתקיים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\mid b\iff\text{sp}\left(b\right)\subseteq\text{sp}\left(a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+חברים 
+\begin_inset Formula $\text{sp}\left(a\right)=\text{sp}\left(b\right)\iff a,b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ הפיך 
+\begin_inset Formula $\text{sp}\left(a\right)=R\iff$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
