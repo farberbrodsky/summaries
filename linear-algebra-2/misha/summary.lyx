@@ -1461,30 +1461,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-בנוסף, 
-\begin_inset Formula $I\subseteq R$
-\end_inset
-
- הוא אידאל 
-\begin_inset Formula $\iff$
-\end_inset
-
- קיים הומומורפיזם 
-\begin_inset Formula $\varphi:R\to S$
-\end_inset
-
- )
-\begin_inset Formula $S$
-\end_inset
-
- חוג( כך ש-
-\begin_inset Formula $\ker\varphi=I$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 האידאל שנוצר ע
 \begin_inset Quotes erd
 \end_inset
@@ -1531,6 +1507,183 @@ status open
 \begin_inset Formula $\text{sp}\left(a\right)=R\iff$
 \end_inset
 
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I\subseteq R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אידאל 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים הומומורפיזם 
+\begin_inset Formula $\varphi:R\to S$
+\end_inset
+
+ )
+\begin_inset Formula $S$
+\end_inset
+
+ חוג( כך ש-
+\begin_inset Formula $\ker\varphi=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+חוג ראשי
+\end_layout
+
+\begin_layout Standard
+תחום שלמות 
+\begin_inset Formula $R$
+\end_inset
+
+ נקרא 
+\bar under
+תחום ראשי
+\bar default
+ אם כל אידאל 
+\begin_inset Formula $I\subseteq R$
+\end_inset
+
+ נוצר על ידי איבר, כלומר קיים לו 
+\begin_inset Formula $a\in R$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $I=\text{sp}\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נגדיר לתחום ראשי 
+\begin_inset Formula $R$
+\end_inset
+
+ ואיברים 
+\begin_inset Formula $r_{1},\dots,r_{k}\in R$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\text{gcd}\left(r_{1},\dots,r_{k}\right)=\left\{ d\in R\mid\text{sp}\left(d\right)=\left(r_{1},\dots,r_{k}\right)\right\} 
+\]
+
+\end_inset
+
+בנוסף מתקיים:
+\end_layout
+
+\begin_layout Itemize
+עבור 
+\begin_inset Formula $d$
+\end_inset
+
+ כלשהו ב-
+\begin_inset Formula $\gcd\left(r_{1},\dots,r_{k}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\text{gcd}\left(r_{1},\dots,r_{k}\right)=\left\{ d\cdot u\mid u\in R^{x}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d\in\gcd\left(r_{1},\dots,r_{k}\right)\iff\left(\forall1\le i\le k.d\mid r_{i}\right)\land\left(q\mid r_{1},\dots,r_{k}\implies q\mid d\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a,b\in R$
+\end_inset
+
+ יקראו 
+\bar under
+זרים
+\bar default
+ אם 
+\begin_inset Formula $\gcd\left(a,b\right)=1$
+\end_inset
+
+ או באופן שקול 
+\begin_inset Formula $1$
+\end_inset
+
+ צירוף לינארי של 
+\begin_inset Formula $a,b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0\ne a\in R$
+\end_inset
+
+ יקרא 
+\bar under
+ראשוני
+\bar default
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left(a\mid b\cdot c\implies\left(a\mid c\lor a\mid b\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נגדיר בנוסף 
+\begin_inset Formula $\text{lcm}\left(r_{1},\dots,r_{k}\right)=\left\{ d\in R\mid\text{sp}\left(d\right)=\bigcap_{i=1}^{r}r_{i}\right\} $
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+lowest common multiplier
+\lang hebrew
 .
 \end_layout
 
