@@ -1,0 +1,967 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[use-david]{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+סיכומי הרצאות 
+\series default
+- אלגברה לינארית
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+א
+\end_layout
+
+\begin_layout Author
+מיכאל פרבר ברודסקי
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+דברים חשובים מלינארית
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Subsection
+מטריצות דומות
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $A,B\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+, נאמר כי 
+\begin_inset Formula $A$
+\end_inset
+
+ ו-
+\begin_inset Formula $B$
+\end_inset
+
+ דומות אם קיימת מטריצה הפיכה 
+\begin_inset Formula $P$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $A=P^{-1}\cdot B\cdot P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ נתון 
+\begin_inset Formula $A,B\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ ריבועיות, הבאים שקולים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות.
+\end_layout
+
+\begin_layout Enumerate
+קיימת 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ ובסיסים 
+\begin_inset Formula $C,C^{\prime}$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C}=A,\left[T\right]_{C^{\prime}}=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+, אם קיים בסיס 
+\begin_inset Formula $C$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C}=A$
+\end_inset
+
+, אז קיים בסיס 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{C^{\prime}}=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ואם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{Rank}\left(A\right)=\text{Rank}\left(B\right),\mathcal{N}\left(A\right)=\mathcal{N}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{tr}\left(A\right)=\text{tr}\left(B\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\text{tr}\left(A\right)=\sum_{i=1}^{n}\left(A\right)_{i,i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det\left(A\right)=\det\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+לכסון
+\end_layout
+
+\begin_layout Subsection
+הגדרות בסיסיות
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מטריצה אלכסונית:
+\series default
+ מטריצה ריבועית 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ שבה עבור 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+, 
+\begin_inset Formula $A_{i,j}=0$
+\end_inset
+
+.
+ נגדיר את 
+\begin_inset Formula $Diag\left(\lambda_{1},\dots,\lambda_{n}\right)$
+\end_inset
+
+ להיות המטריצה שיש לה 
+\begin_inset Formula $\lambda_{1},\dots,\lambda_{n}$
+\end_inset
+
+ על האלכסון.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מטריצה לכסינה:
+\series default
+ מטריצה ריבועית 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ שדומה למטריצה אלכסונית.
+ המטרה של מטריצות לכסינות היא שקל להעלות אותן בחזקה.
+ עבור 
+\begin_inset Formula $D$
+\end_inset
+
+ מטריצה אלכסונית, קיימת 
+\begin_inset Formula $P$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\begin{align*}
+A & =PDP^{-1}\\
+A^{n} & =\overbrace{PDP^{-1}\cdot\dots\cdot PDP^{-1}}^{n\text{ times}}=PD^{n}P^{-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+העתקה לכסינה:
+\series default
+ העתקה לינארית 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ כך שקיים בסיס 
+\begin_inset Formula $B$
+\end_inset
+
+ של 
+\begin_inset Formula $V$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{B}^{B}$
+\end_inset
+
+ אלכסונית.
+\end_layout
+
+\begin_layout Definition
+בנוסף, אם 
+\begin_inset Formula $T$
+\end_inset
+
+ העתקה לכסינה אז כל מטריצה מייצגת שלה לפי בסיס 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $\left[T\right]_{C}^{C}$
+\end_inset
+
+, היא לכסינה.
+\end_layout
+
+\begin_layout Subsubsection
+ערך עצמי
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+וקטור עצמי של 
+\begin_inset Formula $T$
+\end_inset
+
+ לערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $T\left(\overline{v}\right)=\lambda\overline{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ערך עצמי של 
+\begin_inset Formula $A$
+\end_inset
+
+ לערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $A\overline{v}=\lambda\overline{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ערך עצמי של 
+\begin_inset Formula $T$
+\end_inset
+
+:
+\series default
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ כך שקיים וקטור עצמי 
+\bar under
+
+\begin_inset Formula $\overline{v}\ne0$
+\end_inset
+
+
+\bar default
+ של 
+\begin_inset Formula $T$
+\end_inset
+
+ לערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+וקטורים עצמיים
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מרחבים עצמיים: 
+\series default
+תהא 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ ה
+\begin_inset Quotes erd
+\end_inset
+
+ל, ויהי 
+\begin_inset Formula $\lambda\in\mathbb{F}$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula $V_{\lambda}=\left\{ \overline{v}\in V\mid T\left(\overline{v}\right)=\lambda\overline{v}\right\} $
+\end_inset
+
+, כלומר קבוצת הוקטורים עם ערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ערך עצמי של 
+\begin_inset Formula $T$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $V_{\lambda}\ne\left\{ 0_{V}\right\} $
+\end_inset
+
+.
+ בנוסף 
+\begin_inset Formula $V_{\lambda}$
+\end_inset
+
+ תמ
+\begin_inset Quotes erd
+\end_inset
+
+ו.
+ ניתן גם להגדיר כך: 
+\begin_inset Formula $V_{\lambda}=\text{Sols}\left(A-\lambda I\right)/\ker\left(T-\lambda\cdot Id\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+פולינום אופייני:
+\series default
+ תהא 
+\begin_inset Formula $A\in M_{m\times n}\left(\mathbb{F}\right)$
+\end_inset
+
+, נסמן ב-
+\begin_inset Formula $P_{A}\left(\lambda\right)=\left|A-\lambda I\right|$
+\end_inset
+
+ את הפולינום האופייני של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+טענות:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P_{A}\left(\lambda\right)\in\mathbb{F}\left[\lambda\right]$
+\end_inset
+
+.
+ הוכחה:
+\begin_inset Formula 
+\[
+P_{A}\left(\lambda\right)=\sum_{\sigma\in S_{n}}\text{sign}\left(\sigma\right)\cdot\prod_{i=1}^{n}\overbrace{\left(A-\lambda I\right)_{i,\sigma\left(i\right)}}^{polynomial\,in\,\mathbb{F}\left[\lambda\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+המקדם המוביל ב-
+\begin_inset Formula $P_{A}\left(\lambda\right)$
+\end_inset
+
+ הוא 
+\begin_inset Formula $\left(-1\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ערך עצמי של 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\det\left(T-\lambda Id\right)=0\iff\ker\left(T-\lambda Id\right)=V_{\lambda}\ne\left\{ \overline{0}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ערך עצמי של 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ שורש של 
+\begin_inset Formula $P_{A}\left(\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז 
+\begin_inset Formula $P_{A}=P_{B}$
+\end_inset
+
+.
+ הוכחה:
+\begin_inset Formula 
+\begin{align*}
+P_{A}\left(\lambda\right)= & \left|A-\lambda I\right|=\left|PBP^{-1}-\lambda I\right|=\left|PBP^{-1}-P\lambda IP^{-1}\right|=\left|P\left(B-\lambda I\right)P^{-1}\right|\\
+= & \left|P\right|\left|B-\lambda I\right|\left|P^{-1}\right|=\left|B-\lambda I\right|=P_{B}\left(\lambda\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+נגדיר 
+\begin_inset Formula $P_{T}\left(\lambda\right)=P_{\left[T\right]_{B}}\left(\lambda\right)$
+\end_inset
+
+ - זה לא משנה איזה 
+\begin_inset Formula $B$
+\end_inset
+
+ בחרנו.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ריבוי גיאומטרי של 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\series default
+ נסמן ב-
+\begin_inset Formula $\mu_{\lambda}^{A}=\mu_{\lambda}^{T}=\mu_{\lambda}=\dim\left(V_{\lambda}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ריבוי אלגברי של 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\series default
+ מסומן 
+\begin_inset Formula $\rho_{\lambda}$
+\end_inset
+
+ )רו(, הוא הריבוי של 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ בפולינום האופייני 
+\begin_inset Formula $P_{A}\left(\lambda\right)$
+\end_inset
+
+, כלומר כמה פעמים הוא מופיע בפולינום.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+טענות:
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $A$
+\end_inset
+
+ מטריצה בעלת ערכים עצמיים 
+\begin_inset Formula $\lambda_{1},\dots,\lambda_{k}$
+\end_inset
+
+ עם ריבויים אלגבריים 
+\begin_inset Formula $\rho_{\lambda_{1}},\dots,\rho_{\lambda_{k}}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\rho_{\lambda_{1}}+\dots+\rho_{\lambda_{k}}\le n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $P_{A}\left(\lambda\right)$
+\end_inset
+
+ מתפרק לגורמים לינאריים אז 
+\begin_inset Formula $\rho_{\lambda_{1}}+\dots+\rho_{\lambda_{k}}=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל ערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{\lambda}\le P_{\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+משפטים
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים בסיס 
+\begin_inset Formula $B\subseteq\mathbb{F}^{n}$
+\end_inset
+
+ שמורכב מוקטורים עצמיים של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $T$
+\end_inset
+
+ לכסינה )או 
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה( אז על האלכסון של הצורה האלכסונית מופיעים הערכים העצמיים של 
+\begin_inset Formula $T$
+\end_inset
+
+ )או 
+\begin_inset Formula $A$
+\end_inset
+
+(.
+ זה יחיד עד כדי הסידור של האלכסון.
+\end_layout
+
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $A/T$
+\end_inset
+
+ עם ערכים עצמיים 
+\begin_inset Formula $\lambda_{1},\dots,\lambda_{n}$
+\end_inset
+
+.
+ אז הסכום 
+\begin_inset Formula $V_{\lambda_{1}}\oplus\dots\oplus V_{\lambda_{n}}$
+\end_inset
+
+ הוא סכום ישר.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+לכן אם 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ בעלת 
+\begin_inset Formula $n$
+\end_inset
+
+ ערכים עצמיים שונים, אז 
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה.
+ ההפך לא בהכרח נכון.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+המשפט המרכזי:
+\series default
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ אזי: 
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה מעל 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P_{A}\left(\lambda\right)$
+\end_inset
+
+ מתפרק לגורמים לינארים מעל 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל ע
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $\rho_{\lambda}=\mu_{\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
