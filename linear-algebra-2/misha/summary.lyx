@@ -688,5 +688,151 @@ LatexCommand tableofcontents
 .
 \end_layout
 
+\begin_layout Section
+אינווריאנטיות
+\end_layout
+
+\begin_layout Standard
+תהא 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ העתקה לינארית, תת מרחב 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+ נקרא 
+\bar under
+
+\begin_inset Formula $T$
+\end_inset
+
+-אינווריאנטי
+\bar default
+ )
+\begin_inset Formula $T$
+\end_inset
+
+-שמור( אם 
+\begin_inset Formula $T\left[U\right]\subseteq U$
+\end_inset
+
+, או באופן שקול אם 
+\begin_inset Formula $T$
+\end_inset
+
+ מצומצם ל-
+\begin_inset Formula $U$
+\end_inset
+
+ ט
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Standard
+דוגמאות למרחבים 
+\begin_inset Formula $T$
+\end_inset
+
+-אינווריאנטים הן 
+\begin_inset Formula $\ker\left(T\right),Im\left(T\right)$
+\end_inset
+
+ ו-
+\begin_inset Formula $V_{\lambda}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בנוסף נגדיר תת מרחב 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+ 
+\bar under
+אי פריק
+\bar default
+ להיות תת מרחב 
+\begin_inset Formula $T$
+\end_inset
+
+-אינווריאנטי כך שלא קיימים 
+\begin_inset Formula $W_{1},W_{2}\ne\left\{ \overline{0}\right\} $
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+-אינווריאנטים שמקיימים 
+\begin_inset Formula $U=W_{1}\oplus W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה מייצגת:
+\series default
+ אם 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+-אינווריאנטי, יהי 
+\begin_inset Formula $B$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ השלמה לבסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $\left[T\right]_{B\frown C}=\left(\begin{array}{c|c}
+\left[T\lceil_{U}\right]_{B} & *\\
+\hline 0 & *
+\end{array}\right)$
+\end_inset
+
+.
+ זה כי המקדמים שלמטה לא מופיעים ב-
+\begin_inset Formula $U$
+\end_inset
+
+ ולכן גם לא בתמונה של 
+\begin_inset Formula $U$
+\end_inset
+
+ )כי היא מוכלת ב-
+\begin_inset Formula $U$
+\end_inset
+
+(.
+\end_layout
+
 \end_body
 \end_document
