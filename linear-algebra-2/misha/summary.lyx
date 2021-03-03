@@ -1029,8 +1029,11 @@ status open
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
 \begin_inset Graphics
 	filename fields.svg
+	width 30text%
 
 \end_inset
 
