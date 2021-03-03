@@ -1028,6 +1028,15 @@ status open
 1
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename fields.svg
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 חבורה
 \end_layout
