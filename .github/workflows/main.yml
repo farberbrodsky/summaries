@@ -30,6 +30,8 @@ jobs:
           cd ..
           rm -r LyX-ubuntu-installer
           sudo apt-get install texlive-latex-recommended
+      - name: Install Inkscape for SVG graphics
+        run: sudo apt-get install inkscape
       - name: Install required packages for compile.py
         run: sudo apt-get install python3-setuptools && pip3 install jinja2 htmlmin
       - name: Run compile.py
