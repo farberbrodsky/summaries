@@ -460,7 +460,26 @@ LatexCommand tableofcontents
  השונים הוא סכום ישר.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Theorem
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים בסיס 
+\begin_inset Formula $B\subseteq\mathbb{F}^{n}$
+\end_inset
+
+ שמורכב מוקטורים עצמיים של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 פולינום אופייני
 \end_layout
 
@@ -516,6 +535,25 @@ LatexCommand tableofcontents
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
 \begin_layout Theorem
 
 \series bold
@@ -561,7 +599,7 @@ LatexCommand tableofcontents
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 בנוסף נגדיר את 
 \bar under
 הריבוי הגיאומטרי של 
@@ -581,7 +619,7 @@ LatexCommand tableofcontents
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $A$
 \end_inset
 
@@ -635,8 +673,6 @@ LatexCommand tableofcontents
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
@@ -657,32 +693,6 @@ LatexCommand tableofcontents
 
  מתפרק לגורמים לינאריים אז גם 
 \begin_inset Formula $\rho_{\lambda_{1}}+\dots+\rho_{\lambda_{k}}=n$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Formula $A$
-\end_inset
-
- לכסינה 
-\begin_inset Formula $\iff$
-\end_inset
-
- קיים בסיס 
-\begin_inset Formula $B\subseteq\mathbb{F}^{n}$
-\end_inset
-
- שמורכב מוקטורים עצמיים של 
-\begin_inset Formula $A$
 \end_inset
 
 .
@@ -1262,6 +1272,39 @@ status open
  תחום שלמות.
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+חילוק בחוג הפולינומים:
+\series default
+ יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג חילופי, ו-
+\begin_inset Formula $f,g\in R\left[x\right]$
+\end_inset
+
+ פולינומים כך שהמקדם המוביל של 
+\begin_inset Formula $g$
+\end_inset
+
+ הפיך ב-
+\begin_inset Formula $R$
+\end_inset
+
+.
+ אז קיימים ויחידים 
+\begin_inset Formula $q,r\in R\left[x\right]$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $f=q\cdot g+r$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 נגדיר את 
 \bar under
@@ -1370,14 +1413,22 @@ status open
 \end_layout
 
 \begin_layout Standard
-ונסמן את קבוצת האיברים ההפיכים ב-
+ונסמן את קבוצת 
+\bar under
+האיברים ההפיכים ב-
 \begin_inset Formula $R$
 \end_inset
 
+
+\bar default
  בסימון 
+\bar under
+
 \begin_inset Formula $R^{x}$
 \end_inset
 
+
+\bar default
 .
 \end_layout
 
@@ -1550,7 +1601,81 @@ status open
 \end_layout
 
 \begin_layout Subsection
-חוג ראשי
+תחום שלמות
+\end_layout
+
+\begin_layout Standard
+תחום שלמות הוא חוג חילופי עם יחידה וללא מחלקי 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בחוג חילופי עם יחידה )לא דרוש שאין מחלקי 
+\begin_inset Formula $0$
+\end_inset
+
+( מתקיים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0\ne a\in R$
+\end_inset
+
+ יקרא 
+\bar under
+ראשוני
+\bar default
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left(a\mid b\cdot c\implies\left(a\mid c\lor a\mid b\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\in R$
+\end_inset
+
+ יקרא 
+\bar under
+אי-פריק
+\bar default
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left(a=b\cdot c\implies b\in R^{x}\lor c\in R^{x}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בתחום שלמות מתקיים:
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a\in R$
+\end_inset
+
+ ראשוני אז 
+\begin_inset Formula $a$
+\end_inset
+
+ אי-פריק.
+\end_layout
+
+\begin_layout Subsection
+תחום ראשי
 \end_layout
 
 \begin_layout Standard
@@ -1644,22 +1769,14 @@ status open
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $0\ne a\in R$
+\begin_inset Formula $a\in R$
 \end_inset
 
- יקרא 
-\bar under
-ראשוני
-\bar default
- 
+ אי-פריק 
 \begin_inset Formula $\iff$
 \end_inset
 
- 
-\begin_inset Formula $\left(a\mid b\cdot c\implies\left(a\mid c\lor a\mid b\right)\right)$
-\end_inset
-
-
+ ראשוני.
 \end_layout
 
 \begin_layout Standard
@@ -1696,6 +1813,112 @@ status open
 \lang english
 lowest common multiplier
 \lang hebrew
+.
+\end_layout
+
+\begin_layout Section
+קבוצת הפולינומים
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ מעל שדה 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ ו-
+\begin_inset Formula $p\in\mathbb{F}\left[x\right]$
+\end_inset
+
+ הגדרנו 
+\begin_inset Formula $p\left(T\right)\in\text{Hom}\left(V,V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+ ו-
+\begin_inset Formula $p\in\mathbb{F}\left[x\right]$
+\end_inset
+
+ אז 
+\begin_inset Formula $p\left(A\right)$
+\end_inset
+
+ זו מטריצה 
+\begin_inset Formula $p\left(A\right)\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הקשר בין 
+\begin_inset Formula $\left[T\right]_{B}$
+\end_inset
+
+ ל-
+\begin_inset Formula $\left[p\left(T\right)\right]_{B}$
+\end_inset
+
+ הוא ש-
+\bar under
+
+\begin_inset Formula $p\left(\left[T\right]_{B}\right)=\left[p\left(T\right)\right]_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מתקיים בנוסף:
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ערך עצמי של 
+\begin_inset Formula $A$
+\end_inset
+
+ אז 
+\begin_inset Formula $p\left(\lambda\right)$
+\end_inset
+
+ ערך עצמי של 
+\begin_inset Formula $p\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז 
+\begin_inset Formula $p\left(A\right)$
+\end_inset
+
+ ו-
+\begin_inset Formula $p\left(B\right)$
+\end_inset
+
+ דומות, ליתר דיוק, 
+\begin_inset Formula $p\left(QAQ^{-1}\right)=Qp\left(A\right)Q^{-1}$
+\end_inset
+
 .
 \end_layout
 
