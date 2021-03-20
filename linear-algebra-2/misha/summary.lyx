@@ -535,6 +535,18 @@ LatexCommand tableofcontents
 .
 \end_layout
 
+\begin_layout Itemize
+עבור מטריצת בלוקים אלכסונית 
+\begin_inset Formula $A=\text{Diag}\left(A_{1},\dots,A_{n}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $P_{A}=P_{A_{1}}\cdot\dots\cdot P_{A_{n}}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Box Doublebox
 position "t"
@@ -1228,7 +1240,7 @@ status open
 \end_layout
 
 \begin_layout Subsubsection
-חוגי הפולינומים והמטריצות
+חוגי הפולינומים, המטריצות והעתקות
 \end_layout
 
 \begin_layout Standard
@@ -1257,15 +1269,55 @@ status open
 \begin_inset Formula $\deg\left(p+q\right)\le\max\left(\deg\left(p\right),\deg\left(q\right)\right),\deg\left(p\cdot q\right)\le\deg\left(p\right)+\deg\left(q\right)$
 \end_inset
 
-
+.
 \end_layout
 
-\begin_layout Itemize
+\begin_deeper
+\begin_layout Standard
 אם 
 \begin_inset Formula $R$
 \end_inset
 
  תחום שלמות אז 
+\begin_inset Formula $\deg\left(p\cdot q\right)=\deg\left(p\right)+\deg\left(q\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+אם 
+\begin_inset Formula $R$
+\end_inset
+
+ תחום שלמות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אז 
 \begin_inset Formula $R\left[x\right]$
 \end_inset
 
@@ -1320,6 +1372,31 @@ status open
 
  חוג, לפי פעולות כפל וחיבור של מטריצות.
  זה חוג לא חילופי.
+\end_layout
+
+\begin_layout Standard
+נגדיר את 
+\bar under
+חוג ההעתקות ממרחב לעצמו
+\bar default
+ להיות 
+\begin_inset Formula $\text{Hom}_{\mathbb{F}}\left(V,V\right)$
+\end_inset
+
+ יחד עם הרכבה ועם חיבור פונקציות.
+ זה חוג לא חילופי עם יחידה 
+\begin_inset Formula $Id_{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+השילובים הנפוצים הם 
+\begin_inset Formula $\text{Hom}_{\mathbb{F}}\left(V,V\right)\left[x\right],M_{n}\left(R\right)\left[x\right],M_{n}\left(R\left[x\right]\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1430,6 +1507,35 @@ status open
 
 \bar default
 .
+ לדוגמה ב-
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ האיברים ההפיכים היחידים הם 
+\begin_inset Formula $\pm1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ בתחום שלמות, אם 
+\begin_inset Formula $a=bu$
+\end_inset
+
+ ו-
+\begin_inset Formula $b=av$
+\end_inset
+
+ אז 
+\begin_inset Formula $u,v$
+\end_inset
+
+ הפיכים.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1598,6 +1704,93 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection
+אידאל מאפס
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+האידאל המאפס של מטריצה 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+
+\bar default
+ הוא האידאל הבא: 
+\begin_inset Formula $Z\left(A\right)=\left\{ p\in\mathbb{F}\left[x\right]\mid p\left(A\right)=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+זה אידאל כי 
+\begin_inset Formula $\ker\left(\varphi_{A}\right)=Z\left(A\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\varphi_{A}:\mathbb{F}\left[x\right]\to M_{n}\left(A\right)$
+\end_inset
+
+ העתקת ההצבה.
+ לכל 
+\begin_inset Formula $A$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Z\left(A\right)\ne\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הפולינום האופייני תמיד ב-
+\begin_inset Formula $Z\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נסמן את 
+\bar under
+הפולינום המינימלי של 
+\begin_inset Formula $A$
+\end_inset
+
+
+\bar default
+ ב-
+\begin_inset Formula $m_{A}\in\mathbb{F}\left[x\right]$
+\end_inset
+
+, להיות הפולינום המתוקן היחידי כך ש-
+\begin_inset Formula $\text{sp}\left(m_{A}\right)=Z\left(A\right)$
+\end_inset
+
+.
+ מתקיים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{A}\left(A\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{A}\mid P_{A}$
+\end_inset
+
+ הפולינום האופייני.
 \end_layout
 
 \begin_layout Subsection
