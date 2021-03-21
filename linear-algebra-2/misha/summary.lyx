@@ -1809,6 +1809,44 @@ status open
  הפולינום האופייני.
 \end_layout
 
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $q\in\mathbb{F}\left[x\right]$
+\end_inset
+
+ א
+\begin_inset Quotes erd
+\end_inset
+
+פ, 
+\begin_inset Formula $q\mid P_{T}\iff q\mid m_{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+לכן אם 
+\begin_inset Formula $P_{T}=\prod_{i\in I}q_{i}^{m_{i}}$
+\end_inset
+
+ )
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ אי פריקים( אז 
+\begin_inset Formula $m_{T}=\prod_{i\in I}q_{i}^{r_{i}}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $1\le m_{i}\implies1\le r_{i}\le m_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 תחום שלמות
 \end_layout
