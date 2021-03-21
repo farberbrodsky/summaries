@@ -1321,7 +1321,7 @@ status open
 \begin_inset Formula $R\left[x\right]$
 \end_inset
 
- תחום שלמות.
+ תחום ראשי.
 \end_layout
 
 \begin_layout Itemize
@@ -1352,6 +1352,18 @@ status open
 
  כך ש-
 \begin_inset Formula $f=q\cdot g+r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+ב-
+\begin_inset Formula $R\left[x\right]$
+\end_inset
+
+ ההפיכים היחידים הם הפולינומים הקבועים של ההפיכים מ-
+\begin_inset Formula $R$
 \end_inset
 
 .
@@ -1676,6 +1688,10 @@ status open
 \begin_inset Formula $\text{sp}\left(a\right)=R\iff$
 \end_inset
 
+, בפרט 
+\begin_inset Formula $\text{sp}\left(1\right)=R$
+\end_inset
+
 .
 \end_layout
 
@@ -1907,7 +1923,7 @@ status open
 :
 \begin_inset Formula 
 \[
-\text{gcd}\left(r_{1},\dots,r_{k}\right)=\left\{ d\in R\mid\text{sp}\left(d\right)=\left(r_{1},\dots,r_{k}\right)\right\} 
+\text{gcd}\left(r_{1},\dots,r_{k}\right)=\left\{ d\in R\mid\text{sp}\left(d\right)=\text{sp}\left(r_{1},\dots,r_{k}\right)\right\} 
 \]
 
 \end_inset
@@ -1974,7 +1990,7 @@ status open
 
 \begin_layout Standard
 נגדיר בנוסף 
-\begin_inset Formula $\text{lcm}\left(r_{1},\dots,r_{k}\right)=\left\{ d\in R\mid\text{sp}\left(d\right)=\bigcap_{i=1}^{r}r_{i}\right\} $
+\begin_inset Formula $\text{lcm}\left(r_{1},\dots,r_{k}\right)=\left\{ d\in R\mid\text{sp}\left(d\right)=\bigcap_{i=1}^{r}\text{sp}\left(r_{i}\right)\right\} $
 \end_inset
 
 ,
@@ -2007,6 +2023,7 @@ status open
 lowest common multiplier
 \lang hebrew
 .
+ אידאל מינימלי.
 \end_layout
 
 \begin_layout Section
