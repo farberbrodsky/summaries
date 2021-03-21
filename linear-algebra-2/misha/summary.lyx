@@ -1411,6 +1411,56 @@ status open
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ כל פולינום 
+\bar under
+בשדה
+\bar default
+ ניתן לכתוב בתור מכפלה של אי-פריקים.
+ תהא 
+\begin_inset Formula $\left\{ q_{i}\mid i\in I\right\} $
+\end_inset
+
+ קבוצת כל הפולינומים הא
+\begin_inset Quotes erd
+\end_inset
+
+פ 
+\bar under
+המתוקנים
+\bar default
+ מעל 
+\begin_inset Formula $\mathbb{F}\left[x\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ שדה.
+ כל פולינום 
+\begin_inset Formula $0\ne p\in\mathbb{F}\left[x\right]$
+\end_inset
+
+ ניתן לרשום 
+\bar under
+באופן יחיד
+\bar default
+ 
+\begin_inset Formula $p=c\cdot\prod_{i\in I}q_{i}^{n_{i}}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $c\in\mathbb{F}^{x}=\mathbb{F}\setminus\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 הומומורפיזמים
 \end_layout
@@ -1547,7 +1597,15 @@ status open
 \begin_inset Formula $u,v$
 \end_inset
 
- הפיכים.
+ הפיכים, ובפרט 
+\begin_inset Formula $u\cdot v=1$
+\end_inset
+
+ )כלומר 
+\begin_inset Formula $u=v^{-1}$
+\end_inset
+
+(.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1662,6 +1720,18 @@ status open
 \end_layout
 
 \begin_layout Standard
+
+\bar under
+אידאל ראשי
+\bar default
+ הוא אידאל של איבר אחד - 
+\begin_inset Formula $\text{sp}\left(a\right)=\left\{ ab\mid b\in R\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 מתקיים:
 \end_layout
 
@@ -1673,11 +1743,10 @@ status open
 \end_layout
 
 \begin_layout Itemize
-חברים 
-\begin_inset Formula $\text{sp}\left(a\right)=\text{sp}\left(b\right)\iff a,b$
+\begin_inset Formula $a,b\iff\text{sp}\left(a\right)=\text{sp}\left(b\right)$
 \end_inset
 
-
+ חברים.
 \end_layout
 
 \begin_layout Itemize
