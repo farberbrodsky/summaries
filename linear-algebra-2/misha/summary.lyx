@@ -1832,12 +1832,32 @@ status open
 \begin_inset Formula $Z\left(A\right)\ne\left\{ 0\right\} $
 \end_inset
 
+, ולמעשה יש פולינום 
+\begin_inset Formula $0\ne p\in Z\left(A\right)$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\deg\left(p\right)\le n^{2}$
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Itemize
 הפולינום האופייני תמיד ב-
 \begin_inset Formula $Z\left(A\right)$
+\end_inset
+
+ - משפט קיילי המילטון.
+\end_layout
+
+\begin_layout Standard
+בנוסף אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז 
+\begin_inset Formula $Z\left(A\right)=Z\left(B\right)$
 \end_inset
 
 .
@@ -1876,6 +1896,11 @@ status open
 \end_inset
 
  הפולינום האופייני.
+ בפרט 
+\bar under
+הפולינום האופייני מאפס
+\bar default
+.
 \end_layout
 
 \begin_layout Itemize
@@ -1916,6 +1941,28 @@ status open
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+בנוסף במטריצת בלוקים אלכסונית 
+\begin_inset Formula $\text{Diag}\left(A_{1},\dots,A_{n}\right)$
+\end_inset
+
+ מתקיים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{A}=P_{A_{1}}\cdot\dots\cdot P_{A_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{A}=\text{lcm}\left(m_{A_{1}},\dots,m_{A_{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 תחום שלמות
 \end_layout
@@ -2234,6 +2281,31 @@ lowest common multiplier
 
  דומות, ליתר דיוק, 
 \begin_inset Formula $p\left(QAQ^{-1}\right)=Qp\left(A\right)Q^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכן אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז לכל 
+\begin_inset Formula $p\in\mathbb{F}\left[x\right]$
+\end_inset
+
+, 
+\begin_inset Formula $p\left(A\right)=0\iff p\left(B\right)=0$
+\end_inset
+
+.
+ כלומר אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז 
+\begin_inset Formula $Z\left(A\right)=Z\left(B\right)$
 \end_inset
 
 .
