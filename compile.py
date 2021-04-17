@@ -23,14 +23,14 @@ for root, dirs, files in os.walk("."):
                 # found a lyx file, compile it
                 place = os.path.join(root, filename)
                 print("compiling", place)
-                if os.popen("cd " + root + " && lyx --export pdf2 " + filename).close() != None:
+                if os.popen(f"cd {root} && lyx --export pdf2 {filename} && lyx --export xhtml {filename}").close() != None:
                     print("Error in compilation")
                     sys.exit()
-                pdf_files.append(place[1:-3] + "pdf")
+                pdf_files.append(place[1:-4])
 print("finished compiling LyX")
 
 # generate pages
-# pdf_files is ['/discrete-mathematics/ultimate-summary-misha/summary.pdf', '/intro-to-computer-science/dutz-misha/dutz.pdf', '/B/sikum.pdf']
+# pdf_files is ['/discrete-mathematics/ultimate-summary-misha/summary', '/intro-to-computer-science/dutz-misha/dutz', '/B/sikum']
 pdf_directories = {}
 for file_name in pdf_files:
     curr_dir = pdf_directories
@@ -44,7 +44,7 @@ for file_name in pdf_files:
     
     curr_dir["files"].append(slashed[-1])
 
-# pdf_directories is {'discrete-mathematics': {'ultimate-summary-misha': {'files': ['summary.pdf']}}, 'intro-to-computer-science': {'dutz-misha': {'files': ['dutz.pdf']}}, 'B': {'files': ['sikum.pdf']}}
+# pdf_directories is {'discrete-mathematics': {'ultimate-summary-misha': {'files': ['summary']}}, 'intro-to-computer-science': {'dutz-misha': {'files': ['dutz']}}, 'B': {'files': ['sikum']}}
 
 folder_template = None
 with open("./website/folder.jinja2", "r") as folder_template_file:
@@ -53,6 +53,22 @@ file_template = None
 with open("./website/file.jinja2", "r") as file_template_file:
     file_template = Template(file_template_file.read())
 
+try:
+    rmtree("./docs")
+except:
+    pass
+os.popen("cp -r ./website/public ./docs").close()
+
+# Copy PDF files to website
+for pdf_file in pdf_files:
+    try:
+        os.makedirs("./docs" + "/".join(pdf_file.split("/")[:-1]))
+        print("mkdir", "./docs" + "/".join(pdf_file.split("/")[:-1]))
+    except:
+        pass
+    copyfile("." + pdf_file + ".pdf", "./docs" + pdf_file + ".pdf")
+    copyfile("." + pdf_file + ".xhtml", "./docs" + pdf_file + ".xhtml")
+    print("copy", "." + pdf_file + ".xhtml", "to", "./docs" + pdf_file + ".xhtml")
 
 def make_website_recursively(dirs, where):
     _keys = list(sorted(dirs.items(), key=lambda x: x[0]))
@@ -73,22 +89,19 @@ def make_website_recursively(dirs, where):
     for filename in files:
         with open("./docs/" + where + filename + ".html", "w") as my_file:
             # Make a page for the file
-            my_file.write(htmlmin.minify(file_template.render(filename="/" + where + filename)))
+            try:
+                with open("./docs/" + where + filename + ".xhtml", "r") as lyxhtml_file:
+                    lyxhtml = lyxhtml_file.read()
+                    print("found", lyxhtml.find("<body dir=\"auto\">"), lyxhtml.find("</body>"))
+                    lyxhtml = lyxhtml[(lyxhtml.find("<body dir=\"auto\">") + 17):(lyxhtml.find("</body>"))]
+                    my_file.write((file_template.render(filename="/" + where + filename, lyxhtml=lyxhtml)))
+            except:
+                pass
 
 
     for k, v in subdirs:
         make_website_recursively(v, where + k + "/")
 
-try:
-    rmtree("./docs")
-except:
-    pass
-
-os.popen("cp -r ./website/public ./docs").close()
-
 make_website_recursively(pdf_directories, "")
-# Copy PDF files to website
-for pdf_file in pdf_files:
-    copyfile("." + pdf_file, "./docs" + pdf_file)
 print("generated website")
 print("done")
