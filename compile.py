@@ -94,7 +94,7 @@ def make_website_recursively(dirs, where):
                     lyxhtml = lyxhtml_file.read()
                     print("found", lyxhtml.find("<body dir=\"auto\">"), lyxhtml.find("</body>"))
                     lyxhtml = lyxhtml[(lyxhtml.find("<body dir=\"auto\">") + 17):(lyxhtml.find("</body>"))]
-                    my_file.write((file_template.render(filename="/" + where + filename, lyxhtml=lyxhtml)))
+                    my_file.write(htmlmin.minify(file_template.render(filename="/" + where + filename, lyxhtml=lyxhtml)))
             except:
                 pass
 
