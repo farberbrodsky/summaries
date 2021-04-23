@@ -2311,5 +2311,347 @@ lowest common multiplier
 .
 \end_layout
 
+\begin_layout Section
+מכפלה פנימית
+\end_layout
+
+\begin_layout Subsection
+הגדרות בסיסיות
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ )מעל 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+(.
+ מכפלה הרמיטית אוניטרית )מכפלה פנימית( מעל 
+\begin_inset Formula $V$
+\end_inset
+
+ היא פונקציה 
+\begin_inset Formula $\left\langle \cdot,\cdot\right\rangle :V\times V\to\mathbb{C}\left(\mathbb{R}\right)$
+\end_inset
+
+ כך ש-:
+\end_layout
+
+\begin_layout Enumerate
+לינאריות לפי הרכיב השמאלי:
+\begin_inset Formula 
+\[
+\forall\alpha,\beta\in\mathbb{C}.\forall\underline{v_{1}},\underline{v_{2}},\underline{u}\in V.\left\langle \alpha\underline{v_{1}}+\beta\underline{v_{2}},u\right\rangle =\alpha\cdot\left\langle \underline{v_{1}},\underline{u}\right\rangle +\beta\cdot\left\langle \underline{v_{2}},\underline{u}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+הרמיטיות:
+\begin_inset Formula 
+\[
+\forall\underline{v},\underline{u}\in V.\left\langle \underline{v},\underline{u}\right\rangle =\overline{\left\langle \underline{u},\underline{v}\right\rangle }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+חיוביות:
+\begin_inset Formula 
+\[
+\forall\underline{v}\in V.\left\langle \underline{v},\underline{v}\right\rangle \in\mathbb{R}\land\left\langle \underline{v},\underline{v}\right\rangle \ge0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אפיון 
+\begin_inset Formula $0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\forall\underline{v}\in V.\left\langle \underline{v},\underline{v}\right\rangle =0\iff\underline{v}=\underline{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+תכונות
+\end_layout
+
+\begin_layout Standard
+מטריצה 
+\begin_inset Formula $A$
+\end_inset
+
+ נקראת צמודה לעצמה )הרמיטית( אם 
+\begin_inset Formula $A=A^{*}$
+\end_inset
+
+.
+ בנוסף 
+\begin_inset Formula $A^{*}=\overline{A^{t}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מטריצה 
+\begin_inset Formula $A$
+\end_inset
+
+ שקמיימת 
+\begin_inset Formula $\forall z\ne0.z^{*}Az>0$
+\end_inset
+
+ נקראת חיובית לחלוטין.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\in M_{n}\left(\mathbb{C}\right)$
+\end_inset
+
+ הרמיטית )
+\begin_inset Formula $A=A^{*}=\overline{A^{t}}$
+\end_inset
+
+( וחיובית לחלוטין 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle *,*\right\rangle $
+\end_inset
+
+ מכפלה הרמיטית.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+ סימטרית )
+\begin_inset Formula $A=A^{t}$
+\end_inset
+
+( וחיובית לחלוטין 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle *,*\right\rangle $
+\end_inset
+
+ מכפלה פנימית.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\underline{v}\in V.\left\langle \underline{v},\underline{0}\right\rangle =0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\underline{v_{1}},\underline{v_{2}}\in V.\forall\underline{u}\in V.\left\langle \underline{u},v_{1}+v_{2}\right\rangle =\left\langle u,v_{1}\right\rangle +\left\langle u,v_{2}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\alpha\in\mathbb{C}.\left\langle v,\alpha u\right\rangle =\overline{a}\left\langle v,u\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\langle \sum_{i=1}^{n}a_{i}\underline{v_{i}},\sum_{j=1}^{m}b_{j}\underline{u_{j}}\right\rangle =\sum_{i=1}^{n}\sum_{j=1}^{m}a_{i}\overline{b_{j}}\left\langle \underline{v_{i}},\underline{u_{j}}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גיאומטריה באופן אלגברי:
+\series default
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מרחב מכפלה פנימית, או מרחב אוניטרי/הרמיטי.
+ נגדיר:
+\begin_inset Formula 
+\begin{align*}
+\left|\left|v\right|\right| & =\sqrt{\left\langle \underline{v},\underline{v}\right\rangle }\\
+\cos\left(\arg\left(\underline{v},\underline{u}\right)\right) & =\frac{\left\langle \underline{v},\underline{u}\right\rangle }{\left|\left|v\right|\right|\cdot\left|\left|u\right|\right|}\\
+\text{dist}\left(\underline{v},\underline{u}\right) & =\left|\left|\underline{v}-\underline{u}\right|\right|\\
+\underline{v}\perp\underline{u} & \iff\left\langle \underline{v},\underline{u}\right\rangle =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי שוויון קושי שוורץ:
+\series default
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ ממ
+\begin_inset Quotes erd
+\end_inset
+
+פ/מרחב הרמיטי.
+ אז לכל 
+\begin_inset Formula $\underline{v},\underline{u}$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\left\langle \underline{v},\underline{u}\right\rangle \right|\le\left|\left|v\right|\right|\cdot\left|\left|u\right|\right|$
+\end_inset
+
+.
+ בנוסף שוויון מתקיים 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\underline{v},\underline{u}$
+\end_inset
+
+ פרופורציוניות )כלומר קיים 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\underline{v}=\lambda\underline{u}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Subsection
+מטריצת גראם
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $v_{1},\dots,v_{n}\in V$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+ ממ
+\begin_inset Quotes erd
+\end_inset
+
+פ )מרחב וקטורי + מכפלה פנימית(.
+ אז נגדיר את מטריצת גראם:
+\begin_inset Formula 
+\[
+\left(G\left(v_{1},\dots,v_{n}\right)\right)_{i,j}=\left\langle v_{i},v_{j}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G=G^{*}$
+\end_inset
+
+ )הרמיטית(.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $x=\sum_{i=1}^{n}b_{i}v_{i}$
+\end_inset
+
+ ו-
+\begin_inset Formula $y=\sum_{i=1}^{n}a_{i}v_{i}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left\langle x,y\right\rangle =aGb^{*}=\left[y\right]_{B}G_{B}\left[x\right]_{B}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $\left\langle *,*\right\rangle $
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+פ מעל 
+\begin_inset Formula $\mathbb{C}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle *,*\right\rangle =\left\langle *,*\right\rangle _{G}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $G=G\left(e_{1},\dots,e_{n}\right)$
+\end_inset
+
+ הבסיס הסטנדרטי.
+\end_layout
+
 \end_body
 \end_document
