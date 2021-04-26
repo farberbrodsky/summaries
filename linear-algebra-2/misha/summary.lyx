@@ -2820,5 +2820,246 @@ lowest common multiplier
  הבסיס הסטנדרטי.
 \end_layout
 
+\begin_layout Subsection
+נורמה
+\end_layout
+
+\begin_layout Standard
+נגדיר 
+\begin_inset Formula $\left|\left|v\right|\right|=\sqrt{\left\langle v,v\right\rangle }$
+\end_inset
+
+ הנורמה של 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ תלוי במכפלה הפנימית.
+\end_layout
+
+\begin_layout Subsubsection
+תכונות הנורמה
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\le\left|\left|v\right|\right|\in\mathbb{R}$
+\end_inset
+
+ )ישירות מההגדרה(.
+\end_layout
+
+\begin_layout Enumerate
+הומוגניות 
+\begin_inset Formula $\left|\left|\alpha\cdot v\right|\right|=\left|\alpha\right|\cdot\left|\left|v\right|\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אי שוויון המשולש 
+\begin_inset Formula $\left|\left|v+u\right|\right|\le\left|\left|v\right|\right|+\left|\left|u\right|\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+תכונות המרחק
+\end_layout
+
+\begin_layout Standard
+נגדיר 
+\begin_inset Formula $\text{dist}\left(v,u\right)=\left|\left|v-u\right|\right|$
+\end_inset
+
+.
+ אז:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\le\text{dist}\left(v,u\right)$
+\end_inset
+
+ חיוביות.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{dist}\left(\underline{v},\underline{u}\right)=\text{dist}\left(\underline{u},\underline{v}\right)$
+\end_inset
+
+ סימטריות.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\underline{v}=\underline{u}\iff\text{dist}\left(\underline{v},\underline{u}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אי שוויון המשולש 
+\begin_inset Formula $\text{dist}\left(\underline{v},\underline{u}\right)\le\text{dist}\left(\underline{v},\underline{w}\right)+\text{dist}\left(\underline{w},\underline{u}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+משפט פיתגורס:
+\series default
+ 
+\begin_inset Formula $\left(\left\langle \underline{v},\underline{u}\right\rangle =0\iff\right)\underline{v}\perp\underline{u}\iff\left|\left|v-u\right|\right|^{2}=\left|\left|v\right|\right|^{2}+\left|\left|u\right|\right|^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+אורתוגונלית
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(v_{1},\dots,v_{n}\right)$
+\end_inset
+
+ נקראת 
+\bar under
+אורתוגונלית
+\bar default
+ אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $\forall i\ne j.v_{i}\perp v_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+לדוגמה 
+\begin_inset Formula $\left(\begin{pmatrix}1\\
+0\\
+0
+\end{pmatrix},\begin{pmatrix}0\\
+1\\
+-1
+\end{pmatrix},\begin{pmatrix}0\\
+1\\
+1
+\end{pmatrix}\right)$
+\end_inset
+
+ סדרה אורתוגונלית עם המכפלה האוניטרית הסטנדרטית.
+\end_layout
+
+\begin_layout Standard
+בנוסף סדרה 
+\bar under
+אורתונורמלית
+\bar default
+ היא סדרה אורתוגונלית של וקטורי יחידה.
+ שילוב של אורתוגונלית ונורמלית.
+\end_layout
+
+\begin_layout Subsubsection
+משפטים נוספים
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ הנורמה קובעת את המכפלה.
+ 
+\series bold
+הוכחה:
+\series default
+ 
+\begin_inset Formula $\left\langle x,y\right\rangle =\frac{1}{4}\left(\left|\left|x+y\right|\right|^{2}-\left|\left|x-y\right|\right|^{2}+i\left(\left|\left|x+y\right|\right|^{2}-\left|\left|x-y\right|\right|^{2}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ אם 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ סדרה אורתוגונלית ללא 
+\begin_inset Formula $\underline{0}$
+\end_inset
+
+ אז 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+ לכן נגדיר גם 
+\bar under
+בסיס אורתוגונלי
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+בבסיס אורתוגונלי, 
+\begin_inset Formula $G\left(v_{1},\dots,v_{n}\right)=\text{Diag}\left(\left|\left|v_{1}\right|\right|^{2},\dots,\left|\left|v_{n}\right|\right|^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נרמול:
+\series default
+ אם 
+\begin_inset Formula $0\ne\underline{v}\in V$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{1}{\left|\left|v\right|\right|}\cdot\underline{v}$
+\end_inset
+
+ וקטור יחידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ 
+\begin_inset Formula $v\perp u$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $\alpha,\beta\in\mathbb{F}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha v\perp\beta u$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
