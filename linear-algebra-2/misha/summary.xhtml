@@ -175,16 +175,19 @@ div.Doublebox {
 <div class='lyxtoc-2'><a href='#magicparlabel-142' class='tocentry'>7 קבוצת הפולינומים</a>
 </div>
 
-<div class='lyxtoc-2'><a href='#magicparlabel-150' class='tocentry'>8 מכפלה פנימית</a>
-
-
-<div class='lyxtoc-3'><a href='#magicparlabel-151' class='tocentry'>8.1 הגדרות בסיסיות</a>
+<div class='lyxtoc-2'><a href='#magicparlabel-150' class='tocentry'>8 ז'ירדון</a>
 </div>
 
-<div class='lyxtoc-3'><a href='#magicparlabel-157' class='tocentry'>8.2 תכונות</a>
+<div class='lyxtoc-2'><a href='#magicparlabel-166' class='tocentry'>9 מכפלה פנימית</a>
+
+
+<div class='lyxtoc-3'><a href='#magicparlabel-167' class='tocentry'>9.1 הגדרות בסיסיות</a>
 </div>
 
-<div class='lyxtoc-3'><a href='#magicparlabel-169' class='tocentry'>8.3 מטריצת גראם</a>
+<div class='lyxtoc-3'><a href='#magicparlabel-173' class='tocentry'>9.2 תכונות</a>
+</div>
+
+<div class='lyxtoc-3'><a href='#magicparlabel-185' class='tocentry'>9.3 מטריצת גראם</a>
 </div>
 </div>
 </div>
@@ -3665,9 +3668,394 @@ div.Doublebox {
   </mrow>
  </mrow></math>.</li>
 </ul>
-<h2 class="section" id='magicparlabel-150'><span class="section_label">8</span> מכפלה פנימית</h2>
-<h3 class="subsection" id='magicparlabel-151'><span class="subsection_label">8.1</span> הגדרות בסיסיות</h3>
-<div class="standard" id='magicparlabel-152'>יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+<h2 class="section" id='magicparlabel-150'><span class="section_label">8</span> ז'ירדון</h2>
+<div class="standard" id='magicparlabel-151'>נגדיר <b>בלוק ז'ורדן</b> להיות מטריצה מהצורה <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>(</mo>
+  <mtable>
+   <mtr>
+    <mtd><mi> &lambda; </mi>
+    </mtd>
+    <mtd><mn>1</mn>
+    </mtd>
+    <mtd><mn>0</mn>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd><mn>0</mn>
+    </mtd>
+    <mtd><mi> &lambda; </mi>
+    </mtd>
+    <mtd><mn>1</mn>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd><mn>0</mn>
+    </mtd>
+    <mtd><mn>0</mn>
+    </mtd>
+    <mtd><mi> &lambda; </mi>
+    </mtd>
+   </mtr>
+  </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>)</mo>
+ </mrow></math> או <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>(</mo>
+  <mtable>
+   <mtr>
+    <mtd><mi> &lambda; </mi>
+    </mtd>
+    <mtd><mn>1</mn>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd><mn>0</mn>
+    </mtd>
+    <mtd><mi> &lambda; </mi>
+    </mtd>
+   </mtr>
+  </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>)</mo>
+ </mrow></math> ואפילו <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>(</mo>
+  <mtable>
+   <mtr>
+    <mtd><mi> &lambda; </mi>
+    </mtd>
+   </mtr>
+  </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>)</mo>
+ </mrow></math>, כלומר יש אלכסון של <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &lambda; </mi>
+ </mrow></math> ומעליו אלכסון של <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>1</mn>
+ </mrow></math>ים.</div>
+
+<div class="standard" id='magicparlabel-152'>צורת ז'ורדן היא מטריצת בלוקים אלכסונית כך שכל הבלוקים הם בלוקי ז'ורדן.</div>
+
+<div class="standard" id='magicparlabel-153'><b>באופן פרקטי וחישובי:</b></div>
+
+<ol class="enumerate" id='magicparlabel-154'><li class="enumerate_item">חישוב הפולינום האופייני. נסמן את הערכים העצמיים ב-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi> &lambda; </mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msub>
+    <mrow><mi> &lambda; </mi>
+    </mrow>
+    <mrow><mi>k</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> ואת הריבויים האלגבריים שלהם ב-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi> &rho; </mi>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi> &lambda; </mi>
+      </mrow>
+      <mrow><mn>1</mn>
+      </mrow>
+     </msub>
+    </mrow>
+   </msub><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msub>
+    <mrow><mi> &rho; </mi>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi> &lambda; </mi>
+      </mrow>
+      <mrow><mi>k</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>.</li>
+<li class="enumerate_item">לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi> &lambda; </mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>:
+
+<ol class="enumerate" id='magicparlabel-156'><li class="enumerate_item">נחשב את <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> ker </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>A</mi><mo>-</mo>
+    <msub>
+     <mrow><mi> &lambda; </mi>
+     </mrow>
+     <mrow><mi>i</mi>
+     </mrow>
+    </msub><mi>I</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo><mo> ker </mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>A</mi><mo>-</mo>
+      <msub>
+       <mrow><mi> &lambda; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mi>I</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi> &rho; </mi>
+      </mrow>
+      <mrow>
+       <msub>
+        <mrow><mi> &lambda; </mi>
+        </mrow>
+        <mrow><mi>i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </msub>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> עד שהמימד של זה מפסיק להשתנות )לא כולל(. נסמן את המקום שבו המימד מפסיק להשתנות ב-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>. זה גם הריבוי בפולינום המינימלי.</li>
+<li class="enumerate_item">מ-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math> עד ל-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>1</mn>
+ </mrow></math>:
+
+<ol class="enumerate" id='magicparlabel-158'><li class="enumerate_item">נשלים את <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> ker </mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>A</mi><mo>-</mo>
+      <msub>
+       <mrow><mi> &lambda; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mi>I</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow>
+     <mrow><mi>j</mi><mo>-</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> לבסיס של <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> ker </mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>A</mi><mo>-</mo>
+      <msub>
+       <mrow><mi> &lambda; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mi>I</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mi>j</mi>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math>.</li>
+<li class="enumerate_item">יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math> שהוסף בהשלמה. נוסיף לבסיס את <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>A</mi><mo>-</mo>
+      <msub>
+       <mrow><mi> &lambda; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mi>I</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mi>j</mi>
+    </mrow>
+   </msup><mi>v</mi><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>A</mi><mo>-</mo>
+      <msub>
+       <mrow><mi> &lambda; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mi>I</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msup><mi>v</mi><mo>,</mo><mi>v</mi>
+  </mrow>
+ </mrow></math>. נספור שצריך איבר אחד פחות מאלה )כלומר ניקח איבר אחד פחות מההשלמות של החזקות הקודמות(.</li>
+</ol>
+</li></ol>
+</li><li class="enumerate_item">אפשר להשתמש בבסיס שקיבלנו ישירות או לשים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>P</mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>(</mo>
+   <mtable>
+    <mtr>
+     <mtd>
+      <msub>
+       <mrow><mi>B</mi>
+       </mrow>
+       <mrow><mn>1</mn>
+       </mrow>
+      </msub>
+     </mtd>
+     <mtd>
+      <mi>&hellip;
+      </mi>
+     </mtd>
+     <mtd>
+      <msub>
+       <mrow><mi>B</mi>
+       </mrow>
+       <mrow><mi>n</mi>
+       </mrow>
+      </msub>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>)</mo>
+  </mrow>
+ </mrow></math>, ואז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>J</mi><mo>=</mo>
+   <msup>
+    <mrow><mi>P</mi>
+    </mrow>
+    <mrow>
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+   </msup><mi>A</mi><mi>P</mi>
+  </mrow>
+ </mrow></math> )כי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>P</mi><mo>=</mo>
+   <msubsup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mi>I</mi><mi>d</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow><mi>E</mi>
+    </mrow>
+    <mrow><mi>B</mi>
+    </mrow>
+   </msubsup>
+  </mrow>
+ </mrow></math> ואכן <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+<mi>A</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow><mi>B</mi>
+    </mrow>
+    <mrow><mi>B</mi>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <msubsup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mi>I</mi><mi>d</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow><mi>B</mi>
+    </mrow>
+    <mrow><mi>E</mi>
+    </mrow>
+   </msubsup><mo> &sdot; </mo>
+   <msubsup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+<mi>A</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow><mi>E</mi>
+    </mrow>
+    <mrow><mi>E</mi>
+    </mrow>
+   </msubsup><mo> &sdot; </mo>
+   <msubsup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mi>I</mi><mi>d</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow><mi>E</mi>
+    </mrow>
+    <mrow><mi>B</mi>
+    </mrow>
+   </msubsup>
+  </mrow>
+ </mrow></math>(.</li>
+</ol>
+<div class="standard" id='magicparlabel-161'><b>משפט:</b></div>
+
+<ul class="itemize" id='magicparlabel-162'><li class="itemize_item">צורת זורדן יחידה עד כדי הסידור של בלוקי הז'ורדן.</li>
+<li class="itemize_item">הריבוי הגיאומטרי של ערך עצמי כלשהו הוא מספר הבלוקים שלו.</li>
+<li class="itemize_item">הריבוי האלגברי באופייני הוא סכום הגדלים של הבלוקים.</li>
+<li class="itemize_item">הריבוי האלגברי במינימלי הוא המקסימום של הגדלים של הבלוקים.</li>
+</ul>
+<h2 class="section" id='magicparlabel-166'><span class="section_label">9</span> מכפלה פנימית</h2>
+<h3 class="subsection" id='magicparlabel-167'><span class="subsection_label">9.1</span> הגדרות בסיסיות</h3>
+<div class="standard" id='magicparlabel-168'>יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>V</mi>
  </mrow></math> מ&rdquo;ו מעל <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -3697,7 +4085,7 @@ div.Doublebox {
   </mrow>
  </mrow></math> כך ש-:</div>
 
-<ol class="enumerate" id='magicparlabel-153'><li class="enumerate_item">לינאריות לפי הרכיב השמאלי:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-169'><li class="enumerate_item">לינאריות לפי הרכיב השמאלי:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &forall; </mi><mi> &alpha; </mi><mo>,</mo><mi> &beta; </mi><mo> &isin; </mo>
    <mstyle mathvariant='double-struck'><mi>C</mi>
@@ -3904,8 +4292,8 @@ div.Doublebox {
   </mrow>
  </mrow></math></li>
 </ol>
-<h3 class="subsection" id='magicparlabel-157'><span class="subsection_label">8.2</span> תכונות</h3>
-<div class="standard" id='magicparlabel-158'>מטריצה <math xmlns="http://www.w3.org/1998/Math/MathML">
+<h3 class="subsection" id='magicparlabel-173'><span class="subsection_label">9.2</span> תכונות</h3>
+<div class="standard" id='magicparlabel-174'>מטריצה <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>A</mi>
  </mrow></math> נקראת צמודה לעצמה )הרמיטית( אם <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -3939,7 +4327,7 @@ div.Doublebox {
   </mrow>
  </mrow></math>.</div>
 
-<div class="standard" id='magicparlabel-159'>מטריצה <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-175'>מטריצה <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>A</mi>
  </mrow></math> שקמיימת <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -3953,9 +4341,9 @@ div.Doublebox {
   </mrow>
  </mrow></math> נקראת חיובית לחלוטין.</div>
 
-<div class="standard" id='magicparlabel-160'><b>משפט:</b></div>
+<div class="standard" id='magicparlabel-176'><b>משפט:</b></div>
 
-<ul class="itemize" id='magicparlabel-161'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul class="itemize" id='magicparlabel-177'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>A</mi><mo> &isin; </mo>
    <msub>
@@ -4274,7 +4662,7 @@ div.Doublebox {
   </mrow>
  </mrow></math></li>
 </ul>
-<div class="standard" id='magicparlabel-167'><b>גיאומטריה באופן אלגברי:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-183'><b>גיאומטריה באופן אלגברי:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>V</mi>
  </mrow></math> מרחב מכפלה פנימית, או מרחב אוניטרי/הרמיטי. נגדיר:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
@@ -4444,7 +4832,7 @@ div.Doublebox {
   </mtr>
  </mtable></math></div>
 
-<div class="standard" id='magicparlabel-168'><b>אי שוויון קושי שוורץ:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-184'><b>אי שוויון קושי שוורץ:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>V</mi>
  </mrow></math> ממ&rdquo;פ/מרחב הרמיטי. אז לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -4519,8 +4907,8 @@ div.Doublebox {
    </munder>
   </mrow>
  </mrow></math>(.</div>
-<h3 class="subsection" id='magicparlabel-169'><span class="subsection_label">8.3</span> מטריצת גראם</h3>
-<div class="standard" id='magicparlabel-170'>יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
+<h3 class="subsection" id='magicparlabel-185'><span class="subsection_label">9.3</span> מטריצת גראם</h3>
+<div class="standard" id='magicparlabel-186'>יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -4595,9 +4983,9 @@ div.Doublebox {
   </mrow>
  </mrow></math></div>
 
-<div class="standard" id='magicparlabel-171'><b>משפט:</b></div>
+<div class="standard" id='magicparlabel-187'><b>משפט:</b></div>
 
-<ul class="itemize" id='magicparlabel-172'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul class="itemize" id='magicparlabel-188'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>G</mi><mo>=</mo>
    <msup>
