@@ -2312,6 +2312,173 @@ lowest common multiplier
 \end_layout
 
 \begin_layout Section
+ז'ירדון
+\end_layout
+
+\begin_layout Standard
+נגדיר 
+\series bold
+בלוק ז'ורדן
+\series default
+ להיות מטריצה מהצורה 
+\begin_inset Formula $\begin{pmatrix}\lambda & 1 & 0\\
+0 & \lambda & 1\\
+0 & 0 & \lambda
+\end{pmatrix}$
+\end_inset
+
+ או 
+\begin_inset Formula $\begin{pmatrix}\lambda & 1\\
+0 & \lambda
+\end{pmatrix}$
+\end_inset
+
+ ואפילו 
+\begin_inset Formula $\begin{pmatrix}\lambda\end{pmatrix}$
+\end_inset
+
+, כלומר יש אלכסון של 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ומעליו אלכסון של 
+\begin_inset Formula $1$
+\end_inset
+
+ים.
+\end_layout
+
+\begin_layout Standard
+צורת ז'ורדן היא מטריצת בלוקים אלכסונית כך שכל הבלוקים הם בלוקי ז'ורדן.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+באופן פרקטי וחישובי:
+\end_layout
+
+\begin_layout Enumerate
+חישוב הפולינום האופייני.
+ נסמן את הערכים העצמיים ב-
+\begin_inset Formula $\lambda_{1},\dots,\lambda_{k}$
+\end_inset
+
+ ואת הריבויים האלגבריים שלהם ב-
+\begin_inset Formula $\rho_{\lambda_{1}},\dots,\rho_{\lambda_{k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נחשב את 
+\begin_inset Formula $\ker\left(A-\lambda_{i}I\right),\dots,\ker\left(A-\lambda_{i}I\right)^{\rho_{\lambda_{i}}}$
+\end_inset
+
+ עד שהמימד של זה מפסיק להשתנות )לא כולל(.
+ נסמן את המקום שבו המימד מפסיק להשתנות ב-
+\begin_inset Formula $j$
+\end_inset
+
+.
+ זה גם הריבוי בפולינום המינימלי.
+\end_layout
+
+\begin_layout Enumerate
+מ-
+\begin_inset Formula $j$
+\end_inset
+
+ עד ל-
+\begin_inset Formula $1$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נשלים את 
+\begin_inset Formula $\ker\left(A-\lambda_{i}I\right)^{j-1}$
+\end_inset
+
+ לבסיס של 
+\begin_inset Formula $\ker\left(A-\lambda_{i}I\right)^{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $v$
+\end_inset
+
+ שהוסף בהשלמה.
+ נוסיף לבסיס את 
+\begin_inset Formula $\left(A-\lambda_{i}I\right)^{j}v,\dots,\left(A-\lambda_{i}I\right)^{1}v,v$
+\end_inset
+
+.
+ נספור שצריך איבר אחד פחות מאלה )כלומר ניקח איבר אחד פחות מההשלמות של החזקות
+ הקודמות(.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+אפשר להשתמש בבסיס שקיבלנו ישירות או לשים 
+\begin_inset Formula $P=\begin{pmatrix}B_{1} & \dots & B_{n}\end{pmatrix}$
+\end_inset
+
+, ואז 
+\begin_inset Formula $J=P^{-1}AP$
+\end_inset
+
+ )כי 
+\begin_inset Formula $P=\left[Id\right]_{E}^{B}$
+\end_inset
+
+ ואכן 
+\begin_inset Formula $\left[A\right]_{B}^{B}=\left[Id\right]_{B}^{E}\cdot\left[A\right]_{E}^{E}\cdot\left[Id\right]_{E}^{B}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\end_layout
+
+\begin_layout Itemize
+צורת זורדן יחידה עד כדי הסידור של בלוקי הז'ורדן.
+\end_layout
+
+\begin_layout Itemize
+הריבוי הגיאומטרי של ערך עצמי כלשהו הוא מספר הבלוקים שלו.
+\end_layout
+
+\begin_layout Itemize
+הריבוי האלגברי באופייני הוא סכום הגדלים של הבלוקים.
+\end_layout
+
+\begin_layout Itemize
+הריבוי האלגברי במינימלי הוא המקסימום של הגדלים של הבלוקים.
+\end_layout
+
+\begin_layout Section
 מכפלה פנימית
 \end_layout
 
