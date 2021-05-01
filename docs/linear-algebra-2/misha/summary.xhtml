@@ -84,6 +84,13 @@ margin-bottom: 0.4ex;
 text-align: left;
 
 }
+h5.paragraph {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.4ex;
+text-align: left;
+
+}
 div.toc {
   margin: 2em 0em;
   border-style: solid;
@@ -187,10 +194,13 @@ div.Doublebox {
 <div class='lyxtoc-3'><a href='#magicparlabel-173' class='tocentry'>9.2 תכונות</a>
 </div>
 
-<div class='lyxtoc-3'><a href='#magicparlabel-185' class='tocentry'>9.3 מטריצת גראם</a>
+<div class='lyxtoc-3'><a href='#magicparlabel-180' class='tocentry'>9.3 נורמה</a>
 </div>
 
-<div class='lyxtoc-3'><a href='#magicparlabel-191' class='tocentry'>9.4 נורמה</a>
+<div class='lyxtoc-3'><a href='#magicparlabel-196' class='tocentry'>9.4 מטריצת גראם</a>
+</div>
+
+<div class='lyxtoc-3'><a href='#magicparlabel-203' class='tocentry'>9.5 אורתוגונליות</a>
 </div>
 </div>
 </div>
@@ -4064,11 +4074,15 @@ div.Doublebox {
  <mrow>
   <mstyle mathvariant='double-struck'><mi>C</mi>
   </mstyle>
- </mrow></math> )מעל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> או <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mstyle mathvariant='double-struck'><mi>R</mi>
   </mstyle>
- </mrow></math>(. מכפלה הרמיטית אוניטרית )מכפלה פנימית( מעל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. מכפלה אוניטרית )נקרא &ldquo;מכפלה פנימית&rdquo; מעל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mstyle mathvariant='double-struck'><mi>R</mi>
+  </mstyle>
+ </mrow></math>( מעל <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>V</mi>
  </mrow></math> היא פונקציה <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -4088,35 +4102,9 @@ div.Doublebox {
   </mrow>
  </mrow></math> כך ש-:</div>
 
-<ol class="enumerate" id='magicparlabel-169'><li class="enumerate_item">לינאריות לפי הרכיב השמאלי:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-169'><li class="enumerate_item">לינאריות לפי הרכיב השמאלי: <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi> &forall; </mi><mi> &alpha; </mi><mo>,</mo><mi> &beta; </mi><mo> &isin; </mo>
-   <mstyle mathvariant='double-struck'><mi>C</mi>
-   </mstyle><mn>.</mn><mi> &forall; </mi>
-   <munder>
-    <mrow>
-     <msub>
-      <mrow><mi>v</mi>
-      </mrow>
-      <mrow><mn>1</mn>
-      </mrow>
-     </msub>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo>,</mo>
-   <munder>
-    <mrow>
-     <msub>
-      <mrow><mi>v</mi>
-      </mrow>
-      <mrow><mn>2</mn>
-      </mrow>
-     </msub>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo>,</mo>
-   <munder>
-    <mrow><mi>u</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &isin; </mo><mi>V</mi><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
    <mrow><mi> &alpha; </mi>
     <munder>
@@ -4182,17 +4170,9 @@ div.Doublebox {
 
   </mrow>
  </mrow></math></li>
-<li class="enumerate_item">הרמיטיות:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<li class="enumerate_item">הרמיטיות: <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi> &forall; </mi>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo>,</mo>
-   <munder>
-    <mrow><mi>u</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &isin; </mo><mi>V</mi><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
    <mrow>
     <munder>
@@ -4225,13 +4205,9 @@ div.Doublebox {
    </mover>
   </mrow>
  </mrow></math></li>
-<li class="enumerate_item">חיוביות:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<li class="enumerate_item">חיוביות: <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi> &forall; </mi>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &isin; </mo><mi>V</mi><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
    <mrow>
     <munder>
@@ -4264,13 +4240,9 @@ div.Doublebox {
  </mrow></math></li>
 <li class="enumerate_item">אפיון <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mn>0</mn>
- </mrow></math>:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>: <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi> &forall; </mi>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &isin; </mo><mi>V</mi><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
    <mrow>
     <munder>
@@ -4296,185 +4268,11 @@ div.Doublebox {
  </mrow></math></li>
 </ol>
 <h3 class="subsection" id='magicparlabel-173'><span class="subsection_label">9.2</span> תכונות</h3>
-<div class="standard" id='magicparlabel-174'>מטריצה <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi>A</mi>
- </mrow></math> נקראת צמודה לעצמה )הרמיטית( אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-174'><b>משפט לגבי הרכיב הימני:</b></div>
+
+<ul class="itemize" id='magicparlabel-175'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi>A</mi><mo>=</mo>
-   <msup>
-    <mrow><mi>A</mi>
-    </mrow>
-    <mrow><mo>*</mo>
-    </mrow>
-   </msup>
-  </mrow>
- </mrow></math>. בנוסף <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <msup>
-    <mrow><mi>A</mi>
-    </mrow>
-    <mrow><mo>*</mo>
-    </mrow>
-   </msup><mo>=</mo>
-   <mover>
-    <mrow>
-     <msup>
-      <mrow><mi>A</mi>
-      </mrow>
-      <mrow><mi>t</mi>
-      </mrow>
-     </msup>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </mover>
-  </mrow>
- </mrow></math>.</div>
-
-<div class="standard" id='magicparlabel-175'>מטריצה <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi>A</mi>
- </mrow></math> שקמיימת <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi> &forall; </mi><mi>z</mi><mo> &ne; </mo><mn>0.</mn>
-   <msup>
-    <mrow><mi>z</mi>
-    </mrow>
-    <mrow><mo>*</mo>
-    </mrow>
-   </msup><mi>A</mi><mi>z</mi><mo>&gt;</mo><mn>0</mn>
-  </mrow>
- </mrow></math> נקראת חיובית לחלוטין.</div>
-
-<div class="standard" id='magicparlabel-176'><b>משפט:</b></div>
-
-<ul class="itemize" id='magicparlabel-177'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>A</mi><mo> &isin; </mo>
-   <msub>
-    <mrow><mi>M</mi>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mstyle mathvariant='double-struck'><mi>C</mi>
-   </mstyle>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math> הרמיטית )<math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>A</mi><mo>=</mo>
-   <msup>
-    <mrow><mi>A</mi>
-    </mrow>
-    <mrow><mo>*</mo>
-    </mrow>
-   </msup><mo>=</mo>
-   <mover>
-    <mrow>
-     <msup>
-      <mrow><mi>A</mi>
-      </mrow>
-      <mrow><mi>t</mi>
-      </mrow>
-     </msup>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </mover>
-  </mrow>
- </mrow></math>( וחיובית לחלוטין <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mo> &#x27fa; </mo>
- </mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
-
-  <mrow><mo>*</mo><mo>,</mo><mo>*</mo>
-  </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
-
- </mrow></math> מכפלה הרמיטית.</li>
-<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>A</mi><mo> &isin; </mo>
-   <msub>
-    <mrow><mi>M</mi>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mstyle mathvariant='double-struck'><mi>R</mi>
-   </mstyle>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math> סימטרית )<math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>A</mi><mo>=</mo>
-   <msup>
-    <mrow><mi>A</mi>
-    </mrow>
-    <mrow><mi>t</mi>
-    </mrow>
-   </msup>
-  </mrow>
- </mrow></math>( וחיובית לחלוטין <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mo> &#x27fa; </mo>
- </mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
-
-  <mrow><mo>*</mo><mo>,</mo><mo>*</mo>
-  </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
-
- </mrow></math> מכפלה פנימית.</li>
-<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi> &forall; </mi>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &isin; </mo><mi>V</mi><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
-
-   <mrow>
-    <munder>
-     <mrow><mi>v</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder><mo>,</mo>
-    <munder>
-     <mrow><mn>0</mn>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
-<mo>=</mo><mn>0</mn>
-  </mrow>
- </mrow></math></li>
-<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi> &forall; </mi>
-   <munder>
-    <mrow>
-     <msub>
-      <mrow><mi>v</mi>
-      </mrow>
-      <mrow><mn>1</mn>
-      </mrow>
-     </msub>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo>,</mo>
-   <munder>
-    <mrow>
-     <msub>
-      <mrow><mi>v</mi>
-      </mrow>
-      <mrow><mn>2</mn>
-      </mrow>
-     </msub>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &isin; </mo><mi>V</mi><mn>.</mn><mi> &forall; </mi>
-   <munder>
-    <mrow><mi>u</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &isin; </mo><mi>V</mi><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
    <mrow>
     <munder>
@@ -4519,19 +4317,17 @@ div.Doublebox {
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
 
   </mrow>
- </mrow></math></li>
+ </mrow></math> חיבוריות לפי הימני.</li>
 <li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi> &forall; </mi><mi> &alpha; </mi><mo> &isin; </mo>
-   <mstyle mathvariant='double-struck'><mi>C</mi>
-   </mstyle><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
    <mrow><mi>v</mi><mo>,</mo><mi> &alpha; </mi><mi>u</mi>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
 <mo>=</mo>
    <mover>
-    <mrow><mi>a</mi>
+    <mrow><mi> &alpha; </mi>
     </mrow><mo stretchy="true">&macr;</mo>
    </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
@@ -4540,8 +4336,27 @@ div.Doublebox {
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
 
   </mrow>
- </mrow></math></li>
+ </mrow></math> כמו הומוגניות ברכיב הימני, אבל עם הצמוד.</li>
 <li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+   <mrow>
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder><mo>,</mo>
+    <munder>
+     <mrow><mn>0</mn>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+<mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> מתאפס גם לפי הרכיב הימני.</li>
+<li class="itemize_item">לכן יש לנו כמעט לינאריות לפי הרכיב הימני, אבל עם הסקלר הצמוד.</li>
+<li class="itemize_item">ומכאן נובע: <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
@@ -4665,14 +4480,279 @@ div.Doublebox {
   </mrow>
  </mrow></math></li>
 </ul>
-<div class="standard" id='magicparlabel-183'><b>גיאומטריה באופן אלגברי:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi>V</mi>
- </mrow></math> מרחב מכפלה פנימית, או מרחב אוניטרי/הרמיטי. נגדיר:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<h3 class="subsection" id='magicparlabel-180'><span class="subsection_label">9.3</span> נורמה</h3>
+<div class="standard" id='magicparlabel-181'>נגדיר <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>=</mo>
+   <msqrt><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+    <mrow><mi>v</mi><mo>,</mo><mi>v</mi>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+
+   </msqrt>
+  </mrow>
+ </mrow></math> הנורמה של <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math>. תלוי במכפלה הפנימית.</div>
+<h4 class="subsubsection" id='magicparlabel-182'><span class="subsubsection_label">9.3.1</span> תכונות הנורמה</h4>
+
+<ul class="itemize" id='magicparlabel-183'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>0</mn><mo> &le; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo> &isin; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math></li>
+<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <mrow><mi> &alpha; </mi><mo> &sdot; </mo>
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi> &alpha; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo> &sdot; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+  </mrow>
+ </mrow></math> הומוגניות</li>
+<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <mrow>
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder><mo>+</mo>
+    <munder>
+     <mrow><mi>u</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo> &le; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>+</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <munder>
+    <mrow><mi>u</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+  </mrow>
+ </mrow></math> אי שוויון המשולש.</li>
+<li class="itemize_item"><b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+   <mrow>
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder><mo>,</mo>
+    <munder>
+     <mrow><mi>u</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo> &le; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo> &sdot; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <munder>
+    <mrow><mi>u</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+  </mrow>
+ </mrow></math> )אי שוויון קושי שוורץ(</b>. בנוסף שוויון מתקיים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &#x27fa; </mo>
+ </mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder><mo>,</mo>
+   <munder>
+    <mrow><mi>u</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+  </mrow>
+ </mrow></math> פרופורציוניות )כלומר קיים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &lambda; </mi>
+ </mrow></math> כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder><mo>=</mo><mi> &lambda; </mi>
+   <munder>
+    <mrow><mi>u</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+  </mrow>
+ </mrow></math>(.</li>
+<li class="itemize_item">הנורמה קובעת את המכפלה. <b>הוכחה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+   <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+<mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mn>4</mn>
+    </mrow>
+   </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msup>
+     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      <mrow><mi>x</mi><mo>+</mo><mi>y</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msup><mo>-</mo>
+    <msup>
+     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      <mrow><mi>x</mi><mo>-</mo><mi>y</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msup><mo>+</mo><mi>i</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <mrow>
+     <msup>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+       <mrow><mi>x</mi><mo>+</mo><mi>y</mi>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msup><mo>-</mo>
+     <msup>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+       <mrow><mi>x</mi><mo>-</mo><mi>y</mi>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msup>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>.</li>
+</ul>
+<div class="standard" id='magicparlabel-188'><b>גיאומטריה באופן אלגברי:</b><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 <mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>v</mi>
+
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
@@ -4746,7 +4826,7 @@ div.Doublebox {
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo> &sdot; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 <mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 <mi>u</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
@@ -4833,26 +4913,70 @@ div.Doublebox {
     </mrow>
    </mtd>
   </mtr>
+  <mtr>
+   <mtd>
+    <mrow>
+     <munder>
+      <mrow><mi>v</mi>
+      </mrow><mo stretchy="true">&macr;</mo>
+     </munder><mo> &perp; </mo>
+     <munder>
+      <mrow><mi>u</mi>
+      </mrow><mo stretchy="true">&macr;</mo>
+     </munder>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow><mo> &#x27F9; </mo><mi> &forall; </mi><mi> &alpha; </mi><mo>,</mo><mi> &beta; </mi><mn>.</mn><mi> &alpha; </mi><mi>v</mi><mo> &perp; </mo><mi> &beta; </mi><mi>u</mi>
+    </mrow>
+   </mtd>
+  </mtr>
  </mtable></math></div>
-
-<div class="standard" id='magicparlabel-184'><b>אי שוויון קושי שוורץ:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi>V</mi>
- </mrow></math> ממ&rdquo;פ/מרחב הרמיטי. אז לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+<h4 class="subsubsection" id='magicparlabel-189'><span class="subsubsection_label">9.3.2</span> תכונות המרחק</h4>
+<div class="standard" id='magicparlabel-190'>נגדיר <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo>,</mo>
-   <munder>
-    <mrow><mi>u</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>u</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <mrow><mi>v</mi><mo>-</mo><mi>u</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
   </mrow>
- </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. אז:</div>
+
+<ol class="enumerate" id='magicparlabel-191'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+  <mrow><mn>0</mn><mo> &le; </mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>u</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> חיוביות</li>
+<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
    <mrow>
     <munder>
@@ -4864,54 +4988,185 @@ div.Doublebox {
      </mrow><mo stretchy="true">&macr;</mo>
     </munder>
    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <munder>
+     <mrow><mi>u</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder><mo>,</mo>
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> סימטריות</li>
+<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder><mo>=</mo>
+   <munder>
+    <mrow><mi>u</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder><mo> &#x27fa; </mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder><mo>,</mo>
+    <munder>
+     <mrow><mi>u</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder><mo>,</mo>
+    <munder>
+     <mrow><mi>u</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> &le; </mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <munder>
+     <mrow><mi>v</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder><mo>,</mo>
+    <munder>
+     <mrow><mi>w</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <munder>
+     <mrow><mi>w</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder><mo>,</mo>
+    <munder>
+     <mrow><mi>u</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </munder>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> אי שוויון המשולש</li>
+<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+    <mrow>
+     <munder>
+      <mrow><mi>v</mi>
+      </mrow><mo stretchy="true">&macr;</mo>
+     </munder><mo>,</mo>
+     <munder>
+      <mrow><mi>u</mi>
+      </mrow><mo stretchy="true">&macr;</mo>
+     </munder>
+    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+<mo>=</mo><mn>0</mn><mo> &#x27fa; </mo>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder><mo> &perp; </mo>
+   <munder>
+    <mrow><mi>u</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder><mo> &#x27fa; </mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+     <mrow><mi>v</mi><mo>-</mo><mi>u</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo> &le; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msup><mo>=</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 <mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 <mi>v</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo> &sdot; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msup><mo>+</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 <mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 <mi>u</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msup>
   </mrow>
- </mrow></math>. בנוסף שוויון מתקיים <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mo> &#x27fa; </mo>
- </mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo>,</mo>
-   <munder>
-    <mrow><mi>u</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder>
-  </mrow>
- </mrow></math> פרופורציוניות )כלומר קיים <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi> &lambda; </mi>
- </mrow></math> כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo>=</mo><mi> &lambda; </mi>
-   <munder>
-    <mrow><mi>u</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder>
-  </mrow>
- </mrow></math>(.</div>
-<h3 class="subsection" id='magicparlabel-185'><span class="subsection_label">9.3</span> מטריצת גראם</h3>
-<div class="standard" id='magicparlabel-186'>יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> משפט פיתגורס</li>
+</ol>
+<h3 class="subsection" id='magicparlabel-196'><span class="subsection_label">9.4</span> מטריצת גראם</h3>
+<div class="standard" id='magicparlabel-197'>יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -4986,9 +5241,75 @@ div.Doublebox {
   </mrow>
  </mrow></math></div>
 
-<div class="standard" id='magicparlabel-187'><b>משפט:</b></div>
+<div class="standard" id='magicparlabel-198'><b>משפט:</b></div>
 
-<ul class="itemize" id='magicparlabel-188'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul class="itemize" id='magicparlabel-199'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>A</mi><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>M</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mstyle mathvariant='double-struck'><mi>C</mi>
+   </mstyle>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> הרמיטית )<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>A</mi><mo>=</mo>
+   <mover>
+    <mrow>
+     <msup>
+      <mrow><mi>A</mi>
+      </mrow>
+      <mrow><mi>t</mi>
+      </mrow>
+     </msup>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>=</mo>
+    <msup>
+     <mrow><mi>A</mi>
+     </mrow>
+     <mrow><mo>*</mo>
+     </mrow>
+    </msup>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>( וחיובית לחלוטין )<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi> &forall; </mi><mi>z</mi><mo> &ne; </mo><mn>0.</mn>
+   <msup>
+    <mrow><mi>z</mi>
+    </mrow>
+    <mrow><mo>*</mo>
+    </mrow>
+   </msup><mi>A</mi><mi>z</mi><mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>( <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &#x27fa; </mo>
+ </mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+    <mrow><mo>*</mo><mo>,</mo><mo>*</mo>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+
+   </mrow>
+   <mrow><mi>A</mi>
+   </mrow>
+  </msub>
+ </mrow></math> מכפלה הרמיטית.</li>
+<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>G</mi><mo>=</mo>
    <msup>
@@ -4998,101 +5319,7 @@ div.Doublebox {
     </mrow>
    </msup>
   </mrow>
- </mrow></math> )הרמיטית(.</li>
-<li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>x</mi><mo>=</mo>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
-   <msub>
-    <mrow><mi>b</mi>
-    </mrow>
-    <mrow><mi>i</mi>
-    </mrow>
-   </msub>
-   <msub>
-    <mrow><mi>v</mi>
-    </mrow>
-    <mrow><mi>i</mi>
-    </mrow>
-   </msub>
-  </mrow>
- </mrow></math> ו-<math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>y</mi><mo>=</mo>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
-   <msub>
-    <mrow><mi>a</mi>
-    </mrow>
-    <mrow><mi>i</mi>
-    </mrow>
-   </msub>
-   <msub>
-    <mrow><mi>v</mi>
-    </mrow>
-    <mrow><mi>i</mi>
-    </mrow>
-   </msub>
-  </mrow>
- </mrow></math> אז <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
-
-   <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
-<mo>=</mo><mi>a</mi><mi>G</mi>
-   <msup>
-    <mrow><mi>b</mi>
-    </mrow>
-    <mrow><mo>*</mo>
-    </mrow>
-   </msup><mo>=</mo>
-   <msub>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
-<mi>y</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
-
-    </mrow>
-    <mrow><mi>B</mi>
-    </mrow>
-   </msub>
-   <msub>
-    <mrow><mi>G</mi>
-    </mrow>
-    <mrow><mi>B</mi>
-    </mrow>
-   </msub>
-   <msubsup>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
-<mi>x</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
-
-    </mrow>
-    <mrow><mi>B</mi>
-    </mrow>
-    <mrow><mo>*</mo>
-    </mrow>
-   </msubsup>
-  </mrow>
- </mrow></math>.</li>
+ </mrow></math> )הרמיטית( וחיובית לחלוטין )ולכן היא מכפלה הרמיטית(.</li>
 <li class="itemize_item">לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
@@ -5154,325 +5381,58 @@ div.Doublebox {
 
   </mrow>
  </mrow></math> הבסיס הסטנדרטי.</li>
-</ul>
-<h3 class="subsection" id='magicparlabel-191'><span class="subsection_label">9.4</span> נורמה</h3>
-<div class="standard" id='magicparlabel-192'>נגדיר <math xmlns="http://www.w3.org/1998/Math/MathML">
+<li class="itemize_item">לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>v</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+  <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo>=</mo>
-   <msqrt><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
-
-    <mrow><mi>v</mi><mo>,</mo><mi>v</mi>
-    </mrow>
+   <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
+   </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
-
-   </msqrt>
-  </mrow>
- </mrow></math> הנורמה של <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi>v</mi>
- </mrow></math>. תלוי במכפלה הפנימית.</div>
-<h4 class="subsubsection" id='magicparlabel-193'><span class="subsubsection_label">9.4.1</span> תכונות הנורמה</h4>
-
-<ol class="enumerate" id='magicparlabel-194'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mn>0</mn><mo> &le; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>v</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo> &isin; </mo>
-   <mstyle mathvariant='double-struck'><mi>R</mi>
-   </mstyle>
-  </mrow>
- </mrow></math> )ישירות מההגדרה(.</li>
-<li class="enumerate_item">הומוגניות <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-   <mrow><mi> &alpha; </mi><mo> &sdot; </mo><mi>v</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi> &alpha; </mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo> &sdot; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>v</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-  </mrow>
- </mrow></math>.</li>
-<li class="enumerate_item">אי שוויון המשולש <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-   <mrow><mi>v</mi><mo>+</mo><mi>u</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo> &le; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>v</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo>+</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>u</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-  </mrow>
- </mrow></math>.</li>
-</ol>
-<h4 class="subsubsection" id='magicparlabel-197'><span class="subsubsection_label">9.4.2</span> תכונות המרחק</h4>
-<div class="standard" id='magicparlabel-198'>נגדיר <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mi>v</mi><mo>,</mo><mi>u</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-   <mrow><mi>v</mi><mo>-</mo><mi>u</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-  </mrow>
- </mrow></math>. אז:</div>
-
-<ol class="enumerate" id='magicparlabel-199'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mn>0</mn><mo> &le; </mo>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mi>v</mi><mo>,</mo><mi>u</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math> חיוביות.</li>
-<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow>
-    <munder>
-     <mrow><mi>v</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder><mo>,</mo>
-    <munder>
-     <mrow><mi>u</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mo>=</mo>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   <msub>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
 
-   <mrow>
-    <munder>
-     <mrow><mi>u</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder><mo>,</mo>
-    <munder>
-     <mrow><mi>v</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+     <mrow>
+      <msub>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
-  </mrow>
- </mrow></math> סימטריות.</li>
-<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo>=</mo>
-   <munder>
-    <mrow><mi>u</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &#x27fa; </mo>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+       </mrow>
+       <mrow><mi>B</mi>
+       </mrow>
+      </msub><mo>,</mo>
+      <msub>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+<mi>y</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
-   <mrow>
-    <munder>
-     <mrow><mi>v</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder><mo>,</mo>
-    <munder>
-     <mrow><mi>u</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo><mn>0</mn>
-  </mrow>
- </mrow></math>.</li>
-<li class="enumerate_item">אי שוויון המשולש <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow>
-    <munder>
-     <mrow><mi>v</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder><mo>,</mo>
-    <munder>
-     <mrow><mi>u</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo> &le; </mo>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow>
-    <munder>
-     <mrow><mi>v</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder><mo>,</mo>
-    <munder>
-     <mrow><mi>w</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>+</mo>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow>
-    <munder>
-     <mrow><mi>w</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder><mo>,</mo>
-    <munder>
-     <mrow><mi>u</mi>
-     </mrow><mo stretchy="true">&macr;</mo>
-    </munder>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math>.</li>
-<li class="enumerate_item"><b>משפט פיתגורס:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
-
-    <mrow>
-     <munder>
-      <mrow><mi>v</mi>
-      </mrow><mo stretchy="true">&macr;</mo>
-     </munder><mo>,</mo>
-     <munder>
-      <mrow><mi>u</mi>
-      </mrow><mo stretchy="true">&macr;</mo>
-     </munder>
-    </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
-<mo>=</mo><mn>0</mn><mo> &#x27fa; </mo>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &perp; </mo>
-   <munder>
-    <mrow><mi>u</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &#x27fa; </mo>
-   <msup>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-     <mrow><mi>v</mi><mo>-</mo><mi>u</mi>
+       </mrow>
+       <mrow><mi>B</mi>
+       </mrow>
+      </msub>
      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
 
     </mrow>
-    <mrow><mn>2</mn>
+    <mrow><mi>G</mi>
     </mrow>
-   </msup><mo>=</mo>
-   <msup>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>v</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-    </mrow>
-    <mrow><mn>2</mn>
-    </mrow>
-   </msup><mo>+</mo>
-   <msup>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>u</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-    </mrow>
-    <mrow><mn>2</mn>
-    </mrow>
-   </msup>
+   </msub>
   </mrow>
- </mrow></math>.</li>
-</ol>
-<h4 class="subsubsection" id='magicparlabel-204'><span class="subsubsection_label">9.4.3</span> אורתוגונלית</h4>
+ </mrow></math>. אבל אין דרישה ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>B</mi>
+ </mrow></math> יהיה באמת בסיס, רק ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
+  </mrow>
+ </mrow></math> יהיו צירופים לינאריים בו.</li>
+</ul>
+<h3 class="subsection" id='magicparlabel-203'><span class="subsection_label">9.5</span> אורתוגונליות</h3>
+<h4 class="subsubsection" id='magicparlabel-204'><span class="subsubsection_label">9.5.1</span> הגדרות בסיסיות</h4>
 <div class="standard" id='magicparlabel-205'><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -5565,92 +5525,60 @@ div.Doublebox {
 
  </mrow></math> סדרה אורתוגונלית עם המכפלה האוניטרית הסטנדרטית.</div>
 
-<div class="standard" id='magicparlabel-207'>בנוסף סדרה <u>אורתונורמלית</u> היא סדרה אורתוגונלית של וקטורי יחידה. שילוב של אורתוגונלית ונורמלית.</div>
-<h4 class="subsubsection" id='magicparlabel-208'><span class="subsubsection_label">9.4.4</span> משפטים נוספים</h4>
-<div class="standard" id='magicparlabel-209'><b>משפט:</b> הנורמה קובעת את המכפלה. <b>הוכחה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-207'>נגדיר וקטור יחידה להיות <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math> כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
-   <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
-<mo>=</mo>
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>=</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>. אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>0</mn><mo> &ne; </mo>
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+  </mrow>
+ </mrow></math> אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
    <mfrac>
     <mrow><mn>1</mn>
     </mrow>
-    <mrow><mn>4</mn>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+     <munder>
+      <mrow><mi>v</mi>
+      </mrow><mo stretchy="true">&macr;</mo>
+     </munder>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
     </mrow>
-   </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow>
-    <msup>
-     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-      <mrow><mi>x</mi><mo>+</mo><mi>y</mi>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-     </mrow>
-     <mrow><mn>2</mn>
-     </mrow>
-    </msup><mo>-</mo>
-    <msup>
-     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-      <mrow><mi>x</mi><mo>-</mo><mi>y</mi>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-     </mrow>
-     <mrow><mn>2</mn>
-     </mrow>
-    </msup><mo>+</mo><mi>i</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-    <mrow>
-     <msup>
-      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-       <mrow><mi>x</mi><mo>+</mo><mi>y</mi>
-       </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-      </mrow>
-      <mrow><mn>2</mn>
-      </mrow>
-     </msup><mo>-</mo>
-     <msup>
-      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-       <mrow><mi>x</mi><mo>-</mo><mi>y</mi>
-       </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
-
-      </mrow>
-      <mrow><mn>2</mn>
-      </mrow>
-     </msup>
-    </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
+   </mfrac><mo> &sdot; </mo>
+   <munder>
+    <mrow><mi>v</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
   </mrow>
- </mrow></math>.</div>
+ </mrow></math> וקטור יחידה, שנקרא גם הוקטור <u>המנורמל</u>.</div>
 
-<div class="standard" id='magicparlabel-210'><b>משפט:</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-208'>אז סדרה <u>אורתונורמלית</u> היא סדרה אורתוגונלית של וקטורי יחידה.</div>
+<h4 class="subsubsection" id='magicparlabel-209'><span class="subsubsection_label">9.5.2</span> תכונות</h4>
+
+<ul class="itemize" id='magicparlabel-210'><li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -5692,9 +5620,8 @@ div.Doublebox {
     </mrow>
    </msub>
   </mrow>
- </mrow></math> בת&rdquo;ל. לכן נגדיר גם <u>בסיס אורתוגונלי</u>.</div>
-
-<div class="standard" id='magicparlabel-211'>בבסיס אורתוגונלי, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> בת&rdquo;ל. לכן נגדיר גם <u>בסיס אורתוגונלי</u>.</li>
+<li class="itemize_item">בבסיס אורתוגונלי, <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>G</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -5764,17 +5691,778 @@ div.Doublebox {
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math>.</div>
-
-<div class="standard" id='magicparlabel-212'><b>נרמול:</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>.</li>
+<li class="itemize_item">נגדיר <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mn>0</mn><mo> &ne; </mo>
-   <munder>
+  <mrow><mi>v</mi><mo> &perp; </mo><mi>A</mi><mo> &#x27fa; </mo><mi> &forall; </mi><mi>a</mi><mo> &isin; </mo><mi>A</mi><mn>.</mn><mi>v</mi><mo> &perp; </mo><mi>a</mi>
+  </mrow>
+ </mrow></math>. אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
     <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder><mo> &isin; </mo><mi>V</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo> &perp; </mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>s</mi><mi>p</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <mi>&hellip;
+    </mi><mo>,</mo>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mi>k</mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> &#x27fa; </mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo> &perp; </mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>k</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>.</li>
+</ul>
+<h4 class="subsubsection" id='magicparlabel-213'><span class="subsubsection_label">9.5.3</span> ההטלה</h4>
+<div class="standard" id='magicparlabel-214'>נגדיר את <u>ההטלה של וקטור <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math> על <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>U</mi>
+ </mrow></math></u> להיות:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>P</mi>
+    </mrow>
+    <mrow><mi>U</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msubsup>
+   <mfrac>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+     <mrow><mi>v</mi><mo>,</mo>
+      <msub>
+       <mrow><mi>b</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+
+    </mrow>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>b</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>,</mo>
+      <msub>
+       <mrow><mi>b</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+
+    </mrow>
+   </mfrac><mo> &sdot; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>כאשר <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> בסיס אורתוגונלי, בהמשך נראה שקיים כזה לכל מרחב נוצר סופית.</div>
+<h5 class="paragraph" id='magicparlabel-215'><span class="paragraph_label"></span> תכונות: יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>U</mi>
+ </mrow></math>. אז:</h5>
+
+<ul class="itemize" id='magicparlabel-216'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi> &forall; </mi><mi>u</mi><mo> &isin; </mo><mi>U</mi>
+   <msub>
+    <mrow><mi>P</mi>
+    </mrow>
+    <mrow><mi>U</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>u</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mi>u</mi>
+  </mrow>
+ </mrow></math>, ולכן <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>P</mi>
+    </mrow>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <msub>
+    <mrow><mi>P</mi>
+    </mrow>
+    <mrow><mi>U</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math></li>
+<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>P</mi>
+   </mrow>
+   <mrow><mi>U</mi>
+   </mrow>
+  </msub>
+ </mrow></math> העתקה לינארית, כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> ker </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>P</mi>
+    </mrow>
+    <mrow><mi>U</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
+   <mrow><mi>v</mi><mo> &isin; </mo><mi>V</mi><mo> &smid; </mo><mi>v</mi><mo> &perp; </mo><mi>U</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+  </mrow>
+ </mrow></math>. נסמן גם ב-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow><mi>U</mi>
+   </mrow>
+   <mrow><mo> &perp; </mo>
+   </mrow>
+  </msup>
+ </mrow></math>.</li>
+<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>-</mo>
+    <msub>
+     <mrow><mi>P</mi>
+     </mrow>
+     <mrow><mi>U</mi>
+     </mrow>
+    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> &perp; </mo><mi>U</mi>
+  </mrow>
+ </mrow></math> לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math>.</li>
+</ul>
+<div class="standard" id='magicparlabel-219'><b>תכונות של <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow><mi>U</mi>
+   </mrow>
+   <mrow><mo> &perp; </mo>
+   </mrow>
+  </msup>
+ </mrow></math>:</b></div>
+
+<ol class="enumerate" id='magicparlabel-220'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>U</mi><mo> &oplus; </mo>
+   <msup>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup><mo>=</mo><mi>V</mi>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>U</mi><mo> &sube; </mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <msup>
+      <mrow><mi>U</mi>
+      </mrow>
+      <mrow><mo> &perp; </mo>
+      </mrow>
+     </msup>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> ואם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>V</mi>
+ </mrow></math> נוצר סופית אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>U</mi><mo>=</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <msup>
+      <mrow><mi>U</mi>
+      </mrow>
+      <mrow><mi>t</mi>
+      </mrow>
+     </msup>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mi>t</mi>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math>.</li>
+<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>U</mi><mo>+</mo><mi>W</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup><mo>=</mo>
+   <msup>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup><mo> &cap; </mo>
+   <msup>
+    <mrow><mi>W</mi>
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>U</mi><mo> &cap; </mo><mi>W</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup><mo>=</mo>
+   <msup>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup><mo>+</mo>
+   <msup>
+    <mrow><mi>W</mi>
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>U</mi><mo> &sube; </mo><mi>W</mi>
   </mrow>
  </mrow></math> אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mi>W</mi>
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup><mo> &sube; </mo>
+   <msup>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mo> &perp; </mo>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>u</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+<mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>P</mi>
+     </mrow>
+     <mrow><mi>U</mi>
+     </mrow>
+    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo>
+    <msub>
+     <mrow><mi>P</mi>
+     </mrow>
+     <mrow><mi>U</mi>
+     </mrow>
+    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>u</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+<mo>+</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>&lang;</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>P</mi>
+     </mrow>
+     <mrow>
+      <msup>
+       <mrow><mi>U</mi>
+       </mrow>
+       <mrow><mo> &perp; </mo>
+       </mrow>
+      </msup>
+     </mrow>
+    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo>
+    <msub>
+     <mrow><mi>P</mi>
+     </mrow>
+     <mrow>
+      <msup>
+       <mrow><mi>U</mi>
+       </mrow>
+       <mrow><mo> &perp; </mo>
+       </mrow>
+      </msup>
+     </mrow>
+    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>u</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>&rang;</mo>
+
+  </mrow>
+ </mrow></math></li>
+</ol>
+<div class="standard" id='magicparlabel-226'><b>משפט הקירוב הטוב ביותר:</b> נגדיר <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>U</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo>
+    <msub>
+     <mrow><mi>P</mi>
+     </mrow>
+     <mrow><mi>U</mi>
+     </mrow>
+    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>. אז מתקיים ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>U</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mo> inf </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>u</mi><mo> &isin; </mo><mi>U</mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>u</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mo> min </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>u</mi><mo> &isin; </mo><mi>U</mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>u</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>, כלומר שהמרחק הזה הוא המרחק הכי קצר מ-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math> ל-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>U</mi>
+ </mrow></math>.</div>
+<h4 class="subsubsection" id='magicparlabel-227'><span class="subsubsection_label">9.5.4</span> אלגוריתם גראם-שמידט</h4>
+<div class="standard" id='magicparlabel-228'>אלגוריתם גראם-שמידט הוא האלגוריתם למציאת סדרה אורתונורמלית <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>w</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msub>
+    <mrow><mi>w</mi>
+    </mrow>
+    <mrow><mi>x</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> ל-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>s</mi><mi>p</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>b</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <mi>&hellip;
+    </mi><mo>,</mo>
+    <msub>
+     <mrow><mi>b</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>s</mi><mi>p</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>b</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <mi>&hellip;
+    </mi><mo>,</mo>
+    <msub>
+     <mrow><mi>b</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>s</mi><mi>p</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>w</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <mi>&hellip;
+    </mi><mo>,</mo>
+    <msub>
+     <mrow><mi>w</mi>
+     </mrow>
+     <mrow><mi>x</mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="standard" id='magicparlabel-229'>נוריד מ-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> את האפסים. נגדיר את <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>w</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mn>1</mn>
+      </mrow>
+     </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+    </mrow>
+   </mfrac>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> להיות המנורמל. לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>i</mi><mo> &isin; </mo><mn>2</mn><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo><mi>n</mi>
+  </mrow>
+ </mrow></math>, נגדיר <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>U</mi><mo>=</mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>s</mi><mi>p</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>b</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <mi>&hellip;
+    </mi><mo>,</mo>
+    <msub>
+     <mrow><mi>b</mi>
+     </mrow>
+     <mrow>
+      <mrow><mi>i</mi><mo>-</mo><mn>1</mn>
+      </mrow>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>, ואז נחשב <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>w</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+    <mrow><mi> &prime; </mi>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>-</mo>
+   <msub>
+    <mrow><mi>P</mi>
+    </mrow>
+    <mrow><mi>U</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>. אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>w</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+    <mrow><mi> &prime; </mi>
+    </mrow>
+   </msubsup><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>, נוסיף את <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> לסדרה כפי שהוא, אחרת נוסיף לסדרה <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>w</mi>
+ </mrow></math> את <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mfrac>
@@ -5782,34 +6470,30 @@ div.Doublebox {
     </mrow>
     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 <mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
-<mi>v</mi>
+
+     <msubsup>
+      <mrow><mi>w</mi>
+      </mrow>
+      <mrow><mi>i</mi>
+      </mrow>
+      <mrow><mi> &prime; </mi>
+      </mrow>
+     </msubsup>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
     </mrow>
-   </mfrac><mo> &sdot; </mo>
-   <munder>
-    <mrow><mi>v</mi>
-    </mrow><mo stretchy="true">&macr;</mo>
-   </munder>
+   </mfrac>
+   <msubsup>
+    <mrow><mi>w</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+    <mrow><mi> &prime; </mi>
+    </mrow>
+   </msubsup>
   </mrow>
- </mrow></math> וקטור יחידה.</div>
-
-<div class="standard" id='magicparlabel-213'><b>טענה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>v</mi><mo> &perp; </mo><mi>u</mi>
-  </mrow>
- </mrow></math> אז לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi> &alpha; </mi><mo>,</mo><mi> &beta; </mi><mo> &isin; </mo>
-   <mstyle mathvariant='double-struck'><mi>F</mi>
-   </mstyle>
-  </mrow>
- </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi> &alpha; </mi><mi>v</mi><mo> &perp; </mo><mi> &beta; </mi><mi>u</mi>
-  </mrow>
- </mrow></math>.</div>
+ </mrow></math> המנורמל.</div>
 </body>
 </html>
