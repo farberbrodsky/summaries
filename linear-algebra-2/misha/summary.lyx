@@ -2499,12 +2499,24 @@ lowest common multiplier
 \begin_inset Formula $\mathbb{C}$
 \end_inset
 
- )מעל 
+ או 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
-(.
- מכפלה הרמיטית אוניטרית )מכפלה פנימית( מעל 
+.
+ מכפלה אוניטרית )נקרא 
+\begin_inset Quotes eld
+\end_inset
+
+מכפלה פנימית
+\begin_inset Quotes erd
+\end_inset
+
+ מעל 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+( מעל 
 \begin_inset Formula $V$
 \end_inset
 
@@ -2516,36 +2528,24 @@ lowest common multiplier
 \end_layout
 
 \begin_layout Enumerate
-לינאריות לפי הרכיב השמאלי:
-\begin_inset Formula 
-\[
-\forall\alpha,\beta\in\mathbb{C}.\forall\underline{v_{1}},\underline{v_{2}},\underline{u}\in V.\left\langle \alpha\underline{v_{1}}+\beta\underline{v_{2}},u\right\rangle =\alpha\cdot\left\langle \underline{v_{1}},\underline{u}\right\rangle +\beta\cdot\left\langle \underline{v_{2}},\underline{u}\right\rangle 
-\]
-
+לינאריות לפי הרכיב השמאלי: 
+\begin_inset Formula $\left\langle \alpha\underline{v_{1}}+\beta\underline{v_{2}},u\right\rangle =\alpha\cdot\left\langle \underline{v_{1}},\underline{u}\right\rangle +\beta\cdot\left\langle \underline{v_{2}},\underline{u}\right\rangle $
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-הרמיטיות:
-\begin_inset Formula 
-\[
-\forall\underline{v},\underline{u}\in V.\left\langle \underline{v},\underline{u}\right\rangle =\overline{\left\langle \underline{u},\underline{v}\right\rangle }
-\]
-
+הרמיטיות: 
+\begin_inset Formula $\left\langle \underline{v},\underline{u}\right\rangle =\overline{\left\langle \underline{u},\underline{v}\right\rangle }$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-חיוביות:
-\begin_inset Formula 
-\[
-\forall\underline{v}\in V.\left\langle \underline{v},\underline{v}\right\rangle \in\mathbb{R}\land\left\langle \underline{v},\underline{v}\right\rangle \ge0
-\]
-
+חיוביות: 
+\begin_inset Formula $\left\langle \underline{v},\underline{v}\right\rangle \in\mathbb{R}\land\left\langle \underline{v},\underline{v}\right\rangle \ge0$
 \end_inset
 
 
@@ -2556,12 +2556,8 @@ lowest common multiplier
 \begin_inset Formula $0$
 \end_inset
 
-:
-\begin_inset Formula 
-\[
-\forall\underline{v}\in V.\left\langle \underline{v},\underline{v}\right\rangle =0\iff\underline{v}=\underline{0}
-\]
-
+: 
+\begin_inset Formula $\left\langle \underline{v},\underline{v}\right\rangle =0\iff\underline{v}=\underline{0}$
 \end_inset
 
 
@@ -2572,152 +2568,94 @@ lowest common multiplier
 \end_layout
 
 \begin_layout Standard
-מטריצה 
-\begin_inset Formula $A$
-\end_inset
-
- נקראת צמודה לעצמה )הרמיטית( אם 
-\begin_inset Formula $A=A^{*}$
-\end_inset
-
-.
- בנוסף 
-\begin_inset Formula $A^{*}=\overline{A^{t}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מטריצה 
-\begin_inset Formula $A$
-\end_inset
-
- שקמיימת 
-\begin_inset Formula $\forall z\ne0.z^{*}Az>0$
-\end_inset
-
- נקראת חיובית לחלוטין.
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-משפט:
+משפט לגבי הרכיב הימני:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $A\in M_{n}\left(\mathbb{C}\right)$
+\begin_inset Formula $\left\langle \underline{u},v_{1}+v_{2}\right\rangle =\left\langle u,v_{1}\right\rangle +\left\langle u,v_{2}\right\rangle $
 \end_inset
 
- הרמיטית )
-\begin_inset Formula $A=A^{*}=\overline{A^{t}}$
-\end_inset
-
-( וחיובית לחלוטין 
-\begin_inset Formula $\iff$
-\end_inset
-
- 
-\begin_inset Formula $\left\langle *,*\right\rangle $
-\end_inset
-
- מכפלה הרמיטית.
+ חיבוריות לפי הימני.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $A\in M_{n}\left(\mathbb{R}\right)$
+\begin_inset Formula $\left\langle v,\alpha u\right\rangle =\overline{\alpha}\left\langle v,u\right\rangle $
 \end_inset
 
- סימטרית )
-\begin_inset Formula $A=A^{t}$
-\end_inset
-
-( וחיובית לחלוטין 
-\begin_inset Formula $\iff$
-\end_inset
-
- 
-\begin_inset Formula $\left\langle *,*\right\rangle $
-\end_inset
-
- מכפלה פנימית.
+ כמו הומוגניות ברכיב הימני, אבל עם הצמוד.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall\underline{v}\in V.\left\langle \underline{v},\underline{0}\right\rangle =0$
+\begin_inset Formula $\left\langle \underline{v},\underline{0}\right\rangle =0$
 \end_inset
 
-
+ מתאפס גם לפי הרכיב הימני.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall\underline{v_{1}},\underline{v_{2}}\in V.\forall\underline{u}\in V.\left\langle \underline{u},v_{1}+v_{2}\right\rangle =\left\langle u,v_{1}\right\rangle +\left\langle u,v_{2}\right\rangle $
-\end_inset
-
-
+לכן יש לנו כמעט לינאריות לפי הרכיב הימני, אבל עם הסקלר הצמוד.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall\alpha\in\mathbb{C}.\left\langle v,\alpha u\right\rangle =\overline{a}\left\langle v,u\right\rangle $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
+ומכאן נובע: 
 \begin_inset Formula $\left\langle \sum_{i=1}^{n}a_{i}\underline{v_{i}},\sum_{j=1}^{m}b_{j}\underline{u_{j}}\right\rangle =\sum_{i=1}^{n}\sum_{j=1}^{m}a_{i}\overline{b_{j}}\left\langle \underline{v_{i}},\underline{u_{j}}\right\rangle $
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+נורמה
+\end_layout
 
-\series bold
-גיאומטריה באופן אלגברי:
-\series default
- יהי 
-\begin_inset Formula $V$
+\begin_layout Standard
+נגדיר 
+\begin_inset Formula $\left|\left|v\right|\right|=\sqrt{\left\langle v,v\right\rangle }$
 \end_inset
 
- מרחב מכפלה פנימית, או מרחב אוניטרי/הרמיטי.
- נגדיר:
-\begin_inset Formula 
-\begin{align*}
-\left|\left|v\right|\right| & =\sqrt{\left\langle \underline{v},\underline{v}\right\rangle }\\
-\cos\left(\arg\left(\underline{v},\underline{u}\right)\right) & =\frac{\left\langle \underline{v},\underline{u}\right\rangle }{\left|\left|v\right|\right|\cdot\left|\left|u\right|\right|}\\
-\text{dist}\left(\underline{v},\underline{u}\right) & =\left|\left|\underline{v}-\underline{u}\right|\right|\\
-\underline{v}\perp\underline{u} & \iff\left\langle \underline{v},\underline{u}\right\rangle =0
-\end{align*}
+ הנורמה של 
+\begin_inset Formula $v$
+\end_inset
 
+.
+ תלוי במכפלה הפנימית.
+\end_layout
+
+\begin_layout Subsubsection
+תכונות הנורמה
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0\le\left|\left|\underline{v}\right|\right|\in\mathbb{R}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+\begin_inset Formula $\left|\left|\alpha\cdot\underline{v}\right|\right|=\left|\alpha\right|\cdot\left|\left|\underline{v}\right|\right|$
+\end_inset
+
+ הומוגניות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\left|\underline{v}+\underline{u}\right|\right|\le\left|\left|\underline{v}\right|\right|+\left|\left|\underline{u}\right|\right|$
+\end_inset
+
+ אי שוויון המשולש.
+\end_layout
+
+\begin_layout Itemize
 
 \series bold
-אי שוויון קושי שוורץ:
+\begin_inset Formula $\left|\left\langle \underline{v},\underline{u}\right\rangle \right|\le\left|\left|\underline{v}\right|\right|\cdot\left|\left|\underline{u}\right|\right|$
+\end_inset
+
+ )אי שוויון קושי שוורץ(
 \series default
- יהי 
-\begin_inset Formula $V$
-\end_inset
-
- ממ
-\begin_inset Quotes erd
-\end_inset
-
-פ/מרחב הרמיטי.
- אז לכל 
-\begin_inset Formula $\underline{v},\underline{u}$
-\end_inset
-
-, 
-\begin_inset Formula $\left|\left\langle \underline{v},\underline{u}\right\rangle \right|\le\left|\left|v\right|\right|\cdot\left|\left|u\right|\right|$
-\end_inset
-
 .
  בנוסף שוויון מתקיים 
 \begin_inset Formula $\iff$
@@ -2736,6 +2674,87 @@ lowest common multiplier
 \end_inset
 
 (.
+\end_layout
+
+\begin_layout Itemize
+הנורמה קובעת את המכפלה.
+ 
+\series bold
+הוכחה:
+\series default
+ 
+\begin_inset Formula $\left\langle x,y\right\rangle =\frac{1}{4}\left(\left|\left|x+y\right|\right|^{2}-\left|\left|x-y\right|\right|^{2}+i\left(\left|\left|x+y\right|\right|^{2}-\left|\left|x-y\right|\right|^{2}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גיאומטריה באופן אלגברי:
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+\left|\left|\underline{v}\right|\right| & =\sqrt{\left\langle \underline{v},\underline{v}\right\rangle }\\
+\cos\left(\arg\left(\underline{v},\underline{u}\right)\right) & =\frac{\left\langle \underline{v},\underline{u}\right\rangle }{\left|\left|v\right|\right|\left|\left|u\right|\right|}\\
+\text{dist}\left(\underline{v},\underline{u}\right) & =\left|\left|\underline{v}-\underline{u}\right|\right|\\
+\underline{v}\perp\underline{u} & \iff\left\langle \underline{v},\underline{u}\right\rangle =0\\
+\underline{v}\perp\underline{u} & \implies\forall\alpha,\beta.\alpha v\perp\beta u
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+תכונות המרחק
+\end_layout
+
+\begin_layout Standard
+נגדיר 
+\begin_inset Formula $\text{dist}\left(v,u\right)=\left|\left|v-u\right|\right|$
+\end_inset
+
+.
+ אז:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\le\text{dist}\left(v,u\right)$
+\end_inset
+
+ חיוביות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{dist}\left(\underline{v},\underline{u}\right)=\text{dist}\left(\underline{u},\underline{v}\right)$
+\end_inset
+
+ סימטריות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\underline{v}=\underline{u}\iff\text{dist}\left(\underline{v},\underline{u}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{dist}\left(\underline{v},\underline{u}\right)\le\text{dist}\left(\underline{v},\underline{w}\right)+\text{dist}\left(\underline{w},\underline{u}\right)$
+\end_inset
+
+ אי שוויון המשולש
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\left\langle \underline{v},\underline{u}\right\rangle =0\iff\right)\underline{v}\perp\underline{u}\iff\left|\left|v-u\right|\right|^{2}=\left|\left|v\right|\right|^{2}+\left|\left|u\right|\right|^{2}$
+\end_inset
+
+ משפט פיתגורס
 \end_layout
 
 \begin_layout Subsection
@@ -2774,26 +2793,33 @@ lowest common multiplier
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $G=G^{*}$
+\begin_inset Formula $A\in M_{n}\left(\mathbb{C}\right)$
 \end_inset
 
- )הרמיטית(.
+ הרמיטית )
+\begin_inset Formula $A=\overline{A^{t}}\left(=A^{*}\right)$
+\end_inset
+
+( וחיובית לחלוטין )
+\begin_inset Formula $\forall z\ne0.z^{*}Az>0$
+\end_inset
+
+( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle *,*\right\rangle _{A}$
+\end_inset
+
+ מכפלה הרמיטית.
 \end_layout
 
 \begin_layout Itemize
-אם 
-\begin_inset Formula $x=\sum_{i=1}^{n}b_{i}v_{i}$
+\begin_inset Formula $G=G^{*}$
 \end_inset
 
- ו-
-\begin_inset Formula $y=\sum_{i=1}^{n}a_{i}v_{i}$
-\end_inset
-
- אז 
-\begin_inset Formula $\left\langle x,y\right\rangle =aGb^{*}=\left[y\right]_{B}G_{B}\left[x\right]_{B}^{*}$
-\end_inset
-
-.
+ )הרמיטית( וחיובית לחלוטין )ולכן היא מכפלה הרמיטית(.
 \end_layout
 
 \begin_layout Itemize
@@ -2820,106 +2846,33 @@ lowest common multiplier
  הבסיס הסטנדרטי.
 \end_layout
 
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x,y$
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle x,y\right\rangle =\left\langle \left[x\right]_{B},\left[y\right]_{B}\right\rangle _{G}$
+\end_inset
+
+.
+ אבל אין דרישה ש-
+\begin_inset Formula $B$
+\end_inset
+
+ יהיה באמת בסיס, רק ש-
+\begin_inset Formula $x,y$
+\end_inset
+
+ יהיו צירופים לינאריים בו.
+\end_layout
+
 \begin_layout Subsection
-נורמה
-\end_layout
-
-\begin_layout Standard
-נגדיר 
-\begin_inset Formula $\left|\left|v\right|\right|=\sqrt{\left\langle v,v\right\rangle }$
-\end_inset
-
- הנורמה של 
-\begin_inset Formula $v$
-\end_inset
-
-.
- תלוי במכפלה הפנימית.
+אורתוגונליות
 \end_layout
 
 \begin_layout Subsubsection
-תכונות הנורמה
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $0\le\left|\left|v\right|\right|\in\mathbb{R}$
-\end_inset
-
- )ישירות מההגדרה(.
-\end_layout
-
-\begin_layout Enumerate
-הומוגניות 
-\begin_inset Formula $\left|\left|\alpha\cdot v\right|\right|=\left|\alpha\right|\cdot\left|\left|v\right|\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-אי שוויון המשולש 
-\begin_inset Formula $\left|\left|v+u\right|\right|\le\left|\left|v\right|\right|+\left|\left|u\right|\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-תכונות המרחק
-\end_layout
-
-\begin_layout Standard
-נגדיר 
-\begin_inset Formula $\text{dist}\left(v,u\right)=\left|\left|v-u\right|\right|$
-\end_inset
-
-.
- אז:
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $0\le\text{dist}\left(v,u\right)$
-\end_inset
-
- חיוביות.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\text{dist}\left(\underline{v},\underline{u}\right)=\text{dist}\left(\underline{u},\underline{v}\right)$
-\end_inset
-
- סימטריות.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\underline{v}=\underline{u}\iff\text{dist}\left(\underline{v},\underline{u}\right)=0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-אי שוויון המשולש 
-\begin_inset Formula $\text{dist}\left(\underline{v},\underline{u}\right)\le\text{dist}\left(\underline{v},\underline{w}\right)+\text{dist}\left(\underline{w},\underline{u}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-משפט פיתגורס:
-\series default
- 
-\begin_inset Formula $\left(\left\langle \underline{v},\underline{u}\right\rangle =0\iff\right)\underline{v}\perp\underline{u}\iff\left|\left|v-u\right|\right|^{2}=\left|\left|v\right|\right|^{2}+\left|\left|u\right|\right|^{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-אורתוגונלית
+הגדרות בסיסיות
 \end_layout
 
 \begin_layout Standard
@@ -2959,41 +2912,44 @@ lowest common multiplier
 \end_layout
 
 \begin_layout Standard
-בנוסף סדרה 
-\bar under
-אורתונורמלית
-\bar default
- היא סדרה אורתוגונלית של וקטורי יחידה.
- שילוב של אורתוגונלית ונורמלית.
-\end_layout
-
-\begin_layout Subsubsection
-משפטים נוספים
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-משפט:
-\series default
- הנורמה קובעת את המכפלה.
- 
-\series bold
-הוכחה:
-\series default
- 
-\begin_inset Formula $\left\langle x,y\right\rangle =\frac{1}{4}\left(\left|\left|x+y\right|\right|^{2}-\left|\left|x-y\right|\right|^{2}+i\left(\left|\left|x+y\right|\right|^{2}-\left|\left|x-y\right|\right|^{2}\right)\right)$
+נגדיר וקטור יחידה להיות 
+\begin_inset Formula $v$
 \end_inset
 
+ כך ש-
+\begin_inset Formula $\left|\left|\underline{v}\right|\right|=1$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $0\ne\underline{v}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{1}{\left|\left|\underline{v}\right|\right|}\cdot\underline{v}$
+\end_inset
+
+ וקטור יחידה, שנקרא גם הוקטור 
+\bar under
+המנורמל
+\bar default
 .
 \end_layout
 
 \begin_layout Standard
+אז סדרה 
+\bar under
+אורתונורמלית
+\bar default
+ היא סדרה אורתוגונלית של וקטורי יחידה.
+\end_layout
 
-\series bold
-משפט:
-\series default
- אם 
+\begin_layout Subsubsection
+תכונות
+\end_layout
+
+\begin_layout Itemize
+אם 
 \begin_inset Formula $v_{1},\dots,v_{n}$
 \end_inset
 
@@ -3017,7 +2973,7 @@ lowest common multiplier
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 בבסיס אורתוגונלי, 
 \begin_inset Formula $G\left(v_{1},\dots,v_{n}\right)=\text{Diag}\left(\left|\left|v_{1}\right|\right|^{2},\dots,\left|\left|v_{n}\right|\right|^{2}\right)$
 \end_inset
@@ -3025,40 +2981,251 @@ lowest common multiplier
 .
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-נרמול:
-\series default
- אם 
-\begin_inset Formula $0\ne\underline{v}\in V$
+\begin_layout Itemize
+נגדיר 
+\begin_inset Formula $v\perp A\iff\forall a\in A.v\perp a$
 \end_inset
 
+.
  אז 
-\begin_inset Formula $\frac{1}{\left|\left|v\right|\right|}\cdot\underline{v}$
+\begin_inset Formula $v_{0}\perp\text{sp}\left(v_{1},\dots,v_{k}\right)\iff v_{0}\perp v_{1},\dots,v_{k}$
 \end_inset
 
- וקטור יחידה.
+.
+\end_layout
+
+\begin_layout Subsubsection
+ההטלה
+\end_layout
+
+\begin_layout Standard
+נגדיר את 
+\bar under
+ההטלה של וקטור 
+\begin_inset Formula $v$
+\end_inset
+
+ על 
+\begin_inset Formula $U$
+\end_inset
+
+
+\bar default
+ להיות:
+\begin_inset Formula 
+\[
+P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\left\langle b_{i},b_{i}\right\rangle }\cdot b_{i}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $b_{1},\dots,b_{n}$
+\end_inset
+
+ בסיס אורתוגונלי, בהמשך נראה שקיים כזה לכל מרחב נוצר סופית.
+\end_layout
+
+\begin_layout Paragraph
+תכונות:
+\series medium
+ יהי 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ אז:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall u\in UP_{U}\left(u\right)=u$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $P_{U}^{2}=P_{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{U}$
+\end_inset
+
+ העתקה לינארית, כך ש-
+\begin_inset Formula $\ker\left(P_{U}\right)=\left\{ v\in V\mid v\perp U\right\} $
+\end_inset
+
+.
+ נסמן גם ב-
+\begin_inset Formula $U^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(v-P_{U}\left(v\right)\right)\perp U$
+\end_inset
+
+ לכל 
+\begin_inset Formula $v$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-טענה:
-\series default
- 
-\begin_inset Formula $v\perp u$
+תכונות של 
+\begin_inset Formula $U^{\perp}$
 \end_inset
 
- אז לכל 
-\begin_inset Formula $\alpha,\beta\in\mathbb{F}$
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U\oplus U^{\perp}=V$
 \end_inset
 
-, 
-\begin_inset Formula $\alpha v\perp\beta u$
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U\subseteq\left(U^{\perp}\right)^{\perp}$
+\end_inset
+
+ ואם 
+\begin_inset Formula $V$
+\end_inset
+
+ נוצר סופית אז 
+\begin_inset Formula $U=\left(U^{t}\right)^{t}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(U+W\right)^{\perp}=U^{\perp}\cap W^{\perp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(U\cap W\right)^{\perp}=U^{\perp}+W^{\perp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $U\subseteq W$
+\end_inset
+
+ אז 
+\begin_inset Formula $W^{\perp}\subseteq U^{\perp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle v,u\right\rangle =\left\langle P_{U}\left(v\right),P_{U}\left(u\right)\right\rangle +\left\langle P_{U^{\perp}}\left(v\right),P_{U^{\perp}}\left(u\right)\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הקירוב הטוב ביותר:
+\series default
+ נגדיר 
+\begin_inset Formula $\text{dist}\left(v,U\right)=\text{dist}\left(v,P_{U}\left(v\right)\right)$
+\end_inset
+
+.
+ אז מתקיים ש-
+\begin_inset Formula $\text{dist}\left(v,U\right)=\inf_{u\in U}\text{dist}\left(v,u\right)=\min_{u\in U}\text{dist}\left(v,u\right)$
+\end_inset
+
+, כלומר שהמרחק הזה הוא המרחק הכי קצר מ-
+\begin_inset Formula $v$
+\end_inset
+
+ ל-
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+אלגוריתם גראם-שמידט
+\end_layout
+
+\begin_layout Standard
+אלגוריתם גראם-שמידט הוא האלגוריתם למציאת סדרה אורתונורמלית 
+\begin_inset Formula $w_{1},\dots,w_{x}$
+\end_inset
+
+ ל-
+\begin_inset Formula $\text{sp}\left(b_{1},\dots,b_{n}\right)$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\text{sp}\left(b_{1},\dots,b_{n}\right)=\text{sp}\left(w_{1},\dots,w_{x}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נוריד מ-
+\begin_inset Formula $b_{1},\dots,b_{n}$
+\end_inset
+
+ את האפסים.
+ נגדיר את 
+\begin_inset Formula $w_{1}=\frac{1}{\left|\left|b_{1}\right|\right|}b_{1}$
+\end_inset
+
+ להיות המנורמל.
+ לכל 
+\begin_inset Formula $i\in2,\dots,n$
+\end_inset
+
+, נגדיר 
+\begin_inset Formula $U=\text{sp}\left(b_{1},\dots,b_{i-1}\right)$
+\end_inset
+
+, ואז נחשב 
+\begin_inset Formula $w_{i}^{\prime}=b_{i}-P_{U}\left(b_{i}\right)$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $w_{i}^{\prime}=0$
+\end_inset
+
+, נוסיף את 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ לסדרה כפי שהוא, אחרת נוסיף לסדרה 
+\begin_inset Formula $w$
+\end_inset
+
+ את 
+\begin_inset Formula $\frac{1}{\left|\left|w_{i}^{\prime}\right|\right|}w_{i}^{\prime}$
+\end_inset
+
+ המנורמל.
 \end_layout
 
 \end_body
