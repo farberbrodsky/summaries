@@ -2856,7 +2856,7 @@ lowest common multiplier
 \end_inset
 
 .
- אבל אין דרישה ש-
+ אין דרישה ש-
 \begin_inset Formula $B$
 \end_inset
 
@@ -2865,6 +2865,39 @@ lowest common multiplier
 \end_inset
 
  יהיו צירופים לינאריים בו.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+נוסחת שינוי בסיס:
+\series default
+ יהיו 
+\begin_inset Formula $B_{1},B_{2}$
+\end_inset
+
+ שני בסיסים של 
+\begin_inset Formula $V$
+\end_inset
+
+ )ממ
+\begin_inset Quotes erd
+\end_inset
+
+פ/מ
+\begin_inset Quotes erd
+\end_inset
+
+א(.
+ אז 
+\begin_inset Formula $G\left(B_{2}\right)=E^{t}\cdot G\left(B_{1}\right)\cdot\overline{E}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $E=\left[Id\right]_{B_{2}}^{B_{1}}$
+\end_inset
+
+ מטריצת שינוי הקואורדינטות.
 \end_layout
 
 \begin_layout Subsection
@@ -3213,11 +3246,7 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 \begin_inset Formula $w_{i}^{\prime}=0$
 \end_inset
 
-, נוסיף את 
-\begin_inset Formula $b_{i}$
-\end_inset
-
- לסדרה כפי שהוא, אחרת נוסיף לסדרה 
+, נתעלם ממנו, אחרת נוסיף לסדרה 
 \begin_inset Formula $w$
 \end_inset
 
@@ -3226,6 +3255,229 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 \end_inset
 
  המנורמל.
+\end_layout
+
+\begin_layout Subsection
+מקבילונים
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ 
+\begin_inset Formula $\det\left(G\left(v_{1},\dots,v_{n}\right)\right)\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ יהיו 
+\begin_inset Formula $v_{1},\dots,v_{n}\in V$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\det\left(G\left(v_{1},\dots,v_{n}\right)\right)\ne0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ המקבילון שנפרש ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ מוגדר להיות:
+\begin_inset Formula 
+\[
+P\left(v_{1},\dots,v_{n}\right)=\left\{ \sum_{i=1}^{n}\alpha_{i}v_{i}\mid1\le i\le n,0\le\alpha_{i}\le1\right\} 
+\]
+
+\end_inset
+
+כלומר צירופים לינאריים כאשר המקדמים בין 
+\begin_inset Formula $0$
+\end_inset
+
+ ל-
+\begin_inset Formula $1$
+\end_inset
+
+.
+ אם נצייר את הנקודות על הגרף נקבל את כל הנקודות שבתוך המקבילית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ 
+\begin_inset Formula $\text{Vol}\left(P\left(v_{1},\dots,v_{n}\right)\right)=\sqrt{\det\left(G\left(v_{1},\dots,v_{n}\right)\right)}$
+\end_inset
+
+ הנפח.
+ זה מכליל את הקונספט של נפח לכל מכפלה פנימית.
+\end_layout
+
+\begin_layout Standard
+במכפלה הסקלרית הסטנדרטית מתקיים 
+\begin_inset Formula $\text{Vol}\left(P\left(v_{1},\dots,v_{n}\right)\right)=\det\begin{pmatrix}\mid &  & \mid\\
+v_{1} & \dots & v_{n}\\
+\mid &  & \mid
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ אם 
+\begin_inset Formula $B$
+\end_inset
+
+ בסיס כלשהו ו-
+\begin_inset Formula $E$
+\end_inset
+
+ בסיס אורתונורמלי אז 
+\begin_inset Formula $\text{Vol}\left(P\left(B\right)\right)=\left|\det\left(\left[Id\right]_{E}^{B}\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה )מלבנים(:
+\series default
+ אם 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ אורתוגונלי אז 
+\begin_inset Formula $\text{Vol}\left(P\left(v_{1},\dots,v_{n}\right)\right)=\left|\left|v_{1}\right|\right|\cdot\dots\cdot\left|\left|v_{n}\right|\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ יהי 
+\begin_inset Formula $B$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+ )בפרט נוצר סופית( ו-
+\begin_inset Formula $v\in V$
+\end_inset
+
+, אז מתקיים:
+\begin_inset Formula 
+\[
+\left(\text{dist}\left(\underline{v},P_{U}\left(\underline{v}\right)\right)=\right)\text{dist}\left(\underline{v},U\right)=\frac{\text{Vol}\left(P\left(\underline{v}\lor B\right)\right)}{\text{Vol}\left(P\left(B\right)\right)}=\sqrt{\frac{\det\left(G\left(\underline{v}\lor B\right)\right)}{\det\left(G\left(B\right)\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+העתקות לינאריות עם ממ
+\begin_inset Quotes erd
+\end_inset
+
+פ/מ
+\begin_inset Quotes erd
+\end_inset
+
+א
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $V$
+\end_inset
+
+ ממ
+\begin_inset Quotes erd
+\end_inset
+
+פ/מ
+\begin_inset Quotes erd
+\end_inset
+
+א, 
+\begin_inset Formula $B$
+\end_inset
+
+ בסיס אורתונורמלי ו-
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ העתקה לינארית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\left[T\right]_{B}\right)_{i,j}=\left\langle T\left(b_{j}\right),b_{i}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ובמכפלה הסטנדרטית גם: 
+\begin_inset Formula $\left\langle T\left(v\right),u\right\rangle =\left\langle \left[T\left(v\right)\right]_{B},\left[u\right]_{B}\right\rangle _{\text{st}}=\left\langle \left[T\right]_{B}\cdot\left[v\right]_{B},\left[u\right]_{B}\right\rangle _{\text{st}}$
+\end_inset
+
+
 \end_layout
 
 \end_body
