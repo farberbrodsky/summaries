@@ -3424,6 +3424,48 @@ v_{1} & \dots & v_{n}\\
 \end_layout
 
 \begin_layout Subsection
+אוריאנטציה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה חשדה לנפח:
+\series default
+ יהי 
+\begin_inset Formula $E$
+\end_inset
+
+ בסיס אורתונורמלי ל-
+\begin_inset Formula $V$
+\end_inset
+
+.
+ אז: 
+\begin_inset Formula $\text{Vol}^{*}\left(P\left(B\right)\right)=\det\left(\left[Id\right]_{E}^{B}\right)$
+\end_inset
+
+.
+ פה נפח כבר לא חייב להיות מספר חיובי.
+\end_layout
+
+\begin_layout Standard
+נאמר ש-
+\begin_inset Formula $B,B^{\prime}$
+\end_inset
+
+ 
+\bar under
+בעלי אותה אוריאנטציה
+\bar default
+ אם 
+\begin_inset Formula $\det\left(\left[Id\right]_{B^{\prime}}^{B}\right)>0$
+\end_inset
+
+, זה יחס שקילות.
+\end_layout
+
+\begin_layout Subsection
 העתקות לינאריות עם ממ
 \begin_inset Quotes erd
 \end_inset
@@ -3478,6 +3520,67 @@ v_{1} & \dots & v_{n}\\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+ההעתקה הצמודה
+\end_layout
+
+\begin_layout Standard
+תהא 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+, נגדיר את ההעתקה הצמודה 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ להיות ההעתקה שמקיימת 
+\begin_inset Formula $\left\langle T\left(v\right),u\right\rangle =\left\langle v,T^{*}\left(u\right)\right\rangle $
+\end_inset
+
+.
+ או באופן שקול 
+\begin_inset Formula $\left\langle T^{*}\left(v\right),u\right\rangle =\left\langle v,T\left(u\right)\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תכונות:
+\series default
+ בדומה לטרנספוז של מטריצות,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(T+S\right)^{*}=T^{*}+S^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(T\circ S\right)^{*}=S^{*}\circ T^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\lambda T\right)^{*}=\overline{\lambda}\cdot T^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(T^{*}\right)^{*}=T$
+\end_inset
+
+.
 \end_layout
 
 \end_body
