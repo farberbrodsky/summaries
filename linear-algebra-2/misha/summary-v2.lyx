@@ -1,0 +1,1147 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[use-david]{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing other 1.15
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+סיכומי הרצאות 
+\series default
+- אלגברה לינארית
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+א
+\end_layout
+
+\begin_layout Author
+מיכאל פרבר ברודסקי
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+אלגוריתמים
+\end_layout
+
+\begin_layout Section
+לכסון
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+העתקה לכסינה
+\bar default
+ היא העתקה לינארית כך שקיים בסיס 
+\begin_inset Formula $B$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[T\right]_{B}^{B}$
+\end_inset
+
+ אלכסונית.
+ אם 
+\begin_inset Formula $T$
+\end_inset
+
+ העתקה לכסינה, אז כל מטריצה מייצגת שלה גם לכסינה.
+\end_layout
+
+\begin_layout Subsection
+וקטורים עצמיים וערכים עצמיים
+\end_layout
+
+\begin_layout Standard
+נגיד 
+\bar under
+וקטור עצמי של 
+\begin_inset Formula $A$
+\end_inset
+
+ לערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\bar default
+ להיות 
+\begin_inset Formula $\underline{v}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $A\underline{v}=\lambda\underline{v}$
+\end_inset
+
+.
+ באופן הפוך 
+\bar under
+ערך עצמי של 
+\begin_inset Formula $A$
+\end_inset
+
+
+\bar default
+ הוא 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ כך שקיים וקטור עצמי 
+\begin_inset Formula $\underline{v}\ne\underline{0}$
+\end_inset
+
+ לערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מרחב הוקטורים העצמיים לכל 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ הוא 
+\begin_inset Formula $V_{\lambda}=\left\{ \underline{v}\in V\mid A\underline{v}=\lambda\underline{v}\right\} =\text{Sols}\left(A-\lambda I\right)$
+\end_inset
+
+.
+ הסכום של 
+\begin_inset Formula $V_{\lambda}$
+\end_inset
+
+ שונים הוא סכום ישר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים בסיס 
+\begin_inset Formula $B\subseteq\mathbb{F}^{n}$
+\end_inset
+
+ שמורכב מוקטורים עצמיים של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט: 
+\series default
+במטריצה המלוכסנת, 
+\series bold
+הערכים העצמיים הם האיברים שנמצאים על האלכסון
+\series default
+ עד כדי הסדר שלהם.
+\end_layout
+
+\begin_layout Subsection
+פולינום אופייני ומינימלי
+\end_layout
+
+\begin_layout Standard
+נגדיר את 
+\begin_inset Formula $p_{A}\left(\lambda\right)=\det\left(\lambda I-A\right)$
+\end_inset
+
+ להיות 
+\bar under
+הפולינום האופייני של 
+\begin_inset Formula $A$
+\end_inset
+
+
+\bar default
+.
+ מתקיים:
+\end_layout
+
+\begin_layout Itemize
+זה פולינום מתוקן, כלומר המקדם המוביל הוא 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ערך עצמי של 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ שורש של 
+\begin_inset Formula $p_{A}\left(\lambda\right)$
+\end_inset
+
+ 
+\size footnotesize
+)כי זה אומר שהמטריצה אינה הפיכה עבור ה-
+\begin_inset Formula $\lambda$
+\end_inset
+
+ הזה כלומר יש פתרונות(
+\size default
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ דומות אז 
+\begin_inset Formula $p_{A}=p_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נגדיר את 
+\bar under
+הריבוי האלגברי של 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\bar default
+, 
+\begin_inset Formula $\rho_{\alpha}$
+\end_inset
+
+ )רו(, להיות כמות הפעמים ש-
+\begin_inset Formula $\left(\lambda-\alpha\right)$
+\end_inset
+
+ מופיע בפולינום 
+\begin_inset Formula $P_{A}\left(\lambda\right)$
+\end_inset
+
+.
+ כלומר אם הפולינום הוא 
+\begin_inset Formula $P_{A}\left(\lambda\right)=\left(\lambda-1\right)\left(\lambda-3\right)^{2}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\rho_{1}=1,\rho_{3}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בנוסף נגדיר את 
+\bar under
+הריבוי הגיאומטרי של 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\bar default
+, 
+\begin_inset Formula $\mu_{\lambda}$
+\end_inset
+
+, להיות 
+\begin_inset Formula $\dim\left(V_{\lambda}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ לכל ערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{\lambda}\le\rho_{\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט: 
+\series default
+עבור 
+\begin_inset Formula $\lambda_{1},\dots,\lambda_{k}$
+\end_inset
+
+ הערכים העצמיים, 
+\begin_inset Formula $\rho_{\lambda_{1}}+\dots+\rho_{\lambda_{k}}\le n$
+\end_inset
+
+, ואם 
+\begin_inset Formula $p_{A}\left(\lambda\right)$
+\end_inset
+
+ מתפרק לגורמים לינאריים אז גם 
+\begin_inset Formula $\rho_{\lambda_{1}}+\dots+\rho_{\lambda_{k}}=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+המשפט המרכזי )תנאי ללכסינות(:
+\series default
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\mathbb{F}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ לכסינה מעל 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P_{A}\left(\lambda\right)$
+\end_inset
+
+ מתפרק לגורמים לינאריים מעל 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל ערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $\rho_{\lambda}=\mu_{\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נגדיר את 
+\bar under
+הפולינום המינימלי של 
+\begin_inset Formula $A$
+\end_inset
+
+
+\bar default
+, 
+\begin_inset Formula $m_{A}$
+\end_inset
+
+, להיות 
+\bar under
+הפולינום המתוקן היחידי
+\bar default
+ כך ש-
+\begin_inset Formula $\text{sp}\left(m_{A}\right)$
+\end_inset
+
+ האידאל המאפס של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ מתקיים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{A}$
+\end_inset
+
+ מחלק את 
+\begin_inset Formula $p_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $q\in\mathbb{F}\left[x\right]$
+\end_inset
+
+ פולינום אי פריק, 
+\begin_inset Formula $q\mid p_{A}\iff q\mid m_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+לכן אם 
+\begin_inset Formula $p_{A}=\prod_{i\in I}q_{i}^{m_{i}}$
+\end_inset
+
+ )
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ אי פריקים( אז 
+\begin_inset Formula $m_{A}=\prod_{i\in I}q_{i}^{r_{i}}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $1\le r_{i}\le m_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ במטריצת בלוקים אלכסונית 
+\begin_inset Formula $A=\text{Diag}\left(A_{1},\dots,A_{n}\right)$
+\end_inset
+
+ מתקיים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p_{A}=p_{A_{1}}\cdot\dots\cdot p_{A_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{A}=\text{lcm}\left(m_{A_{1}},\dots,m_{A_{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+ז'ירדון
+\end_layout
+
+\begin_layout Standard
+נגדיר 
+\series bold
+בלוק ז'ורדן
+\series default
+ להיות מטריצה מהצורה 
+\begin_inset Formula $\begin{pmatrix}\lambda & 1 & 0\\
+0 & \lambda & 1\\
+0 & 0 & \lambda
+\end{pmatrix}$
+\end_inset
+
+ או 
+\begin_inset Formula $\begin{pmatrix}\lambda & 1\\
+0 & \lambda
+\end{pmatrix}$
+\end_inset
+
+ ואפילו 
+\begin_inset Formula $\begin{pmatrix}\lambda\end{pmatrix}$
+\end_inset
+
+, כלומר יש אלכסון של 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ומעליו אלכסון של 
+\begin_inset Formula $1$
+\end_inset
+
+ים.
+\end_layout
+
+\begin_layout Standard
+צורת ז'ורדן היא מטריצת בלוקים אלכסונית כך שכל הבלוקים הם בלוקי ז'ורדן.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+באופן פרקטי וחישובי:
+\end_layout
+
+\begin_layout Enumerate
+חישוב הפולינום האופייני.
+ נסמן את הערכים העצמיים ב-
+\begin_inset Formula $\lambda_{1},\dots,\lambda_{k}$
+\end_inset
+
+ ואת הריבויים האלגבריים שלהם ב-
+\begin_inset Formula $\rho_{\lambda_{1}},\dots,\rho_{\lambda_{k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נחשב את 
+\begin_inset Formula $\ker\left(A-\lambda_{i}I\right),\dots,\ker\left(A-\lambda_{i}I\right)^{\rho_{\lambda_{i}}}$
+\end_inset
+
+ עד שהמימד של זה מפסיק להשתנות )לא כולל(.
+ נסמן את המקום שבו המימד מפסיק להשתנות ב-
+\begin_inset Formula $j$
+\end_inset
+
+.
+ זה גם הריבוי בפולינום המינימלי.
+\end_layout
+
+\begin_layout Enumerate
+מ-
+\begin_inset Formula $j$
+\end_inset
+
+ עד ל-
+\begin_inset Formula $1$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נשלים את 
+\begin_inset Formula $\ker\left(A-\lambda_{i}I\right)^{j-1}$
+\end_inset
+
+ לבסיס של 
+\begin_inset Formula $\ker\left(A-\lambda_{i}I\right)^{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $v$
+\end_inset
+
+ שהוסף בהשלמה.
+ נוסיף לבסיס את 
+\begin_inset Formula $\left(A-\lambda_{i}I\right)^{j}v,\dots,\left(A-\lambda_{i}I\right)^{1}v,v$
+\end_inset
+
+.
+ נספור שצריך איבר אחד פחות מאלה )כלומר ניקח איבר אחד פחות מההשלמות של החזקות
+ הקודמות(.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+אפשר להשתמש בבסיס שקיבלנו ישירות או לשים 
+\begin_inset Formula $P=\begin{pmatrix}B_{1} & \dots & B_{n}\end{pmatrix}$
+\end_inset
+
+, ואז 
+\begin_inset Formula $J=P^{-1}AP$
+\end_inset
+
+ )כי 
+\begin_inset Formula $P=\left[Id\right]_{E}^{B}$
+\end_inset
+
+ ואכן 
+\begin_inset Formula $\left[A\right]_{B}^{B}=\left[Id\right]_{B}^{E}\cdot\left[A\right]_{E}^{E}\cdot\left[Id\right]_{E}^{B}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\end_layout
+
+\begin_layout Itemize
+צורת זורדן יחידה עד כדי הסידור של בלוקי הז'ורדן.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu_{\lambda}$
+\end_inset
+
+ הריבוי הגיאומטרי של ערך עצמי כלשהו הוא מספר הבלוקים שלו.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\rho_{\lambda}$
+\end_inset
+
+ הריבוי האלגברי באופייני הוא סכום הגדלים של הבלוקים.
+\end_layout
+
+\begin_layout Itemize
+הריבוי האלגברי במינימלי הוא המקסימום של הגדלים של הבלוקים.
+\end_layout
+
+\begin_layout Section
+גראם-שמידט
+\end_layout
+
+\begin_layout Subsection
+הטלה
+\end_layout
+
+\begin_layout Standard
+נגדיר את 
+\bar under
+ההטלה של וקטור 
+\begin_inset Formula $v$
+\end_inset
+
+ על 
+\begin_inset Formula $U$
+\end_inset
+
+
+\bar default
+ להיות:
+\begin_inset Formula 
+\[
+P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\left\langle b_{i},b_{i}\right\rangle }\cdot b_{i}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $b_{1},\dots,b_{n}$
+\end_inset
+
+ בסיס אורתוגונלי, בהמשך נראה שקיים כזה לכל מרחב נוצר סופית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תכונות:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall u\in UP_{U}\left(u\right)=u$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $P_{U}^{2}=P_{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{U}$
+\end_inset
+
+ העתקה לינארית, כך ש-
+\begin_inset Formula $\ker\left(P_{U}\right)=\left\{ v\in V\mid v\perp U\right\} $
+\end_inset
+
+.
+ נסמן גם ב-
+\begin_inset Formula $U^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(v-P_{U}\left(v\right)\right)\perp U$
+\end_inset
+
+ לכל 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הקירוב הטוב ביותר:
+\series default
+ נגדיר 
+\begin_inset Formula $\text{dist}\left(v,U\right)=\text{dist}\left(v,P_{U}\left(v\right)\right)$
+\end_inset
+
+.
+ אז מתקיים ש-
+\begin_inset Formula $\text{dist}\left(v,U\right)=\inf_{u\in U}\text{dist}\left(v,u\right)=\min_{u\in U}\text{dist}\left(v,u\right)$
+\end_inset
+
+, כלומר שהמרחק הזה הוא המרחק הכי קצר מ-
+\begin_inset Formula $v$
+\end_inset
+
+ ל-
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+האלגוריתם עצמו
+\end_layout
+
+\begin_layout Standard
+אלגוריתם גראם-שמידט הוא האלגוריתם למציאת סדרה אורתונורמלית 
+\begin_inset Formula $w_{1},\dots,w_{x}$
+\end_inset
+
+ ל-
+\begin_inset Formula $\text{sp}\left(b_{1},\dots,b_{n}\right)$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\text{sp}\left(b_{1},\dots,b_{n}\right)=\text{sp}\left(w_{1},\dots,w_{x}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נוריד מ-
+\begin_inset Formula $b_{1},\dots,b_{n}$
+\end_inset
+
+ את האפסים.
+ נגדיר את 
+\begin_inset Formula $w_{1}=\frac{1}{\left|\left|b_{1}\right|\right|}b_{1}$
+\end_inset
+
+ להיות המנורמל.
+ לכל 
+\begin_inset Formula $i\in2,\dots,n$
+\end_inset
+
+, נגדיר 
+\begin_inset Formula $U=\text{sp}\left(b_{1},\dots,b_{i-1}\right)$
+\end_inset
+
+, ואז נחשב 
+\begin_inset Formula $w_{i}^{\prime}=b_{i}-P_{U}\left(b_{i}\right)$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $w_{i}^{\prime}=0$
+\end_inset
+
+, נתעלם ממנו, אחרת נוסיף לסדרה 
+\begin_inset Formula $w$
+\end_inset
+
+ את 
+\begin_inset Formula $\frac{1}{\left|\left|w_{i}^{\prime}\right|\right|}w_{i}^{\prime}$
+\end_inset
+
+ המנורמל.
+\end_layout
+
+\begin_layout Part
+מכפלות פנימיות ותבניות בילינאריות
+\end_layout
+
+\begin_layout Section
+מכפלה פנימית
+\end_layout
+
+\begin_layout Subsection
+הגדרות בסיסיות
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ או 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ מכפלה אוניטרית )נקרא 
+\begin_inset Quotes eld
+\end_inset
+
+מכפלה פנימית
+\begin_inset Quotes erd
+\end_inset
+
+ מעל 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+( מעל 
+\begin_inset Formula $V$
+\end_inset
+
+ היא פונקציה 
+\begin_inset Formula $\left\langle \cdot,\cdot\right\rangle :V\times V\to\mathbb{C}\left(\mathbb{R}\right)$
+\end_inset
+
+ כך ש-:
+\end_layout
+
+\begin_layout Enumerate
+לינאריות לפי הרכיב השמאלי: 
+\begin_inset Formula $\left\langle \alpha\underline{v_{1}}+\beta\underline{v_{2}},u\right\rangle =\alpha\cdot\left\langle \underline{v_{1}},\underline{u}\right\rangle +\beta\cdot\left\langle \underline{v_{2}},\underline{u}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+הרמיטיות: 
+\begin_inset Formula $\left\langle \underline{v},\underline{u}\right\rangle =\overline{\left\langle \underline{u},\underline{v}\right\rangle }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+חיוביות: 
+\begin_inset Formula $\left\langle \underline{v},\underline{v}\right\rangle \in\mathbb{R}\land\left\langle \underline{v},\underline{v}\right\rangle \ge0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אפיון 
+\begin_inset Formula $0$
+\end_inset
+
+: 
+\begin_inset Formula $\left\langle \underline{v},\underline{v}\right\rangle =0\iff\underline{v}=\underline{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+תכונות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט לגבי הרכיב הימני:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\langle \underline{u},v_{1}+v_{2}\right\rangle =\left\langle u,v_{1}\right\rangle +\left\langle u,v_{2}\right\rangle $
+\end_inset
+
+ חיבוריות לפי הימני.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\langle v,\alpha u\right\rangle =\overline{\alpha}\left\langle v,u\right\rangle $
+\end_inset
+
+ כמו הומוגניות ברכיב הימני, אבל עם הצמוד.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\langle \underline{v},\underline{0}\right\rangle =0$
+\end_inset
+
+ מתאפס גם לפי הרכיב הימני.
+\end_layout
+
+\begin_layout Itemize
+לכן יש לנו כמעט לינאריות לפי הרכיב הימני, אבל עם הסקלר הצמוד.
+\end_layout
+
+\begin_layout Itemize
+ומכאן נובע: 
+\begin_inset Formula $\left\langle \sum_{i=1}^{n}a_{i}\underline{v_{i}},\sum_{j=1}^{m}b_{j}\underline{u_{j}}\right\rangle =\sum_{i=1}^{n}\sum_{j=1}^{m}a_{i}\overline{b_{j}}\left\langle \underline{v_{i}},\underline{u_{j}}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+אורתוגונליות
+\end_layout
+
+\begin_layout Subsubsection
+הגדרות בסיסיות
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(v_{1},\dots,v_{n}\right)$
+\end_inset
+
+ נקראת 
+\bar under
+אורתוגונלית
+\bar default
+ אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $\forall i\ne j.v_{i}\perp v_{j}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $\left\langle v_{i},v_{j}\right\rangle =0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+לדוגמה 
+\begin_inset Formula $\left(\begin{pmatrix}1\\
+0\\
+0
+\end{pmatrix},\begin{pmatrix}0\\
+1\\
+-1
+\end{pmatrix},\begin{pmatrix}0\\
+1\\
+1
+\end{pmatrix}\right)$
+\end_inset
+
+ סדרה אורתוגונלית עם המכפלה האוניטרית הסטנדרטית.
+\end_layout
+
+\begin_layout Standard
+נגדיר וקטור יחידה להיות 
+\begin_inset Formula $v$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left|\left|\underline{v}\right|\right|=1$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $0\ne\underline{v}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{1}{\left|\left|\underline{v}\right|\right|}\cdot\underline{v}$
+\end_inset
+
+ וקטור יחידה, שנקרא גם הוקטור 
+\bar under
+המנורמל
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+אז סדרה 
+\bar under
+אורתונורמלית
+\bar default
+ היא סדרה אורתוגונלית של וקטורי יחידה.
+\end_layout
+
+\end_body
+\end_document
