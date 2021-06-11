@@ -1143,5 +1143,250 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
  היא סדרה אורתוגונלית של וקטורי יחידה.
 \end_layout
 
+\begin_layout Section
+סוגים של העתקות לינאריות
+\end_layout
+
+\begin_layout Subsection
+העתקות אוניטריות
+\end_layout
+
+\begin_layout Standard
+העתקה מעל 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(Tu,Tv\right)=\left(u,v\right)$
+\end_inset
+
+ נקראת 
+\bar under
+העתקה אוניטרית
+\bar default
+.
+ היא משמרת 
+\bar under
+אורכים וזוויות
+\bar default
+, כלומר 
+\begin_inset Formula $\left|\left|Tv\right|\right|=\left|\left|v\right|\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ כל דבר פה שקול לכך ש-
+\begin_inset Formula $T$
+\end_inset
+
+ אוניטרית.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ מעתיקה בסיס אורתונורמלי לבסיס אורתונורמלי.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T^{*}T=I$
+\end_inset
+
+.
+ לכן אם 
+\begin_inset Formula $T$
+\end_inset
+
+ אוניטרית אז היא הפיכה כך ש-
+\begin_inset Formula $T^{*}=T^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ נורמלית ו
+\bar under
+כל הערכים העצמיים על מעגל היחידה
+\bar default
+.
+\end_layout
+
+\begin_layout Subsection
+העתקות אורתוגונליות
+\end_layout
+
+\begin_layout Standard
+דומה אבל מעל 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ אורתוגונלית 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ מעתיקה בסיס אורתונורמלי לבסיס אורתונורמלי.
+ בפרט אם 
+\begin_inset Formula $T$
+\end_inset
+
+ אוניטרית היא הפיכה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מרחב וקטורי, מעל 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ או 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+, עם מכפלה פנימית.
+ התנאים הבאים שקולים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T^{*}=T^{-1}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $TT^{*}=T^{*}T=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $u,v$
+\end_inset
+
+, 
+\begin_inset Formula $\left(Tu,Tv\right)=\left(u,v\right)$
+\end_inset
+
+, כלומר אוניטרית/אורתוגונלית לפי השדה.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $v$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\left|Tv\right|\right|=\left|\left|v\right|\right|$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $T$
+\end_inset
+
+ שומרת על אורכים.
+\end_layout
+
+\begin_layout Subsection
+העתקות נורמליות
+\end_layout
+
+\begin_layout Standard
+העתקה נקראת 
+\bar under
+נורמלית
+\bar default
+ אם 
+\begin_inset Formula $TT^{*}=T^{*}T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ מטריצה נורמלית ניתנת ללכסון אוניטרי, כלומר קיים בסיס אורתונורמלי של וקטורים
+ עצמיים של 
+\begin_inset Formula $T$
+\end_inset
+
+ ו-
+\begin_inset Formula $T=P^{*}DP$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $D$
+\end_inset
+
+ אלכסונית.
+\end_layout
+
+\begin_layout Section
+תבניות בילינאריות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ 
+\bar under
+תבנית בילינארית
+\bar default
+ היא 
+\begin_inset Formula $f:\left(V\times W\right)\to\mathbb{F}$
+\end_inset
+
+ שלינארית על פי הרכיב השמאלי ועל פי הרכיב הימני.
+\end_layout
+
+\begin_layout Standard
+נסמן את קבוצת התבניות הבילינאריות ב-
+\begin_inset Formula $\text{Bil}\left(V,W\right)$
+\end_inset
+
+, או 
+\begin_inset Formula $\text{Bil}\left(V\right)\coloneqq\text{Bil}\left(V,V\right)$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
