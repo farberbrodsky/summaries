@@ -1388,5 +1388,184 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+מטריצה מייצגת:
+\series default
+ נגדיר 
+\begin_inset Formula $\left(\left[f\right]_{B,C}\right)_{i,j}=f\left(b_{i},c_{j}\right)$
+\end_inset
+
+.
+ מתקיים 
+\begin_inset Formula $f\left(v,w\right)=\left[v\right]_{B}^{t}\cdot\left[f\right]_{B,C}\cdot\left[w\right]_{C}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $v,w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מעבר בסיסים:
+\series default
+ 
+\begin_inset Formula $\left[f\right]_{B^{\prime},C^{\prime}}=\left(\left[Id\right]_{B}^{B^{\prime}}\right)^{t}\cdot\left[f\right]_{B,C}\cdot\left[Id\right]_{C}^{C^{\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ נגדיר את 
+\bar under
+הדרגה
+\bar default
+ 
+\begin_inset Formula $\text{rk}\left(f\right)$
+\end_inset
+
+ להיות 
+\begin_inset Formula $\text{rk}\left(\left[f\right]_{B,C}\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $B,C$
+\end_inset
+
+ בסיסים כלשהם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ נקראת 
+\bar under
+אי מנוונת
+\bar default
+ אם 
+\begin_inset Formula $\text{rk}f=\dim V=\dim W$
+\end_inset
+
+.
+ לכן גם 
+\begin_inset Formula $\left[f\right]_{B,C}$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Subsection
+תבניות בילינאריות סימטריות
+\end_layout
+
+\begin_layout Standard
+תבנית בילינארית תקרא 
+\bar under
+סימטרית
+\bar default
+ אם לכל 
+\begin_inset Formula $v,w$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(v,w\right)=f\left(w,v\right)$
+\end_inset
+
+.
+ המטריצה המייצגת היא אלכסונית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט ההתמדה של סילבסטר:
+\series default
+ מעל 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ תהי 
+\begin_inset Formula $f$
+\end_inset
+
+ תבנית בילינארית סימטרית כך ש-
+\begin_inset Formula $\text{rk}f=r\le n=\dim V$
+\end_inset
+
+.
+ אז קיים בסיס 
+\begin_inset Formula $B=\left\{ v_{1},\dots,v_{n}\right\} $
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left[f\right]_{B,B}$
+\end_inset
+
+ אלכסונית, ועל האלכסון יש רק 
+\begin_inset Formula $0,-1,1$
+\end_inset
+
+.
+ הכמויות שלהם אינן תלויות בבחירת הבסיס.
+\end_layout
+
+\begin_layout Subsection
+תבניות בילינאריות אנטי-סימטריות
+\end_layout
+
+\begin_layout Standard
+תבנית בילינארית תקרא 
+\bar under
+סימטרית
+\bar default
+ אם לכל 
+\begin_inset Formula $v,w$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(v,w\right)=-f\left(w,v\right)$
+\end_inset
+
+.
+ המטריצה המייצגת היא:
+\begin_inset Formula 
+\[
+\text{Diag}\left(\overbrace{\begin{pmatrix}0 & 1\\
+-1 & 0
+\end{pmatrix},\dots,\begin{pmatrix}0 & 1\\
+-1 & 0
+\end{pmatrix}}^{\frac{1}{2}\text{rk}\left(f\right)\text{ times}},0,\dots,0\right)
+\]
+
+\end_inset
+
+בפרט 
+\begin_inset Formula $\text{rk}f$
+\end_inset
+
+ זוגי, ומספר האפסים הוא 
+\begin_inset Formula $n-\text{rk}f$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
