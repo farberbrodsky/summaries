@@ -1356,6 +1356,26 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
  אלכסונית.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ המרחבים העצמיים ניצבים זה לזה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ 
+\begin_inset Formula $\left|T\left(v\right)\right|=\left|T^{*}\left(v\right)\right|$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 תבניות בילינאריות
 \end_layout
