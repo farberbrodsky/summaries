@@ -1546,6 +1546,44 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
  הכמויות שלהם אינן תלויות בבחירת הבסיס.
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ תבנית בילינארית 
+\bar under
+חיובית לחלוטין וסימטרית
+\bar default
+ היא בעצם 
+\bar under
+מכפלה פנימית
+\bar default
+.
+\end_layout
+
+\begin_layout Subsubsection
+תבנית ריבועית
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $f\in\text{Bil}\left(V\right)$
+\end_inset
+
+ תבנית סימטרית.
+ נגדיר 
+\begin_inset Formula $Q\left(v\right)=f\left(v,v\right)$
+\end_inset
+
+ ונקרא לה 
+\bar under
+תבנית ריבועית
+\bar default
+.
+ כל תבנית ריבועית מיוצגת ביחידות על ידי תבנית בילינארית סימטרית.
+\end_layout
+
 \begin_layout Subsection
 תבניות בילינאריות אנטי-סימטריות
 \end_layout
