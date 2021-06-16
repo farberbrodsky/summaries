@@ -1491,6 +1491,35 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 \end_layout
 
 \begin_layout Subsection
+חפיפת מטריצות
+\end_layout
+
+\begin_layout Standard
+שתי מטריצות 
+\begin_inset Formula $A,B$
+\end_inset
+
+ נקראות 
+\bar under
+שקולות
+\bar default
+ אם 
+\begin_inset Formula $A=P^{t}BQ$
+\end_inset
+
+, ו
+\bar under
+חופפות
+\bar default
+ אם 
+\begin_inset Formula $A=P^{t}BP$
+\end_inset
+
+........
+ יש המון משפטים.......
+\end_layout
+
+\begin_layout Subsection
 תבניות בילינאריות סימטריות
 \end_layout
 
@@ -1582,6 +1611,23 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 \bar default
 .
  כל תבנית ריבועית מיוצגת ביחידות על ידי תבנית בילינארית סימטרית.
+ ניתן למצוא את 
+\begin_inset Formula $f$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י:
+\begin_inset Formula 
+\[
+2f\left(v,w\right)=Q\left(v+w\right)-Q\left(v\right)-Q\left(w\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
