@@ -298,11 +298,22 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Itemize
-זה פולינום מתוקן, כלומר המקדם המוביל הוא 
-\begin_inset Formula $1$
+\begin_inset Formula $p_{A}\left(x\right)=x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}$
 \end_inset
 
-.
+, כך ש-
+\begin_inset Formula $a_{0}=\left(-1\right)^{n}\det A$
+\end_inset
+
+ ו-
+\begin_inset Formula $a_{n-1}=-\text{tr}\left(A\right)$
+\end_inset
+
+ )ו-
+\begin_inset Formula $a_{n}=1$
+\end_inset
+
+(.
 \end_layout
 
 \begin_layout Itemize
@@ -343,6 +354,17 @@ LatexCommand tableofcontents
 
  דומות אז 
 \begin_inset Formula $p_{A}=p_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p_{A}\left(\lambda\right)=p_{A^{t}}\left(\lambda\right)$
+\end_inset
+
+, ו-
+\begin_inset Formula $p_{AB}\left(\lambda\right)=p_{BA}\left(\lambda\right)$
 \end_inset
 
 .
