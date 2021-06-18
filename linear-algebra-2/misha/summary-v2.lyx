@@ -28,7 +28,7 @@
 \use_dash_ligatures true
 \graphics default
 \default_output_format default
-\output_sync 0
+\output_sync 1
 \bibtex_command default
 \index_command default
 \float_placement H
@@ -901,7 +901,7 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall u\in UP_{U}\left(u\right)=u$
+\begin_inset Formula $\forall u\in U.P_{U}\left(u\right)=u$
 \end_inset
 
 , ולכן 
@@ -1158,10 +1158,6 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 אורתוגונליות
 \end_layout
 
-\begin_layout Subsubsection
-הגדרות בסיסיות
-\end_layout
-
 \begin_layout Standard
 \begin_inset Formula $\left(v_{1},\dots,v_{n}\right)$
 \end_inset
@@ -1233,6 +1229,154 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 אורתונורמלית
 \bar default
  היא סדרה אורתוגונלית של וקטורי יחידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ סדרה אורתוגונלית היא בת
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Subsubsection
+משלים אורתוגונלי
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula $U^{\perp}$
+\end_inset
+
+ להיות המרחב שניצב לכל איבר ב-
+\begin_inset Formula $U$
+\end_inset
+
+.
+ נחשב אותו באמצעות השלמת בסיס של 
+\begin_inset Formula $U$
+\end_inset
+
+ לבסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+, ואז גראם-שמידט על המשלים לבסיס.
+ מתקיים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U\oplus U^{\perp}=V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U\subseteq\left(U^{\perp}\right)^{\perp}$
+\end_inset
+
+ ואם 
+\begin_inset Formula $V$
+\end_inset
+
+ נוצר סופית אז 
+\begin_inset Formula $U=\left(U^{t}\right)^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(U+W\right)^{\perp}=U^{\perp}\cap W^{\perp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(U\cap W\right)^{\perp}=U^{\perp}+W^{\perp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $U\subseteq W$
+\end_inset
+
+ אז 
+\begin_inset Formula $W^{\perp}\subseteq U^{\perp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle v,u\right\rangle =\left\langle P_{U}\left(v\right),P_{U}\left(u\right)\right\rangle +\left\langle P_{U^{\perp}}\left(v\right),P_{U^{\perp}}\left(u\right)\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+נורמה
+\end_layout
+
+\begin_layout Standard
+נגדיר 
+\begin_inset Formula $\left|\left|a\right|\right|=\sqrt{\left\langle a,a\right\rangle }$
+\end_inset
+
+.
+ מתקיים:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\left|a\right|\right|\ge0$
+\end_inset
+
+ ו-
+\begin_inset Formula $\left|\left|a\right|\right|=0\iff a=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\left|\lambda a\right|\right|=\left|\lambda\right|\cdot\left|\left|a\right|\right|$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a\in L,\lambda\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\left|\left|a\right|\right|-\left|\left|b\right|\right|\right|\le\left|\left|a+b\right|\right|\le\left|\left|a\right|\right|+\left|\left|b\right|\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+משפט פיתגורס: 
+\begin_inset Formula $a\perp b\iff\left|\left|a+b\right|\right|^{2}=\left|\left|a\right|\right|^{2}+\left|\left|b\right|\right|^{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
