@@ -1262,6 +1262,11 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 \end_inset
 
 .
+ נסמן 
+\begin_inset Formula $\dim U=k$
+\end_inset
+
+.
  נחשב אותו באמצעות השלמת בסיס של 
 \begin_inset Formula $U$
 \end_inset
@@ -1270,7 +1275,15 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 \begin_inset Formula $V$
 \end_inset
 
-, ואז גראם-שמידט על המשלים לבסיס.
+, גראם-שמידט על הבסיס שיוצא, ואז ניקח את האיברים ה-
+\begin_inset Formula $k+1,\dots,n$
+\end_inset
+
+ וזה הבסיס של 
+\begin_inset Formula $U^{\perp}$
+\end_inset
+
+.
  מתקיים:
 \end_layout
 
