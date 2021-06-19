@@ -1825,6 +1825,74 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 \end_layout
 
 \begin_layout Standard
+כדי לחשב את אינדקסי ההתמדה הללו, 
+\begin_inset Formula $P_{+}$
+\end_inset
+
+ כמות ה-
+\begin_inset Formula $1$
+\end_inset
+
+ים ו-
+\begin_inset Formula $P_{-}$
+\end_inset
+
+ כמות ה-
+\begin_inset Formula $\left(-1\right)$
+\end_inset
+
+ים )ההפרש שלהם גם נקרא הסיגנטורה(, ממטריצה מייצגת, יש שתי דרכים:
+\end_layout
+
+\begin_layout Enumerate
+דירוג בו זמנית של השורות ושל העמודות, עד שמגיעים לצורה אלכסונית.
+\end_layout
+
+\begin_layout Enumerate
+נחשב את 
+\begin_inset Formula $\Delta_{0},\dots,\Delta_{r}$
+\end_inset
+
+ הדטרמיננטות של חתכים של המטריצה )
+\begin_inset Formula $r$
+\end_inset
+
+ זה 
+\begin_inset Formula $\text{rk}$
+\end_inset
+
+( - למשל עבור 
+\begin_inset Formula $\begin{pmatrix}1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{pmatrix}$
+\end_inset
+
+ זה יהיה:
+\begin_inset Formula 
+\[
+\Delta_{0}=1,\Delta_{1}=\det\begin{vmatrix}1\end{vmatrix},\Delta_{2}=\det\begin{vmatrix}1 & 2\\
+4 & 5
+\end{vmatrix},\Delta_{3}=\det\begin{vmatrix}1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{vmatrix}
+\]
+
+\end_inset
+
+כמות הפעמים שהסימן לא משתנה מהקודם היא 
+\begin_inset Formula $P_{+}$
+\end_inset
+
+, כמות הפעמים שהסימן כן משתנה היא 
+\begin_inset Formula $P_{-}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 טענה:
@@ -1838,6 +1906,30 @@ P_{U}\left(v\right)=\sum_{i=1}^{n}\frac{\left\langle v,b_{i}\right\rangle }{\lef
 מכפלה פנימית
 \bar default
 .
+\end_layout
+
+\begin_layout Standard
+)חיובית לחלוטין זו תכונה של תבניות ריבועיות/סימטריות כך ש-
+\begin_inset Formula $f\left(v,v\right)>0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $v$
+\end_inset
+
+, או באופן שקול שבמטריצה המייצגת כל הע
+\begin_inset Quotes erd
+\end_inset
+
+ע חיוביים, או באופן שקול ש-
+\begin_inset Formula $\Delta_{i}>0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+(
 \end_layout
 
 \begin_layout Subsubsection
