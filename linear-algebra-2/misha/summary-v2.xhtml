@@ -188,7 +188,7 @@ a.tocentry:visited { color: black; }
 <div class='lyxtoc-3'><a href='#magicparlabel-126' class='tocentry'>6.2 תבניות בילינאריות סימטריות</a>
 </div>
 
-<div class='lyxtoc-3'><a href='#magicparlabel-132' class='tocentry'>6.3 תבניות בילינאריות אנטי-סימטריות</a>
+<div class='lyxtoc-3'><a href='#magicparlabel-136' class='tocentry'>6.3 תבניות בילינאריות אנטי-סימטריות</a>
 </div>
 </div>
 </div>
@@ -4126,9 +4126,208 @@ a.tocentry:visited { color: black; }
   </mrow>
  </mrow></math>. הכמויות שלהם אינן תלויות בבחירת הבסיס.</div>
 
-<div class="standard" id='magicparlabel-129'><b>טענה:</b> תבנית בילינארית <u>חיובית לחלוטין וסימטרית</u> היא בעצם <u>מכפלה פנימית</u>.</div>
-<h4 class="subsubsection" id='magicparlabel-130'><span class="subsubsection_label">6.2.1</span> תבנית ריבועית</h4>
-<div class="standard" id='magicparlabel-131'>תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-129'>כדי לחשב את אינדקסי ההתמדה הללו, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>P</mi>
+   </mrow>
+   <mrow><mo>+</mo>
+   </mrow>
+  </msub>
+ </mrow></math> כמות ה-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>1</mn>
+ </mrow></math>ים ו-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>P</mi>
+   </mrow>
+   <mrow><mo>-</mo>
+   </mrow>
+  </msub>
+ </mrow></math> כמות ה-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <mrow><mo>-</mo><mn>1</mn>
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math>ים )ההפרש שלהם גם נקרא הסיגנטורה(, ממטריצה מייצגת, יש שתי דרכים:</div>
+
+<ol class="enumerate" id='magicparlabel-130'><li class="enumerate_item">דירוג בו זמנית של השורות ושל העמודות, עד שמגיעים לצורה אלכסונית.</li>
+<li class="enumerate_item">נחשב את <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> &Delta; </mo>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msub>
+    <mrow><mo> &Delta; </mo>
+    </mrow>
+    <mrow><mi>r</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> הדטרמיננטות של חתכים של המטריצה )<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>r</mi>
+ </mrow></math> זה <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mstyle mathvariant='normal'>
+   <mrow><mi>r</mi><mi>k</mi>
+   </mrow>
+  </mstyle>
+ </mrow></math>( - למשל עבור <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>(</mo>
+  <mtable>
+   <mtr>
+    <mtd><mn>1</mn>
+    </mtd>
+    <mtd><mn>2</mn>
+    </mtd>
+    <mtd><mn>3</mn>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd><mn>4</mn>
+    </mtd>
+    <mtd><mn>5</mn>
+    </mtd>
+    <mtd><mn>6</mn>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd><mn>7</mn>
+    </mtd>
+    <mtd><mn>8</mn>
+    </mtd>
+    <mtd><mn>9</mn>
+    </mtd>
+   </mtr>
+  </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>)</mo>
+ </mrow></math> זה יהיה:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> &Delta; </mo>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>=</mo><mn>1</mn><mo>,</mo>
+   <msub>
+    <mrow><mo> &Delta; </mo>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>=</mo><mo> det </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>|</mo>
+   <mtable>
+    <mtr>
+     <mtd><mn>1</mn>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>|</mo><mo>,</mo>
+   <msub>
+    <mrow><mo> &Delta; </mo>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo>=</mo><mo> det </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>|</mo>
+   <mtable>
+    <mtr>
+     <mtd><mn>1</mn>
+     </mtd>
+     <mtd><mn>2</mn>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd><mn>4</mn>
+     </mtd>
+     <mtd><mn>5</mn>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>|</mo><mo>,</mo>
+   <msub>
+    <mrow><mo> &Delta; </mo>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub><mo>=</mo><mo> det </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>|</mo>
+   <mtable>
+    <mtr>
+     <mtd><mn>1</mn>
+     </mtd>
+     <mtd><mn>2</mn>
+     </mtd>
+     <mtd><mn>3</mn>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd><mn>4</mn>
+     </mtd>
+     <mtd><mn>5</mn>
+     </mtd>
+     <mtd><mn>6</mn>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd><mn>7</mn>
+     </mtd>
+     <mtd><mn>8</mn>
+     </mtd>
+     <mtd><mn>9</mn>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>|</mo>
+  </mrow>
+ </mrow></math>כמות הפעמים שהסימן לא משתנה מהקודם היא <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>P</mi>
+   </mrow>
+   <mrow><mo>+</mo>
+   </mrow>
+  </msub>
+ </mrow></math>, כמות הפעמים שהסימן כן משתנה היא <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>P</mi>
+   </mrow>
+   <mrow><mo>-</mo>
+   </mrow>
+  </msub>
+ </mrow></math>.</li>
+</ol>
+<div class="standard" id='magicparlabel-132'><b>טענה:</b> תבנית בילינארית <u>חיובית לחלוטין וסימטרית</u> היא בעצם <u>מכפלה פנימית</u>.</div>
+
+<div class="standard" id='magicparlabel-133'>)חיובית לחלוטין זו תכונה של תבניות ריבועיות/סימטריות כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>f</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>v</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math>, או באופן שקול שבמטריצה המייצגת כל הע&rdquo;ע חיוביים, או באופן שקול ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> &Delta; </mo>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>(</div>
+<h4 class="subsubsection" id='magicparlabel-134'><span class="subsubsection_label">6.2.1</span> תבנית ריבועית</h4>
+<div class="standard" id='magicparlabel-135'>תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>f</mi><mo> &isin; </mo>
    <mstyle mathvariant='normal'>
@@ -4174,8 +4373,8 @@ a.tocentry:visited { color: black; }
 
   </mrow>
  </mrow></math></div>
-<h3 class="subsection" id='magicparlabel-132'><span class="subsection_label">6.3</span> תבניות בילינאריות אנטי-סימטריות</h3>
-<div class="standard" id='magicparlabel-133'>תבנית בילינארית תקרא <u>סימטרית</u> אם לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+<h3 class="subsection" id='magicparlabel-136'><span class="subsection_label">6.3</span> תבניות בילינאריות אנטי-סימטריות</h3>
+<div class="standard" id='magicparlabel-137'>תבנית בילינארית תקרא <u>סימטרית</u> אם לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>v</mi><mo>,</mo><mi>w</mi>
   </mrow>
