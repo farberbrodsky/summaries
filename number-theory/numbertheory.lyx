@@ -1,0 +1,10229 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[use-david]{culmus}
+\AtBeginDocument{\make@lr\thetheorem}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\begin_local_layout
+Style Example
+	CopyStyle	Theorem
+	LatexName	example
+	LabelString	"Example #."
+	Preamble
+		\newtheorem{example}[theorem]{\R{דוגמה}}
+	EndPreamble
+End
+
+Style Algorithm
+	CopyStyle	Theorem
+	LatexName	algorithm
+	LabelString	"Algorithm #."
+	Preamble
+		\newtheorem{algorithm}[theorem]{\R{אלגוריתם}}
+	EndPreamble
+End
+\end_local_layout
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "helvet" "default"
+\font_typewriter "courier" "default"
+\font_math "auto" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+תורת המספרים
+\end_layout
+
+\begin_layout Author
+מאיה פרבר ברודסקי
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+סיכומי ההרצאות של פרופ' דורון פודר, סמסטר ב' תשפ
+\begin_inset Quotes erd
+\end_inset
+
+א, אוניברסיטת תל אביב.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\whole}[1]{\left\lfloor #1\right\rfloor }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+אריתמטיקה בסיסית של השלמים
+\end_layout
+
+\begin_layout Subsection
+חלוקה עם שארית
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ערך שלם 
+\series default
+עבור 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, נסמן 
+\begin_inset Formula $\left\lfloor x\right\rfloor =\min\left\{ n\in\mathbb{Z}\mid n\leq x\right\} $
+\end_inset
+
+ את הערך השלם של 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+חלוקה עם שארית 
+\series default
+יהיו 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ עם 
+\begin_inset Formula $a>0$
+\end_inset
+
+.
+ אזי קיימים ויחידים 
+\begin_inset Formula $q,r\in\mathbb{Z}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $b=qa+r$
+\end_inset
+
+ ו-
+\begin_inset Formula $0\leq r<a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+במקרה זה, 
+\begin_inset Formula $r$
+\end_inset
+
+ נקראת השארית בחלוקת 
+\begin_inset Formula $b$
+\end_inset
+
+ ב-
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נגדיר 
+\begin_inset Formula $q=\left\lfloor \frac{b}{a}\right\rfloor $
+\end_inset
+
+ וכן 
+\begin_inset Formula $r=b-qa$
+\end_inset
+
+.
+ כמובן מתקיים 
+\begin_inset Formula $b=qa+r$
+\end_inset
+
+, נותר להוכיח 
+\begin_inset Formula $0\leq r<a$
+\end_inset
+
+ ויחידות.
+\end_layout
+
+\begin_layout Proof
+מתקיים 
+\begin_inset Formula $\frac{b}{a}-1<\left\lfloor \frac{b}{a}\right\rfloor \leq\frac{b}{a}$
+\end_inset
+
+ מאי השוויון 
+\begin_inset Formula $<$
+\end_inset
+
+ נובע 
+\begin_inset Formula $\frac{b}{a}-1<q$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $b-a<qa$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $r=b-qa<a$
+\end_inset
+
+.
+ מאי השוויון 
+\begin_inset Formula $\leq$
+\end_inset
+
+ נובע 
+\begin_inset Formula $q\leq\frac{b}{a}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $qa\leq b$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $r=b-qa\geq0$
+\end_inset
+
+.
+ בסך הכל, 
+\begin_inset Formula $0\leq r<a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+עבור יחידות, נניח 
+\begin_inset Formula $b=q'a+r'$
+\end_inset
+
+ עם 
+\begin_inset Formula $0\leq r'<a$
+\end_inset
+
+ אז 
+\begin_inset Formula $r-r'=\left(b-qa\right)-\left(b-q'a\right)=\left(q'-q\right)a$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $r-r'$
+\end_inset
+
+ כפולה של 
+\begin_inset Formula $a$
+\end_inset
+
+ אבל מתוך 
+\begin_inset Formula $0\leq r,r'<a$
+\end_inset
+
+ מקבלים 
+\begin_inset Formula $-a<r-r'<a$
+\end_inset
+
+ ולכן בהכרח 
+\begin_inset Formula $\left(q'-q\right)a=r-r'=0$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $r=r'$
+\end_inset
+
+ וכן 
+\begin_inset Formula $q'-q=0$
+\end_inset
+
+ )כי 
+\begin_inset Formula $a>0$
+\end_inset
+
+( ולכן 
+\begin_inset Formula $q=q'$
+\end_inset
+
+, וקיבלנו יחידות.
+\end_layout
+
+\begin_layout Subsection
+מחלקים ו-
+\lang english
+gcd
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מחלק 
+\series default
+עבור 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $a\mid b$
+\end_inset
+
+ אם 
+\begin_inset Formula $a$
+\end_inset
+
+ מחלק את 
+\begin_inset Formula $b$
+\end_inset
+
+, כלומר אם קיים 
+\begin_inset Formula $c\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $ac=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+תכונות בסיסיות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1\mid n$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\mathbb{Z}$
+\end_inset
+
+ - כי 
+\begin_inset Formula $n=1\cdot n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n\mid0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n$
+\end_inset
+
+ - כי 
+\begin_inset Formula $0=0\cdot n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\nmid n$
+\end_inset
+
+ אלא אם 
+\begin_inset Formula $n=0$
+\end_inset
+
+ - כי 
+\begin_inset Formula $0\cdot m=0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+ וגם 
+\begin_inset Formula $a\mid b$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left|a\right|\leq\left|b\right|$
+\end_inset
+
+ - קיים 
+\begin_inset Formula $c$
+\end_inset
+
+ כך ש
+\begin_inset Formula $ac=b$
+\end_inset
+
+, ואז 
+\begin_inset Formula $\left|a\right|\left|c\right|=\left|b\right|$
+\end_inset
+
+, 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+ לכן 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $\left|c\right|\geq1$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $\left|a\right|\leq\left|b\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $n\mid a$
+\end_inset
+
+ וגם 
+\begin_inset Formula $n\mid b$
+\end_inset
+
+ אז 
+\begin_inset Formula $n\mid xa+yb$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\mathbb{Z}$
+\end_inset
+
+ - קיימים 
+\begin_inset Formula $\alpha,\beta\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\alpha n=a,\beta n=b$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $xa+yb=x\alpha n+y\beta n=\left(x\alpha+y\beta\right)n$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $n\mid xa+yb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $a\mid b$
+\end_inset
+
+ וגם 
+\begin_inset Formula $b\mid a$
+\end_inset
+
+ אז 
+\begin_inset Formula $a=b$
+\end_inset
+
+ או 
+\begin_inset Formula $a=-b$
+\end_inset
+
+ - אם 
+\begin_inset Formula $b=0$
+\end_inset
+
+ הטענה ברורה, אחרת מתקיים 
+\begin_inset Formula $a=mb,b=na$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $b=na=n\cdot mb$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $b\left(1-nm\right)=0$
+\end_inset
+
+, 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $nm=1$
+\end_inset
+
+, בפרט 
+\begin_inset Formula $\left|n\right|\left|m\right|=1$
+\end_inset
+
+ אבל 
+\begin_inset Formula $\left|m\right|,\left|n\right|\geq1$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left|n\right|=\left|m\right|=1$
+\end_inset
+
+, אם 
+\begin_inset Formula $n=m=1$
+\end_inset
+
+ אז 
+\begin_inset Formula $a=b$
+\end_inset
+
+ ואם 
+\begin_inset Formula $n=m=-1$
+\end_inset
+
+ אז 
+\begin_inset Formula $a=-b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מחלק משותף,
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gcd
+\lang hebrew
+ 
+\series default
+יהיו 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\left(a,b\right)\neq\left(0,0\right)$
+\end_inset
+
+.
+ מחלק משותף של 
+\begin_inset Formula $a,b$
+\end_inset
+
+ הוא שלם 
+\begin_inset Formula $d\in\mathbb{Z}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $d\mid a,d\mid b$
+\end_inset
+
+.
+ מחלק משותף מקסימלי, או
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gcd
+\lang hebrew
+, הוא 
+\begin_inset Formula $D\in\mathbb{Z}$
+\end_inset
+
+ שהוא מחלק משותף של 
+\begin_inset Formula $a,b$
+\end_inset
+
+ ומקסימלי ביחס לסדר החלוקה, כלומר אם 
+\begin_inset Formula $d\in\mathbb{Z}$
+\end_inset
+
+ מחלק משותף של 
+\begin_inset Formula $a,b$
+\end_inset
+
+ אז 
+\begin_inset Formula $d\mid D$
+\end_inset
+
+.
+ מסמנים 
+\begin_inset Formula $D=\gcd\left(a,b\right)=\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+יחידות 
+\series default
+ה
+\lang english
+gcd
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא יחיד עד כדי כפל בהפיך, כלומר 
+\begin_inset Formula $\pm1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $D_{1},D_{2}$
+\end_inset
+
+ שניהם 
+\begin_inset Formula $\gcd$
+\end_inset
+
+ אז 
+\begin_inset Formula $D_{1}\mid D_{2},D_{2}\mid D_{1}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $D_{1}=D_{2}$
+\end_inset
+
+ או 
+\begin_inset Formula $D_{1}=-D_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+קיום 
+\series default
+לכל 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ לא שניהם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יש 
+\begin_inset Formula $\gcd$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נתבונן בקבוצה 
+\begin_inset Formula $I=\left\{ xa+yb\mid x,y\in\mathbb{Z}\right\} $
+\end_inset
+
+.
+ נשים לב כי 
+\begin_inset Formula $I$
+\end_inset
+
+ סגורה לחיבור ולכפל בסקלר שלם, כלומר אם 
+\begin_inset Formula $i_{1},i_{2}\in I$
+\end_inset
+
+ אז 
+\begin_inset Formula $i_{1}+i_{2}\in I$
+\end_inset
+
+, וכן אם 
+\begin_inset Formula $i\in I,m\in\mathbb{Z}$
+\end_inset
+
+ אז 
+\begin_inset Formula $mi\in I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אכן, אם 
+\begin_inset Formula $i_{1}=x_{1}a+y_{1}b,i_{2}=x_{2}a+y_{2}b$
+\end_inset
+
+ אז 
+\begin_inset Formula $i_{1}+i_{2}=\left(x_{1}+x_{2}\right)a+\left(y_{1}+y_{2}\right)b\in I$
+\end_inset
+
+ מסגירות השלמים לחיבור, ואם 
+\begin_inset Formula $i=xa+yb,m\in\mathbb{Z}$
+\end_inset
+
+ אז 
+\begin_inset Formula $mi=mxa+mby\in I$
+\end_inset
+
+ מסגירות השלמים לכפל.
+\end_layout
+
+\begin_layout Proof
+ב
+\begin_inset Formula $I$
+\end_inset
+
+ יש מספרים חיוביים, יהי 
+\begin_inset Formula $D\in I$
+\end_inset
+
+ החיובי המינימלי ב
+\begin_inset Formula $I$
+\end_inset
+
+.
+ נטען שכל 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ הוא כפולה של 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ ונחלק אותו עם שארית ב
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $i=qD+r$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $0\leq r<D$
+\end_inset
+
+.
+ מתקיים 
+\begin_inset Formula $D\in I,q\in\mathbb{Z}$
+\end_inset
+
+ לכן מהתכונות שהראינו 
+\begin_inset Formula $qD\in I$
+\end_inset
+
+ ומכאן גם 
+\begin_inset Formula $r=i-qD\in I$
+\end_inset
+
+.
+ קיבלנו 
+\begin_inset Formula $r\in I$
+\end_inset
+
+ וכן 
+\begin_inset Formula $0\leq r<D$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $r=0$
+\end_inset
+
+, כי 
+\begin_inset Formula $D$
+\end_inset
+
+ הוא החיובי המינימלי ב
+\begin_inset Formula $I$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $i=qD$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $i$
+\end_inset
+
+ כפולה של 
+\begin_inset Formula $D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+כעת נראה 
+\begin_inset Formula $D=\gcd\left(a,b\right)$
+\end_inset
+
+.
+ הוא מחלק משותף כי 
+\begin_inset Formula $a,b\in I$
+\end_inset
+
+ ולכן כפי שהראינו שניהם כפולה של 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ הוא מקסימלי כי אם 
+\begin_inset Formula $d\mid a,b$
+\end_inset
+
+ אז 
+\begin_inset Formula $d\mid xa+yb$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\mathbb{Z}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $d$
+\end_inset
+
+ מחלק כל איבר ב
+\begin_inset Formula $I$
+\end_inset
+
+ ובפרט את 
+\begin_inset Formula $D$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $d\mid D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+
+\series bold
+הלמה של בזו
+\series default
+ לכל 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ לא שניהם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יש 
+\begin_inset Formula $x,y\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\gcd\left(a,b\right)=xa+yb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נובע ישירות מההוכחה, בחרנו 
+\begin_inset Formula $D=\gcd\left(a,b\right)\in I=\left\{ xa+yb\mid x,y\in\mathbb{Z}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+
+\series bold
+חוגים קומטטיביים כלליים 
+\series default
+
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ היא דוגמה לחוג קומטטיבי עם יחידה, מבנה אלגברי שמקיים את כל אקסיומות השדה
+ פרט לקיום הופכי כפלי.
+ דוגמאות נוספות הן 
+\begin_inset Formula $\mathbb{F}\left[x\right]$
+\end_inset
+
+ חוג הפולינומים מעל שדה 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{Z}\left[i\right]=\left\{ a+bi\mid a,b\in\mathbb{Z}\right\} $
+\end_inset
+
+ חוג השלמים של גאוס.
+\end_layout
+
+\begin_layout Remarks
+בתוך חוג קומוטטיבי 
+\begin_inset Formula $A$
+\end_inset
+
+, תת קבוצה 
+\begin_inset Formula $I\subseteq A$
+\end_inset
+
+ נקראת אידיאל אם היא מקיימת את התכונות של הקבוצה 
+\begin_inset Formula $I$
+\end_inset
+
+ לעיל, כלומר אם 
+\begin_inset Formula $i_{1},i_{2}\in I$
+\end_inset
+
+ אז 
+\begin_inset Formula $i_{1}\pm i_{2}\in I$
+\end_inset
+
+, ואם 
+\begin_inset Formula $i\in I,a\in A$
+\end_inset
+
+ אז 
+\begin_inset Formula $ai\in I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Algorithm
+
+\series bold
+אוקלידס לחישוב
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gcd
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ בהינתן 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ לא שניהם 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, נחלק עם שארית שוב ושוב:
+\begin_inset Formula 
+\begin{align*}
+a & =q_{1}b+r_{1} & 0<r_{1}<b\\
+b & =q_{2}r_{1}+r_{2} & 0<r_{2}<r_{1}\\
+r_{1} & =q_{3}r_{2}+r_{3} & 0<r_{3}<r_{2}\\
+\vdots\\
+r_{k-2} & =q_{k}r_{k-1}+r_{k} & 0<r_{k}<r_{k-1}\\
+r_{k-1} & =q_{k+1}r_{k}+0
+\end{align*}
+
+\end_inset
+
+עוצרים כאשר מקבלים שארית אפס, ואז ה-
+\lang english
+gcd
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא 
+\begin_inset Formula $r_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+נכונות האלגוריתם
+\series default
+ האלגוריתם תמיד עוצר, אחרי לכל היותר 
+\begin_inset Formula $c\cdot\log\left(\min\left\{ a,b\right\} \right)$
+\end_inset
+
+ צעדים עבור 
+\begin_inset Formula $c>0$
+\end_inset
+
+ קבוע.
+ הוא מחזיר את התוצאה הנכונה, כלומר 
+\begin_inset Formula $r_{k}=\gcd\left(a,b\right)$
+\end_inset
+
+, והוא מספק גם דרך למצוא את מקדמי בזו.
+\end_layout
+
+\begin_layout Proof
+מתקיים 
+\begin_inset Formula $\cdots<r_{2}<r_{1}<b$
+\end_inset
+
+ זו סדרה יורדת של שלמים חיוביים ולכן חייבים להגיע לאפס, כלומר האלגוריתם
+ חייב לעצור.
+ את הסיבוכיות לא הוכחנו בכיתה.
+\end_layout
+
+\begin_layout Proof
+על מנת להראות נכונות נראה שאם 
+\begin_inset Formula $a=qb+r$
+\end_inset
+
+ אז 
+\begin_inset Formula $\gcd\left(a,b\right)=\gcd\left(b,r\right)$
+\end_inset
+
+.
+ אכן, לשני הזוגות אותם מחלקים משותפים כי אם 
+\begin_inset Formula $d\mid a,b$
+\end_inset
+
+ אז 
+\begin_inset Formula $d\mid a-qb=r,d\mid b$
+\end_inset
+
+.
+ להיפך, אם 
+\begin_inset Formula $d\mid r,d\mid b$
+\end_inset
+
+ אז 
+\begin_inset Formula $d\mid qb+r=a,d\mid b$
+\end_inset
+
+.
+ כעת, נשתמש בכך עבור ה
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ים ונקבל
+\begin_inset Formula 
+\[
+\gcd\left(a,b\right)=\gcd\left(b,r_{1}\right)=\gcd\left(r_{1},r_{2}\right)=\cdots=\gcd\left(r_{k-1},r_{k}\right)=\gcd\left(r_{k},0\right)=r_{k}
+\]
+
+\end_inset
+
+כדי למצוא את מקדמי בזו מהאלגוריתם, נכתוב בצורה איטרטיבית את השאריות כקומבינציות
+ לינאריות
+\begin_inset Formula 
+\begin{align*}
+r_{1} & =a-q_{1}b\\
+r_{2} & =b-q_{2}r_{1}=b-q_{2}\left(a-q_{1}b\right)=-q_{2}a+\left(1+q_{2}q_{1}\right)b\\
+\vdots\\
+r_{k}=\gcd\left(a,b\right) & =\dots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ נקראים זרים אם 
+\begin_inset Formula $\gcd\left(a,b\right)=\pm1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+משוואות דיופנטיות לינאריות
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+משוואה דיופנטית
+\series default
+ זו משוואה עם נעלמים שמחפשים עבורה פתרונות בשלמים.
+\end_layout
+
+\begin_layout Paragraph
+פתרון משוואה דיופנטית לינארית במשתנה אחד
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+, יש פתרון ל
+\begin_inset Formula $ax=b$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $a\mid b$
+\end_inset
+
+, ואז יש פתרון יחיד 
+\begin_inset Formula $\frac{b}{a}$
+\end_inset
+
+, אלא אם 
+\begin_inset Formula $a=b=0$
+\end_inset
+
+ ואז יש אינסוף פתרונות.
+\end_layout
+
+\begin_layout Paragraph
+פתרון משוואה דיופנטית לינארית בשני משתנים
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $a,b,c\in\mathbb{Z}$
+\end_inset
+
+, יש פתרון ל
+\begin_inset Formula $ax+by=c$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $\gcd\left(a,b\right)\mid c$
+\end_inset
+
+, זאת כי ראינו 
+\begin_inset Formula $I=\left\{ ax+by\mid x,y\in\mathbb{Z}\right\} $
+\end_inset
+
+ וב
+\begin_inset Formula $I$
+\end_inset
+
+ ה
+\begin_inset Formula $\gcd$
+\end_inset
+
+ הוא המינימלי, וכל איבר אחר ב
+\begin_inset Formula $I$
+\end_inset
+
+ הוא כפולה שלו.
+ נניח כי אכן 
+\begin_inset Formula $\gcd\left(a,b\right)\mid c$
+\end_inset
+
+, אז אם 
+\begin_inset Formula $\left(x_{0},y_{0}\right)$
+\end_inset
+
+ פתרון פרטי )ניתן למצוא לדוגמה מהלמה של בזו( אז קבוצת הפתרונות היא 
+\begin_inset Formula 
+\[
+\left\{ \left(x_{0}-\frac{b}{\gcd\left(a,b\right)}k,y_{0}+\frac{a}{\gcd\left(a,b\right)}k\right)\mid k\in\mathbb{Z}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $ax_{1}+by_{1}=c,ax_{2}+by_{2}=c$
+\end_inset
+
+ אז 
+\begin_inset Formula $a\left(x_{1}-x_{2}\right)+b\left(y_{1}-y_{2}\right)=0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a\Delta x=-b\Delta y$
+\end_inset
+
+ ואז 
+\begin_inset Formula $\Delta x=-\frac{b}{a}\Delta y$
+\end_inset
+
+.
+ נרשום 
+\begin_inset Formula $a=a'\cdot\gcd\left(a,b\right),b=b'\cdot\gcd\left(a,b\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $\Delta x=\frac{b'}{a'}\Delta y$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a',b'$
+\end_inset
+
+ זרים, זה צריך להיות מספר שלם וזה קורה אם ורק אם 
+\begin_inset Formula $a'\mid\Delta y$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\Delta y=ka'=k\frac{a}{\gcd\left(a,b\right)}$
+\end_inset
+
+ לאיזשהו 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+, ואז 
+\begin_inset Formula $\Delta x=-\frac{b'}{a'}k\frac{a}{\gcd\left(a,b\right)}=-\frac{b}{\gcd\left(a,b\right)}k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+ראשוניים והמשפט היסודי של האריתמטיקה
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ראשוני
+\series default
+ 
+\begin_inset Formula $p\in\mathbb{N}$
+\end_inset
+
+ עם 
+\begin_inset Formula $p\geq2$
+\end_inset
+
+ נקרא ראשוני אם המחלקים שלו הם רק 
+\begin_inset Formula $\pm1,\pm p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+
+\series bold
+אוקלידס
+\series default
+ יהיו 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני.
+ אם 
+\begin_inset Formula $p\mid ab$
+\end_inset
+
+ אז 
+\begin_inset Formula $p\mid a$
+\end_inset
+
+ או 
+\begin_inset Formula $p\mid b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $p\mid ab$
+\end_inset
+
+ וכן 
+\begin_inset Formula $p\nmid a$
+\end_inset
+
+, אז 
+\begin_inset Formula $\gcd\left(a,p\right)=1$
+\end_inset
+
+ ולפי הלמה של בזו ניתן לרשום 
+\begin_inset Formula $1=xa+yp$
+\end_inset
+
+ עבור 
+\begin_inset Formula $x,y\in\mathbb{Z}$
+\end_inset
+
+, ואז 
+\begin_inset Formula $b=b\cdot1=b\left(xa+yp\right)=bxa+byp$
+\end_inset
+
+.
+ מתקיים 
+\begin_inset Formula $p\mid ab$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $p\mid bxa$
+\end_inset
+
+, כמו כן 
+\begin_inset Formula $p\mid byp$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $p\mid bxa+byp=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+באופן כללי, בחוג קומטטיבי עם יחידה איבר 
+\begin_inset Formula $x$
+\end_inset
+
+ נקרא ראשוני אם הוא מקיים את התכונה של הלמה, ואיבר 
+\begin_inset Formula $x$
+\end_inset
+
+ נקרא אי פריק אם הוא מתחלק רק בעצמו או בהפיכים בחוג.
+ איבר ראשוני הוא תמיד אי פריק, אבל ההפך לא תמיד נכון )בשלמים כן, זו בדיוק
+ הלמה של אוקלידס(.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+היסודי של האריתמטיקה
+\series default
+ כל 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ נתון באופן יחיד )עד כדי שינוי סדר( כמכפלה של ראשוניים.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+קיום: 
+\series default
+באינדוקציה על 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $n=2$
+\end_inset
+
+ ברור ועבור הצעד נניח שהטענה נכונה לכל 
+\begin_inset Formula $2\leq m\leq n-1$
+\end_inset
+
+, אז עבור 
+\begin_inset Formula $n$
+\end_inset
+
+, אם 
+\begin_inset Formula $n$
+\end_inset
+
+ ראשוני סיימנו, ואחרת בהכרח יש
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $k\mid n$
+\end_inset
+
+ וכן 
+\begin_inset Formula $k\neq1,n$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $2\leq k\leq n-1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $2\leq\frac{n}{k}\leq n-1$
+\end_inset
+
+ ולכן ניתן לכתוב את 
+\begin_inset Formula $k,\frac{n}{k}$
+\end_inset
+
+ כמכפלה של ראשוניים, ו
+\begin_inset Formula $n$
+\end_inset
+
+ יהיה מכפלת המכפלות הללו.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+יחידות: 
+\series default
+לכל 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+ נסמן ב
+\begin_inset Formula $k\left(n\right)$
+\end_inset
+
+ את אורך המכפלה הקצרה ביותר של ראשוניים ששווה ל
+\begin_inset Formula $n$
+\end_inset
+
+.
+ נראה באינדוקציה על 
+\begin_inset Formula $k\left(n\right)$
+\end_inset
+
+, עבור 
+\begin_inset Formula $k\left(n\right)=1$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ ראשוני ולכן אם 
+\begin_inset Formula $n=p_{1}\cdots p_{k}$
+\end_inset
+
+ אז בפרט 
+\begin_inset Formula $p_{1}\mid n$
+\end_inset
+
+ אבל 
+\begin_inset Formula $n$
+\end_inset
+
+ ראשוני ולכן 
+\begin_inset Formula $p_{1}=n$
+\end_inset
+
+, ואז 
+\begin_inset Formula $p_{2}\cdots p_{k}=1$
+\end_inset
+
+ כלומר זו שוב מכפלה של ראשוני אחד, 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ עבור הצעד, נניח שהטענה נכונה לכל 
+\begin_inset Formula $m$
+\end_inset
+
+ עם 
+\begin_inset Formula $k\left(m\right)<k\left(n\right)$
+\end_inset
+
+ ונניח 
+\begin_inset Formula $n=p_{1}p_{2}\cdots p_{k\left(n\right)}=q_{1}q_{2}\cdots q_{r}$
+\end_inset
+
+ אז בפרט 
+\begin_inset Formula $q_{r}\mid p_{1}\cdots p_{k\left(n\right)}$
+\end_inset
+
+ ולפי הפעלה חוזרת של הלמה של אוקלידס 
+\begin_inset Formula $q_{r}\mid p_{i}$
+\end_inset
+
+ לאיזה 
+\begin_inset Formula $1\leq i\leq k\left(n\right)$
+\end_inset
+
+, בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $q_{r}\mid p_{k\left(n\right)}$
+\end_inset
+
+, שניהם ראשוניים ולכן שווים.
+ קיבלנו 
+\begin_inset Formula $\frac{n}{q_{r}}=p_{1}p_{2}\cdots p_{k\left(n\right)-1}=q_{1}q_{2}\cdots q_{r-1}$
+\end_inset
+
+ ולפי הנחת האינדוקציה אלו אותם ראשוניים עד כדי שינוי סדר, ולכן גם 
+\begin_inset Formula $p_{1},\dots,p_{k\left(n\right)}$
+\end_inset
+
+ ו
+\begin_inset Formula $q_{1},\dots,q_{r-1}$
+\end_inset
+
+ הם אותם ראשוניים עד כדי שינוי סדר.
+\end_layout
+
+\begin_layout Remarks
+גרסה של המשפט נכונה בכל חוג בו אי פריק שקול לראשוני.
+\end_layout
+
+\begin_layout Corollary
+אם נכתוב 
+\begin_inset Formula $n=p_{1}^{r_{1}}\cdots p_{k}^{r_{k}}$
+\end_inset
+
+ עם 
+\begin_inset Formula $p_{1}<p_{2}<\cdots<p_{k}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $r_{i}\in\mathbb{N}$
+\end_inset
+
+ אז המחלקים של 
+\begin_inset Formula $n$
+\end_inset
+
+ הם 
+\begin_inset Formula $\pm p_{1}^{s_{1}}\cdots p_{k}^{s_{k}}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $0\leq s_{i}\leq r_{i}$
+\end_inset
+
+, ובפרט מספר המחלקים הוא 
+\begin_inset Formula $2\left(r_{1}+1\right)\cdots\left(r_{k}+1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $a=\pm p_{1}^{r_{1}}\cdots p_{k}^{r_{k}},b=\pm p_{1}^{s_{1}}\cdots p_{k}^{s^{k}}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $s_{i},r_{i}\in\mathbb{N}\cup\left\{ 0\right\} $
+\end_inset
+
+ אז 
+\begin_inset Formula $\gcd\left(a,b\right)=\pm p_{1}^{\min\left\{ r_{1},s_{1}\right\} }\cdots p_{k}^{\min\left\{ r_{k},s_{k}\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ה
+\lang english
+lcm
+\series default
+\lang hebrew
+ בהינתן 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ לא שניהם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, ה
+\lang english
+lcm
+\lang hebrew
+ הוא 
+\begin_inset Formula $L\in\mathbb{Z}$
+\end_inset
+
+ שמקיים 
+\begin_inset Formula $a,b\mid L$
+\end_inset
+
+ וכן אם 
+\begin_inset Formula $a,b\mid\ell$
+\end_inset
+
+ אז 
+\begin_inset Formula $L\mid\ell$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $a=\pm\prod_{i=1}^{k}p_{i}^{r_{i}},b=\pm\prod_{i=1}^{k}p_{i}^{s_{i}}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\text{lcm}\left(a,b\right)=\pm\prod_{i=1}^{k}p_{i}^{\max\left\{ r_{i},s_{i}\right\} }$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\text{lcm}\left(a,b\right)\text{gcd}\left(a,b\right)=\pm ab$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+אוקלידס
+\series default
+ יש אינסוף מספרים ראשוניים.
+\end_layout
+
+\begin_layout Proof
+נניח בשלילה שיש מספר סופי 
+\begin_inset Formula $p_{1},\dots,p_{n}$
+\end_inset
+
+ של ראשוניים, נסמן 
+\begin_inset Formula $N=p_{1}p_{2}\cdots p_{n}+1$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $i$
+\end_inset
+
+ נניח בשלילה 
+\begin_inset Formula $p_{i}\mid N$
+\end_inset
+
+ אז מכך ש
+\begin_inset Formula $p_{i}\mid p_{1}\cdots p_{n}$
+\end_inset
+
+ נובע 
+\begin_inset Formula $p_{i}\mid N-p_{1}\cdots p_{n}=1$
+\end_inset
+
+, בסתירה לכך ש
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ ראשוני.
+ כלומר אף אחד מבין הראשוניים לא מחלק את 
+\begin_inset Formula $N$
+\end_inset
+
+, ובפרט לא ניתן לרשום את 
+\begin_inset Formula $N$
+\end_inset
+
+ כמכפלה של ראשוניים, בסתירה למשפט היסודי של האריתמטיקה.
+ אז יש אינסוף ראשוניים.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+דיריכלה
+\series default
+ )ללא הוכחה( לכל 
+\begin_inset Formula $a,d\in\mathbb{N}$
+\end_inset
+
+ זרים יש אינסוף ראשוניים בסדרה 
+\begin_inset Formula $a+d,a+2d,a+3d,\dots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+בקבוצה 
+\begin_inset Formula $\left\{ 4k+3\mid k\in\mathbb{N}\right\} $
+\end_inset
+
+ נוכל להוכיח שיש, נניח בשלילה שיש מספר סופי 
+\begin_inset Formula $q_{1},\dots,q_{r}$
+\end_inset
+
+.
+ אם המכפלה נותנת שארית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בחלוקה ב
+\numeric on
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נסמן 
+\begin_inset Formula $N=q_{1}\cdots q_{n}+2$
+\end_inset
+
+, אם שארית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נסמן 
+\begin_inset Formula $N=q_{1}\cdots q_{n}+4$
+\end_inset
+
+.
+ בכל מקרה שארית החלוקה של 
+\begin_inset Formula $N$
+\end_inset
+
+ ב
+\numeric on
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ולכן בפירוק לראשוניים של 
+\begin_inset Formula $N$
+\end_inset
+
+ יש ראשוני מהצורה 
+\begin_inset Formula $4k+3$
+\end_inset
+
+ )אחרת כולם עם שארית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ולכן גם 
+\begin_inset Formula $N$
+\end_inset
+
+(, נניח 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $q_{i}\mid N-q_{1}\cdots q_{n}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $q_{i}\mid2$
+\end_inset
+
+ או 
+\begin_inset Formula $q_{i}\mid4$
+\end_inset
+
+, וזו סתירה.
+\end_layout
+
+\begin_layout Paragraph
+השערת התאומים הראשוניים
+\end_layout
+
+\begin_layout Standard
+יש אינסוף ערכים של 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $n,n+2$
+\end_inset
+
+ שניהם ראשוניים )השערה פתוחה(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+משפט המספרים הראשוניים
+\end_layout
+
+\begin_layout Standard
+נסמן 
+\begin_inset Formula $p_{1}<p_{2}<\cdots$
+\end_inset
+
+ את הראשוניים, ונגדיר 
+\begin_inset Formula $\pi\left(x\right)=\#\left\{ p\leq x\mid p\text{ is prime}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מתקיים 
+\begin_inset Formula $\pi\left(p_{n}\right)=n$
+\end_inset
+
+, ולכן אם נבין טוב את 
+\begin_inset Formula $\pi\left(x\right)$
+\end_inset
+
+ נוכל להבין גם מהו סדר הגודל של 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+חסם ראשון
+\series default
+ 
+\begin_inset Formula $p_{n}<2^{2^{n}}$
+\end_inset
+
+, ולכן לכל 
+\begin_inset Formula $x\geq2$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\pi\left(x\right)\geq\log_{2}\log_{2}x-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+לכל 
+\begin_inset Formula $n$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $q_{n}=p_{1}\cdots p_{n}+1$
+\end_inset
+
+ אז כל גורם ראשוני של 
+\begin_inset Formula $q_{n}$
+\end_inset
+
+ הוא 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ עם 
+\begin_inset Formula $n<k$
+\end_inset
+
+, ובפרט 
+\begin_inset Formula $p_{n+1}\leq p_{k}\leq q_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+באינדוקציה, עבור 
+\begin_inset Formula $n=1$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $p_{1}=2<2^{2^{1}}=4$
+\end_inset
+
+, נניח עבור 
+\begin_inset Formula $n$
+\end_inset
+
+ אז 
+\begin_inset Formula 
+\[
+p_{n+1}\leq p_{1}\cdots p_{n}+1<2^{2^{1}}\cdots2^{2^{n}}+1=2^{2^{n+1}-2}+1<2^{2^{n+1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+המספרים הראשוניים
+\series default
+ )ללא הוכחה( 
+\begin_inset Formula $\pi\left(x\right)\sim\frac{x}{\log x}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\lim_{x\to\infty}\frac{\pi\left(x\right)}{\nicefrac{x}{\log x}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+משפט זה שקול ל
+\begin_inset Formula $p_{n}\sim n\log n$
+\end_inset
+
+, כי 
+\begin_inset Formula $\pi\left(n\log n\right)\sim\frac{n\log n}{\log\left(n\log n\right)}=\frac{n\log n}{\log n+\log\log n}\sim\frac{n\log n}{\log n}=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+במילים אחרות, לכל 
+\begin_inset Formula $0<a<1<b$
+\end_inset
+
+ יש 
+\begin_inset Formula $x_{0}>0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x_{0}\leq x$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a\frac{x}{\log x}<\pi\left(x\right)<b\frac{x}{\log x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+צ'בישב
+\series default
+ קיימים 
+\begin_inset Formula $0<a<1<b$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x\geq2$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a\frac{x}{\log x}<\pi\left(x\right)<b\frac{x}{\log x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+חסם עליון
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+למה א':
+\series default
+ לכל 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left\lfloor 2x\right\rfloor -2\left\lfloor x\right\rfloor \in\left\{ 0,1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+הוכחה:
+\series default
+ 
+\begin_inset Formula $\left\lfloor x\right\rfloor \leq x<\left\lfloor x\right\rfloor +1$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $2\left\lfloor x\right\rfloor \leq2x<2\left\lfloor x\right\rfloor +2$
+\end_inset
+
+, ומכאן 
+\begin_inset Formula $2\left\lfloor x\right\rfloor \leq\left\lfloor 2x\right\rfloor \leq2\left\lfloor x\right\rfloor +1$
+\end_inset
+
+, נחסיר 
+\begin_inset Formula $2\left\lfloor x\right\rfloor $
+\end_inset
+
+ ונקבל 
+\begin_inset Formula $0\leq\left\lfloor 2x\right\rfloor -2\left\lfloor x\right\rfloor \leq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+כעת נראה 
+\begin_inset Formula $\pi\left(x\right)-\pi\left(\frac{x}{2}\right)<\beta\frac{x}{\log x}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $1<\beta$
+\end_inset
+
+ כלשהו.
+\end_layout
+
+\begin_layout Proof
+יהי 
+\begin_inset Formula $n$
+\end_inset
+
+ טבעי, אז 
+\begin_inset Formula $\pi\left(2n\right)-\pi\left(n\right)=\#\left\{ n<p\leq2n\mid p\text{ is prime}\right\} $
+\end_inset
+
+.
+ מתקיים 
+\begin_inset Formula $\prod_{n<p\leq2n}p\mid{2n \choose n}=\frac{\left(2n\right)!}{n!n!}$
+\end_inset
+
+ כי כל הראשוניים מופיעים רק במונה.
+ בפרט 
+\begin_inset Formula $n^{\pi\left(2n\right)-\pi\left(n\right)}<\prod_{n<p\leq2n}p<{2n \choose n}$
+\end_inset
+
+, נוציא 
+\begin_inset Formula $\log$
+\end_inset
+
+ ונקבל
+\begin_inset Formula 
+\[
+\left(\pi\left(2n\right)-\pi\left(n\right)\right)\log n<\log{2n \choose n}<\log\left(2^{2n}\right)=2n\cdot\log2
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $\pi\left(2n\right)-\pi\left(n\right)<2\log2\frac{n}{\log n}=\beta_{1}\frac{n}{\log n}$
+\end_inset
+
+, עדיין צריך להוכיח את הטענה עבור 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ כללי.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $x\geq8$
+\end_inset
+
+, אז
+\begin_inset Formula 
+\begin{align*}
+\pi\left(x\right)-\pi\left(\frac{x}{2}\right) & =\pi\left(\whole x\right)-\pi\left(\whole{\frac{x}{2}}\right)\stackrel{\text{Lemma (a)}}{\leq}1+\pi\left(2\cdot\whole{\frac{x}{2}}\right)-\pi\left(\whole{\frac{x}{2}}\right)<1+\beta_{1}\frac{\whole{\frac{x}{2}}}{\log\whole{\frac{x}{2}}}\leq1+\beta_{1}\frac{\frac{x}{2}}{\log\left(\frac{x}{2}-1\right)}\\
+ & =1+\frac{\beta_{1}}{2}\cdot\frac{x}{\log\left(\frac{x}{2}-1\right)}\stackrel{x\geq8\implies\frac{x}{2}-1\geq\sqrt{x}}{\leq}1+\frac{\beta_{1}}{2}\frac{x}{\log\sqrt{x}}=1+\beta_{1}\frac{x}{\log x}<\left(1+\beta_{1}\right)\frac{x}{\log x}
+\end{align*}
+
+\end_inset
+
+עבור 
+\begin_inset Formula $2\leq x<8$
+\end_inset
+
+ נמצא 
+\begin_inset Formula $\beta_{2}>0$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\pi\left(x\right)-\pi\left(\frac{x}{2}\right)\leq\beta_{2}\frac{x}{\log x}$
+\end_inset
+
+, קיים כי 
+\begin_inset Formula $\pi\left(x\right)-\pi\left(\frac{x}{2}\right)\in\left\{ 1,2\right\} $
+\end_inset
+
+ ואילו 
+\begin_inset Formula $\frac{x}{\log x}$
+\end_inset
+
+ חסומה מלמטה על ידי איזה 
+\begin_inset Formula $m>0$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula $\beta=\max\left\{ \beta_{2},1+\beta_{1}\right\} $
+\end_inset
+
+ וקיבלנו לכל 
+\begin_inset Formula $x\geq2$
+\end_inset
+
+ את 
+\begin_inset Formula $\pi\left(x\right)-\pi\left(\frac{x}{2}\right)<\beta\frac{x}{\log x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+לסיום ההוכחה, מתקיים לכל 
+\begin_inset Formula $x\geq2$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\pi\left(x\right)\log x-\pi\left(\frac{x}{2}\right)\log\left(\frac{x}{2}\right) & =\pi\left(x\right)\log x-\pi\left(\frac{x}{2}\right)\left(\log x-\log2\right)=\left(\pi\left(x\right)-\pi\left(\frac{x}{2}\right)\right)\log x+\pi\left(\frac{x}{2}\right)\log2\\
+ & <\beta\frac{x}{\log x}\cdot\log x+\frac{x}{2}\log2=\left(\beta+\frac{\log2}{2}\right)x=\beta_{3}x
+\end{align*}
+
+\end_inset
+
+כעת, ניקח 
+\begin_inset Formula $m$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\frac{x}{2^{m+1}}<2\leq\frac{x}{2^{m}}$
+\end_inset
+
+ אז
+\begin_inset Formula 
+\[
+\pi\left(x\right)\log x=\left(\sum_{i=0}^{m}\pi\left(\frac{x}{2^{i}}\right)\log\left(\frac{x}{2^{i}}\right)-\pi\left(\frac{x}{2^{i+1}}\right)\log\left(\frac{x}{2^{i+1}}\right)\right)<\sum_{i=0}^{m}\beta_{3}\frac{x}{2^{i}}=<2\beta_{3}x=bx
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $\pi\left(x\right)<b\frac{x}{\log x}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\geq2$
+\end_inset
+
+, כדרוש.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+חסם תחתון:
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+למה ב':
+\series default
+ עבור 
+\begin_inset Formula $n$
+\end_inset
+
+ טבעי ו
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני, נסמן ב
+\begin_inset Formula $r_{p}$
+\end_inset
+
+ את החזקה הגבוהה ביותר של 
+\begin_inset Formula $p$
+\end_inset
+
+ שהיא קטנה מ
+\begin_inset Formula $n$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $p^{r_{p}}\leq n<p^{r_{p}+1}$
+\end_inset
+
+ אז החזקה הגבוהה ביותר של 
+\begin_inset Formula $p$
+\end_inset
+
+ שמחלקת את 
+\begin_inset Formula $n!$
+\end_inset
+
+ היא 
+\begin_inset Formula $p^{\sum_{k=1}^{r_{p}}\whole{\frac{n}{p^{k}}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+הוכחה:
+\series default
+ 
+\begin_inset Formula $\whole{\frac{n}{p^{k}}}$
+\end_inset
+
+ הוא מספר המספרים בין 
+\begin_inset Formula $1,\dots,n$
+\end_inset
+
+ שמתחלקים ב
+\begin_inset Formula $p^{k}$
+\end_inset
+
+, ולכן סופר תרומה אחת של כל מספר כזה לחזקה הכוללת של 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ כך, המספר 
+\begin_inset Formula $1\leq r\leq n$
+\end_inset
+
+, אם 
+\begin_inset Formula $p^{j}\mid r$
+\end_inset
+
+ אבל 
+\begin_inset Formula $p^{j+1}\nmid r$
+\end_inset
+
+ אז סופרים את 
+\begin_inset Formula $r$
+\end_inset
+
+ בדיוק 
+\begin_inset Formula $j$
+\end_inset
+
+ פעמים, ב
+\begin_inset Formula $\whole{\frac{n}{p}},\whole{\frac{n}{p^{2}}},\dots,\whole{\frac{n}{p^{j}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+כעת נראה 
+\begin_inset Formula ${2n \choose n}\mid\prod_{p\leq2n}p^{r_{p}}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $r_{p}$
+\end_inset
+
+ מתאים ל
+\begin_inset Formula $2n$
+\end_inset
+
+, 
+\begin_inset Formula $p^{r_{p}}\leq2n<p^{r_{p}+1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+החזקה הגבוהה ביותר של 
+\begin_inset Formula $p$
+\end_inset
+
+ שמחלקת את 
+\begin_inset Formula $\left(2n\right)!$
+\end_inset
+
+ היא 
+\begin_inset Formula $\sum_{k=1}^{r_{p}}\whole{\frac{2n}{p^{k}}}$
+\end_inset
+
+, ואת 
+\begin_inset Formula $n!$
+\end_inset
+
+ היא 
+\begin_inset Formula $\sum_{k=1}^{r_{p}}\whole{\frac{n}{p^{k}}}$
+\end_inset
+
+, ולכן חזקת 
+\begin_inset Formula $p$
+\end_inset
+
+ שמופיעה ב
+\begin_inset Formula ${2n \choose n}$
+\end_inset
+
+ היא 
+\begin_inset Formula 
+\[
+\sum_{k=1}^{r_{p}}\whole{\frac{2n}{p^{k}}}-2\whole{\frac{n}{p^{k}}}\stackrel{\text{Lemma (a)}}{\leq}\sum_{k=1}^{r_{p}}1=r_{p}
+\]
+
+\end_inset
+
+ולכן אכן 
+\begin_inset Formula ${2n \choose n}\mid\prod_{p\leq2n}p^{r_{p}}$
+\end_inset
+
+, ובפרט 
+\begin_inset Formula 
+\[
+{2n \choose n}\leq\prod_{p\leq2n}p^{r_{p}}\stackrel{p^{r_{p}}\leq2n}{\leq}\left(2n\right)^{\pi\left(2n\right)}\stackrel{\log}{\implies}n\log2=\log\left(2^{n}\right)\leq\log{2n \choose n}\leq\pi\left(2n\right)\log2n
+\]
+
+\end_inset
+
+קיבלנו 
+\begin_inset Formula $a_{1}\frac{2n}{\log2n}=\frac{\log2}{2}\cdot\frac{2n}{\log2n}\leq\pi\left(2n\right)$
+\end_inset
+
+, הוכחנו את הרצוי לכל הזוגיים וצריך להוכיח ל
+\begin_inset Formula $2\leq x\in\mathbb{R}$
+\end_inset
+
+ כללי.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $x\geq4$
+\end_inset
+
+, אז
+\begin_inset Formula 
+\[
+\pi\left(x\right)\geq\pi\left(2\cdot\whole{\frac{x}{2}}\right)\geq a_{1}\frac{2\whole{\frac{x}{2}}}{\log\left(2\whole{\frac{x}{2}}\right)}\stackrel{\text{Lemma (a)}}{\geq}a_{1}\frac{\whole x-1}{\log\left(2\cdot\frac{x}{2}\right)}\geq a_{1}\frac{x-2}{\log x}\stackrel{x\geq4\implies x-2\geq\frac{1}{2}x}{\geq}\frac{a_{1}}{2}\frac{x}{\log x}
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $x\in\left[2,4\right]$
+\end_inset
+
+ יש 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\pi\left(x\right)\geq a_{2}\frac{x}{\log x}$
+\end_inset
+
+, ניקח 
+\begin_inset Formula $a=\min\left\{ a_{2},\frac{a_{1}}{2}\right\} $
+\end_inset
+
+ ואז לכל 
+\begin_inset Formula $x\geq2$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a\frac{x}{\log x}\leq\pi\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+קיימים 
+\begin_inset Formula $\alpha,\beta>0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+ טבעי מתקיים 
+\begin_inset Formula $\alpha n\log n<p_{n}<\beta n\log n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+ראינו שקיימים 
+\begin_inset Formula $0<a<1<b$
+\end_inset
+
+ כך ש
+\begin_inset Formula $a\frac{x}{\log x}<\pi\left(x\right)<b\frac{x}{\log x}$
+\end_inset
+
+.
+ אז בפרט
+\begin_inset Formula 
+\[
+n=\pi\left(p_{n}\right)<b\frac{p_{n}}{\log p_{n}}\implies p_{n}>\frac{1}{b}n\log p_{n}>\frac{1}{b}n\log n=\alpha n\log n
+\]
+
+\end_inset
+
+בכיוון השני, נשים לב כי לכל 
+\begin_inset Formula $n\geq\frac{2}{a}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $p_{n}\leq n^{4}$
+\end_inset
+
+ שכן 
+\begin_inset Formula $\frac{\sqrt{p_{n}}}{2}<\frac{p_{n}}{\log p_{n}}<\frac{1}{a}r<\frac{r}{2}r=\frac{r^{2}}{2}$
+\end_inset
+
+, וכעת לכל 
+\begin_inset Formula $n\geq\frac{2}{a}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n=\pi\left(p_{n}\right)>a\frac{p_{n}}{\log p_{n}}\implies p_{n}<\frac{1}{a}n\log p_{n}\leq\frac{1}{a}n\log n^{4}=\frac{4}{a}n\log n
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $2\leq n\leq\frac{2}{a}$
+\end_inset
+
+ יש מספר סופי של 
+\begin_inset Formula $r$
+\end_inset
+
+ים וניקח 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ כך שלכל אחד מהם מתקיים אי השוויון הרצוי, ואז עבור 
+\begin_inset Formula $\beta=\max\left\{ \frac{4}{a},\beta_{1}\right\} $
+\end_inset
+
+ זה מתקיים.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{p_{n}}$
+\end_inset
+
+ מתבדר.
+\end_layout
+
+\begin_layout Proof
+לפי המסקנה מצ'בישב לכל 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\frac{1}{\beta n\log n}<\frac{1}{p_{n}}<\frac{1}{\alpha n\log n}$
+\end_inset
+
+, ולכן
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{p_{n}}\text{ diverges}\iff\sum_{n=2}^{\infty}\frac{1}{n\log n}\text{ diverges}\iff\int_{2}^{\infty}\frac{1}{x\log x}dx\text{ diverges}
+\]
+
+\end_inset
+
+נחשב
+\begin_inset Formula 
+\[
+\int_{2}^{\infty}\frac{1}{x\log x}dx=\left[\begin{array}{c}
+t=\log x\\
+\frac{dt}{dx}=\frac{1}{x}
+\end{array}\right]=\int_{\log2}^{\infty}\frac{1}{t}dt=\left[\log t\right]_{\log2}^{\infty}=\left[\log\log x\right]_{2}^{\infty}=\infty
+\]
+
+\end_inset
+
+כלומר אכן מתבדר.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+השערת ברטרנד
+\series default
+ לכל 
+\begin_inset Formula $n>1$
+\end_inset
+
+ טבעי יש לפחות ראשוני אחד 
+\begin_inset Formula $n<p<2n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נוכיח בהסתמך על משפט המספרים הראשוניים, עבור 
+\begin_inset Formula $n>N_{0}$
+\end_inset
+
+ מספיק גדול.
+\end_layout
+
+\begin_layout Proof
+נבחר 
+\begin_inset Formula $0<a<1<b$
+\end_inset
+
+ כלשהם כך ש
+\begin_inset Formula $2a-b>0$
+\end_inset
+
+, אז יש 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $n>N_{0}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a\frac{n}{\log n}<\pi\left(n\right)<b\frac{n}{\log n}$
+\end_inset
+
+, ואז
+\begin_inset Formula 
+\[
+\pi\left(2n\right)-\pi\left(n\right)>a\frac{2n}{\log2n}-b\frac{n}{\log n}=\frac{2an\log n-bn\log2n}{\log n\cdot\log2n}=n\cdot\frac{\left(2a-b\right)\log n-b\log2}{\log n\cdot\log2n}
+\]
+
+\end_inset
+
+בחרנו 
+\begin_inset Formula $2a-b>0$
+\end_inset
+
+ אז עבור 
+\begin_inset Formula $n$
+\end_inset
+
+ גדול מספיק 
+\begin_inset Formula $\left(2a-b\right)\log n-b\log2>0$
+\end_inset
+
+ ואז 
+\begin_inset Formula $\pi\left(2n\right)-\pi\left(n\right)>0$
+\end_inset
+
+ ובפרט יש ראשוני ביניהם.
+\end_layout
+
+\begin_layout Subsubsection*
+השערת רימן
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+פונקציית 
+\begin_inset Formula $\text{Li}$
+\end_inset
+
+
+\series default
+ מוגדרת 
+\begin_inset Formula $\text{Li}\left(x\right)=\int_{2}^{x}\frac{1}{\log t}dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\text{Li}\left(x\right)\sim\frac{x}{\log x}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\frac{\text{Li}\left(x\right)}{\nicefrac{x}{\log x}}\xrightarrow{x\to\infty}1$
+\end_inset
+
+ )תרגיל(.
+ ממשפט המספרים הראשוניים נובע 
+\begin_inset Formula $\text{Li}\left(x\right)\sim\pi\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+פונקציית זטא של רימן 
+\series default
+לכל 
+\begin_inset Formula $s$
+\end_inset
+
+ ממשי, מגדירים 
+\begin_inset Formula $\zeta\left(s\right)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}$
+\end_inset
+
+, זה מתכנס לכל 
+\begin_inset Formula $s>1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Remarks
+לכל 
+\begin_inset Formula $s>1$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\zeta\left(s\right)=\prod_{p\text{ is prime}}\frac{1}{1-\frac{1}{p^{s}}}$
+\end_inset
+
+, וכן ניתן להעריך את 
+\begin_inset Formula $\zeta\left(s\right)$
+\end_inset
+
+ גם עבור מרוכבים עם 
+\begin_inset Formula $\Re z>1$
+\end_inset
+
+.
+ יותר מזה, רימן גילה שיש המשכה אנליטית ל
+\begin_inset Formula $\zeta$
+\end_inset
+
+, כלומר פונקציה אנליטית שמוגדרת על כל 
+\begin_inset Formula $\mathbb{C}\setminus\left\{ 1\right\} $
+\end_inset
+
+ שמזדהה עם 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ בתחום ההגדרה שלה.
+\end_layout
+
+\begin_layout Paragraph
+השערת רימן )גרסה
+\family roman
+\series bold
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+(
+\end_layout
+
+\begin_layout Standard
+לכל 
+\begin_inset Formula $\beta>\frac{1}{2}$
+\end_inset
+
+ קיים 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x\geq x_{0}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\pi\left(x\right)-\text{Li}\left(x\right)\right|\leq x^{\beta}$
+\end_inset
+
+.
+ כלומר, 
+\begin_inset Formula $\left|\pi\left(x\right)-\text{Li}\left(x\right)\right|$
+\end_inset
+
+ חסום בערך על ידי 
+\begin_inset Formula $\sqrt{x}$
+\end_inset
+
+ )אבל לא ממש על ידיו, ידוע שהטענה לא נכונה עבור 
+\begin_inset Formula $\beta=\frac{1}{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Paragraph
+השערת רימן )גרסה
+\family roman
+\series bold
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+(
+\end_layout
+
+\begin_layout Standard
+כל האפסים הלא טריויאליים )לא 
+\begin_inset Formula $-2n$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+( של פונקציית זטא של רימן הם על הציר הקריטי 
+\begin_inset Formula $\Re z=\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+קונגרואנציות
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+קונגרואנציה 
+\series default
+יהי 
+\begin_inset Formula $n$
+\end_inset
+
+ טבעי, נאמר כי 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ שווים מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $a\equiv b\mod n$
+\end_inset
+
+ אם 
+\begin_inset Formula $n\mid a-b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+נעיר כי זה יחס שקילות מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+, ובמילים אחרות טוען כי 
+\begin_inset Formula $a,b$
+\end_inset
+
+ נותנים אותה שארית חלוקה ב
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+נניח 
+\begin_inset Formula $a_{1}\equiv a_{2}\mod n$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b_{1}\equiv b_{2}\mod n$
+\end_inset
+
+ אז 
+\begin_inset Formula $a_{1}+b_{1}\equiv a_{2}+b_{2}\mod n$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{1}b_{1}\equiv a_{2}b_{2}\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+כלומר, ניתן להגדיר חיבור וכפל על מחלקות השקילות מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+, שנסמן 
+\begin_inset Formula $\overline{a}$
+\end_inset
+
+ או 
+\begin_inset Formula $a+n\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+עבור חיבור, מתקיים 
+\begin_inset Formula $n\mid a_{1}-a_{2},n\mid b_{1}-b_{2}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $n\mid\left(a_{1}-a_{2}\right)+\left(b_{1}-b_{2}\right)=\left(a_{1}+b_{1}\right)-\left(a_{2}-b_{2}\right)$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $a_{1}+b_{1}\equiv a_{2}+b_{2}\mod n$
+\end_inset
+
+.
+ עבור כפל, מתקיים 
+\begin_inset Formula $n\mid a_{1}-a_{2},n\mid b_{1}-b_{2}$
+\end_inset
+
+ ולכן
+\begin_inset Formula 
+\[
+a_{1}b_{1}-a_{2}b_{2}=a_{1}b_{1}-a_{1}b_{2}+a_{1}b_{2}-a_{2}b_{2}=a_{1}\left(b_{1}-b_{2}\right)+b_{2}\left(a_{1}-a_{2}\right)
+\]
+
+\end_inset
+
+ו
+\begin_inset Formula $n$
+\end_inset
+
+ מחלק אותו, כי זה צירוף לינארי.
+\end_layout
+
+\begin_layout Corollary
+יהי 
+\begin_inset Formula $f\left(x\right)\in\mathbb{Z}\left[x\right]$
+\end_inset
+
+ פולינום עם מקדמים שלמים אז 
+\begin_inset Formula $a_{1}\equiv a_{2}\mod n\implies f\left(a_{1}\right)\equiv f\left(a_{2}\right)\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+חוג השלמים מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+נסמן 
+\begin_inset Formula $\mathbb{Z}_{n}=\nicefrac{\mathbb{Z}}{n\mathbb{Z}}$
+\end_inset
+
+ את קבוצת מחלקות השקילות מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ זה אכן חוג קומטטיבי עם יחידה.
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ ו
+\begin_inset Formula $n\geq2$
+\end_inset
+
+ טבעי.
+ האיבר 
+\begin_inset Formula $\overline{a}$
+\end_inset
+
+ הפיך ב
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $\gcd\left(a,n\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\overline{a}$
+\end_inset
+
+ הפיך 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים 
+\begin_inset Formula $b\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $ab\equiv1\mod n$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $b\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $n\mid ab-1$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $b,k\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $kn=ab-1$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $b,k\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $ab-kn=1$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ לפי הלמה של בזו, 
+\begin_inset Formula $\gcd\left(a,n\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+ שדה 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ ראשוני.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $n$
+\end_inset
+
+ ראשוני אז 
+\begin_inset Formula $\gcd\left(a,n\right)=1$
+\end_inset
+
+ לכל 
+\begin_inset Formula $1\leq a\leq p-1$
+\end_inset
+
+, ולכן כל 
+\begin_inset Formula $\overline{a}\neq\overline{0}$
+\end_inset
+
+ ב
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+ הוא הפיך, ו
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+ מקיים את כל אקסיומות השדה.
+ אם 
+\begin_inset Formula $n$
+\end_inset
+
+ אינו ראשוני אז יש לו מחלק לא טריויאלי 
+\begin_inset Formula $d$
+\end_inset
+
+, ואז 
+\begin_inset Formula $\gcd\left(d,n\right)=d$
+\end_inset
+
+ ול
+\begin_inset Formula $\overline{d}$
+\end_inset
+
+ אין הופכי.
+\end_layout
+
+\begin_layout Algorithm
+
+\series bold
+חישוב הופכי מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+
+\series default
+ כדי למצוא את ההופכי של 
+\begin_inset Formula $a$
+\end_inset
+
+ מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+ נשתמש באלגוריתם אוקלידס כדי למצוא 
+\begin_inset Formula $x,y\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $ax+ny=\gcd\left(a,n\right)$
+\end_inset
+
+, אם 
+\begin_inset Formula $\gcd\left(a,n\right)\neq1$
+\end_inset
+
+ אין הופכי, ואם הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אז ההופכי הוא 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+חבורת ההפיכים 
+\series default
+נסמן 
+\begin_inset Formula $\mathbb{Z}_{n}^{*}$
+\end_inset
+
+ קבוצת ההפיכים ב
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+, זו חבורה אבלית ביחס לכפל.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+פונקציית אוילר
+\series default
+ 
+\begin_inset Formula $\varphi\left(n\right)=\left|\mathbb{Z}_{n}^{*}\right|=\#\left\{ 1\leq a\leq n\mid\gcd\left(a,n\right)=1\right\} $
+\end_inset
+
+.
+ מתקיים 
+\begin_inset Formula $\varphi\left(p\right)=p-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+משפט השאריות הסיני
+\series default
+ אם 
+\begin_inset Formula $m,n\in\mathbb{N}$
+\end_inset
+
+ זרים אז לכל 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ יש פתרון יחיד מודולו 
+\begin_inset Formula $mn$
+\end_inset
+
+ של המערכת 
+\begin_inset Formula $\begin{cases}
+x\equiv a\mod m\\
+x\equiv b\mod n
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+קיום:
+\series default
+ נמצא 
+\begin_inset Formula $\hat{n},\hat{m}\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $n\hat{n}\equiv1\mod m,m\hat{m}\equiv1\mod n$
+\end_inset
+
+ )קיימים כי 
+\begin_inset Formula $n,m$
+\end_inset
+
+ זרים ולכן כל אחד מהם הפיך מודולו השני(, ונגדיר 
+\begin_inset Formula $x=an\hat{n}+bm\hat{m}$
+\end_inset
+
+ אז 
+\begin_inset Formula $x\equiv an\hat{n}\equiv a\mod m,x\equiv bm\hat{m}\equiv b\mod n$
+\end_inset
+
+ הוא פתרון.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+יחידות:
+\series default
+ משיקולי ספירה, יש בדיוק 
+\begin_inset Formula $mn$
+\end_inset
+
+ מחלקות מודולו 
+\begin_inset Formula $mn$
+\end_inset
+
+ ויש פתרון לכל אחת מ
+\begin_inset Formula $mn$
+\end_inset
+
+ המערכות האפשריות )בחירה של 
+\begin_inset Formula $a,b$
+\end_inset
+
+(, ולכן הפתרון הוא יחיד.
+\end_layout
+
+\begin_layout Algorithm
+
+\series bold
+פתרון מערכת מהצורה
+\series default
+ 
+\begin_inset Formula $\begin{cases}
+x\equiv a_{1}\mod n_{1}\\
+\vdots\\
+x\equiv a_{k}\mod n_{k}
+\end{cases}$
+\end_inset
+
+ 
+\series bold
+כאשר 
+\begin_inset Formula $n_{1},\dots,n_{k}$
+\end_inset
+
+ זרים בזוגות
+\end_layout
+
+\begin_layout Algorithm
+לכל 
+\begin_inset Formula $i$
+\end_inset
+
+ נמצא 
+\begin_inset Formula $\hat{n_{i}}$
+\end_inset
+
+ הופכי ל
+\begin_inset Formula $\prod_{j\neq i}n_{j}$
+\end_inset
+
+ מודולו 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ באמצעות אלגוריתם אוקלידס )קיים, כי 
+\begin_inset Formula $n_{1},\dots,n_{k}$
+\end_inset
+
+ זרים בזוגות ולכן 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ זר ל
+\begin_inset Formula $\prod_{j\neq i}n_{j}$
+\end_inset
+
+(, אזי הפתרון היחיד הוא 
+\begin_inset Formula $x\equiv\sum_{i=1}^{k}a_{i}\left(\prod_{j\neq i}n_{j}\right)\hat{n_{i}}\mod n_{1}\cdots n_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+ההעתקה 
+\begin_inset Formula $f\colon\mathbb{Z}_{mn}\to\mathbb{Z}_{m}\times\mathbb{Z}_{n}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $x\to\left(x\mod m,x\mod n\right)$
+\end_inset
+
+ היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל, ומצטמצמת להעתקה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל 
+\begin_inset Formula $\mathbb{Z}_{mn}^{*}\to\mathbb{Z}_{m}^{*}\times\mathbb{Z}_{n}^{*}$
+\end_inset
+
+.
+ באופן יותר חזק, היא איזו' של חוגים, כלומר גם משמרת חיבור וכפל.
+\end_layout
+
+\begin_layout Proof
+נראה את החלק השני, לגבי צמצום להפיכים.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\subseteq$
+\end_inset
+
+ יהי 
+\begin_inset Formula $x\in\mathbb{Z}_{mn}^{*}$
+\end_inset
+
+ אז יש 
+\begin_inset Formula $y\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $xy\equiv1\mod mn$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $mn\mid xy-1$
+\end_inset
+
+ כלומר גם 
+\begin_inset Formula $m,n\mid xy-1$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $xy\equiv1\mod m,xy\equiv1\mod n$
+\end_inset
+
+.
+ כלומר 
+\begin_inset Formula $x$
+\end_inset
+
+ הפיך מודולו 
+\begin_inset Formula $m$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $x\mod m\in\mathbb{Z}_{m}^{*}$
+\end_inset
+
+, וכנ
+\begin_inset Quotes erd
+\end_inset
+
+ל עבור 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ לכן 
+\begin_inset Formula $f\left(x\right)\in\mathbb{Z}_{m}^{*}\times\mathbb{Z}_{n}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\supseteq$
+\end_inset
+
+ יהי 
+\begin_inset Formula $x\in\mathbb{Z}_{mn}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $f\left(x\right)\in\mathbb{Z}_{m}^{*}\times\mathbb{Z}_{n}^{*}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $x$
+\end_inset
+
+ הפיך מודולו 
+\begin_inset Formula $m$
+\end_inset
+
+ ומודולו 
+\begin_inset Formula $n$
+\end_inset
+
+, אז יש 
+\begin_inset Formula $y_{1},y_{2}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $xy_{1}\equiv1\mod m,xy_{2}\equiv1\mod n$
+\end_inset
+
+.
+ לפי משפט השאריות הסיני יש פתרון יחיד מודולו 
+\begin_inset Formula $mn$
+\end_inset
+
+ למערכת 
+\begin_inset Formula $x\equiv y_{1}\mod m,x\equiv y_{2}\mod n$
+\end_inset
+
+, נסמן אותו ב
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ אז 
+\begin_inset Formula $xx_{0}\equiv1\mod m,xx_{0}\equiv1\mod n$
+\end_inset
+
+ ומכך ש
+\begin_inset Formula $m,n$
+\end_inset
+
+ זרים נובע 
+\begin_inset Formula $xx_{0}\equiv1\mod mn$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $x=x_{0}^{-1}$
+\end_inset
+
+ הפיך מודולו 
+\begin_inset Formula $mn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אז התמונה של 
+\begin_inset Formula $f$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathbb{Z}_{mn}^{*}$
+\end_inset
+
+ היא בדיוק 
+\begin_inset Formula $\mathbb{Z}_{m}^{*}\times\mathbb{Z}_{n}^{*}$
+\end_inset
+
+, והיא גם חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל כי היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל בכל התחום.
+\end_layout
+
+\begin_layout Corollary
+
+\series bold
+\begin_inset Formula $\varphi$
+\end_inset
+
+ כפלית
+\series default
+ כלומר אם 
+\begin_inset Formula $m,n\in\mathbb{N}$
+\end_inset
+
+ זרים אז 
+\begin_inset Formula $\varphi\left(mn\right)=\varphi\left(m\right)\varphi\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+הפונקציה 
+\begin_inset Formula $f$
+\end_inset
+
+ מהמסקנה היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל בצמצום, ולכן 
+\begin_inset Formula 
+\[
+\varphi\left(mn\right)=\left|\mathbb{Z}_{mn}^{*}\right|=\left|\mathbb{Z}_{m}^{*}\times\mathbb{Z}_{n}^{*}\right|=\left|\mathbb{Z}_{m}^{*}\right|\cdot\left|\mathbb{Z}_{n}^{*}\right|=\varphi\left(m\right)\varphi\left(n\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+נוסחה עבור 
+\begin_inset Formula $\varphi$
+\end_inset
+
+
+\series default
+ לכל 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi\left(n\right)=n\cdot\prod_{p\mid n}\left(1-\frac{1}{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+ראשית נוכיח עבור המקרה הפרטי 
+\begin_inset Formula $n=p^{k}$
+\end_inset
+
+.
+ אכן, מתקיים 
+\begin_inset Formula $\gcd\left(a,p^{k}\right)=1\iff p\nmid a$
+\end_inset
+
+, ולכן כל המספרים מ
+\begin_inset Formula $1$
+\end_inset
+
+ עד 
+\begin_inset Formula $p^{k}$
+\end_inset
+
+ זרים לו, מלבד 
+\begin_inset Formula $p^{k-1}$
+\end_inset
+
+ המספרים שמתחלקים ב
+\begin_inset Formula $p$
+\end_inset
+
+.
+ כלומר 
+\begin_inset Formula $\varphi\left(p^{k}\right)=p^{k}-p^{k-1}=p^{k}\left(1-\frac{1}{p}\right)$
+\end_inset
+
+ כדרוש.
+ כעת, עבור 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ כללי נרשום מהמשפט היסודי של האריתמטיקה 
+\begin_inset Formula $n=\prod_{i=1}^{k}p_{i}^{t_{i}}$
+\end_inset
+
+, אז 
+\begin_inset Formula $p_{i}^{t_{i}}$
+\end_inset
+
+ זרים ולכן מכפליות הפונקציה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ שהראינו
+\begin_inset Formula 
+\[
+\varphi\left(n\right)=\varphi\left(\prod_{i=1}^{k}p_{i}^{t_{i}}\right)=\prod_{i=1}^{k}\varphi\left(p_{i}^{t_{i}}\right)=\prod_{i=1}^{k}p_{i}^{t_{i}}\left(1-\frac{1}{p_{i}}\right)=\prod_{i=1}^{k}p_{i}^{t_{i}}\cdot\prod_{p\mid n}\left(1-\frac{1}{p}\right)=n\cdot\prod_{p\mid n}\left(1-\frac{1}{p}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+לכל 
+\begin_inset Formula $n$
+\end_inset
+
+ טבעי 
+\begin_inset Formula $n=\sum_{d\mid n}\varphi\left(d\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נרשום 
+\begin_inset Formula $n=\prod_{i=1}^{k}p_{i}^{t_{i}}$
+\end_inset
+
+, אזי המחלקים שלו הם בדיוק כל המספרים מהצורה 
+\begin_inset Formula $\prod_{i=1}^{k}p_{i}^{s_{i}}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $0\leq s_{i}\leq t_{i}$
+\end_inset
+
+.
+ אז
+\begin_inset Formula 
+\begin{align*}
+\sum_{d\mid n}\varphi\left(d\right) & =\sum_{\substack{0\leq s_{1}\leq t_{1}\\
+\vdots\\
+0\leq s_{k}\leq t_{k}
+}
+}\varphi\left(\prod_{i=1}^{k}p_{i}^{s_{i}}\right)=\sum_{\substack{0\leq s_{1}\leq t_{1}\\
+\vdots\\
+0\leq s_{k}\leq t_{k}
+}
+}\left(\prod_{i=1}^{k}\varphi\left(p_{i}^{s_{i}}\right)\right)=\prod_{i=1}^{k}\left(\sum_{0\leq s_{i}\leq t_{i}}\varphi\left(p_{i}^{s_{i}}\right)\right)\\
+ & =\prod_{i=1}^{k}\left(1+\sum_{1\leq s_{i}\leq t_{i}}\left(p_{i}^{s_{i}}-p_{i}^{s_{i}-1}\right)\right)\stackrel{\text{telescopic sum}}{=}\prod_{i=1}^{k}p_{i}^{t_{i}}=n
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Algorithm
+
+\series bold
+פתרון קונגרואנציה מהצורה 
+\begin_inset Formula $ax\equiv c\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Algorithm
+ראינו שלמשוואה הדיופנטית הלינארית בשני נעלמים 
+\begin_inset Formula $ax+by=c$
+\end_inset
+
+ יש פתרון 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\gcd\left(a,b\right)\mid c$
+\end_inset
+
+, ואם 
+\begin_inset Formula $\left(x_{0},y_{0}\right)$
+\end_inset
+
+ פתרון פרטי אז קבוצת הפתרונות נתונה על ידי
+\begin_inset Formula 
+\[
+\left\{ \left(x_{0}-k\frac{b}{\gcd\left(a,b\right)},y_{0}+k\frac{a}{\gcd\left(a,b\right)}\right)\mid k\in\mathbb{Z}\right\} 
+\]
+
+\end_inset
+
+כעת נשים לב כי למשוואה 
+\begin_inset Formula $ax\equiv c\mod n$
+\end_inset
+
+ יש פתרון 
+\begin_inset Formula $\iff$
+\end_inset
+
+ למשוואה 
+\begin_inset Formula $ax+ny=c$
+\end_inset
+
+ יש פתרון, כלומר 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\gcd\left(a,n\right)\mid c$
+\end_inset
+
+, ובמקרה זה יש 
+\begin_inset Formula $\gcd\left(a,n\right)$
+\end_inset
+
+ פתרונות ב
+\begin_inset Formula $\mathbb{Z}_{n}^{*}$
+\end_inset
+
+ והם 
+\begin_inset Formula $\left\{ x_{0}+k\frac{n}{\gcd\left(a,n\right)}\mid k\in\left\{ 0,1,\dots,n-1\right\} \right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+חבורת ההפיכים ושורשים פרימיטיביים
+\end_layout
+
+\begin_layout Subsection
+החבורה הכפלית 
+\begin_inset Formula $\mathbb{Z}_{n}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+סדר בחבורת ההפיכים 
+\series default
+יהי 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+, 
+\begin_inset Formula $a\in\mathbb{Z}_{n}^{*}$
+\end_inset
+
+.
+ הסדר של 
+\begin_inset Formula $a$
+\end_inset
+
+ הוא 
+\begin_inset Formula $\text{ord}_{n}\left(a\right)=\min\left\{ k\in\mathbb{N}\mid a^{k}\equiv1\mod n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $\text{ord}_{n}\left(a\right)=k$
+\end_inset
+
+, אז 
+\begin_inset Formula $k\mid m\iff a^{m}\equiv1\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ נניח 
+\begin_inset Formula $a^{m}\equiv1\mod n$
+\end_inset
+
+, נחלק את 
+\begin_inset Formula $m$
+\end_inset
+
+ ב
+\begin_inset Formula $k$
+\end_inset
+
+ עם שארית 
+\begin_inset Formula $m=qk+r$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $0\leq r<k$
+\end_inset
+
+.
+ מתקיים
+\begin_inset Formula 
+\[
+1\equiv a^{m}\equiv a^{qk+r}\equiv\left(a^{k}\right)^{q}a^{r}\equiv a^{r}\mod n
+\]
+
+\end_inset
+
+ולכן אם 
+\begin_inset Formula $0<r<k$
+\end_inset
+
+ אז זו סתירה לכך ש
+\begin_inset Formula $\text{ord}_{n}\left(a\right)=k$
+\end_inset
+
+, ומכאן בהכרח 
+\begin_inset Formula $r=0$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $k\mid qk=m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\implies$
+\end_inset
+
+ נניח 
+\begin_inset Formula $k\mid m$
+\end_inset
+
+, נרשום 
+\begin_inset Formula $m=qk$
+\end_inset
+
+ אז 
+\begin_inset Formula $a^{m}\equiv a^{qk}\equiv\left(a^{k}\right)^{q}\equiv1^{q}\equiv1\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+פרמה-אוילר
+\series default
+ 
+\begin_inset Formula $\text{ord}_{n}\left(a\right)\mid\varphi\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+יהיו 
+\begin_inset Formula $x_{1},\dots,x_{\varphi\left(n\right)}$
+\end_inset
+
+ איברי החבורה 
+\begin_inset Formula $\mathbb{Z}_{n}^{*}$
+\end_inset
+
+, אזי גם 
+\begin_inset Formula $ax_{1},\dots,ax_{\varphi\left(n\right)}$
+\end_inset
+
+ הם בדיוק כל איברי החבורה, אולי בסדר שונה.
+ מכאן
+\begin_inset Formula 
+\[
+\prod_{i=1}^{\varphi\left(n\right)}x_{i}\equiv\prod_{i=1}^{\varphi\left(n\right)}ax_{i}\equiv a^{\varphi\left(n\right)}\prod_{i=1}^{\varphi\left(n\right)}x_{i}\mod n
+\]
+
+\end_inset
+
+אך 
+\begin_inset Formula $\prod_{i=1}^{\varphi\left(n\right)}x_{i}$
+\end_inset
+
+ הפיך לכן ניתן לכפול בהופכי שלו, ואז נקבל 
+\begin_inset Formula $a^{\varphi\left(n\right)}\equiv1\mod n$
+\end_inset
+
+, ומהטענה 
+\begin_inset Formula $\text{ord}_{n}\left(a\right)\mid\varphi\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+
+\series bold
+המשפט הקטן של פרמה
+\series default
+ אם 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ מקיים 
+\begin_inset Formula $\gcd\left(a,p\right)=1$
+\end_inset
+
+ אז 
+\begin_inset Formula $a^{p-1}\equiv1\mod p$
+\end_inset
+
+.
+ או, לכל 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a^{p}\equiv a\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+וילסון
+\series default
+ אם 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני אז 
+\begin_inset Formula $\prod_{i=1}^{\varphi\left(p\right)}x_{i}\equiv-1\mod p$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\left(p-1\right)!\equiv-1\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $a\in\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a^{-1}\neq a$
+\end_inset
+
+ אז 
+\begin_inset Formula $a,a^{-1}$
+\end_inset
+
+ מתבטלים במכפלה.
+ האיברים היחידים שלא מתבטלים הם אלה עם 
+\begin_inset Formula $a^{-1}=a$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $a^{2}=1$
+\end_inset
+
+, ומכך ש
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+ שדה ולכן זה רק 
+\begin_inset Formula $a\equiv\pm1\mod p$
+\end_inset
+
+.
+ כלומר המכפלה היא 
+\begin_inset Formula $1\cdot\left(-1\right)=-1$
+\end_inset
+
+, כדרוש.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+אורך המחזור של 
+\begin_inset Formula $\frac{1}{N}$
+\end_inset
+
+ בכתיב עשרוני
+\series default
+ אם 
+\begin_inset Formula $\gcd\left(N,10\right)=1$
+\end_inset
+
+, אז אורך המחזור של 
+\begin_inset Formula $\frac{1}{N}$
+\end_inset
+
+ הוא 
+\begin_inset Formula $\text{ord}_{N}\left(10\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נבצע חילוק ארוך:
+\begin_inset Formula 
+\begin{align*}
+10 & =a_{1}N+r_{1}\\
+10r_{1} & =a_{2}N+r_{2}\\
+10r_{2} & =a_{3}N+r_{3}\\
+\vdots
+\end{align*}
+
+\end_inset
+
+זה בדיוק התהליך שמבצעים בחילוק ארוך של 
+\begin_inset Formula $\frac{1}{N}$
+\end_inset
+
+, והספרה ה
+\begin_inset Formula $i$
+\end_inset
+
+ אחרי הנקודה בכתיב העשרוני היא 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+מתקיים 
+\begin_inset Formula $r_{1}\equiv10\mod N$
+\end_inset
+
+ ובכל שלב 
+\begin_inset Formula $r_{i+1}\equiv10r_{i}\mod N$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $r_{i}\equiv10^{i}\mod N$
+\end_inset
+
+.
+ אורך המחזור הוא בדיוק ה
+\begin_inset Formula $i$
+\end_inset
+
+ הקטן ביותר כך ש
+\begin_inset Formula $r_{i}\equiv1\mod N$
+\end_inset
+
+ )כי אז מקבלים בשורה 
+\begin_inset Formula $10r_{i}=a_{i+1}N+r_{i+1}$
+\end_inset
+
+ בדיוק את אותה חלוקה כמו בשורה הראשונה, ולכן 
+\begin_inset Formula $a_{i+1}=a_{1}$
+\end_inset
+
+(, שזה בדיוק 
+\begin_inset Formula $\text{ord}_{N}\left(10\right)$
+\end_inset
+
+ כדרוש.
+\end_layout
+
+\begin_layout Subsection
+שורש פרימיטיבי וקריטריון אוילר
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+שורש פרימיטיבי
+\series default
+ מודולו 
+\begin_inset Formula $N$
+\end_inset
+
+ הוא איבר 
+\begin_inset Formula $a\in\mathbb{Z}_{N}^{*}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\varphi\left(N\right)=\text{ord}_{N}\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $a$
+\end_inset
+
+ הוא שורש פרימיטיבי מודולו 
+\begin_inset Formula $N$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ יוצר את 
+\begin_inset Formula $\mathbb{Z}_{N}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $a$
+\end_inset
+
+ ש
+\begin_inset Quotes erd
+\end_inset
+
+פ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left|\left\langle a\right\rangle \right|=\text{ord}_{N}\left(a\right)=\varphi\left(N\right)=\left|\mathbb{Z}_{N}^{*}\right|$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle a\right\rangle =\mathbb{Z}_{N}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+אם יש שורש פרימיטיבי אז יש 
+\begin_inset Formula $\varphi\left(\varphi\left(n\right)\right)$
+\end_inset
+
+ כאלה, כי נניח 
+\begin_inset Formula $a$
+\end_inset
+
+ שורש פרימיטיבי אז כל איברי החבורה הם 
+\begin_inset Formula $1,a,a^{2},\dots,a^{\varphi\left(n\right)-1}$
+\end_inset
+
+, ומתקיים 
+\begin_inset Formula $\text{ord}_{n}\left(a^{i}\right)=\frac{\text{ord}_{n}\left(a\right)}{\gcd\left(i,\text{ord}_{n}\left(a\right)\right)}$
+\end_inset
+
+ כלומר שווה ל
+\begin_inset Formula $\text{ord}_{n}\left(a\right)=\varphi\left(n\right)$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $i$
+\end_inset
+
+ זר ל
+\begin_inset Formula $\text{ord}_{n}\left(a\right)=\varphi\left(n\right)$
+\end_inset
+
+, ויש בדיוק 
+\begin_inset Formula $\varphi\left(\varphi\left(n\right)\right)$
+\end_inset
+
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ים כאלה, מהגדרה.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+תנאי לקיום ש
+\begin_inset Quotes erd
+\end_inset
+
+פ
+\series default
+ יש שורש פרימיטיבי מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $n=2,4,p^{k},2p^{k}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $p$
+\end_inset
+
+ אי זוגי, 
+\begin_inset Formula $k$
+\end_inset
+
+ שלם.
+\end_layout
+
+\begin_layout Proof
+נוכיח רק את המקרה 
+\begin_inset Formula $n=p$
+\end_inset
+
+, זה נקרא 
+\series bold
+משפט גאוס
+\series default
+.
+\end_layout
+
+\begin_layout Proof
+לכל 
+\begin_inset Formula $d\mid p-1$
+\end_inset
+
+, נסמן 
+\begin_inset Formula $\psi\left(d\right)=\#\left\{ x\in\mathbb{Z}_{p}^{*}\mid\text{ord}_{n}\left(x\right)=d\right\} $
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $\sum_{d\mid p-1}\psi\left(d\right)=p-1$
+\end_inset
+
+, כי לכל 
+\begin_inset Formula $x\in\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\text{ord}_{n}\left(x\right)\mid\varphi\left(p\right)=p-1$
+\end_inset
+
+ ולכן זה בדיוק סכום על כל האיברים מסדר כלשהו, ולכל איבר יש סדר.
+ כמו כן ראינו בעבר 
+\begin_inset Formula $\sum_{d\mid n}\varphi\left(d\right)=n$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n$
+\end_inset
+
+, ובפרט עבור 
+\begin_inset Formula $p-1$
+\end_inset
+
+.
+ כלומר שוויון זה מתקיים עבור 
+\begin_inset Formula $\varphi,\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+למה:
+\series default
+ אם 
+\begin_inset Formula $\psi\left(d\right)>0$
+\end_inset
+
+ אז 
+\begin_inset Formula $\psi\left(d\right)=\varphi\left(d\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+הוכחה:
+\series default
+ נניח 
+\begin_inset Formula $\psi\left(d\right)>0$
+\end_inset
+
+, אז יש 
+\begin_inset Formula $x\in\mathbb{Z}_{p}$
+\end_inset
+
+ עם 
+\begin_inset Formula $\text{ord}_{n}\left(x\right)=d$
+\end_inset
+
+.
+ יש בדיוק 
+\begin_inset Formula $d$
+\end_inset
+
+ איברים שונים ב
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ שהם חזקות של 
+\begin_inset Formula $x$
+\end_inset
+
+, וכולם שורשים של הפולינום 
+\begin_inset Formula $x^{d}-1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+ הוא שדה, ולכן לפולינום זה יש לכל היותר 
+\begin_inset Formula $d$
+\end_inset
+
+ שורשים, כלומר חזקות 
+\begin_inset Formula $x$
+\end_inset
+
+ הן בדיוק כל השורשים.
+\end_layout
+
+\begin_layout Proof
+כמו כן, מתקיים 
+\begin_inset Formula $\text{ord}_{n}\left(x^{i}\right)=\frac{\text{ord}_{n}\left(x\right)}{\gcd\left(i,\text{ord}_{n}\left(x\right)\right)}=\frac{d}{\gcd\left(i,d\right)}$
+\end_inset
+
+ ולכן יש בדיוק 
+\begin_inset Formula $\varphi\left(d\right)$
+\end_inset
+
+ חזקות של 
+\begin_inset Formula $d$
+\end_inset
+
+ מסדר 
+\begin_inset Formula $d$
+\end_inset
+
+, אלה עם מעריך זר ל
+\begin_inset Formula $d$
+\end_inset
+
+.
+ מכאן יש בדיוק 
+\begin_inset Formula $\varphi\left(d\right)$
+\end_inset
+
+ איברים ב
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ מסדר 
+\begin_inset Formula $d$
+\end_inset
+
+ בסך הכל, כי איברים שאינם חזקות של 
+\begin_inset Formula $x$
+\end_inset
+
+ לא יכולים להיות שורש של הפולינום 
+\begin_inset Formula $x^{d}-1$
+\end_inset
+
+, ובפרט לא יכולים להיות מסדר 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ כלומר, 
+\begin_inset Formula $\psi\left(d\right)=\varphi\left(d\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+כעת, בהינתן הלמה, לכל 
+\begin_inset Formula $d\mid p-1$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\psi\left(d\right)\in\left\{ 0,\varphi\left(d\right)\right\} $
+\end_inset
+
+, אך 
+\begin_inset Formula $\sum_{d\mid p-1}\varphi\left(d\right)=p-1=\sum_{d\mid p-1}\psi\left(d\right)$
+\end_inset
+
+ ולכן בהכרח 
+\begin_inset Formula $\psi\left(d\right)=\varphi\left(d\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $d$
+\end_inset
+
+, בפרט 
+\begin_inset Formula $\psi\left(p-1\right)=\varphi\left(p-1\right)$
+\end_inset
+
+ ולכן יש 
+\begin_inset Formula $\varphi\left(p-1\right)=\varphi\left(\varphi\left(p\right)\right)$
+\end_inset
+
+ איברים ב
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ מסדר 
+\begin_inset Formula $p-1=\varphi\left(p\right)$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\varphi\left(\varphi\left(p\right)\right)$
+\end_inset
+
+ שורשים פרימיטיביים, ובפרט לא אפס.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+קריטריון אוילר
+\series default
+ נניח כי ב
+\begin_inset Formula $\mathbb{Z}_{n}^{*}$
+\end_inset
+
+ יש שורש פרימיטיבי, ויהי 
+\begin_inset Formula $a\in\mathbb{Z}_{N}^{*}$
+\end_inset
+
+.
+ אזי יש פתרון
+\begin_inset Newline newline
+\end_inset
+
+למשוואה 
+\begin_inset Formula $x^{m}\equiv a\mod n$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $a^{\frac{\varphi\left(n\right)}{\gcd\left(m,\varphi\left(n\right)\right)}}\equiv1\mod n$
+\end_inset
+
+, ואם יש פתרון אז יש בדיוק 
+\begin_inset Formula $\gcd\left(m,\varphi\left(n\right)\right)$
+\end_inset
+
+ פתרונות.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $g$
+\end_inset
+
+ ש
+\begin_inset Quotes erd
+\end_inset
+
+פ מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $d=\gcd\left(\varphi\left(n\right),m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ נניח 
+\begin_inset Formula $x^{m}\equiv a\mod n$
+\end_inset
+
+, אז
+\begin_inset Formula 
+\[
+a^{\frac{\varphi\left(n\right)}{d}}\equiv\left(x^{m}\right)^{\frac{\varphi\left(n\right)}{d}}\equiv\left(x^{\varphi\left(n\right)}\right)^{\frac{m}{d}}\equiv1^{\frac{m}{d}}\equiv1\mod n
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\implies$
+\end_inset
+
+ נניח 
+\begin_inset Formula $a^{\frac{\varphi\left(n\right)}{d}}\equiv1\mod n$
+\end_inset
+
+ ונרשום 
+\begin_inset Formula $a\equiv g^{r}\mod n$
+\end_inset
+
+ )אפשר כי 
+\begin_inset Formula $g$
+\end_inset
+
+ ש
+\begin_inset Quotes erd
+\end_inset
+
+פ(, אז 
+\begin_inset Formula $g^{\frac{r\cdot\varphi\left(n\right)}{d}}\equiv\left(g^{r}\right)^{\frac{\varphi\left(n\right)}{d}}\equiv1\mod n$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $\varphi\left(n\right)\mid\frac{r\cdot\varphi\left(n\right)}{d}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\frac{r}{d}$
+\end_inset
+
+ שלם ולכן 
+\begin_inset Formula $\gcd\left(m,\varphi\left(n\right)\right)=d\mid r$
+\end_inset
+
+.
+ אזי יש פתרון למשוואה הדיופנטית 
+\begin_inset Formula $mt+\varphi\left(n\right)s=r$
+\end_inset
+
+, ולכן יש פתרון לקונגרואנציה 
+\begin_inset Formula $mt\equiv r\mod\varphi\left(n\right)$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula $x\equiv g^{t}\mod n$
+\end_inset
+
+, אז
+\begin_inset Formula 
+\[
+x^{m}\equiv\left(g^{t}\right)^{m}\equiv g^{mt}\equiv g^{r}\equiv a\mod n
+\]
+
+\end_inset
+
+למעשה יש 
+\begin_inset Formula $\gcd\left(m,\varphi\left(n\right)\right)$
+\end_inset
+
+ פתרונות לקונגרואנציה הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל, ולכן גם למשוואה 
+\begin_inset Formula $x^{m}\equiv a\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $-1$
+\end_inset
+
+ הוא ריבוע מודולו 
+\begin_inset Formula $p>2$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $1\equiv\left(-1\right)^{\frac{\varphi\left(p\right)}{\gcd\left(2,\varphi\left(p\right)\right)}}\equiv\left(-1\right)^{\frac{p-1}{2}}\mod p$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $p\equiv1\mod4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+שאריות ריבועיות
+\end_layout
+
+\begin_layout Subsection
+סימן לז'נדר וחוק ההדדיות הריבועית
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+שארית ריבועית
+\series default
+ 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ היא שארית ריבועית מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+ אם קיים 
+\begin_inset Formula $x\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x^{2}\equiv a\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $p>2$
+\end_inset
+
+ ראשוני, אז בדיוק חצי מאיברי 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ הם שאריות ריבועיות.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $a\in\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ שארית ריבועית מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+ אז יש 
+\begin_inset Formula $x\in\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x^{2}\equiv a\mod p$
+\end_inset
+
+, ומכאן גם 
+\begin_inset Formula $\left(-x\right)^{2}\equiv a\mod p$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ אי זוגי לכן 
+\begin_inset Formula $x\not\equiv-x\mod p$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $x,-x$
+\end_inset
+
+ שני שורשים שונים לפולינום 
+\begin_inset Formula $x^{2}-a$
+\end_inset
+
+ ב
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני לכן 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+ שדה לכן לפולינום זה יש לכל היותר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שורשים, ומכאן 
+\begin_inset Formula $x,-x$
+\end_inset
+
+ השורשים היחידים שלו.
+\end_layout
+
+\begin_layout Proof
+כלומר לכל פולינום 
+\begin_inset Formula $x^{2}-a$
+\end_inset
+
+ עם 
+\begin_inset Formula $a\in\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ יש שני שורשים או אפס, וכל איבר ב
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ הוא שורש של בדיוק פולינום אחד כנ
+\begin_inset Quotes erd
+\end_inset
+
+ל, ולכן משיקולי ספירה בדיוק לחצי מהפולינומים הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל יש שורשים, כלומר בדיוק חצי מאיברי 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ הם שאריות ריבועיות.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+סימן לז'נדר
+\series default
+ עבור 
+\begin_inset Formula $p>2$
+\end_inset
+
+ ראשוני ו
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ )בדרך כלל נניח 
+\begin_inset Formula $p\nmid a$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $a$
+\end_inset
+
+ זר ל
+\begin_inset Formula $p$
+\end_inset
+
+(, נגדיר 
+\begin_inset Formula 
+\[
+\left(\frac{a}{p}\right)=\begin{cases}
+1 & p\nmid a,a\text{ is a quadratic residue}\bmod p\\
+-1 & p\nmid a,a\text{ is a quadratic nonresidue}\bmod p\\
+0 & p\mid a
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+מסקנה מקריטריון אוילר
+\series default
+ יהי 
+\begin_inset Formula $a$
+\end_inset
+
+ זר ל
+\begin_inset Formula $p$
+\end_inset
+
+, אז 
+\begin_inset Formula $\left(\frac{a}{p}\right)\equiv a^{\frac{p-1}{2}}\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $a^{\frac{p-1}{2}}\equiv1\mod p$
+\end_inset
+
+ אז מקריטריון אוילר )ניתן להשתמש בו, כי ממשפט גאוס ב
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ יש שורש פרימיטיבי( יש פתרון ל
+\begin_inset Formula $x^{2}\equiv a\mod p$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $a$
+\end_inset
+
+ שארית ריבועית מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+, ולכן מהגדרה גם 
+\begin_inset Formula $\left(\frac{a}{p}\right)\equiv1\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אחרת, בכל מקרה ממשפט פרמה הקטן 
+\begin_inset Formula $\left(a^{\frac{p-1}{2}}\right)^{2}\equiv a^{p-1}\equiv1\mod p$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a^{\frac{p-1}{2}}\equiv\pm1\mod p$
+\end_inset
+
+, ולכן בהכרח 
+\begin_inset Formula $a^{\frac{p-1}{2}}\equiv-1\mod p$
+\end_inset
+
+.
+ במקרה זה מקריטריון אוילר 
+\begin_inset Formula $a$
+\end_inset
+
+ אינה שארית ריבועית, ואכן 
+\begin_inset Formula $\left(\frac{a}{p}\right)\equiv-1\equiv a^{\frac{p-1}{2}}\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+תכונות של סימן לז'נדר
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $a\equiv b\mod p$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left(\frac{a}{p}\right)=\left(\frac{b}{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $p\nmid a$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left(\frac{a^{2}}{p}\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\frac{ab}{p}\right)=\left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו
+\numeric on
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קל להוכיח, נראה את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+.
+ אם 
+\begin_inset Formula $p\mid a$
+\end_inset
+
+ או 
+\begin_inset Formula $p\mid b$
+\end_inset
+
+ אז שני האגפים הם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אפס.
+ אחרת, נניח 
+\begin_inset Formula $a,b$
+\end_inset
+
+ שניהם זרים ל
+\begin_inset Formula $p$
+\end_inset
+
+ אז ממהמסקנה מקריטריון אוילר
+\begin_inset Formula 
+\[
+\left(\frac{ab}{p}\right)\equiv\left(ab\right)^{\frac{p-1}{2}}\equiv a^{\frac{p-1}{2}}b^{\frac{p-1}{2}}\equiv\left(\frac{a}{p}\right)\left(\frac{b}{p}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+חוק ההדדיות הריבועית
+\series default
+ יהיו 
+\begin_inset Formula $p\neq q$
+\end_inset
+
+ ראשוניים אי זוגיים.
+ אזי
+\begin_inset Formula 
+\[
+\left(\frac{p}{q}\right)=\left(\frac{q}{p}\right)\cdot\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}=\begin{cases}
+\left(\frac{q}{p}\right) & p\equiv1\mod4\text{ or }q\equiv1\mod4\\
+-\left(\frac{q}{p}\right) & p,q\equiv3\mod4
+\end{cases}
+\]
+
+\end_inset
+
+נספח 
+\numeric on
+1
+\numeric off
+: 
+\begin_inset Formula $\left(\frac{-1}{p}\right)=\begin{cases}
+1 & p\equiv1\mod4\\
+-1 & p\equiv3\mod4
+\end{cases}$
+\end_inset
+
+.
+
+\series bold
+ 
+\series default
+נספח 
+\numeric on
+2
+\numeric off
+: 
+\begin_inset Formula $\left(\frac{2}{p}\right)=\begin{cases}
+1 & p\equiv\pm1\mod8\\
+-1 & p\equiv\pm3\mod8
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נתבונן באיברי 
+\begin_inset Formula $\mathbb{Z}_{pq}^{*}$
+\end_inset
+
+, הם מתחלקים לזוגות של איברים שונים 
+\begin_inset Formula $\left\{ x,-x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נבחר באופן שרירותי נציג אחד מכל זוג, ונכפול את הנציגים מודולו 
+\begin_inset Formula $pq$
+\end_inset
+
+ - המכפלה 
+\begin_inset Formula $P$
+\end_inset
+
+ מוגדרת ביחידות עד כדי סימן.
+ נעביר את 
+\begin_inset Formula $P$
+\end_inset
+
+ דרך האיזומורפיזם 
+\begin_inset Formula $f\colon\mathbb{Z}_{pq}^{*}\to\mathbb{Z}_{p}^{*}\times\mathbb{Z}_{q}^{*}$
+\end_inset
+
+ הנתונה ממשפט השאריות הסיני, ונקבל 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+.
+ בבחירה אחרת של הנציגים, אם מקבלים את המכפלה 
+\begin_inset Formula $-P$
+\end_inset
+
+, הפונקציה תחזיר 
+\begin_inset Formula $\left(-a,-b\right)$
+\end_inset
+
+.
+ נחשב:
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+חישוב
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+:
+\series default
+ נבחר את הנציג הקטן ביותר בכל זוג )כמספרים בין
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל
+\begin_inset Formula $pq$
+\end_inset
+
+(, כלומר את הנציגים מבין 
+\begin_inset Formula $1,2,\dots,\frac{pq-1}{2}$
+\end_inset
+
+.
+ כלומר, ניקח את כל המספרים הללו ונוריד את הכפולות של 
+\begin_inset Formula $p,q$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\left[1\cdots\left(p-1\right)\right]\cdot\left[\left(p+1\right)\cdots\left(2p-1\right)\right]\cdots\left[\left(\left(\frac{q-1}{2}-1\right)p+1\right)\cdots\left(\frac{q-1}{2}p-1\right)\right]\cdots\left[\left(\frac{q-1}{2}p+1\right)\cdots\left(\frac{q-1}{2}p+\frac{p-1}{2}\right)\right]}{q\cdot2q\cdots\left(\frac{p-1}{2}q\right)}
+\]
+
+\end_inset
+
+נעביר את 
+\begin_inset Formula $P$
+\end_inset
+
+ הזו דרך 
+\begin_inset Formula $f$
+\end_inset
+
+ )כדי לחשב מודולו 
+\begin_inset Formula $q$
+\end_inset
+
+ מבצעים תהליך סימטרי, מורידים כפולות 
+\begin_inset Formula $q$
+\end_inset
+
+ ואז מחלקים ב
+\begin_inset Formula $p$
+\end_inset
+
+(
+\begin_inset Formula 
+\begin{align*}
+P & \equiv\frac{\left(p-1\right)!^{\frac{q-1}{2}}\cdot\left(\frac{p-1}{2}\right)!}{q^{\frac{p-1}{2}}\cdot\left(\frac{p-1}{2}\right)!}\equiv\frac{\left(p-1\right)!^{\frac{q-1}{2}}}{\left(\frac{q}{p}\right)}\mod p\\
+P & \equiv\frac{\left(q-1\right)!^{\frac{p-1}{2}}}{\left(\frac{p}{q}\right)}\mod q
+\end{align*}
+
+\end_inset
+
+כלומר, קיבלנו 
+\begin_inset Formula $f\left(P\right)=\left(\left(p-1\right)!^{\frac{q-1}{2}}\left(\frac{q}{p}\right),\left(q-1\right)!^{\frac{p-1}{2}}\left(\frac{p}{q}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+חישוב
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+:
+\series default
+ קודם בחרנו נציגים מבין 
+\begin_inset Formula $\left\{ x,-x\right\} $
+\end_inset
+
+ לפני ההפעלה של 
+\begin_inset Formula $f$
+\end_inset
+
+, עכשיו נבחור נציגים מבין 
+\begin_inset Formula $\left\{ \left(a,b\right),\left(-a,-b\right)\right\} $
+\end_inset
+
+, אחרי ההפעלה של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ נבחר את הנציגים 
+\begin_inset Formula $\left\{ 1,2,\dots,p-1\right\} \times\left\{ 1,2,\dots,\frac{q-1}{2}\right\} $
+\end_inset
+
+, הפונקציה 
+\begin_inset Formula $f$
+\end_inset
+
+ שומרת על כפל לכן 
+\begin_inset Formula $f\left(P\right)$
+\end_inset
+
+ זה בדיוק המכפלה של כל הנציגים שבחרנו, כלומר הקואורדינטות הן
+\begin_inset Formula 
+\begin{align*}
+\left(1\cdot2\cdots\left(p-1\right)\right)^{\frac{q-1}{2}} & \equiv\left(p-1\right)!^{\frac{q-1}{2}}\mod p\\
+\left(1\cdot2\cdots\frac{q-1}{2}\right)^{p-1} & \equiv\prod_{j=1}^{\frac{q-1}{2}}j^{p-1}\equiv\prod_{j=1}^{\frac{q-1}{2}}j^{\frac{p-1}{2}}\cdot\left(-j\right)^{\frac{p-1}{2}}\cdot\left(-1\right)^{\frac{p-1}{2}}\equiv\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}\cdot\prod_{j=1}^{q-1}j^{\frac{p-1}{2}}\\
+ & \equiv\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}\cdot\left(q-1\right)!^{\frac{p-1}{2}}\mod q
+\end{align*}
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $f\left(P\right)=\left(\left(p-1\right)!^{\frac{q-1}{2}},\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}\cdot\left(q-1\right)!^{\frac{p-1}{2}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+שני החישובים מובילים לאותה תוצאה עד כדי סימן, ולכן אם 
+\begin_inset Formula $\left(\frac{q}{p}\right)=1$
+\end_inset
+
+ אז הסימן זהה ולכן 
+\begin_inset Formula 
+\begin{align*}
+\left(q-1\right)!^{\frac{p-1}{2}}\left(\frac{p}{q}\right) & =\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}\cdot\left(q-1\right)!^{\frac{p-1}{2}}\\
+ & \implies\left(\frac{p}{q}\right)=\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}=\left(\frac{q}{p}\right)\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}
+\end{align*}
+
+\end_inset
+
+ואם 
+\begin_inset Formula $\left(\frac{q}{p}\right)=-1$
+\end_inset
+
+ אז הסימן הפוך ולכן 
+\begin_inset Formula $\left(\frac{p}{q}\right)=-\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}=\left(\frac{q}{p}\right)\left(-1\right)^{\frac{p-1}{2}\cdot\frac{q-1}{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+בכל מקרה קיבלנו את חוק ההדדיות הריבועית.
+\end_layout
+
+\begin_layout Proof
+כעת נעבור לנספחים - נספח
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נובע ישירות מקריטריון אוילר, נותר להוכיח את נספח
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+.
+ אכן, מתקיים
+\begin_inset Formula 
+\begin{align*}
+\left(\frac{2}{p}\right) & \equiv2^{\frac{p-1}{2}}\equiv\frac{2\cdot4\cdot6\cdots\left(p-1\right)}{1\cdot2\cdot3\cdots\left(\frac{p-1}{2}\right)}=\frac{1\cdot\left(-1\right)\cdot2\cdot\left(-1\right)^{2}\cdot3\cdot\left(-1\right)^{3}\cdots\frac{p-1}{2}\cdot\left(-1\right)^{\frac{p-1}{2}}}{1\cdot2\cdot3\cdots\left(\frac{p-1}{2}\right)}\\
+ & \equiv\left(-1\right)^{\sum_{i=1}^{\frac{p-1}{2}}i}\equiv\left(-1\right)^{\frac{\frac{p-1}{2}\left(1+\frac{p-1}{2}\right)}{2}}\equiv\left(-1\right)^{\frac{2\left(p-1\right)+p^{2}-2p+1}{8}}\equiv\left(-1\right)^{\frac{p^{2}-1}{8}}\mod p
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+שימוש בחוק ההדדיות
+\series default
+ יש אינסוף ראשוניים שהם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מודולו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+.
+\end_layout
+
+\begin_layout Proof
+הוכחנו בעבר שיש אינסוף עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מודולו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+, נראה עבור
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Proof
+נניח בשלילה שיש מספר סופי כאלה, 
+\begin_inset Formula $q_{1},\dots,q_{r}\equiv1\mod4$
+\end_inset
+
+.
+ נסמן 
+\begin_inset Formula $Q=\left(2\prod_{i=1}^{r}q_{i}\right)^{2}+1$
+\end_inset
+
+, אז 
+\begin_inset Formula $Q\equiv1\mod4$
+\end_inset
+
+.
+ ניקח 
+\begin_inset Formula $p\mid Q$
+\end_inset
+
+ ראשוני כלשהו, הוא בהכרח אי זוגי כי 
+\begin_inset Formula $Q$
+\end_inset
+
+ אי זוגי.
+ נניח בשלילה 
+\begin_inset Formula $p\equiv1\mod4$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $p=q_{i}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $i$
+\end_inset
+
+ כלשהו, אז 
+\begin_inset Formula $q_{i}\mid Q$
+\end_inset
+
+, אבל אז 
+\begin_inset Formula $q_{i}\mid Q-\left(2\prod_{i=1}^{r}q_{i}\right)^{2}=1$
+\end_inset
+
+ בסתירה לכך ש
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ ראשוני.
+ אז בהכרח 
+\begin_inset Formula $p\equiv3\mod4$
+\end_inset
+
+, ולכן לפי נספח
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נובע 
+\begin_inset Formula $\left(\frac{-1}{p}\right)=-1$
+\end_inset
+
+ כלומר 
+\numeric on
+-1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אינה שארית ריבועית מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ אבל 
+\begin_inset Formula $p\mid Q=\left(2\prod_{i=1}^{r}q_{i}\right)^{2}+1$
+\end_inset
+
+ לכן 
+\begin_inset Formula $\left(2\prod_{i=1}^{r}q_{i}\right)^{2}\equiv-1\mod p$
+\end_inset
+
+, כלומר 
+\numeric on
+-1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כן שארית ריבועית מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+, וקיבלנו סתירה.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+המספרים הראשוניים לסדרות חשבוניות
+\series default
+
+\begin_inset Formula 
+\[
+\lim_{x\to\infty}\frac{\#\left\{ p\leq x\mid p\equiv a\mod N\right\} }{\pi\left(x\right)}=\frac{1}{\varphi\left(N\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+סימן יעקובי
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+סימן יעקובי
+\series default
+ עבור 
+\begin_inset Formula $p_{1}\cdots p_{r}=m\in\mathbb{N}$
+\end_inset
+
+ אי זוגי, לכל 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $\left(\frac{a}{m}\right)=\left(\frac{a}{p_{1}}\right)\cdots\left(\frac{a}{p_{r}}\right)$
+\end_inset
+
+, כאשר באגף שמאל זה סימן יעקובי ובאגף ימין מכפלת סימני לז'נדר.
+\end_layout
+
+\begin_layout Remarks
+אם 
+\begin_inset Formula $\left(\frac{a}{m}\right)=-1$
+\end_inset
+
+ אז 
+\begin_inset Formula $a$
+\end_inset
+
+ לא שארית ריבועית מודולו לפחות אחד מה
+\begin_inset Formula $p_{i}$
+\end_inset
+
+-ים ולכן אינה שארית ריבועית מודולו 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ אבל הכיוון השני לא נכון, כלומר אם 
+\begin_inset Formula $\left(\frac{a}{m}\right)=1$
+\end_inset
+
+ אז 
+\begin_inset Formula $a$
+\end_inset
+
+ לא בהכרח שארית ריבועית מודולו 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+תכונות
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $a\equiv b\mod m$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left(\frac{a}{m}\right)=\left(\frac{b}{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $b$
+\end_inset
+
+ זר ל
+\begin_inset Formula $m$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left(\frac{b^{2}}{m}\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\frac{ab}{m}\right)=\left(\frac{a}{m}\right)\left(\frac{b}{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+הדדיות ריבועית: אם 
+\begin_inset Formula $m,n$
+\end_inset
+
+ אי זוגיים אז 
+\begin_inset Formula $\left(\frac{m}{n}\right)=\left(\frac{n}{m}\right)\left(-1\right)^{\frac{n-1}{2}\frac{m-1}{2}}$
+\end_inset
+
+, וגם הנספחים מתקיימים.
+\end_layout
+
+\begin_layout Proof
+נוכיח את חוק ההדדיות הריבועית המוכלל.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+למה:
+\series default
+ אם 
+\begin_inset Formula $m$
+\end_inset
+
+ אי זוגי, 
+\begin_inset Formula $m=k_{1}\cdots k_{\ell}$
+\end_inset
+
+, אז 
+\begin_inset Formula $\frac{m-1}{2}\equiv\frac{k_{1}-1}{2}+\frac{k_{2}-1}{2}+\dots+\frac{k_{\ell}-1}{2}\mod2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+הוכחה:
+\series default
+ נסמן 
+\begin_inset Formula $A_{1}=\#\left\{ k_{i}\equiv1\mod4\right\} ,A_{3}=\#\left\{ k_{i}\equiv3\mod4\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $k_{i}\equiv1\mod4$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{k_{i}-1}{2}\equiv0\mod2$
+\end_inset
+
+, ואם 
+\begin_inset Formula $k_{i}\equiv3\mod4$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{k_{i}-1}{2}\equiv1\mod2$
+\end_inset
+
+, ולכן
+\begin_inset Formula 
+\[
+\frac{m-1}{2}\equiv0\mod2\iff m\equiv1\mod4\iff A_{3}\text{ is even}\iff\frac{k_{1}-1}{2}+\frac{k_{2}-1}{2}+\dots+\frac{k_{\ell}-1}{2}\equiv0\mod2
+\]
+
+\end_inset
+
+כעת, נרשום 
+\begin_inset Formula $m=p_{1}\cdots p_{k},n=q_{1}\cdots q_{\ell}$
+\end_inset
+
+ אז
+\begin_inset Formula 
+\begin{align*}
+\left(\frac{m}{n}\right) & =\prod_{i=1}^{k}\left(\frac{p_{i}}{n}\right)=\prod_{i=1}^{k}\prod_{j=1}^{\ell}\left(\frac{p_{i}}{q_{j}}\right)=\prod_{i=1}^{k}\prod_{j=1}^{\ell}\left(\frac{q_{j}}{p_{i}}\right)\left(-1\right)^{\frac{q_{j}-1}{2}\frac{p_{i}-1}{2}}=\left(\frac{n}{m}\right)\prod_{i=1}^{k}\prod_{j=1}^{\ell}\left(-1\right)^{\frac{q_{j}-1}{2}\frac{p_{i}-1}{2}}\\
+ & =\left(\frac{n}{m}\right)\left(-1\right)^{\sum_{i=1}^{k}\sum_{j=1}^{\ell}\frac{q_{j}-1}{2}\frac{p_{i}-1}{2}}=\left(\frac{n}{m}\right)\left(-1\right)^{\left(\sum_{i=1}^{k}\frac{p_{i}-1}{2}\right)\left(\sum_{j=1}^{\ell}\frac{q_{j}-1}{2}\right)}\stackrel{\text{Lemma}}{=}\left(\frac{n}{m}\right)\left(-1\right)^{\frac{m-1}{2}\frac{n-1}{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+הצפנה ומבחני ראשוניות
+\end_layout
+
+\begin_layout Subsection
+הצפנת
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+RSA
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תהליך יצירת המפתח הפרטי והפומבי:
+\end_layout
+
+\begin_layout Enumerate
+איילת בוחרת שני ראשוניים גדולים 
+\begin_inset Formula $p,q$
+\end_inset
+
+.
+ נסמן 
+\begin_inset Formula $N=pq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+איילת מחשבת את 
+\begin_inset Formula $\varphi\left(N\right)=\varphi\left(p\right)\varphi\left(q\right)=\left(p-1\right)\left(q-1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+איילת מוצאת מספר 
+\begin_inset Formula $e$
+\end_inset
+
+ זר ל
+\begin_inset Formula $\varphi\left(N\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+איילת מפרסמת את המפתח הפומבי 
+\begin_inset Formula $\left(N,e\right)$
+\end_inset
+
+, ושומרת את המפתח הפרטי 
+\begin_inset Formula $\varphi\left(N\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תהליך הצפנת הודעה:
+\end_layout
+
+\begin_layout Enumerate
+בועז משיג את המפתח הפומבי של איילת אליה הוא רוצה לשלוח את ההודעה, 
+\begin_inset Formula $\left(N,e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+בועז מקודד את ההודעה למספר 
+\begin_inset Formula $1\leq P<N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+בועז מחשב את 
+\begin_inset Formula $C\equiv P^{e}\mod N$
+\end_inset
+
+, ושולח לאיילת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תהליך פענוח הודעה:
+\end_layout
+
+\begin_layout Enumerate
+איילת מקבלת הודעה 
+\begin_inset Formula $C$
+\end_inset
+
+ מבועז.
+\end_layout
+
+\begin_layout Enumerate
+איילת מחשבת את ההופכי 
+\begin_inset Formula $d$
+\end_inset
+
+ של 
+\begin_inset Formula $e$
+\end_inset
+
+ מודולו 
+\begin_inset Formula $\varphi\left(N\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+איילת מחשבת את 
+\begin_inset Formula $P\equiv C^{d}\mod N$
+\end_inset
+
+, זו ההודעה המקורית.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+נכונות 
+\series default
+הפענוח עובד, כלומר תחת ההגדרות הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל אם 
+\begin_inset Formula $C\equiv P^{e}\mod N$
+\end_inset
+
+ אז 
+\begin_inset Formula $P\equiv C^{d}\mod N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $C\equiv P^{e}\mod N$
+\end_inset
+
+ ההודעה המוצפנת, מכך ש
+\begin_inset Formula $e,d$
+\end_inset
+
+ הופכיים מודולו 
+\begin_inset Formula $\varphi\left(N\right)$
+\end_inset
+
+ נובע 
+\begin_inset Formula $ed\equiv1\mod\varphi\left(N\right)$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $ed=1+k\varphi\left(N\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+ כלשהו.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+אם 
+\begin_inset Formula $P$
+\end_inset
+
+ זר ל
+\begin_inset Formula $N$
+\end_inset
+
+:
+\series default
+ מתקיים
+\begin_inset Formula 
+\[
+C^{d}\equiv\left(P^{e}\right)^{d}\equiv P^{ed}\equiv P^{1+k\varphi\left(N\right)}\equiv P\cdot\left(P^{\varphi\left(N\right)}\right)^{k}\equiv P\cdot1^{k}\equiv P\mod N
+\]
+
+\end_inset
+
+
+\series bold
+אם 
+\begin_inset Formula $P$
+\end_inset
+
+ אינו זר ל
+\begin_inset Formula $N$
+\end_inset
+
+:
+\series default
+ הסיכוי לכך הוא זניח )
+\begin_inset Formula $\frac{1}{p}+\frac{1}{q}$
+\end_inset
+
+, לכן לוקחים 
+\begin_inset Formula $p,q$
+\end_inset
+
+ גדולים מאוד(, אבל הטענה עדיין נכונה.
+ אכן, נניח בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $q\mid P$
+\end_inset
+
+, אז
+\begin_inset Formula 
+\begin{align*}
+C^{d} & \equiv\left(P^{e}\right)^{d}\equiv\left(0^{e}\right)^{d}\equiv0\equiv P\mod q\\
+C^{d} & \equiv\left(P^{e}\right)^{d}\equiv P^{ed}\equiv P^{1+k\varphi\left(N\right)}\equiv P\cdot\left(P^{\varphi\left(p\right)}\right)^{\varphi\left(q\right)k}\equiv P\mod p
+\end{align*}
+
+\end_inset
+
+כלומר 
+\begin_inset Formula $q,p\mid C^{d}-P$
+\end_inset
+
+, ולכן מכך ש
+\begin_inset Formula $q,p$
+\end_inset
+
+ ראשוניים שונים ובפרט זרים 
+\begin_inset Formula $qp\mid C^{d}-P$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $C^{d}\equiv P\mod pq$
+\end_inset
+
+ כלומר מודולו 
+\begin_inset Formula $N$
+\end_inset
+
+, כדרוש.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+מבחני ראשוניות
+\end_layout
+
+\begin_layout Subsubsection*
+נסיון ראשון - מבחן ראשוניות לפי המשפט הקטן של פרמה
+\end_layout
+
+\begin_layout Standard
+בהינתן 
+\begin_inset Formula $N$
+\end_inset
+
+, אם נמצא 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ זר ל
+\begin_inset Formula $N$
+\end_inset
+
+ כך ש
+\begin_inset Formula $a^{N-1}\not\equiv1\mod N$
+\end_inset
+
+, אז 
+\begin_inset Formula $N$
+\end_inset
+
+ פריק.
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ כזה נקרא עד פרמה עבור 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אבל יש בעיה - לא לכל 
+\begin_inset Formula $N$
+\end_inset
+
+ פריק יש עד פרמה.
+ לכן האלגוריתם לא יעבוד.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מספר קרמייקל
+\series default
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ פריק כך שלכל 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ זר ל
+\begin_inset Formula $N$
+\end_inset
+
+, 
+\begin_inset Formula $a^{N-1}\equiv1\mod N$
+\end_inset
+
+.
+ לדוגמה,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+561
+\numeric off
+.
+\end_layout
+
+\begin_layout Theorem
+)ללא הוכחה( 
+\begin_inset Formula $N$
+\end_inset
+
+ הוא קרמייקל 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $N=p_{1}p_{2}\cdots p_{\ell}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\ell\geq2$
+\end_inset
+
+, 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ ראשוניים שונים, וכן 
+\begin_inset Formula $p_{i}-1\mid N-1$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+נסיון שני - מבחן
+\family roman
+\series bold
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Solovay-Strassen
+\family roman
+\series bold
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לפי קריטריון אוילר
+\end_layout
+
+\begin_layout Standard
+בהינתן 
+\begin_inset Formula $N$
+\end_inset
+
+ אי זוגי, אם נמצא 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset
+
+ זר ל
+\begin_inset Formula $N$
+\end_inset
+
+ כך ש
+\begin_inset Formula $a^{\frac{N-1}{2}}\not\equiv\left(\frac{a}{N}\right)\mod N$
+\end_inset
+
+.
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ כזה נקרא עד אוילר-יעקובי של 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+כל עד פרמה הוא עד אוילר-יעקובי, כי אם הוא לא עד אוילר-יעקובי אז 
+\begin_inset Formula $a^{\frac{N-1}{2}}\equiv\left(\frac{a}{N}\right)\mod N$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a^{N-1}\equiv\left(\frac{a}{N}\right)^{2}\equiv\left(\pm1\right)^{2}\equiv1\mod N$
+\end_inset
+
+ כלומר הוא לא עד פרמה.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+נכונות
+\series default
+ לכל 
+\begin_inset Formula $N$
+\end_inset
+
+ פריק אי זוגי יש עד אוילר-יעקובי )לא צריך לדעת להוכיח(.
+\end_layout
+
+\begin_layout Claim
+נסמן ב
+\begin_inset Formula $L_{N}$
+\end_inset
+
+ את קבוצת השקרנים עבור 
+\begin_inset Formula $N$
+\end_inset
+
+, כלומר את קבוצת האיברים 
+\begin_inset Formula $a\in\mathbb{Z}_{N}^{*}$
+\end_inset
+
+ שאינם עדי אוילר-יעקובי עבור 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $L_{n}$
+\end_inset
+
+ היא תת חבורה של 
+\begin_inset Formula $\mathbb{Z}_{N}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+לא הקלדתי, לא קשה.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\left|L_{N}\right|\leq\frac{1}{2}\left|\mathbb{Z}_{N}^{*}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+מקרה פרטי של לגראנז', לוקחים 
+\begin_inset Formula $g\in G\setminus H$
+\end_inset
+
+ ומסתכלים על 
+\begin_inset Formula $H,gH$
+\end_inset
+
+, הן זרות ומגודל שווה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+הלמה של הנזל
+\end_layout
+
+\begin_layout Paragraph
+מוטיבציה - איך ניתן לקבוע אם 
+\begin_inset Formula $a$
+\end_inset
+
+ הוא ריבוע מודולו 
+\begin_inset Formula $N$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+נפרק את 
+\begin_inset Formula $N$
+\end_inset
+
+ לראשוניים שונים 
+\begin_inset Formula $N=p_{1}^{\alpha_{1}}\cdots p_{r}^{\alpha_{r}}$
+\end_inset
+
+, אז לפי משפט השאריות הסיני 
+\begin_inset Formula $a$
+\end_inset
+
+ ריבוע מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ ריבוע מודולו 
+\begin_inset Formula $p_{i}^{\alpha_{i}}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ לכן המקרה המעניין הוא לבדוק אם 
+\begin_inset Formula $a$
+\end_inset
+
+ ריבוע מודולו 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גישה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+:
+\series default
+ אם 
+\begin_inset Formula $p\neq2$
+\end_inset
+
+, ניתן להשתמש בקריטריון אוילר )כי יש ש
+\begin_inset Quotes erd
+\end_inset
+
+פ מודולו 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+(, ולפיו 
+\begin_inset Formula $a$
+\end_inset
+
+ ריבוע מודולו 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $a^{\frac{1}{2}\varphi\left(p^{\alpha}\right)}\equiv a^{\frac{\varphi\left(p^{\alpha}\right)}{\gcd\left(2,\varphi\left(p^{\alpha}\right)\right)}}\equiv1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גישה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+:
+\series default
+ אם 
+\begin_inset Formula $a$
+\end_inset
+
+ ריבוע מודולו 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+, אז הוא ריבוע מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+ ויש פתרון מודולו 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+ הנתון 
+\begin_inset Formula $a\equiv y^{2}\mod p^{2}$
+\end_inset
+
+, אז 
+\begin_inset Formula $y$
+\end_inset
+
+ הוא גם פתרון מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ כלומר, אם נכתוב 
+\begin_inset Formula $y=bp+y_{1}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $0\leq y\leq p^{2}-1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $0\leq b,y_{1}\leq p-1$
+\end_inset
+
+, אז 
+\begin_inset Formula $a\equiv y^{2}\equiv\left(bp+y_{1}\right)^{2}\equiv y_{1}^{2}\mod p$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ הוא פתרון מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נניח שמצאנו את 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $y_{1}^{2}\equiv a\mod p$
+\end_inset
+
+, נמצא את 
+\begin_inset Formula $y$
+\end_inset
+
+ על ידי כך שנרשום 
+\begin_inset Formula $y=bp+y_{1}$
+\end_inset
+
+ וננסה לפתור את המשוואה
+\begin_inset Formula 
+\begin{align*}
+a & \equiv y^{2}\equiv\left(bp+y_{1}\right)^{2}\equiv2bpy_{1}+y_{1}^{2}\mod p^{2}\\
+ & \implies0\equiv2bpy_{1}+\underbrace{\left(y_{1}^{2}-a\right)}_{\equiv0\mod p}\mod p^{2}\\
+ & \implies0\equiv2by_{1}+\frac{y_{1}^{2}-a}{p}\mod p\\
+ & \implies b\equiv\frac{a-y_{1}^{2}}{p}\cdot\left(2y_{1}\right)^{-1}\mod p
+\end{align*}
+
+\end_inset
+
+כאשר המעבר האחרון מתקיים אם 
+\begin_inset Formula $y_{1}\not\equiv0\mod p$
+\end_inset
+
+ וכן 
+\begin_inset Formula $p\neq2$
+\end_inset
+
+, אם זה לא מתקיים הלמה של הנזל לא עוזרת.
+\end_layout
+
+\begin_layout Corollary
+יהי 
+\begin_inset Formula $p\neq2$
+\end_inset
+
+ ראשוני.
+ אם 
+\begin_inset Formula $\left(\frac{a}{p}\right)=1$
+\end_inset
+
+ אז 
+\begin_inset Formula $a$
+\end_inset
+
+ הוא ריבוע גם מודולו 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+, ולמעשה מודולו 
+\begin_inset Formula $p^{\alpha}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+מכאן נובע 
+\series bold
+מקרה פרטי של הלמה של הנזל:
+\series default
+ יהי 
+\begin_inset Formula $p\neq2$
+\end_inset
+
+ ראשוני, 
+\begin_inset Formula $a$
+\end_inset
+
+ זר ל
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\geq2$
+\end_inset
+
+, ונניח שיש פתרון למשוואה 
+\begin_inset Formula $x^{2}\equiv a\mod p$
+\end_inset
+
+.
+ אז לכל פתרון 
+\begin_inset Formula $y_{1}^{2}\equiv a\mod p$
+\end_inset
+
+ יש פתרון יחיד 
+\begin_inset Formula $y_{\alpha}^{2}\equiv a\mod p^{\alpha}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $y_{\alpha}\equiv y_{1}\mod p$
+\end_inset
+
+, והוא נקרא הרמה של 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+נפתור את 
+\begin_inset Formula $x^{2}\equiv14\mod125$
+\end_inset
+
+.
+ נפתור את 
+\begin_inset Formula $y_{1}^{2}\equiv4\mod5$
+\end_inset
+
+, הפתרונות הם 
+\begin_inset Formula $2,3$
+\end_inset
+
+, נבחר 
+\begin_inset Formula $y_{1}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+נמצא הרמה מודולו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+25
+\numeric off
+: נרשום 
+\begin_inset Formula $y_{2}=5b+2$
+\end_inset
+
+, אז המשוואה היא 
+\begin_inset Formula $14\equiv y_{2}^{2}\equiv20b+4\mod25$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $2\equiv4b\mod5$
+\end_inset
+
+, הפתרון הוא 
+\begin_inset Formula $b\equiv3\mod5$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $y_{2}\equiv17\mod25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+נמצא הרמה מודולו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+125
+\numeric off
+: נרשום 
+\begin_inset Formula $y_{3}=25b+17$
+\end_inset
+
+, אז המשוואה היא 
+\begin_inset Formula $14\equiv y_{3}^{2}\equiv850b+289\equiv-25b+39\mod125$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $25b\equiv25\mod125$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $b\equiv1\mod5$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $y_{3}\equiv42\mod125$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+הלמה של הנזל
+\series default
+ יהי 
+\begin_inset Formula $f\left(x\right)\in\mathbb{Z}\left[x\right]$
+\end_inset
+
+ פולינום עם מקדמים שלמים, 
+\begin_inset Formula $p\neq2$
+\end_inset
+
+ ראשוני, 
+\begin_inset Formula $\alpha\geq2$
+\end_inset
+
+ )ללא הוכחה(.
+\end_layout
+
+\begin_layout Theorem
+אזי לכל פתרון לא סינגולרי 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ של 
+\begin_inset Formula $f\left(x\right)\equiv0\mod p$
+\end_inset
+
+ )כלומר 
+\begin_inset Formula $f\left(y_{1}\right)\equiv0\mod p$
+\end_inset
+
+ אבל 
+\begin_inset Formula $f'\left(y_{1}\right)\not\equiv0\mod p$
+\end_inset
+
+( יש הרמה יחידה 
+\begin_inset Formula $y_{k}\in\mathbb{Z}_{p^{k}}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $y_{k}\equiv y_{1}\mod p$
+\end_inset
+
+ וכן 
+\begin_inset Formula $f\left(y_{k}\right)\equiv0\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+במקרה 
+\begin_inset Formula $p=2$
+\end_inset
+
+, יש שיטה אחרת: כדי לפתור את 
+\begin_inset Formula $x^{2}\equiv a\mod2^{k}$
+\end_inset
+
+ מוצאים פתרון 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ל
+\begin_inset Formula $x^{2}\equiv a\mod2^{k-1}$
+\end_inset
+
+ ואז לוקחים 
+\begin_inset Formula $x=x_{0}+2^{k-1}s$
+\end_inset
+
+ ומציבים.
+ יש פתרון אחד עבור 
+\begin_inset Formula $k=1$
+\end_inset
+
+, שניים עבור 
+\begin_inset Formula $k=2$
+\end_inset
+
+, ו
+\numeric on
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל
+\begin_inset Formula $k\geq3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+שברים משולבים וקירובים דיופנטיים
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+כתיב עשרוני של ממשיים 
+\series default
+כל ממשי ניתן לכתיבה כמספר עשרוני )אולי אינסופי(.
+\end_layout
+
+\begin_layout Claim
+יש ייצוג סופי 
+\begin_inset Formula $\iff$
+\end_inset
+
+ המספר הוא רציונלי מהצורה 
+\begin_inset Formula $\frac{p}{2^{n}\cdot5^{k}}$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ הייצוג אינו יחיד )לדוגמה 
+\begin_inset Formula $1=0.9999$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Claim
+יש ייצוג מחזורי )החל ממקום מסוים( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ המספר הוא רציונלי.
+\end_layout
+
+\begin_layout Subsection
+שברים משולבים
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+שבר משולב של מספר ממשי 
+\series default
+יהי 
+\begin_inset Formula $\theta\in\mathbb{R}$
+\end_inset
+
+, נגדיר 
+\begin_inset Formula $a_{0}=\left\lfloor \theta\right\rfloor $
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $a_{0}\neq\theta$
+\end_inset
+
+ )כלומר 
+\begin_inset Formula $\theta\notin\mathbb{Z}$
+\end_inset
+
+(, מתקיים 
+\begin_inset Formula $0<\theta-a_{0}<1$
+\end_inset
+
+.
+ נסמן 
+\begin_inset Formula $\theta_{1}=\frac{1}{\theta-a_{0}}>1$
+\end_inset
+
+, אז מתקיים 
+\begin_inset Formula $\theta=a_{0}+\frac{1}{\theta_{1}}$
+\end_inset
+
+, נמשיך רקורסיבית על 
+\begin_inset Formula $\theta_{1},\theta_{2},\dots$
+\end_inset
+
+ עד אינסוף, או עד שנקבל 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ שלם.
+\end_layout
+
+\begin_layout Definition
+הביטוי המתקבל 
+\begin_inset Formula $a_{0}+\frac{1}{a_{1}+\frac{1}{a_{2}+\cdots}}$
+\end_inset
+
+ נקרא השבר המשולב של 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ מסמנים 
+\begin_inset Formula 
+\[
+\left[a_{0},a_{1},\dots,a_{n}\right]=a_{0}+\frac{1}{a_{1}+\frac{1}{a_{2}+\frac{1}{\ddots+\frac{1}{a_{n}}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+יצוג שברי של שבר משולב 
+\series default
+יהיו 
+\begin_inset Formula $a_{0}\in\mathbb{R},a_{1},\dots,a_{n}\in\mathbb{R}\setminus\left\{ 0\right\} $
+\end_inset
+
+, נגדיר
+\begin_inset Formula 
+\begin{align*}
+p_{0} & =a_{0}\\
+p_{1} & =a_{1}a_{0}+1\\
+\forall k\geq2.p_{k} & =a_{k}p_{k-1}+p_{k-2}\\
+q_{0} & =1\\
+q_{1} & =a_{1}\\
+\forall k\geq2.q_{k} & =a_{k}q_{k-1}+q_{k-2}
+\end{align*}
+
+\end_inset
+
+אזי 
+\begin_inset Formula $\left[a_{0},a_{1},\dots,a_{k}\right]=\frac{p_{k}}{q_{k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+באינדוקציה על 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ עבור הבסיס,
+\begin_inset Formula 
+\begin{align*}
+\left[a_{0}\right] & =a_{0}=\frac{a_{0}}{1}=\frac{p_{0}}{q_{0}}\\
+\left[a_{0},a_{1}\right] & =a_{0}+\frac{1}{a_{1}}=\frac{a_{0}a_{1}+1}{a_{1}}=\frac{p_{1}}{q_{1}}
+\end{align*}
+
+\end_inset
+
+נניח עבור 
+\begin_inset Formula $k$
+\end_inset
+
+, אז
+\begin_inset Formula 
+\[
+\left[a_{0},a_{1},\dots,a_{k-1},a_{k},a_{k+1}\right]=\left[a_{0},a_{1},\dots,a_{k-1},a_{k}+\frac{1}{a_{k+1}}\right]\stackrel{\text{ind. hyp.}}{=}\frac{p_{k}'}{q_{k}'}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+עבור 
+\begin_inset Formula $p_{k}',q_{k}'$
+\end_inset
+
+ המספרים שמתאימים ל
+\begin_inset Formula $a_{0},a_{1},\dots,a_{k-1},a_{k}+\frac{1}{a_{k+1}}$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $0\leq i<k$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $p_{i}=p_{i}',q_{i}=q_{i}'$
+\end_inset
+
+, ולכן
+\begin_inset Formula 
+\[
+\frac{p_{k}'}{q_{k}'}=\frac{\left(a_{k}+\frac{1}{a_{k+1}}\right)p_{k-1}+p_{k-2}}{\left(a_{k}+\frac{1}{a_{k+1}}\right)q_{k-1}+q_{k-2}}=\frac{a_{k+1}\left(a_{k}p_{k-1}+p_{k-2}\right)+p_{k-1}}{a_{k+1}\left(a_{k}q_{k-1}+q_{k-2}\right)+q_{k-1}}=\frac{a_{k+1}p_{k}+p_{k-1}}{a_{k+1}q_{k}+q_{k-1}}=\frac{p_{k+1}}{q_{k+1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+לכל 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\det\begin{pmatrix}p_{k} & p_{k-1}\\
+q_{k} & q_{k-1}
+\end{pmatrix}=p_{k}q_{k-1}-p_{k-1}q_{k}=\left(-1\right)^{k-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+עבור 
+\begin_inset Formula $k=1$
+\end_inset
+
+, 
+\begin_inset Formula $\det\begin{pmatrix}p_{1} & p_{0}\\
+q_{1} & q_{0}
+\end{pmatrix}=\det\begin{pmatrix}a_{1}a_{0}+1 & a_{0}\\
+a_{1} & 1
+\end{pmatrix}=\left(a_{1}a_{0}+1\right)-a_{1}a_{0}=1=\left(-1\right)^{1-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+באינדוקציה, נניח עבור 
+\begin_inset Formula $k-1$
+\end_inset
+
+ אז מתכונות דטרמיננטה )לינאריות לפי עמודות, ...(
+\begin_inset Formula 
+\begin{align*}
+\det\begin{pmatrix}p_{k} & p_{k-1}\\
+q_{k} & q_{k-1}
+\end{pmatrix} & =\det\begin{pmatrix}a_{k}p_{k-1}+p_{k-2} & p_{k-1}\\
+a_{k}q_{k-1}+q_{k-2} & q_{k-1}
+\end{pmatrix}=a_{k}\underbrace{\det\begin{pmatrix}p_{k-1} & p_{k-1}\\
+q_{k-1} & q_{k-1}
+\end{pmatrix}}_{=0}+\det\begin{pmatrix}p_{k-2} & p_{k-1}\\
+q_{k-2} & q_{k-1}
+\end{pmatrix}\\
+ & =-\det\begin{pmatrix}p_{k-1} & p_{k-2}\\
+q_{k-1} & q_{k-2}
+\end{pmatrix}=-\left(-1\right)^{\left(k-1\right)-1}=\left(-1\right)^{k-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+אם 
+\begin_inset Formula $a_{0},\dots,a_{k}\in\mathbb{Z}$
+\end_inset
+
+ אז 
+\begin_inset Formula $p_{k},q_{k}$
+\end_inset
+
+ זרים.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $d\mid p_{k},q_{k}$
+\end_inset
+
+ אז 
+\begin_inset Formula $d\mid p_{k}q_{k-1}-p_{k-1}q_{k}=\left(-1\right)^{k-1}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $d=\pm1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $\theta\in\mathbb{R}$
+\end_inset
+
+.
+ אזי השבר המשולב של 
+\begin_inset Formula $\theta$
+\end_inset
+
+ סופי 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ רציונלי, ואם 
+\begin_inset Formula $\theta$
+\end_inset
+
+ אי רציונלי אז 
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{p_{n}}{q_{n}}=\lim_{n\to\infty}\left[a_{0},a_{1},\dots,a_{n}\right]=\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+אם השבר סופי אז 
+\begin_inset Formula $\theta=\left[a_{0},a_{1},\dots,a_{n}\right]\in\mathbb{Q}$
+\end_inset
+
+ )חיבור, מנה של רציונליים(, ואם 
+\begin_inset Formula $\theta$
+\end_inset
+
+ רציונלי אז תהליך בניית השבר המשולב, שמתבסס על אלגוריתם אוקלידס עבור 
+\begin_inset Formula $a,b$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\theta=\frac{a}{b}$
+\end_inset
+
+, חייב לעצור.
+\end_layout
+
+\begin_layout Proof
+כעת נניח כי 
+\begin_inset Formula $\theta$
+\end_inset
+
+ אי רציונלי.
+ בסימונים מהגדרת שבר משולב 
+\begin_inset Formula 
+\[
+\theta=\left[a_{0},a_{1},\dots,a_{k},\theta_{k+1}\right]=\frac{\theta_{k+1}p_{k}+p_{k-1}}{\theta_{k+1}q_{k}+q_{k-1}}
+\]
+
+\end_inset
+
+ולכן
+\begin_inset Formula 
+\begin{align*}
+\left|\theta-\frac{p_{k}}{q_{k}}\right| & =\left|\frac{\theta_{k+1}p_{k}+p_{k-1}}{\theta_{k+1}q_{k}+q_{k-1}}-\frac{p_{k}}{q_{k}}\right|=\left|\frac{\theta_{k+1}p_{k}q_{k}+p_{k-1}q_{k}-\theta_{k+1}q_{k}p_{k}-p_{k}q_{k-1}}{q_{k}\left(\theta_{k+1}q_{k}+q_{k-1}\right)}\right|\\
+ & \stackrel{\text{lemma}}{=}\left|\frac{-\left(-1\right)^{k-1}}{q_{k}\left(\theta_{k+1}q_{k}+q_{k-1}\right)}\right|=\frac{1}{q_{k}\left(\theta_{k+1}q_{k}+q_{k-1}\right)}\stackrel{\theta_{k+1}>1,q_{i}\geq1}{<}\frac{1}{q_{k}^{2}}\xrightarrow{k\to\infty}0
+\end{align*}
+
+\end_inset
+
+הגבול נובע מכך ש-
+\begin_inset Formula $q_{k}=a_{k}q_{k-1}+q_{k-2}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{k}\geq1$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $q_{k}$
+\end_inset
+
+ זו סדרת טבעיים עולה ממש ולכן 
+\begin_inset Formula $q_{k}\to\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+יהיו 
+\begin_inset Formula $p\in\mathbb{Z},q\in\mathbb{N},x\in\mathbb{R}$
+\end_inset
+
+, אז
+\begin_inset Formula 
+\[
+\left\lfloor \frac{p+x}{q}\right\rfloor =\left\lfloor \frac{p+\left\lfloor x\right\rfloor }{q}\right\rfloor 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+לגראנז'
+\series default
+ 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ הינו בעל ייצוג מחזורי בשברים משולבים, כלומר 
+\begin_inset Formula $\alpha=\left[a_{0},\dots,a_{k-1},\overline{a_{k},\dots,a_{k+m-1}}\right]$
+\end_inset
+
+, אם ורק אם 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ שורש של משוואה ריבועית 
+\begin_inset Formula $ax^{2}+bx+c=0$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $a\neq0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Delta=b^{2}-4ac>0$
+\end_inset
+
+ לא ריבוע שלם )לא להוכחה(.
+\end_layout
+
+\begin_layout Subsection
+קירובים דיופנטיים
+\end_layout
+
+\begin_layout Corollary
+)מהמשפט שלפני לגראנז'( לכל 
+\begin_inset Formula $\theta\in\mathbb{R}$
+\end_inset
+
+ אי רציונלי יש אינסוף קירובים דיופנטיים שמקיימים 
+\begin_inset Formula $\left|\theta-\frac{p_{n}}{q_{n}}\right|<\frac{1}{q_{n}^{2}}$
+\end_inset
+
+.
+ מסקנה זו משפרת את החסם הטריויאלי, שיש קירוב עם 
+\begin_inset Formula $\left|\theta-\frac{p}{q}\right|\leq\frac{1}{2q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+כמו כן היא ייחידות לאי רציונליים, כי עבור 
+\begin_inset Formula $\frac{a}{b}\in\mathbb{Q}$
+\end_inset
+
+, אם 
+\begin_inset Formula $b<q$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left|\frac{a}{b}-\frac{p}{q}\right|=\left|\frac{aq-bp}{bq}\right|\geq\frac{1}{bq}>\frac{1}{q^{2}}$
+\end_inset
+
+, ויש מספר סופי של אפשרויות עם 
+\begin_inset Formula $q\leq b$
+\end_inset
+
+ )כי בהינתן 
+\begin_inset Formula $q,\frac{a}{b}$
+\end_inset
+
+, המספר 
+\begin_inset Formula $p$
+\end_inset
+
+ נקבע ביחידות(.
+\end_layout
+
+\begin_layout Theorem
+הרישות 
+\begin_inset Formula $\frac{p_{n}}{q_{n}}$
+\end_inset
+
+ של הפיתוח של 
+\begin_inset Formula $\theta\in\mathbb{R}$
+\end_inset
+
+ לשברים משולבים נותנות את הקירוב הטוב ביותר במובן הבא:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+המובן החלש:
+\series default
+ לכל 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $1\leq b<q_{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\theta-\frac{p_{n}}{q_{n}}\right|<\left|\theta-\frac{a}{b}\right|$
+\end_inset
+
+.
+ כלומר, לא ניתן להגיע לקירוב טוב יותר מבלי להגדיל את המכנה.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+המובן החזק:
+\series default
+ לכל 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $1\leq b<q_{n+1}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|q_{n}\theta-p_{n}\right|\leq\left|b\theta-a\right|$
+\end_inset
+
+.
+ תכונה זו היא למעשה קריטריון הכרחי ומספיק לקירובים 
+\begin_inset Formula $\frac{p_{n}}{q_{n}}$
+\end_inset
+
+ של 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ אכן, בהינתן 
+\begin_inset Formula $p_{n},q_{n}$
+\end_inset
+
+, ניתן להגדיר את 
+\begin_inset Formula $p_{n+1},q_{n+1}$
+\end_inset
+
+ להיות זוג השלמים עם 
+\begin_inset Formula $q_{n+1}$
+\end_inset
+
+ מינימלי כך ש-
+\begin_inset Formula $\left|q_{n}\theta-p_{n}\right|>\left|q_{n+1}\theta-p_{n+1}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מספר אלגברי
+\series default
+ 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ נקרא אלגברי אם הוא שורש של פולינום 
+\begin_inset Formula $f\in\mathbb{Z}\left[x\right]$
+\end_inset
+
+ )באופן שקול, שור של 
+\begin_inset Formula $f\in\mathbb{Q}\left[x\right]$
+\end_inset
+
+(.
+ אם 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ אלגברי, המעלה של 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ זו המעלה המינימלית של פולינום כזה ש-
+\begin_inset Formula $\alpha$
+\end_inset
+
+ שורש שלו.
+ בנוסף, אם 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ אינו אלגברי הוא נקרא טרנסצנדנטי.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+ליוביל
+\series default
+ לכל 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ אלגברי ממעלה 
+\begin_inset Formula $d$
+\end_inset
+
+ יש מספר 
+\begin_inset Formula $c=c\left(\alpha\right)>0$
+\end_inset
+
+ כך שלכל רציונלי 
+\begin_inset Formula $\frac{p}{q}\neq\alpha$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\alpha-\frac{p}{q}\right|\geq\frac{c}{q^{d}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נפריד למקרים 
+\begin_inset Formula $d=1,d\geq2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $d=1$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ רציונלי.
+ נניח 
+\begin_inset Formula $\alpha=\frac{a}{b}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $c\left(\alpha\right)=\frac{1}{b}$
+\end_inset
+
+, אז לכל 
+\begin_inset Formula $\frac{p}{q}\neq\alpha$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\left|\alpha-\frac{p}{q}\right|=\left|\frac{a}{b}-\frac{p}{q}\right|=\frac{\left|aq-bp\right|}{bq}\geq\frac{1}{bq}=\frac{c}{q}
+\]
+
+\end_inset
+
+אם 
+\begin_inset Formula $d\geq2$
+\end_inset
+
+, יהי 
+\begin_inset Formula $f=\sum_{i=0}^{d}a_{i}x^{i}\in\mathbb{Z}\left[x\right]$
+\end_inset
+
+ כך ש
+\begin_inset Formula $f\left(\alpha\right)=0$
+\end_inset
+
+.
+ ל
+\begin_inset Formula $f$
+\end_inset
+
+ אין שורשים רציונליים, כי אם 
+\begin_inset Formula $f\left(\frac{p}{q}\right)=0$
+\end_inset
+
+ אז 
+\begin_inset Formula $f\left(x\right)=\left(x-\frac{p}{q}\right)g\left(x\right)$
+\end_inset
+
+ ואז 
+\begin_inset Formula $g\left(\alpha\right)=0$
+\end_inset
+
+ ו-
+\begin_inset Formula $g$
+\end_inset
+
+ פולינום רציונלי ולכן מעלת 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ היא לכל היותר 
+\begin_inset Formula $d-1$
+\end_inset
+
+, סתירה.
+\end_layout
+
+\begin_layout Proof
+הנגזרת 
+\begin_inset Formula $f'\left(x\right)$
+\end_inset
+
+ חסומה בקטע 
+\begin_inset Formula $\left[\alpha-1,\alpha+1\right]$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $M>0$
+\end_inset
+
+ )כי היא רציפה וזה קטע קומפקטי(.
+ ניקח את המקדם 
+\begin_inset Formula $c\left(\alpha\right)=\min\left\{ 1,\frac{1}{M}\right\} $
+\end_inset
+
+, ונראה שלכל 
+\begin_inset Formula $\frac{p}{q}\in\mathbb{Q}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\alpha-\frac{p}{q}\right|\geq\frac{c}{q^{d}}$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $\left|\alpha-\frac{p}{q}\right|\geq1$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left|\alpha-\frac{p}{q}\right|\geq c\geq\frac{c}{q^{d}}$
+\end_inset
+
+, ואם 
+\begin_inset Formula $\left|\alpha-\frac{p}{q}\right|<1$
+\end_inset
+
+ אז לפי משפט לגראנז' יש 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ בין 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ל
+\begin_inset Formula $\frac{p}{q}$
+\end_inset
+
+ שמקיים 
+\begin_inset Formula $f'\left(x_{0}\right)=\frac{f\left(\frac{p}{q}\right)-f\left(\alpha\right)}{\frac{p}{q}-\alpha}$
+\end_inset
+
+.
+ מתקיים 
+\begin_inset Formula $f\left(\alpha\right)=0$
+\end_inset
+
+ וכן
+\begin_inset Formula 
+\[
+0\neq\left|f\left(\frac{p}{q}\right)\right|=\left|\sum_{i=0}^{d}a_{i}\frac{p^{i}}{q^{i}}\right|=\frac{1}{q^{d}}\left|\sum_{i=0}^{d}a_{i}q^{d-i}p^{i}\right|\geq\frac{1}{q^{d}}
+\]
+
+\end_inset
+
+ולכן
+\begin_inset Formula 
+\[
+\left|\frac{p}{q}-\alpha\right|=\frac{\left|f\left(\frac{p}{q}\right)\right|}{\left|f'\left(x_{0}\right)\right|}\geq\frac{\frac{1}{q^{d}}}{M}\geq\frac{c}{q^{d}}
+\]
+
+\end_inset
+
+כדרוש.
+\end_layout
+
+\begin_layout Corollary
+מספר שניתן לקרב לכל 
+\begin_inset Formula $d\in\mathbb{N}$
+\end_inset
+
+ על ידי 
+\begin_inset Formula $\frac{p}{q}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left|\frac{p}{q}-\theta\right|<\frac{1}{q^{d}}$
+\end_inset
+
+ הוא טרנסצנדנטי.
+ מספרים אלו נקראים 
+\series bold
+מספרי ליוביל
+\series default
+, ויש טרנסצנדנטיים שאינם מספרי ליוביל )לדוגמה 
+\begin_inset Formula $\pi,e$
+\end_inset
+
+(.
+ לדוגמה,
+\begin_inset Formula 
+\[
+\theta=\sum_{n=1}^{\infty}\frac{1}{10^{n!}}=0.11000100\dots
+\]
+
+\end_inset
+
+הוא ליוביל ובפרט טרנסצנדנטי.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+סכומי ריבועים
+\end_layout
+
+\begin_layout Subsection
+חוג השלמים של גאוס
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+המספרים של גאוס
+\series default
+ 
+\begin_inset Formula $\mathbb{Q}\left(i\right)=\left\{ r+is\mid r,s\in\mathbb{Q}\right\} \subseteq\mathbb{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\mathbb{Q}\left(i\right)$
+\end_inset
+
+ הוא תת-שדה של 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+, כלומר הוא מכיל את 
+\begin_inset Formula $0,1$
+\end_inset
+
+, וסגור לחיבור, חיסור, כפל, והופכי כפלי.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $0,1\in\mathbb{Q}\left(i\right)$
+\end_inset
+
+ ברור, נניח 
+\begin_inset Formula $r,r',s,s'\in\mathbb{Q}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left(r+is\right)+\left(r'+is'\right)=\left(r+r'\right)+i\left(s+s'\right)$
+\end_inset
+
+ והסגירות נובעת מסגירות רציונליים לחיבור.
+ כפל תרגיל, ועבור הופכי נניח 
+\begin_inset Formula $0\neq r+is\in\mathbb{Q}\left(i\right)$
+\end_inset
+
+ אז
+\begin_inset Formula 
+\[
+\frac{1}{r+is}=\frac{r-is}{\left(r+is\right)\left(r-is\right)}=\frac{r-is}{r^{2}+s^{2}}=\frac{r}{r^{2}+s^{2}}+i\cdot\frac{-s}{r^{2}+s^{2}}\in\mathbb{Q}\left(i\right)
+\]
+
+\end_inset
+
+שוב, מכך שהרציונליים הם שדה.
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula $\mathbb{Q}\left(i\right)$
+\end_inset
+
+ הוא גם מרחב וקטורי מעל 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ ממימד
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+, וזו דוגמה להרחבת שדות ריבועית של 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+הצמדה ונורמה 
+\series default
+לכל 
+\begin_inset Formula $z=x+iy\in\mathbb{C}$
+\end_inset
+
+, הצמוד הוא 
+\begin_inset Formula $\bar{z}=x-iy$
+\end_inset
+
+ ומתקיים 
+\begin_inset Formula $\overline{zw}=\bar{z}\bar{w}$
+\end_inset
+
+.
+ כמו כן נגדיר נורמה 
+\begin_inset Formula $N\colon\mathbb{C}\to\mathbb{R}_{\geq0}$
+\end_inset
+
+ על ידי 
+\begin_inset Formula $N\left(z\right)=z\cdot\bar{z}=\left|z\right|^{2}$
+\end_inset
+
+, היא מקיימת 
+\begin_inset Formula $z=0\iff N\left(z\right)=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $N\left(zw\right)=N\left(z\right)N\left(w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+השלמים של גאוס
+\series default
+ 
+\begin_inset Formula $\mathbb{Z}\left[i\right]=\left\{ m+ni\mid m,n\in\mathbb{Z}\right\} \subseteq\mathbb{Q}\left(i\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+ הוא תת-חוג של 
+\begin_inset Formula $\mathbb{Q}\left(i\right)$
+\end_inset
+
+ )או של 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+(, כלומר הוא מכיל את 
+\begin_inset Formula $0,1$
+\end_inset
+
+, וסגור לחיבור, חיסור, וכפל.
+ אבל, הוא אינו תת-שדה )לא סגור להופכי(.
+\end_layout
+
+\begin_layout Remarks
+נסתכל על הנורמה 
+\begin_inset Formula $N\to\mathbb{Z}\left[i\right]\to\mathbb{Z}_{\geq0}$
+\end_inset
+
+, התמונה שלה היא בדיוק כל סכומי הריבועים.
+\end_layout
+
+\begin_layout Claim
+ההפיכים ב
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+ הם 
+\begin_inset Formula $\pm1,\pm i$
+\end_inset
+
+, כלומר האיברים עם 
+\begin_inset Formula $N\left(\alpha\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\alpha\beta=1$
+\end_inset
+
+ אז 
+\begin_inset Formula $1=N\left(\alpha\beta\right)=N\left(\alpha\right)N\left(\beta\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $N\left(\alpha\right),N\left(\beta\right)\in\mathbb{Z}_{\geq0}$
+\end_inset
+
+ לכן שניהם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+ הוא חוג אוקלידי, כלומר קיים בו אלגוריתם חלוקה בשארית ביחס לנורמה.
+ משמע, לכל 
+\begin_inset Formula $\alpha,\beta\in\mathbb{Z}\left[i\right]$
+\end_inset
+
+ עם 
+\begin_inset Formula $\beta\neq0$
+\end_inset
+
+ יש 
+\begin_inset Formula $q,r\in\mathbb{Z}\left[i\right]$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\alpha=q\beta+r$
+\end_inset
+
+ ובנוסף 
+\begin_inset Formula $N\left(r\right)<N\left(\beta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+מתקיים 
+\begin_inset Formula $\left|r\right|^{2}=N\left(r\right)<N\left(\beta\right)=\left|\beta\right|^{2}$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $\left|r\right|<\left|\beta\right|$
+\end_inset
+
+, אם ורק אם 
+\begin_inset Formula $\left|\frac{r}{\beta}\right|<1$
+\end_inset
+
+.
+ נרשום 
+\begin_inset Formula $\frac{\alpha}{\beta}=r+is\in\mathbb{Q}\left(i\right)$
+\end_inset
+
+ , נבחר 
+\begin_inset Formula $\frac{\alpha}{\beta}$
+\end_inset
+
+ נמצא באיזשהו ריבוע עם קודקודים ב
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+, נבחר את הקרוב ביותר )נעגל את שתי הקואורדינטות( ונקבל 
+\begin_inset Formula $q\in\mathbb{Z}\left[i\right]$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\left|\frac{r}{\beta}\right|=\left|\frac{\alpha}{\beta}-q\right|\leq\frac{\sqrt{2}}{2}<1$
+\end_inset
+
+, כדרוש.
+\end_layout
+
+\begin_layout Corollary
+
+\series bold
+תכונות של החוג 
+\series default
+בחוג 
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+ יש
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gcd
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)יחיד עד כדי כפל בהפיך(, מקדמי בזו, אי פריק שקול לראשוני, ויחידות פירוק
+ לראשוניים כפול הפיך עד כדי כפל בהפיך ושינוי סדר הראשוניים.
+\end_layout
+
+\begin_layout Subsection
+משפט פרמה-גאוס
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני וכן 
+\begin_inset Formula $p\equiv3\mod4$
+\end_inset
+
+ אז 
+\begin_inset Formula $p$
+\end_inset
+
+ אי פריק ב
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נניח בשלילה שיש 
+\begin_inset Formula $\alpha,\beta$
+\end_inset
+
+ לא הפיכים כך ש
+\begin_inset Formula $\alpha\beta=p$
+\end_inset
+
+, אז 
+\begin_inset Formula $N\left(\alpha\right)N\left(\beta\right)=N\left(p\right)=p^{2}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $N\left(\alpha\right),N\left(\beta\right)>1$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $N\left(\alpha\right)=N\left(\beta\right)=p$
+\end_inset
+
+.
+ לכן 
+\begin_inset Formula $p$
+\end_inset
+
+ סכום ריבועים )תמונת 
+\begin_inset Formula $N$
+\end_inset
+
+ היא בדיוק כל סכומי הריבועים(, אבל זו סתירה לכך ש
+\begin_inset Formula $p\equiv3\mod4$
+\end_inset
+
+ )מהכיוון 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ במשפט הבא, שלא מסתמך על תוצאה זו(.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+פרמה-גאוס
+\series default
+ מספר ראשוני 
+\begin_inset Formula $p$
+\end_inset
+
+ הוא סכום שני ריבועים 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $p\not\equiv3\mod4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ למעשה כיוון זה נכון עבור 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ כללי, לא בהכרח ראשוני.
+ אכן, השאריות הריבועיות מודולו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הן 
+\begin_inset Formula $0,1$
+\end_inset
+
+, ולכן סכום של שני ריבועים מודולו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא אחד מבין 
+\begin_inset Formula $0+0=0,0+1=1,1+1=2$
+\end_inset
+
+, כלומר אם 
+\begin_inset Formula $n$
+\end_inset
+
+ סכום שני ריבועים אז 
+\begin_inset Formula $n\not\equiv3\mod4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\implies$
+\end_inset
+
+ נניח 
+\begin_inset Formula $p\equiv1\mod4$
+\end_inset
+
+ ראשוני.
+ רוצים להראות ש
+\begin_inset Formula $p$
+\end_inset
+
+ סכום ריבועים, באופן שקול פריק כאיבר של 
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+ )זה שקול כי אם 
+\begin_inset Formula $p=x^{2}+y^{2}$
+\end_inset
+
+ סכום ריבועים אז 
+\begin_inset Formula $p=\left(x+iy\right)\left(x-iy\right)$
+\end_inset
+
+ פריק, ובכיוון השני אם הוא פריק אז מהמשפט 
+\begin_inset Formula $p\equiv3\mod4$
+\end_inset
+
+ בסתירה להנחה(.
+ כעת, נניח בשלילה 
+\begin_inset Formula $p$
+\end_inset
+
+ אי פריק ב
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+ אז הוא גם ראשוני.
+ נזכר 
+\begin_inset Formula $\left(\frac{-1}{p}\right)=1$
+\end_inset
+
+ כי 
+\begin_inset Formula $p\equiv1\mod4$
+\end_inset
+
+, ולכן יש 
+\begin_inset Formula $x\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x^{2}\equiv-1\mod p$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $p\mid x^{2}+1=\left(x+i\right)\left(x-i\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $p\mid x\pm i$
+\end_inset
+
+ )אחד מהם(, כלומר קיים 
+\begin_inset Formula $m+ni$
+\end_inset
+
+ כך ש
+\begin_inset Formula $pm+pni=p\left(m+ni\right)=x\pm i$
+\end_inset
+
+, אז 
+\begin_inset Formula $pn=\pm1$
+\end_inset
+
+ סתירה.
+\end_layout
+
+\begin_layout Corollary
+)תרגיל( 
+\begin_inset Formula $n$
+\end_inset
+
+ טבעי הוא סכום שני ריבועים 
+\begin_inset Formula $\iff$
+\end_inset
+
+ בפירוק לראשוניים 
+\begin_inset Formula $n=\prod_{i=1}^{r}p_{i}^{e_{i}}$
+\end_inset
+
+ החזקה של כל 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ שמקיים 
+\begin_inset Formula $p_{i}\equiv3\mod4$
+\end_inset
+
+ היא זוגית.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+אי פריקים ב
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+
+\series default
+ האיברים האי-פריקים היחידים ב
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+ הם 
+\begin_inset Formula $1-i$
+\end_inset
+
+ ראשוניים עם 
+\begin_inset Formula $p\equiv3\mod4$
+\end_inset
+
+ או 
+\begin_inset Formula $x\pm iy$
+\end_inset
+
+ כך שיש ראשוני 
+\begin_inset Formula $p\equiv1\mod4$
+\end_inset
+
+ כך ש
+\begin_inset Formula $p=\left(x+iy\right)\left(x-iy\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\alpha\in\mathbb{Z}\left[i\right]$
+\end_inset
+
+ אי פריק אז 
+\begin_inset Formula $\alpha\mid\alpha\cdot\overline{\alpha}=p_{1}^{e_{1}}\cdots p_{r}^{e_{r}}$
+\end_inset
+
+, בפירוק ב
+\begin_inset Formula $\mathbb{Z}\left[i\right]$
+\end_inset
+
+ מופיעים רק איברים מהפירוק שכתבנו, ומיחידות הפירוק 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ חבר של אחד האי פריקים בפירוק זה.
+\end_layout
+
+\begin_layout Example
+נפרק לאי פריקים את 
+\begin_inset Formula $8-i\in\mathbb{Z}\left[i\right]$
+\end_inset
+
+.
+ מתקיים 
+\begin_inset Formula $N\left(8-i\right)=65=5\cdot13$
+\end_inset
+
+, נפרק:
+\begin_inset Formula 
+\begin{align*}
+5 & =\left(2+i\right)\left(2-i\right)\\
+13 & =\left(2+3i\right)\left(2-3i\right)
+\end{align*}
+
+\end_inset
+
+בדיוק אחד מבין 
+\begin_inset Formula $2+i,2-i$
+\end_inset
+
+ בפירוק של 
+\begin_inset Formula $8-i$
+\end_inset
+
+, במקרה הזה זה 
+\begin_inset Formula $2+i$
+\end_inset
+
+ )מחלקים ובודקים אם יוצא שלם גאוס(.
+ בדיוק אחד מבין 
+\begin_inset Formula $2+3i,2-3i$
+\end_inset
+
+ בפירוק של 
+\begin_inset Formula $8-i$
+\end_inset
+
+, במקרה הזה 
+\begin_inset Formula $2+3i$
+\end_inset
+
+.
+ נחשב 
+\begin_inset Formula $\left(2+i\right)\left(2+3i\right)=1+8i$
+\end_inset
+
+, ואם מכפילים ב
+\begin_inset Formula $-i$
+\end_inset
+
+ )הפיך( מקבלים בדיוק את הדרוש.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+הרחבות ריבועיות
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+הרחבה ריבועית
+\series default
+ )לא לגמרי חלק מהקורס( תת שדה של 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ )שמכיל את 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+, אבל זה נכון לכל תת שדה( וכמרחב וקטורי מעל 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ הוא דו-מימדי.
+ לדוגמה, ראינו את 
+\begin_inset Formula $\mathbb{Q}\left(i\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+)תרגיל( השדות הללו הם בדיוק מהצורה 
+\begin_inset Formula $\mathbb{Q}\left(\sqrt{d}\right)=\left\{ r+s\sqrt{d}\mid r,s\in\mathbb{Q}\right\} $
+\end_inset
+
+ עבור 
+\begin_inset Formula $d\in\mathbb{Z}$
+\end_inset
+
+ שאינו ריבוע.
+\end_layout
+
+\begin_layout Subsection
+הרחבות ריבועיות דמיוניות וממשיות
+\end_layout
+
+\begin_layout Subsubsection*
+הרחבות ריבועיות דמיוניות
+\end_layout
+
+\begin_layout Standard
+הרחבה ריבועית כאשר 
+\begin_inset Formula $d<0$
+\end_inset
+
+, לדוגמה עבור 
+\begin_inset Formula $d=-1$
+\end_inset
+
+ מקבלים את 
+\begin_inset Formula $\mathbb{Q}\left(i\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+צמוד
+\series default
+ הצמוד המרוכב 
+\begin_inset Formula $\overline{x+y\sqrt{d}}=x-y\sqrt{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+נורמה
+\series default
+ 
+\begin_inset Formula $N\left(z\right)=z\overline{z}=x^{2}-dy^{2}=\left|z\right|^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+ההפיכים
+\series default
+ ב
+\begin_inset Formula $\mathbb{Z}\left[\sqrt{d}\right]$
+\end_inset
+
+ הם כל האיברים עם 
+\begin_inset Formula $N\left(z\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+כדי למצוא את ההפיכים צריך לפתור את 
+\begin_inset Formula $x^{2}-dy^{2}=1$
+\end_inset
+
+, אם 
+\begin_inset Formula $d=-1$
+\end_inset
+
+ אז 
+\begin_inset Formula $\alpha=\pm1,\pm i$
+\end_inset
+
+ ואם 
+\begin_inset Formula $d\leq-2$
+\end_inset
+
+ אז 
+\begin_inset Formula $y=0$
+\end_inset
+
+ )כי 
+\begin_inset Formula $-d\geq2$
+\end_inset
+
+( ולכן 
+\begin_inset Formula $\alpha=\pm1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+הרחבות ריבועיות ממשיות
+\end_layout
+
+\begin_layout Standard
+הרחבה ריבועית כאשר 
+\begin_inset Formula $d>0$
+\end_inset
+
+, לדוגמה עבור 
+\begin_inset Formula $d=2$
+\end_inset
+
+ מקבלים את 
+\begin_inset Formula $\mathbb{Q}\left(\sqrt{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+צמוד
+\series default
+ הצמוד האלגברי של 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ מוגדר 
+\begin_inset Formula $\tilde{\alpha}=r-s\sqrt{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+נורמה
+\series default
+ )כעת עשויה להיות שלילית, אבל היא עדיין כפלית( 
+\begin_inset Formula $N\left(\alpha\right)=\alpha\tilde{\alpha}=r^{2}-ds^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\tilde{\alpha\beta}=\tilde{\alpha}\tilde{\beta},\tilde{\alpha+\beta}=\tilde{\alpha}+\tilde{\beta},N\left(\alpha\beta\right)=N\left(\alpha\right)N\left(\beta\right)$
+\end_inset
+
+.
+
+\series bold
+ ההפיכים
+\series default
+ ב
+\begin_inset Formula $\mathbb{Z}\left[\sqrt{d}\right]$
+\end_inset
+
+ הם כל האיברים עם 
+\begin_inset Formula $N\left(z\right)=\pm1$
+\end_inset
+
+, באופן שקול הפתרונות של המשוואה 
+\begin_inset Formula $x^{2}-dy^{2}=\pm1$
+\end_inset
+
+, שנקראת משוואת פל.
+\end_layout
+
+\begin_layout Remarks
+לכל 
+\begin_inset Formula $0\neq\alpha\in\mathbb{Q}\left(\sqrt{d}\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $N\left(\alpha\right)\neq0$
+\end_inset
+
+, אחרת 
+\begin_inset Formula $x^{2}-dy^{2}=0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\sqrt{d}=\frac{x}{y}$
+\end_inset
+
+ אבל 
+\begin_inset Formula $\sqrt{d}$
+\end_inset
+
+ אינו רציונלי.
+\end_layout
+
+\begin_layout Subsection
+משוואת פל
+\end_layout
+
+\begin_layout Remarks
+פתרונות משוואת פל מתאימים לאיברים ההפיכים ב
+\begin_inset Formula $\mathbb{Z}\left[\sqrt{d}\right]$
+\end_inset
+
+, ולכן יש להם מבנה של חבורה, כאשר הכפל הוא
+\begin_inset Formula 
+\[
+\left(x,y\right)\cdot\left(a,b\right)=\left(ax+byd,ay+bx\right)
+\]
+
+\end_inset
+
+קבוצת הפתרונות סגורה לכפל, יש בה איבר יחידה 
+\begin_inset Formula $\left(1,0\right)$
+\end_inset
+
+ והופכי לכל איבר.
+\end_layout
+
+\begin_layout Corollary
+אם יש פתרון לא טריויאלי, כלומר לא 
+\begin_inset Formula $\left(\pm1,0\right)$
+\end_inset
+
+, אז יש אינסוף פתרונות.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\pm1\neq x+y\sqrt{d}\in\mathbb{Z}\left[\sqrt{d}\right]$
+\end_inset
+
+ הפיך, בה
+\begin_inset Quotes erd
+\end_inset
+
+כ ניתן להניח 
+\begin_inset Formula $x\geq0,y\geq1$
+\end_inset
+
+ ואז 
+\begin_inset Formula $x+y\sqrt{d}>1$
+\end_inset
+
+, ואז
+\begin_inset Formula 
+\[
+\left(x+y\sqrt{d}\right)^{n}\xrightarrow{n\to\infty}\infty
+\]
+
+\end_inset
+
+ וכל חזקה כזו מהווה פתרון, כי זו חבורה.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ פתרון חיובי 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $x+y\sqrt{d}>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x,y>0$
+\end_inset
+
+ אז 
+\begin_inset Formula $x+y\sqrt{d}>1$
+\end_inset
+
+, אז 
+\begin_inset Formula $x<0,y<0$
+\end_inset
+
+ אז 
+\begin_inset Formula $x+y\sqrt{d}<-1$
+\end_inset
+
+, ואם 
+\begin_inset Formula $x>0,y<0$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{1}{\alpha}=\frac{\tilde{\alpha}}{N\left(\alpha\right)}=\pm\tilde{\alpha}=\pm\left(x-y\sqrt{d}\right)$
+\end_inset
+
+ ובביטוי הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $x,-y$
+\end_inset
+
+ שווי סימן, ולכן 
+\begin_inset Formula $-1<\alpha<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+לכל 
+\begin_inset Formula $d>0$
+\end_inset
+
+ לא ריבוע יש פתרון לא טריויאלי למשוואת פל.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+למה:
+\series default
+ קיים 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+ כך שיש אינסוף פתרונות בשלמים ל
+\begin_inset Formula $x^{2}-dy^{2}=k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+הוכחה:
+\series default
+ 
+\begin_inset Formula $\sqrt{d}\notin\mathbb{Q}$
+\end_inset
+
+, לכן יש לו אינסוף קירובים דיופנטיים 
+\begin_inset Formula $\left|\frac{x}{y}-\sqrt{d}\right|<\frac{1}{y^{2}}$
+\end_inset
+
+.
+ עבור קירוב כזה 
+\begin_inset Formula 
+\[
+\left|x^{2}-dy^{2}\right|=y^{2}\left|\left(\frac{x}{y}\right)^{2}-d\right|=y^{2}\left|\frac{x}{y}-\sqrt{d}\right|\cdot\left|\frac{x}{y}+\sqrt{d}\right|<\frac{x}{y}+\sqrt{d}\leq1+2\sqrt{d}
+\]
+
+\end_inset
+
+לכן לכל 
+\begin_inset Formula $x,y>0$
+\end_inset
+
+ שמקיימים 
+\begin_inset Formula $\left|\frac{x}{y}-\sqrt{d}\right|<\frac{1}{y^{2}}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mathbb{Z}\ni\left|x^{2}-dy^{2}\right|<1+2\sqrt{d}$
+\end_inset
+
+, יש מספר סופי של אפשרויות לכן אינסוף מבין ה
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ים מקבלים אותו ערך.
+\end_layout
+
+\begin_layout Proof
+נחזור להוכחת המשפט.
+ עבור 
+\begin_inset Formula $k$
+\end_inset
+
+ זה, יש אינסוף פתרונות לכן ניתן למצוא שני פתרונות שונים 
+\begin_inset Formula $\alpha_{1}=x_{1}+y_{1}\sqrt{d},\alpha_{2}=x_{2}+y_{2}\sqrt{d}$
+\end_inset
+
+ ששקולים מודולו 
+\begin_inset Formula $k$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $x_{1}\equiv x_{2}\mod k,y_{1}\equiv y_{2}\mod k$
+\end_inset
+
+.
+ נניח בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $\alpha_{2}>\alpha_{1}$
+\end_inset
+
+ ונראה ש
+\begin_inset Formula $\frac{\alpha_{2}}{\alpha_{1}}$
+\end_inset
+
+ פתרון חיובי, שלם, לא טריויאלי ל
+\begin_inset Formula $x^{2}-dy^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+פתרון:
+\series default
+ מכפליות הנורמה 
+\begin_inset Formula $N\left(\frac{\alpha_{2}}{\alpha_{1}}\right)=\frac{N\left(\alpha_{2}\right)}{N\left(\alpha_{1}\right)}=\frac{k}{k}=1$
+\end_inset
+
+.
+ 
+\series bold
+חיובי ולא טריויאלי:
+\series default
+ 
+\begin_inset Formula $\frac{\alpha_{2}}{\alpha_{1}}>1$
+\end_inset
+
+ כי 
+\begin_inset Formula $\alpha_{2}>\alpha_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+שלם:
+\series default
+ מתקיים 
+\begin_inset Formula $\frac{\alpha_{2}}{\alpha_{1}}=\frac{\alpha_{2}\tilde{\alpha_{1}}}{\alpha_{1}\tilde{\alpha_{1}}}=\frac{\alpha_{2}\tilde{\alpha_{1}}}{k}=\frac{\left(x_{1}x_{2}-y_{1}y_{2}d\right)+\sqrt{d}\left(x_{1}y_{2}-x_{2}y_{1}\right)}{k}$
+\end_inset
+
+, והמונה מתחלק ב
+\begin_inset Formula $k$
+\end_inset
+
+ כי
+\begin_inset Formula 
+\[
+\left(x_{1}x_{2}-y_{1}y_{2}d\right)+\sqrt{d}\left(x_{1}y_{2}-x_{2}y_{1}\right)\equiv\left(x_{1}x_{1}-y_{1}y_{2}d\right)+\sqrt{d}\left(x_{1}y_{1}-x_{1}y_{1}\right)\equiv k+0\equiv0\mod k
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $\frac{\alpha_{2}}{\alpha_{1}}\in\mathbb{Z}\left[\sqrt{d}\right]$
+\end_inset
+
+ כדרוש.
+\end_layout
+
+\begin_layout Corollary
+יש פתרון 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ עם 
+\begin_inset Formula $x+y\sqrt{d}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+כמו כן יש פתרון מינימלי מעל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+, 
+\begin_inset Formula $1<\varepsilon_{d}=x_{1}+y_{1}\sqrt{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+הראשון כי יש פתרון חיובי, והשני כי אם 
+\begin_inset Formula $x+y\sqrt{d}$
+\end_inset
+
+ פתרון חיובי אז יש מספר סופי של פתרונות בקטע 
+\begin_inset Formula $\left(1,x+y\sqrt{d}\right)$
+\end_inset
+
+ ולכן יש ביניהם מינימלי.
+\end_layout
+
+\begin_layout Theorem
+הפתרונות של משוואת פל הם 
+\begin_inset Formula $\left\{ \pm\varepsilon_{d}^{n}\mid n\in\mathbb{Z}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+לכל פתרון 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ מתאים פתרון חיובי על ידי שינוי סימן 
+\begin_inset Formula $\alpha=x+y\sqrt{d}$
+\end_inset
+
+.
+ כעת קיים 
+\begin_inset Formula $n\in\mathbb{Z}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\varepsilon_{d}^{n}\leq\alpha<\varepsilon_{d}^{n+1}$
+\end_inset
+
+, ואז 
+\begin_inset Formula $1\leq\frac{\alpha}{\varepsilon_{d}^{n}}<\varepsilon_{d}$
+\end_inset
+
+ ו
+\begin_inset Formula $\frac{\alpha}{\varepsilon_{d}^{n}}$
+\end_inset
+
+ פתרון כי הוא הפיך.
+ ממינימליות 
+\begin_inset Formula $\varepsilon_{d}$
+\end_inset
+
+ נובע 
+\begin_inset Formula $\frac{\alpha}{\varepsilon_{d}^{n}}=1$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $\alpha=\varepsilon_{d}^{n}$
+\end_inset
+
+, ולכן הפתרון המקורי הוא 
+\begin_inset Formula $\pm\varepsilon_{d}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
