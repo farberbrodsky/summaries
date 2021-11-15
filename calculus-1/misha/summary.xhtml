@@ -63,6 +63,14 @@ margin-left: 3ex;
 text-align: left;
 
 }
+h4.subsubsection {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.4ex;
+text-align: left;
+
+}
 div.toc {
   margin: 2em 0em;
   border-style: solid;
@@ -121,16 +129,25 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
 <div class='lyxtoc-2'><a href='#magicparlabel-52' class='tocentry'>2 חסמים עליונים ותחתונים</a>
 </div>
 
-<div class='lyxtoc-2'><a href='#magicparlabel-70' class='tocentry'>3 התחלה של סדרות</a>
+<div class='lyxtoc-2'><a href='#magicparlabel-70' class='tocentry'>3 סדרות</a>
 
 
 <div class='lyxtoc-3'><a href='#magicparlabel-75' class='tocentry'>3.1 הגדרת הגבול</a>
 </div>
 
-<div class='lyxtoc-3'><a href='#magicparlabel-85' class='tocentry'>3.2 חשבון גבולות</a>
+<div class='lyxtoc-3'><a href='#magicparlabel-86' class='tocentry'>3.2 חשבון גבולות</a>
 </div>
 
-<div class='lyxtoc-3'><a href='#magicparlabel-92' class='tocentry'>3.3 טענות על גבולות</a>
+<div class='lyxtoc-3'><a href='#magicparlabel-94' class='tocentry'>3.3 טענות על גבולות</a>
+</div>
+
+<div class='lyxtoc-3'><a href='#magicparlabel-100' class='tocentry'>3.4 מבחן ה])שורש()מנה([ )הגבולי(?</a>
+</div>
+
+<div class='lyxtoc-3'><a href='#magicparlabel-108' class='tocentry'>3.5 סדרות מונוטוניות</a>
+</div>
+
+<div class='lyxtoc-3'><a href='#magicparlabel-111' class='tocentry'>3.6 תתי סדרות</a>
 </div>
 </div>
 </div>
@@ -623,7 +640,7 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
  </mrow></math>.</div>
-<h2 class="section" id='magicparlabel-70'><span class="section_label">3</span> התחלה של סדרות</h2>
+<h2 class="section" id='magicparlabel-70'><span class="section_label">3</span> סדרות</h2>
 <div class="standard" id='magicparlabel-71'>נסמן סדרות ב-<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -902,8 +919,47 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
   </mrow>
  </mrow></math>.</div>
 </div></div>
-<h3 class="subsection" id='magicparlabel-85'><span class="subsection_label">3.2</span> חשבון גבולות</h3>
-<div class="standard" id='magicparlabel-86'>יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
+
+<div class="standard" id='magicparlabel-85'><b>סדרות קושי:</b> זהו תנאי שקול להתכנסות, שלא צריך לדעת בשבילו את <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>L</mi>
+ </mrow></math>:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi> &forall; </mi><mi> &epsiv; </mi><mo>&gt;</mo><mn>0.</mn><mi> &exist; </mi>
+   <msub>
+    <mrow><mi>n</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <mstyle mathvariant='double-struck'><mi>N</mi>
+   </mstyle><mn>.</mn><mi> &forall; </mi><mi>m</mi><mo>,</mo><mi>n</mi><mo> &ge; </mo>
+   <msub>
+    <mrow><mi>n</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>a</mi>
+     </mrow>
+     <mrow><mi>m</mi>
+     </mrow>
+    </msub><mo>-</mo>
+    <msub>
+     <mrow><mi>a</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>&lt;</mo><mi> &epsiv; </mi>
+  </mrow>
+ </mrow></math></div>
+<h3 class="subsection" id='magicparlabel-86'><span class="subsection_label">3.2</span> חשבון גבולות</h3>
+<div class="standard" id='magicparlabel-87'>יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -943,7 +999,7 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
   </mrow>
  </mrow></math>. אזי:</div>
 
-<ul class="itemize" id='magicparlabel-87'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul class="itemize" id='magicparlabel-88'><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -1021,8 +1077,43 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
  <mrow>
   <mrow><mi>b</mi><mo> &ne; </mo><mn>0</mn>
   </mrow>
+ </mrow></math>
+
+<ul class="itemize" id='magicparlabel-91'><li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &ne; </mo><mn>0</mn>
+  </mrow>
+ </mrow></math> לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>n</mi>
+ </mrow></math> ו-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>b</mi><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mfrac><mo> &rarr; </mo><mi> &infin; </mi>
+  </mrow>
  </mrow></math></li>
-<li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</ul>
+</li><li class="itemize_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
 
@@ -1067,8 +1158,8 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
  <mrow><mi>n</mi>
  </mrow></math></li>
 </ul>
-<h3 class="subsection" id='magicparlabel-92'><span class="subsection_label">3.3</span> טענות על גבולות</h3>
-<div class="standard" id='magicparlabel-93'><b>טענה:</b> יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
+<h3 class="subsection" id='magicparlabel-94'><span class="subsection_label">3.3</span> טענות על גבולות</h3>
+<div class="standard" id='magicparlabel-95'><b>טענה:</b> יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -1112,7 +1203,7 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
   </mrow>
  </mrow></math>.</div>
 
-<div class="standard" id='magicparlabel-94'><b>כלל הסנדוויץ':</b> יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-96'><b>כלל הסנדוויץ':</b> יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -1186,7 +1277,7 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
   </mrow>
  </mrow></math>.</div>
 
-<div class="standard" id='magicparlabel-95'><b>הרחבה:</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-97'><b>הרחבה:</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -1224,7 +1315,7 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
   </mrow>
  </mrow></math>.</div>
 
-<div class="standard" id='magicparlabel-96'><b>טענה:</b> תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-98'><b>טענה:</b> תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
   <msub>
@@ -1285,7 +1376,7 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
   </mrow>
  </mrow></math>.</div>
 
-<div class="standard" id='magicparlabel-97'><b>כלל השורש:</b> אם קיים <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-99'><b>כלל השורש:</b> אם קיים <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>0</mn><mo>&lt;</mo><mi> &alpha; </mi><mo>&lt;</mo><mn>1</mn>
   </mrow>
@@ -1320,6 +1411,684 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
    </msub><mo> &rarr; </mo><mn>0</mn>
   </mrow>
  </mrow></math>.</div>
+<h3 class="subsection" id='magicparlabel-100'><span class="subsection_label">3.4</span> מבחן ה])שורש()מנה([ )הגבולי(?</h3>
+<div class="standard" id='magicparlabel-101'><b>מבחן השורש:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &ge; </mo><mn>0</mn>
+  </mrow>
+ </mrow></math> וקיים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>0</mn><mo> &le; </mo><mi> &alpha; </mi><mo>&lt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math> כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow>
+     <mfrac bevelled='true'>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+    </mrow>
+   </msup><mo> &le; </mo><mi> &alpha; </mi>
+  </mrow>
+ </mrow></math> לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>n</mi>
+ </mrow></math>. אזי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> lim </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo> &rarr; </mo><mi> &infin; </mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="standard" id='magicparlabel-102'><b>מבחן השורש הגבולי:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> ו-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> lim </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo> &rarr; </mo><mi> &infin; </mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <msubsup>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+    <mrow>
+     <mfrac bevelled='true'>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+    </mrow>
+   </msubsup><mo>=</mo><mi>L</mi>
+  </mrow>
+ </mrow></math>. אזי,</div>
+
+<ul class="itemize" id='magicparlabel-103'><li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>L</mi><mo>&lt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>, אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> lim </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo> &rarr; </mo><mi> &infin; </mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math></li>
+<li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>L</mi><mo>&gt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>, אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> lim </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo> &rarr; </mo><mi> &infin; </mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mi> &infin; </mi>
+  </mrow>
+ </mrow></math></li>
+</ul>
+<div class="standard" id='magicparlabel-105'><b>משפט המנה הגבולי:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> ו-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> lim </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo> &rarr; </mo><mi> &infin; </mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow>
+       <mrow><mi>n</mi><mo>+</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mfrac><mo>=</mo><mi>L</mi>
+  </mrow>
+ </mrow></math>. אזי,</div>
+
+<ul class="itemize" id='magicparlabel-106'><li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>L</mi><mo>&lt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>, אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> lim </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo> &rarr; </mo><mi> &infin; </mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math></li>
+<li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>L</mi><mo>&gt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>, אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> lim </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo> &rarr; </mo><mi> &infin; </mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mi> &infin; </mi>
+  </mrow>
+ </mrow></math></li>
+</ul>
+<h3 class="subsection" id='magicparlabel-108'><span class="subsection_label">3.5</span> סדרות מונוטוניות</h3>
+<div class="standard" id='magicparlabel-109'><b>טענה:</b> תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> מונוטונית עולה וחסומה מלעיל. אזי: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &rarr; </mo><mo> sup </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="standard" id='magicparlabel-110'><b>טענה:</b> תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> מונוטונית עולה ולא חסומה מלעיל. אזי: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &rarr; </mo><mi> &infin; </mi>
+  </mrow>
+ </mrow></math>.</div>
+<h3 class="subsection" id='magicparlabel-111'><span class="subsection_label">3.6</span> תתי סדרות</h3>
+<div class="standard" style='text-align: left;' id='magicparlabel-112'><div class='Frameless' style='width: 95%; '><div class="plain_layout" id='magicparlabel-116'>תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> סדרה ו-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>n</mi>
+   </mrow>
+   <mrow><mi>k</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> סדרה עולה ממש של טבעיים. אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>k</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>n</mi>
+      </mrow>
+      <mrow><mi>k</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> תת סדרה של <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> ונסמן ב-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msubsup>
+   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <msub>
+     <mrow><mi>a</mi>
+     </mrow>
+     <mrow>
+      <msub>
+       <mrow><mi>n</mi>
+       </mrow>
+       <mrow><mi>k</mi>
+       </mrow>
+      </msub>
+     </mrow>
+    </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+   <mrow>
+    <mrow><mi>k</mi><mo>=</mo><mn>1</mn>
+    </mrow>
+   </mrow>
+   <mrow><mi> &infin; </mi>
+   </mrow>
+  </msubsup>
+ </mrow></math>.</div>
+</div></div>
+
+<div class="standard" id='magicparlabel-117'><b>משפט הירושה:</b> תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> סדרה ו-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow>
+    <msub>
+     <mrow><mi>n</mi>
+     </mrow>
+     <mrow><mi>k</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> תת-סדרה.</div>
+
+<ul class="itemize" id='magicparlabel-118'><li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &rarr; </mo><mi>L</mi>
+  </mrow>
+ </mrow></math> אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>n</mi>
+      </mrow>
+      <mrow><mi>k</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </msub><mo> &rarr; </mo><mi>L</mi>
+  </mrow>
+ </mrow></math></li>
+<li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+ </mrow></math> מונוטונית עולה אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow>
+    <msub>
+     <mrow><mi>n</mi>
+     </mrow>
+     <mrow><mi>k</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </msub>
+ </mrow></math> מונוטונית עולה</li>
+<li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+ </mrow></math> חסומה אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow>
+    <msub>
+     <mrow><mi>n</mi>
+     </mrow>
+     <mrow><mi>k</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </msub>
+ </mrow></math> חסומה</li>
+</ul>
+<div class="standard" id='magicparlabel-121'><div class='Shadowbox'><div class="plain_layout" id='magicparlabel-125'><b>משפט בולצנו-ויירשטראס:</b> לכל סדרה חסומה יש תת-סדרה מתכנסת ומונוטונית.</div>
+
+<div class="plain_layout" id='magicparlabel-126'>אם הסדרה לא חסומה יש תת-סדרה מונוטונית מתבדרת ל-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &plusmn; </mo><mi> &infin; </mi>
+  </mrow>
+ </mrow></math>.</div>
+</div></div>
+<h4 class="subsubsection" id='magicparlabel-127'><span class="subsubsection_label">3.6.1</span> גבולות חלקיים</h4>
+<div class="standard" id='magicparlabel-128'><b>הגדרה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>L</mi>
+ </mrow></math> יקרא גבול חלקי אם קיימת <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>n</mi>
+      </mrow>
+      <mrow><mi>k</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </msub><mo> &rarr; </mo><mi>L</mi>
+  </mrow>
+ </mrow></math>. נסמן ב-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mover>
+    <mrow>
+     <mstyle mathvariant='script'><mi>P</mi>
+     </mstyle>
+    </mrow><mo stretchy="true">&circ;</mo>
+   </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> את קבוצת הגבולות החלקיים, ונסמן ב-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='script'><mi>P</mi>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> את קבוצת הגבולות החלקיים בלי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &plusmn; </mo><mi> &infin; </mi>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="standard" id='magicparlabel-129'>בנוסף, נגדיר: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> limsup </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <mover>
+    <mrow><mo> lim </mo>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </mover>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mo> sup </mo>
+   <mover>
+    <mrow>
+     <mstyle mathvariant='script'><mi>P</mi>
+     </mstyle>
+    </mrow><mo stretchy="true">&circ;</mo>
+   </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo><mspace width="40px" /><mo> liminf </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <munder>
+    <mrow><mo> lim </mo>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </munder>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mo> inf </mo>
+   <mover>
+    <mrow>
+     <mstyle mathvariant='script'><mi>P</mi>
+     </mstyle>
+    </mrow><mo stretchy="true">&circ;</mo>
+   </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mspace width="20px" />
+  </mrow>
+ </mrow></math></div>
+
+<div class="standard" id='magicparlabel-130'><b>טענה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> מתכנסת במובן הרחב <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &#x27fa; </mo>
+ </mrow></math> יש גבול חלקי יחיד</div>
+
+<div class="standard" id='magicparlabel-131'><b>טענה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> אינה חסומה מלעיל/מלרע <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &#x27fa; </mo>
+ </mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo>-</mo><mi> &infin; </mi><mo>/</mo><mi> &infin; </mi>
+  </mrow>
+ </mrow></math> גבול חלקי</div>
+
+<div class="standard" id='magicparlabel-132'><b>טענה:</b> בסדרה חסומה <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> inf </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &le; </mo><mo> liminf </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &le; </mo><mo> limsup </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &le; </mo><mo> sup </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math></div>
 
 
 </body>
