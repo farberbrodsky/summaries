@@ -668,7 +668,7 @@ status open
 \end_layout
 
 \begin_layout Section
-התחלה של סדרות
+סדרות
 \end_layout
 
 \begin_layout Standard
@@ -847,6 +847,26 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+סדרות קושי:
+\series default
+ זהו תנאי שקול להתכנסות, שלא צריך לדעת בשבילו את 
+\begin_inset Formula $L$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\forall\e>0.\exists n_{0}\in\mathbb{N}.\forall m,n\ge n_{0}.\left|a_{m}-a_{n}\right|<\e
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 חשבון גבולות
 \end_layout
@@ -897,6 +917,28 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+אם 
+\begin_inset Formula $b_{n}\ne0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n$
+\end_inset
+
+ ו-
+\begin_inset Formula $b=0$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{1}{b_{n}}\to\infty$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $\left|a_{n}\right|\to\left|a\right|$
 \end_inset
@@ -1050,6 +1092,395 @@ status open
 .
 \end_layout
 
+\begin_layout Subsection
+מבחן ה[)שורש()מנה(] )הגבולי(?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן השורש:
+\series default
+ 
+\begin_inset Formula $a_{n}\ge0$
+\end_inset
+
+ וקיים 
+\begin_inset Formula $0\le\alpha<1$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left(a_{n}\right)^{\nicefrac{1}{n}}\le\alpha$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן השורש הגבולי:
+\series default
+ 
+\begin_inset Formula $a_{n}>0$
+\end_inset
+
+ ו-
+\begin_inset Formula $\lim_{n\to\infty}a_{n}^{\nicefrac{1}{n}}=L$
+\end_inset
+
+.
+ אזי,
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $L<1$
+\end_inset
+
+, אז 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $L>1$
+\end_inset
+
+, אז 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט המנה הגבולי:
+\series default
+ 
+\begin_inset Formula $a_{n}>0$
+\end_inset
+
+ ו-
+\begin_inset Formula $\lim_{n\to\infty}\frac{a_{n+1}}{a_{n}}=L$
+\end_inset
+
+.
+ אזי,
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $L<1$
+\end_inset
+
+, אז 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $L>1$
+\end_inset
+
+, אז 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+סדרות מונוטוניות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ מונוטונית עולה וחסומה מלעיל.
+ אזי: 
+\begin_inset Formula $a_{n}\to\sup a_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ מונוטונית עולה ולא חסומה מלעיל.
+ אזי: 
+\begin_inset Formula $a_{n}\to\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+תתי סדרות
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ סדרה ו-
+\begin_inset Formula $\left(n_{k}\right)$
+\end_inset
+
+ סדרה עולה ממש של טבעיים.
+ אז 
+\begin_inset Formula $b_{k}=a_{n_{k}}$
+\end_inset
+
+ תת סדרה של 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ ונסמן ב-
+\begin_inset Formula $\left(a_{n_{k}}\right)_{k=1}^{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הירושה:
+\series default
+ תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ סדרה ו-
+\begin_inset Formula $\left(a_{n_{k}}\right)$
+\end_inset
+
+ תת-סדרה.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a_{n}\to L$
+\end_inset
+
+ אז 
+\begin_inset Formula $a_{n_{k}}\to L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ מונוטונית עולה אז 
+\begin_inset Formula $a_{n_{k}}$
+\end_inset
+
+ מונוטונית עולה
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ חסומה אז 
+\begin_inset Formula $a_{n_{k}}$
+\end_inset
+
+ חסומה
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "2pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+משפט בולצנו-ויירשטראס:
+\series default
+ לכל סדרה חסומה יש תת-סדרה מתכנסת ומונוטונית.
+\end_layout
+
+\begin_layout Plain Layout
+אם הסדרה לא חסומה יש תת-סדרה מונוטונית מתבדרת ל-
+\begin_inset Formula $\pm\infty$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+גבולות חלקיים
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ יקרא גבול חלקי אם קיימת 
+\begin_inset Formula $a_{n_{k}}\to L$
+\end_inset
+
+.
+ נסמן ב-
+\begin_inset Formula $\hat{\mathcal{P}}\left(a_{n}\right)$
+\end_inset
+
+ את קבוצת הגבולות החלקיים, ונסמן ב-
+\begin_inset Formula $\mathcal{P}\left(a_{n}\right)$
+\end_inset
+
+ את קבוצת הגבולות החלקיים בלי 
+\begin_inset Formula $\pm\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בנוסף, נגדיר: 
+\begin_inset Formula $\limsup a_{n}=\overline{\lim}a_{n}=\sup\hat{\mathcal{P}}\left(a_{n}\right),\qquad\liminf a_{n}=\underline{\lim}a_{n}=\inf\hat{\mathcal{P}}\left(a_{n}\right)\quad$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ מתכנסת במובן הרחב 
+\begin_inset Formula $\iff$
+\end_inset
+
+ יש גבול חלקי יחיד
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ אינה חסומה מלעיל/מלרע 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $-\infty/\infty$
+\end_inset
+
+ גבול חלקי
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ בסדרה חסומה 
+\begin_inset Formula $\inf a_{n}\le\liminf a_{n}\le\limsup a_{n}\le\sup a_{n}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status open
@@ -1082,7 +1513,7 @@ status open
 \uwave default
 \noun default
 \color inherit
-14
+24
 \family roman
 \series medium
 \shape up
