@@ -1430,6 +1430,105 @@ status open
 \begin_inset Formula $\limsup a_{n}=\overline{\lim}a_{n}=\sup\hat{\mathcal{P}}\left(a_{n}\right),\qquad\liminf a_{n}=\underline{\lim}a_{n}=\inf\hat{\mathcal{P}}\left(a_{n}\right)\quad$
 \end_inset
 
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "85col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "2pt"
+shadowsize "4pt"
+framecolor "darkgray"
+backgroundcolor "lightgray"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+הערה:
+\series default
+ על פי בולצנו-ויירשטראס, תמיד קיים גבול חלקי
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "2pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+טענה שימושית:
+\series default
+ תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ חסומה.
+ 
+\begin_inset Formula $\iff L=\limsup a_{n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+, 
+\begin_inset Formula $a_{n}<L+\e$
+\end_inset
+
+ כמעט תמיד )חוץ ממספר סופי של איברים(
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+, 
+\begin_inset Formula $L-\e<a_{n}$
+\end_inset
+
+ תופעה שכיחה )באינסוף איברים(
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1442,11 +1541,15 @@ status open
 \begin_inset Formula $\left(a_{n}\right)$
 \end_inset
 
- מתכנסת במובן הרחב 
-\begin_inset Formula $\iff$
+ חסומה 
+\begin_inset Formula $\impliedby$
 \end_inset
 
- יש גבול חלקי יחיד
+ 
+\begin_inset Formula $\limsup a_{n},\liminf a_{n}$
+\end_inset
+
+ קיימים והם גבולות חלקיים.
 \end_layout
 
 \begin_layout Standard
@@ -1474,11 +1577,621 @@ status open
 \series bold
 טענה:
 \series default
- בסדרה חסומה 
+ 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ מתכנסת במובן הרחב 
+\begin_inset Formula $\iff$
+\end_inset
+
+ יש גבול חלקי יחיד
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ בסדרה חסומה, 
 \begin_inset Formula $\inf a_{n}\le\liminf a_{n}\le\limsup a_{n}\le\sup a_{n}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+קבוצה סגורה:
+\series default
+ תהי 
+\begin_inset Formula $B\subseteq\mathbb{R}$
+\end_inset
+
+ קבוצה.
+ נאמר ש-
+\begin_inset Formula $B$
+\end_inset
+
+ קבוצה סגורה אם לכל סדרה 
+\begin_inset Formula $\left(x_{n}\right)\subseteq B$
+\end_inset
+
+, 
+\begin_inset Formula $x_{n}\to x\implies x\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+משפט:
+\series default
+ אם 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ חסומה אז 
+\begin_inset Formula $\mathcal{P}\left(a_{n}\right)$
+\end_inset
+
+ קבוצה סגורה.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+טורים
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ סדרה.
+ נגדיר את סדרת הסכומים החלקיים 
+\begin_inset Formula $s_{n}=\sum_{k=1}^{n}a_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+הגדרה:
+\series default
+ נאמר ש-
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}$
+\end_inset
+
+ מתכנס 
+\begin_inset Formula $\iff$
+\end_inset
+
+ סדרת הסכומים החלקיים 
+\begin_inset Formula $s_{n}$
+\end_inset
+
+ מתכנסת.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "85col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "2pt"
+shadowsize "4pt"
+framecolor "darkgray"
+backgroundcolor "lightgray"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+הערה:
+\series default
+ הטור הוא עצם נפרד מסדרת הסכומים החלקיים, אסור לבלבל ביניהם
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הטור הגיאומטרי:
+\series default
+ 
+\begin_inset Formula $\sum_{n=0}^{\infty}q^{n}=\frac{1}{1-q}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $\left|q\right|<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ אם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס אז 
+\begin_inset Formula $a_{n}\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קריטריון קושי להתכנסות טורים:
+\series default
+ 
+\begin_inset Formula ${\displaystyle \forall\e>0.\exists n_{0}.\forall m\ge n_{0}.\forall p\in\mathbb{N}.\left|\sum_{k=m}^{m+p}a_{k}\right|<\e}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חשבון טורים:
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\sum a_{n}=K,\sum b_{n}=L$
+\end_inset
+
+ מתכנסים אז 
+\begin_inset Formula $\sum\left(a_{n}+b_{n}\right)=K+L$
+\end_inset
+
+ מתכנס
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\sum a_{n}=L,\alpha\in\mathbb{R}$
+\end_inset
+
+ מתכנס אז 
+\begin_inset Formula $\sum\alpha a_{n}=\alpha L$
+\end_inset
+
+ מתכנס
+\end_layout
+
+\begin_layout Subsection
+טור חיובי
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+נאמר ש-
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ 
+\series bold
+טור חיובי
+\series default
+ אם 
+\begin_inset Formula $a_{n}\ge0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ טור חיובי מתכנס 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $s_{n}$
+\end_inset
+
+ חסומה מלעיל
+\end_layout
+
+\begin_layout Subsection
+מבחן ה[)השוואה()שורש()מנה(] )הגבולי(? )לטורים חיוביים(?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון:
+\series default
+ יהיו 
+\begin_inset Formula $\sum a_{n},\sum b_{n}$
+\end_inset
+
+ טורים.
+ אם החל ממקום מסוים, 
+\begin_inset Formula $a_{n}\ge b_{n}$
+\end_inset
+
+, נסמן 
+\begin_inset Formula $\sum a_{n}\succcurlyeq\sum b_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן ההשוואה לטורים חיוביים:
+\series default
+ יהיו 
+\begin_inset Formula $\sum a_{n},\sum b_{n}$
+\end_inset
+
+ טורים חיוביים כך ש-
+\begin_inset Formula $\sum a_{n}\succcurlyeq\sum b_{n}$
+\end_inset
+
+.
+ אז:
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס, 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ מתכנס
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ מתבדר, 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתבדר
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן השורש לטורים חיוביים:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור חיובי ויהי 
+\begin_inset Formula $0<q<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אם החל ממקום מסוים, 
+\begin_inset Formula $\sqrt[n]{a_{n}}<q$
+\end_inset
+
+, אז 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן המנה לטורים חיוביים:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור חיובי כך ש-
+\begin_inset Formula $a_{n}>0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם קיים 
+\begin_inset Formula $0<q<1$
+\end_inset
+
+ כך שהחל ממקום מסוים 
+\begin_inset Formula $\frac{a_{n+1}}{a_{n}}<q$
+\end_inset
+
+ אז הטור מתכנס
+\end_layout
+
+\begin_layout Enumerate
+אם החל ממקום מסוים 
+\begin_inset Formula $\frac{a_{n+1}}{a_{n}}\ge1$
+\end_inset
+
+ אז הטור מתבדר
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן המנה הגבולי לטורים חיוביים:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור חיובי כך ש-
+\begin_inset Formula $a_{n}>0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\limsup\frac{a_{n+1}}{a_{n}}<1$
+\end_inset
+
+, 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\liminf\frac{a_{n+1}}{a_{n}}>1$
+\end_inset
+
+, 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתבדר
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן השורש הגבולי:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור חיובי.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\limsup\sqrt[n]{a_{n}}<1$
+\end_inset
+
+ אז 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\limsup\sqrt[n]{a_{n}}>1$
+\end_inset
+
+ אז 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתבדר
+\end_layout
+
+\begin_layout Subsection
+טור מתכנס בהחלט
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+נאמר ש-
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ 
+\series bold
+מתכנס בהחלט
+\series default
+ אם 
+\begin_inset Formula $\sum\left|a_{n}\right|$
+\end_inset
+
+ מתכנס.
+\end_layout
+
+\begin_layout Plain Layout
+אם טור לא מתכנס בהחלט נאמר שהוא 
+\begin_inset Quotes eld
+\end_inset
+
+
+\series bold
+מתכנס בתנאי
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ אם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס בהחלט אז 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס
 \end_layout
 
 \begin_layout Standard
@@ -1513,7 +2226,7 @@ status open
 \uwave default
 \noun default
 \color inherit
-24
+28
 \family roman
 \series medium
 \shape up
