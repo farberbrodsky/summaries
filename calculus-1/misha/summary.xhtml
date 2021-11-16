@@ -71,6 +71,13 @@ margin-bottom: 0.4ex;
 text-align: left;
 
 }
+ol.enumerate {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
 div.toc {
   margin: 2em 0em;
   border-style: solid;
@@ -112,6 +119,10 @@ td {
 }
 div.Frameless { margin: 1em; }
 div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
+div.Boxed {
+	border: solid thick black;
+	padding: 0.5ex;
+}
 
 
 </style>
@@ -148,6 +159,19 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
 </div>
 
 <div class='lyxtoc-3'><a href='#magicparlabel-111' class='tocentry'>3.6 תתי סדרות</a>
+</div>
+</div>
+
+<div class='lyxtoc-2'><a href='#magicparlabel-152' class='tocentry'>4 טורים</a>
+
+
+<div class='lyxtoc-3'><a href='#magicparlabel-170' class='tocentry'>4.1 טור חיובי</a>
+</div>
+
+<div class='lyxtoc-3'><a href='#magicparlabel-177' class='tocentry'>4.2 מבחן ה])השוואה()שורש()מנה([ )הגבולי(? )לטורים חיוביים(?</a>
+</div>
+
+<div class='lyxtoc-3'><a href='#magicparlabel-193' class='tocentry'>4.3 טור מתכנס בהחלט</a>
 </div>
 </div>
 </div>
@@ -2024,9 +2048,12 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mspace width="20px" />
   </mrow>
- </mrow></math></div>
+ </mrow></math>.</div>
 
-<div class="standard" id='magicparlabel-130'><b>טענה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" style='text-align: center;' id='magicparlabel-130'><div class='Boxed' style='width: 85%; '><div class="plain_layout" id='magicparlabel-134'><b>הערה:</b> על פי בולצנו-ויירשטראס, תמיד קיים גבול חלקי</div>
+</div></div>
+
+<div class="standard" id='magicparlabel-135'><div class='Shadowbox'><div class="plain_layout" id='magicparlabel-139'><b>טענה שימושית:</b> תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
   <msub>
@@ -2037,11 +2064,83 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
   </msub>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
- </mrow></math> מתכנסת במובן הרחב <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mo> &#x27fa; </mo>
- </mrow></math> יש גבול חלקי יחיד</div>
+ </mrow></math> חסומה. <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &#x27fa; </mo><mi>L</mi><mo>=</mo><mo> limsup </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>:</div>
 
-<div class="standard" id='magicparlabel-131'><b>טענה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-140'><li class="enumerate_item">לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi> &epsiv; </mi><mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>&lt;</mo><mi>L</mi><mo>+</mo><mi> &epsiv; </mi>
+  </mrow>
+ </mrow></math> כמעט תמיד )חוץ ממספר סופי של איברים(</li>
+<li class="enumerate_item">לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi> &epsiv; </mi><mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>L</mi><mo>-</mo><mi> &epsiv; </mi><mo>&lt;</mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> תופעה שכיחה )באינסוף איברים(</li>
+</ol>
+</div></div>
+
+<div class="standard" id='magicparlabel-142'><b>טענה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> חסומה <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &#x27F8; </mo>
+ </mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> limsup </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>,</mo><mo> liminf </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> קיימים והם גבולות חלקיים.</div>
+
+<div class="standard" id='magicparlabel-143'><b>טענה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
   <msub>
@@ -2060,7 +2159,22 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
   </mrow>
  </mrow></math> גבול חלקי</div>
 
-<div class="standard" id='magicparlabel-132'><b>טענה:</b> בסדרה חסומה <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-144'><b>טענה:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> מתכנסת במובן הרחב <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &#x27fa; </mo>
+ </mrow></math> יש גבול חלקי יחיד</div>
+
+<div class="standard" id='magicparlabel-145'><b>טענה:</b> בסדרה חסומה, <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo> inf </mo>
    <msub>
@@ -2089,6 +2203,800 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
    </msub>
   </mrow>
  </mrow></math></div>
+
+<div class="standard" id='magicparlabel-146'><div class='Boxed'><div class="plain_layout" id='magicparlabel-150'><b>קבוצה סגורה:</b> תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>B</mi><mo> &sube; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math> קבוצה. נאמר ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>B</mi>
+ </mrow></math> קבוצה סגורה אם לכל סדרה <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>x</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> &sube; </mo><mi>B</mi>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>x</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &rarr; </mo><mi>x</mi><mo> &#x27F9; </mo><mi>x</mi><mo> &isin; </mo><mi>B</mi>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="plain_layout" id='magicparlabel-151'><b>משפט:</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> חסומה אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='script'><mi>P</mi>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> קבוצה סגורה.</div>
+</div></div>
+<h2 class="section" id='magicparlabel-152'><span class="section_label">4</span> טורים</h2>
+<div class="standard" style='text-align: left;' id='magicparlabel-153'><div class='Frameless' style='width: 95%; '><div class="plain_layout" id='magicparlabel-157'>תהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> סדרה. נגדיר את סדרת הסכומים החלקיים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>k</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msubsup>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>k</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="plain_layout" id='magicparlabel-158'><b>הגדרה:</b> נאמר ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>k</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi> &infin; </mi>
+    </mrow>
+   </msubsup>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>k</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &#x27fa; </mo>
+ </mrow></math> סדרת הסכומים החלקיים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>s</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+ </mrow></math> מתכנסת.</div>
+</div></div>
+
+<div class="standard" style='text-align: center;' id='magicparlabel-159'><div class='Boxed' style='width: 85%; '><div class="plain_layout" id='magicparlabel-163'><b>הערה:</b> הטור הוא עצם נפרד מסדרת הסכומים החלקיים, אסור לבלבל ביניהם</div>
+</div></div>
+
+<div class="standard" id='magicparlabel-164'><b>הטור הגיאומטרי:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo>=</mo><mn>0</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi> &infin; </mi>
+    </mrow>
+   </msubsup>
+   <msup>
+    <mrow><mi>q</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msup><mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow>
+     <mrow><mn>1</mn><mo>-</mo><mi>q</mi>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math> עבור <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>q</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>&lt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="standard" id='magicparlabel-165'><b>טענה:</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &rarr; </mo><mn>0</mn>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="standard" id='magicparlabel-166'><b>קריטריון קושי להתכנסות טורים:</b> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mstyle displaystyle='true' scriptlevel='0'>
+   <mrow><mi> &forall; </mi><mi> &epsiv; </mi><mo>&gt;</mo><mn>0.</mn><mi> &exist; </mi>
+    <msub>
+     <mrow><mi>n</mi>
+     </mrow>
+     <mrow><mn>0</mn>
+     </mrow>
+    </msub><mn>.</mn><mi> &forall; </mi><mi>m</mi><mo> &ge; </mo>
+    <msub>
+     <mrow><mi>n</mi>
+     </mrow>
+     <mrow><mn>0</mn>
+     </mrow>
+    </msub><mn>.</mn><mi> &forall; </mi><mi>p</mi><mo> &isin; </mo>
+    <mstyle mathvariant='double-struck'><mi>N</mi>
+    </mstyle><mn>.</mn><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+    <mrow>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>k</mi><mo>=</mo><mi>m</mi>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>m</mi><mo>+</mo><mi>p</mi>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>k</mi>
+      </mrow>
+     </msub>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>&lt;</mo><mi> &epsiv; </mi>
+   </mrow>
+  </mstyle>
+ </mrow></math></div>
+
+<div class="standard" id='magicparlabel-167'><b>חשבון טורים:</b></div>
+
+<ul class="itemize" id='magicparlabel-168'><li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mi>K</mi><mo>,</mo><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mi>L</mi>
+  </mrow>
+ </mrow></math> מתכנסים אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>a</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub><mo>+</mo>
+    <msub>
+     <mrow><mi>b</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mi>K</mi><mo>+</mo><mi>L</mi>
+  </mrow>
+ </mrow></math> מתכנס</li>
+<li class="itemize_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mi>L</mi><mo>,</mo><mi> &alpha; </mi><mo> &isin; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math> מתכנס אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo><mi> &alpha; </mi>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>=</mo><mi> &alpha; </mi><mi>L</mi>
+  </mrow>
+ </mrow></math> מתכנס</li>
+</ul>
+<h3 class="subsection" id='magicparlabel-170'><span class="subsection_label">4.1</span> טור חיובי</h3>
+<div class="standard" style='text-align: left;' id='magicparlabel-171'><div class='Frameless' style='width: 95%; '><div class="plain_layout" id='magicparlabel-175'>נאמר ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> <b>טור חיובי</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &ge; </mo><mn>0</mn>
+  </mrow>
+ </mrow></math> לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>n</mi>
+ </mrow></math></div>
+</div></div>
+
+<div class="standard" id='magicparlabel-176'><b>משפט:</b> טור חיובי מתכנס <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &#x27fa; </mo>
+ </mrow></math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>s</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+ </mrow></math> חסומה מלעיל</div>
+<h3 class="subsection" id='magicparlabel-177'><span class="subsection_label">4.2</span> מבחן ה])השוואה()שורש()מנה([ )הגבולי(? )לטורים חיוביים(?</h3>
+<div class="standard" id='magicparlabel-178'><b>סימון:</b> יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>,</mo><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> טורים. אם החל ממקום מסוים, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &ge; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, נסמן <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &sccue; </mo><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="standard" id='magicparlabel-179'><b>מבחן ההשוואה לטורים חיוביים:</b> יהיו <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>,</mo><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> טורים חיוביים כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo> &sccue; </mo><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>. אז:</div>
+
+<ol class="enumerate" id='magicparlabel-180'><li class="enumerate_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס</li>
+<li class="enumerate_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתבדר, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתבדר</li>
+</ol>
+<div class="standard" id='magicparlabel-182'><b>מבחן השורש לטורים חיוביים:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> טור חיובי ויהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>0</mn><mo>&lt;</mo><mi>q</mi><mo>&lt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>.</div>
+
+<div class="standard" id='magicparlabel-183'>אם החל ממקום מסוים, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mroot>
+    <msub>
+     <mrow><mi>a</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub><mi>n</mi>
+   </mroot><mo>&lt;</mo><mi>q</mi>
+  </mrow>
+ </mrow></math>, אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס.</div>
+
+<div class="standard" id='magicparlabel-184'><b>מבחן המנה לטורים חיוביים:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> טור חיובי כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>n</mi>
+ </mrow></math>.</div>
+
+<ol class="enumerate" id='magicparlabel-185'><li class="enumerate_item">אם קיים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>0</mn><mo>&lt;</mo><mi>q</mi><mo>&lt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math> כך שהחל ממקום מסוים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow>
+       <mrow><mi>n</mi><mo>+</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mfrac><mo>&lt;</mo><mi>q</mi>
+  </mrow>
+ </mrow></math> אז הטור מתכנס</li>
+<li class="enumerate_item">אם החל ממקום מסוים <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow>
+       <mrow><mi>n</mi><mo>+</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mfrac><mo> &ge; </mo><mn>1</mn>
+  </mrow>
+ </mrow></math> אז הטור מתבדר</li>
+</ol>
+<div class="standard" id='magicparlabel-187'><b>מבחן המנה הגבולי לטורים חיוביים:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> טור חיובי כך ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mo>&gt;</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> לכל <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>n</mi>
+ </mrow></math>.</div>
+
+<ol class="enumerate" id='magicparlabel-188'><li class="enumerate_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> limsup </mo>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow>
+       <mrow><mi>n</mi><mo>+</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mfrac><mo>&lt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס</li>
+<li class="enumerate_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> liminf </mo>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow>
+       <mrow><mi>n</mi><mo>+</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mfrac><mo>&gt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתבדר</li>
+</ol>
+<div class="standard" id='magicparlabel-190'><b>מבחן השורש הגבולי:</b> יהי <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> טור חיובי.</div>
+
+<ol class="enumerate" id='magicparlabel-191'><li class="enumerate_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> limsup </mo>
+   <mroot>
+    <msub>
+     <mrow><mi>a</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub><mi>n</mi>
+   </mroot><mo>&lt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math> אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס</li>
+<li class="enumerate_item">אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> limsup </mo>
+   <mroot>
+    <msub>
+     <mrow><mi>a</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub><mi>n</mi>
+   </mroot><mo>&gt;</mo><mn>1</mn>
+  </mrow>
+ </mrow></math> אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתבדר</li>
+</ol>
+<h3 class="subsection" id='magicparlabel-193'><span class="subsection_label">4.3</span> טור מתכנס בהחלט</h3>
+<div class="standard" style='text-align: left;' id='magicparlabel-194'><div class='Frameless' style='width: 95%; '><div class="plain_layout" id='magicparlabel-198'>נאמר ש-<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> <b>מתכנס בהחלט</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+  </mrow>
+ </mrow></math> מתכנס.</div>
+
+<div class="plain_layout" id='magicparlabel-199'>אם טור לא מתכנס בהחלט נאמר שהוא &ldquo;<b>מתכנס בתנאי</b>&rdquo;</div>
+</div></div>
+
+<div class="standard" id='magicparlabel-200'><b>טענה:</b> אם <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס בהחלט אז <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> &sum; </mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> מתכנס</div>
 
 
 </body>
