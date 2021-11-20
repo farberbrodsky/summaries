@@ -1902,6 +1902,23 @@ status open
  חסומה מלעיל
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור חיובי.
+ אם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס, אז כל טור שמתקבל מסידור מחדש של האיברים בו גם מתכנס ולאותו הגבול.
+\end_layout
+
 \begin_layout Subsection
 מבחן ה[)השוואה()שורש()מנה(] )הגבולי(? )לטורים חיוביים(?
 \end_layout
@@ -2195,70 +2212,469 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "2pt"
+framecolor "black"
+backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-אני בעמוד
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
+
+\series bold
+טענה שימושית:
 \series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-28
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
+ נסמן 
+\begin_inset Formula $\overline{a}_{n}=\frac{\left|a_{n}\right|+a_{n}}{2},\underline{a}_{n}=\frac{\left|a_{n}\right|-a_{n}}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle" tabularwidth="30col%">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{n}\ge0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overline{a}_{n}=a_{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\underline{a}_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{n}\le0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overline{a}_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\underline{a}_{n}=-a_{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+ומתקיים ש-
+\begin_inset Formula $a_{n}=\overline{a}_{n}-\underline{a}_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+טענה:
 \series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-של המחברת שלי
+ אם 
+\begin_inset Formula $\sum\overline{a}_{n},\sum\underline{a}_{n}$
+\end_inset
+
+ מתכנסים אז 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס בהחלט.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+טענה:
+\series default
+ אם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס בתנאי, אז 
+\begin_inset Formula $\sum\overline{a}_{n},\sum\underline{a_{n}}\to\infty$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+טענות נוספות על טורים
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה )הכנסת סוגריים(:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור מתכנס ו-
+\begin_inset Formula $n_{k}$
+\end_inset
+
+ סדרה עולה של אינדקסים.
+ נסמן 
+\begin_inset Formula $A_{1}=a_{1}+\dots+a_{n_{1}},A_{2}=a_{n_{1}+1}+\dots+a_{n_{2}},\dots$
+\end_inset
+
+.
+ אז הטור 
+\begin_inset Formula $\sum A_{n}$
+\end_inset
+
+ מתכנס ולאותו הגבול.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה הפוכה:
+\series default
+ תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ סדרה ו-
+\begin_inset Formula $n_{k}$
+\end_inset
+
+ סדרה עולה של אינדקסים.
+ אם כל האיברים בתוך כל סוגריים, 
+\begin_inset Formula $\left(a_{j}\right)_{n_{k}+1}^{n_{k+1}}$
+\end_inset
+
+, בעלי אותו סימן אז הטענה ההפוכה נכונה - אם 
+\begin_inset Formula $\sum A_{n}$
+\end_inset
+
+ מתכנס אז 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שימוש:
+\series default
+ בתנאים הנכונים, 
+\begin_inset Formula $\sum a_{n}=\left(a_{1}+a_{2}\right)+\left(a_{3}+a_{4}+a_{5}\right)+\dots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט לייבניץ על טורים מתכנסים:
+\series default
+ תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ סדרה אי-שלילית יורדת ל-
+\begin_inset Formula $0$
+\end_inset
+
+.
+ אזי הטור 
+\begin_inset Formula $\sum\left(-1\right)^{n}a_{n}$
+\end_inset
+
+ מתכנס.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ יהיו 
+\begin_inset Formula $\left(a_{n}\right),\left(b_{n}\right)$
+\end_inset
+
+ סדרות.
+ 
+\begin_inset Formula $\sum a_{n}b_{n}$
+\end_inset
+
+ מתכנס אם אחד מהניסוחים הבאים מתקיים:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תנאי
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Dirichlet
+\lang hebrew
+:
+\series default
+ 
+\begin_inset Formula $b_{n}\nearrow0$
+\end_inset
+
+ או 
+\begin_inset Formula $b_{n}\searrow0$
+\end_inset
+
+ ו-
+\begin_inset Formula $\left|s_{n}^{a}\right|<M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תנאי
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Abel
+\lang hebrew
+:
+\series default
+ 
+\begin_inset Formula $b_{n}\searrow$
+\end_inset
+
+ או 
+\begin_inset Formula $b_{n}\nearrow$
+\end_inset
+
+ ו-
+\begin_inset Formula $\left|b_{n}\right|<M$
+\end_inset
+
+ ו-
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Riemann
+\lang hebrew
+:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור מתכנס בתנאי.
+ אזי לכל 
+\begin_inset Formula $-\infty\le s\le\infty$
+\end_inset
+
+ ניתן לסדר את איברי הטור כך שיתכנס ל-
+\begin_inset Formula $s$
+\end_inset
+
+ או שאפילו לא יתכנס במובן הרחב.
 \end_layout
 
 \end_body
