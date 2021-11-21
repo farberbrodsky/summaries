@@ -2387,6 +2387,258 @@ status open
 \end_layout
 
 \begin_layout Subsection
+טורי חזקות
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+טור חזקות הוא טור מהצורה 
+\begin_inset Formula $\sum a_{n}x^{n}$
+\end_inset
+
+ )או 
+\begin_inset Formula $\sum a_{n}\left(x-x_{0}\right)^{n}$
+\end_inset
+
+, אבל פחות מתייחסים אליו(.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+טור חזקות בהכרח מתכנס באיזשהו 
+\begin_inset Formula $x$
+\end_inset
+
+, למשל 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Abel
+\lang hebrew
+:
+\series default
+ לכל טור חזקות 
+\begin_inset Formula $\sum a_{n}x^{n}$
+\end_inset
+
+ קיים 
+\begin_inset Quotes eld
+\end_inset
+
+מספר
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $R\in\left[0,\infty\right]$
+\end_inset
+
+ )שנקרא רדיוס ההתכנסות( כך שלכל 
+\begin_inset Formula $x\in\left(-R,R\right)$
+\end_inset
+
+ הטור מתכנס בהחלט, ול-
+\begin_inset Formula $x>R,x<-R$
+\end_inset
+
+ הטור מתבדר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Cauchy-Hadamard
+\lang hebrew
+:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}x^{n}$
+\end_inset
+
+ טור חזקות, רדיוס ההתכנסות הוא: 
+\begin_inset Formula ${\displaystyle R=\frac{1}{\limsup\left|a_{n}\right|^{\nicefrac{1}{n}}}}$
+\end_inset
+
+ )כאשר 
+\begin_inset Formula $\frac{1}{0}=\infty,\frac{1}{\infty}=0$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "85col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "2pt"
+shadowsize "4pt"
+framecolor "darkgray"
+backgroundcolor "lightgray"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+הערה:
+\series default
+ משפט
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Abel
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לא מתייחס ל-
+\begin_inset Formula $\pm R$
+\end_inset
+
+, צריך לבדוק עבורם בנפרד
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 טענות נוספות על טורים
 \end_layout
 
@@ -2675,6 +2927,472 @@ Riemann
 \end_inset
 
  או שאפילו לא יתכנס במובן הרחב.
+\end_layout
+
+\begin_layout Section
+פונקציות
+\end_layout
+
+\begin_layout Subsection
+הגדרת הגבול
+\end_layout
+
+\begin_layout Standard
+בשביל 
+\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)$
+\end_inset
+
+ נדרוש ש-
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ מוגדרת בסביבה נקובה כלשהי.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row topspace="2pt" bottomspace="2pt">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}f\left(x\right)=L}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall\e>0.\exists\delta>0.\forall x\in\left(x_{0}-\delta,x_{0}+\delta\right)\setminus\left\{ x_{0}\right\} .\left|f\left(x\right)-L\right|<\e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Cauchy
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2pt" bottomspace="2pt">
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+לכל 
+\begin_inset Formula $\left(x_{n}\right)\subseteq I\setminus\left\{ x_{0}\right\} $
+\end_inset
+
+ ו-
+\begin_inset Formula $I$
+\end_inset
+
+ סביבה נקובה, אם 
+\begin_inset Formula $x_{n}\to x_{0}$
+\end_inset
+
+ אז 
+\begin_inset Formula $f\left(x_{n}\right)\to L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Heine
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2pt" bottomspace="2pt">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}^{+}}f\left(x\right)=L}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall\e>0.\exists\delta>0.\forall x\in\left(x_{0},x_{0}+\delta\right).\left|f\left(x\right)-L\right|<\e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Cauchy
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2pt" bottomspace="2pt">
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(x_{n}\right)\subseteq I\setminus\left\{ x_{0}\right\} $
+\end_inset
+
+ ו-
+\begin_inset Formula $x_{0}<x_{n}\to x_{0}$
+\end_inset
+
+ אז 
+\begin_inset Formula $f\left(x_{n}\right)\to L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Heine
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2pt" bottomspace="2pt">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \lim_{x\to\infty}f\left(x\right)=L}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall\e>0.\exists M>0.\forall x>M.\left|f\left(x\right)-L\right|<\e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Cauchy
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2pt" bottomspace="2pt">
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{n}\to\infty$
+\end_inset
+
+ אז 
+\begin_inset Formula $f\left(x_{n}\right)\to L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Heine
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2pt" bottomspace="2pt">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}^{+}}f\left(x\right)=-\infty}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall M>0.\exists\delta>0.\forall x\in\left(x_{0},x_{0}+\delta\right).f\left(x\right)<-M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Cauchy
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2pt" bottomspace="2pt">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(x_{n}\right)\subseteq I\setminus\left\{ x_{0}\right\} $
+\end_inset
+
+ ו-
+\begin_inset Formula $x_{0}<x_{n}\to x_{0}$
+\end_inset
+
+ אז 
+\begin_inset Formula $f\left(x_{n}\right)\to-\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\lang english
+Heine
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+חשבון גבולות )דומה לסדרות(
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $f,g:I\setminus\left\{ x_{0}\right\} \to\mathbb{R}$
+\end_inset
+
+ ו-
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}f\left(x\right)=L_{1},\lim_{x\to x_{0}}g\left(x\right)=L_{2}}$
+\end_inset
+
+.
+ אזי:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}}f\left(x\right)+g\left(x\right)=L_{1}+L_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}}f\left(x\right)\cdot g\left(x\right)=L_{1}\cdot L_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $L_{2}\ne0$
+\end_inset
+
+ )ואם קיימת סביבה נקובה בה 
+\begin_inset Formula $g\left(x\right)\ne0$
+\end_inset
+
+(: 
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}\frac{f\left(x\right)}{g\left(x\right)}=\frac{L_{1}}{L_{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט )הרכבה(:
+\series default
+ יהיו 
+\begin_inset Formula $I,J$
+\end_inset
+
+ קטעים פתוחים ו-
+\begin_inset Formula $x_{0}\in I,y_{0}\in J$
+\end_inset
+
+.
+ תהיינה 
+\begin_inset Formula $f:I\setminus\left\{ x_{0}\right\} \to J\setminus\left\{ y_{0}\right\} $
+\end_inset
+
+ ו-
+\begin_inset Formula $g:J\setminus\left\{ x_{0}\right\} \to\mathbb{R}$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}}f\left(x\right)=y_{0}$
+\end_inset
+
+ ו-
+\begin_inset Formula ${\displaystyle \lim_{y\to y_{0}}}g\left(y\right)=L$
+\end_inset
+
+, אז: 
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}}g\left(f\left(x\right)\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+גבולות שימושיים
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פולינומים:
+\series default
+ בגלל ש-
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}x=x_{0}}$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}\frac{p\left(x\right)}{q\left(x\right)}=\frac{p\left(x_{0}\right)}{q\left(x_{0}\right)}}$
+\end_inset
+
+ )מחשבון גבולות(.
 \end_layout
 
 \end_body
