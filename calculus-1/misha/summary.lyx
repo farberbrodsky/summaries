@@ -1068,30 +1068,6 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-כלל השורש:
-\series default
- אם קיים 
-\begin_inset Formula $0<\alpha<1$
-\end_inset
-
- כך שלכל 
-\begin_inset Formula $n$
-\end_inset
-
-, 
-\begin_inset Formula $0\le a_{n}^{\nicefrac{1}{n}}\le\alpha$
-\end_inset
-
-, אז 
-\begin_inset Formula $a_{n}\to0$
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Subsection
 מבחן ה[)שורש()מנה(] )הגבולי(?
 \end_layout
