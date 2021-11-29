@@ -3371,5 +3371,299 @@ Heine
  )מחשבון גבולות(.
 \end_layout
 
+\begin_layout Standard
+עבור 
+\begin_inset Formula $a>0$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{x\to\infty}a^{\nicefrac{1}{x}}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lim_{x\to0}\frac{\sin\left(x\right)}{x}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+רציפות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח ויהי 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+.
+ תהי 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+.
+ אז:
+\end_layout
+
+\begin_layout Itemize
+נאמר ש-
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ אם 
+\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)=f\left(x_{0}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+נאמר ש-
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $I$
+\end_inset
+
+ אם 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה בכל נקודה ב-
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רציפה מימין/שמאל:
+\series default
+ תהי 
+\begin_inset Formula $f:\io ab\to\mathbb{R}$
+\end_inset
+
+, אז 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה מימין ב-
+\begin_inset Formula $a$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\lim_{x\to a^{+}}f\left(x\right)=f\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה מימין ומשמאל ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מיון נקודות אי רציפות:
+\series default
+ תהי 
+\begin_inset Formula $f$
+\end_inset
+
+ מוגדרת ב-
+\begin_inset Formula $I$
+\end_inset
+
+ ו-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ נקודה פנימית.
+\end_layout
+
+\begin_layout Enumerate
+אם קיים 
+\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)$
+\end_inset
+
+ אבל 
+\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)\ne f\left(x_{0}\right)$
+\end_inset
+
+, נאמר שיש ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 
+\series bold
+אי רציפות סליקה
+\series default
+ כי אפשר לסלק אותה עם החלפת ערך אחד.
+\end_layout
+
+\begin_layout Enumerate
+אם קיימים 
+\begin_inset Formula $\lim_{x\to x_{0}^{+}}f\left(x\right),\lim_{x\to x_{0}^{-}}f\left(x\right)$
+\end_inset
+
+ אבל 
+\begin_inset Formula $\lim_{x\to x_{0}^{+}}f\left(x\right)\ne\lim_{x\to x_{0}^{-}}f\left(x\right)$
+\end_inset
+
+ נאמר שיש נקודת אי-רציפות 
+\series bold
+ממין ראשון
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)$
+\end_inset
+
+ אינו קיים מכל סיבה אחרת, היא 
+\series bold
+ממין שני
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ תהי 
+\begin_inset Formula $f:\left(a,b\right)\to\mathbb{R}$
+\end_inset
+
+ עולה.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $f$
+\end_inset
+
+ חסומה מלעיל: 
+\begin_inset Formula $\lim_{x\to b^{-}}f\left(x\right)=\sup\left(f\left(a,b\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $f$
+\end_inset
+
+ אינה חסומה מלעיל ב-
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+: 
+\begin_inset Formula $\lim_{x\to b^{-}}f\left(x\right)=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ תהי 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ פונקציה מונוטונית, 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח ו-
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+.
+ אזי קיימים וסופיים 
+\begin_inset Formula $\lim_{x\to x_{0}^{+}}f\left(x\right),\lim_{x\to x_{0}^{-}}f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
