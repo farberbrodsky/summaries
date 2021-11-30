@@ -1068,6 +1068,46 @@ status open
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+משפט )שטולץ(:
+\series default
+ יהיו 
+\begin_inset Formula $a_{n},b_{n}$
+\end_inset
+
+ סדרות כך ש-
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ מונוטונית עולה ו-
+\begin_inset Formula $b_{n}\to\infty$
+\end_inset
+
+, או ש-
+\begin_inset Formula $a_{n},b_{n}$
+\end_inset
+
+ סדרות מונוטוניות מתכנסות ל-
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי, אם 
+\begin_inset Formula ${\displaystyle \lim_{n\to\infty}\frac{a_{n+1}-a_{n}}{b_{n+1}-b_{n}}=L}$
+\end_inset
+
+ במובן הרחב אז 
+\begin_inset Formula ${\displaystyle \lim_{n\to\infty}\frac{a_{n}}{b_{n}}=L}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 מבחן ה[)שורש()מנה(] )הגבולי(?
 \end_layout
@@ -1177,6 +1217,50 @@ status open
 \end_inset
 
 , אז 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט המנה הכללי:
+\series default
+ 
+\begin_inset Formula $a_{n}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם קיים 
+\begin_inset Formula $L<1$
+\end_inset
+
+ כך שהחל ממקום מסוים 
+\begin_inset Formula $a_{n+1}<La_{n}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+אם קיים 
+\begin_inset Formula $L>1$
+\end_inset
+
+ כך שהחל ממקום מסוים 
+\begin_inset Formula $a_{n+1}>La_{n}$
+\end_inset
+
+ אז 
 \begin_inset Formula $\lim_{n\to\infty}a_{n}=\infty$
 \end_inset
 
