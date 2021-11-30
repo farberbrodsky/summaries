@@ -1598,6 +1598,34 @@ status open
 טענה:
 \series default
  
+\begin_inset Formula $L$
+\end_inset
+
+ גבול חלקי של 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ n\mid\left|a_{n}-L\right|<\e\right\} $
+\end_inset
+
+ אינסופית
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ 
 \begin_inset Formula $\left(a_{n}\right)$
 \end_inset
 
@@ -1609,7 +1637,7 @@ status open
 \begin_inset Formula $\limsup a_{n},\liminf a_{n}$
 \end_inset
 
- קיימים והם גבולות חלקיים.
+ קיימים והם גבולות חלקיים
 \end_layout
 
 \begin_layout Standard
@@ -2911,18 +2939,10 @@ Abel
 :
 \series default
  
-\begin_inset Formula $b_{n}\searrow$
+\begin_inset Formula $b_{n}$
 \end_inset
 
- או 
-\begin_inset Formula $b_{n}\nearrow$
-\end_inset
-
- ו-
-\begin_inset Formula $\left|b_{n}\right|<M$
-\end_inset
-
- ו-
+ מונוטונית וחסומה ו-
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
