@@ -3459,7 +3459,7 @@ Heine
 גבולות שימושיים
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 
 \series bold
 פולינומים:
@@ -3475,7 +3475,7 @@ Heine
  )מחשבון גבולות(.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 עבור 
 \begin_inset Formula $a>0$
 \end_inset
@@ -3487,7 +3487,7 @@ Heine
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 \begin_inset Formula $\lim_{x\to0}\frac{\sin\left(x\right)}{x}=1$
 \end_inset
 
@@ -3554,6 +3554,117 @@ Heine
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חשבון רציפות )נובע מחשבון גבולות(:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח ו-
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+ )נכון גם לחד-צדדי(, ויהיו 
+\begin_inset Formula $f,g:I\to\mathbb{R}$
+\end_inset
+
+ רציפות.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f+g$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f\cdot g$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $g\left(x_{0}\right)\ne0$
+\end_inset
+
+ אז 
+\begin_inset Formula $\frac{f}{g}$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט )הרכבה(:
+\series default
+ יהיו 
+\begin_inset Formula $f:A\to\mathbb{R},g:B\to\mathbb{R},x_{0}\in A$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $B\subseteq f\left(A\right)$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ו-
+\begin_inset Formula $g$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $g\left(x_{0}\right)$
+\end_inset
+
+, אז 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3747,6 +3858,31 @@ height "0.5pt"
 \begin_layout Standard
 
 \series bold
+משפט:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל ותהי 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ רציפה ומונוטונית חזק.
+ אזי 
+\begin_inset Formula $f\left(I\right)$
+\end_inset
+
+ קטע מוכלל ו-
+\begin_inset Formula $f^{-1}:f\left(I\right)\to I$
+\end_inset
+
+ רציפה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 טענה:
 \series default
  תהי 
@@ -3767,6 +3903,218 @@ height "0.5pt"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Riemann
+\lang hebrew
+:
+\series default
+ 
+\begin_inset Formula ${\displaystyle R\left(x\right)=\begin{cases}
+\frac{1}{q} & x=\frac{p}{q},p\in\mathbb{Z},q\in\mathbb{N},\gcd\left(p,q\right)=1\\
+0 & x\notin\mathbb{Q}
+\end{cases}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מתקיים ש-
+\begin_inset Formula $\lim_{x\to x_{0}}R\left(x\right)=0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, ולכן פונקציית רימן 
+\series bold
+רציפה באי-רציונאלים ואינה רציפה ברציונאלים
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "2pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+משפט ויירשטראס:
+\series default
+ תהי 
+\begin_inset Formula $f:\left[a,b\right]\to\mathbb{R}$
+\end_inset
+
+ רציפה.
+ אזי: 
+\begin_inset Formula $f$
+\end_inset
+
+ חסומה ומשיגה את חסמיה )כלומר משיגה מינימום ומקסימום בקטע(.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+משפט ערך הביניים של קושי:
+\series default
+ תהי 
+\begin_inset Formula $f:\left[a,b\right]\to\mathbb{R}$
+\end_inset
+
+ פונקציה רציפה ויהי 
+\begin_inset Formula $f\left(a\right)\le t\le f\left(b\right)$
+\end_inset
+
+.
+ אזי קיים 
+\begin_inset Formula $x\in\left[a,b\right]$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $f\left(x\right)=t$
+\end_inset
+
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+מסקנה:
+\series default
+ אם 
+\begin_inset Formula $f:\left[a,b\right]\to\mathbb{R}$
+\end_inset
+
+ רציפה אז 
+\begin_inset Formula $f\left[a,b\right]$
+\end_inset
+
+ קטע סגור.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קטע מוכלל:
+\series default
+ אם 
+\begin_inset Formula $x_{1},x_{2}\in I$
+\end_inset
+
+ אז כל מספר ביניהם )
+\begin_inset Formula $\lambda x_{1}+\left(1-\lambda\right)x_{2}$
+\end_inset
+
+( גם ב-
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ אם 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ רציפה ו-
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל אז 
+\begin_inset Formula $f\left(I\right)$
+\end_inset
+
+ קטע מוכלל.
 \end_layout
 
 \end_body
