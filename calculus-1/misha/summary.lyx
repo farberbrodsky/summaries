@@ -4117,5 +4117,150 @@ status open
  קטע מוכלל.
 \end_layout
 
+\begin_layout Subsection
+רציפות במ
+\begin_inset Quotes erd
+\end_inset
+
+ש )במידה שווה(
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ תהי 
+\begin_inset Formula $f:A\to\mathbb{R}$
+\end_inset
+
+, נאמר ש-
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במידה שווה ב-
+\begin_inset Formula $A$
+\end_inset
+
+ אם לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x,y\in A$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left|x-y\right|<\delta\implies\left|f\left(x\right)-f\left(y\right)\right|<\e
+\]
+
+\end_inset
+
+
+\series bold
+משפט קנטור:
+\series default
+ תהי 
+\begin_inset Formula $f:\left[a,b\right]\to\mathbb{R}$
+\end_inset
+
+ רציפה, אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש ב-
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ אם 
+\begin_inset Formula $f:\io 0{\infty}$
+\end_inset
+
+ רציפה כך שקיים וסופי 
+\begin_inset Formula $\lim_{x\to\infty}f\left(x\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש.
+\end_layout
+
+\begin_layout Subsection
+נגזרת
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $f$
+\end_inset
+
+ מוגדרת בקטע פתוח 
+\begin_inset Formula $I$
+\end_inset
+
+ ו-
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+.
+ אם קיים וסופי 
+\begin_inset Formula $\lim_{x\to x_{0}}\frac{f\left(x\right)-f\left(x_{0}\right)}{x-x_{0}}=\lim_{h\to0}\frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}$
+\end_inset
+
+ )הגדרות שקולות(, נאמר ש-
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ונסמן את הגבול ב-
+\begin_inset Formula $f^{\prime}\left(x_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ פונקציה גזירה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
