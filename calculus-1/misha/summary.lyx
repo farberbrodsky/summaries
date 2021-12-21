@@ -4262,5 +4262,793 @@ status open
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "2pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+משפט רול:
+\series default
+ תהי 
+\begin_inset Formula $f:\left[a,b\right]\to\mathbb{R}$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ וגזירה ב-
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $f\left(a\right)=f\left(b\right)$
+\end_inset
+
+ אז קיים 
+\begin_inset Formula $c\in\left(a,b\right)$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $f^{\prime}\left(c\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+משפט
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Lagrange
+\lang hebrew
+:
+\series default
+ תהי 
+\begin_inset Formula $f:\left[a,b\right]\to\mathbb{R}$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ וגזירה ב-
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+.
+ קיימת 
+\begin_inset Formula $c\in\left(a,b\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f^{\prime}\left(c\right)=\frac{f\left(b\right)-f\left(a\right)}{b-a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+המשפטים האלה חזקים כי הם מקשרים בין הנגזרת לבין ערכים קונקרטיים של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים:
+\series default
+ אם 
+\begin_inset Formula $f,f^{\left(1\right)},\dots,f^{\left(n-1\right)}$
+\end_inset
+
+ גזירות בסביבה של 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, ו-
+\begin_inset Formula $f^{\left(n\right)}$
+\end_inset
+
+ גזירה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל לייבניץ:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח, 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+ ו-
+\begin_inset Formula $f,g:I\to\mathbb{R}$
+\end_inset
+
+ גזירות 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ אז:
+\begin_inset Formula 
+\[
+\left(f\cdot g\right)^{\left(n\right)}=\sum_{k=0}^{n}\binom{n}{k}f^{\left(k\right)}\left(x_{0}\right)\cdot g^{\left(n-k\right)}\left(x_{0}\right)
+\]
+
+\end_inset
+
+שזו הכללה של הכלל 
+\begin_inset Formula $\left(f\cdot g\right)^{\prime}=f^{\prime}\cdot g+g^{\prime}\cdot f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל השרשרת:
+\series default
+ תהי 
+\begin_inset Formula $x_{0}\in\mathbb{R}$
+\end_inset
+
+ ו-
+\begin_inset Formula $U$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $X_{0}$
+\end_inset
+
+.
+ תהי 
+\begin_inset Formula $f:U\to\mathbb{R}$
+\end_inset
+
+ גזירה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ותהי 
+\begin_inset Formula $g:V\to\mathbb{R}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $f\left(U\right)\subseteq V$
+\end_inset
+
+ גזירה ב-
+\begin_inset Formula $f\left(x_{0}\right)=y_{0}$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $g\left(f\left(x_{0}\right)\right)$
+\end_inset
+
+ גזירה ומתקיים:
+\begin_inset Formula 
+\[
+\left(g\left(f\left(x_{0}\right)\right)\right)^{\prime}=g^{\prime}\left(f\left(x_{0}\right)\right)\cdot f^{\prime}\left(x_{0}\right)
+\]
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+מדריך למהנדסים
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\alpha f\left(x\right)+\beta g\left(x\right)\right)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha f^{\prime}\left(x\right)+\beta g^{\prime}\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(f\left(g\left(x\right)\right)\right)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f^{\prime}\left(g\left(x\right)\right)\cdot g^{\prime}\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(f\left(x\right)\cdot g\left(x\right)\right)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f^{\prime}\left(x\right)\cdot g\left(x\right)+g^{\prime}\left(x\right)\cdot f\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\frac{f\left(x\right)}{g\left(x\right)}\right)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{f^{\prime}\left(x\right)\cdot g\left(x\right)-g^{\prime}\left(x\right)\cdot f\left(x\right)}{\left(g\left(x\right)\right)^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(x^{n}\right)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $n\cdot x^{n-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\ln x\right)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\sin\left(x\right)\right)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\cos\left(x\right)\right)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\sin\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל ותהיינה 
+\begin_inset Formula $f,g:I\to\mathbb{R}$
+\end_inset
+
+ רציפות ב-
+\begin_inset Formula $I$
+\end_inset
+
+ וגזירות בפנימו.
+ אם 
+\begin_inset Formula $f^{\prime}\left(x\right)=g^{\prime}\left(x\right)$
+\end_inset
+
+ בפנימו אז קיים 
+\begin_inset Formula $c$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+f\left(x\right)=g\left(x\right)+c
+\]
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+דיפרנציאביליות:
+\series default
+ תהי 
+\begin_inset Formula $f$
+\end_inset
+
+ מוגדרת ב-
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח ו-
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+.
+ נאמר ש-
+\begin_inset Formula $f$
+\end_inset
+
+ דיפרנציאבילית ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ אם:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+קיים ישר 
+\begin_inset Formula $ax+b$
+\end_inset
+
+ שהוא קירוב ראשון ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ )כלומר, 
+\begin_inset Formula $\lim_{x\to x_{0}}\frac{f\left(x\right)-\left(ax+b\right)}{x-x_{0}}=0$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ דיפרנציאבלית ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ גזירה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ הקירוב הוא 
+\begin_inset Formula $y=f^{\prime}\left(x_{0}\right)\left(x-x_{0}\right)+f\left(x_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט: 
+\series default
+יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח, 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+, 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ 
+\bar under
+מונוטונית חזק ורציפה
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ אז 
+\begin_inset Formula $f^{-1}:f\left(I\right)\to\mathbb{R}$
+\end_inset
+
+ גזירה ב-
+\begin_inset Formula $y_{0}=f\left(x_{0}\right)$
+\end_inset
+
+ ו: 
+\begin_inset Formula $\left(f^{-1}\left(y_{0}\right)\right)^{\prime}=\frac{1}{f^{\prime}\left(x_{0}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+מינימום/מקסימום מקומי
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+ פנימית מינימום מקומי אם לכל 
+\begin_inset Formula $x\in\left(x_{0}-\delta,x_{0}+\delta\right)$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(x\right)\ge f\left(x_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט 
+\lang english
+Fermat
+\lang hebrew
+:
+\series default
+\color gray
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל ותהי 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+ פנימית.
+ תהי 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ גזירה בכל נקודה פנימית ב-
+\begin_inset Formula $I$
+\end_inset
+
+.
+ 
+\bar under
+\color black
+אם 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ מינימום/מקסימום מקומי אז 
+\begin_inset Formula $f^{\prime}\left(x_{0}\right)=0$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
