@@ -4398,6 +4398,103 @@ height "0.5pt"
 \begin_layout Standard
 
 \series bold
+משפט ערך הביניים של
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Darboux
+\lang hebrew
+:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל ותהי 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ גזירה.
+ יהיו 
+\begin_inset Formula $u,v\in I$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $f^{\prime}\left(u\right)\ne f^{\prime}\left(v\right)$
+\end_inset
+
+.
+ אזי לכל 
+\begin_inset Formula $c$
+\end_inset
+
+ בין 
+\begin_inset Formula $f^{\prime}\left(u\right)$
+\end_inset
+
+ ל-
+\begin_inset Formula $f^{\prime}\left(v\right)$
+\end_inset
+
+ קיים 
+\begin_inset Formula $w$
+\end_inset
+
+ בין 
+\begin_inset Formula $u$
+\end_inset
+
+ ל-
+\begin_inset Formula $v$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $f^{\prime}\left(w\right)=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+כלומר, למרות שנגזרת לא בהכרח רציפה, היא עדיין תמיד מקיימת את משפט ערך הביניים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 גזירה 
 \begin_inset Formula $n$
 \end_inset
@@ -4827,6 +4924,59 @@ f\left(x\right)=g\left(x\right)+c
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.4ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ תהי 
+\begin_inset Formula $f:\io ab\to\mathbb{R}$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $\io ab$
+\end_inset
+
+ וגזירה ב-
+\begin_inset Formula $\oo ab$
+\end_inset
+
+.
+ כמו כן קיים וסופי 
+\begin_inset Formula $\lim_{x\to a^{+}}f^{\prime}\left(x\right)=l$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה מימין ב-
+\begin_inset Formula $a$
+\end_inset
+
+ ומתקיים: 
+\begin_inset Formula $f_{+}^{\prime}\left(a\right)=l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset line
 LatexCommand rule
 offset "0.4ex"
@@ -4984,7 +5134,11 @@ height "0.5pt"
 \end_layout
 
 \begin_layout Subsection
-מינימום/מקסימום מקומי
+חקירת פונקציות
+\end_layout
+
+\begin_layout Subsubsection
+מינימום ומקסימום מקומי
 \end_layout
 
 \begin_layout Standard
@@ -5010,14 +5164,12 @@ height "0.5pt"
 \begin_layout Standard
 
 \series bold
-\color black
 משפט 
 \lang english
 Fermat
 \lang hebrew
 :
 \series default
-\color gray
  יהי 
 \begin_inset Formula $I$
 \end_inset
@@ -5038,7 +5190,6 @@ Fermat
 .
  
 \bar under
-\color black
 אם 
 \begin_inset Formula $x_{0}$
 \end_inset
@@ -5048,6 +5199,341 @@ Fermat
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל, 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+ פנימית, 
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה פעמיים ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ו-
+\begin_inset Formula $f^{\prime}\left(x_{0}\right)=0$
+\end_inset
+
+.
+ אזי, 
+\bar under
+אם 
+\begin_inset Formula $f^{\prime\prime}\left(x_{0}\right)>0$
+\end_inset
+
+ אז 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ מינימום מקומי, אם 
+\begin_inset Formula $f^{\prime\prime}\left(x_{0}\right)<0$
+\end_inset
+
+ אז 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ מקסימום מקומי, ואחרת לא ידוע
+\bar default
+.
+\end_layout
+
+\begin_layout Subsubsection
+עליה וירידה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל, 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ רציפה וגזירה בפנים 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ אם לכל 
+\begin_inset Formula $x$
+\end_inset
+
+ בפנים 
+\begin_inset Formula $I$
+\end_inset
+
+, 
+\begin_inset Formula $f^{\prime}\left(x\right)\ge0$
+\end_inset
+
+ )
+\begin_inset Formula $>$
+\end_inset
+
+(, אז 
+\begin_inset Formula $f$
+\end_inset
+
+ עולה )ממש( בכל 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ תהי 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ גזירה ו-
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+ נקודה פנימית.
+ אם 
+\begin_inset Formula $f^{\prime}$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ו-
+\begin_inset Formula $f^{\prime}\left(x_{0}\right)>0$
+\end_inset
+
+ אז קיימת סביבה של 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ בה 
+\begin_inset Formula $f$
+\end_inset
+
+ עולה ממש.
+\end_layout
+
+\begin_layout Subsection
+כלל לופיטל
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $\frac{"0"}{"0"}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל ו-
+\begin_inset Formula $f,g$
+\end_inset
+
+ גזירות בסביבה נקובה של 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ כך שמתקיימים התנאים הבאים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[1.]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[2.]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lim_{x\to x_{0}}g\left(x\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[3.]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $g^{\prime}\left(x\right)\ne0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[4.]
+\end_layout
+
+\end_inset
+
+קיים 
+\begin_inset Formula $\lim_{x\to x_{0}}\frac{f^{\prime}\left(x\right)}{g^{\prime}\left(x\right)}$
+\end_inset
+
+ )סופי או אינסופי(
+\end_layout
+
+\begin_layout Standard
+אז 
+\begin_inset Formula $\lim_{x\to x_{0}}\frac{f\left(x\right)}{g\left(x\right)}=\lim_{x\to x_{0}}\frac{f^{\prime}\left(x\right)}{g^{\prime}\left(x\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $\frac{"\infty"}{"\infty"}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל ו-
+\begin_inset Formula $f,g$
+\end_inset
+
+ גזירות בסביבה נקובה של 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ כך שמתקיימים התנאים הבאים:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[2.]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lim_{x\to x_{0}}g\left(x\right)=\pm\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[3.]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $g^{\prime}\left(x\right)\ne0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[4.]
+\end_layout
+
+\end_inset
+
+קיים 
+\begin_inset Formula $\lim_{x\to x_{0}}\frac{f^{\prime}\left(x\right)}{g^{\prime}\left(x\right)}$
+\end_inset
+
+ )סופי או אינסופי(
+\end_layout
+
+\begin_layout Standard
+אז 
+\begin_inset Formula $\lim_{x\to x_{0}}\frac{f\left(x\right)}{g\left(x\right)}=\lim_{x\to x_{0}}\frac{f^{\prime}\left(x\right)}{g^{\prime}\left(x\right)}$
+\end_inset
+
+
 \end_layout
 
 \end_body
