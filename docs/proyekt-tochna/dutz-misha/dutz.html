@@ -1,0 +1,76 @@
+<html> <head><meta charset=utf-8><title>Summaries - /proyekt-tochna/dutz-misha/dutz</title><link href="https://fonts.googleapis.com/icon?family=Material+Icons&family=Open+Sans" rel=stylesheet><link href=/folderstyle.css rel=stylesheet><style>
+    body {
+      margin: 0;
+    }
+    #lyxhtml {
+      margin: 0 12px;
+    }
+	</style></head> <body dir=rtl> <a style="background: #4078f3; color: white; font-size: 16px; padding: 8px; position: absolute; top: 0; left: 0;" href=/proyekt-tochna/dutz-misha/dutz.pdf>מצב PDF</a> <!-- <div id="pdf"></div> --> <div id=lyxhtml> <h2 class=section id=magicparlabel-1><span class=section_label>1</span> numpy</h2> <div class=float-listings><pre class="listings Python"># creating arrays
+np.array([1, 2, 3])
+np.array([[1, 7]]).shape == (1, 2)
+np.array([[1, 7]]).ndim == 2  # dimension
+np.array([[1, 7]]).dtype == &ldquo;int64&rdquo;
+np.array([1, 2], dtype=np.float64)
+
+np.zeros((3, 2, 5))  # all zeros, shape is 3, 2, 5
+# that is 3 arrays of 2 arrays of 5 items
+np.ones((3, 2, 5))
+np.full((3, 2, 5), 7)  # all filled with 7
+np.eye(3)              # identity matrix
+np.array_equal(np.arange(1, 11, 2),  # like range
+               np.array([1, 3, 5, 7, 9]))
+np.arange(1, 7).reshape(3, 2)  # [[1,2],[3,4],[5,6]]
+
+# sum
+a = np.array([[1, 2, 3], [4, 5, 6]])
+np.sum(a, axis=0) == [5, 7, 9]
+np.sum(a, axis=1) == [6, 15]
+np.sum(a) ==         21  # sum of all items
+
+# slicing
+a = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+a[:2, 1:3]    # [[2, 3], [6, 7]]
+a[2, 1:3]     # [10, 11]
+a[[0, 2], 0]  # [1, 9]
+
+# operators
+x + y, np.add(x, y), x - y, np.subtract(x, y), x * y,
+np.multiply(x, y), x / y, np.divide(x, y), np.sqrt(x)
+
+# example of slicing and operators
+a = np.array([[1, 2], [3, 4], [5,6]])
+b = np.array([1, 0])
+c = np.zeros_like(a)  # like a.shape
+for i in range(a.shape[0]):
+	c[i, :] = a[i, :] + b
+# c is [[2, 2], [4, 4], [6, 6]]
+
+# linear algebra
+x = np.array([[1, 2], [3, 4]])
+v = np.array([9, 10])
+x.dot(v), x @ v  # [29, 67]
+
+np.linalg.inv(x)  # inverse matrix
+x.T               # transpose</pre></div> <h2 class=section id=magicparlabel-53><span class=section_label>2</span> pandas</h2> <div class=float-listings><pre class="listings Python">names = pd.Series([&ldquo;A&rdquo;, &ldquo;B&rdquo;, &ldquo;C&rdquo;])
+popul = pd.Series([852469, 1015785, 485199])
+pd.DataFrame({&ldquo;City Name&rdquo;:names,&rdquo;Population&rdquo;:popul})
+# if the series length doesn't match the rest is NaN
+# you can only check for it with pd.isna, don't do it
+df = pd.read_csv(&ldquo;filename.csv&rdquo;)
+df[&ldquo;country&rdquo;] == &ldquo;Israel&rdquo;  # lots of booleans
+df[(df[&ldquo;country&rdquo;]==&ldquo;Israel&rdquo;) &amp; (df[&ldquo;population&rdquo;]&gt;7000)]  # only relevant rows
+df[&ldquo;country&rdquo;][10]  # country of 11th row
+
+# iloc is by index, loc is by column labels
+df.iloc[-1]    # last row
+df.iloc[:, 0]  # first column
+df.loc[103:107, &ldquo;country&rdquo;]
+df = df.set_index(0), df = df.set_index(&ldquo;country&rdquo;),
+  df = df.reset_index()  # change the index
+
+# groupby
+df.groupby([&ldquo;Team&rdquo;]).Salary.mean()  # averages of salaries
+# groupby, groupby.Salary returns a DataFrameGroupBy
+# and SeriesGroupBy, which are special objects
+# NOT DONE WITH THIS, page 5 in lesson 7,
+# i literally can't take it right now</pre></div> </div> </body> </html>
