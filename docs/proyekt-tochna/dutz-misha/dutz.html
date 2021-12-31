@@ -72,5 +72,42 @@ df = df.set_index(0), df = df.set_index(&ldquo;country&rdquo;),
 df.groupby([&ldquo;Team&rdquo;]).Salary.mean()  # averages of salaries
 # groupby, groupby.Salary returns a DataFrameGroupBy
 # and SeriesGroupBy, which are special objects
-# NOT DONE WITH THIS, page 5 in lesson 7,
-# i literally can't take it right now</pre></div> </div> </body> </html>
+df.groupby([&ldquo;Team&rdquo;, &ldquo;Position&rdquo;]).Name.count().head(15)
+
+# merge
+# default is to use intersection of keys from both
+pd.merge(df1, df2, on=&rdquo;id&rdquo;)
+# use only keys from left, may add nans
+pd.merge(df1, df2, how=&rdquo;left&rdquo;, on=&rdquo;id&rdquo;)
+# how=&rdquo;outer&rdquo; is for the union of all keys, may add nans
+# on can also be a list
+pd.concat([df1, df2])  # combine the rows of both tables
+
+# apply
+capitalizer = lambda x: x.capitalize()
+df[&ldquo;A&rdquo;] = df[&ldquo;A&rdquo;].apply(capitalizer)</pre></div> <h2 class=section id=magicparlabel-93><span class=section_label>3</span> קבצים</h2> <div class=float-listings><pre class="listings C">FILE *fopen(const char *filename, const char *mode);
+// returns NULL on failure
+int fclose(FILE *fp);
+// returns 0 on success or EOF on failure
+int fgetc(FILE *fp);
+// EOF on end of file or error, otherwise the character
+int fputc(int c, FILE *fp);
+// EOF on error, otherwise the same character
+int fprintf(FILE *fp, const char *format, ...);
+// returns the number of characters printed
+// fprintf(stdout, ...) is equivalent to printf(...)
+int fscanf(FILE *fp, const char *format, ...);
+// returns the number of successful inputs
+int feof(FILE *fp);
+// non-zero when end of file reached
+char *fgets(char *s, int size, FILE *fp);
+// appends '\0', stops on EOF or newline,
+// returns NULL when no characters have been read
+int fputs(char *s, FILE *fp);
+// without \0, EOF on error, non-negative on success
+int fflush(FILE *fp);
+// flushes writing, returns 0 on success and EOF on error
+
+int sprintf(char *s, const char *format, ...);
+int sscanf(char *s, const char *format, ...);
+// like fprintf and scanf but into a string</pre></div> </div> </body> </html>
