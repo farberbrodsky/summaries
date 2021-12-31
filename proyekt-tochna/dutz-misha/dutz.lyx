@@ -595,12 +595,282 @@ Team
 
 \begin_layout Plain Layout
 
-# NOT DONE WITH THIS, page 5 in lesson 7,
+df.groupby([
+\begin_inset Quotes eld
+\end_inset
+
+Team
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Position
+\begin_inset Quotes erd
+\end_inset
+
+]).Name.count().head(15)
 \end_layout
 
 \begin_layout Plain Layout
 
-# i literally can't take it right now
+\end_layout
+
+\begin_layout Plain Layout
+
+# merge
+\end_layout
+
+\begin_layout Plain Layout
+
+# default is to use intersection of keys from both
+\end_layout
+
+\begin_layout Plain Layout
+
+pd.merge(df1, df2, on=
+\begin_inset Quotes erd
+\end_inset
+
+id
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+# use only keys from left, may add nans
+\end_layout
+
+\begin_layout Plain Layout
+
+pd.merge(df1, df2, how=
+\begin_inset Quotes erd
+\end_inset
+
+left
+\begin_inset Quotes erd
+\end_inset
+
+, on=
+\begin_inset Quotes erd
+\end_inset
+
+id
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+# how=
+\begin_inset Quotes erd
+\end_inset
+
+outer
+\begin_inset Quotes erd
+\end_inset
+
+ is for the union of all keys, may add nans
+\end_layout
+
+\begin_layout Plain Layout
+
+# on can also be a list
+\end_layout
+
+\begin_layout Plain Layout
+
+pd.concat([df1, df2])  # combine the rows of both tables
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# apply
+\end_layout
+
+\begin_layout Plain Layout
+
+capitalizer = lambda x: x.capitalize()
+\end_layout
+
+\begin_layout Plain Layout
+
+df[
+\begin_inset Quotes eld
+\end_inset
+
+A
+\begin_inset Quotes erd
+\end_inset
+
+] = df[
+\begin_inset Quotes eld
+\end_inset
+
+A
+\begin_inset Quotes erd
+\end_inset
+
+].apply(capitalizer)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+קבצים
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\footnotesize\ttfamily},showstringspaces=false,tabsize=4,commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em,morekeywords={np}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FILE *fopen(const char *filename, const char *mode);
+\end_layout
+
+\begin_layout Plain Layout
+
+// returns NULL on failure
+\end_layout
+
+\begin_layout Plain Layout
+
+int fclose(FILE *fp);
+\end_layout
+
+\begin_layout Plain Layout
+
+// returns 0 on success or EOF on failure
+\end_layout
+
+\begin_layout Plain Layout
+
+int fgetc(FILE *fp);
+\end_layout
+
+\begin_layout Plain Layout
+
+// EOF on end of file or error, otherwise the character
+\end_layout
+
+\begin_layout Plain Layout
+
+int fputc(int c, FILE *fp);
+\end_layout
+
+\begin_layout Plain Layout
+
+// EOF on error, otherwise the same character
+\end_layout
+
+\begin_layout Plain Layout
+
+int fprintf(FILE *fp, const char *format, ...);
+\end_layout
+
+\begin_layout Plain Layout
+
+// returns the number of characters printed
+\end_layout
+
+\begin_layout Plain Layout
+
+// fprintf(stdout, ...) is equivalent to printf(...)
+\end_layout
+
+\begin_layout Plain Layout
+
+int fscanf(FILE *fp, const char *format, ...);
+\end_layout
+
+\begin_layout Plain Layout
+
+// returns the number of successful inputs
+\end_layout
+
+\begin_layout Plain Layout
+
+int feof(FILE *fp);
+\end_layout
+
+\begin_layout Plain Layout
+
+// non-zero when end of file reached
+\end_layout
+
+\begin_layout Plain Layout
+
+char *fgets(char *s, int size, FILE *fp);
+\end_layout
+
+\begin_layout Plain Layout
+
+// appends '
+\backslash
+0', stops on EOF or newline,
+\end_layout
+
+\begin_layout Plain Layout
+
+// returns NULL when no characters have been read
+\end_layout
+
+\begin_layout Plain Layout
+
+int fputs(char *s, FILE *fp);
+\end_layout
+
+\begin_layout Plain Layout
+
+// without 
+\backslash
+0, EOF on error, non-negative on success
+\end_layout
+
+\begin_layout Plain Layout
+
+int fflush(FILE *fp);
+\end_layout
+
+\begin_layout Plain Layout
+
+// flushes writing, returns 0 on success and EOF on error
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int sprintf(char *s, const char *format, ...);
+\end_layout
+
+\begin_layout Plain Layout
+
+int sscanf(char *s, const char *format, ...);
+\end_layout
+
+\begin_layout Plain Layout
+
+// like fprintf and scanf but into a string
 \end_layout
 
 \end_inset
