@@ -5536,5 +5536,466 @@ status open
 
 \end_layout
 
+\begin_layout Section
+טורי טיילור
+\end_layout
+
+\begin_layout Subsection
+היי זה לא הזה ממבוא מורחב?
+\end_layout
+
+\begin_layout Standard
+)בניגוד לחלקים הקודמים אני לא במצב רוח לכתוב באופן יותר מדי פורמלי(
+\end_layout
+
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)=0,\lim_{x\to x_{0}}g\left(x\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row interlinespace="5pt">
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+אם 
+\begin_inset Formula $\lim_{x\to x_{0}}\frac{f\left(x\right)}{g\left(x\right)}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f\left(x\right)=o\left(g\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="5pt">
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+קיים 
+\begin_inset Formula $c>0$
+\end_inset
+
+ כך שבסביבה של 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\left|f\left(x\right)\right|\le c\cdot\left|g\left(x\right)\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f\left(x\right)=O\left(g\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="5pt">
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f\left(x\right)=O\left(g\left(x\right)\right)\land g\left(x\right)=O\left(f\left(x\right)\right)$
+\end_inset
+
+ )אין באמת שימושים ל-
+\begin_inset Formula $O$
+\end_inset
+
+ עצמו(
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f\left(x\right)=\Theta\left(g\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+באמת טורי טיילור אני מבטיח
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח, 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+, 
+\begin_inset Formula $f,g:I\to\mathbb{R}$
+\end_inset
+
+.
+ נאמר ש-
+\begin_inset Formula $f$
+\end_inset
+
+ ו-
+\begin_inset Formula $g$
+\end_inset
+
+ 
+\bar under
+מזדהות עד סדר 
+\begin_inset Formula $n$
+\end_inset
+
+ ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\bar default
+ אם שתיהן גזירות 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ומתקיים 
+\begin_inset Formula $f^{\left(k\right)}\left(x_{0}\right)=g^{\left(k\right)}\left(x_{0}\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $k=1,\dots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ אם 
+\begin_inset Formula $f,g$
+\end_inset
+
+ מזדהות עד סדר 
+\begin_inset Formula $n$
+\end_inset
+
+ ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ אז 
+\begin_inset Formula $f\left(x\right)-g\left(x\right)=o\left(\left(x-x_{0}\right)^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה:
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח, 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+, 
+\begin_inset Formula $f:I\to\mathbb{R}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ נאמר ש-
+\begin_inset Formula $p_{n}\left(x\right)$
+\end_inset
+
+ 
+\bar under
+פולינום טיילור של 
+\begin_inset Formula $f$
+\end_inset
+
+ ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\bar default
+ אם 
+\begin_inset Formula $p_{n}\left(x\right)$
+\end_inset
+
+ מזדהה עם 
+\begin_inset Formula $f$
+\end_inset
+
+ ב-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ עד סדר 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ קיים ויחיד 
+\begin_inset Formula $p_{n}\left(x\right)$
+\end_inset
+
+ והנוסחה היא:
+\begin_inset Formula 
+\[
+p_{n}\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(x_{0}\right)}{k!}\left(x-x_{0}\right)^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "2pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+הגדרה:
+\series default
+ נגדיר את השארית להיות 
+\begin_inset Formula $R_{n}\left(x\right)=f\left(x\right)-p_{n}\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+משפט פאנו:
+\series default
+ 
+\begin_inset Formula $R_{n}\left(x\right)=o\left(\left(x-x_{0}\right)^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+משפט טיילור עם שארית לגרנז':
+\series default
+ יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע פתוח, 
+\begin_inset Formula $x_{0}\in I$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\bar under
+גזירה 
+\begin_inset Formula $n+1$
+\end_inset
+
+ פעמים ב-
+\begin_inset Formula $I$
+\end_inset
+
+
+\bar default
+.
+\end_layout
+
+\begin_layout Plain Layout
+אז לכל 
+\begin_inset Formula $x_{0}\ne x\in I$
+\end_inset
+
+, קיים 
+\begin_inset Formula $c_{x}$
+\end_inset
+
+ בין 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ ל-
+\begin_inset Formula $x$
+\end_inset
+
+ כך ש:
+\begin_inset Formula 
+\[
+R_{n}\left(x\right)=\frac{f^{\left(n+1\right)}\left(c_{x}\right)}{\left(n+1\right)!}\left(x-x_{0}\right)^{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה:
+\series default
+ אם 
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה אינסוף פעמים ב-
+\begin_inset Formula $I$
+\end_inset
+
+ וקיים 
+\begin_inset Formula $M\left(x\right)$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $y$
+\end_inset
+
+ בין 
+\begin_inset Formula $x$
+\end_inset
+
+ ל-
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\left|f^{\left(k\right)}\left(y\right)\right|<M\left(x\right)$
+\end_inset
+
+, אז 
+\begin_inset Formula $\lim_{n\to\infty}R_{n}\left(x\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+לפי טיעון כזה מוכיחים שהשארית שואפת ל-
+\begin_inset Formula $0$
+\end_inset
+
+ ב-
+\begin_inset Formula $e^{x}$
+\end_inset
+
+, ולכן בעצם 
+\begin_inset Formula $e^{x}=\sum_{k=0}^{\infty}\frac{x^{k}}{k!}$
+\end_inset
+
+, ואפשר אפילו להעריך את השגיאה.
+\end_layout
+
 \end_body
 \end_document
