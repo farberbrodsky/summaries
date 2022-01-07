@@ -2076,6 +2076,70 @@ status open
 \begin_layout Standard
 
 \series bold
+מבחן ההשוואה הגבולי לטורים חיוביים:
+\series default
+ יהיו 
+\begin_inset Formula $\sum a_{n},\sum b_{n}$
+\end_inset
+
+ טורים חיוביים כך ש-
+\begin_inset Formula $\lim_{n\to\infty}\frac{a_{n}}{b_{n}}=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $L=0$
+\end_inset
+
+, אז אם 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ מתכנס גם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס ואם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתבדר אז גם 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ מתבדר
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $L=\infty$
+\end_inset
+
+, אז אם 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ מתבדר גם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתבדר ואם 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס אז גם 
+\begin_inset Formula $\sum b_{n}$
+\end_inset
+
+ מתכנס
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 מבחן השורש לטורים חיוביים:
 \series default
  יהי 
@@ -2099,6 +2163,42 @@ status open
 \end_inset
 
  מתכנס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן השורש הגבולי לטורים חיוביים:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור חיובי.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\limsup\sqrt[n]{a_{n}}<1$
+\end_inset
+
+ אז 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $\limsup\sqrt[n]{a_{n}}>1$
+\end_inset
+
+ אז 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתבדר
 \end_layout
 
 \begin_layout Standard
@@ -2179,42 +2279,6 @@ status open
 \end_inset
 
 , 
-\begin_inset Formula $\sum a_{n}$
-\end_inset
-
- מתבדר
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-מבחן השורש הגבולי:
-\series default
- יהי 
-\begin_inset Formula $\sum a_{n}$
-\end_inset
-
- טור חיובי.
-\end_layout
-
-\begin_layout Enumerate
-אם 
-\begin_inset Formula $\limsup\sqrt[n]{a_{n}}<1$
-\end_inset
-
- אז 
-\begin_inset Formula $\sum a_{n}$
-\end_inset
-
- מתכנס
-\end_layout
-
-\begin_layout Enumerate
-אם 
-\begin_inset Formula $\limsup\sqrt[n]{a_{n}}>1$
-\end_inset
-
- אז 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
