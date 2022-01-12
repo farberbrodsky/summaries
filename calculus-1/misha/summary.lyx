@@ -2008,7 +2008,7 @@ status open
 \end_layout
 
 \begin_layout Subsection
-מבחן ה[)השוואה()שורש()מנה(] )הגבולי(? )לטורים חיוביים(?
+מבחן ה[)השוואה()שורש()מנה(] )הגבולי(? )לזזיים(?
 \end_layout
 
 \begin_layout Standard
@@ -2227,7 +2227,7 @@ status open
 \end_inset
 
  כך שהחל ממקום מסוים 
-\begin_inset Formula $\frac{a_{n+1}}{a_{n}}<q$
+\begin_inset Formula $\frac{a_{n+1}}{a_{n}}\le q$
 \end_inset
 
  אז הטור מתכנס
@@ -2266,7 +2266,7 @@ status open
 \begin_inset Formula $\limsup\frac{a_{n+1}}{a_{n}}<1$
 \end_inset
 
-, 
+ אז 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -2278,11 +2278,36 @@ status open
 \begin_inset Formula $\liminf\frac{a_{n+1}}{a_{n}}>1$
 \end_inset
 
-, 
+ אז 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
  מתבדר
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבחן העיבוי לטורים חיוביים:
+\series default
+ יהי 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ טור חיובי כך ש-
+\begin_inset Formula $a_{n}\ge a_{n+1}\ge0$
+\end_inset
+
+ )מונוטוני יורד חלש(.
+ אזי, 
+\begin_inset Formula $\sum a_{n}$
+\end_inset
+
+ מתכנס אם ורק אם 
+\begin_inset Formula $\sum2^{n}a_{2^{n}}$
+\end_inset
+
+ מתכנס.
 \end_layout
 
 \begin_layout Subsection
