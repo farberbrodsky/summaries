@@ -1226,6 +1226,27 @@ status open
 \begin_layout Standard
 
 \series bold
+משפט )דלאמבר(:
+\series default
+ תהי 
+\begin_inset Formula $\left(a_{n}\right)$
+\end_inset
+
+ סדרה חיובית כך ש-
+\begin_inset Formula $\lim_{n\to\infty}\frac{a_{n+1}}{a_{n}}=c$
+\end_inset
+
+, סופי או אינסופי.
+ אזי, 
+\begin_inset Formula $\lim_{n\to\infty}\sqrt[n]{a_{n}}=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 משפט המנה הכללי:
 \series default
  
@@ -2008,7 +2029,7 @@ status open
 \end_layout
 
 \begin_layout Subsection
-מבחן ה[)השוואה()שורש()מנה(] )הגבולי(? )לזזיים(?
+מבחן ה[)השוואה()שורש()מנה(] )הגבולי(? לטורים חיוביים
 \end_layout
 
 \begin_layout Standard
@@ -4590,6 +4611,67 @@ Lagrange
 
  עבורה 
 \begin_inset Formula $f^{\prime}\left(c\right)=\frac{f\left(b\right)-f\left(a\right)}{b-a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+משפט
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הערך הממוצע של קושי:
+\series default
+ יהיו 
+\begin_inset Formula $f,g:\left[a,b\right]\to\mathbb{R}$
+\end_inset
+
+ רציפות ב-
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ וגזירות ב-
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+, ונניח ש-
+\begin_inset Formula $g^{\prime}\left(x\right)\ne0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\left(a,b\right)$
+\end_inset
+
+.
+ קיימת 
+\begin_inset Formula $c\in\left(a,b\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\frac{f^{\prime}\left(c\right)}{g^{\prime}\left(c\right)}=\frac{f\left(b\right)-f\left(a\right)}{g\left(b\right)-g\left(a\right)}$
 \end_inset
 
 .
