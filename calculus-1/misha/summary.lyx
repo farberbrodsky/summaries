@@ -3701,7 +3701,11 @@ height "0.5pt"
 
 \begin_layout Enumerate
 אם 
-\begin_inset Formula $g\left(x_{0}\right)\ne0$
+\begin_inset Formula $g\left(x\right)\ne0$
+\end_inset
+
+ בסביבת 
+\begin_inset Formula $x_{0}$
 \end_inset
 
  אז 
@@ -4277,6 +4281,38 @@ status open
 \begin_layout Standard
 
 \series bold
+קטע פתוח:
+\series default
+ תהי 
+\begin_inset Formula $f:\oi ab\to\mathbb{R}$
+\end_inset
+
+ רציפה, אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש ב-
+\begin_inset Formula $\oi ab$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים וסופי 
+\begin_inset Formula $\lim_{x\to a^{+}}f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 משפט:
 \series default
  אם 
@@ -4296,6 +4332,106 @@ status open
 \end_inset
 
 ש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+איחוד קטעים:
+\series default
+ אם 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש ב-
+\begin_inset Formula $\oi ab,\io bc$
+\end_inset
+
+ אז 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש ב-
+\begin_inset Formula $\left(a,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה:
+\series default
+ אפשר לעשות את כל הוריאציות של קטעים באמצעות איחוד קטעים - למשל, אם 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה ב-
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ ו-
+\begin_inset Formula $\lim_{x\to a^{+}}f\left(x\right),\lim_{x\to b^{-}}f\left(x\right)$
+\end_inset
+
+ קיימים וסופיים אז 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש ב-
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ באמצעות איחוד הקטעים 
+\begin_inset Formula $\oi a{\frac{a+b}{2}},\io{\frac{a+b}{2}}b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ פונקציה רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש בקטע פתוח היא חסומה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שיטת הפרכה:
+\series default
+ למצוא שתי סדרות 
+\begin_inset Formula $\left(x_{n}\right),\left(y_{n}\right)$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\left|x_{n}-y_{n}\right|\to0$
+\end_inset
+
+ אבל 
+\begin_inset Formula $\left|f\left(x_{n}\right)-f\left(y_{n}\right)\right|\not\to0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
