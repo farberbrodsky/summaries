@@ -2158,6 +2158,14 @@ status open
  מתכנס
 \end_layout
 
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $L\in\left(0,\infty\right)$
+\end_inset
+
+, אז הטורים מתכנסים ומתבדרים יחדיו.
+\end_layout
+
 \begin_layout Standard
 
 \series bold
