@@ -5655,15 +5655,15 @@ Fermat
 \end_layout
 
 \begin_layout Standard
-יהי 
-\begin_inset Formula $I$
-\end_inset
-
- קטע מוכלל ו-
+יהיו 
 \begin_inset Formula $f,g$
 \end_inset
 
- גזירות בסביבה נקובה של 
+ גזירות בסביבה מנוקבת 
+\begin_inset Formula $I$
+\end_inset
+
+ של 
 \begin_inset Formula $x_{0}$
 \end_inset
 
@@ -5762,15 +5762,15 @@ status open
 \end_layout
 
 \begin_layout Standard
-יהי 
-\begin_inset Formula $I$
-\end_inset
-
- קטע מוכלל ו-
+יהיו 
 \begin_inset Formula $f,g$
 \end_inset
 
- גזירות בסביבה נקובה של 
+ גזירות בסביבה מנוקבת 
+\begin_inset Formula $I$
+\end_inset
+
+ של 
 \begin_inset Formula $x_{0}$
 \end_inset
 
