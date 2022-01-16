@@ -1,0 +1,11998 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\usepackage[use-david]{culmus}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\begin_local_layout
+Style Example
+	CopyStyle	Theorem
+	LatexName	example
+	LabelString	"Example #."
+	Preamble
+		\newtheorem{example}[theorem]{\R{דוגמה}}
+	EndPreamble
+End
+\end_local_layout
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+סיבוכיות
+\end_layout
+
+\begin_layout Author
+מאיה פרבר ברודסקי
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+סיכומי ההרצאות של פרופ' אמנון תא-שמע, סמסטר א' תשפ
+\begin_inset Quotes erd
+\end_inset
+
+ב.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+מעגלים בוליאניים והיררכיית מעגלים
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מעגל בוליאני
+\series default
+ גרף מכוון חסר מעגלים עם קודקודים מבין 
+\begin_inset Formula $n$
+\end_inset
+
+ קלטים 
+\begin_inset Formula $x_{1},\dots,x_{n}\in\left\{ 0,1\right\} $
+\end_inset
+
+, שערים 
+\begin_inset Formula $\land,\lor,\lnot$
+\end_inset
+
+ ויציאה אחת, וקשתות ביניהם.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+גודל המעגל
+\series default
+ הוא מספר הקודקודים + מספר הקשתות, ו
+\series bold
+עומק המעגל
+\series default
+ הוא אורך המסלול הארוך ביותר מקלט לפלט.
+\end_layout
+
+\begin_layout Claim
+לכל פונקציה 
+\begin_inset Formula $f\colon\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ יש מעגל בוליאני על 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים שמחשב אותה.
+\end_layout
+
+\begin_layout Proof
+נסתכל על טבלת האמת של 
+\begin_inset Formula $f$
+\end_inset
+
+, ונבנה מעגל עם שער 
+\begin_inset Formula $\lor$
+\end_inset
+
+ שהקלטים עבורו הם שערי 
+\begin_inset Formula $\land$
+\end_inset
+
+, אחד לכל קלט 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $f\left(x\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+תהי 
+\begin_inset Formula $L\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+.
+ נאמר ש
+\begin_inset Formula $L\in\text{Size}\left(s\left(n\right)\right)$
+\end_inset
+
+ אם לכל 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ יש מעגל 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $s\left(n\right)\geq$
+\end_inset
+
+ שמקבל קלט באורך 
+\begin_inset Formula $n$
+\end_inset
+
+ ומחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אם ורק אם הקלט ב
+\begin_inset Formula $L\cap\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+ כמו כן, נגדיר 
+\begin_inset Formula $\text{Size}\left(poly\right)=\bigcup_{c}\text{Size}\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+כל שפה 
+\begin_inset Formula $L$
+\end_inset
+
+ מקיימת 
+\begin_inset Formula $L\in\text{Size}\left(\frac{2^{n}}{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+יש פונקציה 
+\begin_inset Formula $f\colon\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ שאין לה מעגל בגודל 
+\begin_inset Formula $s$
+\end_inset
+
+, עבור 
+\begin_inset Formula $s$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $n>\log s+\log\log s+O\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נספור כמה מעגלים בגודל 
+\begin_inset Formula $s$
+\end_inset
+
+ יש.
+ נייצג מעגל על ידי לכל קשת את זוג הקודקודים שהיא מחוברת אליהם, ולכל קודקוד
+ את ה-
+\lang english
+label
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שלו, קלט/פלט/שער.
+ זה דורש לכל היותר 
+\begin_inset Formula $O\left(s\log s\right)+O\left(s\log n\right)=O\left(s\log s\right)$
+\end_inset
+
+ ביטים, ולכן יש לכל היותר 
+\begin_inset Formula $2^{O\left(s\log s\right)}=s^{O\left(s\right)}$
+\end_inset
+
+ מעגלים כנ
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Proof
+כעת, יש 
+\begin_inset Formula $2^{2^{n}}$
+\end_inset
+
+ פונקציות על 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים אבל 
+\begin_inset Formula $s^{c\cdot s}$
+\end_inset
+
+ מעגלים בגודל 
+\begin_inset Formula $s$
+\end_inset
+
+, ולכן אם 
+\begin_inset Formula $2^{2^{n}}>s^{c\cdot s}$
+\end_inset
+
+ אז משיקולי ספירה יש פונקציה על 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים שאין לה מעגל בגודל 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ מתקיים
+\begin_inset Formula 
+\[
+2^{2^{n}}>s^{c\cdot s}\iff2^{2^{n}}>2^{c\cdot s\log s}\iff2^{n}>c\cdot s\log s\iff n>\log s+\log\log s+O\left(1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+לדוגמה עבור 
+\begin_inset Formula $s\left(n\right)=\frac{2^{n}}{n^{2}}$
+\end_inset
+
+ יש פונקציה על 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים עבורה אין מעגל בגודל 
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+היררכיה של מעגלים 
+\series default
+לכל 
+\begin_inset Formula $n<s\left(n\right)<\frac{2^{n}}{n^{2}}$
+\end_inset
+
+ יש שפה 
+\begin_inset Formula $L\in\text{Size}\left(s\left(n\right)+10n\right)$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $L\notin\text{Size}\left(s\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נשתמש בטיעון היברידי.
+ יודעים שיש פונקציה קשה 
+\begin_inset Formula $g$
+\end_inset
+
+ על 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים שדורשת מעגלים בגודל 
+\begin_inset Formula $\frac{2^{n}}{n^{2}}$
+\end_inset
+
+, ופונקציה קלה 
+\begin_inset Formula $f$
+\end_inset
+
+ על 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים שדורשת מעגלים בגודל 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נגדיר 
+\begin_inset Formula $h_{i}\colon\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ על ידי 
+\begin_inset Formula $h_{i}\left(x\right)=\begin{cases}
+g\left(x\right) & x\leq i\\
+f\left(x\right) & x>i
+\end{cases}$
+\end_inset
+
+, אז 
+\begin_inset Formula $h_{0}=f,h_{2^{n}}=g$
+\end_inset
+
+ ומתקיים 
+\begin_inset Formula $\text{Size}\left(h_{2^{n}}\right)\geq\frac{2^{n}}{n^{2}},\text{Size}\left(h_{0}\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נטען כי 
+\begin_inset Formula $\text{Size}\left(h_{i+1}\right)-\text{Size}\left(h_{i}\right)\leq10n$
+\end_inset
+
+.
+ אכן, 
+\begin_inset Formula $h_{i},h_{i+1}$
+\end_inset
+
+ זהים מלבד אולי בקלט 
+\begin_inset Formula $i+1$
+\end_inset
+
+, ולכן בהינתן מעגל ל
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ נוכל לבנות מעגל ל
+\begin_inset Formula $h_{i+1}$
+\end_inset
+
+ שמחזיר את 
+\begin_inset Formula $g\left(i+1\right)$
+\end_inset
+
+ אם 
+\begin_inset Formula $x=i+1$
+\end_inset
+
+ )השוואת מחרוזות, אפשר במעגל בגודל 
+\begin_inset Formula $10n$
+\end_inset
+
+(, ואחרת את התוצאה של 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+לסיום ההוכחה, נמצא את ה
+\begin_inset Formula $i$
+\end_inset
+
+ הראשון כך ש
+\begin_inset Formula $\text{Size}\left(h_{i}\right)>s\left(n\right)$
+\end_inset
+
+, אז המקום הקודם מקיים 
+\begin_inset Formula $\text{Size}\left(h_{i-1}\right)\leq s\left(n\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula 
+\[
+s\left(n\right)<\text{Size}\left(h_{i}\right)\leq\text{Size}\left(h_{i-1}\right)+10n=s\left(n\right)+10n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+חישוב אוניפורמי והיררכיה
+\end_layout
+
+\begin_layout Subsection
+זמן ריצה והיררכיית זמן
+\end_layout
+
+\begin_layout Standard
+מעכשיו נרצה להתעסק באלגוריתמים בעלי יצוג סופי שטובים לכל קלט באורך סופי
+ )לא חסום(.
+ נתאר מספר מודלים כאלו:
+\end_layout
+
+\begin_layout Definition
+מכונת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+random access machine
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא מכונה עם סרט עבודה חצי-אינסופי שהקלט בהתחלה שלו, ופקודות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+LOAD
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו-
+\lang english
+STORE
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ מכל מקום על הסרט.
+ כל פקודה בסיסית לוקחת יחידת זמן אחת.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מכונת טיורינג
+\series default
+ היא מודל עם סרט עבודה חצי-אינסופי כאשר הקלט בהתחלה שלו וראש קורא שמתחיל
+ בתחילת הסרט, קבוצת מצבים פנימיים 
+\begin_inset Formula $Q$
+\end_inset
+
+ סופית, ופונקציית מעבר 
+\begin_inset Formula $\delta\colon Q\times\Sigma\to Q\times\Sigma\times\left\{ \text{left},\text{stay},\text{right}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+שפה 
+\begin_inset Formula $L$
+\end_inset
+
+ שייכת ל
+\begin_inset Formula $\text{Time}\left(t\left(n\right)\right)$
+\end_inset
+
+ אם יש מכונת טיורינג 
+\begin_inset Formula $M$
+\end_inset
+
+ שעבור כל קלט 
+\begin_inset Formula $x$
+\end_inset
+
+ עוצרת תוך 
+\begin_inset Formula $t\left(n\right)\geq$
+\end_inset
+
+ זמן ו
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $M$
+\end_inset
+
+ מקבלת.
+\end_layout
+
+\begin_layout Theorem
+יש שפה 
+\begin_inset Formula $L$
+\end_inset
+
+ שלא ניתנת לפתרון על ידי שום מכונת טיורינג.
+\end_layout
+
+\begin_layout Proof
+מטיעון ספירה, יש 
+\begin_inset Formula $2^{\aleph_{0}}$
+\end_inset
+
+ שפות אבל 
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+ מכונות טיורינג )ניתן לייצג מכונת טיורינג כמחרוזת סופית(.
+\end_layout
+
+\begin_layout Claim
+השפה 
+\begin_inset Formula $\text{HALT}=\left\{ x\in\left\{ 0,1\right\} ^{*}\mid\text{the TM represented by }x\text{ halts on }x\right\} $
+\end_inset
+
+ אינה ניתנת לפתרון ע
+\begin_inset Quotes erd
+\end_inset
+
+י מכונת טיורינג.
+\end_layout
+
+\begin_layout Proof
+נניח בשלילה שיש מכונת טיורינג 
+\begin_inset Formula $B$
+\end_inset
+
+ שפותרת את 
+\begin_inset Formula $\text{HALT}$
+\end_inset
+
+, נבנה מכונה חדשה 
+\begin_inset Formula $A$
+\end_inset
+
+ שמקבלת מחרוזת 
+\begin_inset Formula $x$
+\end_inset
+
+, מסמלצת את 
+\begin_inset Formula $B$
+\end_inset
+
+ על 
+\begin_inset Formula $x$
+\end_inset
+
+ ואם 
+\begin_inset Formula $B$
+\end_inset
+
+ מחזירה כן נכנסת ללולאה אינסופית, ואחרת עוצרת.
+ כעת נריץ את 
+\begin_inset Formula $A$
+\end_inset
+
+ על הייצוג של 
+\begin_inset Formula $A$
+\end_inset
+
+ כמחרוזת.
+ אם היא עוצרת, אז מהגדרה 
+\begin_inset Formula $B$
+\end_inset
+
+ תחזיר עליה כן, ולכן היא תכנס ללולאה אינסופית, סתירה.
+ אם היא לא עוצרת, אז מהגדרה 
+\begin_inset Formula $B$
+\end_inset
+
+ תחזיר עליה לא, ולכן היא תעצור, שוב סתירה.
+ לכן אין מכונה 
+\begin_inset Formula $B$
+\end_inset
+
+ כזו.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+ההיררכיה לזמן
+\series default
+ אם 
+\begin_inset Formula $T\left(n\right)\gg t\left(n\right)$
+\end_inset
+
+ )כלומר לסמלץ 
+\begin_inset Formula $t\left(n\right)$
+\end_inset
+
+ צעדים של מכונה לוקח לכל היותר 
+\begin_inset Formula $T\left(n\right)$
+\end_inset
+
+ זמן, במכונת טיורינג עם סרט אחד מספיק 
+\begin_inset Formula $T\left(n\right)=\Omega\left(t\left(n\right)^{2}\right)$
+\end_inset
+
+( אז יש שפה 
+\begin_inset Formula $L\in\text{Time}\left(T\left(n\right)\right)$
+\end_inset
+
+ כך ש
+\begin_inset Formula $L\notin\text{Time}\left(t\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נבנה מכונה 
+\begin_inset Formula $M$
+\end_inset
+
+ עם קלט 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ שתסמלץ את 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ )המכונה המיוצגת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $x$
+\end_inset
+
+( על 
+\begin_inset Formula $x$
+\end_inset
+
+ למשך 
+\begin_inset Formula $t\left(n\right)$
+\end_inset
+
+ צעדים, אם היא עצרה תענה הפוך מהתוצאה שלה, ואחרת תעצור ותענה משהו )לא משנה(.
+ נסמן ב
+\begin_inset Formula $L$
+\end_inset
+
+ את השפה של 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+מתקיים 
+\begin_inset Formula $L\in\text{Time}\left(T\left(n\right)\right)$
+\end_inset
+
+, כי 
+\begin_inset Formula $T\left(n\right)\gg t\left(n\right)$
+\end_inset
+
+ ולכן אכן ניתן לסמלץ בזמן 
+\begin_inset Formula $T\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אבל 
+\begin_inset Formula $L\notin\text{Time}\left(t\left(n\right)\right)$
+\end_inset
+
+, כי נניח בשלילה שכן אז נריץ את 
+\begin_inset Formula $M$
+\end_inset
+
+ על הייצוג של 
+\begin_inset Formula $M$
+\end_inset
+
+ שנסמן 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $M_{m}$
+\end_inset
+
+ בהכרח תעצור ולכן 
+\begin_inset Formula $M$
+\end_inset
+
+ על 
+\begin_inset Formula $m$
+\end_inset
+
+ תחזיר את ההפך מ
+\begin_inset Formula $M_{m}=M$
+\end_inset
+
+ על 
+\begin_inset Formula $m$
+\end_inset
+
+, סתירה.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מחלקות סיבוכיות
+\series default
+ 
+\begin_inset Formula $P=\bigcup_{c}\text{Time}\left(n^{c}\right),E=\bigcup_{c}\text{Time}\left(2^{c\cdot n}\right),EXP=\bigcup_{c}\text{Time}\left(2^{\left(n^{c}\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $P\subseteq\text{Size}\left(poly\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in P$
+\end_inset
+
+, אז יש קבוע 
+\begin_inset Formula $c$
+\end_inset
+
+ ומכונה 
+\begin_inset Formula $M$
+\end_inset
+
+ שפותרת את 
+\begin_inset Formula $L$
+\end_inset
+
+ בזמן 
+\begin_inset Formula $n^{c}$
+\end_inset
+
+.
+ בהינתן 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, נבנה מעגל 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ עם 
+\begin_inset Formula $n$
+\end_inset
+
+ קלטים וגודל 
+\begin_inset Formula $n^{O\left(c\right)}$
+\end_inset
+
+ שמחשב את 
+\begin_inset Formula $L\cap\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+, ומכאן נסיק 
+\begin_inset Formula $L\in\text{Size}\left(poly\right)$
+\end_inset
+
+.
+ נסתכל על טבלת החישוב של המכונה 
+\begin_inset Formula $M$
+\end_inset
+
+ על קלט 
+\begin_inset Formula $x$
+\end_inset
+
+ באורך 
+\begin_inset Formula $n$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+זו טבלה ברוחב 
+\begin_inset Formula $n^{c}$
+\end_inset
+
+ ובאורך 
+\begin_inset Formula $n^{c}$
+\end_inset
+
+, כאשר כל שורה מייצגת את מצב הזכרון של מכונה בזמן נתון, וכאשר מתקדמים בשורות
+ מתקדמים בזמן.
+\end_layout
+
+\begin_layout Proof
+בתא ה
+\begin_inset Formula $\left(i,t\right)$
+\end_inset
+
+ בטבלה מופיע ביט אחד כדי לציין האם הראש הקורא על התא, 
+\begin_inset Formula $\log\left|\Sigma\right|$
+\end_inset
+
+ ביטים עבור מה שכתוב בתא, וכן 
+\begin_inset Formula $\log\left|Q\right|$
+\end_inset
+
+ ביטים עבור המצב של המכונה באותו התא, כאשר דורשים נכונות רק אם הראש הקורא
+ נמצא על התא.
+\end_layout
+
+\begin_layout Proof
+בין השורות נרצה לסמלץ את הפונקציה 
+\begin_inset Formula $\delta$
+\end_inset
+
+ על ידי חלקי מעגלים.
+ נשים לב שניתן לחשב את התא 
+\begin_inset Formula $\left(i,t+1\right)$
+\end_inset
+
+ על ידי התאים 
+\begin_inset Formula $\left(i-1,t\right),\left(i,t\right),\left(i+1,t\right)$
+\end_inset
+
+ בלבד, כלומר הוא פונקציה שלהם.
+ כל פונקציה כזו אפשר לייצג על ידי מעגל, ואפילו בגודל קבוע כי זו פונקציה
+ עם תחום וטווח בגודל קבוע.
+ נשים את המעגל הזה בין התאים הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Proof
+אז המעגל 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ הוא בגודל פולינומי )יש 
+\begin_inset Formula $n^{c}\cdot n^{c}=n^{2c}$
+\end_inset
+
+ תאים ולפני כל תא מעגל בגודל קבוע(, ואכן מכריע את 
+\begin_inset Formula $L$
+\end_inset
+
+ עבור גודל קלט 
+\begin_inset Formula $n$
+\end_inset
+
+ כי הוא מסמלץ את 
+\begin_inset Formula $L$
+\end_inset
+
+, ולכן סיימנו.
+\end_layout
+
+\begin_layout Subsection
+זכרון והיררכיית זכרון
+\end_layout
+
+\begin_layout Definition
+נאמר כי מכונת טיורינג 
+\begin_inset Formula $M$
+\end_inset
+
+ עם שלושה סרטים )סרט קלט לקריאה בלבד, סרט עבודה לקריאה וכתיבה, סרט פלט לכתיבה
+ בלבד( משתמשת בזכרון 
+\begin_inset Formula $s\left(n\right)$
+\end_inset
+
+ אם בכל שלב משתמשים רק ב
+\begin_inset Formula $s\left(n\right)$
+\end_inset
+
+ תאים בסרט העבודה, כאשר 
+\begin_inset Formula $n$
+\end_inset
+
+ הוא אורך הקלט.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+כפל מטריצות בוליאניות
+\series default
+ סיבוכיות זמן 
+\begin_inset Formula $O\left(n^{3}\right)$
+\end_inset
+
+, אפשר לשפר עם אלגוריתמים כמו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Strassen
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Example
+סיבוכיות זכרון 
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+ כי צריך לשמור רק אינדקסים ואת האיבר הנוכחי שיכול לקחת לכל היותר 
+\begin_inset Formula $\log n$
+\end_inset
+
+ ביטים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\series bold
+העלאת מטריצה בחזקת 
+\begin_inset Formula $k$
+\end_inset
+
+
+\series default
+ סיבוכיות זכרון 
+\begin_inset Formula $O\left(\log n\cdot\log k\right)$
+\end_inset
+
+, משתמשים ב
+\lang english
+iterated squaring
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אבל במקום לשמור את 
+\begin_inset Formula $A^{2},A^{4},\dots$
+\end_inset
+
+ כל פעם שצריך ערך במטריצה קודמת 
+\begin_inset Quotes eld
+\end_inset
+
+קוראים לפרוצדורה
+\begin_inset Quotes erd
+\end_inset
+
+ ומחשבים אותו מחדש.
+ בסך הכל צריך 
+\begin_inset Formula $\log n$
+\end_inset
+
+ ביטים כדי לחשב ערך מסוים ועומק המחסנית הוא לכל היותר 
+\begin_inset Formula $\log k$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $\log n\cdot\log k$
+\end_inset
+
+ זכרון - הרכבה של רדוקציות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+space
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא סכום ה
+\lang english
+space
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שלוקחת כל רמה.
+\end_layout
+
+\begin_layout Remarks
+המספרים גדלים ככל שעוברים רמות אבל נשארים 
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+, כי המספרים ב
+\begin_inset Formula $A^{2}$
+\end_inset
+
+ הם לכל היותר 
+\begin_inset Formula $n$
+\end_inset
+
+, המספרים ב
+\begin_inset Formula $A^{4}$
+\end_inset
+
+ הם לכל היותר 
+\begin_inset Formula $n^{3}$
+\end_inset
+
+ וכן הלאה, ו
+\begin_inset Formula $\log\left(n^{k}\right)=k\log n=O\left(\log n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+קשר בין זכרון לזמן 
+\series default
+אם 
+\begin_inset Formula $M$
+\end_inset
+
+ מכונת טיורינג שרצה על קלט 
+\begin_inset Formula $x$
+\end_inset
+
+ בזכרון 
+\begin_inset Formula $s\left(n\right)\geq\log n$
+\end_inset
+
+ אז 
+\begin_inset Formula $M$
+\end_inset
+
+ רצה על 
+\begin_inset Formula $x$
+\end_inset
+
+ בזמן 
+\begin_inset Formula $2^{O\left(s\left(n\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נסתכל על גרף הקונפיגורציות של המכונה 
+\begin_inset Formula $M$
+\end_inset
+
+ על הקלט 
+\begin_inset Formula $x$
+\end_inset
+
+ )בקונפיגורציה יש מצב, סרט עבודה, מיקום ראשים קוראים(, מספר הקונפיגורציות
+ האפשריות הוא
+\begin_inset Formula 
+\[
+\left|V\right|=\left|Q\right|\cdot2^{s\left(n\right)}\cdot n\cdot s\left(n\right)=2^{O\left(s\left(n\right)\right)}
+\]
+
+\end_inset
+
+נשים קשת מ
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ ל
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ אם פונקציית ה
+\begin_inset Formula $\delta$
+\end_inset
+
+ של 
+\begin_inset Formula $M$
+\end_inset
+
+ מעבירה מ
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ ל
+\begin_inset Formula $c_{2}$
+\end_inset
+
+.
+ דרגת היציאה בגרף היא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כי המכונה דטרמיניסטית.
+\end_layout
+
+\begin_layout Proof
+ריצה של המכונה 
+\begin_inset Formula $M$
+\end_inset
+
+ על 
+\begin_inset Formula $x$
+\end_inset
+
+ היא מסלול מ
+\begin_inset Formula $c_{init}$
+\end_inset
+
+ לקונפיגורציה מסיימת, וזמן הריצה הוא אורך המסלול, שהוא לכל היותר 
+\begin_inset Formula $\left|V\right|=2^{O\left(s\left(n\right)\right)}$
+\end_inset
+
+ )אחרת יש לולאה והמכונה לא עוצרת(.
+ לכן גם זמן הריצה של 
+\begin_inset Formula $M$
+\end_inset
+
+ על 
+\begin_inset Formula $x$
+\end_inset
+
+ הוא לכל היותר 
+\begin_inset Formula $2^{O\left(s\left(n\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+היררכיית זכרון
+\series default
+ אם 
+\begin_inset Formula $s\left(n\right)\geq\log n$
+\end_inset
+
+, 
+\begin_inset Formula $S\left(n\right)$
+\end_inset
+
+ היא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+space-constructible
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו
+\begin_inset Formula $s\left(n\right)=o\left(S\left(n\right)\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $\text{Space}\left(s\left(n\right)\right)\subsetneq\text{Space}\left(S\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מחלקות זכרון
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+L & =\bigcup_{c}\text{Space}\left(c\log n\right)\\
+PSPACE & =\bigcup_{c}\text{Space}\left(n^{c}\right)
+\end{align*}
+
+\end_inset
+
+מתקיים 
+\begin_inset Formula $L\subseteq P\subseteq PSPACE\subseteq EXP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+בעיות שלמות
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $P$
+\end_inset
+
+-שלמות ביחס לרדוקציות 
+\begin_inset Formula $L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+רדוקציה
+\series default
+ 
+\begin_inset Formula $L_{1}\leq_{\varphi}L_{2}$
+\end_inset
+
+ אם 
+\begin_inset Formula $\varphi\colon\left\{ 0,1\right\} ^{*}\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $x\in L_{1}\iff\varphi\left(x\right)\in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+נגיד ששפה 
+\begin_inset Formula $A\in P$
+\end_inset
+
+ היא 
+\begin_inset Formula $P$
+\end_inset
+
+-שלמה )ביחס לרדוקציות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+LogSpace
+\lang hebrew
+( אם לכל 
+\begin_inset Formula $B\in P$
+\end_inset
+
+ יש 
+\begin_inset Formula $\varphi\in L$
+\end_inset
+
+ כך ש
+\begin_inset Formula $B\leq_{\varphi}A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+נגדיר 
+\begin_inset Formula $CVAL$
+\end_inset
+
+, הבעיה של חישוב 
+\begin_inset Formula $C\left(x\right)$
+\end_inset
+
+ עבור מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ וקלט 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ אזי 
+\begin_inset Formula $CVAL$
+\end_inset
+
+ היא 
+\begin_inset Formula $P$
+\end_inset
+
+-שלמה.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $CVAL\in P$
+\end_inset
+
+, כי אפשר להריץ מעגל בזמן פולינומי על ידי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+BFS
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Proof
+כעת תהי 
+\begin_inset Formula $B\in P$
+\end_inset
+
+, ראינו 
+\begin_inset Formula $P\subseteq\text{Size}\left(\text{poly}\right)$
+\end_inset
+
+ ולכן יש מעגל 
+\begin_inset Formula $C_{B}$
+\end_inset
+
+ בגודל פולינומי שפותר את 
+\begin_inset Formula $B$
+\end_inset
+
+, ואפשר לבנות אותו במקום לוגריתמי )רצים בלולאה על המקומות בטבלה, מוסיפים
+ את החלקים ביניהם, יש 
+\begin_inset Formula $n^{2c}$
+\end_inset
+
+ מקומות בטבלה(.
+ כלומר הרדוקציה תהיה 
+\begin_inset Formula $\varphi\left(x\right)=\left(C_{B},x\right)$
+\end_inset
+
+, ואכן מתקיים 
+\begin_inset Formula $x\in B\iff C_{B}\left(x\right)=1\iff\varphi\left(x\right)\in CVAL$
+\end_inset
+
+, וכן 
+\begin_inset Formula $\varphi\in L$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $B\leq_{L}A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $A$
+\end_inset
+
+ היא 
+\begin_inset Formula $P$
+\end_inset
+
+ שלמה, 
+\begin_inset Formula $A\in L$
+\end_inset
+
+, אז 
+\begin_inset Formula $P=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L\subseteq P$
+\end_inset
+
+ ראינו, כעת תהי 
+\begin_inset Formula $B\in P$
+\end_inset
+
+ אז יש רדוקציה 
+\begin_inset Formula $B\leq_{\varphi}A$
+\end_inset
+
+, ולכן על מנת לפתור את 
+\begin_inset Formula $B$
+\end_inset
+
+ נוכל להרכיב את 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ואת האלגוריתם ב
+\begin_inset Formula $L$
+\end_inset
+
+ שפותר את 
+\begin_inset Formula $A$
+\end_inset
+
+, זו הרכבה של מכונות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+space
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ולכן זה לוקח לכל היותר כמו הסכום )אותו טריק של לחשב את הביט המתאים כשצריך(,
+ שהוא עדיין לוגריתמי.
+ לכן 
+\begin_inset Formula $B\in L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $NP$
+\end_inset
+
+-שלמות ביחס לרדוקציות 
+\begin_inset Formula $L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+שפה 
+\begin_inset Formula $L\in NP$
+\end_inset
+
+ אם קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט דטרמיניסטית 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\left|y\right|=\text{poly}\left(\left|x\right|\right)$
+\end_inset
+
+ )עבור פולינום קבוע כלשהו(
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ולכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $x\in L\iff\exists y.M\left(x,y\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $P\subseteq NP\subseteq PSPACE$
+\end_inset
+
+ )
+\begin_inset Formula $P\subseteq NP$
+\end_inset
+
+ ברור, 
+\begin_inset Formula $NP\subseteq PSPACE$
+\end_inset
+
+ כי אפשר לעבור על כל ה
+\begin_inset Formula $y$
+\end_inset
+
+ באורך 
+\begin_inset Formula $p\left(\left|x\right|\right)$
+\end_inset
+
+ ולבדוק(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+נגדיר 
+\begin_inset Formula $CSAT$
+\end_inset
+
+, הבעיה של בדיקה אם יש קלט שמספק מעגל נתון.
+ אזי 
+\begin_inset Formula $CSAT$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-שלמה.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $CSAT\in NP$
+\end_inset
+
+ כי אפשר לבנות מוודא 
+\begin_inset Formula $M\left(C,y\right)$
+\end_inset
+
+, שבודק אם 
+\begin_inset Formula $C\left(y\right)=1$
+\end_inset
+
+ )העד הוא השמה שמספקת את המעגל(.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $B\in NP$
+\end_inset
+
+, אז יש מוודא 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורה.
+ נראה 
+\begin_inset Formula $B\leq_{L}CSAT$
+\end_inset
+
+, כאשר הרדוקציה היא 
+\begin_inset Formula $\varphi\left(x\right)=C_{M\left(x,\cdot\right)}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מחזירה מעגל ששקול למכונה שמקבלת קלט 
+\begin_inset Formula $y$
+\end_inset
+
+ ומחשבת את 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+ )כאשר 
+\begin_inset Formula $x$
+\end_inset
+
+ קבוע
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hardwired
+\lang hebrew
+(.
+ אז אכן
+\begin_inset Formula 
+\[
+x\in B\iff\exists y.M\left(x,y\right)=1\iff\exists y.C_{M\left(x,\cdot\right)}\left(y\right)=1\iff\varphi\left(x\right)=C_{M\left(x,\cdot\right)}\in CSAT
+\]
+
+\end_inset
+
+וכן הרדוקציה לוגריתמית, כדרוש.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $SAT$
+\end_inset
+
+ )הקלט הוא נוסחת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+CNF
+\lang hebrew
+( היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-שלמה.
+\end_layout
+
+\begin_layout Proof
+נראה רדוקציה 
+\begin_inset Formula $CSAT\leq_{L}SAT$
+\end_inset
+
+.
+ בהינתן מעגל, בונים נוסחה שהמשתנים שלה הם הקלטים והשערים, ולדוגמה שער
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+AND
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ממירים לפסוקית 
+\begin_inset Formula $out\iff x\land y$
+\end_inset
+
+, ובדומה ליתר השערים, והנוסחה היא ה
+\lang english
+AND
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של כל הפסוקיות יחד עם פסוקית נוספת שבודקת ששער הפלט הוא 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $EXP$
+\end_inset
+
+-שלמות ביחס לרדוקציות 
+\begin_inset Formula $L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+נגדיר 
+\begin_inset Formula $H\left(w\right)$
+\end_inset
+
+, גודל המעגל הכי קטן שמייצג את 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ אז כמעט לכל 
+\begin_inset Formula $w\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $H\left(w\right)\geq\frac{2^{n}}{10n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+הבעיה 
+\begin_inset Formula $succCVAL$
+\end_inset
+
+
+\series default
+ הקלט הוא 
+\begin_inset Formula $w\in\left\{ 0,1\right\} ^{n},x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+, כאשר 
+\begin_inset Formula $w$
+\end_inset
+
+ מעגל עם 
+\begin_inset Formula $m$
+\end_inset
+
+ קלטים, ומחזירה 
+\begin_inset Formula $\left\langle tt\left(w\right)\right\rangle \left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+הערה: 
+\begin_inset Formula $tt\left(w\right)$
+\end_inset
+
+ זו מחרוזת באורך 
+\begin_inset Formula $2^{m}$
+\end_inset
+
+ שמכילה את כל הערכים של 
+\begin_inset Formula $C$
+\end_inset
+
+ על כל הקלטים, ואם המחרוזת הזו מייצגת מעגל, 
+\begin_inset Formula $\left\langle tt\left(w\right)\right\rangle $
+\end_inset
+
+ זה מעגל חוקי, והייצוג הרבה יותר קצר.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $succCVAL\in EXP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+בהינתן 
+\begin_inset Formula $w,x$
+\end_inset
+
+, נחשב את 
+\begin_inset Formula $C=\left\langle tt\left(w\right)\right\rangle $
+\end_inset
+
+ ונבדוק האם 
+\begin_inset Formula $\left(C,x\right)\in CVAL$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+חישוב 
+\begin_inset Formula $tt\left(w\right)$
+\end_inset
+
+ דורש חישוב המעגל 
+\begin_inset Formula $w$
+\end_inset
+
+ על 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ קלטים, 
+\begin_inset Formula $m\leq n$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|w\right|$
+\end_inset
+
+ הוא אורך הקלט ולכן החישוב לוקח זמן אקספוננציאלי, ו
+\begin_inset Formula $CVAL$
+\end_inset
+
+ פולינומי בגודל אקספוננציאלי ולכן גם אקספוננציאלי.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $succCVAL$
+\end_inset
+
+ היא 
+\begin_inset Formula $EXP$
+\end_inset
+
+-שלמה.
+\end_layout
+
+\begin_layout Proof
+נקח 
+\begin_inset Formula $L\in EXP$
+\end_inset
+
+, נראה רדוקציה 
+\begin_inset Formula $L\leq_{\varphi}succCVAL$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\varphi\in LOG$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L\in EXP$
+\end_inset
+
+, יש מכונה 
+\begin_inset Formula $M$
+\end_inset
+
+ שרצה בזמן 
+\begin_inset Formula $2^{\left(n^{c}\right)}$
+\end_inset
+
+ שפותרת אותה.
+ בהינתן מילה 
+\begin_inset Formula $x$
+\end_inset
+
+, נסתכל על טבלת החישוב של 
+\begin_inset Formula $M$
+\end_inset
+
+ על 
+\begin_inset Formula $x$
+\end_inset
+
+, היא בגודל 
+\begin_inset Formula $2^{\left(n^{c}\right)}\times2^{\left(n^{c}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אפשר לייצג את המעגל של טבלת החישוב בעזרת מעגל קטן, כי צריך לשמור את המעגל
+ הקבוע של הפונקציית 
+\begin_inset Formula $\delta$
+\end_inset
+
+ רק פעם אחת, ..
+ הרדוקציה תפלוט את המעגל הקטן, ואת 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+הרדוקציה היא לוגריתמית, כי 
+\begin_inset Formula $\left|x\right|=n,\left|s\right|,\left|t\right|=n^{c}$
+\end_inset
+
+ והדבר הכי קשה ש
+\begin_inset Formula $\varphi$
+\end_inset
+
+ צריכה לעשות זה לכתוב מעגל שמוסיף או מוריד
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ממחרוזת באורך 
+\begin_inset Formula $n^{c}$
+\end_inset
+
+, ואת זה אפשר לעשות במקום לוגריתמי.
+\end_layout
+
+\begin_layout Remarks
+\begin_inset Formula $succCSAT$
+\end_inset
+
+ היא 
+\begin_inset Formula $NEXP$
+\end_inset
+
+-שלמה.
+\end_layout
+
+\begin_layout Section
+מכונות עם אורקל והיררכיה פולינומית
+\end_layout
+
+\begin_layout Standard
+עבור 
+\begin_inset Formula $SAT$
+\end_inset
+
+, בהינתן אלגוריתם הכרעה אפשר לכתוב אלגוריתם למציאת השמה מספקת, כך:
+\end_layout
+
+\begin_layout Standard
+בודקים אם 
+\begin_inset Formula $\varphi\in SAT$
+\end_inset
+
+.
+ אם לא - לא ספיק.
+ אם כן, מציבים 
+\begin_inset Formula $x_{1}=0$
+\end_inset
+
+, ובודקים אם הנוסחה שמתקבלת )עם 
+\begin_inset Formula $n-1$
+\end_inset
+
+ משתנים( היא ספיקה.
+ אם לא, נמשיך עם 
+\begin_inset Formula $x_{1}=1$
+\end_inset
+
+, נמצא אינדוקטיבית השמה מספקת לנוסחה החדשה עם 
+\begin_inset Formula $n-1$
+\end_inset
+
+ משתנים, ונקבל השמה מספקת לנוסחה כולה.
+\end_layout
+
+\begin_layout Claim
+האלגוריתם פותר את בעיית החיפוש של 
+\begin_inset Formula $SAT$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $A\in P^{SAT}$
+\end_inset
+
+ - רץ בזמן פולינומי עם 
+\begin_inset Formula $SAT$
+\end_inset
+
+ כאורקל.
+\end_layout
+
+\begin_layout Definition
+מכונת טיורינג עם אורקל היא מכונת טיורינג רגילה שבנוסף יש לה סרט שאילתות
+ ושלושה מצבים מיוחדים 
+\begin_inset Formula $query,query_{0},query_{1}$
+\end_inset
+
+, כך שממצב 
+\begin_inset Formula $query$
+\end_inset
+
+ היא עוברת ל
+\begin_inset Formula $query_{0}$
+\end_inset
+
+ או 
+\begin_inset Formula $query_{1}$
+\end_inset
+
+ לפי תשובת האורקל על תוכן סרט השאילתות.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $P^{O}=P^{\bar{O}}$
+\end_inset
+
+, 
+\begin_inset Formula $P^{SAT}=P^{NP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+אם 
+\begin_inset Formula $T,t$
+\end_inset
+
+ פונקציות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+time-constructible
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כך ש
+\begin_inset Formula $T\gg t$
+\end_inset
+
+, אז לכל אורקל 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $\text{Time}^{A}\left(t\left(n\right)\right)\subsetneq\text{Time}^{A}\left(T\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אותה הוכחה כמו משפט ההיררכיה לזמן.
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ אז 
+\begin_inset Formula $coA\subseteq coB$
+\end_inset
+
+.
+ כמו כן, 
+\begin_inset Formula $\overline{SAT}$
+\end_inset
+
+ היא 
+\begin_inset Formula $coNP$
+\end_inset
+
+ שלמה.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $Clique=\left\{ \left(G,k\right)\mid G\text{ has a clique of size }k\right\} $
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-שלמה, ו
+\begin_inset Formula $\overline{Clique}$
+\end_inset
+
+ היא 
+\begin_inset Formula $coNP$
+\end_inset
+
+-שלמה.
+\end_layout
+
+\begin_layout Definition
+נגדיר 
+\begin_inset Formula $ExactClique=\left\{ \left(G,k\right)\mid G\text{'s largest clique is of size }k\right\} $
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $ExactClique\in P^{Clique}$
+\end_inset
+
+ )
+\numeric on
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קריאות אורקל, עם 
+\begin_inset Formula $k$
+\end_inset
+
+ ועם 
+\begin_inset Formula $k+1$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+שפה 
+\begin_inset Formula $A$
+\end_inset
+
+ היא 
+\begin_inset Formula $C$
+\end_inset
+
+-קשה ביחס לרדוקציות טיורינג אם לכל 
+\begin_inset Formula $L\in C$
+\end_inset
+
+, 
+\begin_inset Formula $L\in P^{A}$
+\end_inset
+
+.
+ כלומר, מאפשרים מספר פולינומי של שאילתות אדפטיביות ל
+\begin_inset Formula $A$
+\end_inset
+
+, בניגוד לרדוקציה רגילה שמאפשרים רק אחת.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $L\in DP$
+\end_inset
+
+ אם יש 
+\begin_inset Formula $L_{1}\in NP,L_{2}\in coNP$
+\end_inset
+
+ כך ש
+\begin_inset Formula $L=L_{1}\cap L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $SAT,\overline{SAT},ExactClique\in DP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $ExactClique$
+\end_inset
+
+ היא 
+\begin_inset Formula $DP$
+\end_inset
+
+-שלמה.
+\end_layout
+
+\begin_layout Definition
+הבעיה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+CorrectSATSolver
+\lang hebrew
+: מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ על 
+\begin_inset Formula $m$
+\end_inset
+
+ קלטים הוא בשפה אם 
+\begin_inset Formula $C\left(\varphi\right)=T\iff\varphi\in SAT$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+באיזו מחלקה היא? ב
+\begin_inset Formula $PSPACE$
+\end_inset
+
+, אפשר לעבור על כל הנוסחאות, לבדוק אם 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיקה )
+\begin_inset Formula $SAT\in NP\subseteq PSPACE$
+\end_inset
+
+(, להריץ את 
+\begin_inset Formula $C$
+\end_inset
+
+, ולהשוות.
+ היא גם ב
+\begin_inset Formula $\forall\exists P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+המחלקה 
+\begin_inset Formula $\Sigma_{2}=\exists\forall P$
+\end_inset
+
+: כל השפות 
+\begin_inset Formula $L$
+\end_inset
+
+ כך שיש 
+\begin_inset Formula $M\in P$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x\in L\iff\exists y\forall z.M\left(x,y,z\right)=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|y\right|,\left|z\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+המחלקה 
+\begin_inset Formula $\Pi_{2}=\forall\exists P$
+\end_inset
+
+: כל השפות 
+\begin_inset Formula $L$
+\end_inset
+
+ כך שיש 
+\begin_inset Formula $M\in P$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x\in L\iff\forall y\exists z.M\left(x,y,z\right)=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|y\right|,\left|z\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+באופן דומה מסמנים 
+\begin_inset Formula $NP=\exists P,coNP=\forall P$
+\end_inset
+
+ )
+\begin_inset Formula $coNP$
+\end_inset
+
+ כל השפות 
+\begin_inset Formula $L$
+\end_inset
+
+ כך שיש 
+\begin_inset Formula $M\in P$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x\in L\iff\forall y.M\left(x,y\right)=1$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Definition
+כמו כן, נגדיר 
+\begin_inset Formula $PH=\bigcup_{k}\Sigma_{k}=\bigcup_{k}\Pi_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\text{CorrectSATSolver}\in\forall P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נסמן 
+\begin_inset Formula $C^{*}\left(\varphi\right)$
+\end_inset
+
+ את המכונה שמשתמשת ב
+\begin_inset Formula $C$
+\end_inset
+
+ כפותר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+SAT
+\lang hebrew
+ כדי למצוא השמה מספקת ל
+\begin_inset Formula $\varphi$
+\end_inset
+
+, נטען כי 
+\begin_inset Formula 
+\begin{align*}
+C\in\text{CorrectSATSolver} & \iff\forall\varphi\in\left\{ 0,1\right\} ^{m}.C\left(\varphi\right)=T\implies\varphi\left(C^{*}\left(\varphi\right)\right)=T,C\left(\varphi\right)=F\implies\forall b.\varphi\left(b\right)=F\\
+ & \iff\forall\varphi\in\left\{ 0,1\right\} ^{m}\forall b.\left(C\left(\varphi\right)=F\lor\varphi\left(C^{*}\left(\varphi\right)\right)=T\right)\land\left(C\left(\varphi\right)=T\lor\varphi\left(b\right)=F\right)
+\end{align*}
+
+\end_inset
+
+ואז נקבל 
+\begin_inset Formula $\text{CorrectSATSolver}\in coNP$
+\end_inset
+
+, כי את הטענה בתוך הלכל אפשר לבדוק בזמן פולינומי.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $C\in\text{CorrectSATSolver}$
+\end_inset
+
+ כלומר לכל 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $C\left(\varphi\right)=SAT\left(\varphi\right)$
+\end_inset
+
+, אז לכל 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, אם 
+\begin_inset Formula $C\left(\varphi\right)=T$
+\end_inset
+
+ אז יש ל
+\begin_inset Formula $\varphi$
+\end_inset
+
+ השמה מספקת ומנכונות 
+\begin_inset Formula $C^{*}\left(\varphi\right)$
+\end_inset
+
+ תהיה כזו השמה, כלומר 
+\begin_inset Formula $\varphi\left(C^{*}\left(\varphi\right)\right)=T$
+\end_inset
+
+.
+ כמו כן אם 
+\begin_inset Formula $C\left(\varphi\right)=F$
+\end_inset
+
+ אז מנכונות אין השמה מספקת, כלומר לכל 
+\begin_inset Formula $b$
+\end_inset
+
+ 
+\begin_inset Formula $\varphi\left(b\right)=F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אחרת, אם 
+\begin_inset Formula $C\notin\text{CorrectSATSolver}$
+\end_inset
+
+ אז קיימת נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ לא ספיקה עם 
+\begin_inset Formula $C\left(\varphi\right)=T$
+\end_inset
+
+, או 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיקה עם 
+\begin_inset Formula $C\left(\varphi\right)=F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ לא ספיקה כך ש
+\begin_inset Formula $C\left(\varphi\right)=T$
+\end_inset
+
+, אז 
+\begin_inset Formula $C\left(\varphi\right)=T$
+\end_inset
+
+ אבל 
+\begin_inset Formula $\varphi\left(C^{*}\left(\varphi\right)\right)=F$
+\end_inset
+
+ כי אחרת זו השמה מספקת ל
+\begin_inset Formula $\varphi$
+\end_inset
+
+ והיא ספיקה, ולכן אגף ימין לא מתקיים.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיקה כך ש
+\begin_inset Formula $C\left(\varphi\right)=F$
+\end_inset
+
+, אז מכך שהיא ספיקה יש 
+\begin_inset Formula $b$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\varphi\left(b\right)=T$
+\end_inset
+
+, ואגף ימין שוב לא מתקיים.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $PH\subseteq PSPACE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in PH$
+\end_inset
+
+, אז יש 
+\begin_inset Formula $k$
+\end_inset
+
+ כך ש
+\begin_inset Formula $L\in\Sigma_{k}$
+\end_inset
+
+, ויש מכונה 
+\begin_inset Formula $M\in P$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x\in L\iff\exists x_{1}\forall x_{2}\cdots\exists x_{k}M\left(x,x_{1},\dots,x_{k}\right)=T$
+\end_inset
+
+.
+ עושים סוג של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+minmax
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+רקורסיבי )יש מספר קבוע של קריאות, 
+\begin_inset Formula $k$
+\end_inset
+
+( כדי לפתור ב
+\begin_inset Formula $PSPACE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+הבעיה 
+\begin_inset Formula $\text{OptimalCircuit}$
+\end_inset
+
+: הקלט הוא מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ על 
+\begin_inset Formula $m$
+\end_inset
+
+ קלטים, 
+\begin_inset Formula $C$
+\end_inset
+
+ בשפה אם ורק אם הוא המעגל הכי קטן עם הפונקציונליות הזו.
+ כלומר,
+\begin_inset Formula 
+\[
+\forall B,\left|B\right|<\left|C\right|\exists a.C\left(a\right)\neq B\left(a\right)
+\]
+
+\end_inset
+
+אז 
+\begin_inset Formula $\text{OptimalCircuit}\in\Pi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\text{OptimalCircuit}$
+\end_inset
+
+ היא 
+\begin_inset Formula $\Pi_{2}$
+\end_inset
+
+ שלמה תחת רדוקציות טיורינג )לא בדיוק, אבל בערך(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $P^{NP}\subseteq\Sigma_{2}=\exists\forall P$
+\end_inset
+
+.
+ וגם גרסה מוכללת: 
+\begin_inset Formula $NP^{SAT}\subseteq\Sigma_{2}$
+\end_inset
+
+ )מופיעה בספר(.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in P^{NP}$
+\end_inset
+
+, נניח 
+\begin_inset Formula $L\in P^{SAT}$
+\end_inset
+
+.
+ אז יש מכונת אורקל 
+\begin_inset Formula $M$
+\end_inset
+
+ שרצה בזמן 
+\begin_inset Formula $\left|x\right|^{c}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x\in L\iff M^{SAT}\left(x\right)=T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+בהינתן קלט 
+\begin_inset Formula $x$
+\end_inset
+
+, נבקש מהמוכיח להגיד לנו איזה שאילתות 
+\begin_inset Formula $M^{SAT}\left(x\right)$
+\end_inset
+
+ הולכת לשאול את האורקל, 
+\begin_inset Formula $\varphi_{1},\dots,\varphi_{t}\in\left\{ 0,1\right\} ^{n^{c}}$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi_{i}$
+\end_inset
+
+ השאילתה לשאול בזמן 
+\begin_inset Formula $i$
+\end_inset
+
+, וכן איזה תשובות 
+\begin_inset Formula $a_{1},\dots,a_{t}\in\left\{ 0,1\right\} $
+\end_inset
+
+ נקבל על השאילתות, וכן לכל 
+\begin_inset Formula $i$
+\end_inset
+
+ אם 
+\begin_inset Formula $a_{i}=1$
+\end_inset
+
+ נבקש עד 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ שמראה 
+\begin_inset Formula $\varphi\left(w_{i}\right)=1$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+ כך ש
+\begin_inset Formula $a_{i}=0$
+\end_inset
+
+, נרצה שלכל 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ יתקיים 
+\begin_inset Formula $\varphi\left(b_{i}\right)=0$
+\end_inset
+
+.
+ אז
+\begin_inset Formula 
+\begin{align*}
+x\in L\iff M^{SAT}\left(x\right)=T\iff & \exists\left\{ \varphi_{i}\right\} _{i=1}^{t},\left\{ a_{i}\right\} _{i=1}^{t},\left\{ w_{i}\right\} _{i=1}^{t}\forall\left\{ z_{i}\right\} _{i=1}^{t}.\varphi_{i}\text{ is the i'th query given }\varphi_{<i},a_{<i}\\
+ & ,\text{if }a_{i}=1\text{ then }\varphi_{i}\left(w_{i}\right)=T,\text{ if }a_{i}=0\text{ then }\varphi_{i}\left(z_{i}\right)=F,M\left(x\right)=T
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\Sigma_{2}\subseteq NP^{SAT\left[1\right]}\subseteq NP^{SAT}\subseteq\Sigma_{2}$
+\end_inset
+
+, ולכן הם כולם שווים.
+ באופן דומה עבור 
+\begin_inset Formula $coNP^{SAT},\Pi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+הרצאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+השפה 
+\begin_inset Formula $TQBF_{2}$
+\end_inset
+
+
+\series default
+ כל הנוסחאות מהצורה 
+\begin_inset Formula $\exists y\forall z.\varphi\left(y,z\right)$
+\end_inset
+
+, כאשר 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה ב
+\begin_inset Formula $\land,\lor,\lnot$
+\end_inset
+
+ על המשתנים, שיש להן ערך 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $TQBF_{2}$
+\end_inset
+
+ היא 
+\begin_inset Formula $\Sigma_{2}$
+\end_inset
+
+ שלמה )באופן דומה, 
+\begin_inset Formula $TQBF_{\forall2}$
+\end_inset
+
+ היא 
+\begin_inset Formula $\Pi_{2}$
+\end_inset
+
+ שלמה(.
+\end_layout
+
+\begin_layout Proof
+ניקח 
+\begin_inset Formula $L\in\Pi_{2}$
+\end_inset
+
+, אז מהגדרה 
+\begin_inset Formula $L$
+\end_inset
+
+ נפתרת על ידי 
+\begin_inset Formula $x\in L\iff\forall y\exists z.M\left(x,y,z\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $M\in P,\left|y\right|,\left|z\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נסתכל על טבלת החישוב של 
+\begin_inset Formula $M$
+\end_inset
+
+, אפשר להמיר אותה למעגל ואז לנוסחה, אבל בנוסחה יהיו הרבה משתנים חדשים )משתנה
+ חדש לכל שער בטבלת החישוב(.
+ אבל החישוב דטרמיניסטי בהינתן הקלט, ולכן יש רק בחירה אחת לערכי המשתנים שהיא
+ קונסיסטנטית עם החישוב.
+ לכן, הרדוקציה תחזיר את הנוסחה 
+\begin_inset Formula 
+\[
+\forall y\exists z,\text{values for new variables}.\varphi\left(\cdots\right)
+\]
+
+\end_inset
+
+זה אפשרי גם עבור 
+\begin_inset Formula $\Sigma_{2}$
+\end_inset
+
+, כי 
+\begin_inset Formula $\overline{TQBF_{2}}=TQBF_{\forall,2}$
+\end_inset
+
+ היא 
+\begin_inset Formula $\Pi_{2}=co\Sigma_{2}$
+\end_inset
+
+ שלמה ולכן 
+\begin_inset Formula $TQBF_{2}$
+\end_inset
+
+ היא 
+\begin_inset Formula $\Sigma_{2}$
+\end_inset
+
+ שלמה.
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $NP=coNP$
+\end_inset
+
+ אז 
+\begin_inset Formula $PH=NP=coNP=NP\cap coNP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נראה 
+\begin_inset Formula $\Sigma_{2}=NP$
+\end_inset
+
+.
+ צריך להראות 
+\begin_inset Formula $\Sigma_{2}\subseteq NP$
+\end_inset
+
+, ניקח 
+\begin_inset Formula $L\in\Sigma_{2}$
+\end_inset
+
+ אז מהגדרה 
+\begin_inset Formula $x\in L\iff\exists y\forall z.M\left(x,y,z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נגדיר שפה 
+\begin_inset Formula $L'$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\left(x,y\right)\in L'\iff\forall z.M\left(x,y,z\right)$
+\end_inset
+
+, אז 
+\begin_inset Formula $L'\in\Pi_{1}=coNP$
+\end_inset
+
+, מהנחה 
+\begin_inset Formula $L'\in NP$
+\end_inset
+
+ ולכן ניתן לכתוב 
+\begin_inset Formula $\left(x,y\right)\in L'\iff\exists w.M'\left(x,y,w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אז 
+\begin_inset Formula $x\in L\iff\exists y\forall z.M\left(x,y,z\right)\iff\exists y.\left(x,y\right)\in L'\iff\exists y,w.M'\left(x,y,w\right)$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $L\in NP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+אם ל
+\begin_inset Formula $PH$
+\end_inset
+
+ יש שפה שלמה אז ההיררכיה קורסת.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $L$
+\end_inset
+
+ היא 
+\begin_inset Formula $PH$
+\end_inset
+
+ שלמה, בפרט 
+\begin_inset Formula $L\in PH=\bigcup_{k=1}^{\infty}\Sigma_{k}$
+\end_inset
+
+ ולכן יש 
+\begin_inset Formula $k$
+\end_inset
+
+ כך ש
+\begin_inset Formula $L\in\Sigma_{k}$
+\end_inset
+
+.
+ כעת תהי 
+\begin_inset Formula $L'\in PH$
+\end_inset
+
+, אז 
+\begin_inset Formula $L'\leq L$
+\end_inset
+
+, ולכן גם 
+\begin_inset Formula $L'\in\Sigma_{k}$
+\end_inset
+
+.
+ כלומר קיבלנו 
+\begin_inset Formula $PH=\Sigma_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $coP^{NP}=P^{NP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+השפה 
+\begin_inset Formula $TQBF$
+\end_inset
+
+
+\series default
+ כל הנוסחאות מהצורה 
+\begin_inset Formula 
+\[
+\exists x_{1}\in\left\{ 0,1\right\} \forall x_{2}\in\left\{ 0,1\right\} \cdots\exists x_{m}\in\left\{ 0,1\right\} .\varphi\left(x_{1},\dots,x_{m}\right)
+\]
+
+\end_inset
+
+שהערך שלהן הוא 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $TQBF$
+\end_inset
+
+ היא 
+\begin_inset Formula $PSPACE$
+\end_inset
+
+-שלמה.
+\end_layout
+
+\begin_layout Proof
+ראשית נראה 
+\begin_inset Formula $TQBF\in PSPACE$
+\end_inset
+
+.
+ נניח שקיבלנו קלט 
+\begin_inset Formula $\varphi=\exists x_{1}\forall x_{2}\cdots\exists x_{m}\varphi\left(x_{1},\dots,x_{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נבנה בראש עץ בעומק 
+\begin_inset Formula $m$
+\end_inset
+
+, כאשר ברמה הראשונה מחליטים את הערך של 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ וממנו מתפצלים, ואז 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, ואז 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+ וכן הלאה עד 
+\begin_inset Formula $x_{m}$
+\end_inset
+
+.
+ רוצים לראות אם יש מסלול שמקיים את התנאים )זה סוג של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+min-max
+\lang hebrew
+(, וזה יהיה ה
+\lang english
+value
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של העץ )האם יש אסטרטגיה מנצחת - קיים מהלך, כך שלכל מהלך של היריב, יש מהלך
+ טוב(.
+\end_layout
+
+\begin_layout Proof
+אפשר לחשב את ערך העץ )בלי לבנות אותו, כי הוא בגודל אקספוננציאלי( רקורסיבית
+ במקום פולינומי, על ידי סריקה שלו לעומק.
+ זה מראה ש
+\begin_inset Formula $TQBF\in PSPACE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+כעת נראה 
+\begin_inset Formula $TQBF$
+\end_inset
+
+ היא 
+\begin_inset Formula $PSPACE$
+\end_inset
+
+ שלמה.
+ תהי 
+\begin_inset Formula $L\in PSPACE$
+\end_inset
+
+, אז היא נפתרת על ידי מכונת טיורינג 
+\begin_inset Formula $M$
+\end_inset
+
+ עם זכרון פולינומי, נניח 
+\begin_inset Formula $n^{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+צריך לבנות רדוקציה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ שמקבלת 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+, וצריכה להוציא 
+\begin_inset Formula $\varphi\left(x\right)$
+\end_inset
+
+ פסוק 
+\begin_inset Formula $TQBF$
+\end_inset
+
+ כך ש
+\begin_inset Formula $x\in L\iff\varphi\left(x\right)\in TQBF$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+בנייה: 
+\series default
+נסתכל על גרף הקונפיגורציות של המכונה 
+\begin_inset Formula $M$
+\end_inset
+
+ )שפותרת את 
+\begin_inset Formula $L$
+\end_inset
+
+( - יש 
+\begin_inset Formula $2^{n^{c}}\cdot n^{c}\cdot n\cdot O\left(1\right)\leq2^{2n^{c}}$
+\end_inset
+
+ קודקודים )קונפיגורציות(, ויש קשת מכוונת בין שני קודקודים אם קונפיגורציה
+ אחת מובילה לשנייה.
+ דרגת היציאה של כל קודקוד חוקי היא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+, כי 
+\begin_inset Formula $M$
+\end_inset
+
+ דטרמיניסטית.
+ מתקיים 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אם ורק אם יש מסלול ב
+\begin_inset Formula $G$
+\end_inset
+
+ מ
+\begin_inset Formula $c_{init}$
+\end_inset
+
+ ל
+\begin_inset Formula $c_{accept}$
+\end_inset
+
+, וננסה לנסח את זה כ
+\begin_inset Formula $TQBF$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נגדיר 
+\begin_inset Formula $Reach\left(c,c',t\right)$
+\end_inset
+
+ שמקבל ערך 
+\begin_inset Formula $T$
+\end_inset
+
+ אם ורק אם יש מסלול מ
+\begin_inset Formula $c$
+\end_inset
+
+ ל
+\begin_inset Formula $c'$
+\end_inset
+
+ ב
+\begin_inset Formula $G$
+\end_inset
+
+ באורך 
+\begin_inset Formula $2^{t}\geq$
+\end_inset
+
+.
+ מתקיים 
+\begin_inset Formula $Reach\left(c,c',0\right)$
+\end_inset
+
+ ב
+\begin_inset Formula $P$
+\end_inset
+
+ )בודקים אם אפשר לעבור בין הקונפיגורציות בצעד אחד, ישירות(, אנחנו מתעניינים
+ ב
+\begin_inset Formula $Reach\left(c_{init},c_{accept},2n^{c}\right)$
+\end_inset
+
+ )כי יש 
+\begin_inset Formula $2^{2n^{c}}$
+\end_inset
+
+ קודקודים(.
+ מתקיים
+\begin_inset Formula 
+\begin{align*}
+Reach\left(c_{1},c_{2},t\right) & =\exists c_{mid}.Reach\left(c,c_{mid},t-1\right)\land Reach\left(c_{mid},c_{2},t-1\right)\\
+ & =\exists c_{mid}\forall b\in\left\{ 0,1\right\} \exists w_{1},w_{2}\in V.\left(b=0\implies w_{1}=c_{1},w_{2}=c_{mid}\right)\\
+ & ,\left(b=1\implies w_{1}=c_{mid},w_{2}=c_{2}\right),Reach\left(w_{1},w_{2},t-1\right)
+\end{align*}
+
+\end_inset
+
+נמשיך רקורסיבית 
+\begin_inset Formula $n^{c}$
+\end_inset
+
+ רמות ונקבל 
+\begin_inset Formula $TQBF$
+\end_inset
+
+ - זה יהיה הפלט של הרדוקציה, 
+\begin_inset Formula $\varphi_{x}$
+\end_inset
+
+.
+ היא אכן לוגריתמית, הוכחת נכונות הייתה בכיתה, באינדוקציה.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+קרפ-ליפטון
+\series default
+ ראינו כבר שאם 
+\begin_inset Formula $NP=P$
+\end_inset
+
+ אז 
+\begin_inset Formula $PH=P$
+\end_inset
+
+, וכמו כן אם 
+\begin_inset Formula $NP\subseteq\text{Size}\left(poly\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $PH\subseteq\text{Size}\left(poly\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+משפט קרפ-ליפטון טוען שאם 
+\begin_inset Formula $NP\subseteq\text{Size}\left(poly\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $PH=\Sigma_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $NP\subseteq\text{Size}\left(poly\right)$
+\end_inset
+
+, ונראה ש
+\begin_inset Formula $\Pi_{2}\subseteq\Sigma_{2}$
+\end_inset
+
+.
+ זה יסיים, כי אז גם 
+\begin_inset Formula $\Sigma_{2}=co\Pi_{2}\subseteq co\Sigma_{2}=\Pi_{2}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\Sigma_{2}=\Pi_{2}$
+\end_inset
+
+ וההיררכיה קורסת.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in\Pi_{2}$
+\end_inset
+
+, אז 
+\begin_inset Formula $x\in L\iff\forall y\exists zM\left(x,y,z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נראה רדוקציה מ
+\begin_inset Formula $TQBF_{\forall,2}$
+\end_inset
+
+ ל
+\begin_inset Formula $\Sigma_{2}$
+\end_inset
+
+.
+ הקלט הוא 
+\begin_inset Formula $\forall y\exists z\varphi\left(x,y,z\right)$
+\end_inset
+
+, נסתכל על הנוסחה
+\begin_inset Formula 
+\[
+\exists\text{circuit }C.\underbrace{C\in CorrectSATSolver}_{\in\forall P}\land\forall y\left[C\left(\underbrace{\varphi\left(x,y,z\right)}_{z\text{ is the variable}}\right)=T\right]\in\Sigma_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+זכרון לא דטרמיניסטי
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+זכרון דטרמיניסטי 
+\series default
+
+\begin_inset Formula $L\in DSPACE\left(s\left(n\right)\right)$
+\end_inset
+
+ אם היא נפתרת על ידי מכונת טיורינג דטרמיניסטית עם סרט קלט, עבודה ופלט ומשתמשת
+ בלכל היותר 
+\begin_inset Formula $s\left(n\right)$
+\end_inset
+
+ זכרון בסרט העבודה.
+\end_layout
+
+\begin_layout Standard
+יש שתי הגדרות אפשריות לחישוב לא דטרמיניסטי:
+\end_layout
+
+\begin_layout Enumerate
+פונקציית מעברים 
+\begin_inset Formula $\delta\colon\Sigma\times Q\to P\left(\Sigma\times Q\times\left\{ L,R\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+דוחפים את כל כמתי הקיים להתחלה.
+ לדוגמה, בזמן
+\begin_inset Formula 
+\[
+NTIME\left(t\right)=\left\{ L\in\Sigma^{*}\mid\exists M\in P.x\in L\iff\exists y.M\left(x,y\right),M\left(x,y\right)\text{ runs in }t\left(\left|x\right|\right)\text{ time}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נרצה להגדיר גם זכרון לא דטרמיניסטי.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+זכרון לא דטרמיניסטי
+\series default
+ 
+\begin_inset Formula $L\in NSPACE\left(s\left(n\right)\right)$
+\end_inset
+
+ אם יש מכונה עם פונקציית מעברים 
+\begin_inset Formula $\delta\colon\Sigma\times Q\to P\left(\Sigma\times Q\times\left\{ L,R\right\} \right)$
+\end_inset
+
+ עם סרט קלט, עבודה ופלט שמשתמשת בלכל היותר 
+\begin_inset Formula $s\left(n\right)$
+\end_inset
+
+ זכרון בסרט העבודה.
+\end_layout
+
+\begin_layout Definition
+באופן שקול, 
+\begin_inset Formula $L\in NPSPACE\left(s\left(n\right)\right)$
+\end_inset
+
+ אם היא נפתרת על ידי 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+ עם סרט קלט, פלט, עבודה וסרט ניחושים, כאשר כל הסרטים כרגיל וסרט הניחושים
+ הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+read-once
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- לקריאה בלבד, ובכל קריאה זזים ימינה.
+ ואז אפשר לדחוף את כמתי הקיים על סרט הניחושים להתחלה.
+\end_layout
+
+\begin_layout Remarks
+המכונה תמיד חייבת לעצור )לכל אפשרות של ניחושים(, וצריך להיות סדרת ניחושים
+ אחת שתקבל כדי שמילה תתקבל.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+השפה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+STCON
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ הקלט הוא גרף מכוון 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ ושני קודקודים 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+, והוא בשפה אם יש מסלול בין 
+\begin_inset Formula $s$
+\end_inset
+
+ ל
+\begin_inset Formula $t$
+\end_inset
+
+ ב
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+אלגוריתם לא דטרמיניסטי בזכרון לוגריתמי ל
+\lang english
+STCON
+\end_layout
+
+\begin_layout Standard
+אנחנו יודעים 
+\begin_inset Formula $STCON\in P$
+\end_inset
+
+, על ידי לדוגמה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+BFS
+\lang hebrew
+.
+ נציג אלגוריתם לא דטרמיניסטי:
+\end_layout
+
+\begin_layout Enumerate
+נגדיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $curr\leftarrow s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+לכל 
+\begin_inset Formula $i=1,2,\dots,\left|V\right|$
+\end_inset
+
+, ננחש שכן 
+\begin_inset Formula $v'$
+\end_inset
+
+ של 
+\begin_inset Formula $curr$
+\end_inset
+
+, אם 
+\begin_inset Formula $curr=t$
+\end_inset
+
+ נסיים ונקבל, אחרת נמשיך.
+\end_layout
+
+\begin_layout Enumerate
+אם סיימנו את הלולאה בלי להגיע ל
+\begin_inset Formula $t$
+\end_inset
+
+, נדחה.
+\end_layout
+
+\begin_layout Standard
+סיבוכיות הזכרון היא לוגריתמית, כי צריך לשמור את 
+\begin_inset Formula $curr,s,v'$
+\end_inset
+
+.
+ לכן, 
+\begin_inset Formula $STCON\in NSPACE\left(O\left(\log\left(n\right)\right)\right)=NL$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $STCON$
+\end_inset
+
+ היא 
+\begin_inset Formula $NL$
+\end_inset
+
+ שלמה.
+\end_layout
+
+\begin_layout Proof
+ראינו 
+\begin_inset Formula $STCON\in NL$
+\end_inset
+
+.
+ תהי 
+\begin_inset Formula $L\in NL$
+\end_inset
+
+, ותהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מכונה לא דטרמיניסטית שפותרת אותה.
+ נבנה רדוקציה 
+\begin_inset Formula $L\leq_{\varphi}STCON$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+על קלט 
+\begin_inset Formula $x$
+\end_inset
+
+, הרדוקציה תוציא את 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ גרף הקונפיגורציות של 
+\begin_inset Formula $M$
+\end_inset
+
+, את 
+\begin_inset Formula $s$
+\end_inset
+
+ הקונפיגורציה ההתחלתית על 
+\begin_inset Formula $x$
+\end_inset
+
+ ו
+\begin_inset Formula $t$
+\end_inset
+
+ הקונפיגורציה המקבלת.
+\end_layout
+
+\begin_layout Paragraph
+אלגוריתם דטרמיניסטי ב
+\begin_inset Formula $\log^{2}n$
+\end_inset
+
+ זכרון ל
+\lang english
+STCON
+\end_layout
+
+\begin_layout Standard
+נייצג את הגרף כמטריצת שכנויות 
+\begin_inset Formula $A$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $\left|V\right|\times\left|V\right|$
+\end_inset
+
+.
+ נגדיר כפל מטריצות בוליאני עם 
+\begin_inset Formula $\lor$
+\end_inset
+
+ כחיבור ו
+\begin_inset Formula $\land$
+\end_inset
+
+ ככפל, אז מתקיים
+\begin_inset Formula 
+\[
+A^{k}\left[i,j\right]=1\iff\exists\text{path of length }k\text{ from }i\text{ to }j\text{ in }G
+\]
+
+\end_inset
+
+רוצים לדעת האם 
+\begin_inset Formula $A^{n}\left[s,t\right]=1$
+\end_inset
+
+.
+ האלגוריתם יקבל את 
+\begin_inset Formula $A,s,t$
+\end_inset
+
+, יחשב את 
+\begin_inset Formula $A^{2},A^{4},\dots,A^{\left(2^{\log n}\right)}$
+\end_inset
+
+ ויבדוק את 
+\begin_inset Formula $A^{n}\left[s,t\right]$
+\end_inset
+
+.
+ אבל לאחסן עוד מטריצות שכנויות לוקח יותר מדי זכרון, אז נעשה הרכבה של רדוקציות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+space
+\lang hebrew
+.
+ מפעילים 
+\begin_inset Formula $\log n$
+\end_inset
+
+ רדוקציות וכל אחת לוקחת 
+\begin_inset Formula $\log n$
+\end_inset
+
+ זכרון, לכן בסך הכל נצטרך 
+\begin_inset Formula $\log^{2}n$
+\end_inset
+
+ זכרון )כמו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+stack
+\lang hebrew
+(.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+סאביץ'
+\series default
+ 
+\begin_inset Formula $STCON\in DSPACE\left(O\left(\log^{2}n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נתון גרף 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+.
+ נבנה אלגוריתם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $Reach\left(a,b,\ell\right)$
+\end_inset
+
+, שיהיה 
+\begin_inset Formula $T$
+\end_inset
+
+ אם ורק אם יש מסלול מ
+\begin_inset Formula $a$
+\end_inset
+
+ ל
+\begin_inset Formula $b$
+\end_inset
+
+ באורך לכל היותר 
+\begin_inset Formula $2^{\ell}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+הבסיס יהיה 
+\begin_inset Formula $\ell=0$
+\end_inset
+
+: עבור 
+\begin_inset Formula $Reach\left(a,b,0\right)$
+\end_inset
+
+ נעבור על כל הקשתות ונבדוק אם יש קשת בין 
+\begin_inset Formula $a$
+\end_inset
+
+ ל
+\begin_inset Formula $b$
+\end_inset
+
+, או אם 
+\begin_inset Formula $a=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+עבור 
+\begin_inset Formula $\ell>0$
+\end_inset
+
+, נפתור רקורסיבית 
+\begin_inset Formula $Reach\left(a,b,\ell\right)=\lor_{k=1}^{n}Reach\left(a,k,\ell-1\right)\land Reach\left(k,b,\ell-1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+סיבוכיות:
+\series default
+ נסמן ב
+\begin_inset Formula $s\left(\ell\right)$
+\end_inset
+
+ את סיבוכיות הזכרון של 
+\begin_inset Formula $Reach\left(a,b,\ell\right)$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $s\left(0\right)=O\left(\log n\right)$
+\end_inset
+
+, ומתקיים 
+\begin_inset Formula $s\left(\ell+1\right)=s\left(\ell\right)+O\left(\log n\right)$
+\end_inset
+
+ כי עוברים על כל 
+\begin_inset Formula $k$
+\end_inset
+
+ )
+\begin_inset Formula $\log n$
+\end_inset
+
+ זכרון(, ובתוכו מחשבים כל פעם את 
+\begin_inset Formula $Reach$
+\end_inset
+
+ עם 
+\begin_inset Formula $\ell-1$
+\end_inset
+
+, שזה לוקח 
+\begin_inset Formula $s\left(\ell\right)$
+\end_inset
+
+ זכרון )רק פעם אחת ולא פעמיים, כי בין ה
+\begin_inset Formula $\land$
+\end_inset
+
+ אפשר לשחרר את הזכרון(.
+ נפתור את הנוסחה ונקבל 
+\begin_inset Formula $s\left(\ell\right)=\ell\log n$
+\end_inset
+
+, ולכן 
+\begin_inset Formula $s\left(\log n\right)=\log n\log n=\log^{2}n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remarks
+האלגוריתם של סאביץ' לוקח 
+\begin_inset Formula $n^{O\left(\log n\right)}$
+\end_inset
+
+ זמן - הרבה.
+ לא ידוע אם יש אלגוריתם בזמן פולינומי וזכרון 
+\begin_inset Formula $\sqrt{n}$
+\end_inset
+
+ ל
+\begin_inset Formula $STCON$
+\end_inset
+
+, אבל בגרפים לא מכוונים ידוע שיש אלגוריתם ל
+\begin_inset Formula $USTCON$
+\end_inset
+
+ בזכרון 
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+, ולכן גם זמן פולינומי )ריינגולד(.
+\end_layout
+
+\begin_layout Claim
+כל אלגוריתם 
+\begin_inset Formula $NSPACE\left(s\left(n\right)\right)$
+\end_inset
+
+ רץ בזמן לכל היותר 
+\begin_inset Formula $2^{O\left(s\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+זמן הריצה הוא לכל היותר גודל גרף הקונפיגורציות )כי אחרת יש לולאה אינסופית(,
+ וגודל גרף הקונפיגורציות הוא לכל היותר 
+\begin_inset Formula $2^{O\left(s\right)}$
+\end_inset
+
+ )כי כל קונפיגורציה בגודל 
+\begin_inset Formula $\log n\cdot\log s\cdot s$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Corollary
+
+\series bold
+קשר בין מחלקות 
+\series default
+
+\begin_inset Formula $L\subseteq NL$
+\end_inset
+
+ וכן 
+\begin_inset Formula $NL\subseteq DSPACE\left(O\left(\log^{2}n\right)\right),NL\subseteq P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+המחלקות 
+\begin_inset Formula $ZNP,ZNL$
+\end_inset
+
+
+\series default
+ מתקיים 
+\begin_inset Formula $L\in ZNP$
+\end_inset
+
+ אם יש מכונה לא דטרמיניסטית עם זמן פולינומי 
+\begin_inset Formula $M$
+\end_inset
+
+ שיכולה לענות 
+\begin_inset Formula $accept,reject,quit$
+\end_inset
+
+, אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז יש מסלול שעונה 
+\begin_inset Formula $accept$
+\end_inset
+
+ ואין מסלול שעונה 
+\begin_inset Formula $reject$
+\end_inset
+
+, ואם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז יש מסלול שעונה 
+\begin_inset Formula $reject$
+\end_inset
+
+ ואין מסלול שעונה 
+\begin_inset Formula $accept$
+\end_inset
+
+.
+ באופן דומה מגדירים 
+\begin_inset Formula $ZNL$
+\end_inset
+
+ )
+\begin_inset Formula $M$
+\end_inset
+
+ לא דטרמיניסטית עם זכרון לוגריתמי(.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $ZNP=NP\cap coNP,ZNL=NL\cap coNL$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $L\in ZNP$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $L\in NP$
+\end_inset
+
+, כי נבנה מכונה 
+\begin_inset Formula $M'$
+\end_inset
+
+ שמסמלצת את 
+\begin_inset Formula $M$
+\end_inset
+
+, אם מחזירה 
+\begin_inset Formula $accept$
+\end_inset
+
+ מקבלת, ואם מחזירה 
+\begin_inset Formula $reject$
+\end_inset
+
+ או 
+\begin_inset Formula $quit$
+\end_inset
+
+ דוחה.
+ באופן דומה 
+\begin_inset Formula $\overline{L}\in NP$
+\end_inset
+
+, בונים מכונה 
+\begin_inset Formula $M'$
+\end_inset
+
+ שמסמלצת את 
+\begin_inset Formula $M$
+\end_inset
+
+, אם מחזירה 
+\begin_inset Formula $reject$
+\end_inset
+
+ מקבלת, ואם מחזירה 
+\begin_inset Formula $accept$
+\end_inset
+
+ או 
+\begin_inset Formula $quit$
+\end_inset
+
+ דוחה.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $L\in NP\cap coNP$
+\end_inset
+
+, יהיו 
+\begin_inset Formula $M_{1},M_{2}$
+\end_inset
+
+ מכונות לא דטרמיניסטיות שפותרות את 
+\begin_inset Formula $L,\overline{L}$
+\end_inset
+
+ בהתאמה.
+ נגדיר מכונה 
+\begin_inset Formula $M$
+\end_inset
+
+, שמסמלצת את 
+\begin_inset Formula $M_{1},M_{2}$
+\end_inset
+
+, אם רק 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ מקבלת היא מחזירה 
+\begin_inset Formula $accept$
+\end_inset
+
+, אם רק 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ מקבלת היא מחזירה 
+\begin_inset Formula $reject$
+\end_inset
+
+, אם שתיהן דוחות היא מחזירה 
+\begin_inset Formula $quit$
+\end_inset
+
+ )לא יכול להיות ששתיהן מקבלות(.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $STCON\in ZNL$
+\end_inset
+
+.
+ מכאן נובע גם 
+\begin_inset Formula $ZNL=NL=coNL$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+נגדיר פרוצדורה לא דטרמיניסטית 
+\begin_inset Formula $Enumerate\left(k,C_{k}\right)$
+\end_inset
+
+
+\series default
+, שבהינתן שמובטח לנו שיש בדיוק 
+\begin_inset Formula $C_{k}$
+\end_inset
+
+ קודקודים שנגישים מ
+\begin_inset Formula $s$
+\end_inset
+
+ בלכל היותר 
+\begin_inset Formula $k$
+\end_inset
+
+ צעדים, היא תפלוט את 
+\begin_inset Formula $C_{k}$
+\end_inset
+
+ הקודקודים לסרט הפלט בסדר לקסיקוגרפי עולה, והיא תעשה זאת במובן 
+\begin_inset Formula $ZNL$
+\end_inset
+
+ )יש לפחות ניחוש אחד שמוביל לתוצאה נכונה ו
+\lang english
+accept
+\lang hebrew
+, אין ניחושים שמובילים לתוצאה לא נכונה ו
+\lang english
+accept
+\lang hebrew
+, ואפשר להחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+quit
+\lang hebrew
+(.
+\end_layout
+
+\begin_layout Proof
+הפרוצדורה תפעל באופן הבא: נגדיר 
+\begin_inset Formula $v_{curr}=-\infty$
+\end_inset
+
+, ולכל 
+\begin_inset Formula $i=1,2,\dots,C_{k}$
+\end_inset
+
+ ננחש 
+\begin_inset Formula $v>v_{curr}$
+\end_inset
+
+, ננחש מסלול באורך אורך 
+\begin_inset Formula $k\geq$
+\end_inset
+
+ בין 
+\begin_inset Formula $s$
+\end_inset
+
+ ל
+\begin_inset Formula $v$
+\end_inset
+
+, אם המסלול לא חוקי נחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+quit
+\lang hebrew
+, אחרת נגדיר 
+\begin_inset Formula $v_{curr}=v$
+\end_inset
+
+ ונפלוט את 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ בסוף נחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+accept
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Proof
+נכונות הפרוצדורה: תמיד יש מסלול שאינו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+quit
+\lang hebrew
+, כי 
+\begin_inset Formula $C_{k}$
+\end_inset
+
+ באמת מספר השכנים במרחק 
+\begin_inset Formula $k\geq$
+\end_inset
+
+, אז יש 
+\begin_inset Formula $v_{1},\dots,v_{C_{k}}$
+\end_inset
+
+ חוקיים, נסדר אותם בסדר לקסיקוגרפי אז סדרת הניחושים הזו עם המסלולים המתאימים
+ תחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+accept
+\lang hebrew
+.
+ אם מסלול מחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+accept
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אז התוצאה נכונה, כי פולטים בדיוק 
+\begin_inset Formula $C_{k}$
+\end_inset
+
+ קודקודים שונים, ויש מסלול מכולם ל
+\begin_inset Formula $v$
+\end_inset
+
+, כי בדקנו את נכונות המסלול שניחשנו.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+נגדיר פרוצדורה לא דטרמיניסטית 
+\begin_inset Formula $Cnext\left(k,C_{k}\right)$
+\end_inset
+
+
+\series default
+, שבהינתן ש
+\begin_inset Formula $C_{k}$
+\end_inset
+
+ נכון, היא מוציאה את 
+\begin_inset Formula $C_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+הפרוצדורה תפעל באופן הבא: נגדיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+count=0
+\lang hebrew
+, נעבור על כל 
+\begin_inset Formula $w\in V$
+\end_inset
+
+, נעבור על כל צומת 
+\begin_inset Formula $v$
+\end_inset
+
+ ב
+\begin_inset Formula $Enumerate\left(k,C_{k}\right)$
+\end_inset
+
+ )אם מחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+quit
+\lang hebrew
+, גם אנחנו נחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+quit
+\lang hebrew
+(, אם 
+\begin_inset Formula $w$
+\end_inset
+
+ שכן של 
+\begin_inset Formula $v$
+\end_inset
+
+ נגדיל את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+count
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ב
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ונמשיך ל
+\begin_inset Formula $w$
+\end_inset
+
+ הבא, ובסוף נוציא את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+count
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Proof
+לכן, כדי לפתור את 
+\begin_inset Formula $STCON$
+\end_inset
+
+, נתחיל ב
+\begin_inset Formula $C_{0}=1$
+\end_inset
+
+, נריץ את 
+\begin_inset Formula $Cnext\left(k,C_{k}\right)$
+\end_inset
+
+ על 
+\begin_inset Formula $k=0,\dots,\left|V\right|-1$
+\end_inset
+
+ ונקבל בסוף את 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+.
+ נריץ 
+\begin_inset Formula $Enumerate\left(n,C_{n}\right)$
+\end_inset
+
+, ונבדוק אם 
+\begin_inset Formula $t$
+\end_inset
+
+ ברשימה.
+\end_layout
+
+\begin_layout Section
+אלגוריתמים הסתברותיים
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+הרצאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+7
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+שפה 
+\begin_inset Formula $L\in BPP_{s,c}$
+\end_inset
+
+ אם קיימת מכונת טיורינג 
+\begin_inset Formula $M\in P$
+\end_inset
+
+ שמקבלת 
+\begin_inset Formula $x,y$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\left|y\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+ )
+\begin_inset Formula $y$
+\end_inset
+
+ המטבעות שהאלגוריתם מטיל(, ומקיימת שאם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז 
+\begin_inset Formula $Pr_{y}\left[M\left(x,y\right)=1\right]\geq c$
+\end_inset
+
+ ואם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז 
+\begin_inset Formula $Pr_{y}\left[M\left(x,y\right)=1\right]\leq s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+שפה 
+\begin_inset Formula $L\in RP_{\varepsilon}$
+\end_inset
+
+ אם קיימת מכונת טיורינג 
+\begin_inset Formula $M\in P$
+\end_inset
+
+ שמקבלת 
+\begin_inset Formula $x,y$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\left|y\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+ )
+\begin_inset Formula $y$
+\end_inset
+
+ המטבעות שהאלגוריתם מטיל(, ומקיימת שאם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז 
+\begin_inset Formula $Pr_{y}\left[M\left(x,y\right)=1\right]\geq1-\varepsilon$
+\end_inset
+
+ ואם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז 
+\begin_inset Formula $Pr_{y}\left[M\left(x,y\right)=1\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+כמו כן, 
+\begin_inset Formula $BPP=BPP_{\frac{1}{3},\frac{2}{3}},RP=BPP_{0,\frac{1}{2}},coRP=BPP_{\frac{1}{2},1}$
+\end_inset
+
+, ונשים לב ש
+\begin_inset Formula $P=BPP_{0,1},NP=BPP_{0,>0}$
+\end_inset
+
+.
+ כלומר 
+\begin_inset Formula $RP$
+\end_inset
+
+ היא כמו 
+\begin_inset Formula $NP$
+\end_inset
+
+ אבל כשיש המון עדים, ולכן במקום לבקש ממוכיח אפשר להגריל ולבדוק, באופן פיזיבילי.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $RP_{\frac{1}{2}}=RP_{2^{-t}}$
+\end_inset
+
+ )
+\begin_inset Formula $t$
+\end_inset
+
+ יכול להיות פולינומי בגודל הקלט(.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $L\in RP_{\frac{1}{2}}$
+\end_inset
+
+, אז יש 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+ כך ש
+\begin_inset Formula $m=\left|y\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+ כך שאם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז 
+\begin_inset Formula $Pr_{y}\left[M\left(x,y\right)=1\right]\geq\frac{1}{2}$
+\end_inset
+
+, ואם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז 
+\begin_inset Formula $Pr_{y}\left[M\left(x,y\right)=1\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נבנה מכונה חדשה 
+\begin_inset Formula $M'\left(x,y'\right)$
+\end_inset
+
+ שתטיל 
+\begin_inset Formula $y_{1},\dots,y_{t}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $y_{i}\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+, תריץ 
+\begin_inset Formula $M\left(x,y_{1}\right),\dots,M\left(x,y_{t}\right)$
+\end_inset
+
+ ותענה כן אם אחד הנסיונות ענה כן.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+נכונות:
+\series default
+ אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $y'=y_{1},\dots,y_{t}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $M\left(x,y_{i}\right)=0$
+\end_inset
+
+ ולכן תמיד נענה לא.
+ אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז יש 
+\begin_inset Formula $n$
+\end_inset
+
+ נסיונות בלתי תלויים, בכל נסיון מצליחים בהסתברות 
+\begin_inset Formula $\frac{1}{2}\leq$
+\end_inset
+
+ אז ההסתברות שנכשל בכולם היא 
+\begin_inset Formula $\frac{1}{2^{t}}$
+\end_inset
+
+, כלומר ההסתברות שנצליח היא 
+\begin_inset Formula $1-\frac{1}{2^{t}}\leq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $P\subseteq RP\subseteq NP$
+\end_inset
+
+, וכן 
+\begin_inset Formula $RP\subseteq BPP$
+\end_inset
+
+.
+ לא יודעים מה הקשר בין 
+\begin_inset Formula $BPP,NP$
+\end_inset
+
+, כן יודעים 
+\begin_inset Formula $BPP\subseteq NEXP$
+\end_inset
+
+ אבל לא יודעים אם ההכלה היא שוויון.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $RP=BPP_{0,\frac{1}{2}}=BPP_{0,\frac{3}{4}}\subseteq BPP_{\frac{1}{3},\frac{2}{3}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $BPP_{\frac{1}{3},\frac{2}{3}}=BPP_{2^{-n},1-2^{-n}}$
+\end_inset
+
+ )בהמשך(.
+\end_layout
+
+\begin_layout Paragraph
+אלגוריתם לבדיקת שוויון במינימום תקשורת
+\end_layout
+
+\begin_layout Standard
+לאליס ולבוב יש שני מספרים בני 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים, הם רוצים לבדוק אם הם שווים במינימום תקשורת ביניהם.
+ באופן נאיבי צריך 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים, אבל אם אליס בוחרת ראשוני אקראי 
+\begin_inset Formula $p$
+\end_inset
+
+ בין 
+\begin_inset Formula $1$
+\end_inset
+
+ ל
+\begin_inset Formula $n^{4}$
+\end_inset
+
+, שולחת את 
+\begin_inset Formula $p,x\mod p$
+\end_inset
+
+ ובוב משווה אז זו תקשורת של 
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+ והסתברות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $1$
+\end_inset
+
+ לצדוק אם יש שוווין, ו
+\begin_inset Formula $\frac{1}{n^{2}}$
+\end_inset
+
+ לטעות אם אין שוויון.
+\end_layout
+
+\begin_layout Standard
+ראינו גם דוגמה לקארפ רבין, השוואה של תת מחרוזת.
+\end_layout
+
+\begin_layout Paragraph
+אלגוריתם לזיווג מושלם בגרף דו צדדי
+\end_layout
+
+\begin_layout Standard
+אפשר לפתור עם אלגוריתם זרימה ב
+\begin_inset Formula $P$
+\end_inset
+
+.
+ נרצה למצוא אלגוריתם אחר.
+ נבנה מטריצה 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ שמייצגת את הגרף, אם 
+\begin_inset Formula $\left(i,j\right)\in E$
+\end_inset
+
+ אז 
+\begin_inset Formula $M\left[i,j\right]=0$
+\end_inset
+
+, ואם 
+\begin_inset Formula $\left(i,j\right)\notin E$
+\end_inset
+
+ אז 
+\begin_inset Formula $M\left[i,j\right]=x_{ij}$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ נבחר ערך 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ באקראי בין 
+\begin_inset Formula $1,\dots,T=2n$
+\end_inset
+
+, מקבלים מטריצה של מספרים 
+\begin_inset Formula $A$
+\end_inset
+
+ ומחשבים 
+\begin_inset Formula $\det A$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $\det A=0$
+\end_inset
+
+ נאמר שאין זיווג, אחרת יש.
+\end_layout
+
+\begin_layout Standard
+נטען שאם אין זיווג מושלם תמיד נגיד לא.
+ אכן, מתקיים 
+\begin_inset Formula $\det M=\sum_{\sigma\in S_{n}}\text{sgn}\left(\sigma\right)\cdot M_{1,\sigma\left(1\right)}\cdots M_{n,\sigma\left(n\right)}$
+\end_inset
+
+, ואם אין זיווג מושלם אז לכל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אחת הקשתות 
+\begin_inset Formula $\left(1,\pi\left(1\right)\right),\dots,\left(n,\pi\left(n\right)\right)$
+\end_inset
+
+ חסרה ולכן אחד הערכים 
+\begin_inset Formula $M_{i,\sigma\left(i\right)}$
+\end_inset
+
+ יהיה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, והמכפלה תהיה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, ולכן גם הסכום.
+\end_layout
+
+\begin_layout Standard
+אם יש זיווג מושלם בגרף, נניח 
+\begin_inset Formula $\pi$
+\end_inset
+
+, אז 
+\begin_inset Formula $M_{i,\pi\left(i\right)}=a_{i,\pi\left(i\right)}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+ כולם לא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+ ולכן המכפלה שלהם לא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, אבל בעיה פוטנציאלית היא שאולי יש כמה זיווגים והם יתבטלו עם הסימן.
+ נטען שנחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ כן בהסתברות 
+\begin_inset Formula $\frac{1}{2}\leq$
+\end_inset
+
+.
+ אכן, הדטרמיננטה פולינום מדרגה 
+\begin_inset Formula $n$
+\end_inset
+
+ ב
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ משתנים, וממשפט שוורץ-זיפל )אם 
+\begin_inset Formula $0\neq p\in F\left[x_{1},\dots,x_{m}\right]$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $A\subseteq F$
+\end_inset
+
+, מתקיים 
+\begin_inset Formula $Pr_{a_{1},\dots,a_{m}\in A}\left[p\left(a_{1},\dots,a_{m}\right)=0\right]\leq\frac{\deg p}{\left|A\right|}$
+\end_inset
+
+( יש הסתברות של לכל היותר 
+\begin_inset Formula $\frac{n}{T}=\frac{n}{2n}=\frac{1}{2}$
+\end_inset
+
+ שהדטרמיננטה תצא 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, כלומר הסתברות לכל היותר חצי שנטעה, כדרוש.
+\end_layout
+
+\begin_layout Standard
+היתרון של האלגוריתם הוא שאפשר למקבל אותו: יודעים לחשב 
+\begin_inset Formula $\det M_{n\times n}$
+\end_inset
+
+ עם 
+\begin_inset Formula $poly\left(n\right)$
+\end_inset
+
+ מעבדים בזמן 
+\begin_inset Formula $O\left(\log^{2}n\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+הרצאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+התפלגות נורמלית
+\series default
+ עם תוחלת 
+\begin_inset Formula $\mu$
+\end_inset
+
+ וסטיית תקן 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ היא 
+\begin_inset Formula $f\left(x\right)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+אם מטילים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1000
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מטבעות, ההסתברות שיצאו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+500
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פעמים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא 
+\begin_inset Formula ${1000 \choose 500}2^{-1000}$
+\end_inset
+
+, אפשר לקרב עם סטירלינג.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+צ'רנוף
+\series default
+ אם 
+\begin_inset Formula $X_{1},\dots,X_{n}\sim\text{Ber}\left(p\right)$
+\end_inset
+
+ בלתי תלויים, אז
+\begin_inset Formula 
+\[
+Pr\left[\left|\sum_{i=1}^{n}X_{i}-np\right|>\varepsilon np\right]\leq e^{-\Omega\left(\varepsilon^{2}np\right)}
+\]
+
+\end_inset
+
+כלומר,
+\begin_inset Formula 
+\[
+Pr\left[\left|\sum_{i=1}^{n}X_{i}-np\right|>t\underbrace{\sqrt{np\left(1-p\right)}}_{=\text{std}\left(\sum_{i=1}^{n}X_{i}\right)}\right]\leq e^{-\Omega\left(t^{2}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נחשב
+\begin_inset Formula 
+\begin{align*}
+Pr\left(X\geq a\right) & =Pr\left(t^{X}\geq t^{A}\right)\leq\frac{\mathbb{E}\left[t^{X}\right]}{t^{A}}\\
+\mathbb{E}\left[t^{X}\right] & =\mathbb{E}\left[t^{\sum X_{i}}\right]=\mathbb{E}\left[\prod t^{X_{i}}\right]\stackrel{X_{i}\text{ are independent}}{=}\prod_{i=1}^{n}\mathbb{E}\left[t^{X_{i}}\right]=\prod_{i=1}^{n}\left(\left(1-p\right)t^{0}+p\cdot t\right)=\left(1+p\left(t-1\right)\right)^{n}\\
+\implies & Pr\left(X\geq a\right)\leq\frac{\mathbb{E}\left[t^{X}\right]}{t^{A}}=\frac{\left(1+p\left(t-1\right)\right)^{n}}{t^{A}}\stackrel{1+x\leq e^{x}}{\leq}\frac{e^{pn\left(t-1\right)}}{t^{A}}
+\end{align*}
+
+\end_inset
+
+נבחר 
+\begin_inset Formula $t=\frac{A}{\mu}$
+\end_inset
+
+, נציב ונקבל ...
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+מרקוב
+\series default
+ לכל משתנה מקרי 
+\begin_inset Formula $X\geq0$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $P\left(X\geq A\right)\leq\frac{\mathbb{E}\left[X\right]}{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+צ'בישב 
+\series default
+אם 
+\begin_inset Formula $X_{1},\dots,X_{n}$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת בזוגות נסמן 
+\begin_inset Formula $\mu=\mathbb{E}\left[\sum_{i=1}^{n}X_{i}\right]$
+\end_inset
+
+ אז 
+\begin_inset Formula $Pr\left(\left|\sum_{i=1}^{n}X_{i}-\mu\right|\geq A\right)\leq\frac{\text{Var}\left(\sum_{i=1}^{n}X_{i}\right)}{A^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+אמפליפיקציה 
+\series default
+לכל 
+\begin_inset Formula $a>0$
+\end_inset
+
+, לכל 
+\begin_inset Formula $b\in\mathbb{N}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $p\in\left(0,1\right)$
+\end_inset
+
+ מתקיים )כאשר 
+\begin_inset Formula $n$
+\end_inset
+
+ אורך הקלט(
+\begin_inset Formula 
+\[
+BPP_{\left(p,p+\frac{1}{n^{a}}\right)}=BPP_{\left(2^{-n^{b}},1-2^{-n^{b}}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $L\in BPP_{\left(p,p+\frac{1}{n^{a}}\right)}$
+\end_inset
+
+, אז היא נפתרת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+בנייה: 
+\series default
+נבנה מכונה חדשה 
+\begin_inset Formula $M'$
+\end_inset
+
+, שבהינתן 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ נטיל 
+\begin_inset Formula $y_{1},\dots,y_{T}\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+, נריץ 
+\begin_inset Formula $M\left(x,y_{i}\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $i=1,\dots,T$
+\end_inset
+
+ ואם 
+\begin_inset Formula $\left(p+\frac{1}{2n^{a}}\right)T$
+\end_inset
+
+ ענו כן נענה כן, אחרת נענה לא.
+ נקבע את 
+\begin_inset Formula $T$
+\end_inset
+
+ בהמשך.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+נכונות:
+\series default
+ אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+, יש 
+\begin_inset Formula $T$
+\end_inset
+
+ נסיונות בלתי תלויים, נסמן 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ הסיכוי שהניסוי ה
+\begin_inset Formula $i$
+\end_inset
+
+ יהיה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+ אז 
+\begin_inset Formula $X_{1},\dots,X_{T}$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת ומתקיים 
+\begin_inset Formula $\mathbb{E}\left[X_{i}\right]\geq p+\frac{1}{n^{a}}$
+\end_inset
+
+ אז
+\begin_inset Formula 
+\begin{align*}
+Pr\left(M'\text{ is wrong}\right) & =Pr\left(\sum_{I=1}^{T}X_{i}<\left(p+\frac{1}{2n^{a}}\right)T\right)\leq Pr\left(\left|X-pT\right|>\frac{1}{2n^{a}}T\right)\\
+ & \stackrel{\text{Chernoff}}{\leq}e^{-\Omega\left(\frac{T}{n^{2a}}\right)}\leq2^{-n^{b}}
+\end{align*}
+
+\end_inset
+
+אם בוחרים 
+\begin_inset Formula $T=\Omega\left(n^{2a+b}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+אדלמן
+\series default
+ 
+\begin_inset Formula $BPP\subseteq\text{Size}\left(poly\right)$
+\end_inset
+
+.
+ מכאן גם אם 
+\begin_inset Formula $NP\subseteq BPP$
+\end_inset
+
+ אז ההיררכיה קורסת )כי 
+\begin_inset Formula $SAT\in\text{Size}\left(poly\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in BPP=BPP_{\left[2^{-2n},1-2^{-2n}\right]}$
+\end_inset
+
+, שנפתרת על ידי 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+ פולינומית עם 
+\begin_inset Formula $\left|y\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+Pr_{y}\left[M\left(x,y\right)\text{ is wrong}\right]\leq2^{-2n}
+\]
+
+\end_inset
+
+נטען שיש 
+\begin_inset Formula $y_{0}\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $M\left(x,y_{0}\right)=L\left(x\right)$
+\end_inset
+
+ )כלומר 
+\begin_inset Formula $M\left(x,y_{0}\right)$
+\end_inset
+
+ צודקת(.
+\end_layout
+
+\begin_layout Proof
+אכן, לכל 
+\begin_inset Formula $x$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $Pr_{y}\left[M\left(x,y\right)\text{ is wrong}\right]\leq2^{-2n}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula 
+\[
+Pr_{y}\left[\exists x.M\left(x,y\right)\text{ is wrong}\right]\stackrel{\text{union bound}}{\leq}\sum_{x\in\left\{ 0,1\right\} ^{n}}Pr_{y}\left[M\left(x,y\right)\text{ is wrong}\right]\leq2^{n}\cdot2^{-2n}=2^{-n}
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $Pr_{y}\left[\forall x.M\left(x,y\right)=L\left(x\right)\right]\geq1-2^{-n}$
+\end_inset
+
+, בפרט קיים 
+\begin_inset Formula $y$
+\end_inset
+
+ כזה, ומשפחת המעגלים תהיה 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+ עם 
+\begin_inset Formula $y$
+\end_inset
+
+ הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+hardwired
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+סיפסר
+\series default
+ 
+\begin_inset Formula $BPP\subseteq\Sigma_{2}$
+\end_inset
+
+ )ומסגירות למשלים של 
+\begin_inset Formula $BPP$
+\end_inset
+
+ גם 
+\begin_inset Formula $BPP\subseteq\Pi_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in BPP=BPP_{\left[\frac{1}{4m},\frac{1}{2}\right]}$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $L$
+\end_inset
+
+ נפתרת ע
+\begin_inset Quotes erd
+\end_inset
+
+י מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+ עם 
+\begin_inset Formula $\left|x\right|=n,\left|y\right|=m$
+\end_inset
+
+ כך ש
+\begin_inset Formula 
+\begin{align*}
+x\in L & \implies Pr_{y}\left[M\left(x,y\right)=1\right]\geq\frac{1}{2}\\
+x\notin L & \implies Pr_{y}\left[M\left(x,y\right)=1\right]\leq\frac{1}{4m}
+\end{align*}
+
+\end_inset
+
+נקבע 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+.
+ נסתכל על עולם המטבעות 
+\begin_inset Formula $\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+, ונסמן 
+\begin_inset Formula $Y_{x}=\left\{ y\in\left\{ 0,1\right\} ^{m}\mid M\left(x,y\right)=1\right\} $
+\end_inset
+
+.
+ אזי אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left|Y_{x}\right|\leq\frac{2^{m}}{4m}$
+\end_inset
+
+, ואם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left|Y_{x}\right|\geq2^{m-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+בנייה: 
+\series default
+הרודקציה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מקבלת 
+\begin_inset Formula $x$
+\end_inset
+
+ ובונה פסוק 
+\begin_inset Formula $\Sigma_{2}$
+\end_inset
+
+ )כאשר חיבור הוא מודולו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+, כלומר 
+\begin_inset Formula $\oplus$
+\end_inset
+
+(
+\begin_inset Formula 
+\[
+\exists\left\{ s_{i}\right\} _{i=1}^{2m}\subseteq\left\{ 0,1\right\} ^{m}.\forall w\in\left\{ 0,1\right\} ^{m}.M\left(x,w+s_{1}\right)=1\lor\cdots\lor M\left(x,w+s_{2m}\right)=1
+\]
+
+\end_inset
+
+
+\series bold
+נכונות:
+\series default
+ נשים לב שמתקיים 
+\begin_inset Formula $M\left(x,w+s_{i}\right)=1\iff w+s_{i}\in Y_{x}\iff w\in Y_{x}+s_{i}$
+\end_inset
+
+, ולכן הביטוי בתוך הפסוק שקול ל
+\begin_inset Formula $w\in\bigcup_{i=1}^{2m}Y_{x}+s_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+, אז לכל 
+\begin_inset Formula $s\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|Y_{x}+s\right|=\left|Y_{x}\right|\leq\frac{2^{m}}{4m}$
+\end_inset
+
+ לכן לכל 
+\begin_inset Formula $\left\{ s_{i}\right\} _{i=1}^{2m}\subseteq\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\bigcup_{i=1}^{2m}Y_{x}+s_{i}\right|\leq2m\cdot\frac{2^{m}}{4m}<2^{m}$
+\end_inset
+
+, כלומר יש 
+\begin_inset Formula $w\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ כך שהביטוי בתוך הפסוק הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+, נוכיח באמצעות השיטה ההסתברותית.
+ לכל 
+\begin_inset Formula $w\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula 
+\begin{align*}
+Pr_{\left\{ s_{i}\right\} _{i=1}^{2m}\leftarrow\left\{ 0,1\right\} ^{m}}\left[w\notin\bigcup_{i=1}^{2m}Y_{x}+s_{i}\right] & =Pr_{\left\{ s_{i}\right\} _{i=1}^{2m}\leftarrow\left\{ 0,1\right\} ^{m}}\left[\forall1\leq i\leq2m.w\notin Y_{x}+s_{i}\right]\\
+ & =\prod_{i=1}^{2m}Pr_{s\leftarrow\left\{ 0,1\right\} ^{m}}\left[w\notin Y_{x}+s\right]\leq\left(\frac{1}{2}\right)^{2m}=\frac{1}{2^{2m}}
+\end{align*}
+
+\end_inset
+
+ולכן
+\begin_inset Formula 
+\[
+Pr_{\left\{ s_{i}\right\} _{i=1}^{2m}\leftarrow\left\{ 0,1\right\} ^{m}}\left[\exists w.w\notin\bigcup_{i=1}^{2m}Y_{x}+s_{i}\right]\leq\sum_{w\in\left\{ 0,1\right\} ^{m}}2^{-2m}=2^{m}2^{-2m}=2^{-m}<1
+\]
+
+\end_inset
+
+ובפרט קיים 
+\begin_inset Formula $\left\{ s_{i}\right\} _{i=1}^{2m}\subseteq\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $w\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $w\in\bigcup_{i=1}^{2m}Y_{x}+s_{i}$
+\end_inset
+
+, כלומר הפסוק הוא 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+הוכחות אינטראקטיביות
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+הרצאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+9
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נרצה לדון במה קורה כשמשלבים מוכיח כל יכול עם בודק הסתברותי.
+\end_layout
+
+\begin_layout Definition
+תהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מחלקה, נגדיר את 
+\begin_inset Formula $\$C$
+\end_inset
+
+ להיות מחלקת השפות 
+\begin_inset Formula $L$
+\end_inset
+
+ כך שיש 
+\begin_inset Formula $M\left(x,y\right)$
+\end_inset
+
+ ב
+\begin_inset Formula $C$
+\end_inset
+
+ עם 
+\begin_inset Formula $\left|y\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+ כך ש
+\begin_inset Formula 
+\begin{align*}
+x\in L & \implies Pr_{y}\left[M\left(x,y\right)=1\right]\geq\frac{2}{3}\\
+x\notin L & \implies Pr_{y}\left[M\left(x,y\right)=1\right]\leq\frac{1}{3}
+\end{align*}
+
+\end_inset
+
+בפרט, 
+\begin_inset Formula $BPP=\$P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+איזומורפיזם בין גרפים
+\series default
+ 
+\begin_inset Formula $G_{1}=\left(V_{1},E_{1}\right),G_{2}=\left(V_{2},E_{2}\right)$
+\end_inset
+
+ איזומורפיים אם 
+\begin_inset Formula $\left|V_{1}\right|=\left|V_{2}\right|$
+\end_inset
+
+ ויש תמורה 
+\begin_inset Formula $\pi\colon V_{1}\to V_{2}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\left(a,b\right)\in E_{1}\iff\left(\pi\left(a\right),\pi\left(b\right)\right)\in E_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+השפה 
+\begin_inset Formula $GISO$
+\end_inset
+
+
+\series default
+ היא שפת כל הזוגות 
+\begin_inset Formula $\left(G_{1},G_{2}\right)$
+\end_inset
+
+ כך ש
+\begin_inset Formula $G_{1}\sim G_{2}$
+\end_inset
+
+.
+ אז 
+\begin_inset Formula $GISO\in NP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+פרוטוקול ל
+\begin_inset Formula $\overline{GISO}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נציג את הפרוטוקול הבא: בהינתן קלט משותף למוכיח ולבודק 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים,
+\end_layout
+
+\begin_layout Enumerate
+הבודק בוחר 
+\begin_inset Formula $b\leftarrow\left\{ 1,2\right\} ,\pi\leftarrow S_{n}$
+\end_inset
+
+ אקראיים.
+\end_layout
+
+\begin_layout Enumerate
+הבודק שולח למוכיח את הגרף 
+\begin_inset Formula $G_{new}=\pi\left(G_{b}\right)$
+\end_inset
+
+, כלומר גרף על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים כך שיש קשת בין 
+\begin_inset Formula $\left(i,j\right)$
+\end_inset
+
+ אם 
+\begin_inset Formula $\left(\pi\left(i\right),\pi\left(j\right)\right)\in E_{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+המוכיח שולח לבודק 
+\begin_inset Formula $c\in\left\{ 1,2\right\} $
+\end_inset
+
+, לפי האם הוא חושב ש
+\begin_inset Formula $G_{new}\sim G_{1}$
+\end_inset
+
+ או 
+\begin_inset Formula $G_{new}\sim G_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+הבודק יבדוק האם 
+\begin_inset Formula $b=c$
+\end_inset
+
+.
+ אם כן יחזיר כן, אחרת לא.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נכונות:
+\series default
+ אם 
+\begin_inset Formula $G_{1}\not\sim G_{2}$
+\end_inset
+
+, כלומר הטענה נכונה, אז יש מוכיח הוגן שבהינתן 
+\begin_inset Formula $G_{new}$
+\end_inset
+
+ הוא יבדוק אם 
+\begin_inset Formula $G_{1}\sim G_{new}$
+\end_inset
+
+ או 
+\begin_inset Formula $G_{2}\sim G_{new}$
+\end_inset
+
+ ויחזיר את הביט המתאים.
+ יודעים ש
+\begin_inset Formula $G_{b}\sim G_{new}$
+\end_inset
+
+ ולכן הוא איזומורפי לאחד מהם, והוא לא איזומורפי לשני כי אז מטרנזיטיביות
+ 
+\begin_inset Formula $G_{1}\sim G_{2}$
+\end_inset
+
+ סתירה.
+ כלומר המוכיח ישלח לבודק את התשובה הנכונה 
+\begin_inset Formula $b$
+\end_inset
+
+, והוא יחזיר כן.
+\end_layout
+
+\begin_layout Standard
+להיפך, אם 
+\begin_inset Formula $G_{1}\sim G_{2}$
+\end_inset
+
+ כלומר הטענה שגויה, 
+\begin_inset Formula $G_{new}$
+\end_inset
+
+ יהיה גרף אקראי שאיזומורפי גם ל
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ וגם ל
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ ללא תלות ב
+\begin_inset Formula $b$
+\end_inset
+
+, ולכן התשובה שהמוכיח ישלח תהיה בלתי תלויה ב
+\begin_inset Formula $b$
+\end_inset
+
+, כלומר ההסתברות שהיא תהיה שווה ל
+\begin_inset Formula $b$
+\end_inset
+
+ היא בדיוק 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+כלומר, קיבלנו שאם 
+\begin_inset Formula $\left(G_{1},G_{2}\right)\notin\overline{GISO}$
+\end_inset
+
+ אז לכל מוכיח הבודק ידחה בהסתברות 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ )
+\lang english
+soundness
+\lang hebrew
+(, ואם 
+\begin_inset Formula $\left(G_{1},G_{2}\right)\in\overline{GISO}$
+\end_inset
+
+ אז יש מוכיח הוגן עבורו הבודק תמיד יקבל )
+\lang english
+completeness
+\lang hebrew
+(.
+\end_layout
+
+\begin_layout Remarks
+השתמשנו פה בכך שהבודק יכול לשמור סודות )בפרט המטבעות שלו(, נגדיר מחלקה בלי
+ סודות )
+\lang english
+private coins
+\lang hebrew
+( אבל נראה בהמשך שהיא שקולה למחלקה עם סודות )
+\lang english
+public coins
+\lang hebrew
+(.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+ארתור מרלין 
+\series default
+המחלקה 
+\begin_inset Formula $AM$
+\end_inset
+
+ היא מחלקת כל השפות 
+\begin_inset Formula $L$
+\end_inset
+
+ עבורן יש מכונה 
+\begin_inset Formula $M\left(x,y,w\right)$
+\end_inset
+
+ )
+\begin_inset Formula $x$
+\end_inset
+
+ הקלט, 
+\begin_inset Formula $y$
+\end_inset
+
+ מטבעות, 
+\begin_inset Formula $w$
+\end_inset
+
+ הוכחה( כך ש
+\begin_inset Formula $\left|y\right|,\left|w\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ פולינומית וכן
+\begin_inset Formula 
+\begin{align*}
+x\in L & \implies Pr_{y}\left[\exists w.M\left(x,y,w\right)=1\right]\geq\frac{2}{3}\,\,(\text{completeness})\\
+x\notin L & \implies Pr_{y}\left[\exists w.M\left(x,y,w\right)=1\right]\leq\frac{1}{3}\,\,(\text{soundness})
+\end{align*}
+
+\end_inset
+
+חשוב לציין שהמטבעות פומביים, כלומר אין סודות ובפרט 
+\begin_inset Formula $w$
+\end_inset
+
+ יכול להיות פונקציה של 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+מרלין ארתור 
+\series default
+המחלקה 
+\begin_inset Formula $MA$
+\end_inset
+
+ היא מחלקת כל השפות 
+\begin_inset Formula $L$
+\end_inset
+
+ עבורן יש מכונה 
+\begin_inset Formula $M\left(x,y,w\right)$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\left|y\right|,\left|w\right|=poly\left(\left|x\right|\right)$
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ פולינומית וכן
+\begin_inset Formula 
+\begin{align*}
+x\in L & \implies\exists w.Pr_{y}\left[M\left(x,y,w\right)=1\right]\geq\frac{2}{3}\,\,(\text{completeness})\\
+x\notin L & \implies\forall w.Pr_{y}\left[M\left(x,y,w\right)=1\right]\leq\frac{1}{3}\,\,(\text{soundness})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remarks
+בהגדרת 
+\begin_inset Formula $\$$
+\end_inset
+
+ שראינו למעלה, מתקיים 
+\begin_inset Formula $MA=\exists\$P$
+\end_inset
+
+ וכן 
+\begin_inset Formula $AM=\$\exists P$
+\end_inset
+
+.
+ מרלין המוכיח וארתור הבודק, כלומר 
+\begin_inset Formula $AM$
+\end_inset
+
+ זו המחלקה בה ארתור נותן אתגר ואז מרלין נותן הוכחה, ו
+\begin_inset Formula $MA$
+\end_inset
+
+ המחלקה בה מרלין נותן הוכחה ובודק הסתברותי בודק אותה.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+אמפליפיקציה 
+\series default
+
+\begin_inset Formula $MA_{\left[\frac{1}{3},\frac{2}{3}\right]}=MA_{\left[2^{-2n},1-2^{-2n}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in MA_{\left[\frac{1}{3},\frac{2}{3}\right]}$
+\end_inset
+
+ שנפתרת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $M\left(x,y,w\right)$
+\end_inset
+
+, נבנה 
+\begin_inset Formula $M'$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $M'\left(x,\left(y_{1},\dots,y_{T}\right),w\right)=Maj_{1\leq i\leq T}M\left(x,y_{i},w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז יש 
+\begin_inset Formula $w$
+\end_inset
+
+ כך ש
+\begin_inset Formula $Pr_{y}\left[M\left(x,y,w\right)=1\right]\geq\frac{2}{3}$
+\end_inset
+
+, ועבור ה
+\begin_inset Formula $w$
+\end_inset
+
+ הזה ההסתברות שנטעה היא לכל היותר 
+\begin_inset Formula $2^{-2n}$
+\end_inset
+
+ מצ'רנוף.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $w$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $Pr_{y}\left[M\left(x,y,w\right)=1\right]\leq\frac{1}{3}$
+\end_inset
+
+, ולכן לכל 
+\begin_inset Formula $w$
+\end_inset
+
+ ההסתברות שנטעה ששולחים 
+\begin_inset Formula $w$
+\end_inset
+
+ הוא ההסתברות שהרוב טעו שהיא גם לכל היותר 
+\begin_inset Formula $2^{-2n}$
+\end_inset
+
+ מצ'רנוף.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+אמפליפיקציה
+\series default
+ 
+\begin_inset Formula $AM_{\left[\frac{1}{3},\frac{2}{3}\right]}=AM_{\left[2^{-2n},1-2^{-2n}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in AM_{\left[\frac{1}{3},\frac{2}{3}\right]}$
+\end_inset
+
+ שנפתרת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $M\left(x,y,w\right)$
+\end_inset
+
+, נבנה 
+\begin_inset Formula $M'$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $M'\left(x,\left(y_{1},\dots,y_{T}\right),\left(w_{1},\dots,w_{T}\right)\right)=Maj_{1\leq i\leq T}M\left(x,y_{i},w_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נסמן 
+\begin_inset Formula $Y=\left\{ y\mid\exists w.M\left(x,y,w\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ ההסתברות שנטעה היא ההסתברות שחצי מההטלות נפלו ל
+\begin_inset Formula $Y$
+\end_inset
+
+, אבל ל
+\begin_inset Formula $Y$
+\end_inset
+
+ יש הסתברות לכל היותר 
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+ ולכן זה 
+\begin_inset Formula $2^{-\Omega\left(T\right)}\geq$
+\end_inset
+
+ לפי צ'רנוף.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז ההסתברות שנטעה היא ההסתברות שפחות מחצי מההטלות נפלו ל
+\begin_inset Formula $Y$
+\end_inset
+
+, אבל שוב מצ'רנוף זה קטן כי ההסתברות של 
+\begin_inset Formula $Y$
+\end_inset
+
+ היא לפחות 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+הרצאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $MA\subseteq AM$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in MA=MA_{\left[\frac{1}{3},\frac{2}{3}\right]}=MA_{\left[2^{-2m},1-2^{-2m}\right]}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $m$
+\end_inset
+
+ עורך העד, אז יש מוודא 
+\begin_inset Formula $M\left(x,w,y\right)$
+\end_inset
+
+ כך ש
+\begin_inset Formula 
+\begin{align*}
+x\in L & \implies\exists w.Pr_{y}\left[M\left(x,w,y\right)=1\right]\geq1-2^{-2n}\\
+x\notin L & \implies\forall w.Pr_{y}\left[M\left(x,w,y\right)=1\right]\leq2^{-2n}
+\end{align*}
+
+\end_inset
+
+נבנה פרוטוקול 
+\begin_inset Formula $AM$
+\end_inset
+
+ לשפה 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ המוודא שולח 
+\begin_inset Formula $y$
+\end_inset
+
+ למוכיח, המוכיח שולח בחזרה 
+\begin_inset Formula $w$
+\end_inset
+
+ והמוודא יקבל אם ורק אם 
+\begin_inset Formula $M\left(x,w,y\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+, אז יש 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $Pr_{y}\left[M\left(x,w_{0},y\right)=1\right]\geq1-2^{-2m}$
+\end_inset
+
+.
+ אם המוכיח תמיד ישלח את 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ הזה, אז בהסתברות לפחות 
+\begin_inset Formula $1-2^{-2m}$
+\end_inset
+
+ יתקיים 
+\begin_inset Formula $M\left(x,w_{0},y\right)=1$
+\end_inset
+
+, כלומר
+\begin_inset Formula 
+\[
+Pr_{y}\left[\exists w.M\left(x,y,w\right)=1\right]\geq Pr_{y}\left[M\left(x,y,w_{0}\right)=1\right]\geq1-2^{-2m}
+\]
+
+\end_inset
+
+להיפך, אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $w$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $Pr_{y}\left[M\left(x,w,y\right)=1\right]\leq2^{-2m}$
+\end_inset
+
+.
+ לכן,
+\begin_inset Formula 
+\[
+Pr_{y}\left[\exists w.M\left(x,y,w\right)=1\right]\leq\sum_{w\in\left\{ 0,1\right\} ^{m}}Pr_{y}\left[M\left(x,y,w\right)=1\right]\leq2^{m}\cdot2^{-2m}=2^{-m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+יש
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+perfect completeness
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל
+\begin_inset Formula $MA$
+\end_inset
+
+.
+
+\series default
+ כלומר, 
+\begin_inset Formula $MA_{\left[\frac{1}{3},\frac{2}{3}\right]}=MA_{\left[\frac{1}{2},1\right]}$
+\end_inset
+
+.
+ משם אפשר לעשות אמפליפיקציה ולקבל 
+\begin_inset Formula $MA=MA_{\left[2^{-n},1\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in MA$
+\end_inset
+
+, אז היא נפתרת על ידי 
+\begin_inset Formula $M\left(x,w,y\right)$
+\end_inset
+
+ כך ש
+\begin_inset Formula 
+\begin{align*}
+x\in L & \implies\exists w.Pr_{y}\left[M\left(x,w,y\right)=1\right]\geq\frac{1}{2}\\
+x\notin L & \implies\forall w.Pr_{y}\left[M\left(x,w,y\right)=1\right]\leq\frac{1}{4m}
+\end{align*}
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $m$
+\end_inset
+
+ עורך העד 
+\begin_inset Formula $w$
+\end_inset
+
+ והמטבעות 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נבנה פרוטוקול 
+\begin_inset Formula $MA$
+\end_inset
+
+ לשפה 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ יש קלט 
+\begin_inset Formula $x$
+\end_inset
+
+, נבקש מהמוכיח את 
+\begin_inset Formula $w$
+\end_inset
+
+, וגם 
+\begin_inset Formula $s_{1},\dots,s_{2m}\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ מטבעות.
+ המוודא יטיל 
+\begin_inset Formula $y\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+, ויבדוק ש
+\begin_inset Formula 
+\[
+M\left(x,w,y\oplus s_{1}\right)=1\lor\cdots\lor M\left(x,w,y\oplus s_{2m}\right)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+, אז יש 
+\begin_inset Formula $w$
+\end_inset
+
+ כך ש
+\begin_inset Formula $\left|Y\right|\geq\frac{2^{m}}{2}$
+\end_inset
+
+, ולכן כמו במשפט סיפסר )השיטה ההסתברותית( יש 
+\begin_inset Formula $2m$
+\end_inset
+
+ הזזות כך ש
+\begin_inset Formula $\bigcup_{i=1}^{2m}\left(Y\oplus s_{i}\right)=\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+, ולכן לכל 
+\begin_inset Formula $y$
+\end_inset
+
+ יש 
+\begin_inset Formula $i$
+\end_inset
+
+ כך ש
+\begin_inset Formula $y\in Y\oplus s_{i}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $y\oplus s_{i}\in Y$
+\end_inset
+
+ ולכן הביטוי למעלה יתקיים והמוודא יחזיר כן תמיד.
+\end_layout
+
+\begin_layout Proof
+להיפך, אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $w$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|Y\right|\leq\frac{2^{m}}{4m}$
+\end_inset
+
+, ולכן לכל 
+\begin_inset Formula $s_{1},\dots,s_{2m}$
+\end_inset
+
+ יתקיים 
+\begin_inset Formula $\left|\bigcup_{i=1}^{2m}\left(Y\oplus s_{i}\right)\right|\leq\frac{2^{m}}{2}$
+\end_inset
+
+, כלומר בהסתברות לכל היותר 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ נקבל 
+\begin_inset Formula $y\in\bigcup_{i=1}^{2m}\left(Y\oplus s_{i}\right)$
+\end_inset
+
+, כלומר בהסתברות לפחות 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ המוודא ידחה.
+\end_layout
+
+\begin_layout Remarks
+גם ל
+\begin_inset Formula $AM$
+\end_inset
+
+ אפשר להבטיח
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+perfect completeness
+\lang hebrew
+, כלומר 
+\begin_inset Formula $AM_{\left[\frac{1}{3},\frac{2}{3}\right]}=AM_{\left[2^{-n},1\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+
+\series bold
+קשר בין מחלקות
+\series default
+ 
+\begin_inset Formula $BPP,NP\subseteq MA\subseteq AM\subseteq\Pi_{2}$
+\end_inset
+
+, כאשר המעבר האחרון מ
+\lang english
+perfect completeness
+\lang hebrew
+.
+ כמו כן 
+\begin_inset Formula $MA\subseteq\Sigma_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+כל פרוטוקול אינטראקטיבי עם מספר קבוע של סיבובים מוכל ב
+\begin_inset Formula $AM$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+המחלקה 
+\begin_inset Formula $IP$
+\end_inset
+
+
+\series default
+ מחלקת כל השפות 
+\begin_inset Formula $L$
+\end_inset
+
+ עבורן מוכיח כל יכול יכול להוכיח שייכות בשפה לבודק הסתברותי פולינומי באמצעות
+ פרוטוקול אינטראקטיבי עם מספר פולינומי של סיבובים ומטבעות פומביים.
+\end_layout
+
+\begin_layout Definition
+כלומר, מספר פולינומי של סיבובים שבכל סיבוב 
+\begin_inset Formula $V$
+\end_inset
+
+ בוחר 
+\begin_inset Formula $y_{i}\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ באקראי ושולח ל
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\begin_inset Formula $P$
+\end_inset
+
+ מחשב את 
+\begin_inset Formula $a_{i}=P\left(x,y_{1},y_{2},\dots,y_{i}\right)$
+\end_inset
+
+ ושולח ל
+\begin_inset Formula $V$
+\end_inset
+
+.
+ בסיבוב האחרון 
+\begin_inset Formula $T=poly\left(\left|x\right|\right)$
+\end_inset
+
+ )מספר הסיבובים ידוע מראש כתלות בפרוטוקול(, הבודק מחשב 
+\begin_inset Formula $V\left(x,y_{1},a_{1},\dots,y_{T},a_{T}\right)$
+\end_inset
+
+ ומחליט אם לקבל או לדחות.
+ נגיד ש
+\begin_inset Formula $L\in IP_{\left[s,c\right]}$
+\end_inset
+
+ כך ש
+\begin_inset Formula 
+\begin{align*}
+x\in L & \implies\exists P.Pr_{y_{1},\dots,y_{T}}\left[V\text{ accepts on interaction with }P\right]\geq c\\
+x\notin L & \implies\forall P^{*}.Pr_{y_{1},\dots,y_{T}}\left[V\text{ accepts on interaction with }P^{*}\right]\leq s
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $IP\subseteq PSPACE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $L\in IP$
+\end_inset
+
+ לכן יש פרוטוקול אינטראקטיבי עם בודק 
+\begin_inset Formula $V$
+\end_inset
+
+ כך שהתנאי מעלה מתקיים.
+ זה כמו ההוכחה ש
+\begin_inset Formula $TQBF\in PSPACE$
+\end_inset
+
+, מסתכלים על העץ של כל האפשרויות לאינטראקציה ובודקים מה הערך שלו על ידי
+ טיול על העץ והתפצלות על כל האפשרויות.
+\end_layout
+
+\begin_layout Proof
+פורמלית, נגדיר 
+\begin_inset Formula $Val\colon\text{partial history}\to\left[0,1\right]$
+\end_inset
+
+ על ידי 
+\begin_inset Formula $Val\left(x,y_{1},a_{1},\dots,y_{m},a_{m}\right)$
+\end_inset
+
+, באופן הבא: נגדיר עץ בעומק 
+\begin_inset Formula $2Y$
+\end_inset
+
+ שיש בו התפצלויות מתחלפות 
+\begin_inset Formula $y_{i},a_{i}$
+\end_inset
+
+, ואז 
+\begin_inset Formula $Val$
+\end_inset
+
+ של עלה הוא 
+\begin_inset Formula $M\left(x,y_{1},a_{1},\dots,y_{T},a_{T}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $Val$
+\end_inset
+
+ של קודקוד שמתפצל על 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ הוא ממוצע ה
+\begin_inset Formula $Val$
+\end_inset
+
+ של בניו, ו
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ המקסימום של ה
+\begin_inset Formula $Val$
+\end_inset
+
+ של בניו.
+\end_layout
+
+\begin_layout Proof
+נטען ש
+\begin_inset Formula $Val$
+\end_inset
+
+ של קודקוד 
+\begin_inset Formula $x,y_{1},a_{1},\dots,y_{i},a_{i}$
+\end_inset
+
+ זו בדיוק ההסתברות שהבודק יקבל במשחק מול מוכיח אופטימלי שממשיך את ההיסטוריה
+ עד עכשיו )הוכחה באינדוקציה(, ולכן בהינתן 
+\begin_inset Formula $L\in IP$
+\end_inset
+
+ שנפתרת על ידי 
+\begin_inset Formula $M$
+\end_inset
+
+ אפשר לחשב ב
+\begin_inset Formula $PSPACE$
+\end_inset
+
+ את 
+\begin_inset Formula $Val\left(\emptyset\right)$
+\end_inset
+
+, כמו את 
+\begin_inset Formula $TQBF$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+הרצאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+11
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+ניסן
+\series default
+ 
+\begin_inset Formula $coNP\subseteq IP$
+\end_inset
+
+.
+ כלומר, 
+\begin_inset Formula $\overline{3SAT}\in IP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+האינטואיציה שלנו תהיה קודים מתקני שגיאות, ונרצה לבצע אריתמטיזציה של הבעיה.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+אריתמטיזציה: 
+\series default
+הקלט הוא פסוק 
+\begin_inset Formula $3SAT$
+\end_inset
+
+, 
+\begin_inset Formula $\bigcap_{i=1}^{m}C_{i}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $C_{i}=\ell_{i1}\lor\ell_{i2}\lor\ell_{i3}$
+\end_inset
+
+ וכל ליטרל 
+\begin_inset Formula $\ell_{i}$
+\end_inset
+
+ הוא משתנה או שלילתו.
+ 
+\begin_inset Formula $\phi$
+\end_inset
+
+ תמיר משתנה 
+\begin_inset Formula $x$
+\end_inset
+
+ ל
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $\lnot x$
+\end_inset
+
+ ל
+\begin_inset Formula $1-x$
+\end_inset
+
+ ו
+\begin_inset Formula $\ell_{1}\land\ell_{2}$
+\end_inset
+
+ ל
+\begin_inset Formula $\phi\left(\ell_{1}\right)\cdot\phi\left(\ell_{2}\right)$
+\end_inset
+
+, עם דה מורגן.
+ לדוגמה, 
+\begin_inset Formula $\phi\left(x_{1}\lor\lnot x_{2}\lor x_{7}\right)=\lnot\left(\lnot x_{1}\land x_{2}\land\lnot x_{7}\right)=1-\left(1-x_{1}\right)x_{2}x_{7}$
+\end_inset
+
+.
+ כלומר, אם ניקח פסוק 
+\begin_inset Formula $\psi\left(x_{1},\dots,x_{n}\right)$
+\end_inset
+
+ ונמיר אותו לפולינום 
+\begin_inset Formula $p\left(x_{1},\dots,x_{n}\right)$
+\end_inset
+
+ )מכפלת הפולינומים של הפסוקיות(, נקבל שלכל השמה 
+\begin_inset Formula $\left(a_{1},\dots,a_{n}\right)\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $p\left(a_{1},\dots,a_{n}\right)=\psi\left(a_{1},\dots,a_{n}\right)$
+\end_inset
+
+ וביתר הערכים הפולינום מרחיב את הנוסחה )כמו בקידוד(.
+ כלומר, לכל 
+\begin_inset Formula $b_{1},\dots,b_{n}\in\mathbb{F}$
+\end_inset
+
+ )שדה סופי שמרחיב את 
+\begin_inset Formula $\mathbb{F}_{2}$
+\end_inset
+
+(, אנחנו יכולים לחשב את 
+\begin_inset Formula $p\left(b_{1},\dots,b_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+הפרוטוקול:
+\series default
+ הקלט הוא פסוק 
+\begin_inset Formula $3SAT$
+\end_inset
+
+, 
+\begin_inset Formula $\psi\left(x_{1},\dots,x_{n}\right)=\bigcap_{i=1}^{m}C_{i}$
+\end_inset
+
+, והמוכיח טוען שהפסוק לא ספיק.
+\end_layout
+
+\begin_layout Proof
+נתרגם כל פסוקית 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ ל
+\begin_inset Formula $q_{i}\left(x_{1},\dots,x_{n}\right)$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula 
+\[
+q\left(x_{1},\dots,x_{n}\right)=\prod_{i=1}^{m}q_{i}\left(x_{1},\dots,x_{n}\right)
+\]
+
+\end_inset
+
+רוצים לבדוק שאכן 
+\begin_inset Formula $\sum_{x_{1},\dots,x_{n}\in\left\{ 0,1\right\} ^{n}}q\left(x_{1},\dots,x_{n}\right)=0$
+\end_inset
+
+ בשלמים )כלומר מספר ההשמות המספקות הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+(, ומספיק גם לבדוק בשדה גדול מספיק 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ )עם מציין גדול מ
+\begin_inset Formula $2^{n}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Proof
+בסיבוב הראשון, המוכיח שולח פולינום במשתנה אחד מדרגה לכל היותר 
+\begin_inset Formula $3m$
+\end_inset
+
+, 
+\begin_inset Formula $p_{1}\in\mathbb{F}\left[x\right]$
+\end_inset
+
+ )המוכיח ההוגן שולח את 
+\begin_inset Formula $p_{1}\left(x\right)=\sum_{a_{2},\dots,a_{n}\in\left\{ 0,1\right\} ^{n-1}}q\left(x,a_{2},\dots,a_{n}\right)$
+\end_inset
+
+(, זה אפשרי כי לפולינום כזה יש ייצוג קצר.
+ המוודא יבדוק שמתקיים 
+\begin_inset Formula $p_{1}\left(0\right)+p_{1}\left(1\right)=0$
+\end_inset
+
+, יטיל 
+\begin_inset Formula $y_{1}\in\mathbb{F}$
+\end_inset
+
+ וישלח אותו למוכיח.
+\end_layout
+
+\begin_layout Proof
+עכשיו יש טענה חדשה על השולחן, והיא ש
+\begin_inset Formula $\sum_{a_{2},\dots,a_{n}}q\left(y_{1},a_{2},\dots,a_{n}\right)=p_{1}\left(y_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+בסיבוב השני, המוכיח שולח פולינום 
+\begin_inset Formula $p_{2}\in\mathbb{F}\left[x\right]$
+\end_inset
+
+ מדרגה לכל היותר 
+\begin_inset Formula $3m$
+\end_inset
+
+ )המוכיח ההוגן שולח את 
+\begin_inset Formula $p_{2}\left(x\right)=\sum_{a_{3},\dots,a_{n}}q\left(y_{1},x,a_{3},\dots,a_{n}\right)$
+\end_inset
+
+(.
+ המוודא יבדוק שמתקיים 
+\begin_inset Formula $p_{2}\left(0\right)+p_{2}\left(1\right)=p_{1}\left(y_{1}\right)$
+\end_inset
+
+, יטיל 
+\begin_inset Formula $y_{2}\in\mathbb{F}$
+\end_inset
+
+ וישלח אותו למוכיח.
+\end_layout
+
+\begin_layout Proof
+וכן הלאה, במשך 
+\begin_inset Formula $n$
+\end_inset
+
+ סיבובים.
+ בסוף נבדוק שבאמת מתקיים 
+\begin_inset Formula $p_{n}\left(y_{n}\right)=q\left(y_{1},\dots,y_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+נכונות:
+\series default
+ נראה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+perfect completeness
+\lang hebrew
+, ו
+\lang english
+soundness
+\lang hebrew
+ 
+\begin_inset Formula $\frac{3mn}{\left|F\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\psi\in3SAT$
+\end_inset
+
+, אז מהתיאור שלנו למוכיח ההוגן נקבל נכונות: לכל הטלה של 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+p_{i+1}\left(0\right)+p_{i+1}\left(1\right)=\sum_{a_{i+1},a_{i+2},\dots,a_{n}\in\left\{ 0,1\right\} ^{n-i-2}}q\left(y_{1},\dots,y_{i},a_{i+1},a_{i+2},\dots,a_{n}\right)=p_{i}\left(y_{i}\right)
+\]
+
+\end_inset
+
+אם 
+\begin_inset Formula $\psi\notin3SAT$
+\end_inset
+
+, ניקח מוכיח 
+\begin_inset Formula $P^{*}$
+\end_inset
+
+ שממקסם את ההסתברות של 
+\begin_inset Formula $V$
+\end_inset
+
+ לקבל.
+ נסמן ב
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ את הפולינומים האמיתיים 
+\begin_inset Formula 
+\[
+p_{i}\left(x\right)=\sum_{a_{i+1},\dots,a_{n}}q\left(y_{1},\dots,y_{i-1},x,a_{i+1},\dots,a_{n}\right)
+\]
+
+\end_inset
+
+ונסמן ב
+\begin_inset Formula $\tilde{p_{i}}$
+\end_inset
+
+ את הפולינומים ש
+\begin_inset Formula $P^{*}$
+\end_inset
+
+ שולח.
+ כמו כן, נשים לב שמכך ש
+\begin_inset Formula $\psi\notin3SAT$
+\end_inset
+
+, בהכרח מתקיים 
+\begin_inset Formula $\sum_{a_{1},\dots,a_{n}\in\left\{ 0,1\right\} }q\left(a_{1},\dots,a_{n}\right)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+ראשית נטען ש
+\begin_inset Formula $\tilde{p_{1}}\neq p_{1}$
+\end_inset
+
+.
+ אכן, אחרת מתקיים
+\begin_inset Formula 
+\[
+\tilde{p_{1}}\left(0\right)+\tilde{p_{1}}\left(1\right)=p_{1}\left(0\right)+p_{1}\left(1\right)=\sum_{a_{1},\dots,a_{n}\in\left\{ 0,1\right\} }q\left(a_{1},\dots,a_{n}\right)>0
+\]
+
+\end_inset
+
+כלומר הבודק בוודאות ידחה, וזו סתירה לכך ש
+\begin_inset Formula $P^{*}$
+\end_inset
+
+ ממקסם את ההסתברות שלו לקבל.
+\end_layout
+
+\begin_layout Proof
+כעת, נניח ששיחקנו 
+\begin_inset Formula $i$
+\end_inset
+
+ שלבים והפולינום שנשלח בשלב ה
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\begin_inset Formula $\tilde{p_{i}}$
+\end_inset
+
+ מקיים 
+\begin_inset Formula $\tilde{p_{i}}\neq p_{i}$
+\end_inset
+
+.
+ אז בהסתברות לפחות 
+\begin_inset Formula $1-\frac{3m}{\left|F\right|}$
+\end_inset
+
+ הבודק בוחר 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $p_{i}\left(y_{i}\right)\neq\tilde{p_{i}}\left(y_{i}\right)$
+\end_inset
+
+, ובמקרה זה בהכרח 
+\begin_inset Formula $p_{i+1}\neq\tilde{p_{i+1}}$
+\end_inset
+
+, כי אחרת
+\begin_inset Formula 
+\[
+\tilde{p_{i+1}}\left(0\right)+\tilde{p_{i+1}}\left(1\right)=p_{i+1}\left(0\right)+p_{i+1}\left(1\right)=p_{i}\left(y_{i}\right)\neq\tilde{p}_{i}\left(y_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+בסך הכל, אם 
+\begin_inset Formula $\tilde{p_{1}}\left(y_{1}\right)\neq p_{1}\left(y_{1}\right),\dots,\tilde{p_{n-1}}\left(y_{n}\right)\neq p_{n-1}\left(y_{n}\right)$
+\end_inset
+
+ אז בהסתברות 
+\begin_inset Formula $1-\frac{3m}{\left|F\right|}$
+\end_inset
+
+ הבודק יבחר 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ כך ש
+\begin_inset Formula $p_{n}\left(y_{n}\right)\neq q\left(y_{1},\dots,y_{n}\right)$
+\end_inset
+
+ וידחה.
+\end_layout
+
+\begin_layout Proof
+בסך הכל, ההסתברות ש
+\begin_inset Formula $V$
+\end_inset
+
+ יקבל היא
+\begin_inset Formula 
+\[
+P\left(\tilde{p_{1}}\left(y_{1}\right)=p_{1}\left(y_{1}\right)\lor\cdots\lor\tilde{p}_{n}\left(y_{n}\right)=p_{n}\left(y_{n}\right)\right)\leq\sum_{i=1}^{n}P\left(\tilde{p_{i}}\left(y_{i}\right)=p_{i}\left(y_{i}\right)\right)=\frac{n\cdot3m}{\left|F\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+זה גורר 
+\begin_inset Formula $PH\subseteq IP$
+\end_inset
+
+ )לא נראה(, ועדי שמיר הראה שאפשר להכליל ולהראות 
+\begin_inset Formula $TQBF\in IP$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $IP=PSPACE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+משפט ה
+\lang english
+PCP
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וקושי של קירוב
+\end_layout
+
+\begin_layout Subsection
+משפט ה
+\lang english
+PCP
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ובעיות הבטחה
+\end_layout
+
+\begin_layout Definition
+המחלקה 
+\begin_inset Formula $PCP\left(r\left(n\right),q\left(n\right)\right)$
+\end_inset
+
+ מכילה את כל השפות 
+\begin_inset Formula $L$
+\end_inset
+
+ עבורת קיים בודק 
+\begin_inset Formula $V\left(x,w,y\right)$
+\end_inset
+
+ פולינומי כאשר 
+\begin_inset Formula $x$
+\end_inset
+
+ הקלט באורך 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $w$
+\end_inset
+
+ ההוכחה באורך 
+\begin_inset Formula $m\left(n\right)$
+\end_inset
+
+ ו
+\begin_inset Formula $y$
+\end_inset
+
+ המטבעות של הבודק באורך 
+\begin_inset Formula $r\left(n\right)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Definition
+כך שבהינתן 
+\begin_inset Formula $y\in\left\{ 0,1\right\} ^{r\left(n\right)}$
+\end_inset
+
+ הבודק 
+\begin_inset Formula $V$
+\end_inset
+
+ מחשב 
+\begin_inset Formula $q=q\left(n\right)$
+\end_inset
+
+ אינדקסים 
+\begin_inset Formula $\overline{i}=i_{1},\dots,i_{q}\in\left\{ 1,\dots,m\right\} $
+\end_inset
+
+ [תלויים רק ב
+\begin_inset Formula $y$
+\end_inset
+
+, הבודק לא רואה את 
+\begin_inset Formula $w$
+\end_inset
+
+] ומחשב פרדיקט 
+\begin_inset Formula $V\left(x,y,w_{i_{1}},\dots,w_{i_{q}}\right)$
+\end_inset
+
+, ומתקיים
+\begin_inset Formula 
+\begin{align*}
+x\in L\implies\exists w.Pr_{y}\left[V\left(x,w,y\right)=1\right] & \geq c\\
+x\notin L\implies\forall w.Pr_{y}\left[V\left(x,w,y\right)=1\right] & \leq s
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $3SAT\in PCP_{\left[1-\frac{1}{m},1\right]}\left(O\left(\log m\right),3\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $m$
+\end_inset
+
+ מספר הפסוקיות בנוסחה.
+\end_layout
+
+\begin_layout Proof
+הקלט הוא 
+\begin_inset Formula $\varphi\left(\bar{x}\right)=\bigcap_{i=1}^{m}C_{i}\left(\bar{x}\right)$
+\end_inset
+
+, המוכיח שולח השמה 
+\begin_inset Formula $w=\left(a_{1},\dots,a_{n}\right)\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ והבודק יגריל 
+\begin_inset Formula $1\leq i\leq m$
+\end_inset
+
+ )לשם כך צריך 
+\begin_inset Formula $\log m$
+\end_inset
+
+ ביטים של אקראיות( ויבדוק ש
+\begin_inset Formula $C_{i}\left(\overline{a}\right)=T$
+\end_inset
+
+ - לשם כך הוא צריך לקרוא רק
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ אינדקסים מ
+\begin_inset Formula $a$
+\end_inset
+
+, על פי שלושת הליטרלים שמופיעים ב
+\begin_inset Formula $C_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\varphi\in3SAT$
+\end_inset
+
+ אז מוכיח שישלח 
+\begin_inset Formula $w$
+\end_inset
+
+ השמה מספקת )יש כזו( יקיים שלכל 
+\begin_inset Formula $i$
+\end_inset
+
+ הפסוקית 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ תסתפק, ולכן הבודק יקבל בהסתברות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\varphi\notin3SAT$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $w$
+\end_inset
+
+ יש 
+\begin_inset Formula $i$
+\end_inset
+
+ כך ש
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ לא מסתפקת )אחרת 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיקה(, ולכן בהסתברות לפחות 
+\begin_inset Formula $\frac{1}{m}$
+\end_inset
+
+ הבודק יבחר אותה וידחה.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+ה
+\lang english
+PCP
+\lang hebrew
+ 
+\series default
+
+\begin_inset Formula $NP=PCP_{\left[0.9,1\right]}\left(O\left(\log n\right),3\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $GNI\in PCP_{\left[\frac{1}{2},1\right]}\left(O\left(n\log n\right),1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נזכר שראינו פרוטוקול אינטראקטיבי: הקלט היה 
+\begin_inset Formula $\left(G_{1},G_{2}\right)$
+\end_inset
+
+, הבודק בחר 
+\begin_inset Formula $\pi\in S_{n},b\in\left\{ 0,1\right\} $
+\end_inset
+
+ ואז שלח למוכיח את 
+\begin_inset Formula $\pi\left(G_{b}\right)$
+\end_inset
+
+, המוכיח שלח 
+\begin_inset Formula $c\in\left\{ 0,1\right\} $
+\end_inset
+
+ והבודק בדק אם 
+\begin_inset Formula $b=c$
+\end_inset
+
+.
+ נרצה לתרגם אותו לפרוטוקול לא אינטראקטיבי.
+\end_layout
+
+\begin_layout Proof
+הפרוטוקול: הבודק מטיל 
+\begin_inset Formula $\pi\in S_{n},b\in\left\{ 0,1\right\} $
+\end_inset
+
+ )
+\begin_inset Formula $\left|\pi\right|=\log\left(n!\right)=O\left(n\log n\right)$
+\end_inset
+
+( כלומר 
+\begin_inset Formula $y=\left(\pi,b\right)$
+\end_inset
+
+, ולפי 
+\begin_inset Formula $y$
+\end_inset
+
+ מסתכל על הביט בהוכחה 
+\begin_inset Formula $w$
+\end_inset
+
+ שמייצג את התשובה של המוכיח על השאילתה 
+\begin_inset Formula $\pi\left(G_{b}\right)$
+\end_inset
+
+, ובודק אם הביט שם שווה ל
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+הרצאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+12
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+27
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בדצמבר
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+בעיית הבטחה
+\series default
+ נגיד ש
+\begin_inset Formula $\left(Y,N\right)$
+\end_inset
+
+ היא בעיית הבטחה אם 
+\begin_inset Formula $Y,N\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Y\cap N=\emptyset$
+\end_inset
+
+ )אבל לא בהכרח 
+\begin_inset Formula $Y\cup N=\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Definition
+מכונה פותרת בעיית הבטחה אם לכל 
+\begin_inset Formula $x\in Y$
+\end_inset
+
+ היא מחזירה כן, לכל 
+\begin_inset Formula $x\in N$
+\end_inset
+
+ היא מחזירה לא, ועבור 
+\begin_inset Formula $x$
+\end_inset
+
+ שלא ב
+\begin_inset Formula $Y$
+\end_inset
+
+ ולא ב
+\begin_inset Formula $N$
+\end_inset
+
+, לא משנה מה היא מחזירה.
+\end_layout
+
+\begin_layout Definition
+לדוגמה, שפה 
+\begin_inset Formula $L$
+\end_inset
+
+ היא בעיית הבטחה שבה 
+\begin_inset Formula $Y=L,N=\left\{ 0,1\right\} ^{*}\setminus L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+בעיית
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gap
+\lang hebrew
+ 
+\series default
+נגדיר בעיית הבטחה 
+\begin_inset Formula $Gap_{\left[a,b\right]}Clique$
+\end_inset
+
+ עבור 
+\begin_inset Formula $a<b$
+\end_inset
+
+ על ידי קלט גרף 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+, 
+\begin_inset Formula $Y$
+\end_inset
+
+ אם יש קליקה בגודל 
+\begin_inset Formula $b\leq$
+\end_inset
+
+, ו
+\begin_inset Formula $N$
+\end_inset
+
+ אם כל קליקה בגודל 
+\begin_inset Formula $a\geq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+באופן דומה, ניתן להגדיר גם דברים כמו 
+\begin_inset Formula $Gap_{\left[a,b\right]}col$
+\end_inset
+
+ עם קלט 
+\begin_inset Formula $G$
+\end_inset
+
+ ו
+\begin_inset Formula $Y$
+\end_inset
+
+ אם הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+צביע על ידי 
+\begin_inset Formula $a\geq$
+\end_inset
+
+ צבעים, 
+\begin_inset Formula $N$
+\end_inset
+
+ אם כל צביעה דורשת 
+\begin_inset Formula $b\leq$
+\end_inset
+
+ צבעים, וגם 
+\begin_inset Formula $Gap_{\left[\alpha,\beta\right]}\max3SAT$
+\end_inset
+
+ עם קלט 
+\begin_inset Formula $\varphi=\bigcap_{i=1}^{m}C_{i}$
+\end_inset
+
+ ו
+\begin_inset Formula $Y$
+\end_inset
+
+ אם יש השמה שמספקת לפחות 
+\begin_inset Formula $\beta m$
+\end_inset
+
+ פסוקיות, 
+\begin_inset Formula $N$
+\end_inset
+
+ אם כל השמה מספקת לכל היותר 
+\begin_inset Formula $\alpha m$
+\end_inset
+
+ פסוקיות.
+\end_layout
+
+\begin_layout Remarks
+הבעיה 
+\begin_inset Formula $3COL=Gap_{\left[3,4\right]}col$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה, אבל 
+\begin_inset Formula $Gap_{\left[3,3\sqrt{n}\right]}col$
+\end_inset
+
+ היא ב
+\begin_inset Formula $P$
+\end_inset
+
+.
+ כמו כן, 
+\begin_inset Formula $Gap_{\left[\frac{9}{10},1\right]}\max3SAT$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה )נובע ממשפט ה
+\begin_inset Formula $PCP$
+\end_inset
+
+, נראה( אבל 
+\begin_inset Formula $Gap_{\left[<\frac{1}{2},1\right]}\max3SAT$
+\end_inset
+
+ היא ב
+\begin_inset Formula $P$
+\end_inset
+
+, כי במקרה זה 
+\begin_inset Formula $N=\emptyset$
+\end_inset
+
+ ולכן אפשר לומר תמיד כן - אכן, אם כל השמה מספקת 
+\begin_inset Formula $\frac{1}{2}>$
+\end_inset
+
+ מהפסוקיות אז ניקח השמה כלשהי כזו אז גם ה
+\lang english
+not
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שלה יספק 
+\begin_inset Formula $\frac{1}{2}>$
+\end_inset
+
+ פסוקיות, וזו סתירה כי ה
+\lang english
+not
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מספק בדיוק את הפסוקיות שההשמה המקורית לא מספקת.
+\end_layout
+
+\begin_layout Remarks
+נשים לב גם שאם 
+\begin_inset Formula $\varphi=\bigcap_{i=1}^{m}C_{i}$
+\end_inset
+
+ כאשר כל 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ זה 
+\begin_inset Formula $\lor$
+\end_inset
+
+ על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ליטרלים שונים )כלומר הבעיה היא 
+\begin_inset Formula $E3SAT$
+\end_inset
+
+( אז השמה אקראית מספקת בתוחלת 
+\begin_inset Formula $\frac{7}{8}m$
+\end_inset
+
+ מהפסוקיות )לכל פסוקית יש סיכוי 
+\begin_inset Formula $\frac{7}{8}$
+\end_inset
+
+ להסתפק( ולכן תמיד יש השמה שמספקת 
+\begin_inset Formula $\frac{7}{8}m\leq$
+\end_inset
+
+ מהפסוקיות, כלומר 
+\begin_inset Formula $Gap_{\left[\frac{7}{8},1\right]}\in P$
+\end_inset
+
+ כי שוב 
+\begin_inset Formula $N=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+רדוקציות בין בעיות הבטחה
+\series default
+ נניח 
+\begin_inset Formula $\Pi_{1}=\left(Y_{1},N_{1}\right),\Pi_{2}=\left(Y_{2},N_{2}\right)$
+\end_inset
+
+ בעיות הבטחה, נאמר ש
+\begin_inset Formula $\varphi\colon\left\{ 0,1\right\} ^{*}\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ היא רדוקציה מ
+\begin_inset Formula $\Pi_{1}$
+\end_inset
+
+ ל
+\begin_inset Formula $\Pi_{2}$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $\Pi_{1}\leq_{\varphi}\Pi_{2}$
+\end_inset
+
+ אם לכל 
+\begin_inset Formula $x\in Y_{1}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\varphi\left(x\right)\in Y_{2}$
+\end_inset
+
+, ולכל 
+\begin_inset Formula $x\in N_{1}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\varphi\left(x\right)\in N_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+נאמר שבעיית הבטחה 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה אם לכל 
+\begin_inset Formula $L\in NP$
+\end_inset
+
+ יש רדוקציה 
+\begin_inset Formula $L\leq_{Log}\Pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $Gap_{\left[\alpha,\beta\right]}\max3SAT\in PCP_{\left[\alpha,\beta\right]}\left(O\left(\log n\right),3\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+בהינתן קלט 
+\begin_inset Formula $\varphi=\bigcap_{i=1}^{m}C_{i}$
+\end_inset
+
+ הבודק מגריל פסוקית 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $1\leq i\leq m$
+\end_inset
+
+, מסתכל על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הביטים ב
+\begin_inset Formula $w$
+\end_inset
+
+ )שמייצגת השמה( המתאימים לליטרלים ב
+\begin_inset Formula $C_{i}$
+\end_inset
+
+, ובודקת אם הם מספקים את הפסוקית 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\varphi\in Y$
+\end_inset
+
+ אז יש 
+\begin_inset Formula $w$
+\end_inset
+
+ שמספקת לפחות 
+\begin_inset Formula $\beta m$
+\end_inset
+
+ מהפסוקיות ולכן הבודק יקבל בהסתברות לפחות 
+\begin_inset Formula $\beta$
+\end_inset
+
+ )אם הוא בוחר אחת מהפסוקיות הללו(
+\numeric on
+1
+\numeric off
+, ואם 
+\begin_inset Formula $\varphi\in N$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $w$
+\end_inset
+
+ לכל היותר 
+\begin_inset Formula $\alpha m$
+\end_inset
+
+ מהפסוקיות יסתפקו, ולכן בהסתברות לכל היותר 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ הבודק יקבל.
+\end_layout
+
+\begin_layout Standard
+נרצה להוכיח באמצעות משפט ה
+\lang english
+PCP
+\lang hebrew
+ שלכל 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+, הבעיה 
+\begin_inset Formula $Gap_{\left[\frac{7}{8}+\varepsilon,1\right]}\max3SAT$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+ קשה.
+\end_layout
+
+\begin_layout Standard
+ממשפט ה
+\begin_inset Formula $PCP$
+\end_inset
+
+ נובע 
+\begin_inset Formula $NP=PCP_{\left[\frac{1}{2},1\right]}\left(O\left(\log n\right),O\left(1\right)\right)$
+\end_inset
+
+, כלומר לכל 
+\begin_inset Formula $L\in NP$
+\end_inset
+
+ יש פרוטוקול שבו המוכיח שולח הוכחה 
+\begin_inset Formula $\bar{a}=a_{1},\dots,a_{m}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $m=poly\left(n\right)$
+\end_inset
+
+, והבודק מטיל 
+\begin_inset Formula $1\leq i\leq N$
+\end_inset
+
+ )
+\begin_inset Formula $N=poly\left(n\right)$
+\end_inset
+
+( ולפי ה
+\begin_inset Formula $i$
+\end_inset
+
+ מחליט איזה 
+\begin_inset Formula $q=O\left(1\right)$
+\end_inset
+
+ ביטים מההוכחה לקרוא, ובודק האם 
+\begin_inset Formula $V\left(x,a_{j_{1}\left(i\right)},\dots,a_{j_{q}\left(i\right)}\right)=1$
+\end_inset
+
+.
+ הבעיה היא שפה 
+\begin_inset Formula $V$
+\end_inset
+
+ יכולה להיות כל דבר, עם אילוצים כלליים ולא בהכרח נוסחה.
+ לכן, נגדיר:
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+בעיית ה
+\lang english
+CSP
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ הקלט הוא עולם 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ ואוסף של אילוצים )
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+constraints
+\lang hebrew
+( 
+\begin_inset Formula $C_{1},\dots,C_{m}$
+\end_inset
+
+, כאשר כל 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ מגדיר 
+\begin_inset Formula $q$
+\end_inset
+
+ אינדקסים מ
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ ומגדיר פרדיקט 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ שהוא דורש על 
+\begin_inset Formula $q$
+\end_inset
+
+ הביטים הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Definition
+נגדיר את 
+\begin_inset Formula $Y$
+\end_inset
+
+ להיות כל הקלטים כך שיש השמה ל
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ שמספקת 
+\begin_inset Formula $\beta m\leq$
+\end_inset
+
+ מהאילוצים, ו
+\begin_inset Formula $N$
+\end_inset
+
+ להיות כל הקלטים כך שכל השמה ל
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ מספקת 
+\begin_inset Formula $\alpha m\geq$
+\end_inset
+
+ מהאילוצים.
+\end_layout
+
+\begin_layout Claim
+אם 
+\begin_inset Formula $\left(Y,N\right)\in PCP_{\left[\alpha,\beta\right]}\left(r\left(n\right),q\left(n\right)\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $q=O\left(1\right)$
+\end_inset
+
+ אז יש רדוקציה 
+\begin_inset Formula $\left(Y,N\right)\leq_{P}CSP_{\left[\alpha,\beta\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left(Y,N\right)\in PCP_{\left[\alpha,\beta\right]}\left(r\left(n\right),q\left(n\right)\right)$
+\end_inset
+
+ לכן יש מערכת הוכחה שבה המוכיח שולח 
+\begin_inset Formula $m$
+\end_inset
+
+ ביטים כאשר 
+\begin_inset Formula $m=poly\left(n\right)$
+\end_inset
+
+, הבודק מטיל 
+\begin_inset Formula $r\left(n\right)$
+\end_inset
+
+ מטבעות שנסמן 
+\begin_inset Formula $i$
+\end_inset
+
+ ולפיהם מחליט איזה 
+\begin_inset Formula $q\left(n\right)$
+\end_inset
+
+ ביטים לקרוא, ואז בודק 
+\begin_inset Formula $V_{i}\left(x,a_{j_{1}},\dots,a_{j_{q}}\right)$
+\end_inset
+
+ )כלומר 
+\begin_inset Formula $V\left(x,i,a_{j_{1}},\dots,a_{j_{q}}\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Proof
+הרדוקציה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ תקבל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ותבנה מופע של 
+\begin_inset Formula $CSP$
+\end_inset
+
+: מגדירה 
+\begin_inset Formula $\Lambda=\left\{ 1,\dots,m\right\} $
+\end_inset
+
+, לכל 
+\begin_inset Formula $0\leq i\leq2^{r\left(n\right)}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ טבלת האמת על המשתנים 
+\begin_inset Formula $j_{1}\left(i\right),\dots,j_{q}\left(i\right)$
+\end_inset
+
+ שמקבלת את הערך שלה לפי 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $x\in Y$
+\end_inset
+
+ אז מהגדרת מערכת ה
+\begin_inset Formula $PCP$
+\end_inset
+
+ יש מוכיח 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ שעבורו הבודק יקבל בהסתברות 
+\begin_inset Formula $\beta\leq$
+\end_inset
+
+, ולכן אם נבחר את ההשמה ל
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ על ידי 
+\begin_inset Formula $a\left(i\right)=\bar{a}_{i}$
+\end_inset
+
+ אז 
+\begin_inset Formula $Pr_{i}\left[V\text{ accepts}\right]\geq\beta$
+\end_inset
+
+, ובאותו האופן אם 
+\begin_inset Formula $x\in N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+יש 
+\begin_inset Formula $\alpha'<1$
+\end_inset
+
+ כך ש
+\begin_inset Formula $CSP_{\left[\alpha,1\right]}\left(r,q\right)\leq Gap_{\left[\alpha',1\right]}\max3SAT$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $q=O\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נניח 
+\begin_inset Formula $C_{1},\dots,C_{m}$
+\end_inset
+
+ קלט לבעיית ה
+\begin_inset Formula $CSP$
+\end_inset
+
+ עם 
+\begin_inset Formula $m=2^{r}$
+\end_inset
+
+.
+ נעבור על 
+\begin_inset Formula $i=1,\dots,m$
+\end_inset
+
+, כל 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ מסתכל על 
+\begin_inset Formula $j_{1},\dots,j_{q}$
+\end_inset
+
+, נתרגם אותו לפסוק
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $3SAT$
+\end_inset
+
+ באורך 
+\begin_inset Formula $\ell$
+\end_inset
+
+ )קבוע, כי 
+\begin_inset Formula $q$
+\end_inset
+
+ קבוע(.
+ כלומר, כל 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+constraint
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בודד הופך ל
+\begin_inset Formula $\ell$
+\end_inset
+
+ פסוקיות בנוסחה.
+ הנוסחה הסופית תהיה ה
+\begin_inset Formula $\land$
+\end_inset
+
+ של כל הפסוקיות הללו.
+\end_layout
+
+\begin_layout Proof
+ואז, אם 
+\begin_inset Formula $x\in Y_{CSP}$
+\end_inset
+
+ אז יש השמה שמספקת את כל 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ ולכן יש השמה שמספקת את כל הפסוקיות בנוסחת ה
+\begin_inset Formula $3SAT$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+להיפך, אם 
+\begin_inset Formula $x\in N_{CSP}$
+\end_inset
+
+ אז לכל השמה
+\begin_inset Formula 
+\begin{align*}
+Pr_{i}\left[V_{i}\text{ is satisfied}\right]\leq\alpha & \implies Pr_{i}\left[\psi_{i}\text{ is satisfied}\right]\leq\alpha\implies Pr_{i}\left[\exists1\leq j\leq\ell.\psi_{i,j}\text{ is not satisfied}\right]\geq1-\alpha\\
+ & \implies Pr_{i,j}\left[\psi_{i,j}\text{ is not satisfied}\right]\geq\left(1-\alpha\right)\cdot\frac{1}{\ell}
+\end{align*}
+
+\end_inset
+
+כלומר 
+\begin_inset Formula $\left(1-\alpha\right)\cdot\frac{1}{\ell}$
+\end_inset
+
+ מהפסוקיות לא מסתפקות, וזה מספיק כי 
+\begin_inset Formula $\ell$
+\end_inset
+
+ קבוע.
+\end_layout
+
+\begin_layout Corollary
+יש 
+\begin_inset Formula $\alpha'<1$
+\end_inset
+
+ כך שהבעיה 
+\begin_inset Formula $Gap_{\left[\alpha',1\right]}\max3SAT$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה.
+ )לא נוכיח, אבל אפשר להראות, שלכל 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ קבוע 
+\begin_inset Formula $Gap_{\left[\frac{7}{8}+\varepsilon,1\right]}\max3SAT$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה(.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in NP$
+\end_inset
+
+, ממשפט ה
+\lang english
+PCP
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נובע 
+\begin_inset Formula $L\in PCP_{\left[\frac{1}{2},1\right]}\left(O\left(\log n\right),O\left(1\right)\right)$
+\end_inset
+
+ ולכן מהטענה הראשונה שהראינו 
+\begin_inset Formula $L\leq CSP_{\left[\frac{1}{2},1\right]}$
+\end_inset
+
+, וכעת מהטענה האחרונה נובע 
+\begin_inset Formula $CSP_{\left[\frac{1}{2},1\right]}\leq Gap_{\left[\alpha',1\right]}\max3SAT$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $L\leq Gap_{\left[\alpha',1\right]}\max3SAT$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+רדוקציות משמרות
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gap
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וקושי של קירוב
+\end_layout
+
+\begin_layout Standard
+כעת, נזכר שראינו במודלים 
+\begin_inset Formula $3SAT\leq Clique\leq IS\leq VC$
+\end_inset
+
+.
+ נבדוק האם הרדוקציות שראינו הן משמרות פער, כלומר עובדות גם בגרסאות ה
+\lang english
+gap
+\lang hebrew
+ - ואם כן )ואכן כן(, נקבל שגם גרסאות ה
+\lang english
+gap
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של יתר הבעיות הללו הן 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשות.
+\end_layout
+
+\begin_layout Example
+הרדוקציה 
+\begin_inset Formula $3SAT\leq Clique$
+\end_inset
+
+ לוקחת נוסחה עם 
+\begin_inset Formula $m$
+\end_inset
+
+ פסוקיות והופכת אותו לגרף עם 
+\begin_inset Formula $m$
+\end_inset
+
+ רמות )אחת עבור כל פסוקית(, כאשר בכל רמה יש
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קודקודים )אחד עבור כל ליטרל(, ומחברים בין קודקודים ברמות שונות אם הם עקביים
+ )אותו משתנה עם אותו סימן או משתנים שונים(.
+\end_layout
+
+\begin_layout Standard
+נבצע את אותה הרדוקציה מ
+\begin_inset Formula $Gap_{\left[\alpha,1\right]}\max3SAT$
+\end_inset
+
+ ל
+\begin_inset Formula $Gap_{\left[s,c\right]}\max Clique$
+\end_inset
+
+ - מה הפער בין 
+\begin_inset Formula $s,c$
+\end_inset
+
+ שנקבל? אם 
+\begin_inset Formula $\varphi\in Y_{GAP\max3SAT}$
+\end_inset
+
+ אז יש השמה שמספקת את כל הפסוקיות ולכן יש ב
+\begin_inset Formula $G$
+\end_inset
+
+ קליקה בגודל 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ להיפך, אם 
+\begin_inset Formula $x\in N_{GAP\max3SAT}$
+\end_inset
+
+ אז כל השמה מספקת לכל היותר 
+\begin_inset Formula $\alpha m$
+\end_inset
+
+ מהפסוקיות ולכן ב
+\begin_inset Formula $G$
+\end_inset
+
+ הקליקה המקסימלית היא בגודל 
+\begin_inset Formula $\alpha m\geq$
+\end_inset
+
+.
+ אכן, זאת כי אם יש ב
+\begin_inset Formula $G$
+\end_inset
+
+ קליקה בגודל 
+\begin_inset Formula $t$
+\end_inset
+
+ היא בהכרח הולכת בין שכבות שונות, בכל שכבה היא בחרה קודקוד והם עקביים ולכן
+ ההשמה שמספקת אותם מספקת 
+\begin_inset Formula $t$
+\end_inset
+
+ פסוקיות ב
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+ כלומר, 
+\begin_inset Formula $s=\alpha\frac{\left|V\right|}{3},c=\frac{\left|V\right|}{3}$
+\end_inset
+
+ )כי בגרף יש 
+\begin_inset Formula $3m$
+\end_inset
+
+ קודקודים( ויש פער.
+\end_layout
+
+\begin_layout Standard
+באופן דומה, הרדוקציה מ
+\begin_inset Formula $Clique$
+\end_inset
+
+ ל
+\begin_inset Formula $IS$
+\end_inset
+
+ )לקחת משלים( מראה ש
+\begin_inset Formula $Gap_{\left[a,b\right]}\max Clique\leq Gap_{\left[a,b\right]}\max IS$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+לגבי הרדוקציה 
+\begin_inset Formula $IS\leq VC$
+\end_inset
+
+, נזכר ש
+\begin_inset Formula $A$
+\end_inset
+
+ היא 
+\begin_inset Formula $IS$
+\end_inset
+
+ ב
+\begin_inset Formula $G$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $V\setminus A$
+\end_inset
+
+ היא 
+\begin_inset Formula $VC$
+\end_inset
+
+ ב
+\begin_inset Formula $G$
+\end_inset
+
+, ולכן הרדוקציה מקבלת 
+\begin_inset Formula $G,k$
+\end_inset
+
+ ומוציאה את 
+\begin_inset Formula $G,n-k$
+\end_inset
+
+.
+ לכן, מקבלים 
+\begin_inset Formula $Gap_{\left[a,b\right]}\max IS\leq Gap_{\left[n-b,n-a\right]}\max VC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+כלומר, קיבלנו
+\begin_inset Formula 
+\[
+Gap_{\left[0.9,1\right]}\max3SAT\leq GAP_{\left[0.9\frac{\left|V\right|}{3},\frac{\left|V\right|}{3}\right]}\max IS\leq Gap_{\left[\frac{2}{3}\left|V\right|,0.7\left|V\right|\right]}\max VC
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $Gap_{\left[\frac{2}{3}\left|V\right|,0.7\left|V\right|\right]}\max VC$
+\end_inset
+
+ היא בעיה 
+\begin_inset Formula $NP$
+\end_inset
+
+ קשה.
+\end_layout
+
+\begin_layout Claim
+אם מצליחים לקרב את גודל ה
+\lang english
+VC
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+המינימלי בגרף באופן יעיל, כלומר למצוא אלג' פולינומי שבהינתן גרף 
+\begin_inset Formula $G$
+\end_inset
+
+ מציא מספר 
+\begin_inset Formula $num$
+\end_inset
+
+ כך ש
+\begin_inset Formula 
+\[
+\text{size of }\min VC\leq num\leq1.01\cdot\text{size of }\min VC
+\]
+
+\end_inset
+
+אז 
+\begin_inset Formula $P=NP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהי 
+\begin_inset Formula $L\in NP$
+\end_inset
+
+, בהינתן קלט 
+\begin_inset Formula $x$
+\end_inset
+
+ נפעיל את הרדוקציה 
+\begin_inset Formula $L\leq Gap_{\left[\frac{2}{3}\left|V\right|,0.7\left|V\right|\right]}\min VC$
+\end_inset
+
+, נקבל גרף 
+\begin_inset Formula $G$
+\end_inset
+
+ ונפעיל את האלג' לקירוב על 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ נקבל מספר 
+\begin_inset Formula $num$
+\end_inset
+
+, אם 
+\begin_inset Formula $num\leq1.01\cdot\frac{2}{3}\left|V\right|$
+\end_inset
+
+ אז נגיד כן, אחרת נגיד לא.
+\end_layout
+
+\begin_layout Proof
+אז, אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז 
+\begin_inset Formula $G=\varphi\left(x\right)\in Y_{Gap\min VC}$
+\end_inset
+
+ ולכן ב
+\begin_inset Formula $G$
+\end_inset
+
+ יש 
+\begin_inset Formula $VC$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $\frac{2}{3}\left|V\right|\geq$
+\end_inset
+
+, ומכאן 
+\begin_inset Formula $num\leq1.01\cdot\frac{2}{3}\left|V\right|$
+\end_inset
+
+ כלומר נגיד כן.
+\end_layout
+
+\begin_layout Proof
+באופן דומה, אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז ב
+\begin_inset Formula $G$
+\end_inset
+
+ ה
+\begin_inset Formula $VC$
+\end_inset
+
+ המינימלי הוא בגודל 
+\begin_inset Formula $0.7\left|V\right|\leq$
+\end_inset
+
+, ומכאן 
+\begin_inset Formula $num\geq0.7\left|V\right|>1.01\cdot\frac{2}{3}\left|V\right|$
+\end_inset
+
+ כלומר נגיד לא.
+\end_layout
+
+\begin_layout Proof
+כלומר, הצלחנו לפתור את 
+\begin_inset Formula $L$
+\end_inset
+
+ בזמן פולינומי, ולכן 
+\begin_inset Formula $P=NP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+קירוב 
+\series default
+נגיד שאלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $c$
+\end_inset
+
+-מקרב )כאשר 
+\begin_inset Formula $c\geq1$
+\end_inset
+
+( את הפתרון של בעיית מקסימיזציה אם לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+, מתקיים
+\begin_inset Formula 
+\[
+\frac{opt\left(x\right)}{c}\leq A\left(x\right)\leq opt\left(x\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $opt\left(x\right)=\max_{w\text{ s.t. }M\left(x,w\right)=1}Val\left(w\right)$
+\end_inset
+
+, כאשר 
+\begin_inset Formula $Val$
+\end_inset
+
+ פונקציה שנותנת ערך מספרי לפתרונות.
+\end_layout
+
+\begin_layout Claim
+אם יודעים עבור יחס 
+\begin_inset Formula $M\left(x,w\right)$
+\end_inset
+
+ ו
+\begin_inset Formula $val$
+\end_inset
+
+ שהבעיה 
+\begin_inset Formula $Gap_{\left[a,b\right]}\max Val\,M$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+ קשה, אז 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה לקרב את 
+\begin_inset Formula $\max Val\,M$
+\end_inset
+
+ עד כדי פקטור 
+\begin_inset Formula $\frac{b}{a}$
+\end_inset
+
+ )ובאותו האופן עבור 
+\begin_inset Formula $\min$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Proof
+באותו האופן כמו הטענה הקודמת )יש קצת עדינות אם האם דורשים קטן ממש או קטן
+ שווה מ
+\begin_inset Formula $a$
+\end_inset
+
+ ב
+\begin_inset Formula $N$
+\end_inset
+
+, הטענה נכונה עם קטן ממש ואחרת צריך פקטור 
+\begin_inset Formula $\frac{b}{a}<$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Remarks
+ראינו בתרגיל ש
+\begin_inset Formula $Gap_{\left[0.68,0.69\right]}\max2SAT$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה, ולכן קשה לקרב את 
+\begin_inset Formula $\max2SAT$
+\end_inset
+
+ עד כדי פקטור 
+\begin_inset Formula $\frac{0.69}{0.68}$
+\end_inset
+
+.
+ אבל זה לא אומר ש
+\begin_inset Formula $Gap_{\left[0.9,1\right]}\max2SAT$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה )היא אפילו ב
+\begin_inset Formula $P$
+\end_inset
+
+( - טענה על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gap
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא יותר ספציפית, ולא נגררת מקושי של קירוב.
+\end_layout
+
+\begin_layout Definition
+נגדיר 
+\begin_inset Formula $3SAT\left(b\right)$
+\end_inset
+
+, הבעיה של להכריע ספיקות של נוסחה, כאשר הנוסחה בצורת 
+\begin_inset Formula $3SAT$
+\end_inset
+
+ כאשר בנוסף כל משתנה מופיע לכל היותר 
+\begin_inset Formula $b$
+\end_inset
+
+ )קבוע( פעמים.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $3SAT\left(3\right)$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה.
+\end_layout
+
+\begin_layout Proof
+נראה רדוקציה 
+\begin_inset Formula $3SAT\leq3SAT\left(3\right)$
+\end_inset
+
+.
+ בהינתן פסוק 
+\begin_inset Formula $\varphi=\bigcap_{i=1}^{m}C_{i}$
+\end_inset
+
+ ניצור
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $3m$
+\end_inset
+
+ משתנים חדשים 
+\begin_inset Formula $x_{i1},x_{i2},x_{i3}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $1\leq i\leq m$
+\end_inset
+
+, ונמיר את הפסוקיות למשתנים החדשים - לדוגמה, הפסוקית 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ שמוגדרת 
+\begin_inset Formula $x_{10}\lor x_{7}\lor\lnot x_{5}$
+\end_inset
+
+ עוברת ל
+\begin_inset Formula $x_{i1}\lor x_{i2}\lor\lnot x_{i3}$
+\end_inset
+
+.
+ כמו כן, נוסיף פסוקיות חדשות של קונסיסטנטיות - לכל 
+\begin_inset Formula $1\leq j\leq n$
+\end_inset
+
+, נסתכל על כל המופעים של 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ ב
+\begin_inset Formula $\varphi$
+\end_inset
+
+, נניח הוא הופיע 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+ פעמים והוחלף על ידי המשתנים 
+\begin_inset Formula $w_{1},\dots,w_{k_{j}}$
+\end_inset
+
+, נוסיף פסוקיות שמתאימות לטענה 
+\begin_inset Formula $w_{1}\implies w_{2}\implies\cdots\implies w_{k_{j}}\implies w_{1}$
+\end_inset
+
+, על ידי 
+\begin_inset Formula $\left(\lnot w_{1}\lor w_{2}\right),\left(\lnot w_{2}\lor w_{3}\right),\dots,\left(\lnot w_{k_{j}}\lor w_{1}\right)$
+\end_inset
+
+.
+ כל משתנה מופיע לכל היותר פעם אחת בפסוקיות המקוריות, ופעמיים בפסוקיות הנוספות
+ - בסך הכל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פעמים.
+\end_layout
+
+\begin_layout Claim
+יש 
+\begin_inset Formula $\gamma'<1$
+\end_inset
+
+ ו
+\begin_inset Formula $b$
+\end_inset
+
+ קבוע כך שהבעיה 
+\begin_inset Formula $Gap_{\left[\gamma',1\right]}\max3SAT\left(b\right)$
+\end_inset
+
+ היא 
+\begin_inset Formula $NP$
+\end_inset
+
+-קשה.
+\end_layout
+
+\begin_layout Proof
+היינו רוצים להשתמש באותה רדוקציה שהראינו מ
+\begin_inset Formula $3SAT$
+\end_inset
+
+ ל
+\begin_inset Formula $3SAT\left(b\right)$
+\end_inset
+
+ כרדוקציה מ
+\begin_inset Formula $Gap_{\left[\gamma,1\right]}\max3SAT$
+\end_inset
+
+ ל
+\begin_inset Formula $Gap_{\left[\gamma',1\right]}\max3SAT\left(b\right)$
+\end_inset
+
+ - אבל האם היא משמרת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gap
+\lang hebrew
+? לא, כי לדוגמה נניח 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ מופיע בכל פסוקית של 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, ב
+\begin_inset Formula $\frac{m}{2}$
+\end_inset
+
+ חיובי וב
+\begin_inset Formula $\frac{m}{2}$
+\end_inset
+
+ שלילי, נבחר השמה ל
+\begin_inset Formula $\varphi'$
+\end_inset
+
+ כך: המופעים החיוביים 
+\begin_inset Formula $T$
+\end_inset
+
+, המופעים השליליים 
+\begin_inset Formula $F$
+\end_inset
+
+, אז כל הפסוקיות המקוריות יסתפקו, וגם כמעט כל הפסוקיות הנוספות יסתפקו -
+ כל הגרירות מחיובי לחיובי או שלילי לשלילי יסתפקו, גם משלילי לחיובי, רק גרירה
+ אחת מחיובי לשלילי לא תסתפק.
+ ואז, מתוך כל 
+\begin_inset Formula $4m$
+\end_inset
+
+ הפסוקיות נספק 
+\begin_inset Formula $4m-1$
+\end_inset
+
+.
+ כלומר, הרדוקציה מעבירה
+\begin_inset Formula 
+\[
+Gap_{\left[\gamma m,m\right]}\max3SAT\leq Gap_{\left[4m-1,4m\right]}\max3SAT\left(3\right)
+\]
+
+\end_inset
+
+כלומר ה
+\lang english
+gap
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נעלם - היינו רוצים 
+\begin_inset Formula $\left[\gamma'\cdot4m,4m\right]$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\gamma'<1$
+\end_inset
+
+ קבוע.
+\end_layout
+
+\begin_layout Proof
+לכן, נרצה לתקן את הרדוקציה.
+ נעבור על כל 
+\begin_inset Formula $n$
+\end_inset
+
+ המשתנים, עבור 
+\begin_inset Formula $i$
+\end_inset
+
+, נניח ש
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ מופיע 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ פעמים, ונבנה גרף 
+\begin_inset Formula $G_{i}=\left(V,E\right)$
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+-רגולרי שיש בו 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ קודקודים וקשת 
+\begin_inset Formula $\left(w_{1},w_{2}\right)$
+\end_inset
+
+ תגיד 
+\begin_inset Formula $w_{1}\iff w_{2}$
+\end_inset
+
+, ונוסיף את הקשתות שלו כקשתות עקביות נוספות )כלומר, במקום מעגל מכוון, נרצה
+ גרף יותר קשיר - אקספנדר!(.
+ יש בנוסחה החדשה 
+\begin_inset Formula $3m$
+\end_inset
+
+ משתנים ו
+\begin_inset Formula 
+\[
+m+\sum_{i=1}^{n}k_{i}\cdot b\leq\left(3b+1\right)m
+\]
+
+\end_inset
+
+פסוקיות, וכל משתנה מופיע ב
+\begin_inset Formula $\varphi'$
+\end_inset
+
+ לכל היותר 
+\begin_inset Formula $2b+1$
+\end_inset
+
+ פעמים.
+\end_layout
+
+\begin_layout Proof
+אם 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיק עם 
+\begin_inset Formula $a_{1},\dots,a_{n}$
+\end_inset
+
+ אז אם לכל המשתנים שבאו מ
+\begin_inset Formula $i$
+\end_inset
+
+ נבחר השמה 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\varphi'$
+\end_inset
+
+ גם ספיק.
+\end_layout
+
+\begin_layout Proof
+אבל אם 
+\begin_inset Formula $\varphi\in NO$
+\end_inset
+
+, אז לכל השמה 
+\begin_inset Formula $a=a_{1},\dots,a_{n}$
+\end_inset
+
+ ל
+\begin_inset Formula $\varphi$
+\end_inset
+
+ לפחות 
+\begin_inset Formula $\left(1-\gamma\right)m$
+\end_inset
+
+ מהפסוקיות לא מסתפקות.
+ נניח שבנינו את הגרף 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $A\subseteq V$
+\end_inset
+
+ עם 
+\begin_inset Formula $\left|A\right|\leq\frac{\left|V\right|}{2}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\Gamma\left(A\right)\right|>\left|A\right|$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\Gamma\left(A\right)$
+\end_inset
+
+ קבוצת כל השכנים של קודקודים ב
+\begin_inset Formula $A$
+\end_inset
+
+ )לא נראה איך בונים כזה, בשביל זה היה צריך לבוא לסמינר בתג
+\begin_inset Quotes erd
+\end_inset
+
+ס(.
+\end_layout
+
+\begin_layout Proof
+נראה שבהשמה האופטימלית המשתנים עקביים - אכן, אם היריב בחר השמה ל
+\begin_inset Formula $\varphi'$
+\end_inset
+
+ ועבור משתנה מסוים 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ חלק מהמשתנים המתאימים קיבלו 
+\begin_inset Formula $T$
+\end_inset
+
+ וחלק 
+\begin_inset Formula $F$
+\end_inset
+
+, אז אחת הקבוצות היא קבוצת מיעוט, ואם הוא יחליף את הערך של קבוצת המיעוט
+ לערך של השאר הוא יפסיד לכל משתנה ב
+\begin_inset Formula $A$
+\end_inset
+
+ לכל היותר פסוקית אחת מהפסוקיות המקוריות )בסך הכל 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+ פסוקיות(, אבל הוא ירוויח 
+\begin_inset Formula $\left|\Gamma\left(A\right)\right|$
+\end_inset
+
+ קשתות בגרף העקביות )קשתות שהיו מהצורה 
+\begin_inset Formula $T\implies F$
+\end_inset
+
+( - ו
+\begin_inset Formula $\left|\Gamma\left(A\right)\right|>\left|A\right|$
+\end_inset
+
+ כי 
+\begin_inset Formula $\left|A\right|\leq\frac{\left|V_{i}\right|}{2}$
+\end_inset
+
+, ולכן עדיף להחליף.
+\end_layout
+
+\begin_layout Proof
+כלומר, ההשמה האופטימלית עקבית ולכן היא מספקת לכל היותר 
+\begin_inset Formula $\gamma m+3bm$
+\end_inset
+
+ מתוך 
+\begin_inset Formula $m+3bm$
+\end_inset
+
+ פסוקיות.
+\end_layout
+
+\begin_layout Proof
+כלומר, קיבלנו רדוקציה משמרת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+gap
+\lang hebrew
+:
+\begin_inset Formula 
+\[
+Gap_{\left[\gamma,1\right]}\max3SAT\leq Gap_{\left[\frac{3b+\gamma}{3b+1},1\right]}\max3SAT\left(b\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סוף.
+\end_layout
+
+\end_body
+\end_document
