@@ -1,12 +1,22 @@
 import os
 import sys
+import subprocess
 from shutil import rmtree, copyfile
 from jinja2 import Template
 import htmlmin
 
-# remove all pdf files
+try:
+    os.mkdir("cache")
+except:
+    pass
+try:
+    os.mkdir("docs")
+except:
+    pass
+
+# remove all pdf files except docs
 for root, dirs, files in os.walk("."):
-    if not root.startswith("./.git"):
+    if not root.startswith("./.git") and not root.startswith("./docs"):
         for filename in files:
             if filename.endswith(".pdf"):
                 # found a pdf file, remove it
@@ -16,18 +26,51 @@ for root, dirs, files in os.walk("."):
 
 # compile all lyx files
 pdf_files = []
+used_caches = set()
 for root, dirs, files in os.walk("."):
     if not root.startswith("./.git"):
         for filename in files:
             if filename.endswith(".lyx"):
                 # found a lyx file, compile it
                 place = os.path.join(root, filename)
-                print("compiling", place)
-                if os.popen(f"cd {root} && lyx --export pdf2 {filename} && lyx --export xhtml {filename}").close() != None:
-                    print("Error in compilation")
-                    sys.exit()
-                pdf_files.append(place[1:-4])
-print("finished compiling LyX")
+
+                # calculate md5 for cache
+                print("hasing", place)
+                md5_cmd = subprocess.Popen(["/usr/bin/md5sum", filename], cwd=root, stdout=subprocess.PIPE)
+                md5 = md5_cmd.communicate()[0].decode("utf-8").split(" ")[0]
+                used_caches.add(md5)
+
+                cached = True
+                try:
+                    cache_path = ""
+                    with open("./cache/cache_" + md5, "r") as f:
+                        cache_path = f.read()
+
+                    print("cached", place, "at", cache_path)
+                    copyfile("./docs" + cache_path, "." + place[1:-4] + ".pdf")
+                    pdf_files.append(place[1:-4] + ".pdf")
+
+                except FileNotFoundError:
+                    cached = False
+
+                if not cached:
+                    print("compiling", place)
+                    subprocess.Popen(["/usr/bin/lyx", "--export", "pdf2", filename], cwd=root).communicate()
+
+                    # save to cache
+                    with open("./cache/cache_" + md5, "w") as f:
+                        f.write(place[1:-4] + ".pdf")
+
+                    pdf_files.append(place[1:-4] + ".pdf")
+
+# remove unused caches
+for fname in os.listdir("cache"):
+    if not (fname[6:] in used_caches):
+        os.remove(os.path.join("./cache/", fname))
+
+# remove docs completely now
+rmtree("./docs/")
+os.mkdir("docs")
 
 # generate pages
 # pdf_files is ['/discrete-mathematics/ultimate-summary-misha/summary', '/intro-to-computer-science/dutz-misha/dutz', '/B/sikum']
@@ -49,9 +92,6 @@ for file_name in pdf_files:
 folder_template = None
 with open("./website/folder.jinja2", "r") as folder_template_file:
     folder_template = Template(folder_template_file.read())
-file_template = None
-with open("./website/file.jinja2", "r") as file_template_file:
-    file_template = Template(file_template_file.read())
 
 try:
     rmtree("./docs")
@@ -66,9 +106,9 @@ for pdf_file in pdf_files:
         print("mkdir", "./docs" + "/".join(pdf_file.split("/")[:-1]))
     except:
         pass
-    copyfile("." + pdf_file + ".pdf", "./docs" + pdf_file + ".pdf")
-    copyfile("." + pdf_file + ".xhtml", "./docs" + pdf_file + ".xhtml")
-    print("copy", "." + pdf_file + ".xhtml", "to", "./docs" + pdf_file + ".xhtml")
+    copyfile("." + pdf_file, "./docs" + pdf_file)
+    os.remove("." + pdf_file)
+    print("copy", "." + pdf_file, "to", "./docs" + pdf_file)
 
 def make_website_recursively(dirs, where):
     _keys = list(sorted(dirs.items(), key=lambda x: x[0]))
@@ -86,18 +126,6 @@ def make_website_recursively(dirs, where):
         # Make a page for the directory
         my_file.write(htmlmin.minify(folder_template.render(dirname="/" + where, entries=entries)))
     # Make a page for each file
-    for filename in files:
-        with open("./docs/" + where + filename + ".html", "w") as my_file:
-            # Make a page for the file
-            try:
-                with open("./docs/" + where + filename + ".xhtml", "r") as lyxhtml_file:
-                    lyxhtml = lyxhtml_file.read()
-                    print("found", lyxhtml.find("<body dir=\"auto\">"), lyxhtml.find("</body>"))
-                    lyxhtml = lyxhtml[(lyxhtml.find("<body dir=\"auto\">") + 17):(lyxhtml.find("</body>"))]
-                    my_file.write(htmlmin.minify(file_template.render(filename="/" + where + filename, lyxhtml=lyxhtml)))
-            except:
-                pass
-
 
     for k, v in subdirs:
         make_website_recursively(v, where + k + "/")

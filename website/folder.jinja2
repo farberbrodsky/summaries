@@ -16,11 +16,11 @@
     {% for entry in entries %}
       {% if entry[0] == "file" %}
       <div class="file">
-        <a class="file-link" href="{{ entry[1] }}.html">
+        <a class="file-link" href="{{ entry[1] }}">
           <i class="file-or-folder-icon material-icons">text_snippet</i>
           <div class="file-name">{{ entry[1] }}</div>
         </a>
-        <a href="{{ entry[1] }}.pdf" download><i class="material-icons">cloud_download</i></a>
+        <a href="{{ entry[1] }}" download><i class="material-icons">cloud_download</i></a>
       </div>
       {% else %}
         <div class="file">
