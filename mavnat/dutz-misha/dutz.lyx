@@ -1,0 +1,1831 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\def\HeblatexEncoding{HE8}
+\def\HeblatexEncodingFile{he8enc}
+\usepackage{color}
+\definecolor{keywordcolor}{rgb}{1,0.46,0}
+\definecolor{commentcolor}{rgb}{0.86,0,0}
+\definecolor{stringcolor}{rgb}{0,0.66,0}
+\definecolor{numbercolor}{rgb}{0,0,0}
+\definecolor{blue}{rgb}{0.2,0.4,1}
+\usepackage{titlesec}
+\titlespacing{\section} {0pt}{0pt}{0pt}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{0pt}{}
+
+\newcommand{\tmpsection}[1]{}
+\let\tmpsection=\section
+\renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
+
+\setlength{\parskip}{2pt}
+\setlength{\itemsep}{0pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "courier" "FiraCode Nerd Font"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 0.5cm
+\rightmargin 0cm
+\bottommargin 0.5cm
+\headheight 1cm
+\headsep 1cm
+\footskip 0cm
+\columnsep 0.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+מערך מעגלי
+\end_layout
+
+\begin_layout Standard
+נשמור:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+array, maxlen, length, start
+\lang hebrew
+.
+ האיבר ה-
+\lang english
+i
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נמצא ב: 
+\begin_inset Formula $\text{array}\left[\left(L.\text{start}+i\right)\mod L.\text{maxlen}\right]$
+\end_inset
+
+.
+ היתרון על סתם מערך זה שאפשר למחוק/להכניס איבר 
+\bar under
+משני הכיוונים
+\bar default
+ ב-
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+ )כדי למחוק/להכניס מההתחלה נוסיף/נחסיר מ-
+\lang english
+start
+\lang hebrew
+, מודולו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+maxlen
+\lang hebrew
+(.
+\end_layout
+
+\begin_layout Section
+אתחול מערך מגודל 
+\begin_inset Formula $n$
+\end_inset
+
+ ב-
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נשמור שלושה מערכים: 
+\begin_inset Formula $A$
+\end_inset
+
+ המערך עצמו, 
+\begin_inset Formula $\text{Legals}$
+\end_inset
+
+ מערך אינדקסים חוקיים, 
+\begin_inset Formula $\text{Positions}$
+\end_inset
+
+ מערך אינדקסים ל-
+\begin_inset Formula $\text{Legals}$
+\end_inset
+
+, ונשמור גם 
+\begin_inset Formula $\text{LegalsSize}$
+\end_inset
+
+ כמות האיברים ב-
+\begin_inset Formula $\text{Legals}$
+\end_inset
+
+.
+ כל אינדקס שמופיע ב-
+\begin_inset Formula $\text{Legals}$
+\end_inset
+
+ עד ל-
+\begin_inset Formula $\text{LegalsSize}$
+\end_inset
+
+ הוא אינדקס שאותחל כבר.
+ ועבור כל אינדקס שאותחל נשמור ב-
+\begin_inset Formula $\text{Positions}$
+\end_inset
+
+ את המיקום של האינדקס ב-
+\begin_inset Formula $\text{Legals}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אפשר לדעת האם האיבר ה-
+\begin_inset Formula $i$
+\end_inset
+
+ אותחל לפי 
+\begin_inset Formula $\text{Positions}$
+\end_inset
+
+: אם האינדקס 
+\begin_inset Formula $\text{Positions}\left[i\right]$
+\end_inset
+
+ בתוך התחום של 
+\begin_inset Formula $\text{LegalsSize}$
+\end_inset
+
+, וגם האיבר שמופיע ב-
+\begin_inset Formula $\text{Legals}$
+\end_inset
+
+ במקום הזה הוא האינדקס, אז האיבר ה-
+\begin_inset Formula $i$
+\end_inset
+
+ אותחל כי מובטח לנו שכל מה שבתוך התחום של 
+\begin_inset Formula $\text{LegalsSize}$
+\end_inset
+
+ הוא באמת אינדקס מאותחל.
+ בקריאה נבדוק האם איבר מאותחל ובכתיבה אם האיבר לא מאותחל אז נוסיף את האינדקס
+ ל-
+\begin_inset Formula $\text{Legals}$
+\end_inset
+
+ ונרשום את המיקום ב-
+\begin_inset Formula $\text{Positions}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+עץ חיפוש בינארי
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תכונה:
+\series default
+ לכל צומת, המפתח של כל איבר בתת העץ השמאלי קטן, והמפתח של כל איבר בתת העץ
+ הימני גדול מהמפתח של הצומת.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0pt">
+<column alignment="block" valignment="top" width="55col%">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+if
+\lang hebrew
+ 
+\lang english
+
+\begin_inset Formula $x.\text{right}\ne\text{null}$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+return 
+\begin_inset Formula $\text{Min}\left(x.\text{right}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset Formula $y\gets x.\text{parent}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+while 
+\begin_inset Formula $y\ne\text{null}$
+\end_inset
+
+ and 
+\begin_inset Formula $x=y.\text{right}$
+\end_inset
+
+ do:
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $x\gets y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $y\gets x.\text{parent}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+return 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+פעולת 
+\begin_inset Formula $\text{Successor}$
+\end_inset
+
+:
+\series default
+ אם יש בן ימני, נלך ימינה ואז כל הדרך שמאלה.
+ אם אין בין ימני, נלך למעלה עד לפניה הראשונה ימינה )כלומר - שהגענו למעלה
+ דרך הבן השמאלי(.
+ אם המפתח היה כבר הכי גדול אז נקבל 
+\begin_inset Formula $\text{null}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+בנוסף:
+\series default
+ אם עוברים על כל העץ אז עוברים על כל קשת לכל היותר פעמיים לכן העלות היא
+ 
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולת
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Delete
+\lang hebrew
+:
+\series default
+ אם אין ילדים - קל.
+ אם יש רק בן אחד - נחליף בהורה את האיבר בבן שלו.
+ אם יש שני ילדים: נחליף את 
+\begin_inset Formula $x$
+\end_inset
+
+ ב-
+\lang english
+successor
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של 
+\begin_inset Formula $x$
+\end_inset
+
+, שנסמנו ב-
+\begin_inset Formula $y$
+\end_inset
+
+.
+ ל-
+\begin_inset Formula $y$
+\end_inset
+
+ אין בן שמאלי )כי הולכים ימינה ואז כל הדרך שמאלה(.
+ לכן נוציא את 
+\begin_inset Formula $y$
+\end_inset
+
+ מהעץ ונכניס אותו חזרה במקום 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מעבר על העץ
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+Pre-Order
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+In-Order
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+Post-Order
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "31col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+if 
+\begin_inset Formula $x\ne\text{null}$
+\end_inset
+
+ then
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{Process}\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{Pre-Order}\left(x.\text{left}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{Pre-Order}\left(x.\text{right}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "31col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+if 
+\begin_inset Formula $x\ne\text{null}$
+\end_inset
+
+ then
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{In-Order}\left(x.\text{left}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{Process}\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{In-Order}\left(x.\text{right}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "32col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+if 
+\begin_inset Formula $x\ne\text{null}$
+\end_inset
+
+ then
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{Post-Order}\left(x.\text{left}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{Post-Order}\left(x.\text{right}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{2em}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\text{Process}\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+עץ
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+AVL
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תכונה:
+\series default
+ נגדיר 
+\begin_inset Formula $\text{BF}\left(v\right)=h\left(v.\text{left}\right)-h\left(v.\text{right}\right)$
+\end_inset
+
+, אז 
+\begin_inset Formula $\left|\text{BF}\left(v\right)\right|\le1$
+\end_inset
+
+ לכל צומת 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ נובע שהגובה הוא 
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+, הוכחה עם עץ פיבונאצ'י )הבן השמאלי של 
+\begin_inset Formula $F_{h}$
+\end_inset
+
+ הוא 
+\begin_inset Formula $F_{h-2}$
+\end_inset
+
+ והימני 
+\begin_inset Formula $F_{h-1}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולת רוטציה:
+\series default
+ מתקנת אם 
+\begin_inset Formula $\left|\text{BF}\left(v\right)\right|=2$
+\end_inset
+
+ אבל מה שמתחת בסדר.
+ אם 
+\begin_inset Formula $\text{BF}\left(v\right)=2$
+\end_inset
+
+ נפצל למקרים לפי ה-
+\begin_inset Formula $\text{BF}$
+\end_inset
+
+ של הבן השמאלי 
+\begin_inset Formula $\left(-1,0/1\right)$
+\end_inset
+
+, ואם 
+\begin_inset Formula $\text{BF}\left(v\right)=-2$
+\end_inset
+
+ נפצל למקרים לפי ה-
+\begin_inset Formula $\text{BF}$
+\end_inset
+
+ של הבן הימני 
+\begin_inset Formula $\left(-1/0,1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולת הכנסה:
+\series default
+ נכניס כרגיל, ואז נעלה למעלה בעץ ונחפש
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\text{AVL criminals}$
+\end_inset
+
+ )עם 
+\begin_inset Formula $\left|\text{BF}\left(v\right)\right|=2$
+\end_inset
+
+(.
+ אם ה-
+\begin_inset Formula $\text{BF}$
+\end_inset
+
+ חוקי והגובה לא השתנה בפעולת ההכנסה אז אפשר לעצור, אחרת נמשיך לעלות למעלה
+ ואם 
+\begin_inset Formula $\left|\text{BF}\left(v\right)\right|=2$
+\end_inset
+
+ נבצע רוטציה.
+ אחרי הכנסה יש לכל היותר רוטציה אחת לכן אפשר לעצור גם במקרה הזה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולת מחיקה:
+\series default
+ יכול להיות שיהיו כמה רוטציות בדרך למעלה, ונתחיל מההורה של מי שמחקנו באמת
+ )למשל זה יכול להיות ה-
+\lang english
+successor
+\lang hebrew
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולת
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Join
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ששומרת על
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+BF
+\lang hebrew
+:
+\series default
+ נניח ש-
+\begin_inset Formula $T_{1}<x<T_{2}$
+\end_inset
+
+ )כל איבר ב-
+\begin_inset Formula $T_{1},T_{2}$
+\end_inset
+
+(.
+ סתם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Join
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+זה קל: ניצור שורש 
+\begin_inset Formula $x$
+\end_inset
+
+, את 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ נשים משמאל ואת 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ נשים מימין לשורש.
+ כדי לשמור על 
+\begin_inset Formula $\text{BF}$
+\end_inset
+
+: בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $h\left(T_{1}\right)\le h\left(T_{2}\right)$
+\end_inset
+
+.
+ נמצא את 
+\begin_inset Formula $b$
+\end_inset
+
+ הצומת הראשון בשושלת השמאלית )ללכת כל הזמן שמאלה( של 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $h\left(b\right)\le h\left(T_{1}\right)$
+\end_inset
+
+ )ולכן 
+\begin_inset Formula $h\left(b\right)\in\left\{ h\left(T_{1}\right)-1,h\left(T_{1}\right)\right\} $
+\end_inset
+
+(.
+ נסמן ב-
+\begin_inset Formula $c$
+\end_inset
+
+ את ההורה של 
+\begin_inset Formula $b$
+\end_inset
+
+, נצרף מתחת ל-
+\begin_inset Formula $c$
+\end_inset
+
+ את 
+\begin_inset Formula $x$
+\end_inset
+
+ כך שהבן השמאלי שלו הוא 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ והבן הימני שלו הוא תת העץ של 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ לאחר מכן נבצע תיקונים בדרך למעלה החל מ-
+\begin_inset Formula $x$
+\end_inset
+
+.
+ סך הכל 
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פיצול עץ באמצעות
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Join
+\lang hebrew
+:
+\series default
+ בהינתן צומת 
+\begin_inset Formula $x$
+\end_inset
+
+ בעץ 
+\begin_inset Formula $T$
+\end_inset
+
+, נרצה לפצל לשני עצים: 
+\begin_inset Formula $T_{1}<x<T_{2}$
+\end_inset
+
+.
+ נעשה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Join
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לכל הכתומים ולכל הורודים ונקבל שני עצים.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename 2022-07-07_16-54_1.png
+	height 2cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הסיבוכיות יוצאת 
+\begin_inset Formula $O\left(\log n\right)$
+\end_inset
+
+, כי כל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Join
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עולה כמו ההפרש בין הגבהים.
+\end_layout
+
+\begin_layout Section
+עצי
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+rank
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולות חדשות:
+\series default
+ 
+\begin_inset Formula $\text{Select}$
+\end_inset
+
+ מחזיר את האיבר ה-
+\begin_inset Formula $k$
+\end_inset
+
+ בגודלו, 
+\begin_inset Formula $\text{Rank}$
+\end_inset
+
+ מחזיר את המיקום של איבר בסדר הממוין.
+\end_layout
+
+\begin_layout Standard
+נשמור לכל צומת 
+\series bold
+שדה חדש
+\series default
+ שנקרא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+size
+\lang hebrew
+.
+ אפשר לעדכן אותו בכל הפעולות ולשמור על אותו זמן הריצה כי זה 
+\bar under
+שדה נוסף שתלוי רק בבנים הישירים של הצומת
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולת 
+\begin_inset Formula $\text{Tree-Select}\left(T,k\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\lang english
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+
+\size scriptsize
+\lang english
+\begin_inset Formula $r\gets T.\text{left}.\text{size}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+\size scriptsize
+\lang english
+if 
+\begin_inset Formula $k=r$
+\end_inset
+
+: return 
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+\size scriptsize
+\lang english
+if 
+\begin_inset Formula $k<r$
+\end_inset
+
+: return 
+\begin_inset Formula $\text{Tree-Select}\left(T.\text{left},k\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+\size scriptsize
+\lang english
+if 
+\begin_inset Formula $k>r$
+\end_inset
+
+: return 
+\begin_inset Formula $\text{Tree-Select}\left(T.\text{right},k-r\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולת 
+\begin_inset Formula $\text{Rank}\left(x\right)$
+\end_inset
+
+:
+\series default
+ נאתחל את ה-
+\lang english
+rank
+\lang hebrew
+ עם כמות הצמתים בתת העץ השמאלי ועוד 
+\begin_inset Formula $1$
+\end_inset
+
+ )
+\begin_inset Formula $x$
+\end_inset
+
+ עצמו(.
+ נלך למעלה ובכל צומת שבאנו אליו מימין נוסיף גם את כמות הצמתים בתת העץ השמאלי
+ שלו ועוד 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+finger trees
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+nO.
+\end_layout
+
+\end_body
+\end_document
