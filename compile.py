@@ -55,7 +55,11 @@ for root, dirs, files in os.walk("."):
 
                 if not cached:
                     print("compiling", place)
-                    subprocess.Popen(["/usr/bin/lyx", "--export", "pdf2", filename], cwd=root).communicate()
+                    stdout, stderr = subprocess.Popen(["/usr/bin/lyx", "--export", "pdf2", filename], cwd=root).communicate()
+                    if stderr:
+                        print("ERROR!!!")
+                        print("stderr", stderr)
+                        print("stdout", stdout)
 
                     # save to cache
                     with open("./cache/cache_" + md5, "w") as f:
@@ -106,9 +110,13 @@ for pdf_file in pdf_files:
         print("mkdir", "./docs" + "/".join(pdf_file.split("/")[:-1]))
     except:
         pass
-    copyfile("." + pdf_file, "./docs" + pdf_file)
-    os.remove("." + pdf_file)
-    print("copy", "." + pdf_file, "to", "./docs" + pdf_file)
+    try:
+        copyfile("." + pdf_file, "./docs" + pdf_file)
+        os.remove("." + pdf_file)
+        print("copy", "." + pdf_file, "to", "./docs" + pdf_file)
+    except:
+        print("Could not find pdf!!!")
+        pass
 
 def make_website_recursively(dirs, where):
     _keys = list(sorted(dirs.items(), key=lambda x: x[0]))
