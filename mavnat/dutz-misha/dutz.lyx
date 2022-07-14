@@ -15,7 +15,7 @@
 \definecolor{numbercolor}{rgb}{0,0,0}
 \definecolor{blue}{rgb}{0.2,0.4,1}
 \usepackage{titlesec}
-\titlespacing{\section} {0pt}{0pt}{0pt}
+\titlespacing{\section} {-1pt}{-1pt}{-1pt}
 \titleformat{\section}[block]{\large\bfseries\filcenter}{}{0pt}{}
 
 \newcommand{\tmpsection}[1]{}
@@ -409,17 +409,7 @@ return
 .
 \end_layout
 
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 
 \series bold
@@ -431,6 +421,16 @@ return
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5748,15 +5748,32 @@ pivot
 \series bold
 חציון החציונים:
 \series default
- דרך למצוא איבר כך שיש לפחות 
-\begin_inset Formula $0.3n-4$
-\end_inset
-
- איברים שגדולים/קטנים ממנו ב-
-\begin_inset Formula $O\left(n\right)$
-\end_inset
-
-, אם נשתמש בחציון החציונים אפשר לגרום ל-
+ דרך להפוך את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
 \lang english
 QuickSelect
 \family roman
@@ -5785,14 +5802,47 @@ QuickSelect
 \uwave default
 \noun default
 \color inherit
-להיות 
+ל-
 \begin_inset Formula $O\left(n\right)$
 \end_inset
 
  במקרה הגרוע.
  מחלקים את המערך לחמישיות, ומוצאים חציון לכל חמישיה בנפרד.
- לאחר מכן ברקורסיה לוקחים את החציונים של כל החמישיות ומוצאים להם חציון החציונים
- ברקורסיה.
+ לאחר מכן לוקחים את החציונים של כל החמישיות ומוצאים להם ברקורסיה חציון עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+QuickSelect-MedOfMed
+\lang hebrew
+.
+ אז יש לפחות 
+\begin_inset Formula $0.3n-4$
+\end_inset
+
+ איברים שגדולים/קטנים ממנו, מלבנים...
 \end_layout
 
 \begin_layout Section
@@ -7015,6 +7065,8 @@ hash
 \end_inset
 
  הגרלות בתוחלת(.
+
+\size footnotesize
  הבניה היא 
 \begin_inset Formula $O\left(n\right)$
 \end_inset
@@ -7347,7 +7399,7 @@ union
 \noun off
 \color none
 \lang hebrew
- 
+ )לא כולל חיפוש( 
 \family default
 \series default
 \shape default
@@ -8099,10 +8151,12 @@ union by rank
 \numeric off
 .
  ברגע שצומת הפסיק להיות שורש הוא ישאר באותה דרגה לתמיד.
-\end_layout
-
-\begin_layout Standard
-אם נגדיר 
+ 
+\series bold
+\size footnotesize
+הגדרה:
+\series default
+ אם נגדיר 
 \begin_inset Formula $Tower\left(1\right)=2,Tower\left(n\right)=2^{T\left(n-1\right)}$
 \end_inset
 
@@ -8117,6 +8171,84 @@ union by rank
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+\size footnotesize
+הוכחת סיבוכיות:
+\series default
+ נגדיר 
+\begin_inset Formula $\text{level}\left(x\right)=\log^{*}\left(x.\text{rank}\right)$
+\end_inset
+
+, במעמד ה-
+\begin_inset Formula $i$
+\end_inset
+
+ יש צמתים שדרגתם 
+\begin_inset Formula $T\left(i-1\right)+1,\dots,T\left(i\right)$
+\end_inset
+
+, יש לכל היותר 
+\begin_inset Formula $n$
+\end_inset
+
+ צמתים ממעמד 
+\begin_inset Formula $1$
+\end_inset
+
+ ולכל היותר 
+\begin_inset Formula $\frac{n}{T\left(i\right)}$
+\end_inset
+
+ צמתים ממעמד 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ ב-
+\lang english
+find
+\lang hebrew
+ משלמים רק על הפעולות שבהן 
+\begin_inset Formula $\text{level}\left(x\right)\ne\text{level}\left(x.p\right)$
+\end_inset
+
+ ואחרת 
+\lang english
+Make-Set
+\lang hebrew
+ משלם, והוא יחויב לכל היותר 
+\begin_inset Formula $T\left(l\right)$
+\end_inset
+
+ פעמים עבור 
+\begin_inset Formula $\text{level}\left(x\right)=l$
+\end_inset
+
+, לכן החיוב הכולל הוא 
+\begin_inset Formula $2n+\sum_{i=2}^{\log^{*}n-1}\frac{n}{T\left(i\right)}\cdot T\left(i\right)=n\log^{*}n$
+\end_inset
+
+, כי אפשר לשנות הורה 
+\begin_inset Formula $T\left(i\right)-\left(T\left(i-1\right)+1\right)<T\left(i\right)$
+\end_inset
+
+ פעמים, ויש 
+\begin_inset Formula $\frac{n}{T\left(i\right)}$
+\end_inset
+
+ צמתים ברמה 
+\begin_inset Formula $i$
+\end_inset
+
+, ועבור 
+\begin_inset Formula $i=1$
+\end_inset
+
+ כל אחד יכול לשנות הורה פעמיים.
+\end_layout
+
 \begin_layout Section
 שונות
 \end_layout
@@ -8124,12 +8256,16 @@ union by rank
 \begin_layout Standard
 
 \series bold
+\size tiny
 נוסחת סטירלינג:
 \series default
+\size scriptsize
  
 \begin_inset Formula $\sqrt{2\pi n}\left(\frac{n}{e}\right)^{n}<n!<\sqrt{2\pi n}\left(\frac{n}{e}\right)^{n}\left(1+\frac{1}{12n}\right)$
 \end_inset
 
+
+\size tiny
  ולכן 
 \begin_inset Formula $\log_{2}n!>n\log_{2}n-\left(\log_{2}e\right)n$
 \end_inset
@@ -8285,6 +8421,48 @@ union by rank
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+שיטת המאסטר:
+\series default
+ 
+\begin_inset Formula $T\left(n\right)=a\cdot T\left(\frac{n}{b}\right)+f\left(n\right)$
+\end_inset
+
+.
+ 1: 
+\begin_inset Formula $f\left(n\right)=O\left(n^{\log_{b}a-\varepsilon}\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $T\left(n\right)=\Theta\left(n^{\log_{b}a}\right)$
+\end_inset
+
+ 2: 
+\begin_inset Formula $f\left(n\right)=\Theta\left(n^{\log_{b}a}\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $T\left(n\right)=\Theta\left(n^{\log_{b}a}\cdot\log n\right)$
+\end_inset
+
+ 3: 
+\begin_inset Formula $a\cdot f\left(\frac{n}{b}\right)\le c\cdot f\left(n\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $c<1$
+\end_inset
+
+ כלשהו אז 
+\begin_inset Formula $T\left(n\right)=\Theta\left(f\left(n\right)\right)$
 \end_inset
 
 
