@@ -171,9 +171,8 @@
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
+ 
+\size footnotesize
 אפשר לדעת האם האיבר ה-
 \begin_inset Formula $i$
 \end_inset
@@ -202,17 +201,7 @@
 \begin_inset Formula $\text{LegalsSize}$
 \end_inset
 
- הוא באמת אינדקס מאותחל.
- בקריאה נבדוק האם איבר מאותחל ובכתיבה אם האיבר לא מאותחל אז נוסיף את האינדקס
- ל-
-\begin_inset Formula $\text{Legals}$
-\end_inset
-
- ונרשום את המיקום ב-
-\begin_inset Formula $\text{Positions}$
-\end_inset
-
-.
+ הוא אינדקס מאותחל.
 \end_layout
 
 \begin_layout Section
@@ -3613,140 +3602,6 @@ Delete-min
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-הפעולות:
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-Insert, Delete-min
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-בזמן 
-\begin_inset Formula $O\left(\log n\right)$
-\end_inset
-
-,
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-Min
-\lang hebrew
- בזמן 
-\begin_inset Formula $O\left(1\right)$
-\end_inset
-
-, ו-
-\lang english
-Delete
-\lang hebrew
-, 
-\lang english
-Decrease-key
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-בהינתן מצביע לאיבר בזמן 
-\begin_inset Formula $O\left(\log n\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 המבנה הוא 
 \series bold
 עץ כמעט שלם
@@ -7088,6 +6943,108 @@ hash
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle" tabularwidth="100col%">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $m=n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $E\left[\left|\text{Col}\right|\right]<\frac{n}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\Pr\left[\left|\text{Col}\right|<n\right]\ge\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $m=n^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $E\left[\left|\text{Col}\right|\right]<\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\text{Pr}\left[\left|\text{Col}\right|<1\right]\ge\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
