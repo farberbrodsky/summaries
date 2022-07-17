@@ -24,7 +24,7 @@
 
 \setlength{\parskip}{2pt}
 \setlength{\itemsep}{0pt}
-
+% \usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
 \usepackage{type1cm}
 \renewcommand\normalsize{%
    \@setfontsize\normalsize{9.5pt}{9.75pt}
@@ -2818,184 +2818,74 @@ predecessor
 \begin_layout Standard
 
 \series bold
-עצי
-\family roman
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+\size tiny
+עצי 
 \lang english
 B+
 \lang hebrew
 :
 \series default
- רק בעלים יש איברים, וב-
+ 
+\size scriptsize
+רק בעלים יש איברים
+\size tiny
+, וב-
 \lang english
 internal nodes
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-יש רק מפתחות בלי איברים.
+ יש רק מפתחות בלי איברים.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-עצי
-\family roman
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+\size tiny
+עצי 
 \lang english
 B*
 \lang hebrew
 :
 \series default
- כל הצמתים מלאים לפחות 
+ כל הצמתים 
+\size scriptsize
+מלאים לפחות 
 \begin_inset Formula $\nicefrac{2}{3}$
 \end_inset
 
-, 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-ובהכנסה 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-במקום לעשות
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+
+\size tiny
+, ובהכנסה במקום לעשות 
 \lang english
 split
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
- 
-\family default
+ נפזר את המפתחות שווה בשווה בין האחים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size tiny
+עץ 
+\lang english
+rank B
+\lang hebrew
+:
 \series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-נפזר את המפתחות שווה בשווה בין האחים.
+ נשמור בכל צומת את השדה 
+\lang english
+sizeSums
+\lang hebrew
+, באינדקס ה-
+\begin_inset Formula $i$
+\end_inset
+
+ יש את 
+\size scriptsize
+מספר האיברים בתתי העצים באינדקסים עד 
+\begin_inset Formula $i$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -8420,6 +8310,50 @@ Make-Set
 
  כלשהו אז 
 \begin_inset Formula $T\left(n\right)=\Theta\left(f\left(n\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size footnotesize
+מאסטר 2:
+\series default
+ 
+\begin_inset Formula $T\left(n\right)=cn+T\left(\alpha_{1}n+\beta_{1}\right)+T\left(\alpha_{2}n+\beta_{2}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $0<\alpha_{1},\alpha_{2}<1$
+\end_inset
+
+, 1: 
+\begin_inset Formula $\alpha_{1}+\alpha_{2}<1\implies T\left(n\right)=\Theta\left(n\right)$
+\end_inset
+
+ 2: 
+\begin_inset Formula $\alpha_{1}+\alpha_{2}=1\implies T\left(n\right)=\Theta\left(n\log n\right)$
+\end_inset
+
+ 3: 
+\begin_inset Formula $\alpha_{1}+\alpha_{2}>1\implies T\left(n\right)=\Theta\left(n^{p}\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\alpha_{1}^{p}+\alpha_{2}^{p}=1$
+\end_inset
+
+ וחסום על ידי 
+\begin_inset Formula $O\left(n^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sum_{i=0}^{n}q^{i}=\frac{q^{n+1}-1}{q-1}\,\,\,\,\,\sum_{i=0}^{\infty}q^{i}=\frac{1}{1-q}$
 \end_inset
 
 
