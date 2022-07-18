@@ -16,7 +16,7 @@
 \definecolor{blue}{rgb}{0.2,0.4,1}
 \usepackage{titlesec}
 \titlespacing{\section} {-1pt}{-1pt}{-1pt}
-\titleformat{\section}[block]{\large\bfseries\filcenter}{}{0pt}{}
+\titleformat{\section}[block]{\fontsize{12pt}{0pt}\selectfont \bfseries\filcenter}{}{0pt}{}
 
 \newcommand{\tmpsection}[1]{}
 \let\tmpsection=\section
@@ -24,7 +24,7 @@
 
 \setlength{\parskip}{2pt}
 \setlength{\itemsep}{0pt}
-% \usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
+%\usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
 \usepackage{type1cm}
 \renewcommand\normalsize{%
    \@setfontsize\normalsize{9.5pt}{9.75pt}
@@ -391,11 +391,6 @@ return
  אם יש בן ימני, נלך ימינה ואז כל הדרך שמאלה.
  אם אין בן ימני, נלך למעלה עד לפניה הראשונה ימינה )כלומר - שהגענו למעלה
  דרך הבן השמאלי(.
- אם המפתח היה כבר הכי גדול אז נקבל 
-\begin_inset Formula $\text{null}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Plain Layout
@@ -407,6 +402,19 @@ return
  אם עוברים על כל העץ אז עוברים על כל קשת לכל היותר פעמיים לכן העלות היא
  
 \begin_inset Formula $O\left(n\right)$
+\end_inset
+
+.
+ גם אם מתחילים מאיבר 
+\begin_inset Formula $x$
+\end_inset
+
+ ומתקדמים 
+\begin_inset Formula $k$
+\end_inset
+
+ פעמים אז 
+\begin_inset Formula $O\left(k+h\right)$
 \end_inset
 
 .
@@ -1665,14 +1673,39 @@ rank
 .
 \end_layout
 
-\begin_layout Section
-
-\lang english
-finger trees
-\end_layout
-
 \begin_layout Standard
-מאפשר חיפוש של האיבר ה-
+
+\series bold
+עץ
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+finger tree
+\lang hebrew
+:
+\series default
+ מאפשר חיפוש של האיבר ה-
 \begin_inset Formula $k$
 \end_inset
 
@@ -2864,7 +2897,7 @@ split
 \begin_layout Standard
 
 \series bold
-\size tiny
+\size small
 עץ 
 \lang english
 rank B
@@ -2879,9 +2912,7 @@ sizeSums
 \begin_inset Formula $i$
 \end_inset
 
- יש את 
-\size scriptsize
-מספר האיברים בתתי העצים באינדקסים עד 
+ יש את מספר האיברים בתתי העצים באינדקסים עד 
 \begin_inset Formula $i$
 \end_inset
 
@@ -3884,6 +3915,26 @@ hspace{2em}
 
 \end_layout
 
+\begin_layout Plain Layout
+\noindent
+
+\size scriptsize
+\bar under
+\lang english
+Heapify-down
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+\size scriptsize
+\lang english
+\begin_inset Formula $l\gets\text{left}\left(i\right),r\gets\text{right}\left(i\right),\text{smlst}\gets i$
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -3915,26 +3966,6 @@ shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
 status open
-
-\begin_layout Plain Layout
-\noindent
-
-\size scriptsize
-\bar under
-\lang english
-Heapify-down
-\end_layout
-
-\begin_layout Plain Layout
-\noindent
-
-\size scriptsize
-\lang english
-\begin_inset Formula $l\gets\text{left}\left(i\right),r\gets\text{right}\left(i\right),\text{smlst}\gets i$
-\end_inset
-
-
-\end_layout
 
 \begin_layout Plain Layout
 \noindent
@@ -4715,11 +4746,11 @@ link
  כמות העצים שנוספו עקב מחיקת השורש.
 \end_layout
 
-\begin_layout Section
-ערימת פיבונאצ'י
-\end_layout
-
 \begin_layout Standard
+
+\series bold
+ערימת פיבונאצ'י: 
+\series default
 ב-
 \lang english
 Decrease-key
@@ -5136,6 +5167,70 @@ pivot
 (
 \size scriptsize
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size scriptsize
+פרטישן 
+\lang english
+Lomuto
+\lang hebrew
+:
+\series default
+ נקדם את 
+\begin_inset Formula $j$
+\end_inset
+
+, ונשמור 
+\begin_inset Formula $i$
+\end_inset
+
+ שעד אליו כל האיברים הקטנים מה-
+\lang english
+pivot
+\lang hebrew
+.
+ כל פעם שאנחנו עוברים באיבר שקטן מה-
+\lang english
+pivot
+\lang hebrew
+ נקדם את 
+\begin_inset Formula $i$
+\end_inset
+
+ ונעביר את האיבר למקום ה-
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\series bold
+פרטישן 
+\lang english
+Hoare
+\lang hebrew
+:
+\series default
+ הבעיה עם 
+\lang english
+Lomuto
+\lang hebrew
+ זה שהוא לא יודע להתמודד טוב עם המון הופעות של ה-
+\lang english
+pivot
+\lang hebrew
+.
+ נתקדם משמאל עד שיש לנו איבר גדול או שווה ל-
+\lang english
+pivot
+\lang hebrew
+, נתקדם מימין עד שיש לנו איבר קטן או שווה ל-
+\lang english
+pivot
+\lang hebrew
+, ואז נחליף בין האיבר מימין והאיבר משמאל )עד שהם מתנגשים(.
 \end_layout
 
 \begin_layout Standard
@@ -5588,6 +5683,182 @@ QuickSelect-MedOfMed
 \end_inset
 
  איברים שגדולים/קטנים ממנו, מלבנים...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מיון
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+finger tree
+\lang hebrew
+:
+\series default
+ נסמן ב-
+\begin_inset Formula $I$
+\end_inset
+
+ את מספר ההיפוכים, שזה אינדקסים 
+\begin_inset Formula $i<j$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $A\left[i\right]>A\left[j\right]$
+\end_inset
+
+.
+ אם נכניס את כל האיברים ל-
+\lang english
+finger tree
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בסדר הפוך נקבל סיבוכיות 
+\begin_inset Formula $O\left(n\log\left(\frac{I}{n}+2\right)\right)$
+\end_inset
+
+, משתמשים בסיבוכיות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+amortized
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של הכנסות ל-
+\lang english
+AVL
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ועלות החיפוש שהיא 
+\begin_inset Formula $O\left(\log\left(d_{i}+2\right)\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ מספר האיברים אחרי האינדקס 
+\begin_inset Formula $i$
+\end_inset
+
+ שקטנים ממנו.
 \end_layout
 
 \begin_layout Section
@@ -8353,7 +8624,7 @@ Make-Set
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\sum_{i=0}^{n}q^{i}=\frac{q^{n+1}-1}{q-1}\,\,\,\,\,\sum_{i=0}^{\infty}q^{i}=\frac{1}{1-q}$
+\begin_inset Formula $\sqrt[n]{a_{1}\cdot\dots\cdot a_{n}}\le\frac{a_{1}+\dots+a_{n}}{n}\,\,\,\,\,\sum_{i=0}^{n}q^{i}=\frac{q^{n+1}-1}{q-1}\,\,\,\,\,\sum_{i=0}^{\infty}q^{i}=\frac{1}{1-q}$
 \end_inset
 
 
