@@ -16,7 +16,7 @@
 \definecolor{blue}{rgb}{0.2,0.4,1}
 \usepackage{titlesec}
 \titlespacing{\section} {-1pt}{-1pt}{-1pt}
-\titleformat{\section}[block]{\fontsize{12pt}{0pt}\selectfont \bfseries\filcenter}{}{0pt}{}
+\titleformat{\section}[block]{\fontsize{11pt}{0pt}\selectfont \bfseries\filcenter}{}{0pt}{}
 
 \newcommand{\tmpsection}[1]{}
 \let\tmpsection=\section
@@ -88,9 +88,9 @@
 \color #008000
 \end_index
 \leftmargin 0.6cm
-\topmargin 0.3cm
+\topmargin 0.2cm
 \rightmargin 0cm
-\bottommargin 0.3cm
+\bottommargin 0.2cm
 \headheight 0cm
 \headsep 0cm
 \footskip 0cm
@@ -121,6 +121,8 @@
 \end_inset
 
  ב-
+\size small
+
 \begin_inset Formula $O\left(1\right)$
 \end_inset
 
@@ -128,7 +130,7 @@
 \end_layout
 
 \begin_layout Standard
-נשמור שלושה מערכים: 
+שלושה מערכים: 
 \begin_inset Formula $A$
 \end_inset
 
@@ -136,15 +138,15 @@
 \begin_inset Formula $\text{Legals}$
 \end_inset
 
- מערך אינדקסים חוקיים, 
+ אינדקסים חוקיים, 
 \begin_inset Formula $\text{Positions}$
 \end_inset
 
- מערך אינדקסים ל-
+ אינדקסים ל-
 \begin_inset Formula $\text{Legals}$
 \end_inset
 
-, ונשמור גם 
+, ו-
 \begin_inset Formula $\text{LegalsSize}$
 \end_inset
 
@@ -161,8 +163,8 @@
 \begin_inset Formula $\text{LegalsSize}$
 \end_inset
 
- הוא אינדקס שאותחל כבר.
- ועבור כל אינדקס שאותחל נשמור ב-
+ הוא אינדקס מאותחל.
+ ולכל אינדקס מאותחל נשמור ב-
 \begin_inset Formula $\text{Positions}$
 \end_inset
 
@@ -173,12 +175,8 @@
 .
  
 \size footnotesize
-אפשר לדעת האם האיבר ה-
+בדיקת אתחול של האיבר ה-
 \begin_inset Formula $i$
-\end_inset
-
- אותחל לפי 
-\begin_inset Formula $\text{Positions}$
 \end_inset
 
 : אם האינדקס 
@@ -193,15 +191,7 @@
 \begin_inset Formula $\text{Legals}$
 \end_inset
 
- במקום הזה הוא האינדקס, אז האיבר ה-
-\begin_inset Formula $i$
-\end_inset
-
- אותחל כי מובטח לנו שכל מה שבתוך התחום של 
-\begin_inset Formula $\text{LegalsSize}$
-\end_inset
-
- הוא אינדקס מאותחל.
+ במקום הזה הוא האינדקס.
 \end_layout
 
 \begin_layout Section
@@ -1017,7 +1007,7 @@ AVL
 \end_inset
 
  של הבן השמאלי 
-\begin_inset Formula $\left(-1,0/1\right)$
+\begin_inset Formula $\left(-1\to LR,0/1\to R\right)$
 \end_inset
 
 , ואם 
@@ -1029,10 +1019,11 @@ AVL
 \end_inset
 
  של הבן הימני 
-\begin_inset Formula $\left(-1/0,1\right)$
+\begin_inset Formula $\left(-1/0\to R,1\to RL\right)$
 \end_inset
 
 .
+ )הציור של סיבוב ימני נמצא בסוף הדפנוס(.
 \end_layout
 
 \begin_layout Standard
@@ -4776,9 +4767,86 @@ cascading cuts
 \begin_inset Quotes erd
 \end_inset
 
-, למרות שזה רקורסיבי ב-
+, 
+\size footnotesize
+למרות שזה רקורסיבי ב-
 \lang english
 amortized
+\lang hebrew
+ זה בסדר אם פונקציית הפוטנציאל היא 
+\begin_inset Formula $\#\text{trees}+2\cdot\#\text{marked\_nodes}$
+\end_inset
+
+
+\size default
+(.
+ העץ הכי מסכן הוא עם תתי עצים מגודל 
+\begin_inset Formula $1,1,2,3,5,\dots$
+\end_inset
+
+ )פיבונאצ'י!( ולכן לעץ פיבונאצ'י מדרגה 
+\begin_inset Formula $k$
+\end_inset
+
+ יש לפחות 
+\begin_inset Formula $\Phi^{k-2}$
+\end_inset
+
+ צמתים, ואם נסתכל על הבנים 
+\begin_inset Formula $y_{1},\dots,y_{k}$
+\end_inset
+
+ לפי סדר הקישור, המעלה של 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ לפחות 
+\begin_inset Formula $i-2$
+\end_inset
+
+.
+ אבל העומק לא חסום, אפשר לבנות 
+\bar under
+שרוך מדרגה 
+\begin_inset Formula $1$
+\end_inset
+
+
+\bar default
+ כי אם מורידים בן של השורש הוא לא מסומן אלא יורד ה-
+\lang english
+rank
+\lang hebrew
+.
+ וזה בסדר כי מה שעולה לנו בפעולות הוא הרוחב, למשל במחיקת מינימום כשצריך
+ להפוך את כל הבנים שלו לעצים, אבל לא העומק, כי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Decrease-key
 \family roman
 \series medium
 \shape up
@@ -4805,24 +4873,35 @@ amortized
 \uwave default
 \noun default
 \color inherit
-זה בסדר אם נשמור מטבעות על כל צומת שאיבד בן(.
- העץ הכי מסכן הוא עם תתי עצים מגודל 
-\begin_inset Formula $1,1,2,3,5,\dots$
-\end_inset
-
- )פיבונאצ'י!( ולכן לעץ פיבונאצ'י מדרגה 
-\begin_inset Formula $k$
-\end_inset
-
- יש לפחות 
-\begin_inset Formula $\Phi^{k-2}$
-\end_inset
-
- צמתים.
- פונקציית הפוטנציאל היא 
-\begin_inset Formula $\#\text{trees}+2\cdot\#\text{marked\_nodes}$
-\end_inset
-
+הוא לא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Heapify-down
+\lang hebrew
 .
 \end_layout
 
@@ -6031,12 +6110,9 @@ amortized
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-שיטת ה-
+ שיטת ה-
 \lang english
 aggregation
 \lang hebrew
@@ -6110,12 +6186,16 @@ amortized
 
 .
  למשל עבור מערך שמגדיל את עצמו, 
+\size scriptsize
+
 \begin_inset Formula $\Phi\left(M,n\right)=\begin{cases}
 2n-M & n\ge\frac{M}{2}\\
 0 & \text{else}
 \end{cases}$
 \end_inset
 
+
+\size default
  כאשר 
 \begin_inset Formula $M$
 \end_inset
@@ -6545,7 +6625,7 @@ hash
 \uwave default
 \noun default
 \color inherit
-מקבלת עכשיו גם עוד קלט, 
+מקבלת עוד קלט, 
 \begin_inset Formula $h:U\times\left[m\right]\to\left[m\right]$
 \end_inset
 
@@ -6660,9 +6740,13 @@ hash
 \noun default
 \color inherit
 אידאלית חיפוש לא מוצלח הוא 
+\size footnotesize
+
 \begin_inset Formula $O\left(\frac{1}{1-\alpha}\right)$
 \end_inset
 
+
+\size default
  )כי ההסתברות ש-
 \begin_inset Formula $\text{probes}\ge i$
 \end_inset
@@ -6672,10 +6756,16 @@ hash
 \end_inset
 
 ( וחיפוש מוצלח הוא 
+\size footnotesize
+
 \begin_inset Formula $O\left(\frac{1}{\alpha}\ln\frac{1}{1-\alpha}\right)$
 \end_inset
 
- )כמו חיפוש לא מוצלח אבל עם 
+
+\size default
+ 
+\size footnotesize
+)כמו חיפוש לא מוצלח אבל עם 
 \begin_inset Formula $\alpha^{\prime}=\frac{i-1}{m}$
 \end_inset
 
@@ -6688,38 +6778,14 @@ hash
 
 \begin_layout Standard
 
+\size footnotesize
 \color white
 י
 \color inherit
 \lang english
 linear probing
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-- 
+ - 
 \begin_inset Formula $h\left(k,i\right)=\left(h^{\prime}\left(k\right)+i\right)\mod m$
 \end_inset
 
@@ -6737,38 +6803,14 @@ linear probing
 
 \begin_layout Standard
 
+\size footnotesize
 \color white
 י
 \color inherit
 \lang english
 quadratic probing
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-- 
+ - 
 \begin_inset Formula $h\left(k,i\right)=\left(h^{\prime}\left(k\right)+c_{1}i+c_{2}i^{2}\right)\mod m$
 \end_inset
 
@@ -6777,38 +6819,14 @@ quadratic probing
 
 \begin_layout Standard
 
+\size footnotesize
 \color white
 י
 \color inherit
 \lang english
 double hashing
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-- 
+ - 
 \begin_inset Formula $h\left(k,i\right)=\left(h^{\prime}\left(k\right)+ih_{2}\left(k\right)\right)\mod m$
 \end_inset
 
@@ -8393,9 +8411,8 @@ Make-Set
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="4">
+<lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle" tabularwidth="100col%">
-<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
@@ -8404,7 +8421,7 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
-הגדרה
+גבולי
 \end_layout
 
 \end_inset
@@ -8413,15 +8430,8 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
-סימן
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\size small
 הגדרה
 \end_layout
 
@@ -8431,7 +8441,15 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 סימן
+\size tiny
+ )או 
+\begin_inset Formula $g=\Omega\left(f\right)$
+\end_inset
+
+(
 \end_layout
 
 \end_inset
@@ -8442,7 +8460,9 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\ge$
+
+\size footnotesize
+\begin_inset Formula $\limsup\frac{f\left(n\right)}{g\left(n\right)}<\infty$
 \end_inset
 
 
@@ -8454,18 +8474,8 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\Omega\left(g\right)$
-\end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\size small
 \begin_inset Formula $\exists c.\exists n_{0}.\forall n\ge n_{0}.f\left(n\right)\le c\cdot g\left(n\right)$
 \end_inset
 
@@ -8478,6 +8488,8 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 \begin_inset Formula $f=O\left(g\right)$
 \end_inset
 
@@ -8492,7 +8504,9 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\ge$
+
+\size footnotesize
+\begin_inset Formula $\lim\frac{f\left(n\right)}{g\left(n\right)}=0$
 \end_inset
 
 
@@ -8504,18 +8518,8 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\omega\left(g\right)$
-\end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\size small
 \begin_inset Formula $\forall c.\exists n_{0}.\forall n\ge n_{0}.f\left(n\right)\le c\cdot g\left(n\right)$
 \end_inset
 
@@ -8528,6 +8532,8 @@ Make-Set
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 \begin_inset Formula $f=o\left(g\right)$
 \end_inset
 
@@ -8628,6 +8634,62 @@ Make-Set
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רוטציה ימנית ב-
+\lang english
+AVL
+\lang hebrew
+:
+\series default
+ 
+\begin_inset Graphics
+	filename Untitled.png
+	height 1.35cm
+
+\end_inset
+
+ )הסבר ב
+\begin_inset Quotes erd
+\end_inset
+
+עץ
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+AVL
+\lang hebrew
+
+\begin_inset Quotes erd
+\end_inset
+
+(
 \end_layout
 
 \end_body
