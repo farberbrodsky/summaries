@@ -1,0 +1,1030 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\def\HeblatexEncoding{HE8}
+\def\HeblatexEncodingFile{he8enc}
+\usepackage{color}
+\definecolor{keywordcolor}{rgb}{1,0.46,0}
+\definecolor{commentcolor}{rgb}{0.86,0,0}
+\definecolor{stringcolor}{rgb}{0,0.66,0}
+\definecolor{numbercolor}{rgb}{0,0,0}
+\definecolor{blue}{rgb}{0.2,0.4,1}
+\usepackage{titlesec}
+\titlespacing{\section} {-1pt}{-1pt}{-1pt}
+\titleformat{\section}[block]{\fontsize{11pt}{0pt}\selectfont \bfseries\filcenter}{}{0pt}{}
+
+\newcommand{\tmpsection}[1]{}
+\let\tmpsection=\section
+\renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
+
+\setlength{\parskip}{2pt}
+\setlength{\itemsep}{0pt}
+%\usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
+\usepackage{type1cm}
+\renewcommand\normalsize{%
+   \@setfontsize\normalsize{9.5pt}{9.75pt}
+   \abovedisplayskip 9.5\p@ \@plus2\p@ \@minus5\p@
+   \abovedisplayshortskip \z@ \@plus3\p@
+   \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+   \belowdisplayskip \abovedisplayskip
+   \let\@listi\@listI}\normalsize
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "courier" "FiraCode Nerd Font"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.6cm
+\topmargin 0.2cm
+\rightmargin 0cm
+\bottommargin 0.2cm
+\headheight 0cm
+\headsep 0cm
+\footskip 0cm
+\columnsep 0.3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sp}{\text{\textvisiblespace}}
+{\text{\_}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+מעגלים בוליאניים
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )מעגל בוליאני(:
+\series default
+ תהי 
+\begin_inset Formula $B$
+\end_inset
+
+ קבוצה של פונקציות בוליאניות.
+ מעגל בוליאני מעל 
+\begin_inset Formula $B$
+\end_inset
+
+ עם ביטי קלט 
+\begin_inset Formula $x_{1},\dots,x_{n}$
+\end_inset
+
+ וביטי פלט 
+\begin_inset Formula $y_{1},\dots,y_{m}$
+\end_inset
+
+ הוא גרף מכוון וחסר מעגלים שמקיים את התכונות הבאות: 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ כל צומת מסומן ע
+\begin_inset Quotes erd
+\end_inset
+
+י ביט קלט 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, ביט פלט 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, או 
+\begin_inset Formula $g\in B$
+\end_inset
+
+ 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ לכל ביט פלט 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, בדיוק צומת אחד מסומן ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ עם דרגת כניסה 
+\begin_inset Formula $1$
+\end_inset
+
+ ודרגת יציאה 
+\begin_inset Formula $0$
+\end_inset
+
+ 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ דרגת הכניסה של כל צומת קלט - 
+\begin_inset Formula $0$
+\end_inset
+
+ 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ לכל צומת המסומן בפונקציה 
+\begin_inset Formula $g\in B$
+\end_inset
+
+ אם 
+\begin_inset Formula $g$
+\end_inset
+
+ מוגדרת על 
+\begin_inset Formula $\left\{ 0,1\right\} ^{k}$
+\end_inset
+
+ אז דרגת הכניסה 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ כל צומת נכנסת מקבלת אינדקס.
+\end_layout
+
+\begin_layout Standard
+צומת שמסומן בפונקציה נקרא 
+\begin_inset Quotes eld
+\end_inset
+
+שער
+\begin_inset Quotes erd
+\end_inset
+
+ וקשתות 
+\begin_inset Quotes eld
+\end_inset
+
+חוטים
+\begin_inset Quotes erd
+\end_inset
+
+.
+ ה-
+\series bold
+\lang english
+fan-out
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+של המעגל הוא דרגת היציאה המקסימלית.
+ מעגלים עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+fan-out=1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נקראים 
+\begin_inset Quotes eld
+\end_inset
+
+נוסחאות
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ יש תהליך שהופך מעגל לנוסחה, אבל צריך כמה עותקים של הקלטים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ כל 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ חשיבה מעל דה מורגן )
+\begin_inset Formula $\lnot,\land,\lor$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )משפחה של מעגלים(:
+\series default
+ 
+\begin_inset Formula $\mathcal{C}=\left\{ c_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ מוגדר על קלטים באורך 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ 
+\bar under
+מכריעה שפה
+\bar default
+ 
+\begin_inset Formula $L\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אם לכל 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $c_{n}\left(x\right)=1\iff x\in L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )גודל(:
+\series default
+ גודל של מעגל הוא מספר השערים בו.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה )מתרגול(:
+\series default
+ כל 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ניתנת לחישוב ע
+\begin_inset Quotes erd
+\end_inset
+
+י מעגל בגודל 
+\begin_inset Formula $O\left(2^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה )שאנון(:
+\series default
+ עבור 
+\begin_inset Formula $n$
+\end_inset
+
+ גדול מספיק קיימות פונקציות שלא ניתנות לחישוב ע
+\begin_inset Quotes erd
+\end_inset
+
+י מעגלים בגודל 
+\begin_inset Formula $s<\frac{2^{n}}{10n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+אוטומטיים סופיים
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )אס
+\begin_inset Quotes erd
+\end_inset
+
+ד(:
+\series default
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד הוא חמישיה 
+\begin_inset Formula $A=\left(Q,\Sigma,\delta,q_{0},F\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ קבוצה סופית של מצבים 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפאבית 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\delta:Q\times\Sigma\to Q$
+\end_inset
+
+ פונקציית המעברים 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ מצב תחילי 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $F\subseteq Q$
+\end_inset
+
+ קבוצת המצבים המקבלים.
+\end_layout
+
+\begin_layout Standard
+פונקציית המעברים המורחבת 
+\begin_inset Formula $\hat{\delta}:Q\times\Sigma^{*}\to Q$
+\end_inset
+
+ מוגדרת באינדוקציה:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\hat{\delta}\left(q,\varepsilon\right)=q,\,\,\,\hat{\delta}\left(q,x_{1},\dots,x_{n}\right)=\delta\left(\hat{\delta}\left(x_{1},\dots,x_{n-1}\right),x_{n}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+האוטומט 
+\bar under
+מקבל
+\bar default
+ מילה 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ אם 
+\begin_inset Formula $\hat{\delta}\left(q_{0},x\right)\in F$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+שפה נקראת 
+\bar under
+רגולרית
+\bar default
+ אם קיים אס
+\begin_inset Quotes erd
+\end_inset
+
+ד שמקבל אותה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תכונות סגירות:
+\series default
+ 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ איחוד 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ חיתוך 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ משלים 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ שרשור 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ חזקה 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ סגור קליני
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד(:
+\series default
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד הוא חמישיה 
+\begin_inset Formula $N=\left(Q,\Sigma,\delta,S,F\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ קבוצה סופית של מצבים 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפאבית 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\delta:Q\times\left(\Sigma\cup\left\{ \varepsilon\right\} \right)\to2^{Q}$
+\end_inset
+
+ פונקציית המעברים 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $S\subseteq Q$
+\end_inset
+
+ מצבים תחיליים 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $F\subseteq Q$
+\end_inset
+
+ מצבים מקבלים.
+\end_layout
+
+\begin_layout Standard
+כדי להגדיר את 
+\begin_inset Formula $\hat{\delta}:2^{Q}\times\Sigma^{*}\to2^{Q}$
+\end_inset
+
+ נגדיר סביבת אפסילון 
+\begin_inset Formula $E\left(q\right)$
+\end_inset
+
+ להיות:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $E\left(q\right)=\left\{ q^{\prime}\in Q\mid\exists q_{0},\dots,q_{k}\in Q.q_{0}=q,\forall i.\delta\left(q_{i-1},q_{i}\right)=\varepsilon,q_{k}=q^{\prime}\right\} $
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\delta}\left(Q^{\prime},w\right)=\begin{cases}
+E\left(Q^{\prime}\right) & w=\varepsilon\\
+E\left(\bigcup_{r\in\hat{\delta}\left(Q^{\prime}\right)}\delta\left(r,w_{n}\right)\right) & n=\left|w\right|\ge1
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+האסל
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\bar under
+מקבל
+\bar default
+ מילה 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ אם 
+\begin_inset Formula $\hat{\delta}\left(S,x\right)\cap F\ne\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ לכל אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד קיים אס
+\begin_inset Quotes erd
+\end_inset
+
+ד כך ש-
+\begin_inset Formula $L\left(A\right)=L\left(B\right)$
+\end_inset
+
+.
+ )הוכחה: כל מצב מייצג קבוצה של מצבים(
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ביטויים רגולרים:
+\series default
+ 
+\begin_inset Formula $a\in\Sigma,\,\,\,\varepsilon,\,\,\,\emptyset,\,\,\,\left(R_{1}\cup R_{2}\right),\,\,\,\left(R_{1}R_{2}\right),\,\,\,\left(R^{*}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה:
+\series default
+ שפה רגולרית 
+\begin_inset Formula $\iff$
+\end_inset
+
+ קיים לה ביטוי רגולרי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למת הניפוח:
+\series default
+ לכל שפה רגולרית 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ קיים 
+\begin_inset Formula $\ell>0$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $s\in\mathcal{L}$
+\end_inset
+
+ עם 
+\begin_inset Formula $\left|s\right|\ge\ell$
+\end_inset
+
+, 
+\begin_inset Formula $s=xyz$
+\end_inset
+
+ כך ש: 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $xy^{i}z\in\mathcal{L}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\ge0$
+\end_inset
+
+ 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\left|y\right|>0$
+\end_inset
+
+ 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\left|xy\right|\le\ell$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+אבל, לא כל שפה שמקיימת את למת הניפוח היא רגולרית.
+ למשל,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{L}=\left\{ a^{i}b^{n}c^{n}\mid n\ge0,i\ge1\right\} \cup\left\{ b^{n}c^{m}\mid n,m\ge0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מירהיל-נרוד:
+\series default
+ נאמר ש-
+\begin_inset Formula $x\stackrel{\mathcal{L}}{\sim}y$
+\end_inset
+
+ אם לכל 
+\begin_inset Formula $z\in\Sigma^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $xz\in\mathcal{L}\iff yz\in\mathcal{L}$
+\end_inset
+
+.
+ אז, 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ רגולרית 
+\begin_inset Formula $\iff$
+\end_inset
+
+ יש כמות סופית של מחלקות שקילות ב-
+\begin_inset Formula $\stackrel{\mathcal{L}}{\sim}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+https://moodle.tau.ac.il/pluginfile.php/226753/mod_folder/content/0/DFA3.pdf?forcedow
+nload=1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+מכונות טיורינג וכריעות
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )מכונת טיורינג(:
+\series default
+ מכונת טיורינג היא שביעייה 
+\begin_inset Formula $\left(Q,\Sigma,\Gamma,\delta,q_{0},q_{a},q_{r}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ קבוצת מצבים סופית 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ אלפאבית סרט, 
+\begin_inset Formula $\sp\in\Gamma$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\Sigma\subset\Gamma$
+\end_inset
+
+ אלפאבית קלט, 
+\begin_inset Formula $\sp\notin\Sigma$
+\end_inset
+
+ 
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $\delta:\left(Q\setminus\left\{ q_{a},q_{r}\right\} \right)\times\Gamma\to Q\times\Gamma\times\left\{ L,R\right\} $
+\end_inset
+
+ פונקציית מעברים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bullet$
+\end_inset
+
+ 
+\begin_inset Formula $q_{0}\in Q$
+\end_inset
+
+ מצב התחלתי, 
+\begin_inset Formula $q_{a}\in Q$
+\end_inset
+
+ מצב מקבל, 
+\begin_inset Formula $q_{r}\in Q$
+\end_inset
+
+ מצב דוחה 
+\begin_inset Formula $q_{r}\ne q_{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה )קונפיגורציה(:
+\series default
+ קונפיגורציה מייצגת את המצב של מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ברגע מסוים.
+ למשל 
+\begin_inset Formula $1011q_{7}0111$
+\end_inset
+
+ אומר שהתוכן של הסרט הוא 
+\begin_inset Formula $10110111$
+\end_inset
+
+, שהמצב הוא 
+\begin_inset Formula $q_{7}$
+\end_inset
+
+, ושהמ
+\begin_inset Quotes erd
+\end_inset
+
+ט נמצאת בתא החמישי של הסרט )על 
+\begin_inset Formula $0$
+\end_inset
+
+(.
+ הקונפיגורציה ההתחלית עבור קלט 
+\begin_inset Formula $w$
+\end_inset
+
+ היא 
+\begin_inset Formula $q_{0}w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+סיבוכיות זמן
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Section
+סיבוכיות מקום
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\end_body
+\end_document
