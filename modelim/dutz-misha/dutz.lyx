@@ -16,23 +16,16 @@
 \definecolor{blue}{rgb}{0.2,0.4,1}
 \usepackage{titlesec}
 \titlespacing{\section} {-1pt}{-1pt}{-1pt}
-\titleformat{\section}[block]{\fontsize{11pt}{0pt}\selectfont \bfseries\filcenter}{}{0pt}{}
+\titleformat{\section}[block]{\fontsize{11pt}{8pt}\selectfont \bfseries\filcenter}{}{0pt}{}
 
 \newcommand{\tmpsection}[1]{}
 \let\tmpsection=\section
 \renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
 
-\setlength{\parskip}{1.5pt}
+\setlength{\parskip}{2pt}
 \setlength{\itemsep}{0pt}
 %\usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
 \usepackage{type1cm}
-\renewcommand\normalsize{%
-   \@setfontsize\normalsize{9.5pt}{9.75pt}
-   \abovedisplayskip 9.5\p@ \@plus2\p@ \@minus5\p@
-   \abovedisplayshortskip \z@ \@plus3\p@
-   \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
-   \belowdisplayskip \abovedisplayskip
-   \let\@listi\@listI}\normalsize
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -94,11 +87,11 @@
 \headheight 0cm
 \headsep 0cm
 \footskip 0cm
-\columnsep 0.3cm
+\columnsep 0.4cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
-\defskip 0bp
+\defskip smallskip
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style english
@@ -175,6 +168,14 @@
 \begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\p}{\ensuremath{\mathsf{P}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bpp}{\ensuremath{\mathsf{BPP}}}
 \end_inset
 
 
@@ -573,7 +574,7 @@ fan-out=1
 \series bold
 טענה )מתרגול(:
 \series default
- 
+ כל 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
@@ -593,7 +594,7 @@ fan-out=1
 \series bold
 טענה )מתרגול(:
 \series default
- 
+ כל 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
@@ -769,15 +770,7 @@ fan-out=1
 \end_inset
 
  סגור קליני
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-סגור קליני:
-\series default
- 
-\begin_inset Formula $V^{0}=\left\{ \varepsilon\right\} ,V^{i+1}=\left\{ wv\mid w\in V^{i},v\in V\right\} ,V^{*}=\bigcup_{i\ge0}V^{i}$
+\begin_inset Formula $(L^{*}=\bigcup_{i\in\mathbb{N}}L^{i})$
 \end_inset
 
 
@@ -2171,7 +2164,11 @@ E\left(\bigcup_{r\in\hat{\delta}\left(Q^{\prime}\right)}\delta\left(r,w_{n}\righ
 \begin_inset Formula $\l$
 \end_inset
 
- קיים מוודא פולינומי.
+ קיים מוודא.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -2370,8 +2367,8 @@ E\left(\bigcup_{r\in\hat{\delta}\left(Q^{\prime}\right)}\delta\left(r,w_{n}\righ
 \begin_inset Formula $O\left(n\right)$
 \end_inset
 
- בדו סרטית )סרט שנעתיק אליו את כל האפסים, ואז נעבור על שני הסרטים(, אבל
- 
+ בדו סרטית )סרט שנעתיק אליו את כל האפסים, ואז נעבור על שניהם ונבדוק שכמות
+ האחדים שווה לכמות האפסים(, אבל 
 \begin_inset Formula $\Omega\left(n\log n\right)$
 \end_inset
 
@@ -2785,6 +2782,22 @@ E\left(\bigcup_{r\in\hat{\delta}\left(Q^{\prime}\right)}\delta\left(r,w_{n}\righ
 \begin_inset Formula $B\in\np$
 \end_inset
 
+ אז 
+\begin_inset Formula $A\in\np$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula $A\le_{p}B$
+\end_inset
+
+ ו-
+\begin_inset Formula $B\in\np$
+\end_inset
+
  ו-
 \begin_inset Formula $A\in\npc$
 \end_inset
@@ -3080,12 +3093,8 @@ NP
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
 \series bold
-רעיון הוכחה:
+ רעיון הוכחה:
 \series default
  לבנות מעגל שמעביר מקונפיגורציה אחת לבאה ואז לחבר 
 \begin_inset Formula $t\left(n\right)$
@@ -3145,10 +3154,6 @@ NP
 
  )רדוקציה מ-
 \begin_inset Formula $\text{CIRSAT}$
-\end_inset
-
- ל-
-\begin_inset Formula $3\text{SAT}$
 \end_inset
 
 (.
@@ -3475,6 +3480,152 @@ NP
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה: 
+\series default
+נוסחה אריתמטית היא נוסחה )מעגל עם 
+\begin_inset Formula $\text{fan-out }$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+( עם שערי 
+\begin_inset Formula $+,\times,0,1$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+הגדרה:
+\series default
+ עבור שדה 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $ZE_{\mathbb{F}}=\left\{ \left\langle \phi\right\rangle :\forall x\in\mathbb{F}.\phi\left(x\right)=0\land\text{\ensuremath{\phi} is AF}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה)שוורץ-זיפל(:
+\series default
+ יהי 
+\begin_inset Formula $p\in\mathbb{F}\left[x_{1},...,x_{n}\right]$
+\end_inset
+
+ פולינום ב
+\begin_inset Formula $n$
+\end_inset
+
+ משתנים מעל 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+, אז אם 
+\begin_inset Formula $p$
+\end_inset
+
+ הוא לא זהותית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, מדרגה טוטלית 
+\begin_inset Formula $d$
+\end_inset
+
+ אז לכל 
+\begin_inset Formula $S\subset\mathbb{F}$
+\end_inset
+
+ תת קבוצה סופית מתקיים כי 
+\begin_inset Formula 
+\[
+\Pr_{\left(x_{1},...,x_{n}\right)\leftarrow S^{n}}\left[P\left(x_{1},...,x_{n}\right)=0\right]\leq\frac{d}{|S|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט:
+\series default
+ 
+\begin_inset Formula $ZE_{\mathbb{F}}\in\bpp$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \series bold
 משפטים בהסתברות:
 \end_layout
@@ -3482,7 +3633,55 @@ NP
 \begin_layout Standard
 
 \series bold
-צ'רנוף-הופדינג:
+אי שוויון מרקוב:
+\series default
+ יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ משתנה מקרי בעל תוחלת אזי לכל 
+\begin_inset Formula $a>0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\text{Pr}\left[\left|X\right|\ge a\right]\le\frac{E\left(|X|\right)}{a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי שוויון צ'בישב:
+\series default
+ יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ משתנה מקרי בעל תוחלת אזי לכל 
+\begin_inset Formula $C>0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\text{Pr}\left[\left|X-E\left(X\right)\right|\ge C\right]\le\frac{Var\left(X\right)}{C^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי שוויון צ'רנוף-הופדינג:
 \series default
  יהיו 
 \begin_inset Formula $A_{1},\dots,A_{s}$
@@ -3502,6 +3701,49 @@ NP
 \text{Pr}\left[\left|p-\frac{1}{s}\sum_{i=1}^{s}A_{i}\right|\ge\delta\right]\le2^{-\Omega\left(\delta^{2}s\right)}
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי שוויון קולמגורוב:
+\series default
+ יהיו 
+\begin_inset Formula $X_{1},...,X_{N}$
+\end_inset
+
+ משתנים מקריים ב
+\begin_inset Quotes erd
+\end_inset
+
+ת עם תוחלת אפס והשונות של כולם סופית.
+ נסמן 
+\begin_inset Formula $S_{k}=\sum_{i=1}^{k}X_{k}$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ מתקיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Pr}\left[\max_{1\leq k\leq n}|S_{k}|\geq\lambda\right]\le\frac{1}{\lambda^{2}}Var\left(S_{n}\right)=\frac{1}{\lambda^{2}}\sum_{i=1}^{k}Var\left(X_{k}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -4471,6 +4713,10 @@ NL
 \end_inset
 
 (.
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4544,7 +4790,23 @@ NL
 \begin_inset Formula $A\in\p$
 \end_inset
 
-.
+
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula $A\le_{p}B$
+\end_inset
+
+ ו-
+\begin_inset Formula $B\in\np$
+\end_inset
+
+ אז 
+\begin_inset Formula $A\in\np$
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -4715,11 +4977,11 @@ NL
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="24" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<lyxtabular version="3" rows="32" columns="3">
+<features tabularvalignment="middle" tabularwidth="100col%">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
@@ -4767,7 +5029,7 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4785,7 +5047,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4799,7 +5061,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4815,7 +5077,55 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ כך ש-
+\begin_inset Formula $M\left(x\right)$
+\end_inset
+
+ עוצרת על אפסילון
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\re\setminus\r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\text{HALT}_{\epsilon}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4833,7 +5143,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4847,7 +5157,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4863,7 +5173,59 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ כך ש-
+\begin_inset Formula $\l\left(M\right)$
+\end_inset
+
+ היא 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\overline{\re\cup\core}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\text{ALL}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4881,7 +5243,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4895,7 +5257,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4911,7 +5273,7 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4929,7 +5291,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4943,7 +5305,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4959,7 +5321,7 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4977,7 +5339,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4991,7 +5353,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5007,7 +5369,63 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\left\langle M,x,1^{t}\right\rangle $
+\end_inset
+
+ כך ש- קיים 
+\begin_inset Formula $w$
+\end_inset
+
+ כך ש
+\begin_inset Formula $M\left(x,w\right)$
+\end_inset
+
+ מקבלת בזמן 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\npc$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\text{EMPTY}_{NP}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5033,7 +5451,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5047,7 +5465,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5063,7 +5481,7 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5085,7 +5503,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5099,7 +5517,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5115,7 +5533,7 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5133,7 +5551,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5147,7 +5565,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5163,7 +5581,55 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\left\langle G\right\rangle $
+\end_inset
+
+ בגרף המכוון 
+\begin_inset Formula $G$
+\end_inset
+
+ יש מעגל המילטוני
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\npc$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\text{HAMCYCLE}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5185,7 +5651,7 @@ ACC
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5199,7 +5665,7 @@ ACC
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5229,7 +5695,7 @@ ACC
 \begin_layout Plain Layout
 
 \size scriptsize
-וגם קב' כךשאין קשת בין כל שניים בגודל 
+וגם קב' כך שאין קשת בין כל שניים בגודל 
 \begin_inset Formula $k$
 \end_inset
 
@@ -5258,7 +5724,7 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5280,7 +5746,7 @@ ACC
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5294,17 +5760,17 @@ ACC
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\text{CLIQUE}$
+\begin_inset Formula $\text{CLIQUE}^{*}$
 \end_inset
 
 
-\begin_inset Formula $\land$
+\begin_inset Formula $\lor$
 \end_inset
 
 
@@ -5324,7 +5790,7 @@ ACC
 \begin_layout Plain Layout
 
 \size scriptsize
-וגם קב' כךשאין קשת בין כל שניים בגודל 
+או קב' כך שאין קשת בין כל שניים בגודל 
 \begin_inset Formula $k$
 \end_inset
 
@@ -5353,7 +5819,7 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5376,7 +5842,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5390,7 +5856,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5404,7 +5870,7 @@ ACC
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5426,7 +5892,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5440,7 +5906,7 @@ ACC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5454,7 +5920,7 @@ CIRSAT
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5472,7 +5938,7 @@ CIRSAT
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5486,7 +5952,7 @@ CIRSAT
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5535,7 +6001,7 @@ C-CNF
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5553,7 +6019,7 @@ C-CNF
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5567,7 +6033,7 @@ C-CNF
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5616,7 +6082,7 @@ C-DNF
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5630,7 +6096,7 @@ C-DNF
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5644,7 +6110,7 @@ C-DNF
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5658,7 +6124,127 @@ SUBSETSUM
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+קבוצה של 
+\begin_inset Formula $k$
+\end_inset
+
+ צמתים הנוגעת בכל הקשתות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\npc$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+VC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\Phi$
+\end_inset
+
+ היא 
+\lang english
+3-CNF
+\lang hebrew
+ עם בדיוק שלושה
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\npc$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\lang english
+E3SAT
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+ליטרלים שונים בכל פסוקית עם השמה מקבלת
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5680,7 +6266,7 @@ SUBSETSUM
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5694,7 +6280,7 @@ SUBSETSUM
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5708,7 +6294,7 @@ CVAL
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5730,7 +6316,7 @@ CVAL
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5744,7 +6330,7 @@ CVAL
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5758,28 +6344,31 @@ STCON
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \size scriptsize
-קבוצה של 
-\begin_inset Formula $k$
+\begin_inset Formula $\Phi$
 \end_inset
 
- צמתים הנוגעת בכל הקשתות
+ היא 
+\lang english
+2-CNF
+\lang hebrew
+ עם השמה מקבלת
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\npc$
+\begin_inset Formula $\nlc$
 \end_inset
 
 
@@ -5787,14 +6376,66 @@ STCON
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \size scriptsize
 \lang english
-VC
+2SAT
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\left\langle G,P\right\rangle $
+\end_inset
+
+ בגרף המכוון 
+\begin_inset Formula $G$
+\end_inset
+
+ יש 
+\begin_inset Formula $\text{\left\langle u,v\right\rangle \ensuremath{\in}}P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\nlc$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\text{PCON}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5807,60 +6448,15 @@ VC
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\Phi$
+כך שקיים מסלול מ
+\begin_inset Formula $v$
 \end_inset
 
- היא
-\family roman
-\series medium
-\shape up
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-3-CNF
-\family roman
-\series medium
-\shape up
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-עם בדיוק שלושה ליטרלים שונים בכל פסוקית
+ ל
+\begin_inset Formula $u$
+\end_inset
+
+ ולהפך
 \end_layout
 
 \end_inset
@@ -5869,11 +6465,6 @@ VC
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
-\begin_inset Formula $\npc$
-\end_inset
-
 
 \end_layout
 
@@ -5884,15 +6475,22 @@ VC
 
 \begin_layout Plain Layout
 
-\size scriptsize
-\lang english
-E3SAT
 \end_layout
 
 \end_inset
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image.png
+	width 70col%
 
 \end_inset
 
