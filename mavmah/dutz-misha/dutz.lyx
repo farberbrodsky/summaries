@@ -22,12 +22,12 @@
 \let\tmpsection=\section
 \renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
 
-\setlength{\parskip}{1pt}
+\setlength{\parskip}{1.5pt}
 \setlength{\itemsep}{0pt}
 %\usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
 \usepackage{type1cm}
 \renewcommand\normalsize{%
-   \@setfontsize\normalsize{9.5pt}{9.5pt}
+   \@setfontsize\normalsize{9.5pt}{9.75pt}
    \abovedisplayskip 9.5\p@ \@plus2\p@ \@minus5\p@
    \abovedisplayshortskip \z@ \@plus3\p@
    \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
@@ -2145,7 +2145,7 @@ D Flip-Flop
 \lang english
 \begin_inset Graphics
 	filename dflipflop.png
-	width 2cm
+	width 2.5cm
 
 \end_inset
 
@@ -9486,6 +9486,143 @@ EPC register
 Cause register
 \lang hebrew
 , וקוראים לפונקציה של מערכת ההפעלה בכתובת קבועה.
+ 
+\bar under
+הרגיסטרים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+EPC
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו-
+\lang english
+Cause
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הם לא רגיסטרים רגילים ואפשר לקרוא אותם רק עם פקודות מיוחדות
+\bar default
+.
+ את הרגיסטרים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+$k0, $k1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לא צריך לשמור כי הם משמשים רק את מערכת ההפעלה ולא את מי שנעצר.
  דוגמאות לשגיאות:
 \family roman
 \series medium
@@ -11941,6 +12078,10 @@ SQ
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \series bold
 \begin_inset Formula $\text{:Memory Disambiguation}$
@@ -12238,6 +12379,11 @@ data
 \color inherit
 של הכתיבה יהיה מוכן ולכן נפצל כתיבות לפקודה שמחשבת את הכתובת ושמחשבת את
  המידע.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
