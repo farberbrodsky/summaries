@@ -22,7 +22,7 @@
 \let\tmpsection=\section
 \renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
 
-\setlength{\parskip}{1.5pt}
+\setlength{\parskip}{1.25pt}
 \setlength{\itemsep}{0pt}
 %\usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
 \usepackage{type1cm}
@@ -6095,6 +6095,40 @@ Bubble (interlock)
 Forwarding
 \lang hebrew
 : להשתמש בתוצאה מהרגע שהיא חושבה ולא רק ממתי שהיא נכנסת לרגיסטרים.
+ למשל עבור שתי פעולות אריתמטיות עוקבות נצטרך 
+\begin_inset Formula $\text{EX/MEM}\to\text{ID/EX}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Forwarding
+\lang hebrew
+.
 \end_layout
 
 \begin_layout Standard
@@ -8174,7 +8208,11 @@ valid
 \uwave default
 \noun default
 \color inherit
-ובמקרה של
+)
+\bar under
+קיים בכל שיטות המיפוי
+\bar default
+( ובמקרה של
 \family roman
 \series medium
 \shape up
@@ -9414,6 +9452,26 @@ aligned
 cache line
 \lang hebrew
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סנכרון זכרון:
+\series default
+ 
+\bar under
+קוהרנטיות:
+\bar default
+ כל הליבות צריכות לראות את אותה תמונת זיכרון ולראות את המצב העדכני.
+ 
+\bar under
+קונסיסטנטיות:
+\bar default
+ אם כתבנו לכתובת ואף אחד אחר לא שינה אותה, נרצה לקרוא את אותו ערך שכתבנו.
+ אם כתבנו לכתובת ומישהו אחר קורא ממנה )לאחר מספיק זמן(, הוא צריך לקרוא את
+ מה שכתבנו.
+ אם שני מעבדים כותבים לאותה כתובת, כולם יסכימו על סדר הכתיבה.
 \end_layout
 
 \begin_layout Section
