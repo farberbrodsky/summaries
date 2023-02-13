@@ -22,7 +22,7 @@
 \let\tmpsection=\section
 \renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
 
-\setlength{\parskip}{1.4pt}
+\setlength{\parskip}{1.35pt}
 \setlength{\itemsep}{0pt}
 %\usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
 \usepackage{type1cm}
@@ -1466,6 +1466,20 @@ Clk
 \end_inset
 
 
+\lang english
+
+\begin_inset Newline newline
+\end_inset
+
+nanosecond = 
+\begin_inset Formula $10^{-9}$
+\end_inset
+
+ seconds, microsecond = 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+ seconds
 \end_layout
 
 \begin_layout Section
