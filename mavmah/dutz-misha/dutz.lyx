@@ -22,7 +22,7 @@
 \let\tmpsection=\section
 \renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
 
-\setlength{\parskip}{1.5pt}
+\setlength{\parskip}{1.4pt}
 \setlength{\itemsep}{0pt}
 %\usepackage[cor=green!80!black,BG]{tikz-among-us-watermark-eso-pic}
 \usepackage{type1cm}
@@ -11974,6 +11974,34 @@ retirement
 \noun default
 \color inherit
 בנפרד.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+NOT: 
+\lang hebrew
+
+\begin_inset Graphics
+	filename notpmos.png
+	height 2cm
+	rotateAngle 90
+
+\end_inset
+
+
+\lang english
+ NAND: 
+\lang hebrew
+
+\begin_inset Graphics
+	filename nandcmos.png
+	height 2cm
+	rotateAngle 90
+
+\end_inset
+
+
 \end_layout
 
 \end_body
